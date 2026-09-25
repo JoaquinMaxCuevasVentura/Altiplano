@@ -1,5 +1,11 @@
 # 3. Marco cruzado: Lundberg, Martin, Vázquez Ramos *et al.*, Botelho Gosálvez y los dibujos
 
+> **Nota de la tercera versión (25/9/2026), tras la depuración.** El artículo «Topografías de la carne y el barro en *Altiplano*» redistribuye las referencias y deja buena parte de este marco como antecedente:
+> - **Conserva** a Vázquez Ramos *et al.* (historicidad del concepto de espacio), Lefebvre (una sola distinción, aplicada a la escena de la ordenanza de Umacachi), Cárcamo Pino (definición de manuaje; caja de herramientas y escritorio en un mismo repertorio), Pareyson (formatividad), Martin (Shonfield; la casa entre Bachelard y Lynch; el ascensor de *Eraserhead*) y Lundberg (las cuatro operaciones, más un quinto paso: el retorno al pasaje).
+> - **Retira** del argumento a Bacon, Deleuze, Loos, Foucault (heterotopías), Colomina, Freud, Vidler, Alberti, Schmarsow, Worringer y Hall. Las secciones de este documento que los tratan quedan como material de consulta.
+> - **Corrige lecturas** señaladas por la depuración: la chujlla no demuestra una armonía originaria; la puna abierta también encierra (p. 72); el plano «450» es un nivel minero, no un trazado diédrico; el tinterillo de los dos libros no es Margarito Mendoza; Villca no acepta pasivamente el engaño; la «caligrafía» del arado (p. 87) expone una exclusión escolar; la muerte de Condori es un asesinato, no un accidente industrial.
+> - La unidad de la exploración gráfica ya no es el lugar sino la **escena** (véase `05_guia_de_dibujo.md`).
+
 > **Nota de la segunda versión (25/9/2026).** Este documento es de la primera ronda, cuando aún no tenía la novela. Cambios desde entonces:
 > - **Trama corregida con la novela** (7.ª ed., Juventud, 1982; véase §3.4 y `06_fichero_de_pasajes.md`).
 >   - Kero-Pata es el ayllu de origen de Juan Condori, convertido en finca; no es Jatun-Kolla.

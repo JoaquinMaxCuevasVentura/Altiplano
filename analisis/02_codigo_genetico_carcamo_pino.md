@@ -94,6 +94,8 @@ Concepto (abstracción por omisión, con Nietzsche) → cita literaria (Szymbors
 
 **La versión 1 del artículo usó la Plantilla B como esqueleto; la versión 2 sigue el esquema que fijaste, con marco teórico explícito (sección 2) y composición anular (la cosecha de piedras de la p. 9 abre y cierra)**, con elementos de A (anécdota anular, notas etimológicas) y de C (Saramago, la mano que mueve los hilos y las marionetas).
 
+> **Versión 3 (tras la depuración).** El artículo ya no emula el registro de Cárcamo Pino: no usa notas etimológicas, citas literarias ni fórmulas de reescritura cruzada, y no aplica la fórmula madera/barro. De Cárcamo Pino conserva lo que la depuración recomienda: definir los términos, seguir las consecuencias materiales de una distinción y usar «manuaje» solo donde su función se explica (los objetos que median el trabajo y la autoridad; escribir y arar como prácticas que la novela no opone). Este recetario queda como análisis del estilo, no como plantilla del artículo.
+
 ## 2.6. Recetario para emular sin imitar
 
 **Hacer:**
