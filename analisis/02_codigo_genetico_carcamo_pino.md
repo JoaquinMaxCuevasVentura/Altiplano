@@ -92,7 +92,7 @@ Wilson (*La mano*), Kapp, Focillon (*Elogio de la mano*), Heidegger (vía Vattim
 **Plantilla C: «Fragmento de tesis»** (T2)
 Concepto (abstracción por omisión, con Nietzsche) → cita literaria (Szymborska, Heráclito) → tesis sobre la acción (formatividad) → contraste social (pionero y paseante) → cita literaria extensa (Saramago) → tesis polémica (el método como poder) → propuesta paradójica (método sinmétodo) → ejemplo corporal (Bruce Lee).
 
-**El artículo usa la Plantilla B como esqueleto**, con elementos de A (anécdota anular, notas etimológicas) y de C (Saramago, la mano que mueve los hilos y las marionetas).
+**La versión 1 del artículo usó la Plantilla B como esqueleto; la versión 2 sigue el esquema que fijaste, con marco teórico explícito (sección 2) y composición anular (la cosecha de piedras de la p. 9 abre y cierra)**, con elementos de A (anécdota anular, notas etimológicas) y de C (Saramago, la mano que mueve los hilos y las marionetas).
 
 ## 2.6. Recetario para emular sin imitar
 
@@ -115,7 +115,7 @@ Concepto (abstracción por omisión, con Nietzsche) → cita literaria (Szymbors
 
 - *Plano*: «La novela describe el paisaje del altiplano».
   *Registro*: «El altiplano es, por antonomasia, horizonte, y el horizonte es, por antonomasia, línea; pero *altiplano* reúne *alto* y *plano*, y *plano* nombra a la vez lo llano y el dibujo que lo representa».
-- *Plano*: «El juez roba las tierras con documentos falsos».
+- *Plano*: «El abogado se queda con las tierras mediante papeles». (En la novela, el «doctor Bautista Las Casas» es diputado, no juez.)
   *Registro*: «El despojo, en esta novela, es literalmente una *escritura*: la trama (*plot*) de una parcela (*plot*) obtenida por una conspiración (*plot*)».
 - *Plano*: «Los indígenas son obligados a servir en la hacienda».
   *Registro*: «*Pongo* procede de *punku*, puerta: la servidumbre, en *Altiplano*, tiene nombre de umbral».
@@ -124,8 +124,8 @@ Concepto (abstracción por omisión, con Nietzsche) → cita literaria (Szymbors
 
 | Rasgo de Cárcamo Pino | Eje de la convocatoria | Uso en el artículo |
 |---|---|---|
-| Manuaje / justicia epistémica frente al «monopolio de la escritura» | Discurso, poder y representaciones sociales | El despojo hecho por escrito frente al dibujo como manuaje |
+| Manuaje / justicia epistémica frente al «monopolio de la escritura» | Discurso, poder y representaciones sociales | La escritura también es manuaje (manugrafía): el despojo es una red de manoajes autorizados, no la letra contra la mano |
 | Oralitura / literatura | Ficción literaria; memoria | Fórmula: Manuaje/Literatura ≆ Literatura/Oralitura |
-| Reescritura cruzada | Nuevas poéticas; narrativas transmedia | Redibujo cruzado (novela → dibujo → texto de inmersión) |
-| «Cada arquitectura lleva las marcas de sus medios» | Lenguajes visuales | La casa de hacienda lleva las marcas de los papeles; el pastel, las del dedo |
+| Reescritura cruzada | Nuevas poéticas | Versión 1: «redibujo cruzado». Versión 2: el ciclo de Lundberg aplicado a la lectura, con tres planos por figura (texto, pastel, contraste) |
+| «Cada arquitectura lleva las marcas de sus medios» | Lenguajes visuales | La arquitectura del despojo lleva las marcas del expediente, el sello y la firma; la lectura dibujada, las del pastel |
 | Semper y los tres cerditos | Imaginarios sociales | Reescritura altiplánica: ichu, adobe y piedra; el lobo es el papel (que también es madera) |

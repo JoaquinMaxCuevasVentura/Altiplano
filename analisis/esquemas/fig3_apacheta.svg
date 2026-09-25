@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" font-family="Helvetica, Arial, sans-serif">
+  <rect width="460" height="280" fill="#f6f2ea"/>
+  <text x="14" y="22" font-size="13" font-weight="bold" fill="#2f2a26">Fig. 3 · Umbral de la apacheta — esquema (apaisado)</text>
+  <!-- cielo violeta puna / vapor yunga -->
+  <rect x="0" y="30" width="230" height="120" fill="#cfc7d6"/>
+  <rect x="230" y="30" width="230" height="250" fill="#dfe8df"/>
+  <!-- cumbres góticas -->
+  <g fill="#ffffff" stroke="#9aa6b0"><path d="M150,110 L170,50 L190,110 Z"/><path d="M270,120 L292,40 L314,120 Z"/><path d="M320,120 L338,62 L356,120 Z"/></g>
+  <!-- puna: llanura seca -->
+  <path d="M0,150 L200,150 L230,112 L230,280 L0,280 Z" fill="#a79c8d"/>
+  <g stroke="#8a7f71" stroke-width="1"><line x1="10" y1="165" x2="190" y2="165"/><line x1="10" y1="185" x2="200" y2="185"/><line x1="10" y1="210" x2="210" y2="210"/><line x1="10" y1="240" x2="220" y2="240"/></g>
+  <!-- yunga: fauces -->
+  <path d="M230,112 L280,150 L300,280 L230,280 Z" fill="#6f8f6a"/>
+  <path d="M460,120 L400,160 L340,280 L460,280 Z" fill="#5d7d58"/>
+  <path d="M300,280 Q320,210 340,280 Z" fill="#9fb9b6" opacity="0.8"/>
+  <g stroke="#e9f0e6" stroke-width="3" fill="none" opacity="0.9"><path d="M290,150 q15,10 0,22 q-15,10 0,22"/><path d="M405,170 q-12,10 0,20 q12,10 0,20"/></g>
+  <!-- línea de máxima tensión -->
+  <line x1="230" y1="40" x2="230" y2="280" stroke="#b5542b" stroke-dasharray="5,4"/>
+  <!-- Paulo como poste -->
+  <line x1="230" y1="112" x2="230" y2="84" stroke="#2f2a26" stroke-width="4"/>
+  <circle cx="230" cy="80" r="4" fill="#2f2a26"/>
+  <path d="M232,90 L252,94 L232,100 Z" fill="#b5542b"/>
+  <line x1="120" y1="52" x2="226" y2="80" stroke="#2f2a26" stroke-width="0.8"/>
+  <!-- familia arrodillada -->
+  <g fill="#2f2a26"><circle cx="214" cy="118" r="3"/><circle cx="206" cy="121" r="3"/><circle cx="198" cy="124" r="2.5"/></g>
+  <!-- puente de monos -->
+  <line x1="300" y1="228" x2="318" y2="214" stroke="#3b3530" stroke-width="2"/>
+  <line x1="346" y1="224" x2="330" y2="212" stroke="#3b3530" stroke-width="2"/>
+  <path d="M318,214 Q324,240 330,212" fill="none" stroke="#3b3530" stroke-width="1" stroke-dasharray="2,2"/>
+  <g fill="#3b3530"><circle cx="320" cy="222" r="2"/><circle cx="323" cy="229" r="2"/><circle cx="327" cy="229" r="2"/><circle cx="329" cy="221" r="2"/></g>
+  <g font-size="8.5" fill="#2f2a26">
+    <text x="12" y="268">PUNA: pastel seco, con presión; el grano del papel asoma como piedra</text>
+    <text x="238" y="52" fill="#b5542b">punto de máxima tensión:</text><text x="238" y="62" fill="#b5542b">seco → húmedo</text>
+    <text x="360" y="100">YUNGA: pastel disuelto,</text><text x="360" y="110">veladuras que chorrean</text>
+    <text x="345" y="248">puente de manos (p. 121)</text>
+    <text x="14" y="48">Paulo, «gallardete clavado» (p. 109)</text>
+  </g>
+</svg>

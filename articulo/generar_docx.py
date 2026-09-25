@@ -7,10 +7,15 @@ Uso (desde la raíz del repositorio):
     pip install pypandoc_binary python-docx
     python3 articulo/generar_docx.py
 
-Lee articulo/articulo_piedras_puestas_en_el_agua.md y escribe
-articulo/articulo_piedras_puestas_en_el_agua.docx. Al final informa la
-extensión en caracteres con espacios (la revista admite 20.000-50.000,
-bibliografía incluida) y las palabras de cada resumen (máximo 100).
+Lee articulo/articulo_cosecha_de_piedras.md y escribe
+articulo/articulo_cosecha_de_piedras.docx. Al final informa la extensión
+en caracteres con espacios (la revista admite 20.000-50.000, bibliografía
+incluida) y las palabras de cada resumen (máximo 100).
+
+Las figuras aún no dibujadas van como marcadores en bloques
+::: {custom-style="Figura"} y su pie en ::: {custom-style="Pie de figura"}.
+Cuando un pastel esté escaneado, sustituye el marcador por la imagen, por
+ejemplo ![](figuras/figura_1.jpg){width=14cm}, dentro del mismo bloque.
 """
 
 import re
@@ -20,13 +25,14 @@ from pathlib import Path
 
 import pypandoc
 from docx import Document
+from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.oxml.ns import qn
 from docx.shared import Cm, Inches, Pt
 
 BASE = Path(__file__).resolve().parent
-MD = BASE / "articulo_piedras_puestas_en_el_agua.md"
-DOCX = BASE / "articulo_piedras_puestas_en_el_agua.docx"
+MD = BASE / "articulo_cosecha_de_piedras.md"
+DOCX = BASE / "articulo_cosecha_de_piedras.docx"
 REF = BASE / "plantilla_estudios_bolivianos.docx"
 FONT = "Times New Roman"
 
@@ -89,6 +95,15 @@ def build_reference():
     for name in ("Figure", "Captioned Figure", "Image Caption"):
         if name in styles:
             styles[name].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # Estilos propios para las figuras: el marcador (o la imagen) y su pie.
+    for name, size, line, before, after in (("Figura", 12, 1.0, 12, 3),
+                                            ("Pie de figura", 10, 1.0, 3, 12)):
+        style = styles.get(name) or doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
+        style.base_style = styles["Normal"]
+        set_font(style, size, italic=False)
+        set_spacing(style, line=line, before=before, after=after)
+        style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        style.paragraph_format.keep_with_next = name == "Figura"
     if "Footnote Text" in styles:
         set_font(styles["Footnote Text"], 10)
         set_spacing(styles["Footnote Text"], line=1.0, after=2)

@@ -1,5 +1,13 @@
 # 3. Marco cruzado: Lundberg, Martin, Vázquez Ramos *et al.*, Botelho Gosálvez y los dibujos
 
+> **Nota de la segunda versión (25/9/2026).** Este documento es de la primera ronda, cuando aún no tenía la novela. Cambios desde entonces:
+> - **Trama corregida con la novela** (7.ª ed., Juventud, 1982; véase §3.4 y `06_fichero_de_pasajes.md`).
+>   - Kero-Pata es el ayllu de origen de Juan Condori, convertido en finca; no es Jatun-Kolla.
+>   - El «doctor Bautista Las Casas» es abogado y diputado, no juez.
+>   - Jatun-Kolla está a media jornada del Titikaka, no a su orilla.
+> - Las **cuatro imágenes** de §3.5 eran **referencias visuales**, no los dibujos del artículo. Los seis pasteles del artículo están por hacer (`05_guia_de_dibujo.md`).
+> - El artículo nuevo **no usa** la posmemoria (Hirsch), la etiqueta «transmedia» ni la oposición entre la mano y el papel. Las columnas «Dibujos» y «Tiempo y memoria» de §3.6 quedan como antecedente.
+
 ## 3.1. Simon Lundberg (2019). *Architecture as Image*
 
 **Ficha.** Trabajo de grado (Examensarbete, Arkitektur, avancerad nivå, 30 hp), KTH, Skolan för arkitektur och samhällsbyggnad, Estocolmo, 2019 (TRITA-ABE-MBT-19132). 50 pp. La paginación impresa coincide con la del PDF.
@@ -108,9 +116,9 @@
 |---|---|
 | Botelho Gosálvez: La Paz, 1917-2004; abogado (UMSA); diplomático desde 1938; canciller (1978-1979); maestro en la Normal de Warisata (1937) | Varias fuentes biográficas coinciden |
 | Obra: *Borrachera verde* (1937, premio nacional), *Coca* (1941), *Altiplano* (1945), *Tierra chúcara*, *Los toros salvajes*, ensayo *El hombre y el paisaje de Bolivia* | Coinciden |
-| *Altiplano. Novela india*: 1.ª ed. Buenos Aires, Ayacucho, 1945; 10.ª ed. La Paz, Juventud, 1987; hay edición de 1982 | Fichas de librerías y catálogos |
-| Escrita entre junio y agosto de 1940 para el concurso de la Unión Panamericana (Farrar & Rinehart); el jurado boliviano (G. A. Otero, A. Guzmán, H. Palza, A. Alarcón, C. Guzmán de Rojas) envió *Metal del diablo* de Céspedes; ganó Ciro Alegría con *El mundo es ancho y ajeno* (1941), de trama parecida | Resumen de búsqueda; **conviene confirmarlo en el prólogo o la noticia editorial de tu edición** |
-| Trama: ayllu Jatun-Kolla a orillas del Titicaca; el doctor Las Casas (juez) se apropia de las tierras con documentos falsificados; paga al Tesoro Nacional las deudas de la comunidad; obtiene 20 ha en Kero-Pata; levanta la casa de hacienda frente a la iglesia; 700 familias despojadas y los varones convertidos en pongos; éxodo de 400 familias; soldados indígenas hacen prácticas de tiro sobre sus hermanos; sequía | Resúmenes de búsqueda. **Hay que confirmarlo y paginarlo en tu ejemplar** (véase el archivo 04) |
+| *Altiplano*: 1.ª ed. Buenos Aires, Ayacucho, 1945; Lima, Mundo Nuevo, 1967; **7.ª ed. La Paz, Juventud, 1982** (primera boliviana; colofón del 11/3/1982); 10.ª ed. Juventud, 1987 | 1945, 1967 y 1982: A (nota «Al lector», p. 5, y colofón, p. 169); 1987: catálogos |
+| Escrita entre junio y agosto de 1940 para el concurso de la Unión Panamericana (Farrar & Rinehart); el jurado boliviano (G. A. Otero, A. Guzmán, H. Palza, A. Alarcón, C. Guzmán de Rojas) envió *Metal del diablo* de Céspedes; ganó Ciro Alegría con *El mundo es ancho y ajeno* (1941), de trama parecida | A: nota «Al lector», p. 4 |
+| Trama (**verificada en la novela**, 7.ª ed. 1982): Jatun-Kolla, ayllu aymara «en la planta de una alta y rojiza peñería», a media jornada del Titikaka (pp. 6-7); jerarquía interna Villca / Huanca / Condori (pp. 20-38); despojo de Kero-Pata, ayllu de origen de Juan Condori: tata-cura, tata-intendente y tata-corregidor, títulos y papel sellado, deuda con el fisco pagada por el «doctor Bautista Las Casas», diputado, que obtiene 20 ha, casa de hacienda frente a la iglesia, 700 familias despojadas y 400 expulsadas, soldados indios que disparan sobre sus hermanos (pp. 36-38); sequía y linchamiento del yatiri (pp. 56-70); éxodo (pp. 71-81); Umacachi: pesebre, ordenanza del alcalde Margarito Mendoza, tinterillo (pp. 82-107); Yungas (pp. 108-133); mina «Pensylvania» y asesinato de Juan Condori (pp. 134-154); retorno (pp. 155-159) | A (novela) |
 | Inspiración en su paso por Warisata | Resumen de búsqueda (Salazar de la Torre / CIDES) |
 | Estudio crítico: Barnadas, J. M., *Raúl Botelho Gosálvez: Altiplano. Esquema metodológico de aproximación a la narrativa boliviana* (c. 1977) | Existe en catálogos; no consultado |
 
@@ -125,7 +133,9 @@
 - El 2 de agosto fue declarado Día del Indio en 1937 (gobierno de Busch), y la Reforma Agraria se firmó el 2 de agosto de 1953.
 - El Primer Congreso Indigenal se celebró del 13 al 15 de mayo de 1945, y los decretos 318 y 319 (Villarroel) abolieron el pongueaje y el mitanaje.
 
-## 3.5. Los cuatro dibujos (pasteles al óleo)
+## 3.5. Las cuatro imágenes de referencia (no son las figuras del artículo)
+
+> El usuario aclaró que estas imágenes eran solo referencias. Se conservan en `analisis/referencias_visuales/referencia_1.jpg` … `referencia_4.jpg`. Las lecturas de abajo son de la primera versión.
 
 | Fig. | Título provisional | Formato | Descripción formal | Ambigüedades productivas | Lectura |
 |---|---|---|---|---|---|
@@ -146,7 +156,7 @@
 - Kero-Pata como andén;
 - un «plano» del ayllu hecho con pastel, que desafíe la línea catastral (al modo del mapa de *Twin Peaks*).
 
-## 3.6. Mapa de cruces
+## 3.6. Mapa de cruces (primera versión)
 
 | Concepto | Cárcamo Pino | Lundberg | Martin | Vázquez Ramos *et al.* | *Altiplano* | Dibujos |
 |---|---|---|---|---|---|---|

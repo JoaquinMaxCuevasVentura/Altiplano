@@ -32,10 +32,10 @@ Pide enfoques **disciplinarios, interdisciplinarios y transdisciplinarios**. Est
 
 | Eje de la convocatoria | Encaje | Cómo lo toca el artículo |
 |---|---|---|
-| Lenguajes visuales, audiovisuales y performativos | **Principal** | Los cuatro pasteles como dispositivo de investigación; el manuaje; la lectura del cine en Martin |
-| Ficción literaria, narrativas transmedia y nuevas poéticas | **Principal** | Relectura de *Altiplano* (1945); «redibujo» de un texto literario (el paso de la novela al dibujo es transmedia) |
-| Memoria, posmemoria y construcción de identidades | Fuerte | Posmemoria (Hirsch) como mirada al pasado «a través de la piedra»; memoria del despojo previo a 1952-1953 |
-| Discurso, poder y representaciones sociales | Fuerte | La «ciudad letrada» (Rama); el despojo hecho por escrito; «las palabras no designan, sino encubren» (Rivera Cusicanqui) |
+| Lenguajes visuales, audiovisuales y performativos | **Principal** | Los seis pasteles como instrumento de lectura; el manuaje; la lectura del cine en Martin |
+| Ficción literaria, narrativas transmedia y nuevas poéticas | **Principal** | Relectura de *Altiplano* (1945) desde la espacialidad y el dibujo. **La versión 2 no usa la etiqueta «transmedia»**, que el corpus no justifica |
+| Memoria, posmemoria y construcción de identidades | Fuerte | Memoria del habitar: el retorno repara el lugar y selecciona qué recordar (pp. 155-159). **La versión 2 no usa la «posmemoria»** |
+| Discurso, poder y representaciones sociales | Fuerte | La red del despojo (curas, corregidores, alcalde, gendarmes indios, tinterillos, papeles, máquinas); la crítica del narrador (animalización, sexualización, petrificación) |
 | Imaginarios sociales, mitos y utopías | Medio | Warisata como utopía construida a mano; categorías aymaras (*urqu/uma/taypi*) |
 | Historia, historiografía y usos de la ficción | Medio | La novela como artefacto que trama un proceso histórico (White) |
 | Subjetividad, emociones y narrativas del yo | Bajo | Solo de forma implícita, por la posición del dibujante |
@@ -74,7 +74,7 @@ Pide enfoques **disciplinarios, interdisciplinarios y transdisciplinarios**. Est
 >
 > Estimado Comité Editorial:
 >
-> Adjunto el artículo «Piedras puestas en el agua. Notas para redibujar *Altiplano* de Botelho Gosálvez» para su consideración en el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» del número 43 de *Estudios Bolivianos*. Se trata de una investigación en desarrollo, original e inédita, que no ha sido enviada a otra revista. El texto incluye la declaración sobre el uso de herramientas de inteligencia artificial que exige el punto 8 de las normas.
+> Adjunto el artículo «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez» para su consideración en el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» del número 43 de *Estudios Bolivianos*. Se trata de una investigación en desarrollo, original e inédita, que no ha sido enviada a otra revista. El texto incluye la declaración sobre el uso de herramientas de inteligencia artificial que exige el punto 8 de las normas.
 >
 > Quedo atento/a a sus indicaciones sobre el formato de anonimización para el arbitraje a doble ciego.
 >

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" font-family="Helvetica, Arial, sans-serif">
+  <rect width="460" height="280" fill="#e3ecef"/>
+  <text x="14" y="22" font-size="13" font-weight="bold" fill="#2f2a26">Fig. 4 · Pelvis telúrica / Pachamama sorda — esquema</text>
+  <text x="200" y="80" font-size="9" fill="#6b5f52">CIELO: papel desnudo, sin trazo (p. 57)</text>
+  <!-- luna menguante -->
+  <path d="M392,50 a22,22 0 1,0 0,44 a17,22 0 1,1 0,-44 Z" fill="#f4efe4" stroke="#b5542b" stroke-width="1"/>
+  <!-- horizonte y cerro con humo -->
+  <path d="M0,120 L70,120 L110,86 L150,120 L460,120 L460,280 L0,280 Z" fill="#8c7b66"/>
+  <path d="M110,86 q-6,-12 2,-22 q8,-10 0,-22" stroke="#9aa0a3" stroke-width="3" fill="none"/>
+  <text x="122" y="44" font-size="8.5" fill="#2f2a26">ofrendas quemadas (p. 58)</text>
+  <!-- pelvis = cuenca seca -->
+  <path d="M130,150 C150,125 205,128 225,160 C245,128 300,125 320,150 C335,170 320,210 290,222 C270,230 255,250 225,252 C195,250 180,230 160,222 C130,210 115,170 130,150 Z" fill="#efe8da" stroke="#4a4038" stroke-width="1.5"/>
+  <ellipse cx="225" cy="205" rx="26" ry="20" fill="#8c7b66" stroke="#4a4038"/>
+  <!-- grietas -->
+  <g stroke="#4a4038" stroke-width="1" fill="none">
+    <path d="M40,150 l20,12 l-6,14 l18,10"/><path d="M360,160 l-14,14 l10,12 l-16,16"/><path d="M60,230 l24,-6 l10,16"/><path d="M380,235 l-20,-10 l-8,14"/>
+    <path d="M150,170 l12,8 l-4,10"/><path d="M290,170 l-10,10 l6,12"/>
+  </g>
+  <g font-size="8.5" fill="#2f2a26">
+    <text x="16" y="140" fill="#f6f2ea">tierra agrietada «como paredes envejecidas» (p. 56)</text>
+    <text x="300" y="268" fill="#f6f2ea">cuenca de las vertientes secas (p. 58)</text>
+    <text x="16" y="268" fill="#f6f2ea">blanco hueso sobre tierra de sombra · grietas por raspado</text>
+    <text x="330" y="112" fill="#b5542b">luna menguante = cadera (p. 64)</text>
+  </g>
+</svg>
