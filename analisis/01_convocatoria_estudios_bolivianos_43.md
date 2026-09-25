@@ -34,9 +34,9 @@ Estado para la versión 3, «Topografías de la carne y el barro en *Altiplano*�
 
 | Eje de la convocatoria | Encaje | Cómo lo toca el artículo |
 |---|---|---|
-| Discurso, poder y representaciones sociales | **Principal** | Cómo una ordenanza, un libro exhibido por su tamaño, una papeleta médica, un cuarto atado al rendimiento, un salario y un revólver distribuyen la permanencia y la salida; la crítica de la voz narrativa (animalización, paternalismo, asimetrías de género, sexualización telúrica) |
-| Lenguajes visuales, audiovisuales y performativos | Complementario | La exploración gráfica al pastel al óleo, en curso, con registro escrito de cada paso; las preguntas comparativas de Martin sobre arquitectura y cine |
-| Memoria, posmemoria y construcción de identidades | Complementario | Dos vías: la narración conserva un crimen que nadie sospecha en el mundo narrado (p. 154), y el retorno selecciona qué se recuerda y a quiénes se nombra (pp. 155-159). **No se usa «posmemoria»** |
+| Discurso, poder y representaciones sociales | **Principal** | Cómo una ordenanza, un libro exhibido por su tamaño, una papeleta médica, un cuarto atado al rendimiento, un salario y un revólver distribuyen la permanencia y la salida; la legibilidad (Scott) y los soportes de la posesión: piedra, madera y papel (Dean); la crítica de la voz narrativa (animalización, paternalismo, asimetrías de género, sexualización telúrica) |
+| Lenguajes visuales, audiovisuales y performativos | Complementario | La exploración gráfica al pastel al óleo, en curso, con registro escrito de cada paso; las preguntas comparativas de Martin sobre arquitectura y cine; la tectónica (Frampton) y lo háptico (Garrington) |
+| Memoria, posmemoria y construcción de identidades | Complementario | Dos vías: la narración conserva un crimen que nadie sospecha en el mundo narrado (p. 154), y el retorno selecciona qué se recuerda y a quiénes se nombra (pp. 155-159); la novela como «bolsa» que guarda lo que el ayllu deja fuera (Le Guin); los mojones como memoria de la posesión (Dean). **No se usa «posmemoria»** |
 | Ficción literaria, narrativas transmedia y nuevas poéticas | Complementario | Lectura de la ficción en tres planos: historia, narrador e investigador. **No se usa «transmedia»** |
 | Imaginarios sociales, mitos y utopías | Bajo | La nota editorial (Jatun-Kolla «es, en realidad, Warisata»; la «redención» del indio) como marco de lectura que el artículo discute |
 | Historia, historiografía y usos de la ficción | Bajo | No se desarrolla |
@@ -49,7 +49,7 @@ Estado para la versión 3, «Topografías de la carne y el barro en *Altiplano*�
 | N.º | Norma | Estado en `articulo/articulo_altiplano.docx` |
 |---|---|---|
 | 1 | Originalidad e inéditos; el autor responde por ella | Pendiente de revisión autoral (§1.5) |
-| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 35.843 caracteres. La depuración estimaba entre 31.000 y 35.000; hay margen para la nota de autor y para dos o tres figuras con su pie y su registro |
+| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 41.760 caracteres tras sumar cinco libros (la depuración estimaba entre 31.000 y 35.000). Queda margen para la nota de autor y para dos o tres figuras con su pie y su registro |
 | 3 | Tamaño carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5; cuadros e ilustraciones numerados con su fuente y mencionados en el texto | ✅ El `.docx` generado lo cumple. El Cuadro 1 lleva fuente. Todavía no hay figuras: cuando las haya, numéralas, indica su fuente y menciónalas en el texto (`05_guia_de_dibujo.md`, §5.7) |
 | 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 9 palabras (ES) / 7 (EN) |
 | 4b | Presentación del autor a pie de página (máx. 100 palabras): formación, grado, adscripción, publicaciones, correo, ciudad, país | ⚠️ Marcador ⟦…⟧ por completar |

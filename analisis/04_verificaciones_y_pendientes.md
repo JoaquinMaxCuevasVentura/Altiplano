@@ -1,10 +1,11 @@
 # 4. Pendientes y verificaciones antes del envío
 
-**Estado del artículo** «Topografías de la carne y el barro en *Altiplano*» (versión 3, que aplica la depuración recibida):
+**Estado del artículo** «Topografías de la carne y el barro en *Altiplano*» (versión 3, que aplica la depuración recibida e incorpora cinco libros: Scott, Dean, Frampton, Garrington y Le Guin; véase `07_cinco_libros.md`):
 
-- 35.843 caracteres con espacios, bibliografía incluida (límite: 50.000; la depuración estimaba entre 31.000 y 35.000).
+- 41.760 caracteres con espacios, bibliografía incluida (límite: 50.000; la depuración estimaba entre 31.000 y 35.000, antes de sumar los cinco libros).
 - Resumen de 99 palabras y abstract de 96 (límite: 100). Títulos de 9 y 7 palabras.
-- 135 citas de la novela comprobadas contra la transcripción: todas existen literalmente y están en la página indicada. También se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué).
+- 144 citas de la novela comprobadas contra la transcripción: todas existen literalmente y están en la página indicada. También se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué).
+- Las citas de los cinco libros nuevos se comprobaron contra sus originales, con la página (§4.3, filas 13-17).
 - Sin figuras. La exploración gráfica está en curso y el artículo solo presenta sus unidades y criterios (`05_guia_de_dibujo.md`).
 
 ## 4.1. Qué te toca hacer, en orden
@@ -38,7 +39,7 @@ Estado de cada dato:
 
 | # | Dato | Estado | Acción |
 |---|---|---|---|
-| 1 | 135 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
+| 1 | 144 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
 | 2 | Citas de Cárcamo Pino (2025a: 12; 2025b: 244, 246) | A | — |
 | 3 | Definición de manuaje, Cárcamo Pino (2019: 1412) | B, vía 2025b: 244 | — |
 | 4 | Editorial de Cárcamo Pino (2019) | C | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018 (*Graphic Imprints*). Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Confirmar cuál prefieres |
@@ -50,6 +51,11 @@ Estado de cada dato:
 | 10 | Shonfield (2000: 173), Bachelard (1994: 6), Lynch en Rodley (2005: 10) | B, vía las notas de Martin | — |
 | 11 | Arriarán (2021: 29-31) | C: procede de la depuración | Ver §4.4 |
 | 12 | Barnadas (1977) | C | No consultado; el artículo lo dice. Confirmar ciudad (Cochabamba) y si hay coautor en la portada |
+| 13 | Scott (2020 [1998]: 3, 35-36) | A (texto) con páginas del índice analítico | El archivo no trae números de página: cotejar las dos páginas con el impreso. La edición Veritas (2020) conserva la paginación de 1998 |
+| 14 | Dean (2010: 44, 46, 68) | A | Páginas reconstruidas con los encabezados del archivo y comprobadas con el índice; cotejar si tienes el libro |
+| 15 | Frampton (1995: 5) | A (escaneo de la introducción) | Confirmar en la portada el editor (John Cava) y la ciudad que da la bibliografía |
+| 16 | Garrington (2013: 2, 16) | A | Paginación comprobada con el índice |
+| 17 | Le Guin (2021 [1986]: 10) | A (PDF de la traducción de Nedev y Pérez de Lama) | Completar la URL exacta en es.theanarchistlibrary.org |
 
 ## 4.4. Arriarán y Barnadas
 
@@ -73,10 +79,10 @@ La depuración advierte que el uso de ChatGPT no debe describirse como simple co
 
 ## 4.6. Presupuesto de extensión
 
-- Ahora: 35.843 caracteres.
+- Ahora: 41.760 caracteres (35.843 antes de los cinco libros).
 - La nota de autor añadirá unos 500.
 - Cada figura, con su pie y su párrafo de resultados, sumará entre 800 y 1.200.
-- Con tres figuras el artículo quedaría cerca de 39.000, dentro del límite de 50.000.
+- Con tres figuras el artículo quedaría cerca de 45.000, todavía dentro del límite de 50.000. Si hace falta espacio, `07_cinco_libros.md` (§7.9) indica qué recortar primero.
 
 ## 4.7. Limitación del entorno de trabajo
 

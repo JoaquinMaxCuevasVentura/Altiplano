@@ -101,6 +101,7 @@ En los inventarios, el trazo continuo es lo que da el texto (con página), el di
 - **Valoraciones del narrador.** El tinterillo recuenta los billetes «con mirada de usurpador y lengueteo de complacencia»; después, los Villca se ocultan «como topos» (p. 105).
 - **Disecciones posibles.** (a) La mesa como frontera: qué hay de cada lado. (b) Los dos libros y su diferencia de tamaño. (c) El recorrido del dinero: de la faja a la mesa y a las manos del tinterillo. (d) El recorrido de la salida: de la mesa a la calle.
 - **Ensamblajes para comparar.** (1) La mesa entre ambos, los libros del lado del letrado y la salida a espaldas de Vicente (la disposición que propone el artículo). (2) Vicente de pie junto a la puerta, sin sentarse. (3) La escena vista desde la calle, con la puerta como marco.
+- **Manuaje burocrático.** El artículo lo define en §4.1: el letrado no escribe, sino que señala los libros, compara su tamaño y cuenta billetes. Una disección posible es dibujar solo las manos y los objetos que tocan: el infolio, el manual, la faja, los billetes sobre la mesa.
 - **Riesgos.** Convertir el libro en una «masa» que aplasta a un indio pasivo: Vicente desconfía, calcula y se niega dos veces. Confundir al tinterillo con el alcalde Margarito Mendoza.
 
 ### Escena 3. El retroceso de Juan Condori (pp. 150-154)
@@ -118,6 +119,7 @@ En los inventarios, el trazo continuo es lo que da el texto (con página), el di
 - **Valoraciones del narrador.** Siguen a Williams «como se sigue a un sugestionador irresistible»; «¿Qué ambición sin sustancia ni esperanza le quitó la razón?» (p. 153); «el gringo asesino» (p. 154).
 - **Disecciones posibles.** (a) Los niveles: rodilla, cintura, ombligo, en el orden del texto. (b) La luz: la de los mecheros que se quedan atrás deja de verse (p. 153); el grupo queda aislado. (c) La línea de retroceso y la línea de fuego. (d) La viga sobre el grupo.
 - **Ensamblajes para comparar.** (1) Sección longitudinal de la galería con los niveles y las luces que se pierden. (2) El punto de vista de Condori al volverse. (3) Una secuencia de tres viñetas —la oferta, la amenaza, el disparo—, que quizá represente mejor la cadena que el artículo identifica.
+- **Unidades del texto.** La novela mide la galería con el cuerpo: agua a la rodilla, barro a la cintura, agua al ombligo, luces que dejan de verse; en la jaula, «como si faltase suelo bajo sus pies» (p. 143). El artículo nombra esas unidades con el término «háptico» de Garrington (§4.3). El dibujo puede usarlas como escala en lugar de metros, sin pretender reproducir la experiencia de Condori.
 - **Riesgos.** Sustituir la cadena social por una atmósfera (Martin sirve para preguntar quién opera y quién decide, no para importar la estética de *Eraserhead*); hacer del disparo o de la sangre un espectáculo.
 
 ## 5.6. Elegir dos o tres figuras

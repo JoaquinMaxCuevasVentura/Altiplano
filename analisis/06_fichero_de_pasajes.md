@@ -1,6 +1,6 @@
 # 6. Fichero de pasajes de *Altiplano*
 
-Este fichero reúne los pasajes del artículo «Topografías de la carne y el barro en *Altiplano*» (versión 3, tras la depuración). Sirve para cotejar cada cita con el libro impreso y para preparar los dibujos.
+Este fichero reúne los pasajes del artículo «Topografías de la carne y el barro en *Altiplano*» (versión 3, tras la depuración y la incorporación de cinco libros). Sirve para cotejar cada cita con el libro impreso y para preparar los dibujos.
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
 - **Fuente de trabajo.** Transcripción digital (`.docx`) de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
@@ -51,7 +51,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 135 citas existen literalmente, con las correcciones de §6.2, y están en la página que se indica. Se revisaron también a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 144 citas existen literalmente, con las correcciones de §6.2, y están en la página que se indica. Se revisaron también a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -61,6 +61,8 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 135 
 | 6 | «en la planta de una alta y rojiza peñería» | ☐ |
 | 9 | «A medida que extraen piedras y las amontonan, brotan más y más, como paridas por la tierra. ¡Piedras! El trabajo más duro, más reñido y tenaz en Jatun-Kolla, rinde…» | ☐ |
 | 9 | «erial de piedras» | ☐ |
+| 9 | «mojones» | ☐ |
+| 9 | «señalan las pertenencias originarias del ayllu» | ☐ |
 | 9 | «vive emporcado en una ciudad del extranjero» | ☐ |
 | 10 | «con triste y pacífica ambición» | ☐ |
 | 20 | «bajo su mano lo menos una quinta parte de las tierras de labranza» | ☐ |
@@ -88,6 +90,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 135 
 | 31 | «apenas la altura de un adobe» | ☐ |
 | 31 | «cuelgan las hoces, el arado, el yugo de madera» | ☐ |
 | 31 | «La vida deviene decadencia para los Huanca» | ☐ |
+| 31 | «mal unidas con lazos de paja trenzada» | ☐ |
 | 31 | «Una mecha de sebo ardía en una larga repisa de madera sobre la cual dormían las gallinas» | ☐ |
 | 32 | «apoyadas contra la pared» | ☐ |
 | 32 | «en cuclillas, cerca del fuego» | ☐ |
@@ -97,7 +100,8 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 135 
 | 34 | «desde el portal de su chujlla» | ☐ |
 | 35 | «la techumbre de paja» | ☐ |
 | 36 | «Cédulas Reales» | ☐ |
-| 37 | «los papeles del Gobierno» | ☐ |
+| 36 | «una gran cuestión de títulos, papel sellado y pago de impuestos» | ☐ |
+| 37 | «así lo declaraban los papeles del Gobierno» | ☐ |
 | 56 | «se agrietan como paredes envejecidas» | ☐ |
 | 66 | «todo lo que nos sucede» | ☐ |
 | 67 | «dos muñequitos de lana que estaban atravesados en el pecho por una espina» | ☐ |
@@ -160,10 +164,14 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 135 
 | 142 | «Aquí cosecharás miles de cargas de estaño» | ☐ |
 | 142 | «esta es la bonificación» | ☐ |
 | 143 | «apeñuscados contra la rejilla» | ☐ |
+| 143 | «como si faltase suelo bajo sus pies» | ☐ |
+| 143 | «la vertiginosa caída» | ☐ |
 | 144 | «una carretilla para acarrear metal» | ☐ |
+| 145 | «450» | ☐ |
 | 145 | «hombre agrícola y solar» | ☐ |
 | 145 | «mezquinas lamparillas» | ☐ |
 | 145 | «no se conocían entonces cascos protectores ni las botas de goma» | ☐ |
+| 145 | «se derrumbaba en algunos pasos» | ☐ |
 | 148 | «una solidaridad nacida del peligro y la miseria» | ☐ |
 | 150 | «450» | ☐ |
 | 151 | «con los sesos aplastados» | ☐ |
@@ -186,6 +194,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 135 
 | 156 | «los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
 | 156 | «Tras la muralla de su visión, como foso hondo y alquitranado, estaba el intervalo del hambre; los comunarios, desde la atalaya de la esperanza, sólo miraban el…» | ☐ |
 | 156 | «ya no había yuntas de bueyes y los mismos hombres eran quienes tiraban el arado» | ☐ |
+| 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 159 | «olvidaron la pesadilla pasada» | ☐ |
 | 159 | «repuesta» | ☐ |
 | 159 | «su prestigio de hembra paridora y múltiple» | ☐ |

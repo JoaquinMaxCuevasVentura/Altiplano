@@ -5,6 +5,7 @@
 > - **Retira** del argumento a Bacon, Deleuze, Loos, Foucault (heterotopías), Colomina, Freud, Vidler, Alberti, Schmarsow, Worringer y Hall. Las secciones de este documento que los tratan quedan como material de consulta.
 > - **Corrige lecturas** señaladas por la depuración: la chujlla no demuestra una armonía originaria; la puna abierta también encierra (p. 72); el plano «450» es un nivel minero, no un trazado diédrico; el tinterillo de los dos libros no es Margarito Mendoza; Villca no acepta pasivamente el engaño; la «caligrafía» del arado (p. 87) expone una exclusión escolar; la muerte de Condori es un asesinato, no un accidente industrial.
 > - La unidad de la exploración gráfica ya no es el lugar sino la **escena** (véase `05_guia_de_dibujo.md`).
+> - **Después de la depuración** se sumaron cinco libros, cada uno con una función y un límite: Scott (legibilidad), Dean (piedras que marcan la posesión), Frampton (estereotomía y tectónica), Garrington (lo háptico) y Le Guin (la novela como bolsa). Véase `07_cinco_libros.md`.
 
 > **Nota de la segunda versión (25/9/2026).** Este documento es de la primera ronda, cuando aún no tenía la novela. Cambios desde entonces:
 > - **Trama corregida con la novela** (7.ª ed., Juventud, 1982; véase §3.4 y `06_fichero_de_pasajes.md`).
