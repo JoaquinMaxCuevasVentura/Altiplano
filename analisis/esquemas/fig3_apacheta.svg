@@ -20,7 +20,7 @@
   <line x1="230" y1="112" x2="230" y2="84" stroke="#2f2a26" stroke-width="4"/>
   <circle cx="230" cy="80" r="4" fill="#2f2a26"/>
   <path d="M232,90 L252,94 L232,100 Z" fill="#b5542b"/>
-  <line x1="120" y1="52" x2="226" y2="80" stroke="#2f2a26" stroke-width="0.8"/>
+  <line x1="174" y1="45" x2="226" y2="79" stroke="#2f2a26" stroke-width="0.8"/>
   <!-- familia arrodillada -->
   <g fill="#2f2a26"><circle cx="214" cy="118" r="3"/><circle cx="206" cy="121" r="3"/><circle cx="198" cy="124" r="2.5"/></g>
   <!-- puente de monos -->
@@ -29,10 +29,10 @@
   <path d="M318,214 Q324,240 330,212" fill="none" stroke="#3b3530" stroke-width="1" stroke-dasharray="2,2"/>
   <g fill="#3b3530"><circle cx="320" cy="222" r="2"/><circle cx="323" cy="229" r="2"/><circle cx="327" cy="229" r="2"/><circle cx="329" cy="221" r="2"/></g>
   <g font-size="8.5" fill="#2f2a26">
-    <text x="12" y="268">PUNA: pastel seco, con presión; el grano del papel asoma como piedra</text>
-    <text x="238" y="52" fill="#b5542b">punto de máxima tensión:</text><text x="238" y="62" fill="#b5542b">seco → húmedo</text>
+    <text x="12" y="258">PUNA: pastel seco, con presión;</text><text x="12" y="268">el grano del papel asoma como piedra</text>
+    <text x="236" y="37" fill="#b5542b">punto de máxima tensión: seco → húmedo</text>
     <text x="360" y="100">YUNGA: pastel disuelto,</text><text x="360" y="110">veladuras que chorrean</text>
-    <text x="345" y="248">puente de monos (p. 121)</text>
+    <text x="302" y="198">puente de monos</text><text x="302" y="207">(p. 121)</text>
     <text x="14" y="48">Paulo, «gallardete clavado» (p. 109)</text>
   </g>
 </svg>

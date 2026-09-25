@@ -5,21 +5,22 @@ interlineado 1,5 (notas al pie en 10 pt, interlineado sencillo).
 
 Uso (desde la raíz del repositorio):
     pip install pypandoc_binary python-docx
-    python3 articulo/generar_docx.py
+    python3 articulo/generar_docx.py [archivo.md]
 
-Lee articulo/articulo_altiplano.md y escribe articulo/articulo_altiplano.docx.
-Al final informa la extensión en caracteres con espacios (la revista admite
-20.000-50.000, bibliografía incluida) y las palabras de cada resumen
-(máximo 100).
+Sin argumento lee articulo/articulo_cosecha_de_piedras.md (versión definitiva)
+y escribe el .docx del mismo nombre; con un argumento convierte ese archivo
+(por ejemplo, articulo/articulo_altiplano.md, la versión 3). Al final informa
+la extensión en caracteres con espacios (la revista admite 20.000-50.000,
+bibliografía incluida) y las palabras de cada resumen (máximo 100).
 
-El artículo todavía no lleva figuras. Cuando un pastel esté terminado y
-escaneado, insértalo en un bloque ::: {custom-style="Figura"} con la imagen,
-por ejemplo ![](figuras/figura_1.jpg){width=14cm}, seguido de su pie en un
+Las figuras van en bloques ::: {custom-style="Figura"} con la imagen, por
+ejemplo ![](figuras/figura_1.png){width=14cm}, seguidos de su pie en un
 bloque ::: {custom-style="Pie de figura"} (véase figuras/LEEME.md).
 """
 
 import re
 import subprocess
+import sys
 import zipfile
 from pathlib import Path
 
@@ -31,8 +32,8 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Inches, Pt
 
 BASE = Path(__file__).resolve().parent
-MD = BASE / "articulo_altiplano.md"
-DOCX = BASE / "articulo_altiplano.docx"
+MD = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else BASE / "articulo_cosecha_de_piedras.md"
+DOCX = MD.with_suffix(".docx")
 REF = BASE / "plantilla_estudios_bolivianos.docx"
 FONT = "Times New Roman"
 

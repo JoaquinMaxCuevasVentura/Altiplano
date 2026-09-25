@@ -11,7 +11,7 @@
   <text x="196" y="52" font-size="8" fill="#e0c9a0">desmonte (p. 140) =</text><text x="196" y="62" font-size="8" fill="#e0c9a0">«montaña de piedras» (p. 9)</text>
   <!-- campamento escalonado -->
   <g fill="#8a8272"><rect x="14" y="108" width="22" height="22"/><circle cx="46" cy="124" r="5" fill="#5f7a55"/><rect x="60" y="116" width="12" height="14"/><rect x="75" y="116" width="12" height="14"/><rect x="90" y="116" width="12" height="14"/><rect x="108" y="122" width="7" height="8"/><rect x="118" y="122" width="7" height="8"/><rect x="128" y="122" width="7" height="8"/></g>
-  <text x="12" y="146" font-size="8" fill="#c9c0b1">chalets · filas «como cuadras de un cuartel» · cuchitriles (p. 135)</text>
+  <text x="12" y="146" font-size="8" fill="#c9c0b1">chalets · filas «como las cuadras de un cuartel» · cuchitriles (p. 135)</text>
   <!-- superficie -->
   <line x1="0" y1="130" x2="320" y2="130" stroke="#8a8272" stroke-width="2"/>
   <!-- roca -->
@@ -34,7 +34,7 @@
   <path d="M250,436 L275,405 L300,436 Z" fill="#6e6452"/>
   <line x1="243" y1="436" x2="243" y2="424" stroke="#c9a88a" stroke-width="2"/><line x1="238" y1="420" x2="248" y2="420" stroke="#c9a88a" stroke-width="2"/>
   <g font-size="8" fill="#f1e9dc">
-    <text x="12" y="470">agua copajira (p. 136): pastel disuelto que sube por los cuerpos</text>
+    <text x="12" y="470">agua copajira (p. 143): pastel disuelto que sube por los cuerpos</text>
     <text x="12" y="483">viga que se quiebra: falla el apoyo (p. 154) · «informe montón» (p. 154)</text>
   </g>
 </svg>

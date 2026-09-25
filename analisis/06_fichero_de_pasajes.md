@@ -1,6 +1,6 @@
 # 6. Fichero de pasajes de *Altiplano*
 
-Este fichero reúne los pasajes del artículo «Topografías de la carne y el barro en *Altiplano*» (versión 3, tras la depuración y la incorporación de cinco libros). Sirve para cotejar cada cita con el libro impreso y para preparar los dibujos.
+Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez» (versión 2 reforzada con cinco libros). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
 - **Fuente de trabajo.** Transcripción digital (`.docx`) de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
@@ -47,86 +47,95 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 - **El tinterillo no es Margarito Mendoza.** Mendoza es el alcalde que firma la ordenanza (pp. 86, 96). El tinterillo de los dos libros no tiene nombre (pp. 103-105).
 - **En el aserradero, Paulo sí es contratado.** El contratista invoca la mano cercenada de otro puneño, pero termina diciendo «Mañana te anotaré en la planilla» (p. 129).
 - **El Jilakata de la sequía es Paulo Huanca**, «sucesor del Tito Huallpa» (p. 73).
+- **La hija de Paulo (p. 132).** El texto dice que «había sido desflorada por el patrón»; que «en seguida vinieron los capataces y peones: le daban dinero», y que la desesperación la «obligó a venderse». No escribas que la violaron el patrón, los capataces y los peones: así lo resumía, mal, la versión 2. El padre «juró y perjuró que aquello era un crimen, pero las pruebas eran irrefutables»: se refiere a la muerte (ella se ahorcó), no al patrón.
+- **La «encerrona» (p. 102)** es la casa municipal donde queda el ganado requisado, no la plaza. El vecindario mestizo agradece la carne al alcalde («fue efusivo al agradecer»); no lo «felicita».
+- **La apacheta no lleva piedras en la novela.** Aparece en la bendición de la p. 33, en la escena de la p. 109 y en el vocabulario, que la define como «abra de las cordilleras y cumbre de los caminos» (p. 160).
+- **El «organismo de piedra del Kollasuyo» (p. 133)** es el de Paulo Huanca: el ardor del yunga lo había «despedazado» cuando vuelve a la puna.
 - **Dos fuentes de luz en la junta de los Huanca:** la «mecha de sebo» sobre la repisa (p. 31) y el fogón, cuyo «resplandor» ve el padre en el suelo (p. 32).
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 144 citas existen literalmente, con las correcciones de §6.2, y están en la página que se indica. Se revisaron también a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 147 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
 | 5 | «ama al indio» | ☐ |
 | 5 | «es, en realidad, Warisata» | ☐ |
-| 5 | «ocupado por contribuir a su redención» | ☐ |
 | 6 | «en la planta de una alta y rojiza peñería» | ☐ |
-| 9 | «A medida que extraen piedras y las amontonan, brotan más y más, como paridas por la tierra. ¡Piedras! El trabajo más duro, más reñido y tenaz en Jatun-Kolla, rinde…» | ☐ |
+| 6 | «las chujllas de las familias más antiguas han trepado en los riscos del cerro y desde allí parecen ocupar un sitio de preeminencia sobre el resto de chozas» | ☐ |
+| 8 | «los cimientos y paredes de las chujllas» | ☐ |
+| 8 | «padre del ayllu» | ☐ |
+| 8 | «una especie de padre del ayllu» | ☐ |
 | 9 | «erial de piedras» | ☐ |
-| 9 | «mojones» | ☐ |
-| 9 | «señalan las pertenencias originarias del ayllu» | ☐ |
-| 9 | «vive emporcado en una ciudad del extranjero» | ☐ |
-| 10 | «con triste y pacífica ambición» | ☐ |
-| 20 | «bajo su mano lo menos una quinta parte de las tierras de labranza» | ☐ |
+| 9 | «Quizá un día la montaña de piedras sobrepase la altura del cerro» | ☐ |
+| 9 | «tablero de ajedrez un poco desigual, un poco contrahecho» | ☐ |
+| 10 | «una pequeña huaca de barro cocido» | ☐ |
+| 10 | «verrugas en la piel sarmentosa del altiplano» | ☐ |
+| 13 | «cuatro patas de la bestia opresora del puneño» | ☐ |
 | 20 | «empotró en el suelo del ayllu las estacas de propiedad y empezó a dominar» | ☐ |
-| 21 | «cuatro o cinco hectáreas de tierras de labor por familia» | ☐ |
-| 21 | «la tierra es su carne, su sangre y sus huesos» | ☐ |
-| 21 | «reciben como salario el puchero y la casa» | ☐ |
-| 22 | «burguesía» | ☐ |
-| 22 | «colmado la medida de resistencia» | ☐ |
+| 22 | «edificante y fantástica» | ☐ |
 | 22 | «el proletariado campesino» | ☐ |
-| 22 | «los pequeño-burgueses» | ☐ |
-| 22 | «pequeño-burgueses» | ☐ |
-| 22 | «proletariado campesino» | ☐ |
-| 22 | «sin heredad ni salario» | ☐ |
+| 22 | «legión» | ☐ |
+| 22 | «no tienen historia» | ☐ |
 | 22 | «son la burguesía usurpadora» | ☐ |
+| 22 | «¡hambre, persecución y muerte!» | ☐ |
 | 28 | «necesitaban aquel blasón para sustentar su orgullo y su riqueza» | ☐ |
-| 29 | «apoyados en la más oscura esquina de la chujlla» | ☐ |
+| 29 | «a través de la delicada malla» | ☐ |
+| 29 | «bonita urdimbre de surcos» | ☐ |
 | 29 | «extraños armatostes de madera abandonados» | ☐ |
-| 30 | «apenas se alzan dos metros del suelo» | ☐ |
-| 30 | «cuatro mezquinas hectáreas y siete ovejas roñosas» | ☐ |
-| 30 | «hasta aquellos sitios donde sólo brotan el abrojo, entre piedras y arena» | ☐ |
-| 30 | «no tienen cuartos» | ☐ |
 | 30 | «renegridas por el hollín» | ☐ |
-| 30 | «tres chujllas de adobe y paja brava» | ☐ |
 | 31 | «apenas la altura de un adobe» | ☐ |
-| 31 | «cuelgan las hoces, el arado, el yugo de madera» | ☐ |
-| 31 | «La vida deviene decadencia para los Huanca» | ☐ |
 | 31 | «mal unidas con lazos de paja trenzada» | ☐ |
-| 31 | «Una mecha de sebo ardía en una larga repisa de madera sobre la cual dormían las gallinas» | ☐ |
-| 32 | «apoyadas contra la pared» | ☐ |
-| 32 | «en cuclillas, cerca del fuego» | ☐ |
-| 32 | «la escasez de tierras me tiene preocupado. ¿Qué voy a darles como patrimonio? No tengo nada» | ☐ |
-| 33 | «pedir a los Villca que les vendan unas cuantas hectáreas» | ☐ |
-| 34 | «con la madera del arado en un hombro y las correas del yugo en las manos» | ☐ |
-| 34 | «desde el portal de su chujlla» | ☐ |
-| 35 | «la techumbre de paja» | ☐ |
-| 36 | «Cédulas Reales» | ☐ |
+| 31 | «morada de piojos y pulgas» | ☐ |
+| 34 | «portal de su chujlla» | ☐ |
+| 35 | «amontonó piedras sobre el cadáver» | ☐ |
+| 35 | «una chujlla que estaba abandonada cerro arriba» | ☐ |
+| 36 | «amparados por las Cédulas Reales» | ☐ |
+| 36 | «los doctores alto-peruanos les birlaron la tierra» | ☐ |
 | 36 | «una gran cuestión de títulos, papel sellado y pago de impuestos» | ☐ |
 | 37 | «así lo declaraban los papeles del Gobierno» | ☐ |
+| 37 | «La religión y la propiedad quedaron frente a frente, guiñándose con sus ventanucos empolvados» | ☐ |
+| 38 | «Así los Villca, Huanca y Condori, son las generaciones del Signo Escalonado» | ☐ |
+| 38 | «El signo escalonado» | ☐ |
 | 56 | «se agrietan como paredes envejecidas» | ☐ |
-| 66 | «todo lo que nos sucede» | ☐ |
-| 67 | «dos muñequitos de lana que estaban atravesados en el pecho por una espina» | ☐ |
+| 57 | «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo» | ☐ |
+| 60 | «manchones en el cascajo» | ☐ |
+| 60 | «manchones» | ☐ |
+| 64 | «las nalgas abiertas a la manera de una luna menguante» | ☐ |
+| 65 | «en su secreto, nadie podía entrar» | ☐ |
+| 66 | «abortó en plena gestación» | ☐ |
+| 66 | «La Pacha Mama, sorda, vieja, extenuada, recibía el cuerpo de sus más fieles hijos para encerrarlos en su vientre de sequedad inexorable» | ☐ |
+| 67 | «dos muñequitos de lana» | ☐ |
 | 68 | «como la fiera y brava hembra del puma» | ☐ |
-| 68 | «mal de ojo» | ☐ |
-| 68 | «perdieron el miedo» | ☐ |
-| 69 | «con las manos aún melosas de sangre fresca» | ☐ |
-| 69 | «conciencia de hembra» | ☐ |
+| 68 | «los indios le descuartizaron» | ☐ |
+| 69 | «cada cual se llevó un miembro» | ☐ |
 | 69 | «en muchos sitios enterraron los pedazos del cuerpo» | ☐ |
-| 69 | «Un ardor bestial brillaba en sus pupilas» | ☐ |
-| 70 | «¡Hay que irse! [...] ¡La tierra está maldita!» | ☐ |
-| 72 | «Cielo y tierra eran para ellos como una tremenda cárcel de cuyo tremendo recinto no sabían por dónde huir» | ☐ |
-| 73 | «diez fosas en el cementerio» | ☐ |
-| 76 | «a los otros les hicieron preceder a los perros expulsados del ayllu» | ☐ |
-| 76 | «al fondo, al mismo vientre metálico de los cerros» | ☐ |
-| 76 | «sin sus amos, los Villca» | ☐ |
-| 87 | «Que tiren palotes con el arado, esa resulta la más recomendable caligrafía para los indios» | ☐ |
-| 92 | «El orgullo del Villca sufrió un vuelco porque esperaba siquiera una habitación» | ☐ |
-| 96 | «Todos los animales de carneo que existen dentro del radio urbano serán requisados, pagándose por ellos su justo precio en la Caja Municipal» | ☐ |
-| 100 | «por desacato a la autoridad» | ☐ |
-| 102 | «a buen recaudo» | ☐ |
+| 69 | «en muchos sitios» | ☐ |
+| 69 | «sintiendo en lo íntimo de su conciencia de hembra» | ☐ |
+| 69 | «un ardor bestial» | ☐ |
+| 72 | «cielo y tierra eran para ellos como una tremenda cárcel» | ☐ |
+| 75 | «apoyándose con dificultad en el cayado de palo» | ☐ |
+| 75 | «tres vigilantes al cuidado del ayllu» | ☐ |
+| 79 | «celadores y enfermeros» | ☐ |
+| 79 | «en la chujlla de los Villca, la más amplia y cómoda» | ☐ |
+| 79 | «solar histérico, infecundo» | ☐ |
+| 80 | «cancerberos» | ☐ |
+| 80 | «muertos en vida» | ☐ |
+| 80 | «para mirar el cielo» | ☐ |
+| 83 | «situar la Sub-prefectura, el Municipio y la Policía donde antes aposentaba la reducida guarnición hispana» | ☐ |
+| 86 | «con el fajo de expedientes bajo el brazo» | ☐ |
+| 86 | «tejer obscuras mallas de términos seudo jurídicos» | ☐ |
+| 86 | «urden pleitos por nada» | ☐ |
+| 87 | «Que tiren palotes con el arado» | ☐ |
+| 92 | «Tu familia puede acomodarse en el pesebre» | ☐ |
+| 96 | «radio urbano» | ☐ |
+| 96 | «Todos los animales de carneo que existen dentro del radio urbano serán requisados [...] (Fdo.) Dr. Margarito Mendoza» | ☐ |
+| 101 | «cinco gendarmes indios» | ☐ |
 | 102 | «a ojo de buen cubero» | ☐ |
-| 102 | «apenas los caballejos y burros» | ☐ |
+| 102 | «embudo» | ☐ |
+| 102 | «no les alcanzaba la Ordenanza» | ☐ |
 | 103 | «a mil seiscientos bolivianos en papel» | ☐ |
-| 103 | «un cuartucho maloliente, de piso de ladrillos; una mugrienta mesa con un tintero y un desordenado montón de papeles y libracos encima; tres sillas y un sofá…» | ☐ |
+| 103 | «una mugrienta mesa con un tintero y un desordenado montón de papeles y libracos encima» | ☐ |
 | 104 | «estos tinterillos son de una sola casta y todos obran con una mala fe del demonio» | ☐ |
 | 104 | «seiscientos bolivianos, la mitad adelantados» | ☐ |
 | 104 | «tiene más peso legal y jurídico que el chiquitito» | ☐ |
@@ -136,73 +145,72 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 144 
 | 105 | «te encierro por conspirar contra la autoridad municipal» | ☐ |
 | 105 | «un atado de pobres y traposos billetes» | ☐ |
 | 106 | «allí mismo, bajo el suelo del pesebre, para evitar el pago al cura y el municipio» | ☐ |
-| 107 | «domesticados por la aldea» | ☐ |
-| 112 | «Gaby Ofelia» | ☐ |
+| 107 | «habían sido domesticados por la aldea» | ☐ |
+| 108 | «Tras de la muralla que condena el horizonte del altiplano empieza el yunga» | ☐ |
+| 109 | «como un gallardete clavado en la ceja de la apacheta» | ☐ |
+| 109 | «Fauces del abismo» (Cuadro 1) | ☐ |
+| 109 | «fauce» | ☐ |
+| 109 | «góticas» | ☐ |
+| 109 | «semejantes a fantásticas construcciones góticas» | ☐ |
+| 112 | «graderíos» | ☐ |
 | 113 | «Sabrás arar en la puna, pero aquí esa es otra música» | ☐ |
-| 114 | «Te voy a dar trabajo en el cañaveral [...]. Hay un cuarto junto al granero. Puedes ir a ocuparlo» | ☐ |
-| 117 | «humano y tolerante» | ☐ |
-| 119 | «de bruces, con ambos brazos abiertos sobre las cañas» | ☐ |
-| 120 | «Sí y no» | ☐ |
-| 120 | «sólo hasta que se vaya el año malo» | ☐ |
-| 120 | «¡Mejor uno está donde está!» | ☐ |
+| 121 | «una cadena cogiéndose de manos» | ☐ |
 | 123 | «como muñeco de cera» | ☐ |
-| 123 | «La finca no es un hospital para menesterosos» | ☐ |
-| 123 | «lo que me importa es que se desocupe el cuarto» | ☐ |
-| 125 | «En los campamentos es peligroso tener mujeres; los hombres no las respetan» | ☐ |
-| 125 | «una doncella de quince años» | ☐ |
+| 123 | «derritiéndose como muñeco de cera» | ☐ |
+| 123 | «muñeco de cera» | ☐ |
 | 125 | «ver sus nacientes senos» | ☐ |
-| 126 | «el mejor dinero es que me devuelvas el cuarto y te vayas ahora mismo» | ☐ |
+| 126 | «el vano de la puerta» | ☐ |
 | 129 | «No hace dos días que uno de ustedes se ha cercenado una mano en la sierra» | ☐ |
+| 129 | «peón, siquiera» | ☐ |
 | 132 | «con su propia mano se quitó la vida» | ☐ |
+| 132 | «en seguida vinieron los capataces y peones: le daban dinero» | ☐ |
+| 132 | «había sido desflorada por el patrón» | ☐ |
+| 132 | «las pruebas eran irrefutables» | ☐ |
+| 132 | «obligó a venderse» | ☐ |
 | 132 | «vieja historia» | ☐ |
-| 132 | «ya no le quedaba más» | ☐ |
-| 133 | «despedazado su organismo de piedra del Kollasuyo» | ☐ |
+| 133 | «organismo de piedra del Kollasuyo» | ☐ |
+| 134 | «el encaje de acero de la torre de un andarivel» | ☐ |
+| 135 | «enjambre de cuchitriles de calamina» | ☐ |
 | 135 | «Pensylvania» | ☐ |
-| 139 | «firmó una papeleta en que le daba de alta» | ☐ |
-| 140 | «las infinitas hendijas y goteras» | ☐ |
-| 140 | «tomaron su identidad e impresiones digitales» | ☐ |
+| 140 | «Tomaron su identidad e impresiones digitales» | ☐ |
+| 141 | «como dos enormes nichos» | ☐ |
 | 142 | «Aquí cosecharás miles de cargas de estaño» | ☐ |
-| 142 | «esta es la bonificación» | ☐ |
 | 143 | «apeñuscados contra la rejilla» | ☐ |
 | 143 | «como si faltase suelo bajo sus pies» | ☐ |
 | 143 | «la vertiginosa caída» | ☐ |
-| 144 | «una carretilla para acarrear metal» | ☐ |
+| 144 | «450» | ☐ |
+| 144 | «a la superficie» | ☐ |
+| 144 | «un boquete» | ☐ |
 | 145 | «450» | ☐ |
-| 145 | «hombre agrícola y solar» | ☐ |
-| 145 | «mezquinas lamparillas» | ☐ |
-| 145 | «no se conocían entonces cascos protectores ni las botas de goma» | ☐ |
+| 145 | «pobres costillas zafadas como surcos» | ☐ |
+| 145 | «recién ponían el revestimiento de callapos» | ☐ |
 | 145 | «se derrumbaba en algunos pasos» | ☐ |
-| 148 | «una solidaridad nacida del peligro y la miseria» | ☐ |
-| 150 | «450» | ☐ |
-| 151 | «con los sesos aplastados» | ☐ |
-| 151 | «deseoso del jornal que había redoblado la empresa» | ☐ |
-| 151 | «No queremos morir como brutos, somos cristianos» | ☐ |
-| 152 | «casco protector y altas botas de goma» | ☐ |
-| 152 | «cien bolivianos de propina» | ☐ |
-| 153 | «apenas alcanzó a dar tres pasos» | ☐ |
+| 151 | «rieles, maderos, dinamita, hombres» | ☐ |
 | 153 | «le abrió un boquete en la cabeza» | ☐ |
-| 153 | «¡al que retroceda le meto un plomo!» | ☐ |
-| 154 | «Toda la vecindad [...] no habló más que de aquel drama consumado en el vientre del plano "450", pero nadie sospechó el crimen» | ☐ |
-| 155 | «el degradante bofetón de las aldeas, fincas y minas» | ☐ |
-| 155 | «en el dintel de Jatun-Kolla» | ☐ |
-| 156 | «ancianos, niños y mujeres en su mayor parte» | ☐ |
+| 154 | «informe montón» | ☐ |
+| 154 | «nadie sospechó el crimen» | ☐ |
+| 154 | «quebróse la viga del techo» | ☐ |
+| 154 | «un informe montón de rocas, lodo y maderos astillados» | ☐ |
+| 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo» | ☐ |
 | 156 | «con el mismo pudor de los ex carcelados» | ☐ |
 | 156 | «con una voluntad de siglos de piedra» | ☐ |
-| 156 | «habían recibido la resistencia cósmica del altiplano» | ☐ |
-| 156 | «la memoria no recordaba sino lo pasado antiguo, lo bueno y lo alegre de las cosechas» | ☐ |
 | 156 | «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» | ☐ |
-| 156 | «los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
-| 156 | «Tras la muralla de su visión, como foso hondo y alquitranado, estaba el intervalo del hambre; los comunarios, desde la atalaya de la esperanza, sólo miraban el…» | ☐ |
-| 156 | «ya no había yuntas de bueyes y los mismos hombres eran quienes tiraban el arado» | ☐ |
+| 156 | «Llegaron los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
+| 156 | «los mismos hombres eran quienes tiraban el arado» | ☐ |
+| 156 | «no recordaba sino lo pasado antiguo, lo bueno y lo alegre de las cosechas» | ☐ |
+| 156 | «voluntad de siglos de piedra» | ☐ |
+| 157 | «la atalaya de la esperanza» | ☐ |
+| 159 | «hembra paridora» | ☐ |
 | 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 159 | «olvidaron la pesadilla pasada» | ☐ |
-| 159 | «repuesta» | ☐ |
 | 159 | «su prestigio de hembra paridora y múltiple» | ☐ |
+| 160 | «abra de las cordilleras y cumbre de los caminos» | ☐ |
+| 162 | «mal de ojo, brujería» | ☐ |
 | 163 | «Signo sagrado de Tiwanaco» | ☐ |
 
 ## 6.5. Tropos del narrador (para la línea crítica)
 
-Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (§§1, 3, 4 y 5). Los que el artículo ya cita van con su página; el resto es reserva.
+Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (§§1, 3, 4 y 5). Todos van con su página; varios ya están en el artículo y el resto es reserva.
 
 - **Animalización.**
   - «huaynuchos [...] que sentían arderles sangre de huanacos en las venas» (6).
@@ -234,7 +242,7 @@ Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (
   - «actos obscuros y fanáticos» (61).
   - «la torpe imaginación de los comunarios habituados a vegetar» (71).
 - **Petrificación y esencialismo telúrico.**
-  - «La tierra es su carne, su sangre y sus huesos» (21): el artículo la cita en §1 para explicar el título.
+  - «La tierra es su carne, su sangre y sus huesos» (21).
   - «Ancestrales fuerzas telúricas [...] igual que a los pólipos coralíferos» (71).
   - «facciones ásperas, curtidas y secas como la roca» (111).
   - «organismo de piedra del Kollasuyo» (133).
@@ -244,7 +252,7 @@ Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (
   - En la partija, «las hembras tuvieron la peor tajada» (27).
   - Melchora Mamani aborta y muere en la cuneta (35).
   - La «conciencia de hembra» de Justina (69).
-  - La hija de Paulo, sin nombre, violada y suicida: «—vieja historia—» (132).
+  - La hija de Paulo, sin nombre: «desflorada por el patrón», empujada por la desesperación a «venderse», suicida; el narrador lo resume en un inciso, «—vieja historia—» (132).
   - Las palliris, «seres sin alma» (147).
 - **Racialización.**
   - «cholitos que en romance boliviano equivale a decir potaje de varias razas» (12).

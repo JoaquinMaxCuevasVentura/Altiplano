@@ -2,12 +2,39 @@
 
 Análisis de los cinco libros enviados para la versión final: Scott, Dean, Frampton, Garrington y Le Guin. Se aplicó el mismo criterio que la depuración pide para el marco: cada referencia cumple **una función precisa**, entra **donde una escena la necesita** y declara **su límite**. Las propuestas de «aporte conceptual» que acompañaban el envío se contrastaron con el texto de la novela; lo que no se sostiene se explica en cada ficha.
 
+## 7.0. Uso en el artículo definitivo («La cosecha de piedras»)
+
+Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de la carne y el barro en *Altiplano*»). En el artículo definitivo, construido sobre la versión 2, los cinco libros entran así:
+
+| Libro | Dónde | Qué hace |
+|---|---|---|
+| **Frampton** (p. 5) | §1, tras el túmulo de Loos; §3, la chujlla; §5, la galería | Estereotomía (masa apilada, «ya sea piedra o adobe») y tectónica (armazón de «componentes ligeros y lineales»). El túmulo y la cosecha de piedras son «estereotomía sin edificio». La chujlla reúne muros de piedra y un armazón atado como una cestería. En la mina, el armazón de callapos contiene la masa y cede después del disparo |
+| **Dean** (pp. 5, 44, 68, 202 n. 86) | §2, tras Worringer; §6, Figura 5 | La *wank'a*, «dueño petrificado» de un lugar y «símbolo de ocupación y posesión», frente a la petrificación abstracta del narrador; el apellido Huanca; la Pachamama femenina y las montañas masculinas |
+| **Garrington** (pp. 2, 16) | §2, la técnica; §5, la inscripción de Condori | Lo háptico como «término paraguas»; la mano que lee y también es leída (la huella dactilar) |
+| **Scott** (pp. 3, 35-36) | §4, el radio urbano y el tinterillo; §5, la huella | El mapa que «crea» la tenencia al dar a sus categorías «la fuerza de la ley»; el derecho moderno, «fácilmente descifrable» solo para quien tiene «la formación suficiente» |
+| **Le Guin** (pp. 8, 10, 11) | §7, cierre de la memoria del retorno | La ficción del arma (la mina: jornal, propina, revólver, boquete) frente a la del recipiente (el ayllu; la casa, «un recipiente para personas»). El héroe necesita «una cima»: la atalaya |
+
+**Dos decisiones cambian respecto de las fichas**, por indicación tuya. Van con sus límites en el texto:
+
+- **El apellido Huanca.** Se adopta la lectura de la *wank'a* en el apellido, con la cautela explícita de que «la novela no tematiza esa ontología».
+  - El contraste se apoya en el texto: el «organismo de piedra del Kollasuyo» de Paulo Huanca (p. 133) no persiste como piedra viva, sino que se derrite «como muñeco de cera» fuera de su lugar (p. 123).
+  - Dean documenta que «Wank'a» y sus variantes «Huanca» o «Guanca» se usaban como nombre de varón entre los incas (p. 202, n. 86). La página de esa nota se reconstruyó con el mismo método que las demás.
+  - La objeción de §7.4 sigue siendo la que puede hacer un evaluador: todos los apellidos andinos de la novela tienen significado.
+- **El pastel y la prosa háptica.** El artículo dice que la técnica «responde» a una prosa que mide el espacio con el cuerpo y que «a una prosa háptica corresponde una lectura háptica». No dice que el pastel reproduzca la experiencia de los personajes: el tacto es de quien dibuja.
+
+**Se mantiene lo que no se adoptó:**
+
+- Los cuerpos no se leen como estructuras tectónicas: en la mina, la viga se quiebra después del disparo, y la muerte de Condori tiene autor (§7.5).
+- El artículo tampoco usa «guardar semillas en la faja» (§7.7).
+
+**Dean, sin espacio.** La *saywa* (p. 46) y la *apachita* de Cobo (pp. 57-58) quedaron fuera del definitivo por extensión. Siguen disponibles si hay que ampliar la Figura 2 (los mojones) o la Figura 3 (la apacheta sin piedras).
+
 ## 7.1. Cómo se leyeron y de dónde salen las páginas
 
 | Libro | Archivo | Paginación | Fiabilidad |
 |---|---|---|---|
 | Scott (1998; ed. Veritas, 2020) | `.docx` convertido de un libro electrónico, sin números de página | Tomada del índice analítico del propio libro (la edición Veritas conserva la paginación de 1998) | Media: las páginas de las citas están en el rango que da el índice; cotejar con el impreso |
-| Dean (2010) | `.docx` convertido de PDF | Reconstruida con los encabezados de página que conserva el archivo y comprobada con el índice | Alta para las pp. 44, 46 y 68 (coinciden encabezados e índice) |
+| Dean (2010) | `.docx` convertido de PDF | Reconstruida con los encabezados de página que conserva el archivo y comprobada con el índice | Alta para las pp. 44, 46 y 68 (coinciden encabezados e índice); las pp. 5 y 202 se reconstruyeron con el mismo método |
 | Frampton (1995) | PDF escaneado: **solo la introducción**, pp. 1-27 | Leída en las imágenes, con el número impreso de cada página | Alta |
 | Garrington (2013) | `.docx` convertido de PDF | Una sección por página; el desfase (sección − 4) se comprobó con cinco entradas del índice, todas exactas | Alta |
 | Le Guin (1986; trad. 2021) | PDF de 13 páginas numeradas | La del propio PDF | Alta |
@@ -145,7 +172,7 @@ Se reforzó la lectura del infolio:
 
 ## 7.9. Extensión
 
-El artículo pasó de 35.843 a 41.760 caracteres (límite de la revista: 50.000). Supera la estimación de la depuración (31.000-35.000). Si quieres volver a ella, estos son los recortes que menos dañan el argumento:
+(Versión 3.) Para el artículo definitivo, véase `04_verificaciones_y_pendientes.md`, §4.6. La versión 3 pasó de 35.843 a 41.760 caracteres (límite de la revista: 50.000). Supera la estimación de la depuración (31.000-35.000). Si quieres volver a ella, estos son los recortes que menos dañan el argumento:
 
 1. El párrafo de Le Guin en §5 (unos 1.100 caracteres).
 2. La definición de Garrington en §4.3 (unos 450).

@@ -1,5 +1,7 @@
 # 3. Marco cruzado: Lundberg, Martin, Vázquez Ramos *et al.*, Botelho Gosálvez y los dibujos
 
+> **Nota del artículo definitivo (25/9/2026).** «La cosecha de piedras» vuelve a la versión 2 y conserva este marco completo, al que suma cinco libros (`07_cinco_libros.md`, §7.0). La nota siguiente se refiere a la versión 3.
+>
 > **Nota de la tercera versión (25/9/2026), tras la depuración.** El artículo «Topografías de la carne y el barro en *Altiplano*» redistribuye las referencias y deja buena parte de este marco como antecedente:
 > - **Conserva** a Vázquez Ramos *et al.* (historicidad del concepto de espacio), Lefebvre (una sola distinción, aplicada a la escena de la ordenanza de Umacachi), Cárcamo Pino (definición de manuaje; caja de herramientas y escritorio en un mismo repertorio), Pareyson (formatividad), Martin (Shonfield; la casa entre Bachelard y Lynch; el ascensor de *Eraserhead*) y Lundberg (las cuatro operaciones, más un quinto paso: el retorno al pasaje).
 > - **Retira** del argumento a Bacon, Deleuze, Loos, Foucault (heterotopías), Colomina, Freud, Vidler, Alberti, Schmarsow, Worringer y Hall. Las secciones de este documento que los tratan quedan como material de consulta.

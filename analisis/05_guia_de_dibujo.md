@@ -1,5 +1,7 @@
 # 5. Guía de la exploración gráfica: tres escenas y su registro
 
+> **Nota (25/9/2026).** Esta guía corresponde a la versión 3 («Topografías de la carne y el barro en *Altiplano*», `articulo/articulo_altiplano.md`). El artículo definitivo, «La cosecha de piedras», trabaja con las seis figuras de la serie: su guía es `05b_guia_seis_pasteles.md`.
+
 Esta guía reemplaza la de los seis pasteles. Aplica la depuración recibida y el estado real del trabajo:
 
 - **Los pasteles del artículo todavía no existen.** Las cuatro imágenes de la primera ronda eran referencias visuales (`referencias_visuales/`). La depuración habla de «seis imágenes existentes» en un PDF de dibujos; según lo que indicaste, las imágenes que compartiste eran solo referencias. Si alguna imagen previa es tuya y quieres usarla como punto de partida, preséntala como tal en el registro. Si no es tuya, no puede figurar como resultado.

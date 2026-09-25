@@ -12,12 +12,6 @@
     <path d="M50,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M65,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M360,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M378,165 l0,-7 l5,-5 l5,5 l0,7 Z"/>
   </g>
   <path d="M232,84 l0,-10 l8,-7 l8,7 l0,10 Z" fill="none" stroke="#b5542b" stroke-width="2"/>
-  <g font-size="8.5" fill="#2f2a26">
-    <text x="176" y="60">Villca (pp. 20-28)</text>
-    <text x="258" y="66" fill="#b5542b">chujlla abandonada</text><text x="258" y="76" fill="#b5542b">del peón Condori (p. 35)</text>
-    <text x="325" y="104">Huanca, Huallpa…</text>
-    <text x="30" y="206">Condori, Mamani, Quispe: «no tienen historia» (pp. 22-23)</text>
-  </g>
   <!-- líneas de proyección (diédrico) -->
   <g stroke="#6b5f52" stroke-dasharray="3,3"><line x1="40" y1="190" x2="40" y2="250"/><line x1="140" y1="140" x2="140" y2="250"/><line x1="190" y1="112" x2="190" y2="250"/><line x1="250" y1="84" x2="250" y2="250"/><line x1="350" y1="140" x2="350" y2="250"/><line x1="400" y1="190" x2="400" y2="250"/></g>
   <text x="408" y="226" font-size="8" fill="#6b5f52" transform="rotate(-90 408 226)">proyección</text>
@@ -32,7 +26,14 @@
   <g stroke="#b5542b" stroke-width="2"><line x1="168" y1="283" x2="168" y2="296"/><line x1="163" y1="289" x2="173" y2="289"/></g>
   <!-- hacienda frente a iglesia -->
   <rect x="318" y="290" width="26" height="16" fill="#3b3530"/><rect x="356" y="288" width="16" height="20" fill="#3b3530"/><path d="M356,288 l8,-10 l8,10 Z" fill="#3b3530"/>
-  <g font-size="8.5" fill="#2f2a26">
+  <!-- rótulos encima de las líneas -->
+  <g font-size="8.5" fill="#2f2a26" stroke="#f6f2ea" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
+    <text x="176" y="60">Villca (pp. 20-28)</text>
+    <text x="258" y="66" fill="#b5542b">chujlla abandonada</text><text x="258" y="76" fill="#b5542b">del peón Condori (p. 35)</text>
+    <text x="325" y="104">Huanca, Huallpa…</text>
+    <text x="30" y="206">Condori, Mamani, Quispe: «no tienen historia» (pp. 22-23)</text>
+  </g>
+  <g font-size="8.5" fill="#2f2a26" stroke="#f6f2ea" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
     <text x="44" y="366">«tablero de ajedrez un poco desigual, un poco contrahecho» (p. 9) · mojones · estacas (p. 20)</text>
     <text x="300" y="332">hacienda ↔ iglesia (p. 37)</text>
   </g>
