@@ -5,7 +5,7 @@ Análisis de los dos bloques de fuentes enviados para responder a las cinco obje
 - **Primer bloque (andino, lingüístico y político boliviano):** Bertonio, Duviols, Barnadas (1975), Rivera Cusicanqui y Zavaleta Mercado.
 - **Segundo bloque (crítica literaria y dibujo):** Cornejo Polar, Barnadas y Coy (1977), Ingold y dos textos de Seguí de la Riva.
 
-Con ellas se redactó una versión revisada del artículo. Desde el 26 de septiembre de 2026 es el **artículo definitivo** (`articulo/articulo_cosecha_de_piedras.md` y su `.docx`), con los datos de autoría y los ajustes de §8.7. La versión anterior queda en el historial de git (commit b3edfd9).
+Con ellas se redactó una versión revisada del artículo. Desde el 26 de septiembre de 2026 es el **artículo definitivo** (`articulo/articulo_cosecha_de_piedras.md` y su `.docx`), con los datos de autoría y los ajustes de §8.7. La versión anterior queda en el historial de git (commit b3edfd9). Ese mismo día se reescribió en lenguaje llano, con recursos de Cárcamo Pino y un epígrafe aymara (§8.8 y `09_recursos_de_carcamo_y_lenguaje_llano.md`).
 
 Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se fijó con el método que se describe en cada ficha (§8.3).
 
@@ -14,10 +14,10 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
 | Objeción | Qué hace el artículo | Fuentes |
 |---|---|---|
 | **1. «Descubridor del agua tibia»**: la crítica al narrador indigenista ya está hecha | Cita esa crítica y se desplaza. Cornejo Polar ya mostró que el narrador indigenista, «ajeno al mundo indio aunque se solidarice con él», imagina esa vida «más en términos de naturaleza que de historia» (2003 [1994]: 180). El aporte pasa a ser **la mecánica material del despojo que la novela registra a espaldas de su narrador**: la posesión inscrita en la piedra (mojones, pircas, linderos, un apellido) y su captura por el papel. Además, la novela **calla el uso indio de la letra** (títulos coloniales, tinterillos aliados, escuela) | Cornejo Polar; Bertonio; Duviols; Rivera Cusicanqui; Barnadas |
-| **2. Bulimia teórica** | Se quitan ocho referencias europeas: Schmarsow, Shonfield, Corona Martínez, Salazar Sánchez, Vidler, la cita directa de Deleuze, Foucault y Colomina (1994); también las comparaciones con Lynch. Se mantiene el núcleo de la constelación (Loos, Colomina 1992, Freud, Bacon, Worringer, Bachelard) y los cinco libros. De las nueve entradas nuevas, siete son andinas o bolivianas | — |
+| **2. Bulimia teórica** | Se quitan ocho referencias europeas: Schmarsow, Shonfield, Corona Martínez, Salazar Sánchez, Vidler, la cita directa de Deleuze, Foucault y Colomina (1994); también las comparaciones con Lynch. Se mantiene el núcleo de la constelación (Loos, Colomina 1992, Freud, Bacon, Worringer, Bachelard) y los cinco libros. De las nueve entradas nuevas, siete son andinas o bolivianas. En la versión llana salen además Alberti, Colomina, Freud, Lefebvre, Loos, Pareyson y Worringer: la bibliografía baja de 30 a 23 entradas (§8.8) | — |
 | **3. Circularidad del dibujo** | El plano (3) deja de llamarse *Hallazgo* y pasa a ser *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice. Un párrafo nuevo en §2 lo funda: Seguí distingue el dibujar que puede «servir como ilustración de un texto narrativo previo» (2010: 93), e Ingold, los dibujos que cuentan de los que «especifican» (2013: 125); los esquemas son del segundo tipo, no descubren, obligan a decidir. La Figura 1 admite que el cráneo es una decisión de ensamblaje, y la Figura 2, que el dato está en la p. 35. Las figuras 3 y 6 sacan su contraste de fuentes andinas, fuera del texto | Seguí; Ingold; Bertonio |
-| **4. Paradoja de Hall** | Sin Lynch. Alberti se lee como la forma del despojo: Zavaleta opone la concepción andina del espacio, un «archipiélago», a la señorial, que liga el suelo a «una estirpe» (1986: 29-30). Se quita el tercer uso de Alberti (el linchamiento). El límite de §8 cierra con la historia que los aymaras, escribía Choque Canqui, «hace tiempo, hemos añorado por escribir» | Zavaleta; Choque Canqui |
-| **5. Punto ciego andino** | Entran el léxico aymara de Bertonio (*wanqa*, *wanqathapiña*, *chhaxwa*, *achachi*, *apachita*, *Pachamama*, *saywaña*), el *huanca* de Duviols, la historia de la lucha legal y de Warisata (Rivera Cusicanqui), las dos concepciones del espacio (Zavaleta), las escuelas de Achacachi (Barnadas) y la voz de Choque Canqui | Las cinco del primer bloque |
+| **4. Paradoja de Hall** | Sin Lynch. Alberti se leía como la forma del despojo (en la versión llana sale y queda solo Zavaleta, §8.8): Zavaleta opone la concepción andina del espacio, un «archipiélago», a la señorial, que liga el suelo a «una estirpe» (1986: 29-30). Se quita el tercer uso de Alberti (el linchamiento). El límite de §8 cierra con la historia que los aymaras, escribía Choque Canqui, «hace tiempo, hemos añorado por escribir» | Zavaleta; Choque Canqui |
+| **5. Punto ciego andino** | Entran el léxico aymara de Bertonio (*wanqa*, *wanqathapiña*, *chhaxwa*, *achachi*, *apachita*, *Pachamama*, *saywaña*), el *huanca* de Duviols, la historia de la lucha legal y de Warisata (Rivera Cusicanqui), las dos concepciones del espacio (Zavaleta), las escuelas de Achacachi (Barnadas) y la voz de Choque Canqui. La versión llana añade el epígrafe aymara del Taller de Historia Oral Andina (Rivera Cusicanqui, p. 17), la *saywa* como «amparo» (Bertonio, p. 447) y la destrucción de mojones en 1947 (Rivera Cusicanqui, p. 125) | Las cinco del primer bloque |
 
 **Albó y Platt**, que el árbitro también echa de menos, solo aparecen citados por Rivera Cusicanqui (pp. 105, 114, 150). El artículo no los cita. Si los tienes, pueden entrar en un tercer bloque.
 
@@ -165,9 +165,8 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
   - p. 29: la unidad del espacio «en la idea clásica de lo andino: este espacio no puede concebirse sin otro espacio», el «archipiélago»; la agricultura de altura «no es suficiente para sí misma» sin la de las tierras bajas; esa idea «será para siempre distinta de la idea oligárquico-gamonal».
   - p. 30: «dos concepciones que son ambas espacialistas»; la señorial concibe «el dominio final del suelo como atribución ligada a una estirpe».
   - p. 63: la determinación es «errática en las sociedades complejas o abigarradas, en las sociedades no legibles».
-- **Uso en el artículo:** §2 (pp. 29-30, frente al *área* de Alberti) y §5 (el archipiélago, por remisión).
+- **Uso en el artículo:** §2 (pp. 29-30), §4 (p. 21, n. 1: la sociedad «de dudosa cuantificación», contrapunto boliviano de Scott en el radio urbano, devuelta al adoptar el definitivo) y §5 (el archipiélago, por remisión).
 - **En reserva:**
-  - p. 21, n. 1: la sociedad «de dudosa cuantificación», contrapunto boliviano de Scott para el radio urbano. Se quitó por extensión.
   - pp. 32, 146 y 186, que solo están en OCR (latifundio y despojo del excedente; Ley de Exvinculación; vecinos e indios): leerlas en la imagen antes de citarlas.
 
 ### Antonio Cornejo Polar, *Escribir en el aire* (1994; 2.ª ed., 2003)
@@ -222,7 +221,7 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
   - p. 125: dibujos que no cuentan, sino que «specify and articulate» (el dibujo técnico, desde Alberti).
   - p. 128: el dibujo es «a process of thinking, not the projection of a thought»; «drawing is a gathering».
   - p. 139: «so long as it is done by hand, all writing is drawing».
-- **Uso en el artículo:** §1 (p. 78: el montón frente al túmulo de Loos), §2 (p. 125) y Figura 3 (p. 86).
+- **Uso en el artículo:** §1 (p. 78: el montón que crece) y §2 (p. 125). La p. 86 salió de la Figura 3 en la versión llana.
 - **En reserva:**
   - pp. 76 y 80: el derrumbe que deja «un montón de piedras» y el montón como lugar de memoria, para §5 y §7.
 
@@ -278,17 +277,17 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
 - **Compresiones:** Alberti ya no se usa en el linchamiento; el archipiélago de Zavaleta se nombra en §2 y se recuerda en §5.
 - **Citas de la novela nuevas:** «fábula» (p. 7), «mojones que han sido puestos allí desde tiempos antiguos» (p. 9), «en los linderos» (p. 30), «un desordenado montón de papeles y libracos» (p. 103) y «anciano» (glosario, p. 160).
 
-## 8.5. Verificación del artículo definitivo
+## 8.5. Verificación del artículo definitivo (versión llana)
 
-- **Extensión:** 49.486 caracteres con espacios, con bibliografía, nota de autor y declaraciones. El rango pedido es de 47.500 a 49.500: quedan 14 caracteres de margen.
-- **Resúmenes y palabras clave:** resumen de 99 palabras y abstract de 92; cinco palabras clave en cada lengua (norma 4d).
+- **Extensión:** 49.454 caracteres con espacios, con bibliografía, notas, epígrafe y declaraciones. El rango pedido es de 47.500 a 49.500: quedan 46 caracteres de margen.
+- **Resúmenes y palabras clave:** resumen de 99 palabras y abstract de 90; cinco palabras clave en cada lengua (norma 4d).
 - **Nota de autor:** 80 palabras (límite, 100).
-- **Citas de la novela:** las 139 se comprobaron automáticamente contra la transcripción; todas existen y están en la página indicada.
+- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; todas existen y están en la página indicada.
 - **Cadenas de «ibid.»:** revisadas una por una; todas remiten a la obra correcta.
 - **Citas de las fuentes nuevas:**
   - Las citas en castellano (Bertonio, Rivera Cusicanqui, Cornejo Polar, Zavaleta, Seguí, Choque Canqui) se buscaron en el texto de cada fuente: todas aparecen.
   - Las de Duviols e Ingold son traducciones propias de pasajes localizados con su página.
-- **Bibliografía:** 30 entradas; no hay citas sin entrada ni entradas sin cita.
+- **Bibliografía:** 23 entradas; no hay citas sin entrada ni entradas sin cita.
 - **Marcadores:** no queda ninguno (⟦…⟧).
 - **Word:** el `.docx` se regeneró (23 páginas; las declaraciones, en la p. 21) con la misma plantilla y las mismas figuras.
 
@@ -296,7 +295,7 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
 
 1. **Adoptado como definitivo** el 26 de septiembre de 2026 (§8.7).
 2. **Vidler y Deleuze no vuelven.** El árbitro los señala por su nombre, y el argumento no los necesita:
-   - Freud basta para el pesebre que pasa de refugio a tumba.
+   - El pesebre que pasa de refugio a tumba se lee sin ellos (y, desde la versión llana, también sin Freud).
    - Bacon, vía Martin, basta para el linchamiento.
    - Devolverlos costaría unos 480 caracteres que hoy no hay.
 3. **Las interpretaciones nuevas, que debes hacer tuyas o descartar:**
@@ -331,3 +330,14 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
   - «Un corolario de método.»;
   - «sin abstraerla» (Lefebvre);
   - fórmulas más breves en dos frases de §§1-2 y en el alcance de la declaración.
+
+## 8.8. Versión en lenguaje llano (26 de septiembre de 2026)
+
+El detalle está en `09_recursos_de_carcamo_y_lenguaje_llano.md`. Lo que toca a esta respuesta:
+
+- **Objeción 2 (bulimia teórica).** Salen siete autores más: Alberti, Colomina, Freud, Lefebvre, Loos, Pareyson y Worringer. La bibliografía pasa de 30 a 23 entradas, y cada autor que queda cumple una función que el texto explica en pocas palabras.
+- **Objeción 4 (paradoja de Hall).** Sin Alberti, la oposición entre el espacio andino y el señorial la sostiene solo Zavaleta, en términos más simples.
+- **Objeción 5 (punto ciego andino).** El artículo abre con un lema aymara, el del Taller de Historia Oral Andina (Rivera Cusicanqui, 2010 [1984]: 17), que se retoma en §7. Entran además:
+  - la *saywa*, «el montón de piedras puesto por mojón», que por metáfora nombra a quien da «amparo» (Bertonio, 2011 [1612]: 447);
+  - la «destrucción simbólica de mojones o linderos» en el ciclo rebelde de 1947 (Rivera Cusicanqui, 2010 [1984]: 125).
+- **Lo que no cambia:** la tesis, las seis figuras con sus tres planos, el Cuadro 1 y las cautelas sobre los esquemas.

@@ -3,7 +3,7 @@
 > **Nota para el artículo definitivo (actualizada el 26/9/2026).** Esta guía se escribió para la versión 2, cuando los pasteles estaban por hacer, y se recupera del historial como protocolo de referencia y modelo de registro de cada pieza. Tres cambios:
 >
 > - **Numeración.** En el artículo definitivo las figuras siguen el orden de aparición. La Figura 4 de esta guía (Pelvis) es la **5** del artículo; la 5 (Centinela), la **6**; la 6 (Castillete), la **4**. Las Figuras 1 a 3 no cambian.
-> - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando se puede con fuentes andinas. No lo presenta como hallazgo, porque los esquemas «no descubren; obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
+> - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando se puede con fuentes andinas. No lo presenta como hallazgo, porque los esquemas «no descubren nada, pero obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
 > - **Fotografías.** Las §§5.5 y 5.6 están puestas al día con el artículo definitivo. Los mismos pasos, con el detalle de rutas y pies, están en `articulo/figuras/LEEME.md`.
 
 
@@ -273,7 +273,7 @@ Cuando termines cada pastel, reescribe en el artículo el plano «(3) *Contraste
 
 > (3) *Contraste*. Al [operación: esgrafiar las vigas, disolver el yunga, incidir el catastro...], apareció [lo que viste], que el texto [no dice / dice de otro modo / contradice en la p. X]. La lectura [se confirma / se matiza / no se sostiene]: [consecuencia para la lectura de la novela].
 
-Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 14, así que lo que añadas tendrás que recortarlo en otra parte.
+Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 46, así que lo que añadas tendrás que recortarlo en otra parte.
 
 ## 5.6. Fotografiar e insertar las figuras
 

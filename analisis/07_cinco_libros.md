@@ -4,26 +4,26 @@ Análisis de los cinco libros enviados para la versión final: Scott, Dean, Fram
 
 ## 7.0. Uso en el artículo definitivo («La cosecha de piedras»)
 
-Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de la carne y el barro en *Altiplano*»). El artículo definitivo incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). Dos cambios afectan a estos libros:
+Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de la carne y el barro en *Altiplano*»). El artículo definitivo incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`) y, desde el 26 de septiembre de 2026, la versión en lenguaje llano (`09_recursos_de_carcamo_y_lenguaje_llano.md`). Dos cambios afectan a estos libros:
 
 - tres usos cedieron su lugar a fuentes andinas;
 - Scott, Dean y Garrington quedan con un papel más acotado.
 
 | Libro | Dónde | Qué hace |
 |---|---|---|
-| **Frampton** (p. 5) | §1, tras el túmulo de Loos y el montón de Ingold; §3, la chujlla | Estereotomía (masa apilada, «ya sea piedra o adobe») y tectónica (armazón de «componentes ligeros y lineales»). El montón es «estereotomía sin edificio»; la chujlla reúne muros de piedra y un armazón atado. El punto donde la masa se vuelve junta tiene nombre aymara: *chhaxwa* (Bertonio, 2011 [1612]: 330) |
-| **Dean** (pp. 44, 202 n. 86; 68) | §2; Figura 5 | *Huanca*, grafía colonial de *wank'a*, como nombre de varón; las montañas masculinas, como el cerro «padre del ayllu». El contraste de la *wank'a* con la petrificación de Worringer lo hacen ahora Duviols (el *huanca*, «doble mineral» del antepasado; el «desdoblamiento») y Bertonio (*wanqa*, *Pachamama*) |
-| **Garrington** (p. 16) | §2, la técnica | Lo háptico como «término paraguas». La huella dactilar de Condori (p. 2) salió por extensión |
+| **Frampton** (p. 5) | §1, tras el montón de Ingold; §3, la chujlla | Estereotomía (masa apilada, «ya sea piedra o adobe») y tectónica (armazón de «componentes ligeros y lineales»). El montón es «masa sin edificio»; la chujlla reúne muros de piedra y un armazón atado. El punto donde la masa y el armazón se tocan tiene nombre aymara: *chhaxwa* (Bertonio, 2011 [1612]: 330) |
+| **Dean** (pp. 44, 202 n. 86; 68) | §2; Figura 5 | *Huanca*, grafía colonial de *wank'a*, como nombre de varón; las montañas masculinas, como el cerro «padre del ayllu». El contraste de la *wank'a* con la piedra abstracta del narrador lo hacen ahora Duviols (el *huanca*, «doble mineral» del antepasado) y Bertonio (*wanqa*, *Pachamama*) |
+| **Garrington** (p. 16) | §2, la técnica | Lo háptico, dicho en llano: lo que se sabe por el tacto, el movimiento, la posición del cuerpo y el equilibrio. La huella dactilar de Condori (Garrington, p. 2) salió por extensión |
 | **Scott** (p. 3) | §4, el radio urbano | El mapa que «crea» la tenencia al dar a sus categorías «la fuerza de la ley». Lo acompaña Zavaleta: Bolivia, sociedad «de dudosa cuantificación». En el tinterillo, las pp. 35-36 las reemplazan Cornejo Polar (el libro como fetiche) y Rivera Cusicanqui (los tinterillos aliados de la lucha legal) |
 | **Le Guin** (pp. 8, 10, 11) | §7, cierre de la memoria del retorno | La ficción del arma (la mina) frente a la del recipiente (el ayllu; la casa, «un recipiente para personas»). El héroe necesita «una cima»: la atalaya |
 
 **Dos decisiones cambian respecto de las fichas**, por indicación tuya. Van con sus límites en el texto:
 
-- **El apellido Huanca.** Se adopta la lectura de la *wank'a* en el apellido, con la cautela explícita de que «la novela no tematiza esa ontología».
-  - El contraste se apoya en el texto: fuera de su lugar, el «organismo de piedra del Kollasuyo» de Paulo Huanca (p. 133) se derrite en los Yungas (§2 del artículo), «derritiéndose como muñeco de cera» (p. 123; §5).
+- **El apellido Huanca.** Se adopta la lectura de la *wank'a* en el apellido, con la cautela explícita de que «la novela no lo desarrolla, pero lo registra».
+  - El contraste se apoya en el texto: fuera de su lugar, el «organismo de piedra del Kollasuyo» de Paulo Huanca termina «despedazado» en los Yungas (p. 133; §2 del artículo), y él se consume «derritiéndose como muñeco de cera» (p. 123; §5).
   - Dean documenta que «Wank'a» y sus variantes «Huanca» o «Guanca» se usaban como nombre de varón entre los incas (p. 202, n. 86). La página de esa nota se reconstruyó con el mismo método que las demás.
   - La objeción de §7.4 sigue siendo la que puede hacer un evaluador: todos los apellidos andinos de la novela tienen significado.
-- **El pastel y la prosa háptica.** El artículo dice que la técnica «responde» a una prosa que mide el espacio con el cuerpo y que «a una prosa háptica corresponde una lectura háptica». No dice que el pastel reproduzca la experiencia de los personajes: el tacto es de quien dibuja.
+- **El pastel y la prosa háptica.** El artículo dice que el pastel «conviene» a esta novela porque su prosa mide el espacio con el cuerpo, y que «a una prosa del tacto le corresponde un dibujo hecho con los dedos». No dice que el pastel reproduzca la experiencia de los personajes: el tacto es de quien dibuja.
 
 **Se mantiene lo que no se adoptó:**
 

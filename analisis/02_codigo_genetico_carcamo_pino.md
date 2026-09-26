@@ -95,6 +95,8 @@ Concepto (abstracción por omisión, con Nietzsche) → cita literaria (Szymbors
 **La versión 1 del artículo usó la Plantilla B como esqueleto; la versión 2 sigue el esquema que fijaste, con marco teórico explícito (sección 2) y composición anular (la cosecha de piedras de la p. 9 abre y cierra)**, con elementos de A (anécdota anular, notas etimológicas) y de C (Saramago, la mano que mueve los hilos y las marionetas).
 
 > **Versión 3 (tras la depuración).** El artículo ya no emula el registro de Cárcamo Pino: no usa notas etimológicas, citas literarias ni fórmulas de reescritura cruzada, y no aplica la fórmula madera/barro. De Cárcamo Pino conserva lo que la depuración recomienda: definir los términos, seguir las consecuencias materiales de una distinción y usar «manuaje» solo donde su función se explica (los objetos que median el trabajo y la autoridad; escribir y arar como prácticas que la novela no opone). Este recetario queda como análisis del estilo, no como plantilla del artículo.
+>
+> **Versión en lenguaje llano (26/9/2026).** A tu pedido, el artículo definitivo adopta algunos recursos de este recetario, en forma simple. Entran un epígrafe, una nota aclaratoria, juegos de palabras transparentes (*urdir*, *domesticar*, *desmonte*), analogías físicas (el corral invisible, el embudo) y la mirada sobre los agarres de la mano (T1: 10). No entran la fórmula estructural ni los latinismos. T2 sigue sin citarse: el epígrafe de Saramago que usa Cárcamo Pino no se tomó, y el artículo abre con el lema del Taller de Historia Oral Andina. Detalle en `09_recursos_de_carcamo_y_lenguaje_llano.md`.
 
 ## 2.6. Recetario para emular sin imitar
 

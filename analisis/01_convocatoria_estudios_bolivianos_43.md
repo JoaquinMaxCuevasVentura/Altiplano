@@ -49,14 +49,14 @@ Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar
 | N.º | Norma | Estado en `articulo/articulo_cosecha_de_piedras.docx` |
 |---|---|---|
 | 1 | Originalidad e inéditos; el autor responde por ella | Pendiente de revisión autoral (§1.5) |
-| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.486 caracteres, con nota de autor (rango pedido: 47.500-49.500) |
+| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.454 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
 | 3 | Tamaño carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5; cuadros e ilustraciones numerados con su fuente y mencionados en el texto | ✅ El `.docx` generado lo cumple. El Cuadro 1 y las seis figuras llevan número y fuente, y el texto los menciona |
 | 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 12 palabras (ES) / 10 (EN) |
 | 4b | Presentación del autor a pie de página (máx. 100 palabras): formación, grado, adscripción, publicaciones, correo, ciudad, país | ✅ Nota 1 de 80 palabras. No trae adscripción ni publicaciones (`04`, §4.2) |
-| 4c | Resumen en español e inglés (máx. 100 palabras cada uno) | ✅ 99 / 92 palabras |
+| 4c | Resumen en español e inglés (máx. 100 palabras cada uno) | ✅ 99 / 90 palabras |
 | 4d | Palabras clave (máx. 5 en cada lengua) | ✅ 5 / 5 |
 | 5b | Estructura: pregunta central, revisión de la literatura y soporte teórico, hallazgos, análisis final, conclusiones; aclarar al inicio si la investigación está concluida o en desarrollo | ✅ Pregunta e hipótesis en §1, con la crítica previa (Cornejo Polar); marco teórico-metodológico en §2; análisis en §§3-7; conclusiones en §8. Investigación «en desarrollo» (final de §1) |
-| 6 | Harvard-APA: (Apellido, año: página); *ibid.*; 2004a/2004b; sin datos bibliográficos en notas; formato de la bibliografía | ✅ Aplicado: (Autor, año: pág.), *ibid.*, 2025a/2025b, «cit. en» para las citas indirectas. Las notas al pie son solo la de autor y la de traducciones |
+| 6 | Harvard-APA: (Apellido, año: página); *ibid.*; 2004a/2004b; sin datos bibliográficos en notas; formato de la bibliografía | ✅ Aplicado: (Autor, año: pág.), *ibid.*, 2025a/2025b, «cit. en» para las citas indirectas. Las notas al pie son la de autor, la de traducciones y una aclaratoria sobre el pastel al óleo, sin datos bibliográficos. El epígrafe se cita con autor, año y página |
 | 7 | Conflicto de intereses | ✅ Declarado |
 | 8 | Divulgación del uso de IA: a) herramientas, b) alcance, c) rol. **Su omisión implica el rechazo** | ✅ Incluida, con Claude y ChatGPT. Alcance y rol ajustados a lo que se hizo (`04`, §4.5) |
 | 9 | Exclusividad hasta la decisión editorial | Tenerlo presente |
@@ -71,7 +71,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar
    - Arriarán sigue sin verificar.
    - Véase `04_verificaciones_y_pendientes.md`, §4.7.
 4. **Doble ciego.** Las normas piden la nota del autor, pero el arbitraje es a doble ciego. Conviene preguntar a los editores si prefieren un archivo anonimizado más una portada separada, o enviar ambos.
-5. **Citas de la novela.** Las 139 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
+5. **Citas de la novela.** Las 147 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
 6. **Figuras.** Son los esquemas de encaje de los seis pasteles, hechos con asistencia de IA y declarados así en el pie y en la declaración de IA. Si tienes fotografías de los pasteles, puedes sustituirlos (`articulo/figuras/LEEME.md`).
 
 ## 1.6. Borrador de correo de envío

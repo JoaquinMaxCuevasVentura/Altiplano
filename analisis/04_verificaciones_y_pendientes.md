@@ -2,42 +2,45 @@
 
 **Estado del artículo definitivo:** «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez», de Joaquin Max Cuevas Ventura.
 
-- **Qué es.** La versión 2 completa, con los cinco libros (`07_cinco_libros.md`). Incorpora la respuesta a las cinco objeciones del arbitraje simulado, con diez fuentes nuevas (`08_respuesta_al_arbitraje.md`).
-- **Qué cambia respecto de la versión anterior:**
-  - Se cita la crítica del narrador indigenista (Cornejo Polar) y el aporte pasa a ser la mecánica material del despojo.
-  - Entran el léxico aymara y la historiografía andina.
-  - El tercer plano de las figuras se llama *Contraste*.
-  - Se retiraron ocho referencias europeas.
+- **Qué es.** La versión 2 completa, con los cinco libros (`07_cinco_libros.md`). Incorpora la respuesta a las cinco objeciones del arbitraje simulado, con diez fuentes nuevas (`08_respuesta_al_arbitraje.md`). Desde el 26 de septiembre de 2026 está reescrita en lenguaje llano, con recursos tomados de la escritura de Cárcamo Pino (`09_recursos_de_carcamo_y_lenguaje_llano.md`).
+- **Qué cambió en la última revisión:**
+  - Frases más cortas, términos técnicos explicados y títulos de sección más simples.
+  - Un epígrafe aymara: el lema del Taller de Historia Oral Andina (Rivera Cusicanqui, 2010 [1984]: 17).
+  - Una nota aclaratoria sobre el pastel al óleo.
+  - Los agarres de la mano, las analogías del corral invisible y del embudo, el desmonte y el mojón como «amparo» (Bertonio, p. 447).
+  - Salen siete autores: Alberti, Colomina, Freud, Lefebvre, Loos, Pareyson y Worringer.
 
-- **Extensión.** 49.486 caracteres con espacios, con bibliografía y nota de autor. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
-- **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 92 (límite: 100). Títulos de 12 y 10 palabras.
+- **Extensión.** 49.454 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 12 y 10 palabras.
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
   - Nombre y nota 1 completos (80 palabras; límite, 100).
   - Investigación «en desarrollo» (final de la sección 1).
   - Conflicto de intereses y declaración de IA, en las declaraciones finales (§4.5).
   - **No quedan marcadores ⟦…⟧.**
-- **Citas de la novela.** Las 139 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
+- **Citas de la novela.** Las 147 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
 - **Figuras.** Seis, numeradas por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6. Son los esquemas de encaje de los pasteles, hechos con asistencia de IA y declarados así (§4.4).
 
 ## 4.1. Qué te toca hacer, en orden
 
-1. **Leer el artículo entero y hacerlo tuyo.** Decide cada interpretación antes de firmar, sobre todo las nuevas (`08_respuesta_al_arbitraje.md`, §8.2):
+1. **Leer el artículo entero en voz alta y hacerlo tuyo.** Cambia lo que no suene a ti. Decide cada interpretación antes de firmar, sobre todo las nuevas (`08_respuesta_al_arbitraje.md`, §8.2, y `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.1):
    - la escuela que la novela calla;
    - los tinterillos;
-   - los achachis;
-   - la apacheta sin montón.
-2. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
-3. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
-4. **Cotejar las citas con el impreso:**
-   - las de la novela, empezando por las pp. 88-107 (`06_fichero_de_pasajes.md`);
+   - los achachis y la *saywa*;
+   - la apacheta sin montón;
+   - los dos agarres de la mano y la huella «como un sello».
+2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
+3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
+4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
+5. **Cotejar las citas con el impreso:**
+   - las de la novela, empezando por las pp. 88-107 y por los pasajes nuevos de la versión llana (`06_fichero_de_pasajes.md`; `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.3);
    - las de las fuentes escaneadas: Barnadas, p. 84; Zavaleta, p. 21; Cornejo Polar, si usas la 1.ª edición.
-5. **Revisar los datos marcados B y C** (§4.3).
-6. **Regenerar el Word** con `python3 articulo/generar_docx.py` si cambias algo, y comprobar que la extensión siga entre 47.500 y 49.500 (§4.6).
-7. **Preparar una versión anonimizada** si la revista la pide para el arbitraje a doble ciego: sin nombre, sin nota 1 y con «El autor» neutralizado en las declaraciones.
-8. **Enviar** a ieb.fhce@umsa.bo (modelo de correo en `01_convocatoria_estudios_bolivianos_43.md`, §1.6). **El plazo venció el 25 de septiembre de 2026**: si aún no enviaste, conviene escribir a la revista antes de mandar el archivo.
+6. **Revisar los datos marcados B y C** (§4.3).
+7. **Regenerar el Word** con `python3 articulo/generar_docx.py` si cambias algo, y comprobar que la extensión siga entre 47.500 y 49.500 (§4.6).
+8. **Preparar una versión anonimizada** si la revista la pide para el arbitraje a doble ciego: sin nombre, sin nota 1 y con «El autor» neutralizado en las declaraciones.
+9. **Enviar** a ieb.fhce@umsa.bo (modelo de correo en `01_convocatoria_estudios_bolivianos_43.md`, §1.6). **El plazo venció el 25 de septiembre de 2026**: si aún no enviaste, conviene escribir a la revista antes de mandar el archivo.
 
 ## 4.2. Datos de autoría del artículo
 
@@ -50,7 +53,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** ya no tiene margen (quedan 14 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** casi no tiene margen (quedan 46 caracteres). Cualquier añadido obliga a acortar otra cosa.
 
 ## 4.3. Verificación de fuentes
 
@@ -62,29 +65,27 @@ Estado de cada dato:
 
 | # | Dato | Estado | Acción |
 |---|---|---|---|
-| 1 | 139 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
-| 2 | Cárcamo Pino (2025a: 12; 2025b: 244, 246, 259) | A | — |
+| 1 | 147 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
+| 2 | Cárcamo Pino (2025a: 10, 12; 2025b: 244, 259) | A | — |
 | 3 | Definición de manuaje, Cárcamo Pino (2019: 1412) | B, vía 2025b: 244 | — |
 | 4 | Editorial de Cárcamo Pino (2019) | C | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018. Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Confirmar cuál prefieres |
-| 5 | Pareyson (2002: 18) | B, vía 2025b: 246 | Cárcamo Pino cita una edición española de 2002; la bibliografía da el título italiano. Confirmar la edición |
-| 6 | Vázquez Ramos *et al.* (2023: 3-5, 7, 13) y las citas que recogen (Alberti, Worringer, Hall, Lefebvre) | A / B | Traducción propia del portugués |
-| 7 | Lundberg (2019: 3, 15, 18, 21) | A | — |
-| 8 | Martin (2014: 64, 66, 71, 85) y lo que cita (Freud, Colomina, Bachelard; Bacon y Deleuze, en su lectura) | A* / B | Paginación de Martin reconstruida y validada; cotejar dos o tres páginas con el impreso si puedes |
-| 9 | Loos (1972 [1910]) | C | El túmulo del bosque, sin página. Añade la página de la edición de Gustavo Gili si la tienes |
-| 10 | Scott (2020 [1998]: 3) | A (texto) con páginas del índice analítico | Cotejar la página con el impreso |
-| 11 | Dean (2010: 44, 68, 202 n. 86) | A | Páginas reconstruidas con los encabezados del archivo y comprobadas con el índice |
-| 12 | Frampton (1995: 5) | A (escaneo de la introducción) | Confirmar en la portada el editor (John Cava) y la ciudad de la bibliografía |
-| 13 | Garrington (2013: 16) | A | Paginación comprobada con el índice |
-| 14 | Le Guin (2021 [1986]: 8, 10, 11) | A (PDF de la traducción de Nedev y Pérez de Lama) | Completar la URL exacta en es.theanarchistlibrary.org |
-| 15 | Bertonio (2011 [1612]: 77, 307, 317, 330, 349, 420, 466, 506) | A (transcripción digital del ILLA-A) | Páginas comprobadas con el inicio de cada letra. Si un evaluador lo pide, cotejar con el facsímil de 1612 |
-| 16 | Duviols (1979: 8, 13, 23) | A (OCR del artículo) | Traducción propia del francés |
-| 17 | Rivera Cusicanqui (2010 [1984]: 99, 101, 105, 113) | A | Páginas comprobadas con el comienzo de todos los capítulos |
-| 18 | Barnadas (1978 [1975]: 84) | A (OCR muy dañado) | Cotejar con el impreso |
-| 19 | Choque Canqui, prólogo a Barnadas (s. p.) | A | — |
-| 20 | Zavaleta Mercado (1986: 21 n. 1, 29-30) | A (leído en la imagen de cada página) | — |
-| 21 | Cornejo Polar (2003 [1994]: 41, 180) | A (2.ª ed., 2003) | Si prefieres citar la 1.ª edición (Horizonte, 1994), comprobar las páginas |
-| 22 | Ingold (2013: 78, 86, 125) | A | Traducción propia del inglés; páginas comprobadas con diez entradas del índice |
-| 23 | Seguí de la Riva (2010: 93) | A | Página del índice de aforismos del propio libro. El libro es de 2010, no de 2012 |
+| 5 | Vázquez Ramos *et al.* (2023: 3, 4) y la cita de Hall que recogen | A / B | Traducción propia del portugués |
+| 6 | Lundberg (2019: 3, 15, 21) | A | — |
+| 7 | Martin (2014: 71, 85) y lo que cita (Bachelard; Bacon, en su lectura de Deleuze) | A* / B | Paginación de Martin reconstruida y validada; cotejar dos o tres páginas con el impreso si puedes |
+| 8 | Scott (2020 [1998]: 3) | A (texto) con páginas del índice analítico | Cotejar la página con el impreso |
+| 9 | Dean (2010: 44, 68, 202 n. 86) | A | Páginas reconstruidas con los encabezados del archivo y comprobadas con el índice |
+| 10 | Frampton (1995: 5) | A (escaneo de la introducción) | Confirmar en la portada el editor (John Cava) y la ciudad de la bibliografía |
+| 11 | Garrington (2013: 16) | A | Paginación comprobada con el índice |
+| 12 | Le Guin (2021 [1986]: 8, 10, 11) | A (PDF de la traducción de Nedev y Pérez de Lama) | Completar la URL exacta en es.theanarchistlibrary.org |
+| 13 | Bertonio (2011 [1612]: 77, 307, 317, 330, 349, 420, 447, 466, 506) | A (transcripción digital del ILLA-A) | Páginas comprobadas con el inicio de cada letra. Si un evaluador lo pide, cotejar con el facsímil de 1612 |
+| 14 | Duviols (1979: 8, 13) | A (OCR del artículo) | Traducción propia del francés |
+| 15 | Rivera Cusicanqui (2010 [1984]: 17, 99, 101, 105, 113, 125) | A | Páginas comprobadas con el comienzo de todos los capítulos. La p. 17 es el título del prefacio de 2003, que da el lema del epígrafe; su nota 1 lo atribuye al Taller de Historia Oral Andina |
+| 16 | Barnadas (1978 [1975]: 84) | A (OCR muy dañado) | Cotejar con el impreso |
+| 17 | Choque Canqui, prólogo a Barnadas (s. p.) | A | — |
+| 18 | Zavaleta Mercado (1986: 21 n. 1, 29-30) | A (leído en la imagen de cada página) | — |
+| 19 | Cornejo Polar (2003 [1994]: 41, 180) | A (2.ª ed., 2003) | Si prefieres citar la 1.ª edición (Horizonte, 1994), comprobar las páginas |
+| 20 | Ingold (2013: 78, 125) | A | Traducción propia del inglés; páginas comprobadas con diez entradas del índice |
+| 21 | Seguí de la Riva (2010: 93) | A | Página del índice de aforismos del propio libro. El libro es de 2010, no de 2012 |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -96,7 +97,7 @@ Estado de cada dato:
   Las figuras reproducen el **esquema de encaje** de cada pastel. El pie lo dice («Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA»), y la declaración de IA lo precisa: la codificación vectorial de esos esquemas se hizo con IA.
 - **Qué no afirma.**
   - No dice si los pasteles están terminados, ni describe resultados de piezas que no se muestran.
-  - Dice lo contrario del «hallazgo» que objetaba el árbitro: los esquemas «no descubren; obligan a decidir» (§2), y el cráneo de la Figura 1 es una decisión de ensamblaje.
+  - Dice lo contrario del «hallazgo» que objetaba el árbitro: los esquemas «no descubren nada, pero obligan a decidir» (§2), y el cráneo de la Figura 1 es una decisión de ensamblaje.
 - **Si tienes fotografías de los pasteles**, puedes sustituir los esquemas: pasos en `articulo/figuras/LEEME.md`. En ese caso:
   - escribe en el pie los datos reales de cada pieza (soporte, medidas, año);
   - revisa los planos (2) y (3) con lo que hizo cada pastel;
@@ -123,7 +124,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.486 caracteres, con la nota de autor y las declaraciones completas. Quedan 14 caracteres de margen.
+- **Ahora:** 49.454 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 46 caracteres de margen.
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -155,6 +156,7 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Figuras decididas: esquemas o fotografías, con su pie (§4.4)
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
-- [x] `.docx` regenerado: 49.486 caracteres; resúmenes de 99 y 92 palabras
+- [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)
+- [x] `.docx` regenerado: 49.454 caracteres; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)

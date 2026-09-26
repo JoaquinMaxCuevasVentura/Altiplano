@@ -15,7 +15,8 @@ bibliografía incluida) y las palabras de cada resumen (máximo 100).
 
 Las figuras van en bloques ::: {custom-style="Figura"} con la imagen, por
 ejemplo ![](figuras/figura_1.png){width=14cm}, seguidos de su pie en un
-bloque ::: {custom-style="Pie de figura"} (véase figuras/LEEME.md).
+bloque ::: {custom-style="Pie de figura"} (véase figuras/LEEME.md). El
+epígrafe va en un bloque ::: {custom-style="Epígrafe"}.
 """
 
 import re
@@ -105,6 +106,12 @@ def build_reference():
         set_spacing(style, line=line, before=before, after=after)
         style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
         style.paragraph_format.keep_with_next = name == "Figura"
+    # Estilo propio para el epígrafe: 11 pt, sangrado a la izquierda.
+    style = styles.get("Epígrafe") or doc.styles.add_style("Epígrafe", WD_STYLE_TYPE.PARAGRAPH)
+    style.base_style = styles["Normal"]
+    set_font(style, 11, italic=False)
+    set_spacing(style, line=1.0, before=0, after=6)
+    style.paragraph_format.left_indent = Cm(7)
     if "Footnote Text" in styles:
         set_font(styles["Footnote Text"], 10)
         set_spacing(styles["Footnote Text"], line=1.0, after=2)

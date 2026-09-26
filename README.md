@@ -8,7 +8,7 @@ Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativa
 *The Harvest of Stones: Drawing Dwelling in Botelho Gosálvez's* Altiplano
 Joaquin Max Cuevas Ventura
 
-Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde su «cosecha de piedras».
+Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la arquitectura y el dibujo, siguiendo sus piedras. Está escrito en lenguaje llano y abre con un epígrafe aymara: el lema del Taller de Historia Oral Andina, tomado de Silvia Rivera Cusicanqui.
 
 - **Punto de partida.** La crítica ya mostró, con Cornejo Polar, que el narrador indigenista vuelve naturaleza la historia india.
 - **Qué estudia el artículo.** Lo que la novela registra a espaldas de su narrador: la mecánica material del despojo.
@@ -19,10 +19,11 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 
 - **Marco:**
   - **Fuentes andinas:** léxico aymara colonial (Bertonio), el *huanca* (Duviols), historiografía andina (Rivera Cusicanqui, Barnadas, Choque Canqui), las dos concepciones del espacio de Zavaleta y la heterogeneidad de Cornejo Polar.
-  - **Arquitectura y dibujo:** la crítica histórica del espacio (Vázquez Ramos *et al.*, Hall, Alberti, Worringer, Lefebvre), la tectónica (Frampton), el manuaje (Cárcamo Pino), el método de Lundberg y el dibujo según Seguí e Ingold.
-  - **Constelación de la versión 2:** Loos, Colomina, Freud, Bacon (vía Martin) y Bachelard.
+  - **Arquitectura y dibujo:** la crítica histórica del espacio (Vázquez Ramos *et al.* y Hall), la tectónica (Frampton), el manuaje y los agarres de la mano (Cárcamo Pino), el método de Lundberg y el dibujo según Seguí e Ingold.
+  - **De la versión 2 quedan** Bachelard y Bacon, ambos a través de Martin.
   - **Cinco libros:** Frampton, Dean, Garrington, Scott y Le Guin.
 - **Respuesta al arbitraje.** El artículo incorpora la respuesta a las cinco objeciones del arbitraje simulado (`analisis/08_respuesta_al_arbitraje.md`).
+- **Recursos de Cárcamo Pino y lenguaje llano.** Adopta varios recursos de su escritura: el epígrafe (con un lema aymara en lugar del Saramago que él cita), una nota aclaratoria, los juegos de palabras, las analogías físicas y la mirada sobre los gestos de la mano. No adopta su fórmula estructural ni sus latinismos (`analisis/09_recursos_de_carcamo_y_lenguaje_llano.md`).
 - **Seis figuras.** Cada una se examina en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
   - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
   - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
@@ -31,6 +32,7 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | La versión en lenguaje llano con los cambios marcados respecto de la anterior, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
@@ -39,17 +41,18 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 
 **Estado:**
 
-- **Extensión:** 49.486 caracteres con espacios, bibliografía y nota de autor incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
-- **Resúmenes:** resumen de 99 palabras y abstract de 92.
+- **Extensión:** 49.454 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 139 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
-  - leer el texto y hacerlo propio;
+  - leer el texto en voz alta y hacerlo propio;
+  - confirmar el epígrafe;
   - decidir si las figuras son los esquemas o las fotografías de los pasteles;
   - cotejar las citas con el impreso;
   - preparar una versión anonimizada si la revista la pide;
@@ -70,6 +73,7 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 | `analisis/06_fichero_de_pasajes.md` | Las citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador |
 | `analisis/07_cinco_libros.md` | Análisis de Scott, Dean, Frampton, Garrington y Le Guin: pasajes con página, función y límite de cada uno, y dónde entra cada uno en el artículo definitivo |
 | `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entró en el artículo definitivo, qué se quitó y qué quedó en reserva |
+| `analisis/09_recursos_de_carcamo_y_lenguaje_llano.md` | Qué recursos de Cárcamo Pino entraron, cuáles no y por qué; el epígrafe y las opciones descartadas; criterios de la versión en lenguaje llano; autores que salieron |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |

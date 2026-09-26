@@ -1,6 +1,6 @@
 # 6. Fichero de pasajes de *Altiplano*
 
-Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez», en la versión que incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
+Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez», en la versión que incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`) y la revisión en lenguaje llano (`09_recursos_de_carcamo_y_lenguaje_llano.md`). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
 - **Fuente de trabajo.** Transcripción digital (`.docx`) de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
@@ -51,11 +51,14 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 - **La «encerrona» (p. 102)** es la casa municipal donde queda el ganado requisado, no la plaza. El vecindario mestizo agradece la carne al alcalde («fue efusivo al agradecer»); no lo «felicita».
 - **La apacheta no lleva piedras en la novela.** Aparece en la bendición de la p. 33, en la escena de la p. 109 y en el vocabulario, que la define como «abra de las cordilleras y cumbre de los caminos» (p. 160).
 - **El «organismo de piedra del Kollasuyo» (p. 133)** es el de Paulo Huanca: el ardor del yunga lo había «despedazado» cuando vuelve a la puna.
+- **El tinterillo no sopesa los libros (p. 104):** los «señala» y dice que el grande «tiene más peso legal y jurídico que el chiquitito». Sus manos solo cuentan dinero: «recontó los billetes» (p. 105). No escribas que los levanta o los pesa en las manos.
+- **La mano cercenada del aserradero (p. 129)** no es de Paulo ni la muestra el contratista: este le echa en cara que «uno de ustedes se ha cercenado una mano en la sierra».
+- **En la novela no aparecen la «mancera» del arado ni la «pluma» del escribano.** Los gestos que sí están son el arado al hombro y «las correas del yugo en las manos» (p. 34), la firma de la ordenanza (p. 96), la huella dactilar (p. 140) y la faja que Vicente desanuda para pagar (p. 105).
 - **Dos fuentes de luz en la junta de los Huanca:** la «mecha de sebo» sobre la repisa (p. 31) y el fogón, cuyo «resplandor» ve el padre en el suelo (p. 32).
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 139 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 147 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -66,21 +69,20 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 139 
 | 7 | «fábula» | ☐ |
 | 8 | «los cimientos y paredes de las chujllas» | ☐ |
 | 8 | «padre del ayllu» | ☐ |
-| 8 | «una especie de padre del ayllu» | ☐ |
 | 9 | «erial de piedras» | ☐ |
 | 9 | «mojones que han sido puestos allí desde tiempos antiguos» | ☐ |
-| 9 | «Quizá un día la montaña de piedras sobrepase la altura del cerro» | ☐ |
 | 9 | «tablero de ajedrez un poco desigual, un poco contrahecho» | ☐ |
-| 10 | «una pequeña huaca de barro cocido» | ☐ |
+| 9 | «Quizá un día la montaña de piedras sobrepase la altura del cerro» | ☐ |
 | 10 | «verrugas en la piel sarmentosa del altiplano» | ☐ |
+| 10 | «una pequeña huaca de barro cocido» | ☐ |
 | 13 | «cuatro patas de la bestia opresora del puneño» | ☐ |
 | 20 | «empotró en el suelo del ayllu las estacas de propiedad y empezó a dominar» | ☐ |
-| 22 | «edificante y fantástica» | ☐ |
-| 22 | «el proletariado campesino» | ☐ |
-| 22 | «legión» | ☐ |
-| 22 | «no tienen historia» | ☐ |
 | 22 | «son la burguesía usurpadora» | ☐ |
+| 22 | «el proletariado campesino» | ☐ |
+| 22 | «edificante y fantástica» | ☐ |
+| 22 | «no tienen historia» | ☐ |
 | 22 | «¡hambre, persecución y muerte!» | ☐ |
+| 22 | «legión» | ☐ |
 | 28 | «necesitaban aquel blasón para sustentar su orgullo y su riqueza» | ☐ |
 | 29 | «a través de la delicada malla» | ☐ |
 | 29 | «bonita urdimbre de surcos» | ☐ |
@@ -88,7 +90,9 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 139 
 | 30 | «renegridas por el hollín» | ☐ |
 | 31 | «apenas la altura de un adobe» | ☐ |
 | 31 | «mal unidas con lazos de paja trenzada» | ☐ |
+| 31 | «las hoces, el arado, el yugo de madera» | ☐ |
 | 31 | «morada de piojos y pulgas» | ☐ |
+| 34 | «con la madera del arado en un hombro y las correas del yugo en las manos» | ☐ |
 | 34 | «portal de su chujlla» | ☐ |
 | 35 | «amontonó piedras sobre el cadáver» | ☐ |
 | 35 | «una chujlla que estaba abandonada cerro arriba» | ☐ |
@@ -100,103 +104,110 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 139 
 | 38 | «Así los Villca, Huanca y Condori, son las generaciones del Signo Escalonado» | ☐ |
 | 56 | «se agrietan como paredes envejecidas» | ☐ |
 | 57 | «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo» | ☐ |
-| 60 | «manchones» | ☐ |
 | 60 | «manchones en el cascajo» | ☐ |
+| 60 | «manchones» | ☐ |
 | 64 | «las nalgas abiertas a la manera de una luna menguante» | ☐ |
 | 65 | «en su secreto, nadie podía entrar» | ☐ |
-| 66 | «abortó en plena gestación» | ☐ |
 | 66 | «La Pacha Mama, sorda, vieja, extenuada, recibía el cuerpo de sus más fieles hijos para encerrarlos en su vientre de sequedad inexorable» | ☐ |
+| 66 | «abortó en plena gestación» | ☐ |
 | 67 | «dos muñequitos de lana» | ☐ |
 | 68 | «como la fiera y brava hembra del puma» | ☐ |
 | 68 | «los indios le descuartizaron» | ☐ |
-| 69 | «cada cual se llevó un miembro» | ☐ |
-| 69 | «en muchos sitios» | ☐ |
-| 69 | «en muchos sitios enterraron los pedazos del cuerpo» | ☐ |
-| 69 | «sintiendo en lo íntimo de su conciencia de hembra» | ☐ |
 | 69 | «un ardor bestial» | ☐ |
+| 69 | «cada cual se llevó un miembro» | ☐ |
+| 69 | «sintiendo en lo íntimo de su conciencia de hembra» | ☐ |
+| 69 | «en muchos sitios enterraron los pedazos del cuerpo» | ☐ |
+| 69 | «en muchos sitios» | ☐ |
 | 72 | «cielo y tierra eran para ellos como una tremenda cárcel» | ☐ |
 | 75 | «apoyándose con dificultad en el cayado de palo» | ☐ |
 | 75 | «tres vigilantes al cuidado del ayllu» | ☐ |
-| 79 | «celadores y enfermeros» | ☐ |
-| 79 | «en la chujlla de los Villca, la más amplia y cómoda» | ☐ |
 | 79 | «solar histérico, infecundo» | ☐ |
+| 79 | «en la chujlla de los Villca, la más amplia y cómoda» | ☐ |
+| 79 | «celadores y enfermeros» | ☐ |
+| 80 | «para mirar el cielo» | ☐ |
 | 80 | «cancerberos» | ☐ |
 | 80 | «muertos en vida» | ☐ |
-| 80 | «para mirar el cielo» | ☐ |
 | 83 | «situar la Sub-prefectura, el Municipio y la Policía donde antes aposentaba la reducida guarnición hispana» | ☐ |
 | 86 | «con el fajo de expedientes bajo el brazo» | ☐ |
 | 86 | «tejer obscuras mallas de términos seudo jurídicos» | ☐ |
 | 86 | «urden pleitos por nada» | ☐ |
 | 87 | «Que tiren palotes con el arado» | ☐ |
+| 87 | «la más recomendable caligrafía para los indios» | ☐ |
 | 92 | «Tu familia puede acomodarse en el pesebre» | ☐ |
-| 96 | «radio urbano» | ☐ |
 | 96 | «Todos los animales de carneo que existen dentro del radio urbano serán requisados [...] (Fdo.) Dr. Margarito Mendoza» | ☐ |
 | 101 | «cinco gendarmes indios» | ☐ |
+| 102 | «no les alcanzaba la Ordenanza» | ☐ |
 | 102 | «a ojo de buen cubero» | ☐ |
 | 102 | «embudo» | ☐ |
-| 102 | «no les alcanzaba la Ordenanza» | ☐ |
+| 102 | «hasta esfumarse» | ☐ |
 | 103 | «a mil seiscientos bolivianos en papel» | ☐ |
 | 103 | «un desordenado montón de papeles y libracos» | ☐ |
-| 104 | «estos tinterillos son de una sola casta y todos obran con una mala fe del demonio» | ☐ |
-| 104 | «tiene más peso legal y jurídico que el chiquitito» | ☐ |
 | 104 | «un Código Penal en infolio y un manual del Procedimiento Civil» | ☐ |
+| 104 | «tiene más peso legal y jurídico que el chiquitito» | ☐ |
+| 104 | «estos tinterillos son de una sola casta y todos obran con una mala fe del demonio» | ☐ |
+| 105 | «recontó los billetes» | ☐ |
+| 105 | «desanudar la punta de la faja» | ☐ |
+| 105 | «un atado de pobres y traposos billetes» | ☐ |
 | 105 | «donde el viento entraba por todas partes» | ☐ |
+| 105 | «Y ni siquiera tenemos una yunta» | ☐ |
 | 106 | «allí mismo, bajo el suelo del pesebre, para evitar el pago al cura y el municipio» | ☐ |
 | 107 | «habían sido domesticados por la aldea» | ☐ |
-| 108 | «Muralla que condena el horizonte» (Cuadro 1) | ☐ |
 | 108 | «Tras de la muralla que condena el horizonte del altiplano empieza el yunga» | ☐ |
+| 108 | «Muralla que condena el horizonte» | ☐ |
 | 109 | «como un gallardete clavado en la ceja de la apacheta» | ☐ |
-| 109 | «fauce» | ☐ |
-| 109 | «Fauces del abismo» (Cuadro 1) | ☐ |
-| 109 | «gallardete clavado» (Cuadro 1) | ☐ |
-| 109 | «góticas» (Cuadro 1) | ☐ |
 | 109 | «semejantes a fantásticas construcciones góticas» | ☐ |
+| 109 | «fauce» | ☐ |
+| 109 | «Fauces del abismo» | ☐ |
+| 109 | «gallardete clavado» | ☐ |
+| 109 | «góticas» | ☐ |
 | 113 | «Sabrás arar en la puna, pero aquí esa es otra música» | ☐ |
 | 121 | «una cadena cogiéndose de manos» | ☐ |
+| 121 | «en la otra orilla» | ☐ |
 | 123 | «derritiéndose como muñeco de cera» | ☐ |
 | 125 | «ver sus nacientes senos» | ☐ |
+| 129 | «se ha cercenado una mano en la sierra» | ☐ |
 | 129 | «peón, siquiera» | ☐ |
-| 132 | «con su propia mano se quitó la vida» | ☐ |
-| 132 | «en seguida vinieron los capataces y peones: le daban dinero» | ☐ |
 | 132 | «había sido desflorada por el patrón» | ☐ |
-| 132 | «las pruebas eran irrefutables» | ☐ |
+| 132 | «en seguida vinieron los capataces y peones: le daban dinero» | ☐ |
 | 132 | «obligó a venderse» | ☐ |
+| 132 | «con su propia mano se quitó la vida» | ☐ |
 | 132 | «vieja historia» | ☐ |
+| 132 | «las pruebas eran irrefutables» | ☐ |
 | 133 | «organismo de piedra del Kollasuyo» | ☐ |
+| 133 | «despedazado» | ☐ |
 | 134 | «el encaje de acero de la torre de un andarivel» | ☐ |
-| 135 | «enjambre de cuchitriles de calamina» | ☐ |
 | 135 | «Pensylvania» | ☐ |
+| 135 | «enjambre de cuchitriles de calamina» | ☐ |
 | 140 | «Tomaron su identidad e impresiones digitales» | ☐ |
 | 141 | «como dos enormes nichos» | ☐ |
 | 142 | «Aquí cosecharás miles de cargas de estaño» | ☐ |
-| 143 | «apeñuscados contra la rejilla» | ☐ |
 | 143 | «como si faltase suelo bajo sus pies» | ☐ |
 | 143 | «la vertiginosa caída» | ☐ |
+| 143 | «apeñuscados contra la rejilla» | ☐ |
+| 144 | «un boquete» | ☐ |
 | 144 | «450» | ☐ |
 | 144 | «a la superficie» | ☐ |
-| 144 | «un boquete» | ☐ |
-| 145 | «450» | ☐ |
 | 145 | «pobres costillas zafadas como surcos» | ☐ |
-| 145 | «recién ponían el revestimiento de callapos» | ☐ |
+| 145 | «450» | ☐ |
 | 145 | «se derrumbaba en algunos pasos» | ☐ |
+| 145 | «recién ponían el revestimiento de callapos» | ☐ |
 | 151 | «rieles, maderos, dinamita, hombres» | ☐ |
 | 153 | «le abrió un boquete en la cabeza» | ☐ |
-| 154 | «informe montón» | ☐ |
-| 154 | «nadie sospechó el crimen» | ☐ |
-| 154 | «quebróse la viga del techo» | ☐ |
 | 154 | «un informe montón de rocas, lodo y maderos astillados» | ☐ |
+| 154 | «quebróse la viga del techo» | ☐ |
+| 154 | «nadie sospechó el crimen» | ☐ |
+| 154 | «informe montón» | ☐ |
 | 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo» | ☐ |
-| 156 | «con el mismo pudor de los ex carcelados» | ☐ |
-| 156 | «con una voluntad de siglos de piedra» | ☐ |
 | 156 | «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» | ☐ |
-| 156 | «Llegaron los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
 | 156 | «los mismos hombres eran quienes tiraban el arado» | ☐ |
+| 156 | «con una voluntad de siglos de piedra» | ☐ |
+| 156 | «con el mismo pudor de los ex carcelados» | ☐ |
 | 156 | «no recordaba sino lo pasado antiguo, lo bueno y lo alegre de las cosechas» | ☐ |
-| 156 | «voluntad de siglos de piedra» | ☐ |
+| 156 | «Llegaron los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
 | 159 | «hembra paridora» | ☐ |
-| 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 159 | «olvidaron la pesadilla pasada» | ☐ |
 | 159 | «su prestigio de hembra paridora y múltiple» | ☐ |
+| 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 160 | «abra de las cordilleras y cumbre de los caminos» | ☐ |
 | 160 | «anciano» | ☐ |
 | 162 | «mal de ojo, brujería» | ☐ |
