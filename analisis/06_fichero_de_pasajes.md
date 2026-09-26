@@ -58,7 +58,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 147 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 146 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -162,7 +162,6 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 109 | «góticas» | ☐ |
 | 113 | «Sabrás arar en la puna, pero aquí esa es otra música» | ☐ |
 | 121 | «una cadena cogiéndose de manos» | ☐ |
-| 121 | «en la otra orilla» | ☐ |
 | 123 | «derritiéndose como muñeco de cera» | ☐ |
 | 125 | «ver sus nacientes senos» | ☐ |
 | 129 | «se ha cercenado una mano en la sierra» | ☐ |
