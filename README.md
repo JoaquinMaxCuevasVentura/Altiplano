@@ -1,6 +1,6 @@
 # Altiplano: artículo para *Estudios Bolivianos* N.º 43 (2026)
 
-Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» (IEB, FHCE, UMSA). **Plazo de envío: 25 de septiembre de 2026, a ieb.fhce@umsa.bo.**
+Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» (IEB, FHCE, UMSA). **Plazo de envío: 25 de septiembre de 2026 (vencido), a ieb.fhce@umsa.bo.**
 
 ## Artículo definitivo
 
@@ -28,6 +28,7 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
 | `articulo/plantilla_estudios_bolivianos.docx` | Plantilla de estilos que usa el generador |
+| `articulo/articulo_cosecha_de_piedras_revisado.md` y `.docx` | **Versión revisada (borrador)**: responde a las cinco objeciones del arbitraje con diez fuentes nuevas (léxico aymara, historiografía andina, Cornejo Polar, Ingold, Seguí). 49.207 caracteres. No reemplaza al definitivo hasta que decidas; véase `analisis/08_respuesta_al_arbitraje.md` |
 | `articulo/articulo_altiplano.md` y `.docx` | Versión 3, «Topografías de la carne y el barro en *Altiplano*»: alternativa sin figuras, con antecedentes críticos (Arriarán, Barnadas) |
 
 **Estado:**
@@ -59,6 +60,7 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 | `analisis/05b_guia_seis_pasteles.md` | **Guía de los seis pasteles** del artículo definitivo: composición, paleta, técnica y registro de cada pieza |
 | `analisis/06_fichero_de_pasajes.md` | Las 147 citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador |
 | `analisis/07_cinco_libros.md` | Análisis de Scott, Dean, Frampton, Garrington y Le Guin: pasajes con página, función y límite de cada uno, y dónde entra cada uno en el artículo definitivo |
+| `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entra en la versión revisada, qué se quitó y qué te toca decidir |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
@@ -68,6 +70,7 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 ```bash
 pip install pypandoc_binary python-docx pillow
 python3 articulo/generar_docx.py                                # artículo definitivo
+python3 articulo/generar_docx.py articulo/articulo_cosecha_de_piedras_revisado.md  # versión revisada
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```

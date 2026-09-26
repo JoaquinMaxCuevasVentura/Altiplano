@@ -1,5 +1,7 @@
 # 4. Pendientes y verificaciones antes del envío
 
+> **Versión revisada.** Hay un borrador que responde a las cinco objeciones del arbitraje con diez fuentes nuevas: `articulo/articulo_cosecha_de_piedras_revisado.md` (49.207 caracteres). Este documento sigue describiendo el artículo definitivo. Qué cambia en el borrador, con qué fuentes y qué te toca decidir: `08_respuesta_al_arbitraje.md`.
+
 **Estado del artículo definitivo**, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez». Es la versión 2 completa, reforzada con cinco libros (Scott, Dean, Frampton, Garrington y Le Guin; véase `07_cinco_libros.md`), con la escena del tinterillo y con compresión sintáctica de la trama.
 
 - **Extensión.** 48.989 caracteres con espacios, bibliografía incluida. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
@@ -23,7 +25,7 @@
 6. **Cotejar las citas de la novela con el impreso**, empezando por las pp. 88-107 (`06_fichero_de_pasajes.md`, §§6.1 y 6.4).
 7. **Revisar los datos marcados B y C** (§4.3).
 8. **Regenerar el Word** con `python3 articulo/generar_docx.py` y comprobar que la extensión siga entre 47.500 y 49.500 (§4.6).
-9. **Enviar** a ieb.fhce@umsa.bo (modelo de correo en `01_convocatoria_estudios_bolivianos_43.md`, §1.6). **El plazo vence hoy, 25 de septiembre de 2026.**
+9. **Enviar** a ieb.fhce@umsa.bo (modelo de correo en `01_convocatoria_estudios_bolivianos_43.md`, §1.6). **El plazo venció el 25 de septiembre de 2026**: si aún no enviaste, conviene escribir a la revista antes de mandar el archivo.
 
 ## 4.2. Marcadores ⟦…⟧ del artículo
 
@@ -103,6 +105,9 @@ Dos advertencias:
 ## 4.7. Antecedentes críticos: un riesgo de arbitraje
 
 El artículo definitivo no discute la crítica previa sobre *Altiplano*. La versión 3 citaba a Arriarán (2021: 29-31) y a Barnadas (1977). Las normas piden una «revisión de la literatura», y un evaluador puede echarla de menos.
+
+- **La versión revisada** cita la crítica del narrador indigenista de Cornejo Polar (2003 [1994]: 180) y se sitúa frente a ella (`08_respuesta_al_arbitraje.md`, §8.1).
+- **La referencia a Barnadas (1977) de la versión 3 no debe usarse.** El tomo que enviaste (Barnadas y Coy, *Realidad sociohistórica y expresión literaria en Bolivia*, 1977) incluye *Altiplano* en su corpus (p. 36), pero no la analiza. Su contratapa enumera los ocho estudios publicados, y el de Botelho es sobre *Coca*. El folleto «Raúl Botelho Gosálvez: Altiplano» no consta.
 
 - **Si puedes leer las pp. 29-31 de Arriarán**, un párrafo breve al final de la sección 1 bastaría (unos 400 caracteres; hay margen si la nota de autor es corta).
 - **Si no las verificas, no lo añadas.** Lo que la versión 3 decía de Arriarán procede de la depuración y no pude comprobarlo: el sitio donde está el libro no era accesible desde este entorno.
