@@ -19,7 +19,7 @@ Para regenerarlas después de editar un SVG: `python3 articulo/generar_figuras.p
 
 1. Escanea o fotografía cada pastel con luz rasante suave y sin reflejos (de 2.000 a 3.000 px de lado mayor) y guárdalo aquí con el nombre de su figura, por ejemplo `figura_4.jpg`.
 2. En el `.md`, cambia la ruta de la imagen (`figuras/figura_4.png` → `figuras/figura_4.jpg`) y el pie. Modelo: `**Figura 4.** *El castillete y la caída al plano 450*. Pastel al óleo sobre ⟦soporte⟧, ⟦medidas⟧, ⟦año⟧. Fuente: elaboración propia.`
-3. Revisa el plano (2) *Operación* y el plano (3) *Hallazgo* de esa figura: hoy describen el procedimiento y lo que muestra el esquema. Si el pastel terminado hizo otra cosa, escribe lo que hizo.
-4. Si ya no queda ningún esquema en el artículo, quita de la declaración de IA «la elaboración de los esquemas de encaje reproducidos en las figuras 1 a 6».
+3. Revisa el plano (2) *Operación* y el plano (3) *Contraste* de esa figura: hoy describen el procedimiento del esquema y lo que obliga a decidir frente al texto. Si el pastel terminado hizo otra cosa, escribe lo que hizo. Solo eso puede presentarse como hallazgo: el artículo advierte que las decisiones del esquema «no cuentan como hallazgos».
+4. Si ya no queda ningún esquema, reescribe las frases que hablan de ellos: en la sección 1 («de los que se reproduce el esquema de encaje (figuras 1-6)»), en la 2 («Los esquemas de encaje que aquí se reproducen…») y en las conclusiones («Los esquemas obligan a decidir…»). Quita además de la declaración de IA «, y la codificación vectorial de los esquemas de encaje de las figuras 1 a 6»; la enumeración terminará en «la redacción de borradores». Si solo sustituyes algunas figuras, ajusta los números.
 5. No vuelvas a correr `generar_figuras.py` sobre un número que ya sea fotografía.
-6. Regenera el Word (`python3 articulo/generar_docx.py`) y comprueba que la extensión siga entre 47.500 y 49.500 caracteres.
+6. Regenera el Word (`python3 articulo/generar_docx.py`) y comprueba que la extensión siga entre 47.500 y 49.500 caracteres. Hoy el margen es de 14 caracteres: lo que añadas tendrás que recortarlo en otra parte.

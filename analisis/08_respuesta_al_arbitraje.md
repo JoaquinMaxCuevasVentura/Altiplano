@@ -1,15 +1,17 @@
-# 8. Respuesta al arbitraje: diez fuentes y una versión revisada
+# 8. Respuesta al arbitraje: diez fuentes y el artículo definitivo
 
 Análisis de los dos bloques de fuentes enviados para responder a las cinco objeciones del «árbitro implacable»:
 
 - **Primer bloque (andino, lingüístico y político boliviano):** Bertonio, Duviols, Barnadas (1975), Rivera Cusicanqui y Zavaleta Mercado.
 - **Segundo bloque (crítica literaria y dibujo):** Cornejo Polar, Barnadas y Coy (1977), Ingold y dos textos de Seguí de la Riva.
 
-Con ellas se redactó una **versión revisada** del artículo, como borrador aparte: `articulo/articulo_cosecha_de_piedras_revisado.md` y su `.docx`. **El artículo definitivo no se tocó.** Todas las citas nuevas se cotejaron con el texto de cada fuente y su página se fijó con el método que se describe en cada ficha (§8.3).
+Con ellas se redactó una versión revisada del artículo. Desde el 26 de septiembre de 2026 es el **artículo definitivo** (`articulo/articulo_cosecha_de_piedras.md` y su `.docx`), con los datos de autoría y los ajustes de §8.7. La versión anterior queda en el historial de git (commit b3edfd9).
+
+Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se fijó con el método que se describe en cada ficha (§8.3).
 
 ## 8.1. Las cinco objeciones y lo que cambia
 
-| Objeción | Qué hace la versión revisada | Fuentes |
+| Objeción | Qué hace el artículo | Fuentes |
 |---|---|---|
 | **1. «Descubridor del agua tibia»**: la crítica al narrador indigenista ya está hecha | Cita esa crítica y se desplaza. Cornejo Polar ya mostró que el narrador indigenista, «ajeno al mundo indio aunque se solidarice con él», imagina esa vida «más en términos de naturaleza que de historia» (2003 [1994]: 180). El aporte pasa a ser **la mecánica material del despojo que la novela registra a espaldas de su narrador**: la posesión inscrita en la piedra (mojones, pircas, linderos, un apellido) y su captura por el papel. Además, la novela **calla el uso indio de la letra** (títulos coloniales, tinterillos aliados, escuela) | Cornejo Polar; Bertonio; Duviols; Rivera Cusicanqui; Barnadas |
 | **2. Bulimia teórica** | Se quitan ocho referencias europeas: Schmarsow, Shonfield, Corona Martínez, Salazar Sánchez, Vidler, la cita directa de Deleuze, Foucault y Colomina (1994); también las comparaciones con Lynch. Se mantiene el núcleo de la constelación (Loos, Colomina 1992, Freud, Bacon, Worringer, Bachelard) y los cinco libros. De las nueve entradas nuevas, siete son andinas o bolivianas | — |
@@ -17,7 +19,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
 | **4. Paradoja de Hall** | Sin Lynch. Alberti se lee como la forma del despojo: Zavaleta opone la concepción andina del espacio, un «archipiélago», a la señorial, que liga el suelo a «una estirpe» (1986: 29-30). Se quita el tercer uso de Alberti (el linchamiento). El límite de §8 cierra con la historia que los aymaras, escribía Choque Canqui, «hace tiempo, hemos añorado por escribir» | Zavaleta; Choque Canqui |
 | **5. Punto ciego andino** | Entran el léxico aymara de Bertonio (*wanqa*, *wanqathapiña*, *chhaxwa*, *achachi*, *apachita*, *Pachamama*, *saywaña*), el *huanca* de Duviols, la historia de la lucha legal y de Warisata (Rivera Cusicanqui), las dos concepciones del espacio (Zavaleta), las escuelas de Achacachi (Barnadas) y la voz de Choque Canqui | Las cinco del primer bloque |
 
-**Albó y Platt**, que el árbitro también echa de menos, solo aparecen citados por Rivera Cusicanqui (pp. 105, 114, 150). El borrador no los cita. Si los tienes, pueden entrar en un tercer bloque.
+**Albó y Platt**, que el árbitro también echa de menos, solo aparecen citados por Rivera Cusicanqui (pp. 105, 114, 150). El artículo no los cita. Si los tienes, pueden entrar en un tercer bloque.
 
 ## 8.2. Hallazgos nuevos que incorpora la revisión
 
@@ -78,7 +80,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 466: «Saywaña [...] Mojonar las chácaras con montones de piedra o terrones.»; «Saywat'aña [...] Levantar una pared de piedras a secas».
   - p. 486: «Thaxsi. El cimiento. [...] Thaxsi. El horizonte o término de la tierra.»
   - p. 506: «Wanqa. Piedra muy grande.»
-- **Uso en el borrador:** §1 (pp. 77, 330), §2 (p. 506), Figura 3 (pp. 317, 349), Figura 5 (p. 420), Figura 6 (p. 307), §7 (p. 466).
+- **Uso en el artículo:** §1 (pp. 77, 330), §2 (p. 506), Figura 3 (pp. 317, 349), Figura 5 (p. 420), Figura 6 (p. 307), §7 (p. 466).
 - **Cautelas:**
   - Es el aymara lupaqa de Juli (1612), filtrado por un misionero: «por superstición» es su juicio.
   - La transcripción moderniza la grafía (*chaxwa*, *chhaxwa* y *ch'axwa* conviven).
@@ -100,8 +102,8 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 21: el *huanca*, masculino, se planta «dans la terre à posséder (allpa)» y en el vientre de *mama pacha*.
   - p. 23: «Il n'y a pas transformation, mutation du mort, mais dédoublement.»
   - p. 31: el *huanca* marcaba la posesión del suelo y gobernaba la germinación.
-- **Uso en el borrador:** §2 (pp. 8, 13, 23), con Bertonio y con los mojones y linderos de la novela.
-- **Cautela:** los documentos son del centro del Perú (procesos de Cajatambo, hacia 1660), no del mundo aymara. Por eso el borrador lo acompaña con Bertonio y no le hace decir nada sobre el altiplano.
+- **Uso en el artículo:** §2 (pp. 8, 13, 23), con Bertonio y con los mojones y linderos de la novela.
+- **Cautela:** los documentos son del centro del Perú (procesos de Cajatambo, hacia 1660), no del mundo aymara. Por eso el artículo lo acompaña con Bertonio y no le hace decir nada sobre el altiplano.
 - **En reserva:**
   - La p. 21, para la Figura 5 (el *huanca* en el vientre de la tierra).
   - La p. 16 («quedó hecho mojón de posesión»), que es una crónica citada por Duviols; para usarla hay que identificarla.
@@ -123,7 +125,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 114: la escuela como forma de replantear el «pacto de reciprocidad» con el Estado (Platt, 1982), «asumiendo como propia la tarea de aprender el lenguaje de sus opresores».
   - p. 125: el asedio a las haciendas, con la «destrucción simbólica de mojones o linderos».
   - p. 150: Warisata, «La única comunidad libre que subsistía en la región»; su conflicto con la hacienda Belén «era una antigua pelea de linderos».
-- **Uso en el borrador:** §2 (pp. 105, 113), §3 (p. 99), §4 (p. 101).
+- **Uso en el artículo:** §2 (pp. 105, 113), §3 (p. 99), §4 (p. 101).
 - **En reserva:**
   - p. 150: el ayllu libre rodeado de haciendas y la pelea de linderos, que es la situación de Jatun-Kolla frente a Tarakota (p. 9 de la novela).
   - p. 125: los mojones, que en los años cuarenta todavía se disputaban.
@@ -148,7 +150,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 65: una campiña en la que «las tres cuartas partes desconocen la escritura», con «los islotes que son los pueblos».
   - p. 84: en septiembre de 1929, *kuraka* de Janq'ulaymi, Achakachi y otros puntos, con los niños de sus escuelas, piden al ministro material para centros que se sostenían «sin gravamen de un solo centavo para el Erario nacional».
   - p. 85: el Estatuto de Educación Indigenal de 1936.
-- **Uso en el borrador:** §2 (p. 84) y §8 (el prólogo de Choque Canqui, que se cita como obra propia).
+- **Uso en el artículo:** §2 (p. 84) y §8 (el prólogo de Choque Canqui, que se cita como obra propia).
 - **Cautela:** el OCR está muy dañado. Las pp. 46-47 y 84 se leyeron con cuidado, pero conviene cotejarlas con el impreso.
 - **En reserva:**
   - p. 33: el cerco de haciendas en torno a la comunidad.
@@ -163,7 +165,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 29: la unidad del espacio «en la idea clásica de lo andino: este espacio no puede concebirse sin otro espacio», el «archipiélago»; la agricultura de altura «no es suficiente para sí misma» sin la de las tierras bajas; esa idea «será para siempre distinta de la idea oligárquico-gamonal».
   - p. 30: «dos concepciones que son ambas espacialistas»; la señorial concibe «el dominio final del suelo como atribución ligada a una estirpe».
   - p. 63: la determinación es «errática en las sociedades complejas o abigarradas, en las sociedades no legibles».
-- **Uso en el borrador:** §2 (pp. 29-30, frente al *área* de Alberti) y §5 (el archipiélago, por remisión).
+- **Uso en el artículo:** §2 (pp. 29-30, frente al *área* de Alberti) y §5 (el archipiélago, por remisión).
 - **En reserva:**
   - p. 21, n. 1: la sociedad «de dudosa cuantificación», contrapunto boliviano de Scott para el radio urbano. Se quitó por extensión.
   - pp. 32, 146 y 186, que solo están en OCR (latifundio y despojo del excedente; Ley de Exvinculación; vecinos e indios): leerlas en la imagen antes de citarlas.
@@ -183,7 +185,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 180: el narrador indigenista, «ajeno al mundo indio aunque se solidarice con él»; la vida india, imaginada «más en términos de naturaleza que de historia».
   - p. 181: el mundo indio como «estado sólido, siempre repetido».
   - p. 182: en la nota final de 1945 de *Raza de bronce*, la «expropiación de la historia indígena»; una imagen de los indios que hace «imposible» imaginarlos «como protagonistas de ninguna acción trascendente».
-- **Uso en el borrador:** §1 (p. 180) y §4 (p. 41).
+- **Uso en el artículo:** §1 (p. 180) y §4 (p. 41).
 - **En reserva:**
   - pp. 181-182. *Altiplano* también es de 1945 y su final hace lo que Cornejo Polar describe: pasa de la historia a la naturaleza, con la Pachamama «hembra paridora» y los «patriarcas fecundadores del suelo» (p. 159). La diferencia es que el final no presagia la rebelión, sino que restaura el ciclo.
   - Esa observación daría un párrafo de antecedentes críticos (§4.7 de `04`) si hay extensión.
@@ -198,7 +200,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 11: «Nada más cómodo —ni más injusto— que aplicarle al conjunto de la narrativa boliviana [...] clichés interpretativos anacrónicos y desplazados: queremos decir, fuera de tiempo y fuera de espacio».
   - p. 11: «Ninguna obra literaria [...] se entiende fuera de sus coordenadas espacio-temporales».
   - Página y texto reconstruidos de un OCR en tablas; cotejar.
-- **Uso en el borrador:** ninguno, por extensión. Es la versión boliviana de la advertencia de Hall: si quieres responder a la objeción 4 con una voz local, cabe en §2 en unos 200 caracteres.
+- **Uso en el artículo:** ninguno, por extensión. Es la versión boliviana de la advertencia de Hall: si quieres responder a la objeción 4 con una voz local, cabe en §2 en unos 200 caracteres.
 
 ### Tim Ingold, *Making* (2013)
 
@@ -220,7 +222,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 125: dibujos que no cuentan, sino que «specify and articulate» (el dibujo técnico, desde Alberti).
   - p. 128: el dibujo es «a process of thinking, not the projection of a thought»; «drawing is a gathering».
   - p. 139: «so long as it is done by hand, all writing is drawing».
-- **Uso en el borrador:** §1 (p. 78: el montón frente al túmulo de Loos), §2 (p. 125) y Figura 3 (p. 86).
+- **Uso en el artículo:** §1 (p. 78: el montón frente al túmulo de Loos), §2 (p. 125) y Figura 3 (p. 86).
 - **En reserva:**
   - pp. 76 y 80: el derrumbe que deja «un montón de piedras» y el montón como lugar de memoria, para §5 y §7.
 
@@ -239,7 +241,7 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
   - p. 93: el dibujar que puede «servir como ilustración de un texto narrativo previo» frente al que deja que la mano configure mundos que no se conocían.
   - p. 97: «La sección empieza siendo un corte, sajadura de cualquier cosa, rotura, indagación, búsqueda de un interior»; «El dibujo del poblado es una marcación zonificada de tamaño natural que se vive con el cuerpo».
   - p. 101: Bacon.
-- **Uso en el borrador:** §2 (p. 93), para la objeción 3.
+- **Uso en el artículo:** §2 (p. 93), para la objeción 3.
 - **En reserva:**
   - p. 97: la sección de la Figura 1 como «búsqueda de un interior». Se quitó por extensión.
   - p. 97: el poblado como dibujo a escala natural, para los mojones y pircas.
@@ -276,35 +278,56 @@ Con ellas se redactó una **versión revisada** del artículo, como borrador apa
 - **Compresiones:** Alberti ya no se usa en el linchamiento; el archipiélago de Zavaleta se nombra en §2 y se recuerda en §5.
 - **Citas de la novela nuevas:** «fábula» (p. 7), «mojones que han sido puestos allí desde tiempos antiguos» (p. 9), «en los linderos» (p. 30), «un desordenado montón de papeles y libracos» (p. 103) y «anciano» (glosario, p. 160).
 
-## 8.5. Verificación del borrador
+## 8.5. Verificación del artículo definitivo
 
-- **Extensión:** 49.207 caracteres con espacios, bibliografía incluida.
-  - La nota de autor puede crecer unos 290 caracteres sobre el marcador: una nota de unos 460 caracteres (65-70 palabras) sin pasar de 49.500.
-  - Si la nota necesita más espacio, hay que acortar otra cosa (§8.6).
-- **Resúmenes:** Resumen de 99 palabras y Abstract de 92.
+- **Extensión:** 49.486 caracteres con espacios, con bibliografía, nota de autor y declaraciones. El rango pedido es de 47.500 a 49.500: quedan 14 caracteres de margen.
+- **Resúmenes y palabras clave:** resumen de 99 palabras y abstract de 92; cinco palabras clave en cada lengua (norma 4d).
+- **Nota de autor:** 80 palabras (límite, 100).
 - **Citas de la novela:** las 139 se comprobaron automáticamente contra la transcripción; todas existen y están en la página indicada.
 - **Cadenas de «ibid.»:** revisadas una por una; todas remiten a la obra correcta.
 - **Citas de las fuentes nuevas:**
   - Las citas en castellano (Bertonio, Rivera Cusicanqui, Cornejo Polar, Zavaleta, Seguí, Choque Canqui) se buscaron en el texto de cada fuente: todas aparecen.
   - Las de Duviols e Ingold son traducciones propias de pasajes localizados con su página.
 - **Bibliografía:** 30 entradas; no hay citas sin entrada ni entradas sin cita.
-- **Word:** el `.docx` se regeneró (23 páginas) con la misma plantilla y las mismas figuras.
+- **Marcadores:** no queda ninguno (⟦…⟧).
+- **Word:** el `.docx` se regeneró (23 páginas; las declaraciones, en la p. 21) con la misma plantilla y las mismas figuras.
 
-## 8.6. Qué te toca decidir
+## 8.6. Decisiones
 
-1. **Adoptar o no el borrador.** Si lo adoptas, se renombra como definitivo y se actualizan `04`, `06`, el README y la declaración de IA (el alcance de Claude incluye ya «la lectura asistida de las fuentes»).
-2. **Vidler y Deleuze.**
-   - Estaban en tu lista de la constelación; el árbitro los señala por su nombre y el borrador los quita.
-   - Devolverlos cuesta unos 480 caracteres, que habría que sacar de otra parte: por ejemplo, la *saywaña* de §7 o el archipiélago de §5.
+1. **Adoptado como definitivo** el 26 de septiembre de 2026 (§8.7).
+2. **Vidler y Deleuze no vuelven.** El árbitro los señala por su nombre, y el argumento no los necesita:
+   - Freud basta para el pesebre que pasa de refugio a tumba.
+   - Bacon, vía Martin, basta para el linchamiento.
+   - Devolverlos costaría unos 480 caracteres que hoy no hay.
 3. **Las interpretaciones nuevas, que debes hacer tuyas o descartar:**
    - que la novela «calla» la escuela de Warisata;
    - que el tinterillo es el embrión del indigenismo «en que se inscribe la novela»;
    - que los vigías ocupan el lugar de los achachis;
    - que la apacheta sin montón es una sustracción.
-4. **Scott en el tinterillo.** Pediste a Scott para el infolio. El borrador lo reemplaza allí por Cornejo Polar y Rivera Cusicanqui (objeción 5) y lo conserva en el radio urbano.
+4. **Scott en el tinterillo.** El artículo lo reemplaza allí por Cornejo Polar y Rivera Cusicanqui (objeción 5). Lo conserva en el radio urbano, junto a Zavaleta.
 5. **Albó y Platt:** si los tienes, un tercer bloque.
 6. **Datos que conviene cotejar en el impreso:**
    - la página de Cornejo Polar si usas la 1.ª edición;
    - Barnadas, p. 84;
    - Barnadas y Coy, p. 11;
    - las entradas de Bertonio en el facsímil de 1612, si un evaluador lo pide.
+
+## 8.7. Cambios al adoptarlo como definitivo
+
+- **Autoría.**
+  - Línea de autor: Joaquin Max Cuevas Ventura.
+  - Nota 1 con tu texto, con dos retoques: los títulos van en minúscula («licenciado en Arquitectura», «técnico superior en Diseño Gráfico») y el correo va como texto, sin el enlace de redirección que traía la copia.
+- **Palabras clave:** cinco en cada lengua (sin *Altiplano*), como pide la norma 4d.
+- **Estado de la investigación:** «Se trata de una investigación en desarrollo».
+- **Declaraciones finales:**
+  - Conflicto de intereses: tu texto.
+  - Declaración de IA: tu texto, con tres ajustes de exactitud (`04_verificaciones_y_pendientes.md`, §4.5):
+    - el alcance incluye la redacción de borradores, la transcripción y paginación de fuentes y el cotejo de citas;
+    - el rol dice «dirigió y revisó la redacción»;
+    - la autoría exclusiva se refiere a los pasteles, no a los esquemas de las figuras.
+- **Se devolvió** a Zavaleta en el radio urbano: Bolivia como sociedad «de dudosa cuantificación» (1986: 21, n. 1), contrapunto boliviano de Scott. Es la única restitución: lo demás que salió (§8.4) no hace falta al argumento, y la extensión no deja margen.
+- **Recortes para que cupiera la nota:**
+  - «formulado por historiadores del arte entre 1893 y 1914»;
+  - «Un corolario de método.»;
+  - «sin abstraerla» (Lefebvre);
+  - fórmulas más breves en dos frases de §§1-2 y en el alcance de la declaración.

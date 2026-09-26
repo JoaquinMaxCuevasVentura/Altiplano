@@ -1,10 +1,10 @@
 # 5b. Guía para realizar los seis pasteles
 
-> **Nota para el artículo definitivo (25/9/2026).** Esta guía se escribió para la versión 2, cuando los pasteles estaban por hacer, y se recupera del historial como protocolo de referencia y modelo de registro de cada pieza. Tres cambios:
+> **Nota para el artículo definitivo (actualizada el 26/9/2026).** Esta guía se escribió para la versión 2, cuando los pasteles estaban por hacer, y se recupera del historial como protocolo de referencia y modelo de registro de cada pieza. Tres cambios:
 >
 > - **Numeración.** En el artículo definitivo las figuras siguen el orden de aparición. La Figura 4 de esta guía (Pelvis) es la **5** del artículo; la 5 (Centinela), la **6**; la 6 (Castillete), la **4**. Las Figuras 1 a 3 no cambian.
-> - **Plano (3).** El artículo ya no lo formula como hipótesis: lo llama *Hallazgo* y lo apoya en el texto y en el esquema de encaje. Si un pastel terminado muestra otra cosa, reescribe ese plano con lo que hizo el pastel.
-> - **Inserción de fotografías.** Las §§5.5 y 5.6 describen el procedimiento de aquella versión (marcadores «en ejecución»), que ya no existen. Para el artículo definitivo sigue `articulo/figuras/LEEME.md`.
+> - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando se puede con fuentes andinas. No lo presenta como hallazgo, porque los esquemas «no descubren; obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
+> - **Fotografías.** Las §§5.5 y 5.6 están puestas al día con el artículo definitivo. Los mismos pasos, con el detalle de rutas y pies, están en `articulo/figuras/LEEME.md`.
 
 
 Las cuatro imágenes que acompañaron el encargo eran **referencias visuales**, no los dibujos del artículo (quedan en `analisis/referencias_visuales/`). Los seis pasteles están por hacer. Esta guía los deriva del texto de la novela con el mismo método del artículo, para que no partas de cero:
@@ -12,7 +12,7 @@ Las cuatro imágenes que acompañaron el encargo eran **referencias visuales**, 
 - **Observación** y **disección** ya están hechas en el artículo: los pasajes con página (Cuadro 1 y `06_fichero_de_pasajes.md`) y la tabla de apoyo, vano, masa y límite.
 - **Ensamblaje** e **inmersión** te tocan a ti. Aquí van una propuesta de composición, una paleta sacada de los colores que nombra la novela y una secuencia técnica para cada figura.
 
-Nada de esto es un modelo que haya que copiar. Con Pareyson, el dibujo «inventa *in situ* el modo de formar»: si al dibujar aparece otra cosa, síguela y anótala, porque ese desvío es el hallazgo que pide el plano (3) del artículo (véase §5.5).
+Nada de esto es un modelo que haya que copiar. Con Pareyson, el dibujo «inventa *in situ* el modo de formar»: si al dibujar aparece otra cosa, síguela y anótala: ese desvío es lo que el plano (3) del artículo tendrá que contar cuando el pastel exista (véase §5.5).
 
 ## 5.1. Materiales
 
@@ -267,25 +267,25 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
 - **Qué observar.** ¿La mina se lee como lo contrario del ayllu o como su doble invertido? ¿El desmonte en lo alto se reconoce como la montaña de piedras del principio?
 - **Qué evitar.** Dibujar el disparo o el cadáver. La violencia está en la estructura: la jaula, el agua, la viga.
 
-## 5.5. De la hipótesis al hallazgo: cómo reescribir el plano (3)
+## 5.5. Del contraste al hallazgo: cómo reescribir el plano (3)
 
-Cuando termines cada pastel, reescribe en el artículo el párrafo «(3) *Contraste (hipótesis)*» de esa figura. Ponle «(3) *Hallazgo*» y cuenta lo que el dibujo mostró, no lo que se esperaba. Una plantilla posible:
+Cuando termines cada pastel, reescribe en el artículo el plano «(3) *Contraste*» de esa figura con lo que el dibujo mostró, no con lo que se esperaba. Solo eso puede llamarse hallazgo: el artículo advierte que las decisiones del esquema «no cuentan como hallazgos». Una plantilla posible:
 
-> (3) *Hallazgo*. Al [operación: esgrafiar las vigas, disolver el yunga, incidir el catastro...], apareció [lo que viste], que el texto [no dice / dice de otro modo / contradice en la p. X]. La hipótesis [se confirma / se matiza / no se sostiene]: [consecuencia para la lectura de la novela].
+> (3) *Contraste*. Al [operación: esgrafiar las vigas, disolver el yunga, incidir el catastro...], apareció [lo que viste], que el texto [no dice / dice de otro modo / contradice en la p. X]. La lectura [se confirma / se matiza / no se sostiene]: [consecuencia para la lectura de la novela].
 
-Si un pastel desmiente la hipótesis, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Reescribe también la frase de la sección 1 («los seis pasteles están en ejecución…») y el segundo párrafo de las conclusiones, y vuelve a pasar `python3 articulo/generar_docx.py` para comprobar que no superas los 50.000 caracteres.
+Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 14, así que lo que añadas tendrás que recortarlo en otra parte.
 
 ## 5.6. Fotografiar e insertar las figuras
 
 1. **Captura.** Escanea a 300 ppp como mínimo o fotografía con luz de día difusa, sin flash, con el móvil paralelo a la hoja. Si puedes, pon al lado una carta de color o un papel blanco para corregir el balance.
 2. **Edición.** Recorta al borde del dibujo, corrige la perspectiva y exporta en JPG de alta calidad, de 2.000 a 3.000 px de lado mayor.
-3. **Archivo.** Guarda las imágenes como `articulo/figuras/figura_1.jpg` … `figura_6.jpg`.
-4. **Inserción.** En `articulo/articulo_cosecha_de_piedras.md`, dentro de cada bloque `::: {custom-style="Figura"}`, sustituye la línea `⟦Figura N: pastel al óleo en ejecución⟧` por `![](figuras/figura_N.jpg){width=14cm}`. Para las figuras verticales usa `{height=18cm}`.
-5. **Pie.** Completa `⟦soporte, medidas, año⟧`, por ejemplo: «Pastel al óleo sobre papel, 29,7 × 42 cm, 2026».
+3. **Archivo.** Guarda las imágenes como `articulo/figuras/figura_1.jpg` … `figura_6.jpg`, con la numeración del artículo (véase la nota inicial: el Castillete es la 4; la Pelvis, la 5; el Centinela, la 6).
+4. **Inserción.** En `articulo/articulo_cosecha_de_piedras.md`, dentro de cada bloque `::: {custom-style="Figura"}`, cambia `figuras/figura_N.png` por `figuras/figura_N.jpg` y conserva el ancho. Para las figuras verticales usa `{height=18cm}`.
+5. **Pie.** Sustituye «Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA.» por el soporte, las medidas y el año, por ejemplo: «Pastel al óleo sobre papel, 29,7 × 42 cm, 2026. Fuente: elaboración propia.»
 6. **Regenerar.** Ejecuta `python3 articulo/generar_docx.py`.
 
 ## 5.7. Si el tiempo apremia
 
 - **Serie exprés (un día).** Seis pasteles A4 de unos 60 a 75 minutos cada uno, con 20 minutos previos de miniaturas por figura. Unas 8 horas en total. Es una escala coherente con Lundberg, que dibujaba de 30 a 60 minutos por imagen.
 - **Prioridad.** Si no llegan las seis, las que más sostienen el argumento son la 2 (el signo frente al mapa), la 6 (la mina como doble del ayllu) y la 1 (la chujlla). Con cuatro figuras habría que ajustar el esquema del artículo y el Cuadro 1.
-- **Plazo.** La convocatoria cierra el 25 de septiembre de 2026. Si los dibujos no estarán a tiempo, consulta a ieb.fhce@umsa.bo si puedes enviar el texto como investigación en desarrollo con las figuras marcadas «en ejecución» o si conceden unos días más. La decisión es tuya y de la revista.
+- **Plazo.** La convocatoria cerró el 25 de septiembre de 2026. El artículo se presenta como investigación en desarrollo, con los esquemas de encaje como figuras. Si la revista acepta el envío, pregunta si podrás sustituirlos por las fotografías de los pasteles antes de la maquetación. La decisión es tuya y de la revista.

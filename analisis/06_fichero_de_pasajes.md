@@ -1,6 +1,6 @@
 # 6. Fichero de pasajes de *Altiplano*
 
-Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez» (versión 2 reforzada con cinco libros). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
+Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez», en la versión que incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
 - **Fuente de trabajo.** Transcripción digital (`.docx`) de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
@@ -55,7 +55,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 147 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 139 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -63,10 +63,12 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 5 | «es, en realidad, Warisata» | ☐ |
 | 6 | «en la planta de una alta y rojiza peñería» | ☐ |
 | 6 | «las chujllas de las familias más antiguas han trepado en los riscos del cerro y desde allí parecen ocupar un sitio de preeminencia sobre el resto de chozas» | ☐ |
+| 7 | «fábula» | ☐ |
 | 8 | «los cimientos y paredes de las chujllas» | ☐ |
 | 8 | «padre del ayllu» | ☐ |
 | 8 | «una especie de padre del ayllu» | ☐ |
 | 9 | «erial de piedras» | ☐ |
+| 9 | «mojones que han sido puestos allí desde tiempos antiguos» | ☐ |
 | 9 | «Quizá un día la montaña de piedras sobrepase la altura del cerro» | ☐ |
 | 9 | «tablero de ajedrez un poco desigual, un poco contrahecho» | ☐ |
 | 10 | «una pequeña huaca de barro cocido» | ☐ |
@@ -82,7 +84,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 28 | «necesitaban aquel blasón para sustentar su orgullo y su riqueza» | ☐ |
 | 29 | «a través de la delicada malla» | ☐ |
 | 29 | «bonita urdimbre de surcos» | ☐ |
-| 29 | «extraños armatostes de madera abandonados» | ☐ |
+| 30 | «en los linderos» | ☐ |
 | 30 | «renegridas por el hollín» | ☐ |
 | 31 | «apenas la altura de un adobe» | ☐ |
 | 31 | «mal unidas con lazos de paja trenzada» | ☐ |
@@ -96,11 +98,10 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 37 | «así lo declaraban los papeles del Gobierno» | ☐ |
 | 37 | «La religión y la propiedad quedaron frente a frente, guiñándose con sus ventanucos empolvados» | ☐ |
 | 38 | «Así los Villca, Huanca y Condori, son las generaciones del Signo Escalonado» | ☐ |
-| 38 | «El signo escalonado» | ☐ |
 | 56 | «se agrietan como paredes envejecidas» | ☐ |
 | 57 | «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo» | ☐ |
-| 60 | «manchones en el cascajo» | ☐ |
 | 60 | «manchones» | ☐ |
+| 60 | «manchones en el cascajo» | ☐ |
 | 64 | «las nalgas abiertas a la manera de una luna menguante» | ☐ |
 | 65 | «en su secreto, nadie podía entrar» | ☐ |
 | 66 | «abortó en plena gestación» | ☐ |
@@ -109,8 +110,8 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 68 | «como la fiera y brava hembra del puma» | ☐ |
 | 68 | «los indios le descuartizaron» | ☐ |
 | 69 | «cada cual se llevó un miembro» | ☐ |
-| 69 | «en muchos sitios enterraron los pedazos del cuerpo» | ☐ |
 | 69 | «en muchos sitios» | ☐ |
+| 69 | «en muchos sitios enterraron los pedazos del cuerpo» | ☐ |
 | 69 | «sintiendo en lo íntimo de su conciencia de hembra» | ☐ |
 | 69 | «un ardor bestial» | ☐ |
 | 72 | «cielo y tierra eran para ellos como una tremenda cárcel» | ☐ |
@@ -135,32 +136,25 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 102 | «embudo» | ☐ |
 | 102 | «no les alcanzaba la Ordenanza» | ☐ |
 | 103 | «a mil seiscientos bolivianos en papel» | ☐ |
-| 103 | «una mugrienta mesa con un tintero y un desordenado montón de papeles y libracos encima» | ☐ |
+| 103 | «un desordenado montón de papeles y libracos» | ☐ |
 | 104 | «estos tinterillos son de una sola casta y todos obran con una mala fe del demonio» | ☐ |
-| 104 | «seiscientos bolivianos, la mitad adelantados» | ☐ |
 | 104 | «tiene más peso legal y jurídico que el chiquitito» | ☐ |
 | 104 | «un Código Penal en infolio y un manual del Procedimiento Civil» | ☐ |
 | 105 | «donde el viento entraba por todas partes» | ☐ |
-| 105 | «libre ya de la amenaza del letrado» | ☐ |
-| 105 | «te encierro por conspirar contra la autoridad municipal» | ☐ |
-| 105 | «un atado de pobres y traposos billetes» | ☐ |
 | 106 | «allí mismo, bajo el suelo del pesebre, para evitar el pago al cura y el municipio» | ☐ |
 | 107 | «habían sido domesticados por la aldea» | ☐ |
+| 108 | «Muralla que condena el horizonte» (Cuadro 1) | ☐ |
 | 108 | «Tras de la muralla que condena el horizonte del altiplano empieza el yunga» | ☐ |
 | 109 | «como un gallardete clavado en la ceja de la apacheta» | ☐ |
-| 109 | «Fauces del abismo» (Cuadro 1) | ☐ |
 | 109 | «fauce» | ☐ |
-| 109 | «góticas» | ☐ |
+| 109 | «Fauces del abismo» (Cuadro 1) | ☐ |
+| 109 | «gallardete clavado» (Cuadro 1) | ☐ |
+| 109 | «góticas» (Cuadro 1) | ☐ |
 | 109 | «semejantes a fantásticas construcciones góticas» | ☐ |
-| 112 | «graderíos» | ☐ |
 | 113 | «Sabrás arar en la puna, pero aquí esa es otra música» | ☐ |
 | 121 | «una cadena cogiéndose de manos» | ☐ |
-| 123 | «como muñeco de cera» | ☐ |
 | 123 | «derritiéndose como muñeco de cera» | ☐ |
-| 123 | «muñeco de cera» | ☐ |
 | 125 | «ver sus nacientes senos» | ☐ |
-| 126 | «el vano de la puerta» | ☐ |
-| 129 | «No hace dos días que uno de ustedes se ha cercenado una mano en la sierra» | ☐ |
 | 129 | «peón, siquiera» | ☐ |
 | 132 | «con su propia mano se quitó la vida» | ☐ |
 | 132 | «en seguida vinieron los capataces y peones: le daban dinero» | ☐ |
@@ -199,12 +193,12 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 156 | «los mismos hombres eran quienes tiraban el arado» | ☐ |
 | 156 | «no recordaba sino lo pasado antiguo, lo bueno y lo alegre de las cosechas» | ☐ |
 | 156 | «voluntad de siglos de piedra» | ☐ |
-| 157 | «la atalaya de la esperanza» | ☐ |
 | 159 | «hembra paridora» | ☐ |
 | 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 159 | «olvidaron la pesadilla pasada» | ☐ |
 | 159 | «su prestigio de hembra paridora y múltiple» | ☐ |
 | 160 | «abra de las cordilleras y cumbre de los caminos» | ☐ |
+| 160 | «anciano» | ☐ |
 | 162 | «mal de ojo, brujería» | ☐ |
 | 163 | «Signo sagrado de Tiwanaco» | ☐ |
 

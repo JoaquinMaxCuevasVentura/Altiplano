@@ -6,19 +6,26 @@ Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativa
 
 **«La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez»**
 *The Harvest of Stones: Drawing Dwelling in Botelho Gosálvez's* Altiplano
+Joaquin Max Cuevas Ventura
 
-Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde su «cosecha de piedras»: el montón es la arquitectura mínima de la novela (pirca, casa, tumba, escombro). Sostiene que la novela piensa el habitar como manipulación de la piedra, el despojo como su captura por una red de personas, papeles y máquinas, y la memoria como reparación selectiva del lugar; y que su narrador, al denunciar, también petrifica a quienes describe.
+Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde su «cosecha de piedras».
 
-- **Base:** la versión 2 completa, con toda su constelación teórica: Loos (el túmulo), Colomina (el intruso, el umbral), Freud y Vidler (del pesebre a la tumba), Bacon y Deleuze (la carne, la jaula, la catástrofe), Worringer (la petrificación), Bachelard (la casa y el nido), Alberti, Schmarsow, Hall, Lefebvre, Foucault, Cárcamo Pino, Corona Martínez, Pareyson, Lundberg y Martin.
-- **Cinco libros injertados:**
-  - Frampton: estereotomía y tectónica en el túmulo, la chujlla y los callapos.
-  - Dean: la *wank'a* frente a la petrificación de Worringer, en el apellido Huanca; la Pachamama.
-  - Garrington: la prosa háptica y la huella dactilar.
-  - Scott: la legibilidad estatal en el radio urbano y en el tinterillo.
-  - Le Guin: la ficción del arma (la mina) y la del recipiente (el ayllu).
-- **La escena del tinterillo completa**, con el manuaje burocrático del infolio.
-- **Corrección filológica de la p. 132:** la hija de Paulo «había sido desflorada por el patrón»; luego la desesperación la «obligó a venderse».
-- **Seis figuras** analizadas en tres planos (texto, operación, hallazgo) y el Cuadro 1 completo. Las figuras son los **esquemas de encaje** de cada pastel, hechos con asistencia de IA y declarados como tales en el pie y en la declaración de IA. Numeradas por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
+- **Punto de partida.** La crítica ya mostró, con Cornejo Polar, que el narrador indigenista vuelve naturaleza la historia india.
+- **Qué estudia el artículo.** Lo que la novela registra a espaldas de su narrador: la mecánica material del despojo.
+- **Qué sostiene:**
+  - La novela inscribe la posesión en la piedra (mojón, pirca, montón) y narra su captura por papeles y máquinas.
+  - Calla el uso indio de la letra: los títulos coloniales, los tinterillos aliados y la escuela de Warisata.
+  - Hace de la memoria una reparación selectiva del lugar.
+
+- **Marco:**
+  - **Fuentes andinas:** léxico aymara colonial (Bertonio), el *huanca* (Duviols), historiografía andina (Rivera Cusicanqui, Barnadas, Choque Canqui), las dos concepciones del espacio de Zavaleta y la heterogeneidad de Cornejo Polar.
+  - **Arquitectura y dibujo:** la crítica histórica del espacio (Vázquez Ramos *et al.*, Hall, Alberti, Worringer, Lefebvre), la tectónica (Frampton), el manuaje (Cárcamo Pino), el método de Lundberg y el dibujo según Seguí e Ingold.
+  - **Constelación de la versión 2:** Loos, Colomina, Freud, Bacon (vía Martin) y Bachelard.
+  - **Cinco libros:** Frampton, Dean, Garrington, Scott y Le Guin.
+- **Respuesta al arbitraje.** El artículo incorpora la respuesta a las cinco objeciones del arbitraje simulado (`analisis/08_respuesta_al_arbitraje.md`).
+- **Seis figuras.** Cada una se examina en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
+  - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
+  - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
 
 | Archivo | Contenido |
 |---|---|
@@ -28,23 +35,25 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
 | `articulo/plantilla_estudios_bolivianos.docx` | Plantilla de estilos que usa el generador |
-| `articulo/articulo_cosecha_de_piedras_revisado.md` y `.docx` | **Versión revisada (borrador)**: responde a las cinco objeciones del arbitraje con diez fuentes nuevas (léxico aymara, historiografía andina, Cornejo Polar, Ingold, Seguí). 49.207 caracteres. No reemplaza al definitivo hasta que decidas; véase `analisis/08_respuesta_al_arbitraje.md` |
-| `articulo/articulo_altiplano.md` y `.docx` | Versión 3, «Topografías de la carne y el barro en *Altiplano*»: alternativa sin figuras, con antecedentes críticos (Arriarán, Barnadas) |
+| `articulo/articulo_altiplano.md` y `.docx` | Versión 3, «Topografías de la carne y el barro en *Altiplano*»: alternativa sin figuras. Su referencia a Barnadas (1977) es errónea (`analisis/04_verificaciones_y_pendientes.md`, §4.7) |
 
 **Estado:**
 
-- 48.989 caracteres con espacios, bibliografía incluida. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
-- Resumen de 95 palabras; abstract de 93.
-- La nota de autor puede ocupar unos 650 caracteres (unas 95 palabras) sin salir del rango.
-- Las 147 citas de la novela se comprobaron automáticamente contra la transcripción: existen literalmente y están en la página indicada. Los datos parafraseados se revisaron a mano.
-- Las citas de los cinco libros se cotejaron con sus originales.
+- **Extensión:** 49.486 caracteres con espacios, bibliografía y nota de autor incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Resúmenes:** resumen de 99 palabras y abstract de 92.
+- **Palabras clave:** cinco en cada lengua (norma 4d).
+- **Autoría y declaraciones:**
+  - Autoría y nota 1 completas (80 palabras; límite, 100).
+  - Investigación «en desarrollo».
+  - Conflicto de intereses y declaración de IA, en las declaraciones finales.
+- **Citas de la novela:** las 139 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
-  - leer y hacer propio el texto;
-  - elegir si la investigación está «en desarrollo» o «concluida» (marcador al final de la sección 1);
-  - los datos de autoría;
-  - ajustar la declaración de IA;
+  - leer el texto y hacerlo propio;
   - decidir si las figuras son los esquemas o las fotografías de los pasteles;
-  - cotejar las citas con el impreso.
+  - cotejar las citas con el impreso;
+  - preparar una versión anonimizada si la revista la pide;
+  - enviar (el plazo venció el 25 de septiembre).
 
   Véase `analisis/04_verificaciones_y_pendientes.md`.
 
@@ -58,9 +67,9 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 | `analisis/04_verificaciones_y_pendientes.md` | Qué hacer y verificar antes de enviar |
 | `analisis/05_guia_de_dibujo.md` | Guía de la exploración gráfica en tres escenas (versión 3) |
 | `analisis/05b_guia_seis_pasteles.md` | **Guía de los seis pasteles** del artículo definitivo: composición, paleta, técnica y registro de cada pieza |
-| `analisis/06_fichero_de_pasajes.md` | Las 147 citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador |
+| `analisis/06_fichero_de_pasajes.md` | Las citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador |
 | `analisis/07_cinco_libros.md` | Análisis de Scott, Dean, Frampton, Garrington y Le Guin: pasajes con página, función y límite de cada uno, y dónde entra cada uno en el artículo definitivo |
-| `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entra en la versión revisada, qué se quitó y qué te toca decidir |
+| `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entró en el artículo definitivo, qué se quitó y qué quedó en reserva |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
@@ -70,7 +79,6 @@ Relee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde s
 ```bash
 pip install pypandoc_binary python-docx pillow
 python3 articulo/generar_docx.py                                # artículo definitivo
-python3 articulo/generar_docx.py articulo/articulo_cosecha_de_piedras_revisado.md  # versión revisada
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```

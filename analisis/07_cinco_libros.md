@@ -4,20 +4,23 @@ Análisis de los cinco libros enviados para la versión final: Scott, Dean, Fram
 
 ## 7.0. Uso en el artículo definitivo («La cosecha de piedras»)
 
-Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de la carne y el barro en *Altiplano*»). En el artículo definitivo, construido sobre la versión 2, los cinco libros entran así:
+Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de la carne y el barro en *Altiplano*»). El artículo definitivo incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). Dos cambios afectan a estos libros:
+
+- tres usos cedieron su lugar a fuentes andinas;
+- Scott, Dean y Garrington quedan con un papel más acotado.
 
 | Libro | Dónde | Qué hace |
 |---|---|---|
-| **Frampton** (p. 5) | §1, tras el túmulo de Loos; §3, la chujlla; §5, la galería | Estereotomía (masa apilada, «ya sea piedra o adobe») y tectónica (armazón de «componentes ligeros y lineales»). El túmulo y la cosecha de piedras son «estereotomía sin edificio». La chujlla reúne muros de piedra y un armazón atado como una cestería. En la mina, el armazón de callapos contiene la masa y cede después del disparo |
-| **Dean** (pp. 5, 44, 68, 202 n. 86) | §2, tras Worringer; §6, Figura 5 | La *wank'a*, «dueño petrificado» de un lugar y «símbolo de ocupación y posesión», frente a la petrificación abstracta del narrador; el apellido Huanca; la Pachamama femenina y las montañas masculinas |
-| **Garrington** (pp. 2, 16) | §2, la técnica; §5, la inscripción de Condori | Lo háptico como «término paraguas»; la mano que lee y también es leída (la huella dactilar) |
-| **Scott** (pp. 3, 35-36) | §4, el radio urbano y el tinterillo; §5, la huella | El mapa que «crea» la tenencia al dar a sus categorías «la fuerza de la ley»; el derecho moderno, «fácilmente descifrable» solo para quien tiene «la formación suficiente» |
-| **Le Guin** (pp. 8, 10, 11) | §7, cierre de la memoria del retorno | La ficción del arma (la mina: jornal, propina, revólver, boquete) frente a la del recipiente (el ayllu; la casa, «un recipiente para personas»). El héroe necesita «una cima»: la atalaya |
+| **Frampton** (p. 5) | §1, tras el túmulo de Loos y el montón de Ingold; §3, la chujlla | Estereotomía (masa apilada, «ya sea piedra o adobe») y tectónica (armazón de «componentes ligeros y lineales»). El montón es «estereotomía sin edificio»; la chujlla reúne muros de piedra y un armazón atado. El punto donde la masa se vuelve junta tiene nombre aymara: *chhaxwa* (Bertonio, 2011 [1612]: 330) |
+| **Dean** (pp. 44, 202 n. 86; 68) | §2; Figura 5 | *Huanca*, grafía colonial de *wank'a*, como nombre de varón; las montañas masculinas, como el cerro «padre del ayllu». El contraste de la *wank'a* con la petrificación de Worringer lo hacen ahora Duviols (el *huanca*, «doble mineral» del antepasado; el «desdoblamiento») y Bertonio (*wanqa*, *Pachamama*) |
+| **Garrington** (p. 16) | §2, la técnica | Lo háptico como «término paraguas». La huella dactilar de Condori (p. 2) salió por extensión |
+| **Scott** (p. 3) | §4, el radio urbano | El mapa que «crea» la tenencia al dar a sus categorías «la fuerza de la ley». Lo acompaña Zavaleta: Bolivia, sociedad «de dudosa cuantificación». En el tinterillo, las pp. 35-36 las reemplazan Cornejo Polar (el libro como fetiche) y Rivera Cusicanqui (los tinterillos aliados de la lucha legal) |
+| **Le Guin** (pp. 8, 10, 11) | §7, cierre de la memoria del retorno | La ficción del arma (la mina) frente a la del recipiente (el ayllu; la casa, «un recipiente para personas»). El héroe necesita «una cima»: la atalaya |
 
 **Dos decisiones cambian respecto de las fichas**, por indicación tuya. Van con sus límites en el texto:
 
 - **El apellido Huanca.** Se adopta la lectura de la *wank'a* en el apellido, con la cautela explícita de que «la novela no tematiza esa ontología».
-  - El contraste se apoya en el texto: el «organismo de piedra del Kollasuyo» de Paulo Huanca (p. 133) no persiste como piedra viva, sino que se derrite «como muñeco de cera» fuera de su lugar (p. 123).
+  - El contraste se apoya en el texto: fuera de su lugar, el «organismo de piedra del Kollasuyo» de Paulo Huanca (p. 133) se derrite en los Yungas (§2 del artículo), «derritiéndose como muñeco de cera» (p. 123; §5).
   - Dean documenta que «Wank'a» y sus variantes «Huanca» o «Guanca» se usaban como nombre de varón entre los incas (p. 202, n. 86). La página de esa nota se reconstruyó con el mismo método que las demás.
   - La objeción de §7.4 sigue siendo la que puede hacer un evaluador: todos los apellidos andinos de la novela tienen significado.
 - **El pastel y la prosa háptica.** El artículo dice que la técnica «responde» a una prosa que mide el espacio con el cuerpo y que «a una prosa háptica corresponde una lectura háptica». No dice que el pastel reproduzca la experiencia de los personajes: el tacto es de quien dibuja.
@@ -27,7 +30,7 @@ Las fichas de §§7.3-7.7 describen el uso en la versión 3 («Topografías de l
 - Los cuerpos no se leen como estructuras tectónicas: en la mina, la viga se quiebra después del disparo, y la muerte de Condori tiene autor (§7.5).
 - El artículo tampoco usa «guardar semillas en la faja» (§7.7).
 
-**Dean, sin espacio.** La *saywa* (p. 46) y la *apachita* de Cobo (pp. 57-58) quedaron fuera del definitivo por extensión. Siguen disponibles si hay que ampliar la Figura 2 (los mojones) o la Figura 3 (la apacheta sin piedras).
+**Dean, sin espacio.** La *saywa* (p. 46) y la *apachita* de Cobo (pp. 57-58) siguen fuera del definitivo. En el definitivo, la apacheta de la Figura 3 y los mojones se apoyan en el léxico aymara de Bertonio (*apachita*, *saywaña*, *achachi*).
 
 ## 7.1. Cómo se leyeron y de dónde salen las páginas
 
