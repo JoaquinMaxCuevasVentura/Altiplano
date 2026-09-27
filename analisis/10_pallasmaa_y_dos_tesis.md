@@ -115,6 +115,6 @@ Sustituye al nido de Bachelard, que venía por vía de Martin (2014: 71). *La po
 
 ## 10.5. Qué revisar tú
 
-1. **Decidir si te convence** que el nido de Bachelard salga a favor de la casa y el cuerpo de Pallasmaa. El título del pastel, *Cráneo/nido*, no cambia.
-2. **Buscar el libro de Potteiger y Purinton** si quieres citarlo, y darle página.
+1. **Nido o casa-cuerpo: decidido el 27 de septiembre de 2026.** Se queda la casa como cuerpo de Pallasmaa, que ya está en el artículo. El título del pastel, *Cráneo/nido*, no cambia.
+2. **Potteiger y Purinton.** El 27 de septiembre anunciaste que añadías *Landscape Narratives*, pero el archivo no llegó a la sesión. Cuando llegue, se verifica y se cita con su página.
 3. **Tener en cuenta el margen:** es de 21 caracteres. Cualquier añadido obliga a recortar.
