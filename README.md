@@ -23,7 +23,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - **De la versión 2 queda** Bacon, a través de Martin.
   - **Cinco libros:** Frampton, Dean, Garrington, Scott y Le Guin.
 - **Respuesta al arbitraje.** El artículo incorpora la respuesta a las cinco objeciones del arbitraje simulado (`analisis/08_respuesta_al_arbitraje.md`).
-- **Recursos de Cárcamo Pino y lenguaje llano.** Adopta varios recursos de su escritura: el epígrafe (con un lema aymara en lugar del Saramago que él cita), una nota aclaratoria, los juegos de palabras, las analogías físicas y la mirada sobre los gestos de la mano. No adopta su fórmula estructural ni sus latinismos (`analisis/09_recursos_de_carcamo_y_lenguaje_llano.md`).
+- **Recursos de Cárcamo Pino y lenguaje llano.** Adopta varios recursos de su escritura: el epígrafe (con un lema aymara en lugar del Saramago que él cita), una nota aclaratoria, los juegos de palabras, las analogías físicas (entre ellas, el esgrafiado para el método y la pirca de doble cara para la memoria) y la mirada sobre los gestos de la mano. No adopta su fórmula estructural ni sus latinismos (`analisis/09_recursos_de_carcamo_y_lenguaje_llano.md`; las analogías, en `analisis/11_analogias_fisicas.md`).
 - **Seis figuras.** Cada una se examina en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
   - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
   - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
@@ -32,7 +32,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (la entrada de Pallasmaa) marcados respecto de la versión llana, para revisarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (las analogías del esgrafiado y de la pirca) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
@@ -41,14 +41,14 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 49.479 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.477 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 146 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
@@ -75,6 +75,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entró en el artículo definitivo, qué se quitó y qué quedó en reserva |
 | `analisis/09_recursos_de_carcamo_y_lenguaje_llano.md` | Qué recursos de Cárcamo Pino entraron, cuáles no y por qué; el epígrafe y las opciones descartadas; criterios de la versión en lenguaje llano; autores que salieron |
 | `analisis/10_pallasmaa_y_dos_tesis.md` | Pallasmaa (*La imagen corpórea*), la tesis de Aljohani, *Narrative Structures* y el libro de Potteiger y Purinton, analizado y descartado: qué dicen de verdad, con página; qué entró en el artículo y qué no, y por qué |
+| `analisis/11_analogias_fisicas.md` | Analogías físicas: cómo las usa Cárcamo Pino, criterios para este artículo, los cuatro borradores evaluados (pirca y ripio, válvula, bomba de pistón, cántaro y arco), las dos que entraron (esgrafiado y pirca de doble cara) y cómo hacer otras |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |

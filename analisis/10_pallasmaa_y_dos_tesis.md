@@ -117,7 +117,7 @@ Sustituye al nido de Bachelard, que venía por vía de Martin (2014: 71). *La po
 
 1. **Nido o casa-cuerpo: decidido el 27 de septiembre de 2026.** Se queda la casa como cuerpo de Pallasmaa, que ya está en el artículo. El título del pastel, *Cráneo/nido*, no cambia.
 2. **Potteiger y Purinton.** El libro llegó el 27 de septiembre y se analizó, pero no se cita: lo decidiste ese mismo día (§10.6).
-3. **Tener en cuenta el margen:** es de 21 caracteres. Cualquier añadido obliga a recortar.
+3. **Tener en cuenta el margen:** era de 21 caracteres; tras las analogías de `11_analogias_fisicas.md`, es de 23. Cualquier añadido obliga a recortar.
 
 ## 10.6. Potteiger y Purinton: analizado y descartado
 

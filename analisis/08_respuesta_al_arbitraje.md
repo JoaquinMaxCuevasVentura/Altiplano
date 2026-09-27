@@ -279,10 +279,10 @@ Todas las citas nuevas se cotejaron con el texto de cada fuente, y su página se
 
 ## 8.5. Verificación del artículo definitivo (versión llana)
 
-- **Extensión:** 49.479 caracteres con espacios, con bibliografía, notas, epígrafe y declaraciones. El rango pedido es de 47.500 a 49.500: quedan 21 caracteres de margen.
+- **Extensión:** 49.477 caracteres con espacios, con bibliografía, notas, epígrafe y declaraciones. El rango pedido es de 47.500 a 49.500: quedan 23 caracteres de margen.
 - **Resúmenes y palabras clave:** resumen de 99 palabras y abstract de 90; cinco palabras clave en cada lengua (norma 4d).
 - **Nota de autor:** 80 palabras (límite, 100).
-- **Citas de la novela:** las 146 se comprobaron automáticamente contra la transcripción; todas existen y están en la página indicada.
+- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; todas existen y están en la página indicada.
 - **Cadenas de «ibid.»:** revisadas una por una; todas remiten a la obra correcta.
 - **Citas de las fuentes nuevas:**
   - Las citas en castellano (Bertonio, Rivera Cusicanqui, Cornejo Polar, Zavaleta, Seguí, Choque Canqui) se buscaron en el texto de cada fuente: todas aparecen.

@@ -10,8 +10,9 @@
   - Los agarres de la mano, las analogías del corral invisible y del embudo, el desmonte y el mojón como «amparo» (Bertonio, p. 447).
   - Salen siete autores: Alberti, Colomina, Freud, Lefebvre, Loos, Pareyson y Worringer.
   - Después entra Pallasmaa (2014): la arquitectura como verbo (p. 158), la frase de Bachelard sobre la vista y la mano (p. 53) y la casa como cuerpo (p. 159), que sustituye al nido de Bachelard (`10_pallasmaa_y_dos_tesis.md`).
+  - Por último entran dos analogías físicas: el esgrafiado, para el método (§1), y la pirca de doble cara, para la memoria (§7) (`11_analogias_fisicas.md`).
 
-- **Extensión.** 49.479 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión.** 49.477 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 12 y 10 palabras.
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -19,7 +20,7 @@
   - Investigación «en desarrollo» (final de la sección 1).
   - Conflicto de intereses y declaración de IA, en las declaraciones finales (§4.5).
   - **No quedan marcadores ⟦…⟧.**
-- **Citas de la novela.** Las 146 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
+- **Citas de la novela.** Las 147 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
 - **Figuras.** Seis, numeradas por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6. Son los esquemas de encaje de los pasteles, hechos con asistencia de IA y declarados así (§4.4).
@@ -31,7 +32,8 @@
    - los tinterillos;
    - los achachis y la *saywa*;
    - la apacheta sin montón;
-   - los dos agarres de la mano y la huella «como un sello».
+   - los dos agarres de la mano y la huella «como un sello»;
+   - las dos analogías nuevas: el esgrafiado (§1) y la pirca de doble cara (§7) (`11_analogias_fisicas.md`).
 2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
 3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
 4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
@@ -54,7 +56,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** casi no tiene margen (quedan 21 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** casi no tiene margen (quedan 23 caracteres). Cualquier añadido obliga a acortar otra cosa.
 
 ## 4.3. Verificación de fuentes
 
@@ -66,7 +68,7 @@ Estado de cada dato:
 
 | # | Dato | Estado | Acción |
 |---|---|---|---|
-| 1 | 146 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
+| 1 | 147 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
 | 2 | Cárcamo Pino (2025a: 10, 12; 2025b: 244, 259) | A | — |
 | 3 | Definición de manuaje, Cárcamo Pino (2019: 1412) | B, vía 2025b: 244 | — |
 | 4 | Editorial de Cárcamo Pino (2019) | C | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018. Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Confirmar cuál prefieres |
@@ -126,7 +128,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.479 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 21 caracteres de margen.
+- **Ahora:** 49.477 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 23 caracteres de margen.
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -159,6 +161,6 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
 - [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)
-- [x] `.docx` regenerado: 49.479 caracteres; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado: 49.477 caracteres; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)
