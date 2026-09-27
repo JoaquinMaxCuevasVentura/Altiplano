@@ -130,7 +130,7 @@ Después pediste cambiar el epígrafe propuesto, de Saramago, porque venía de C
 - **Bibliografía:** 23 entradas, sin huérfanas.
 - **Notas:** tres, la de autor, la de traducciones y la del pastel al óleo.
 
-> **Después de esta revisión** entró Pallasmaa, y con él la frase de Bachelard sobre la vista y la mano. El nido de Bachelard salió, la bibliografía pasó a 24 entradas y la extensión, a 49.479 caracteres. Luego entraron Potteiger y Purinton: 25 entradas y 49.384 caracteres. Detalle en `10_pallasmaa_y_dos_tesis.md`.
+> **Después de esta revisión** entró Pallasmaa, y con él la frase de Bachelard sobre la vista y la mano. El nido de Bachelard salió, la bibliografía pasó a 24 entradas y la extensión, a 49.479 caracteres. Detalle en `10_pallasmaa_y_dos_tesis.md`.
 
 ## 9.4. Qué revisar tú
 

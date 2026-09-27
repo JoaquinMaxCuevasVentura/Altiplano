@@ -53,7 +53,7 @@ Sustituye al nido de Bachelard, que venía por vía de Martin (2014: 71). *La po
 - También iría contra la práctica del artículo, que marca con «cit. en» lo que toma de segunda mano.
 - La frase disponible habla del diseñador que ordena el relato, no de leer una novela.
 
-**El libro llegó después (§10.6)** y ya se cita directamente, con página. La frase que trae Aljohani está en la p. 64, pero con un cambio: donde el libro dice «created and controlled by», ella escribe «shaped by». El artículo ya tiene su secuencia de escalas y no necesita esa legitimación para el dossier: trata de narrativa y representación desde el título.
+**El libro llegó después y se analizó (§10.6).** Por decisión tuya, el artículo no lo cita. El artículo ya tiene su secuencia de escalas y no necesita esa legitimación para el dossier: trata de narrativa y representación desde el título.
 
 ## 10.3. *Narrative Structures* (2024)
 
@@ -116,57 +116,20 @@ Sustituye al nido de Bachelard, que venía por vía de Martin (2014: 71). *La po
 ## 10.5. Qué revisar tú
 
 1. **Nido o casa-cuerpo: decidido el 27 de septiembre de 2026.** Se queda la casa como cuerpo de Pallasmaa, que ya está en el artículo. El título del pastel, *Cráneo/nido*, no cambia.
-2. **Potteiger y Purinton.** El libro llegó el 27 de septiembre, y ya se cita directamente (§10.6).
+2. **Potteiger y Purinton.** El libro llegó el 27 de septiembre y se analizó, pero no se cita: lo decidiste ese mismo día (§10.6).
 3. **Tener en cuenta el margen:** es de 21 caracteres. Cualquier añadido obliga a recortar.
 
-## 10.6. Potteiger y Purinton, *Landscape Narratives* (1998)
+## 10.6. Potteiger y Purinton: analizado y descartado
 
-El libro llegó el 27 de septiembre de 2026: Matthew Potteiger y Jamie Purinton, *Landscape Narratives: Design Practices for Telling Stories* (Nueva York, John Wiley & Sons, 1998).
+El libro (*Landscape Narratives: Design Practices for Telling Stories*, Nueva York, John Wiley & Sons, 1998) llegó el 27 de septiembre de 2026. Ese día se citó en §1 (pp. 5 y 6) y, a tu pedido, se retiró. **El artículo vuelve a la versión con Pallasmaa, que conserva la casa como cuerpo.** El commit 28707a8 guarda la integración, por si quieres recuperarla.
 
-**Qué archivo es.** Un escaneo de Internet Archive, pasado por OCR y sin encabezados. Las páginas se reconstruyeron con tres apoyos:
+**Lo que se comprobó, para que no se pierda:**
 
-- **El sumario**, que da el comienzo de cada capítulo: pp. 1, 31, 75, 109, 135, 163, 187, 213 y 241.
-- **Los encabezados que sobrevivieron al OCR:** pp. 34, 60, 150, 172, 218, 222 y 258.
-- **El índice analítico del libro:**
-  - Hufford, p. 3;
-  - Kuhn y Ricoeur, p. 4;
-  - Johnstone, p. 6;
-  - Leach, p. 7;
-  - Franklin, p. 63;
-  - el Pinecote Pavilion, p. 64;
-  - *focalizing*, p. 66.
-
-**La cita de Aljohani existe, pero la trae mal.** Está en la conclusión del capítulo 2, en la p. 64: «an ordering of event, time, and place **created and controlled** by the intent of the designer». Aljohani escribe «shaped by».
-
-**Qué entra en el artículo** (§1, en el párrafo de las tres razones; traducción propia):
-
-- **p. 5:** las narraciones también están en los paisajes. «They intersect with sites, accumulate as layers of history, organize sequences, and inhere in the materials and processes of the landscape». En el artículo: «se acumulan como capas de historia, organizan secuencias y residen en los materiales y procesos del paisaje». Justo después, el texto dice que en *Altiplano* esos materiales son piedra, adobe, paja y papel.
-- **p. 6:** «The scale of space becomes the scope of an epic or the confines of a personal drama». En el artículo: «el alcance de una epopeya o los límites de un drama personal». Justifica que el recorrido cambie de escala, de la casa y el ayllu al retorno.
-
-**Qué no dice el libro.** Es un libro de diseño del paisaje, no un método para analizar novelas. El artículo lo usa para la premisa (el relato vive en los materiales y cambia con la escala), no como método de lectura.
-
-**En reserva, con su página:**
-
-- **p. 64**, para el cierre del narrador en §7: el poder del relato está en los recursos que crean «a coherent sense of closure».
-- **p. 64**, para las posiciones en §8: la teoría permite «identify the positions from which a story is told, examine the values that inhere in the telling».
-- **pp. 5-6:** el paisaje no solo sirve de fondo; es «a changing, eventful figure and process that engenders stories».
-- **p. 6:** «Trees, rocks, ground, weather, or any elements can serve as emblems in a narrative».
-- **p. 258**, para el olvido que cierra el retorno: el cierre de las «home truths», que se fijan cuando ciertas relaciones se vuelven tan familiares «that they appear natural».
-
-**Recortes para que cupiera:**
-
-- la frase de §1 sobre el mojón y el título, que ya dice §4 («La aldea mide con compás»);
-- en la Figura 2, la frase que repetía el segundo hallazgo de las conclusiones;
-- en la Figura 4, la montaña que crece como desmonte, que cierra el artículo en §8;
-- el cerco que se cierra sobre un hombre (§6);
-- «Falta, además, la fuerza animal» (§7);
-- dos fórmulas más breves en §2 y §3.
-
-**Verificación:**
-
-- **Extensión:** 49.384 caracteres; quedan 116 de margen.
-- **Resúmenes:** 99 y 90 palabras.
-- **Citas de la novela:** las 145 están en la página indicada.
-- **Bibliografía:** 25 entradas, sin huérfanas.
-- **Word:** `articulo/articulo_cosecha_de_piedras_cambios.docx` marca los 16 cambios respecto de la versión con Pallasmaa.
+- **Paginación.** Las páginas se reconstruyeron con el sumario, los encabezados que quedan en el OCR y el índice analítico del libro.
+- **La cita de Aljohani.** Está en la p. 64, con un cambio: el libro dice «created and controlled by the intent of the designer» y ella escribe «shaped by».
+- **Pasajes útiles, si algún día vuelve:**
+  - p. 5: las narraciones «accumulate as layers of history, organize sequences, and inhere in the materials and processes of the landscape»;
+  - p. 6: «The scale of space becomes the scope of an epic or the confines of a personal drama»;
+  - p. 64: el cierre como orden de acontecimiento, tiempo y lugar;
+  - p. 258: las «home truths», que «appear natural».
 

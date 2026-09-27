@@ -58,7 +58,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 145 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 146 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -185,6 +185,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 145 
 | 143 | «apeñuscados contra la rejilla» | ☐ |
 | 144 | «un boquete» | ☐ |
 | 144 | «450» | ☐ |
+| 144 | «a la superficie» | ☐ |
 | 145 | «pobres costillas zafadas como surcos» | ☐ |
 | 145 | «450» | ☐ |
 | 145 | «se derrumbaba en algunos pasos» | ☐ |
