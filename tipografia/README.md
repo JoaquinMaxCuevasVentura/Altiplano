@@ -1,0 +1,79 @@
+# Contenedor
+
+Tipografía variable derivada de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026), y del poema escrito después de verla (`poema.txt`).
+
+Ninguna letra se dibujó a mano. La fuente se deduce de un conjunto de reglas escritas como programa: la retícula de azulejos de la piscina, las placas con piel entre ellas, los terminales que se desprenden, los puntos como peces, el agua que cada letra retiene. Las reglas y su origen están en `02_traducciones.md`.
+
+![Portada del muestrario](muestrario/01_portada.png)
+
+## Qué tiene
+
+- **144 caracteres:** castellano, las vocales largas del aimara (ä, ï, ü), el apóstrofo de las consonantes glotalizadas (ʼ) y cuatro ornamentos.
+- **Cuatro vueltas de cada carácter.** La función `calt` las alterna para que la misma letra repetida no salga igual.
+- **Cinco ejes:**
+
+| Eje | Rango | Instancias |
+|---|---|---|
+| `wdth` Ancho | 60 a 150 | Monolito (60), Piscina (150) |
+| `wght` Peso | 100 a 900 | Piel (100), Seca (400), Piedra (900) |
+| `AGUA` Agua | 0 a 100 | Agua (100) |
+| `VASO` Vaso | 0 a 100 | Vaso (100) |
+| `TEMB` Temblor | 0 a 100 | Temblor (100) |
+
+Hay además dos instancias combinadas: Presente continuo (temblor 55, agua 35) y Ruina (peso 900, vaso 60, temblor 100).
+
+- **Tres juegos estilísticos:** `ss01` Boca tapada, `ss02` Ojos tapados, `ss03` Agua devuelta. El agua sale verde donde el programa sabe de color y del color del texto donde no.
+
+## Archivos
+
+| Archivo | Contenido |
+|---|---|
+| `01_verificacion_posnansky.md` | Qué se sostiene y qué no del párrafo sobre la lámina de Posnansky, con fuentes |
+| `02_traducciones.md` | La decisión entre estructuras y formas, la tabla de traducciones, el color, qué letras contienen y lo que falta |
+| `poema.txt` | El poema, tal como se compone en el muestrario |
+| `fuente/Contenedor-Variable.ttf` y `.woff2` | La fuente variable |
+| `fuente/estaticas/` | Diez instancias fijas, para programas que no manejan fuentes variables |
+| `fuente/glifos.py` | La retícula de cada carácter |
+| `fuente/vasos.py` | Calcula qué letras retienen agua |
+| `fuente/generar_fuente.py` | Aplica las reglas y genera la fuente |
+| `muestrario/index.html` | Muestrario interactivo: probador, ejes, contrastes, vasos, poema y repertorio |
+| `muestrario/0*.png` | Capturas de cada sección del muestrario |
+| `muestrario/plantilla.html`, `generar_muestrario.py`, `capturar.js` | Arman el muestrario y sus capturas |
+
+## Usarla en una página web
+
+```css
+@font-face {
+  font-family: "Contenedor";
+  src: url("Contenedor-Variable.woff2") format("woff2");
+}
+.poema {
+  font-family: "Contenedor", monospace;
+  font-variation-settings: "wdth" 100, "wght" 400, "AGUA" 0, "VASO" 0, "TEMB" 0;
+  font-feature-settings: "calt" 1, "ss03" 1;   /* ciclo de vueltas y agua devuelta */
+}
+```
+
+El color del agua se cambia con `@font-palette-values` y `override-colors: 0 <color>`.
+
+## Regenerar
+
+```bash
+pip install fonttools brotli
+python3 tipografia/fuente/generar_fuente.py            # la fuente y las instancias
+python3 tipografia/muestrario/generar_muestrario.py    # el muestrario
+python3 tipografia/muestrario/generar_muestrario.py --png   # y sus capturas (Node, Playwright, Chromium)
+python3 tipografia/fuente/vasos.py                     # la tabla de lo que contiene cada letra
+```
+
+La retícula de cada letra está en `glifos.py` y las reglas, como constantes al comienzo de `generar_fuente.py` (`PIEL`, `MANO`, `ONDA`, `TEMBLOR`, etc.). Al cambiar una, se regenera todo.
+
+## Comprobaciones
+
+- Las 243 combinaciones de mínimo, defecto y máximo de los cinco ejes se instanciaron y se revisó la orientación de cada contorno: ninguno se invierte.
+- El ciclo de vueltas se probó con HarfBuzz: «diosa diosa diosa» sale en tres combinaciones distintas.
+- La fuente y el muestrario se probaron en Chromium, incluido el verde del agua.
+
+## Estado
+
+Prototipo 0.100. El nombre es provisional y la licencia está por definir (ver `02_traducciones.md`, § 2.6).

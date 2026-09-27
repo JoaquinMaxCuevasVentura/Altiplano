@@ -88,3 +88,7 @@ python3 articulo/generar_docx.py                                # artículo defi
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```
+
+## Otro trabajo en este repositorio: Contenedor
+
+`tipografia/` contiene **Contenedor**, una tipografía variable derivada de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz, y del poema que la acompaña. No es parte del artículo. Incluye la verificación de la lámina de Posnansky, la tabla de traducciones, la fuente, el programa que la genera y un muestrario. Véase `tipografia/README.md`.

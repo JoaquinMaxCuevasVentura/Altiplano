@@ -1,0 +1,592 @@
+<title>Contenedor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+<style>
+@font-face {
+  font-family: "Contenedor";
+  src: url("{{FUENTE_URL}}") format("woff2");
+  font-display: block;
+}
+@font-palette-values --agua-claro { font-family: "Contenedor"; override-colors: 0 #4C8C3A; }
+@font-palette-values --agua-oscura { font-family: "Contenedor"; override-colors: 0 #6AAE55; }
+
+:root {
+  --suelo: #ECEEEA;
+  --panel: #F6F7F4;
+  --tinta: #232628;
+  --tinta-2: #4B5053;
+  --aluminio: #7F878A;
+  --junta: #D2D7D1;
+  --agua: #4C8C3A;
+  --asperon: #A5473A;
+  --paleta: --agua-claro;
+  --contenedor: "Contenedor", "Courier New", monospace;
+  --texto: "Newsreader", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --suelo: #141716;
+    --panel: #1B1F1D;
+    --tinta: #E3E6E1;
+    --tinta-2: #B3BAB5;
+    --aluminio: #838B8E;
+    --junta: #2A302D;
+    --agua: #6AAE55;
+    --asperon: #C4604F;
+    --paleta: --agua-oscura;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --suelo: #141716;
+  --panel: #1B1F1D;
+  --tinta: #E3E6E1;
+  --tinta-2: #B3BAB5;
+  --aluminio: #838B8E;
+  --junta: #2A302D;
+  --agua: #6AAE55;
+  --asperon: #C4604F;
+  --paleta: --agua-oscura;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--suelo);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 19px;
+  line-height: 1.55;
+  font-optical-sizing: auto;
+}
+.pagina {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 88px;
+}
+.c {
+  font-family: var(--contenedor);
+  font-palette: var(--paleta);
+  font-synthesis: none;
+  font-kerning: none;
+}
+a { color: inherit; text-decoration-color: var(--aluminio); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--agua); }
+:focus-visible { outline: 2px solid var(--agua); outline-offset: 3px; }
+
+.rotulo {
+  font-family: var(--contenedor);
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--aluminio);
+  letter-spacing: 0;
+}
+h2 {
+  font-family: var(--contenedor);
+  font-weight: normal;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+.seccion { display: grid; gap: 28px; }
+.seccion > header { display: grid; gap: 10px; max-width: 66ch; }
+.seccion > header p { margin: 0; color: var(--tinta-2); }
+.prosa { max-width: 66ch; }
+.prosa p { margin: 0 0 0.8em; }
+.prosa p:last-child { margin-bottom: 0; }
+em { font-style: italic; }
+
+/* --- Portada: la piscina ------------------------------------------------ */
+.portada { display: grid; gap: 26px; }
+.piscina {
+  font-size: clamp(52px, 12.4vw, 158px);
+  line-height: 1.2;
+  padding: 0.1em 0.2em;
+  justify-self: start;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid var(--junta);
+  background-color: var(--panel);
+  background-image:
+    linear-gradient(to right, var(--junta) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--junta) 1px, transparent 1px);
+  background-size: 0.1em 0.1em;
+  background-position: 0.05em 0.025em;
+}
+.portada .verso {
+  font-size: clamp(22px, 3.3vw, 38px);
+  line-height: 1.2;
+  margin: 0;
+}
+.portada .dek {
+  max-width: 62ch;
+  margin: 0;
+  font-size: 21px;
+  color: var(--tinta-2);
+}
+
+/* --- Probador --------------------------------------------------------- */
+.probador {
+  border: 1px solid var(--junta);
+  background: var(--panel);
+  display: grid;
+}
+.probador-texto {
+  font-size: 64px;
+  line-height: 1.25;
+  padding: 28px 24px 32px;
+  min-height: 3.2em;
+  outline: none;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--junta);
+}
+.probador-texto:focus-visible { box-shadow: inset 0 0 0 2px var(--agua); }
+.mandos { display: grid; gap: 22px; padding: 22px 24px 24px; }
+.estilos { display: flex; flex-wrap: wrap; gap: 8px; }
+.estilos button, .accion {
+  font-family: var(--contenedor);
+  font-size: 15px;
+  line-height: 1;
+  color: var(--tinta);
+  background: transparent;
+  border: 1px solid var(--junta);
+  padding: 9px 12px 8px;
+  cursor: pointer;
+}
+.estilos button:hover, .accion:hover { border-color: var(--aluminio); }
+.estilos button[aria-pressed="true"] { background: var(--tinta); color: var(--suelo); border-color: var(--tinta); }
+.accion[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
+.ejes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px 28px;
+}
+.eje { display: grid; gap: 6px; }
+.eje label { display: flex; justify-content: space-between; gap: 12px; }
+.eje output { font-family: var(--contenedor); font-size: 15px; color: var(--tinta); }
+input[type="range"] { width: 100%; accent-color: var(--agua); margin: 0; }
+.rasgos { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.rasgo { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.rasgo input { accent-color: var(--agua); width: 16px; height: 16px; margin: 0; }
+.rasgo code { font-family: var(--contenedor); font-size: 14px; color: var(--aluminio); }
+
+/* --- Contrastes --------------------------------------------------------- */
+.contrastes { display: grid; }
+.contraste {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 18px 40px;
+  padding-block: 26px;
+  border-top: 1px solid var(--junta);
+}
+.contraste:last-child { border-bottom: 1px solid var(--junta); }
+.contraste h3 {
+  font-family: var(--contenedor);
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+.contraste .fuente { color: var(--aluminio); font-size: 16px; margin: 0 0 10px; }
+.contraste p { margin: 0 0 8px; }
+.contraste .verso-cita { font-style: italic; color: var(--tinta-2); }
+.muestras { display: grid; gap: 14px; align-content: start; }
+.muestra { display: grid; gap: 2px; }
+.muestra .c { font-size: clamp(36px, 5.4vw, 60px); line-height: 1.2; white-space: nowrap; overflow: hidden; }
+.celdas { display: flex; gap: 0; }
+.celda {
+  font-size: clamp(84px, 11vw, 120px);
+  line-height: 1.2;
+  display: block;
+  background-image:
+    linear-gradient(to right, var(--junta) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--junta) 1px, transparent 1px);
+  background-size: 0.1em 0.1em;
+  background-position: 0.05em 0.025em;
+  border: 1px solid var(--aluminio);
+  margin-right: -1px;
+}
+
+.paleta { display: flex; height: 44px; border: 1px solid var(--junta); max-width: 560px; }
+.paleta span { display: block; }
+.paleta .dominante { flex: 64; background: var(--suelo); }
+.paleta .subordinado { flex: 26; background: var(--tinta); }
+.paleta .acento { flex: 8; background: var(--agua); }
+.paleta .complemento { flex: 2; background: var(--asperon); }
+.paleta-rotulos { max-width: 560px; margin-top: -16px; }
+
+/* --- Reglas ----------------------------------------------------------- */
+.reglas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 44px 56px; }
+.regla { display: grid; gap: 10px; align-content: start; }
+.regla h3 { font-family: var(--contenedor); font-weight: normal; font-size: 24px; margin: 0; line-height: 1.2; }
+.regla p { margin: 0; }
+.regla .c.grande { font-size: clamp(44px, 6vw, 64px); line-height: 1.2; overflow-wrap: anywhere; }
+
+/* --- Vasos ------------------------------------------------------------ */
+.grupos { display: grid; gap: 36px; }
+.grupo { display: grid; gap: 12px; }
+.grupo h3 { font-family: var(--contenedor); font-weight: normal; font-size: 22px; margin: 0; }
+.grupo p { margin: 0; color: var(--tinta-2); max-width: 66ch; }
+.letras { display: flex; flex-wrap: wrap; gap: 6px; }
+.letra { display: grid; justify-items: center; gap: 2px; padding: 4px 2px 6px; border: 1px solid var(--junta); min-width: 64px; }
+.letra .c { font-size: 56px; line-height: 1.2; }
+.letra .rotulo { font-size: 14px; }
+
+/* --- Poema ------------------------------------------------------------ */
+.poema-marco { display: grid; gap: 18px; }
+.poema {
+  font-size: clamp(16px, 2.1vw, 22px);
+  line-height: 1.55;
+  display: grid;
+  gap: 1.3em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.poema p { margin: 0; white-space: pre; }
+.poema .signo { font-size: 2.4em; line-height: 1; }
+
+/* --- Repertorio ------------------------------------------------------- */
+.repertorio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  border-left: 1px solid var(--junta);
+  border-top: 1px solid var(--junta);
+}
+.repertorio span {
+  font-size: 38px;
+  line-height: 1.6;
+  text-align: center;
+  border-right: 1px solid var(--junta);
+  border-bottom: 1px solid var(--junta);
+}
+
+.colofon { display: grid; gap: 10px; max-width: 72ch; color: var(--tinta-2); font-size: 16px; border-top: 1px solid var(--junta); padding-top: 22px; }
+.colofon p { margin: 0; }
+
+@media (max-width: 720px) {
+  body { font-size: 18px; }
+  .pagina { gap: 64px; padding-block: 28px 56px; }
+  .contraste { grid-template-columns: minmax(0, 1fr); }
+  .probador-texto { font-size: 40px; padding: 20px 16px 24px; }
+  .mandos { padding: 18px 16px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto; }
+}
+</style>
+
+<div class="pagina" lang="es">
+
+  <section class="portada" aria-label="Contenedor">
+    <div class="rotulo">Tipografía · prototipo {{VERSION}} · 144 caracteres · 5 ejes</div>
+    <div class="c piscina" aria-label="Contenedor">Contenedor</div>
+    <p class="c verso">Quedó el contenedor<br>de lo que ya no está.</p>
+    <p class="dek">Esta tipografía no se dibujó letra por letra. Se deduce de un conjunto de reglas que traducen <em>Contener una ruina: acciones para desenterrar una voz</em>, de Rebeca Paz con CreaciónxAcuerpamiento, y el poema escrito después de verla. Detrás del nombre está la retícula de azulejos de la piscina, y cada placa cae en su azulejo.</p>
+  </section>
+
+  <section class="seccion" id="probador">
+    <header>
+      <h2 class="c">Probador</h2>
+      <p>Escribe encima del texto y mueve los ejes. El ciclo de vueltas está activo: una letra repetida no sale igual dos veces.</p>
+    </header>
+    <div class="probador">
+      <div class="c probador-texto" id="probador-texto" contenteditable="true" spellcheck="false" aria-label="Texto de prueba, editable">Cada vuelta pasa por el agua y el agua no repite.</div>
+      <div class="mandos">
+        <div class="estilos" role="group" aria-label="Instancias con nombre">
+          <button type="button" data-loc='{}' aria-pressed="true">Seca</button>
+          <button type="button" data-loc='{"wght":100}' aria-pressed="false">Piel</button>
+          <button type="button" data-loc='{"wght":900}' aria-pressed="false">Piedra</button>
+          <button type="button" data-loc='{"wdth":60}' aria-pressed="false">Monolito</button>
+          <button type="button" data-loc='{"wdth":150}' aria-pressed="false">Piscina</button>
+          <button type="button" data-loc='{"AGUA":100}' aria-pressed="false">Agua</button>
+          <button type="button" data-loc='{"VASO":100}' aria-pressed="false">Vaso</button>
+          <button type="button" data-loc='{"TEMB":100}' aria-pressed="false">Temblor</button>
+          <button type="button" data-loc='{"TEMB":55,"AGUA":35}' aria-pressed="false">Presente continuo</button>
+          <button type="button" data-loc='{"wght":900,"VASO":60,"TEMB":100}' aria-pressed="false">Ruina</button>
+        </div>
+        <div class="ejes">
+          <div class="eje"><label for="eje-tam"><span class="rotulo">Tamaño</span><output id="val-tam" for="eje-tam">64</output></label><input type="range" id="eje-tam" min="16" max="160" step="1" value="64"></div>
+          <div class="eje"><label for="eje-wdth"><span class="rotulo">Ancho · wdth</span><output id="val-wdth" for="eje-wdth">100</output></label><input type="range" id="eje-wdth" min="60" max="150" step="1" value="100"></div>
+          <div class="eje"><label for="eje-wght"><span class="rotulo">Peso · wght</span><output id="val-wght" for="eje-wght">400</output></label><input type="range" id="eje-wght" min="100" max="900" step="1" value="400"></div>
+          <div class="eje"><label for="eje-AGUA"><span class="rotulo">Agua · AGUA</span><output id="val-AGUA" for="eje-AGUA">0</output></label><input type="range" id="eje-AGUA" min="0" max="100" step="1" value="0"></div>
+          <div class="eje"><label for="eje-VASO"><span class="rotulo">Vaso · VASO</span><output id="val-VASO" for="eje-VASO">0</output></label><input type="range" id="eje-VASO" min="0" max="100" step="1" value="0"></div>
+          <div class="eje"><label for="eje-TEMB"><span class="rotulo">Temblor · TEMB</span><output id="val-TEMB" for="eje-TEMB">0</output></label><input type="range" id="eje-TEMB" min="0" max="100" step="1" value="0"></div>
+        </div>
+        <div class="rasgos">
+          <label class="rasgo" for="rasgo-calt"><input type="checkbox" id="rasgo-calt" checked> Ciclo de vueltas <code>calt</code></label>
+          <label class="rasgo" for="rasgo-ss01"><input type="checkbox" id="rasgo-ss01"> Boca tapada <code>ss01</code></label>
+          <label class="rasgo" for="rasgo-ss02"><input type="checkbox" id="rasgo-ss02"> Ojos tapados <code>ss02</code></label>
+          <label class="rasgo" for="rasgo-ss03"><input type="checkbox" id="rasgo-ss03"> Agua devuelta <code>ss03</code></label>
+          <button type="button" class="accion" id="temblar" aria-pressed="false">Temblar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="contrastes">
+    <header>
+      <h2 class="c">Siete contrastes, siete estructuras</h2>
+      <p>Kimberly Elam organiza su curso en siete contrastes tipográficos (<em>Typographic Contrast, Color, &amp; Composition</em>, 2009). En su curso cada contraste se resuelve eligiendo entre fuentes distintas. Aquí cada uno se vuelve una estructura de la misma fuente, y cada estructura sale de la obra o del poema.</p>
+    </header>
+    <div class="contrastes">
+      <article class="contraste">
+        <div>
+          <h3>Figura y fondo → Vaso</h3>
+          <p class="fuente">Elam, pp. 11 y 16 · eje VASO</p>
+          <p>La placa se vacía hasta volverse un contenedor: la figura pasa a ser fondo. Elam trae el aforismo de Lao-Tse que cita Emil Ruder: lo esencial de una vasija es el vacío de adentro.</p>
+          <p class="verso-cita">Quedó el contenedor de lo que ya no está.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">VASO 0</span><span class="c">vaso</span></div>
+          <div class="muestra"><span class="rotulo">VASO 100</span><span class="c" style="font-variation-settings:'VASO' 100">vaso</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Escala → la celda</h3>
+          <p class="fuente">Elam, p. 26 · monoespaciada</p>
+          <p>Todas las letras ocupan la misma celda de seis azulejos, pase lo que pase adentro. La i deja vacía casi toda la suya y la m la llena. El contraste de escala queda entre la letra y su contenedor.</p>
+          <p class="verso-cita">Una piscina vacía, donde una vez aprendí a flotar.</p>
+        </div>
+        <div class="muestras">
+          <div class="celdas" aria-label="La i y la m en sus celdas"><span class="c celda">i</span><span class="c celda">m</span><span class="c celda">&nbsp;</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Peso → Piel y Piedra</h3>
+          <p class="fuente">Elam, p. 34 · eje wght</p>
+          <p>El peso mide cuánta piel queda entre placa y placa. En Piel las placas son parches sueltos sobre el cuerpo. En Piedra casi se tocan y la letra vuelve a ser monumento.</p>
+          <p class="verso-cita">No se salvó la piedra, solo la opinión sobre ella.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">wght 100 · Piel</span><span class="c" style="font-variation-settings:'wght' 100">piel</span></div>
+          <div class="muestra"><span class="rotulo">wght 900 · Piedra</span><span class="c" style="font-variation-settings:'wght' 900">piedra</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Espacio → las bandas</h3>
+          <p class="fuente">Elam, pp. 5 y 39 · ss01 y ss02</p>
+          <p>La superposición es la primera señal de profundidad que enumera Elam. La banda, del mismo material que las placas, se pone encima de la letra. Con la boca tapada el texto se sigue leyendo, porque la mitad de arriba de las letras carga la mayor parte de la información. Con los ojos tapados cuesta mucho más.</p>
+          <p class="verso-cita">A la boca la taparon, a las manos no.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">ss01 · Boca tapada</span><span class="c" style="font-feature-settings:'ss01' 1">igual dice</span></div>
+          <div class="muestra"><span class="rotulo">ss02 · Ojos tapados</span><span class="c" style="font-feature-settings:'ss02' 1">igual dice</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Inclinación → Agua</h3>
+          <p class="fuente">Elam, p. 48 · eje AGUA</p>
+          <p>Elam advierte que la inclinación se mide contra la línea de base. El agua no inclina la letra entera: corre cada fila por su cuenta, como la imagen que rebotaba en la bandeja del proyector y llegaba temblando a la pared.</p>
+          <p class="verso-cita">Tocas el agua y la diosa se deforma.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">AGUA 0</span><span class="c">diosa</span></div>
+          <div class="muestra"><span class="rotulo">AGUA 100</span><span class="c" style="font-variation-settings:'AGUA' 100">diosa</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Ancho → Monolito y Piscina</h3>
+          <p class="fuente">Elam, p. 52 · eje wdth</p>
+          <p>Los dos contenedores de la obra: el cuerpo de pie y el vaso acostado. Comprimida, la letra toma la tensión vertical de la estela. Expandida, la horizontal del agua quieta.</p>
+          <p class="verso-cita">Ningún contenedor aguanta lo que contiene.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">wdth 60 · Monolito</span><span class="c" style="font-variation-settings:'wdth' 60">monolito</span></div>
+          <div class="muestra"><span class="rotulo">wdth 150 · Piscina</span><span class="c" style="font-variation-settings:'wdth' 150">piscina</span></div>
+        </div>
+      </article>
+      <article class="contraste">
+        <div>
+          <h3>Remate → Temblor</h3>
+          <p class="fuente">Elam, p. 57 · eje TEMB</p>
+          <p>Donde otras letras tienen serifas, estas tienen terminales sueltos. Al temblar, cada placa se mueve apenas, pero las que tienen un solo vecino se desprenden primero y giran más, como las baldosas sueltas del fondo.</p>
+          <p class="verso-cita">Moverse como se mueve la piedra, es decir, apenas.</p>
+        </div>
+        <div class="muestras">
+          <div class="muestra"><span class="rotulo">TEMB 0</span><span class="c">suelta</span></div>
+          <div class="muestra"><span class="rotulo">TEMB 100</span><span class="c" style="font-variation-settings:'TEMB' 100">suelta</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="prosa">
+      <p>El color sigue el sistema de Elam por volúmenes (p. 7): el blanco del azulejo domina, el grafito es subordinado y el verde del agua es el acento, con el volumen más chico. Elam pide que el acento toque su complemento. El complemento del verde es el rojo del asperón, la piedra que ya no está, y aparece una sola vez, en esta franja.</p>
+    </div>
+    <div class="paleta" role="img" aria-label="Paleta por volúmenes: azulejo 64 %, grafito 26 %, agua 8 %, asperón 2 %"><span class="dominante"></span><span class="subordinado"></span><span class="acento"></span><span class="complemento"></span></div>
+    <div class="paleta-rotulos rotulo">azulejo 64 · grafito 26 · agua 8 · asperón 2</div>
+  </section>
+
+  <section class="seccion" id="reglas">
+    <header>
+      <h2 class="c">Reglas que no vienen de Elam</h2>
+      <p>Salen de la obra y se aplican solas a todo el repertorio. Ninguna letra se retocó a mano.</p>
+    </header>
+    <div class="reglas">
+      <div class="regla">
+        <h3>Todo punto es un pez</h3>
+        <div class="c grande">¡sí! ¿ñu? …;</div>
+        <p>Los puntos, las tildes y la diéresis son azulejos desprendidos y girados, como las baldosas oscuras sueltas en el fondo de la piscina. La coma es un pez con cola.</p>
+      </div>
+      <div class="regla">
+        <h3>Cuatro vueltas</h3>
+        <div class="c grande" style="width:3.7em">diosa diosa diosa</div>
+        <p>Cada carácter tiene cuatro versiones. La siguiente se elige según la letra anterior, así que la misma palabra repetida casi nunca sale igual. Está activa por defecto: vuelve sin que la llames.</p>
+      </div>
+      <div class="regla">
+        <h3>La topología decide</h3>
+        <div class="c grande" style="font-variation-settings:'wght' 900">ahe</div>
+        <p>Una placa donde se juntan tres trazos es una articulación y se achica. Funciona como una trampa de tinta. A tamaños chicos la tinta llena el hueco y la letra se da de beber a sí misma. Elam cierra su curso con la tapa de una guía telefónica (p. 64), y la letra de las guías de AT&amp;T, Bell Centennial de Matthew Carter (1978), es el ejemplo clásico de trampas de tinta.</p>
+      </div>
+      <div class="regla">
+        <h3>El cero guarda un pez</h3>
+        <div class="c grande" style="font-feature-settings:'ss03' 1">0 O</div>
+        <p>El cero es el contenedor de lo que ya no está y todavía conserva un signo. De paso se distingue de la O.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="vasos">
+    <header>
+      <h2 class="c">Qué letras contienen</h2>
+      <p>El programa echa agua sobre cada letra de la retícula. El agua baja o se corre hacia los lados y nunca sube. Donde no puede escapar, queda. Con el juego <span class="c">ss03</span> esa agua vuelve a la letra, en el verde del dibujo. El número es la cantidad de azulejos que retiene.</p>
+    </header>
+    <div class="grupos">
+{{VASOS}}
+    </div>
+  </section>
+
+  <section class="seccion" id="poema">
+    <header>
+      <h2 class="c">El poema</h2>
+      <p>Compuesto en Contenedor Seca, con el ciclo de vueltas. El botón lo pone a temblar.</p>
+    </header>
+    <div class="poema-marco">
+      <div><button type="button" class="accion" id="temblar-poema" aria-pressed="false">Presente continuo</button></div>
+      <div class="c poema" id="poema-texto">
+{{POEMA}}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="repertorio">
+    <header>
+      <h2 class="c">Repertorio</h2>
+      <p>Castellano, las vocales largas del aimara (ä, ï, ü) y el apóstrofo de las consonantes glotalizadas (ʼ), para escribir <span class="c">qucha</span> y <span class="c">quta</span>.</p>
+    </header>
+    <div class="c repertorio">
+{{REPERTORIO}}
+    </div>
+  </section>
+
+  <footer class="colofon">
+    <p><span class="c">Contenedor {{VERSION}}</span>. Prototipo generado por reglas con Python y fontTools. Licencia por definir.</p>
+    <p>Sobre <em>Contener una ruina: acciones para desenterrar una voz</em>, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026). Poema: Joaquin Max Cuevas Ventura.</p>
+    <p>Kimberly Elam, <em>Typographic Contrast, Color, &amp; Composition: A Graphic Design Project Guide</em> (2009). Arthur Posnansky, <em>El signo escalonado en las ideografías americanas</em> (1913).</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var texto = document.getElementById("probador-texto");
+  var ejes = ["wdth", "wght", "AGUA", "VASO", "TEMB"];
+  var defecto = { wdth: 100, wght: 400, AGUA: 0, VASO: 0, TEMB: 0 };
+  var estado = Object.assign({}, defecto);
+  var quieto = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function variaciones(e) {
+    return ejes.map(function (t) { return "'" + t + "' " + Math.round(e[t] * 10) / 10; }).join(", ");
+  }
+  function rasgos() {
+    return ["calt", "ss01", "ss02", "ss03"].map(function (r) {
+      return "'" + r + "' " + (document.getElementById("rasgo-" + r).checked ? 1 : 0);
+    }).join(", ");
+  }
+  function pintar() {
+    texto.style.fontVariationSettings = variaciones(estado);
+    texto.style.fontFeatureSettings = rasgos();
+    ejes.forEach(function (t) {
+      document.getElementById("eje-" + t).value = estado[t];
+      document.getElementById("val-" + t).textContent = Math.round(estado[t]);
+    });
+  }
+  function marcarEstilo(boton) {
+    document.querySelectorAll(".estilos button").forEach(function (b) {
+      b.setAttribute("aria-pressed", b === boton ? "true" : "false");
+    });
+  }
+
+  ejes.forEach(function (t) {
+    document.getElementById("eje-" + t).addEventListener("input", function (ev) {
+      estado[t] = parseFloat(ev.target.value);
+      marcarEstilo(null);
+      pintar();
+    });
+  });
+  document.getElementById("eje-tam").addEventListener("input", function (ev) {
+    texto.style.fontSize = ev.target.value + "px";
+    document.getElementById("val-tam").textContent = ev.target.value;
+  });
+  ["calt", "ss01", "ss02", "ss03"].forEach(function (r) {
+    document.getElementById("rasgo-" + r).addEventListener("change", pintar);
+  });
+  document.querySelectorAll(".estilos button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      estado = Object.assign({}, defecto, JSON.parse(b.getAttribute("data-loc")));
+      marcarEstilo(b);
+      pintar();
+    });
+  });
+
+  // Presente continuo: el temblor y el agua oscilan sin repetirse del todo.
+  function animador(elemento, base, boton, alTerminar) {
+    var id = null, t0 = 0;
+    function cuadro(ts) {
+      if (!t0) t0 = ts;
+      var s = (ts - t0) / 1000;
+      var e = Object.assign({}, base(), {
+        TEMB: 38 + 30 * Math.sin(s * 7.1) + 14 * Math.sin(s * 2.3 + 1.1),
+        AGUA: 22 + 18 * Math.sin(s * 1.3)
+      });
+      elemento.style.fontVariationSettings = variaciones(e);
+      id = requestAnimationFrame(cuadro);
+    }
+    return function () {
+      if (id !== null || boton.getAttribute("aria-pressed") === "true") {
+        if (id !== null) cancelAnimationFrame(id);
+        id = null; t0 = 0;
+        boton.setAttribute("aria-pressed", "false");
+        alTerminar();
+        return;
+      }
+      boton.setAttribute("aria-pressed", "true");
+      if (quieto) {
+        elemento.style.fontVariationSettings = variaciones(Object.assign({}, base(), { TEMB: 55, AGUA: 35 }));
+      } else {
+        id = requestAnimationFrame(cuadro);
+      }
+    };
+  }
+  var botonProbador = document.getElementById("temblar");
+  botonProbador.addEventListener("click", animador(texto, function () { return estado; }, botonProbador, pintar));
+
+  var poema = document.getElementById("poema-texto");
+  var botonPoema = document.getElementById("temblar-poema");
+  botonPoema.addEventListener("click", animador(poema, function () { return defecto; }, botonPoema, function () {
+    poema.style.fontVariationSettings = "";
+  }));
+
+  pintar();
+})();
+</script>
