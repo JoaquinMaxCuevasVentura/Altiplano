@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Espalda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<style>
+@font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
+@font-face { font-family: "Placa"; src: url("{{PLACA}}") format("woff2"); font-display: block; }
+:root {
+  --noche: #0C0C0C;
+  --panel: #161616;
+  --linea: #2E2E2E;
+  --luz: #E6E4E0;
+  --tenue: #A09D98;
+  --plata: #C9CDD1;
+  --c: "Contenedor", "Courier New", monospace;
+  --t: "Newsreader", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--noche); color: var(--luz); }
+body { font-family: var(--t); font-size: 18px; line-height: 1.55; }
+.pagina { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 40px; }
+.volver { font-family: var(--c); font-size: 15px; color: var(--tenue); text-decoration: none; }
+.cabeza { display: grid; gap: 14px; max-width: 70ch; }
+h1 { font-family: var(--c); font-weight: normal; font-size: clamp(34px, 6vw, 64px); line-height: 1.1; margin: 0; }
+h2 { font-family: var(--c); font-weight: normal; font-size: 20px; margin: 0 0 6px; }
+.dek { margin: 0; color: var(--tenue); font-size: 20px; }
+:focus-visible { outline: 2px solid var(--plata); outline-offset: 3px; }
+.sala { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 36px; align-items: start; }
+canvas#cuerpo { width: 100%; max-width: 720px; aspect-ratio: 1073 / 1500; display: block; background: #0A0A0A; }
+.mandos { display: grid; gap: 22px; align-content: start; }
+.grupo { display: grid; gap: 8px; }
+.grupo > span { font-family: var(--c); font-size: 15px; color: var(--tenue); }
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font-family: var(--c); font-size: 15px; line-height: 1; color: var(--luz); background: transparent; border: 1px solid var(--linea); padding: 11px 14px 10px; cursor: pointer; }
+button:hover { border-color: var(--tenue); }
+button[aria-pressed="true"] { background: var(--luz); color: var(--noche); border-color: var(--luz); }
+input[type="range"] { width: 100%; accent-color: var(--plata); }
+output { font-family: var(--c); font-size: 15px; }
+.orden { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; counter-reset: placa; }
+.orden li { display: grid; grid-template-columns: 2.2em 1fr; gap: 8px; font-size: 16px; color: var(--tenue); }
+.orden li::before { counter-increment: placa; content: counter(placa); font-family: var(--c); color: var(--luz); }
+.desborde { font-family: var(--c); font-size: 15px; color: var(--luz); margin: 0; }
+.notas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 44px; }
+.notas p { margin: 0; color: var(--tenue); font-size: 17px; }
+@media (max-width: 820px) { .sala { grid-template-columns: minmax(0, 1fr); } }
+</style>
+
+<div class="pagina">
+  <header class="cabeza">
+    <a class="volver" href="index.html">← Vasijas</a>
+    <h1>Espalda</h1>
+    <p class="dek">En la foto de la espalda, las placas no cubren el cuerpo: lo marcan en ocho lugares, con piel entre una y otra. Aquí esas ocho placas son marcos de texto enlazados. El poema entra por la placa grande del centro y sigue, en el orden en que se lee un cuerpo, hasta la última. Cada placa toma la forma de su contorno. Lo que no cabe se derrama abajo, porque ningún contenedor aguanta lo que contiene.</p>
+  </header>
+
+  <section class="sala" aria-label="La espalda como página">
+    <canvas id="cuerpo" width="1073" height="1500" aria-label="Silueta de una espalda con ocho placas de aluminio repujadas con el poema"></canvas>
+    <div class="mandos">
+      <div class="grupo">
+        <span>Escritura</span>
+        <div class="opciones" role="group" aria-label="Escritura">
+          <button type="button" data-letra="c" aria-pressed="true">Contenedor</button>
+          <button type="button" data-letra="p" aria-pressed="false">Placa</button>
+        </div>
+      </div>
+      <div class="grupo">
+        <span>Lado de la placa</span>
+        <div class="opciones" role="group" aria-label="Lado de la placa">
+          <button type="button" data-lado="derecho" aria-pressed="true">Derecho</button>
+          <button type="button" data-lado="reves" aria-pressed="false">Revés</button>
+        </div>
+      </div>
+      <div class="grupo">
+        <label for="tam"><span class="c" style="font-family:var(--c);font-size:15px;color:var(--tenue)">Tamaño de la letra</span> <output id="tam-val" for="tam">15</output></label>
+        <input type="range" id="tam" min="9" max="40" step="1" value="15">
+      </div>
+      <p class="desborde" id="desborde" aria-live="polite"></p>
+      <div class="grupo">
+        <span>Orden de lectura</span>
+        <ol class="orden" id="orden"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="notas" aria-label="Notas">
+    <div>
+      <h2>De dónde salen las placas</h2>
+      <p>La posición y el contorno de cada placa salen de la foto de la espalda. De la foto se tomó solo la disposición; la imagen no está en esta página.</p>
+    </div>
+    <div>
+      <h2>Derecho y revés</h2>
+      <p>El aluminio se repuja por el revés: se empuja desde atrás para que el relieve salga adelante. Quien trabaja ve la letra invertida, como en un tipo de imprenta. El botón «Revés» muestra la placa como la ve la mano.</p>
+    </div>
+    <div>
+      <h2>El orden de un cuerpo</h2>
+      <p>No hay una manera natural de leer una espalda. Aquí se lee como una página: de arriba abajo y de izquierda a derecha, empezando por la placa que ocupa el centro. Otra coreografía daría otro orden, y otro poema.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var POEMA = {{POEMA}};
+  var TEXTO = POEMA.join("  ").replace(/\n/g, " ");
+  // Placas en coordenadas de la foto (1073 × 1341), en orden de lectura.
+  var PLACAS = [
+    { nombre: "centro de la espalda", p: [[382, 528], [540, 520], [698, 540], [694, 990], [648, 1034], [430, 1032], [398, 994]] },
+    { nombre: "hombro izquierdo", p: [[206, 592], [300, 556], [352, 574], [346, 690], [300, 760], [232, 780], [202, 742], [200, 640]] },
+    { nombre: "hombro derecho", p: [[800, 590], [905, 578], [932, 610], [926, 652], [812, 652]] },
+    { nombre: "brazo derecho", p: [[934, 744], [985, 738], [996, 902], [946, 908]] },
+    { nombre: "brazo izquierdo", p: [[204, 894], [242, 892], [247, 1000], [210, 996]] },
+    { nombre: "cintura derecha", p: [[700, 1068], [800, 1060], [806, 1246], [706, 1252]] },
+    { nombre: "cintura izquierda", p: [[425, 1078], [540, 1072], [548, 1330], [430, 1336]] },
+    { nombre: "antebrazo izquierdo", p: [[226, 1186], [270, 1190], [272, 1272], [229, 1266]] }
+  ];
+  var SILUETA = [[430, 440], [520, 432], [640, 440], [760, 520], [880, 560], [935, 600], [965, 760], [1000, 950], [1015, 1150], [1030, 1341],
+                 [210, 1341], [205, 1100], [200, 900], [198, 700], [205, 590], [300, 540], [380, 500]];
+  var W = 1073, H = 1500, CUERPO = 1341;
+  var lienzo = document.getElementById("cuerpo"), ctx = lienzo.getContext("2d");
+  var estado = { letra: "c", lado: "derecho", tam: 15 };
+  // Placa ocupa menos por signo; con su propio tamaño, el poema recorre las ocho placas.
+  var tamanos = { c: 15, p: 18 };
+
+  function azar(s) { return function () { s |= 0; s = s + 0x6D2B79F5 | 0; var t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function trazar(g, puntos) { g.beginPath(); puntos.forEach(function (q, k) { k ? g.lineTo(q[0], q[1]) : g.moveTo(q[0], q[1]); }); g.closePath(); }
+  function caja(puntos) {
+    var xs = puntos.map(function (q) { return q[0]; }), ys = puntos.map(function (q) { return q[1]; });
+    return { x: Math.min.apply(null, xs), y: Math.min.apply(null, ys), w: Math.max.apply(null, xs) - Math.min.apply(null, xs), h: Math.max.apply(null, ys) - Math.min.apply(null, ys) };
+  }
+  // Tramo horizontal de un polígono a la altura y: el ancho disponible de esa línea.
+  function tramo(puntos, y) {
+    var xs = [];
+    for (var i = 0; i < puntos.length; i++) {
+      var a = puntos[i], b = puntos[(i + 1) % puntos.length];
+      if ((a[1] <= y && b[1] > y) || (b[1] <= y && a[1] > y)) xs.push(a[0] + (y - a[1]) / (b[1] - a[1]) * (b[0] - a[0]));
+    }
+    xs.sort(function (m, n) { return m - n; });
+    return xs.length >= 2 ? [xs[0], xs[xs.length - 1]] : null;
+  }
+
+  // El texto fluye de placa en placa, línea por línea, dentro de cada contorno.
+  function fluir() {
+    var tam = estado.tam, placa = estado.letra === "p";
+    var avance = tam * (placa ? 0.74 : 0.6), interlinea = tam * (placa ? 0.76 : 1.3), margen = tam * 0.5;
+    var pos = 0, lineas = [], porPlaca = [];
+    PLACAS.forEach(function (pl, k) {
+      var c = caja(pl.p), inicio = pos;
+      for (var y = c.y + margen + interlinea * 0.8; y < c.y + c.h - margen * 0.5 && pos < TEXTO.length; y += interlinea) {
+        var t1 = tramo(pl.p, y - interlinea * 0.6), t2 = tramo(pl.p, y);
+        if (!t1 || !t2) continue;
+        var x0 = Math.max(t1[0], t2[0]) + margen, x1 = Math.min(t1[1], t2[1]) - margen;
+        var cabe = Math.floor((x1 - x0) / avance);
+        if (cabe < 1) continue;
+        while (TEXTO[pos] === " ") pos++;
+        var trozo = TEXTO.substr(pos, cabe);
+        if (!placa && pos + cabe < TEXTO.length && TEXTO[pos + cabe] !== " ") {
+          var corte = trozo.lastIndexOf(" ");
+          if (corte > cabe * 0.4) trozo = trozo.substr(0, corte);
+        }
+        lineas.push({ placa: k, x: x0, y: y, texto: trozo });
+        pos += trozo.length;
+      }
+      porPlaca.push(pos - inicio);
+    });
+    return { lineas: lineas, sobra: TEXTO.substr(pos).trim(), porPlaca: porPlaca, avance: avance };
+  }
+
+  // Repujado: el texto se vuelve relieve y el relieve se ilumina como aluminio.
+  function repujar(pl, lineasPlaca, r) {
+    var c = caja(pl.p), w = Math.ceil(c.w) + 8, h = Math.ceil(c.h) + 8;
+    var hoja = document.createElement("canvas"); hoja.width = w; hoja.height = h;
+    var g = hoja.getContext("2d");
+    g.fillStyle = "#000"; g.fillRect(0, 0, w, h);
+    g.fillStyle = "#fff"; g.textBaseline = "alphabetic";
+    g.font = estado.tam + "px " + (estado.letra === "p" ? "Placa" : "Contenedor") + ", monospace";
+    if (estado.lado === "reves") { g.translate(w, 0); g.scale(-1, 1); }
+    lineasPlaca.forEach(function (l) { g.fillText(l.texto, l.x - c.x + 4, l.y - c.y + 4); });
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    var alto = g.getImageData(0, 0, w, h).data;
+    var hm = new Float32Array(w * h);
+    for (var i = 0; i < w * h; i++) hm[i] = alto[i * 4] / 255;
+    // Un poco de desenfoque: el aluminio redondea los bordes.
+    var tmp = new Float32Array(w * h);
+    for (var pasada = 0; pasada < 2; pasada++) {
+      for (var y = 0; y < h; y++) for (var x = 1; x < w - 1; x++) tmp[y * w + x] = (hm[y * w + x - 1] + hm[y * w + x] + hm[y * w + x + 1]) / 3;
+      for (var y2 = 1; y2 < h - 1; y2++) for (var x2 = 0; x2 < w; x2++) hm[y2 * w + x2] = (tmp[(y2 - 1) * w + x2] + tmp[y2 * w + x2] + tmp[(y2 + 1) * w + x2]) / 3;
+    }
+    var fase = r() * 100;
+    var img = g.createImageData(w, h), d = img.data;
+    for (var yy = 1; yy < h - 1; yy++) for (var xx = 1; xx < w - 1; xx++) {
+      var k = yy * w + xx;
+      var arruga = 0.05 * Math.sin(xx * 0.09 + Math.sin(yy * 0.05 + fase) * 2.2) * Math.sin(yy * 0.07 + fase);
+      var dx = (hm[k + 1] - hm[k - 1]) * 2.2 + arruga * Math.cos(xx * 0.09) * 0.6;
+      var dy = (hm[k + w] - hm[k - w]) * 2.2 + arruga * 0.6;
+      var n = Math.hypot(dx, dy, 1), nx = -dx / n, ny = -dy / n, nz = 1 / n;
+      var dif = Math.max(0, nx * -0.45 + ny * -0.6 + nz * 0.66);
+      var esp = Math.pow(Math.max(0, nx * -0.24 + ny * -0.32 + nz * 0.92), 30);
+      var v = Math.min(1, 0.36 + 0.5 * dif + 0.8 * esp - 0.1 * (yy / h));
+      d[k * 4] = v * 226; d[k * 4 + 1] = v * 229; d[k * 4 + 2] = v * 233; d[k * 4 + 3] = 255;
+    }
+    g.putImageData(img, 0, 0);
+    return { lienzo: hoja, x: c.x - 4, y: c.y - 4 };
+  }
+
+  function dibujar() {
+    var r = azar(1987), flujo = fluir();
+    ctx.fillStyle = "#0A0A0A"; ctx.fillRect(0, 0, W, H);
+    // La piel.
+    var piel = ctx.createLinearGradient(0, 430, 0, CUERPO);
+    piel.addColorStop(0, "#BDBAB5"); piel.addColorStop(1, "#8F8C88");
+    ctx.fillStyle = piel; trazar(ctx, SILUETA); ctx.fill();
+    ctx.strokeStyle = "rgba(0,0,0,0.25)"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(540, 470); ctx.bezierCurveTo(535, 800, 548, 1100, 545, 1341); ctx.stroke();  // la columna
+    // Las placas.
+    PLACAS.forEach(function (pl, k) {
+      var mias = flujo.lineas.filter(function (l) { return l.placa === k; });
+      var rep = repujar(pl, mias, r);
+      ctx.save();
+      trazar(ctx, pl.p); ctx.clip();
+      ctx.drawImage(rep.lienzo, rep.x, rep.y);
+      ctx.restore();
+      ctx.save();
+      ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3;
+      ctx.strokeStyle = "rgba(255,255,255,0.55)"; ctx.lineWidth = 1.5; trazar(ctx, pl.p); ctx.stroke();
+      ctx.restore();
+      var c = caja(pl.p);
+      ctx.fillStyle = "#F2F0EC"; ctx.font = "22px Contenedor, monospace";
+      ctx.fillText(String(k + 1), c.x - 26 > 0 ? c.x - 26 : c.x + c.w + 6, c.y + 20);
+    });
+    // Lo que no cabe se derrama bajo el cuerpo, como las baldosas sueltas.
+    ctx.font = estado.tam + "px " + (estado.letra === "p" ? "Placa" : "Contenedor") + ", monospace";
+    var sobra = Array.from(flujo.sobra).filter(function (ch) { return ch !== " "; });
+    sobra.slice(0, 420).forEach(function (ch, k) {
+      var x = 160 + r() * 760, y = CUERPO + 30 + Math.pow(r(), 1.6) * (H - CUERPO - 50);
+      ctx.save(); ctx.translate(x, y); ctx.rotate((r() - 0.5) * 1.6);
+      ctx.fillStyle = "rgba(201,205,209," + (0.45 + r() * 0.5) + ")";
+      ctx.fillText(ch, 0, 0); ctx.restore();
+    });
+    // Grano de película, como en la foto.
+    var img = ctx.getImageData(0, 0, W, H), d = img.data;
+    for (var i = 0; i < d.length; i += 4) {
+      var gr = (r() - 0.5) * 34;
+      d[i] = Math.max(0, Math.min(255, d[i] + gr)); d[i + 1] = Math.max(0, Math.min(255, d[i + 1] + gr)); d[i + 2] = Math.max(0, Math.min(255, d[i + 2] + gr));
+    }
+    ctx.putImageData(img, 0, 0);
+
+    var orden = document.getElementById("orden");
+    orden.textContent = "";
+    PLACAS.forEach(function (pl, k) {
+      var li = document.createElement("li");
+      var n = flujo.porPlaca[k];
+      li.textContent = pl.nombre + " · " + (n ? n + " caracteres" : "vacía");
+      orden.appendChild(li);
+    });
+    var total = TEXTO.replace(/ /g, "").length, fuera = sobra.length;
+    document.getElementById("desborde").textContent = fuera
+      ? "Se derraman " + fuera + " de " + total + " letras (" + Math.round(fuera / total * 100) + " %)."
+      : "Con este tamaño, el poema entero cabe en el cuerpo.";
+  }
+
+  var pendiente = null;
+  function redibujar() { if (pendiente) cancelAnimationFrame(pendiente); pendiente = requestAnimationFrame(function () { pendiente = null; dibujar(); }); }
+  document.querySelectorAll("[data-letra]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      estado.letra = b.getAttribute("data-letra");
+      estado.tam = tamanos[estado.letra];
+      document.getElementById("tam").value = estado.tam;
+      document.getElementById("tam-val").textContent = estado.tam;
+      document.querySelectorAll("[data-letra]").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      redibujar();
+    });
+  });
+  document.querySelectorAll("[data-lado]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      estado.lado = b.getAttribute("data-lado");
+      document.querySelectorAll("[data-lado]").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      redibujar();
+    });
+  });
+  document.getElementById("tam").addEventListener("input", function (ev) {
+    estado.tam = tamanos[estado.letra] = parseInt(ev.target.value, 10);
+    document.getElementById("tam-val").textContent = estado.tam;
+    redibujar();
+  });
+
+  var arrancar = function () { dibujar(); };
+  if (document.fonts && document.fonts.load) {
+    Promise.all([document.fonts.load("20px Contenedor"), document.fonts.load("20px Placa")]).then(arrancar, arrancar);
+  } else arrancar();
+})();
+</script>
+</html>

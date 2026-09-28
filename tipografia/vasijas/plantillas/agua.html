@@ -9,12 +9,12 @@
 <style>
 @font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
 :root {
-  --noche: #0B0D0C;
-  --panel: #141716;
-  --linea: #262B29;
+  --noche: #080B10;
+  --panel: #10141A;
+  --linea: #222A33;
   --luz: #E2E6E0;
-  --tenue: #97A09B;
-  --agua: #7CCB63;
+  --tenue: #93A0A6;
+  --agua: #3BE38A;
   --c: "Contenedor", "Courier New", monospace;
   --t: "Newsreader", Georgia, serif;
   color-scheme: dark;
@@ -29,17 +29,19 @@ h1 { font-family: var(--c); font-weight: normal; font-size: clamp(34px, 6vw, 64p
 .dek { margin: 0; color: var(--tenue); font-size: 20px; }
 :focus-visible { outline: 2px solid var(--agua); outline-offset: 3px; }
 .escena { display: grid; gap: 14px; }
-.pared { position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 78vh; background: #0E100F; touch-action: none; cursor: crosshair; }
+.pared { position: relative; width: 100%; aspect-ratio: 4 / 3; max-height: 82vh; background: #070A0F; touch-action: none; cursor: crosshair; }
 .pared canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .pared:fullscreen { max-height: none; aspect-ratio: auto; background: #000; }
 .aviso { position: absolute; inset: auto 16px 14px 16px; font-family: var(--c); font-size: 14px; color: var(--tenue); pointer-events: none; }
 .mandos { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-button {
+button, .archivo-btn {
   font-family: var(--c); font-size: 15px; line-height: 1; color: var(--luz); background: transparent;
   border: 1px solid var(--linea); padding: 11px 14px 10px; cursor: pointer;
 }
-button:hover { border-color: var(--tenue); }
+button:hover, .archivo-btn:hover { border-color: var(--tenue); }
 button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
+.archivo-btn input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.archivo-btn:focus-within { outline: 2px solid var(--agua); outline-offset: 3px; }
 .contador { font-family: var(--c); font-size: 15px; color: var(--tenue); margin-left: auto; }
 .notas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 44px; }
 .notas h2 { font-family: var(--c); font-weight: normal; font-size: 20px; margin: 0 0 6px; }
@@ -52,18 +54,20 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
   <header class="cabeza">
     <a class="volver" href="index.html">← Vasijas</a>
     <h1>Tocas el agua</h1>
-    <p class="dek">En el patio, el proyector apuntaba a una bandeja con un dedo de agua y la imagen rebotaba temblando hasta la pared de azulejo. Aquí el poema tampoco se muestra directo: solo llega como luz que pasó por el agua. Cada estrofa entra atravesándola, y el agua no repite.</p>
+    <p class="dek">En el patio, el proyector apuntaba hacia abajo, a una bandeja con un dedo de agua, y la imagen rebotaba desde ahí hasta la pared de azulejo. Llegaba en trapecio, verde, con el reflejo de la lámpara encima. Aquí el poema tampoco se muestra directo: solo llega como luz que rebotó en el agua. Cada estrofa entra atravesándola, y el agua no repite.</p>
   </header>
 
   <section class="escena" aria-label="Proyección">
     <div class="pared" id="pared">
       <canvas id="lienzo" aria-hidden="true"></canvas>
-      <div class="aviso" id="aviso">Toca el agua: haz clic o arrastra sobre la imagen.</div>
+      <div class="aviso" id="aviso">Toca el agua: haz clic o arrastra sobre la luz.</div>
     </div>
     <div class="mandos">
       <button type="button" id="vuelta">Otra vuelta</button>
       <button type="button" id="gotas" aria-pressed="true">Gotas solas</button>
       <button type="button" id="eco" aria-pressed="true">Eco</button>
+      <label class="archivo-btn" for="video-propio">Proyectar un video tuyo<input type="file" id="video-propio" accept="video/*"></label>
+      <button type="button" id="al-poema" hidden>Volver al poema</button>
       <button type="button" id="completa">Pantalla completa</button>
       <span class="contador" id="contador">vuelta 1 de 10</span>
     </div>
@@ -76,12 +80,12 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
       <p>A la piscina le devolvieron su agua convertida en luz. La imagen solo puede llegar pasando por el elemento que al lugar le falta. Por eso la letra no está en la pared: está en lo que el agua hace con ella.</p>
     </div>
     <div>
-      <h2>El eco</h2>
-      <p>Cuando Rebeca tocó el agua, su imagen se deformó con ecos. Aquí cada gesto deja una estela que tarda en borrarse. El botón Eco la apaga.</p>
+      <h2>Lo que muestran los videos</h2>
+      <p>La luz rebota: no atraviesa el agua, se refleja en ella. Por eso una onda chica en la bandeja se vuelve una banda ancha en la pared, y el punto blanco de la lámpara tiembla con cada toque. Abajo, la bandeja muestra la misma imagen, más débil.</p>
     </div>
     <div>
       <h2>Una herramienta, no solo una imagen</h2>
-      <p>En pantalla completa, esta página puede proyectarse sobre una pared o dentro de la piscina. Es una manera de devolverle a la obra lo que la tipografía tomó de ella.</p>
+      <p>En pantalla completa, esta página puede proyectarse sobre una pared o dentro de la piscina. Con «Proyectar un video tuyo» puedes pasar por el agua el video de la obra; el archivo se queda en tu computadora.</p>
     </div>
   </section>
 </div>
@@ -102,12 +106,15 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     return;
   }
 
-  // --- El agua: una bandeja de 240 × 150 celdas ---------------------------------
+  // El trapecio de la proyección en la pared (coordenadas de 0 a 1, y hacia arriba).
+  var T = { arriba: 0.88, abajo: 0.30, izqA: 0.05, derA: 0.95, izqB: 0.19, derB: 0.81 };
+
+  // --- El agua de la bandeja: 240 × 150 celdas ------------------------------------
   var GW = 240, GH = 150;
   var h0 = new Float32Array(GW * GH), h1 = new Float32Array(GW * GH);
   var bytes = new Uint8Array(GW * GH * 4);
   function tocar(u, v, fuerza, radio) {
-    var cx = u * GW, cy = v * GH, r = radio || 3.2;
+    var cx = u * GW, cy = v * GH, r = radio || 4.5;
     for (var y = Math.max(1, Math.floor(cy - r * 2)); y < Math.min(GH - 1, cy + r * 2); y++)
       for (var x = Math.max(1, Math.floor(cx - r * 2)); x < Math.min(GW - 1, cx + r * 2); x++) {
         var dd = ((x - cx) * (x - cx) + (y - cy) * (y - cy)) / (r * r);
@@ -115,17 +122,12 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
       }
   }
   function propagar() {
-    var energia = 0;
     for (var y = 1; y < GH - 1; y++)
       for (var x = 1; x < GW - 1; x++) {
         var i = y * GW + x;
-        var n = (h1[i - 1] + h1[i + 1] + h1[i - GW] + h1[i + GW]) * 0.5 - h0[i];
-        n *= 0.992;
-        h0[i] = n;
-        energia += n < 0 ? -n : n;
+        h0[i] = ((h1[i - 1] + h1[i + 1] + h1[i - GW] + h1[i + GW]) * 0.5 - h0[i]) * 0.994;
       }
     var t = h0; h0 = h1; h1 = t;
-    return energia / (GW * GH);
   }
   function codificar() {
     for (var y = 0; y < GH; y++)
@@ -133,7 +135,7 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
         var i = y * GW + x, k = i * 4;
         var l = x > 0 ? h1[i - 1] : h1[i], r = x < GW - 1 ? h1[i + 1] : h1[i];
         var u = y > 0 ? h1[i - GW] : h1[i], d = y < GH - 1 ? h1[i + GW] : h1[i];
-        var gx = (r - l) * 60, gy = (d - u) * 60, lap = (l + r + u + d - 4 * h1[i]) * 90;
+        var gx = (r - l) * 55, gy = (d - u) * 55, lap = (l + r + u + d - 4 * h1[i]) * 110;
         bytes[k] = Math.max(0, Math.min(255, 128 + gx));
         bytes[k + 1] = Math.max(0, Math.min(255, 128 + gy));
         bytes[k + 2] = Math.max(0, Math.min(255, 128 + lap));
@@ -141,7 +143,7 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
       }
   }
 
-  // --- WebGL -----------------------------------------------------------------------
+  // --- WebGL ---------------------------------------------------------------------------
   function shader(tipo, src) {
     var s = gl.createShader(tipo); gl.shaderSource(s, src); gl.compileShader(s);
     if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
@@ -156,35 +158,52 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
   var FS_ESCENA = [
     "precision mediump float;",
     "varying vec2 v;",
-    "uniform sampler2D uA, uB, uD, uPrev;",
-    "uniform float uMezcla, uEco;",
+    "uniform sampler2D uA, uB, uV, uD, uPrev;",
+    "uniform float uMezcla, uEco, uVideo;",
     "uniform vec2 uRes;",
+    "uniform vec4 uT1; uniform vec2 uT2;",           // arriba, abajo, izqA, derA ; izqB, derB
     "float h(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }",
     "float ruido(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);",
     "  return mix(mix(h(i), h(i + vec2(1.0, 0.0)), f.x), mix(h(i + vec2(0.0, 1.0)), h(i + vec2(1.0, 1.0)), f.x), f.y); }",
+    "vec2 aProyector(vec2 p){",
+    "  float t = (p.y - uT1.y) / (uT1.x - uT1.y);",
+    "  float izq = mix(uT2.x, uT1.z, t), der = mix(uT2.y, uT1.w, t);",
+    "  return vec2((p.x - izq) / (der - izq), t);",
+    "}",
+    "float luzEn(vec2 q){",
+    "  float t = mix(texture2D(uA, q).r, texture2D(uB, q).r, uMezcla);",
+    "  vec3 c = texture2D(uV, q).rgb;",
+    "  return mix(t, dot(c, vec3(0.3, 0.59, 0.11)) * 1.25, uVideo);",
+    "}",
     "void main(){",
-    "  vec4 d = texture2D(uD, v);",
-    "  vec2 des = (d.rg - 0.5) * 0.11;",
+    "  vec2 p = v;",
+    "  vec2 q = aProyector(p);",
+    "  float dentro = step(0.0, q.x) * step(q.x, 1.0) * step(0.0, q.y) * step(q.y, 1.0);",
+    "  vec4 d = texture2D(uD, clamp(q, 0.0, 1.0));",
+    "  vec2 des = (d.rg - 0.5) * 0.16;",                 // la luz rebota: la pendiente cuenta el doble
     "  float caus = d.b - 0.5;",
-    "  vec2 uv = v + des;",
-    "  float la = texture2D(uA, uv).r, lb = texture2D(uB, uv).r;",
-    "  float dx = 1.5 / uRes.x;",
-    "  float halo = (texture2D(uA, uv + vec2(dx, 0.0)).r + texture2D(uA, uv - vec2(dx, 0.0)).r) * (1.0 - uMezcla)",
-    "             + (texture2D(uB, uv + vec2(dx, 0.0)).r + texture2D(uB, uv - vec2(dx, 0.0)).r) * uMezcla;",
-    "  float luz = mix(la, lb, uMezcla) * 0.85 + halo * 0.12;",
-    "  vec2 cono = abs(v - 0.5) * 2.0;",
-    "  float haz = (1.0 - smoothstep(0.75, 1.02, cono.x)) * (1.0 - smoothstep(0.7, 1.02, cono.y));",
-    "  float brillo = luz * (1.0 + caus * 2.2) + max(caus, 0.0) * 0.5 * haz + 0.035 * haz;",
-    "  vec2 p = vec2(v.x, 1.0 - v.y) * uRes;",
-    "  float lado = uRes.x / 22.0;",
-    "  vec2 q = mod(p, lado);",
-    "  float junta = clamp(step(q.x, 1.4) + step(q.y, 1.4), 0.0, 1.0);",
-    "  vec2 celda = floor(p / lado);",
-    "  float mancha = smoothstep(0.55, 0.9, ruido(v * vec2(7.0, 4.5)) * 0.6 + ruido(v * vec2(19.0, 13.0)) * 0.4);",
-    "  vec3 pared = vec3(0.10, 0.108, 0.104) * (0.85 + 0.3 * h(celda)) - mancha * vec3(0.05, 0.045, 0.05);",
-    "  pared = mix(pared, vec3(0.045, 0.05, 0.048), junta * 0.85);",
-    "  vec3 verde = vec3(0.49, 0.80, 0.39);",
-    "  vec3 col = pared + verde * brillo * (1.0 - junta * 0.3) * (1.0 - mancha * 0.4);",
+    "  vec2 uv = q + des;",
+    "  float luz = luzEn(uv) * 0.9 + 0.12;",
+    "  float brillo = luz * (1.0 + caus * 3.0) + max(caus, 0.0) * 0.6;",
+    "  vec2 lamp = vec2(0.56, 0.1) + des * 3.0;",          // el reflejo de la lámpara tiembla más que la imagen
+    "  float punto = exp(-dot((q - lamp) * vec2(1.0, 1.35), (q - lamp) * vec2(1.0, 1.35)) / 0.0009);",
+    "  float halo = exp(-dot(q - lamp, q - lamp) / 0.02) * 0.35;",
+    "  vec2 px = vec2(p.x, 1.0 - p.y) * uRes;",
+    "  float lado = uRes.x / 13.0;",
+    "  vec2 m = mod(px, lado);",
+    "  float junta = clamp(step(m.x, 1.6) + step(m.y, 1.6), 0.0, 1.0);",
+    "  vec2 celda = floor(px / lado);",
+    "  float mancha = smoothstep(0.55, 0.9, ruido(p * vec2(7.0, 4.5)) * 0.6 + ruido(p * vec2(19.0, 13.0)) * 0.4);",
+    "  vec3 pared = vec3(0.045, 0.06, 0.085) * (0.8 + 0.35 * h(celda)) - mancha * 0.02;",
+    "  pared = mix(pared, vec3(0.02, 0.028, 0.04), junta * 0.8);",
+    "  vec3 verde = vec3(0.16, 0.92, 0.50);",
+    "  float borde = smoothstep(0.0, 0.012, q.x) * smoothstep(0.0, 0.012, 1.0 - q.x) * smoothstep(0.0, 0.02, q.y) * smoothstep(0.0, 0.012, 1.0 - q.y);",
+    "  vec3 col = pared + dentro * borde * (verde * brillo * (1.0 - junta * 0.4) * (1.0 - mancha * 0.35) + vec3(0.75, 1.0, 0.85) * (punto + halo));",
+    "  float enBandeja = step(0.07, p.y) * step(p.y, 0.2) * step(0.33, p.x) * step(p.x, 0.67);",
+    "  vec2 qb = vec2((p.x - 0.33) / 0.34, 1.0 - (p.y - 0.07) / 0.13);",
+    "  vec4 db = texture2D(uD, qb);",
+    "  float lb = luzEn(qb + (db.rg - 0.5) * 0.3);",
+    "  col += enBandeja * (vec3(0.04, 0.07, 0.07) + verde * lb * 0.22 + vec3(0.2, 0.3, 0.3) * exp(-dot(qb - vec2(0.56, 0.9), qb - vec2(0.56, 0.9)) / 0.004));",
     "  col = max(col, texture2D(uPrev, v).rgb * uEco);",
     "  gl_FragColor = vec4(col, 1.0);",
     "}"].join("\n");
@@ -202,25 +221,28 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 0, 0, 255]));
     return t;
   }
-  var texA = textura(), texB = textura(), texD = textura();
+  var texA = textura(), texB = textura(), texD = textura(), texV = textura();
   var fbos = [null, null], texF = [null, null];
   var W = 0, H = 0;
 
+  // La hoja que proyecta el proyector: el poema, en Contenedor.
+  var HW = 1200, HH = 800;
   var hoja = document.createElement("canvas"), hctx = hoja.getContext("2d");
   function pintarEstrofa(tex, texto) {
-    hoja.width = W; hoja.height = H;
-    hctx.fillStyle = "#000"; hctx.fillRect(0, 0, W, H);
+    hoja.width = HW; hoja.height = HH;
+    hctx.fillStyle = "#000"; hctx.fillRect(0, 0, HW, HH);
     var lineas = texto.split("\n");
     var largo = Math.max.apply(null, lineas.map(function (l) { return l.length; }));
-    var tam = Math.min(H / (lineas.length * 1.5 + 2.2), (W * 0.84) / (largo * 0.6));
+    var tam = Math.min(HH / (lineas.length * 1.5 + 2.4), (HW * 0.82) / (largo * 0.6));
     hctx.font = tam + "px Contenedor, 'Courier New', monospace";
     hctx.fillStyle = "#fff"; hctx.textBaseline = "middle";
     var alto = lineas.length * tam * 1.5;
     lineas.forEach(function (l, k) {
       var ancho = l.length * tam * 0.6;
-      hctx.fillText(l, (W - ancho) / 2, H / 2 - alto / 2 + tam * 1.5 * (k + 0.5));
+      hctx.fillText(l, (HW - ancho) / 2, HH / 2 - alto / 2 + tam * 1.5 * (k + 0.5));
     });
     gl.bindTexture(gl.TEXTURE_2D, tex);
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
@@ -230,7 +252,7 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
   function medir() {
     var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     var r = pared.getBoundingClientRect();
-    var w = Math.max(320, Math.round(r.width * dpr)), h = Math.max(200, Math.round(r.height * dpr));
+    var w = Math.max(320, Math.round(r.width * dpr)), h = Math.max(240, Math.round(r.height * dpr));
     if (w === W && h === H) return;
     W = w; H = h; lienzo.width = W; lienzo.height = H;
     for (var k = 0; k < 2; k++) {
@@ -242,8 +264,6 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
       gl.clearColor(0, 0, 0, 1); gl.clear(gl.COLOR_BUFFER_BIT);
     }
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    pintarEstrofa(texA, POEMA[estrofa]);
-    pintarEstrofa(texB, POEMA[(estrofa + 1) % POEMA.length]);
   }
 
   function atributo(p) {
@@ -251,20 +271,29 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
     gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 2, gl.FLOAT, false, 0, 0);
   }
-  var cual = 0, mezcla = 0, cambiando = false, eco = true, gotas = !quieto;
+  var cual = 0, mezcla = 0, cambiando = false, eco = true, gotas = !quieto, video = null;
   function cuadro() {
     gl.bindTexture(gl.TEXTURE_2D, texD);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, GW, GH, 0, gl.RGBA, gl.UNSIGNED_BYTE, bytes);
+    if (video && video.readyState >= 2) {
+      gl.bindTexture(gl.TEXTURE_2D, texV);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+    }
     gl.bindFramebuffer(gl.FRAMEBUFFER, fbos[cual]);
     gl.viewport(0, 0, W, H);
     gl.useProgram(progEscena); atributo(progEscena);
-    [["uA", texA], ["uB", texB], ["uD", texD], ["uPrev", texF[1 - cual]]].forEach(function (par, k) {
+    [["uA", texA], ["uB", texB], ["uV", texV], ["uD", texD], ["uPrev", texF[1 - cual]]].forEach(function (par, k) {
       gl.activeTexture(gl.TEXTURE0 + k); gl.bindTexture(gl.TEXTURE_2D, par[1]);
       gl.uniform1i(gl.getUniformLocation(progEscena, par[0]), k);
     });
     gl.uniform1f(gl.getUniformLocation(progEscena, "uMezcla"), mezcla);
     gl.uniform1f(gl.getUniformLocation(progEscena, "uEco"), eco ? 0.93 : 0.0);
+    gl.uniform1f(gl.getUniformLocation(progEscena, "uVideo"), video ? 1.0 : 0.0);
     gl.uniform2f(gl.getUniformLocation(progEscena, "uRes"), W, H);
+    gl.uniform4f(gl.getUniformLocation(progEscena, "uT1"), T.arriba, T.abajo, T.izqA, T.derA);
+    gl.uniform2f(gl.getUniformLocation(progEscena, "uT2"), T.izqB, T.derB);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     gl.useProgram(progCopia); atributo(progCopia);
@@ -274,12 +303,12 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     cual = 1 - cual;
   }
 
-  // --- El ciclo: cada vuelta pasa por el agua ------------------------------------
+  // --- El ciclo: cada vuelta pasa por el agua ----------------------------------------
   var desdeVuelta = 0, proximaGota = 3;
   function otraVuelta() {
-    if (cambiando) return;
+    if (cambiando || video) return;
     cambiando = true; mezcla = 0;
-    tocar(0.5, 0.5, quieto ? 0 : 9, 6);
+    tocar(0.5, 0.35, quieto ? 0 : 8, 7);
   }
   function terminarVuelta() {
     estrofa = (estrofa + 1) % POEMA.length;
@@ -295,8 +324,8 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     desdeVuelta += dt;
     if (gotas && !cambiando) {
       proximaGota -= dt;
-      if (proximaGota <= 0) { tocar(0.15 + Math.random() * 0.7, 0.15 + Math.random() * 0.7, 2.5 + Math.random() * 3); proximaGota = 2.5 + Math.random() * 4.5; }
-      if (desdeVuelta > 16) otraVuelta();
+      if (proximaGota <= 0) { tocar(0.1 + Math.random() * 0.8, 0.15 + Math.random() * 0.75, 2 + Math.random() * 3); proximaGota = 2.5 + Math.random() * 4.5; }
+      if (desdeVuelta > 16 && !video) otraVuelta();
     }
     if (cambiando) { mezcla = Math.min(1, mezcla + dt / (quieto ? 0.8 : 2.6)); if (mezcla >= 1) terminarVuelta(); }
     propagar(); propagar();
@@ -305,11 +334,14 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
     requestAnimationFrame(bucle);
   }
 
-  // --- Tocar -------------------------------------------------------------------------
+  // --- Tocar: se toca la luz en la pared y se mueve el agua de la bandeja ------------
   var tocando = false;
   function punto(ev) {
     var r = lienzo.getBoundingClientRect();
-    return [(ev.clientX - r.left) / r.width, 1 - (ev.clientY - r.top) / r.height];
+    var x = (ev.clientX - r.left) / r.width, y = 1 - (ev.clientY - r.top) / r.height;
+    var t = (y - T.abajo) / (T.arriba - T.abajo);
+    var izq = T.izqB + (T.izqA - T.izqB) * t, der = T.derB + (T.derA - T.derB) * t;
+    return [Math.max(0, Math.min(1, (x - izq) / (der - izq))), Math.max(0, Math.min(1, t))];
   }
   pared.addEventListener("pointerdown", function (ev) {
     tocando = true; pared.setPointerCapture(ev.pointerId);
@@ -318,7 +350,7 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
   });
   pared.addEventListener("pointermove", function (ev) {
     if (!tocando) return;
-    var p = punto(ev); tocar(p[0], p[1], 2.2, 2.4);
+    var p = punto(ev); tocar(p[0], p[1], 2.2, 3.4);
   });
   pared.addEventListener("pointerup", function () { tocando = false; });
   pared.addEventListener("pointercancel", function () { tocando = false; });
@@ -331,14 +363,37 @@ button[aria-pressed="true"] { border-color: var(--agua); color: var(--agua); }
   document.getElementById("completa").addEventListener("click", function () {
     if (pared.requestFullscreen) pared.requestFullscreen().catch(function () {});
   });
+
+  // Un video propio: se proyecta a través del agua y no sale de la computadora.
+  var alPoema = document.getElementById("al-poema");
+  document.getElementById("video-propio").addEventListener("change", function (ev) {
+    var f = ev.target.files && ev.target.files[0];
+    if (!f) return;
+    if (video) { video.pause(); URL.revokeObjectURL(video.src); }
+    video = document.createElement("video");
+    video.src = URL.createObjectURL(f); video.loop = true; video.playsInline = true; video.muted = false;
+    video.play().catch(function () { video.muted = true; video.play().catch(function () {}); });
+    alPoema.hidden = false; contador.textContent = f.name;
+    lectura.textContent = "Proyectando un video a través del agua.";
+  });
+  alPoema.addEventListener("click", function () {
+    if (video) { video.pause(); URL.revokeObjectURL(video.src); video = null; }
+    alPoema.hidden = true; document.getElementById("video-propio").value = "";
+    contador.textContent = "vuelta " + (estrofa + 1) + " de " + POEMA.length;
+    lectura.textContent = POEMA[estrofa];
+  });
   window.addEventListener("resize", medir);
   document.addEventListener("fullscreenchange", function () { setTimeout(medir, 60); });
 
   contador.textContent = "vuelta 1 de " + POEMA.length;
-  var arrancar = function () { medir(); requestAnimationFrame(bucle); };
-  if (document.fonts && document.fonts.load) {
-    document.fonts.load("40px Contenedor").then(arrancar, arrancar);
-  } else arrancar();
+  var arrancar = function () {
+    medir();
+    pintarEstrofa(texA, POEMA[0]);
+    pintarEstrofa(texB, POEMA[1 % POEMA.length]);
+    requestAnimationFrame(bucle);
+  };
+  if (document.fonts && document.fonts.load) document.fonts.load("40px Contenedor").then(arrancar, arrancar);
+  else arrancar();
 })();
 </script>
 </html>

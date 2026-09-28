@@ -9,6 +9,8 @@ El 28 de septiembre de 2026 dijiste que la primera versión era una aproximació
 - Un mapa de otras vasijas posibles.
 - Contenedor, la fuente de la primera versión, sigue en el repositorio, pero ahora es una pieza más y no el proyecto entero.
 
+Después mandaste fotos y videos de la obra. Con ellos las piezas se ajustaron a lo que pasó de verdad y se sumó una cuarta, **Espalda** (§ 3.9). El marco de cuatro ejes que enviaste más tarde tiene su propio documento: `04_ruina.md`.
+
 Las páginas de la tesis que se citan son las de su índice.
 
 ## 3.1. Qué tenía de convencional la primera versión
@@ -43,9 +45,9 @@ Se conserva lo que sí funcionaba: la verificación de las fuentes, la decisión
 
 *Contener una ruina* ya trata de una vasija que no retiene: la piscina vacía, el vaso del monolito, el recipiente que chorrea sobre la boca. La tesis advierte contra la botella que guarda una cultura quieta. Las dos cosas empujan en la misma dirección: aquí la letra no puede quedar guardada. Solo existe de paso: por el agua, por la voz, por el desgaste. Cada pieza es una de esas travesías.
 
-## 3.4. Las tres piezas
+## 3.4. Las piezas
 
-Están en `vasijas/` y se abren en cualquier navegador, sin servidor.
+Están en `vasijas/` y se abren en cualquier navegador, sin servidor. Eran tres; con la foto de espalda se sumó una cuarta.
 
 ### Tocas el agua (luz y agua) · `vasijas/agua.html`
 
@@ -53,6 +55,7 @@ Están en `vasijas/` y se abren en cualquier navegador, sin servidor.
 - **Qué hace:** el poema nunca se muestra directo. Llega como luz refractada por una superficie de agua simulada y cae sobre una pared de azulejos. Tocar la imagen perturba el agua y la letra se deforma con estela. Cada estrofa entra atravesando el agua; el ciclo sigue solo, con gotas que caen solas.
 - **Cómo está hecha:** una simulación de onda de 240 × 150 celdas y un sombreador WebGL que desplaza la imagen del texto según la pendiente del agua. Las cáusticas salen de la curvatura. El eco es una imagen que se realimenta.
 - **Qué se puede hacer con ella:** en pantalla completa se puede proyectar en la piscina.
+- **Con los videos:** la luz no atraviesa el agua, rebota en ella. La imagen llega a la pared en trapecio, con el reflejo de la lámpara encima, y la bandeja muestra abajo la misma imagen, más débil. La pieza ahora reproduce esa geometría, y el botón «Proyectar un video tuyo» pasa cualquier video por el agua sin que el archivo salga de la computadora.
 
 ### La voz sobre la placa (voz y metal) · `vasijas/placa.html` y `vasijas/placa/`
 
@@ -68,7 +71,7 @@ Están en `vasijas/` y se abren en cualquier navegador, sin servidor.
   - Una vocal con tilde suena más fuerte y lleva doble borde. El espacio es una placa vacía: un silencio.
   - Filas y columnas quedan a la misma distancia, de modo que un texto en Placa es una pared de azulejos, o un cuerpo cubierto de relieves (`placa/lamina.png`).
 - **Por qué importa:** frente al calendario que nadie supo traducir, Placa es una partitura: leerla es cantarla.
-- **Qué falta:** la voz es sintetizada. Con el audio del video, la placa podría responder al canto real.
+- **El canto real:** en los videos, el canto es un zumbido de unos 225 Hz (un la grave) con su octava encima, que oscila unos pocos hercios, y debajo un golpe doble cada dos segundos y medio. `placa/canto.json` guarda solo ese contorno (altura, intensidad y golpes cada 50 ms), no el audio. «Escuchar el canto sobre la placa» lo vuelve a cantar y lo transcribe en la Lámina II: casi todo cae en la figura de la q, la de «quedó». No es que el canto diga q: es que esta escritura lo oye así. También se puede cargar el video o el audio de la obra y la placa lo escucha mientras suena; el análisis se hace en la página.
 
 ### La cadena (tiempo y materia) · `vasijas/cadena.html`
 
@@ -86,12 +89,19 @@ Están en `vasijas/` y se abren en cualquier navegador, sin servidor.
 
   **Otra vuelta** parte de la pared y no de la piedra, así que ninguna vuelta repite a la anterior.
 - **Qué se puede hacer con ella:** series para risografía, o una secuencia de proyección.
+- **Con una foto:** «O una foto» convierte una imagen propia en la piedra de la primera vuelta.
+
+### Espalda (cuerpo y página) · `vasijas/espalda.html`
+
+- **De la obra:** la foto de espalda. Las placas de aluminio no cubren el cuerpo: lo marcan en ocho lugares, con piel entre una y otra.
+- **Qué hace:** las ocho placas son marcos de texto enlazados. El poema entra por la placa grande del centro y sigue por los hombros, los brazos y la cintura, en el orden en que se lee un cuerpo. Lo que no cabe se derrama por debajo. Cada placa se repuja con su parte del texto, y «Revés» la muestra como la ve la mano que la trabaja.
+- **Cómo está hecha:** el contorno de cada placa se tomó de la foto, en sus coordenadas. De la foto se usó solo la disposición; la imagen no está en la página. Contenedor corta por palabras; Placa, en cualquier signo, y tiene su propio tamaño para que el poema recorra las ocho placas.
 
 ## 3.5. Otras vasijas posibles (no hechas)
 
 | Vasija | Propuesta | Necesita |
 |---|---|---|
-| Cuerpo | Repujar el poema en placas de aluminio y distribuirlas sobre un cuerpo; el orden de lectura sería el recorrido del cuerpo. El repujado se trabaja por el revés, así que la letra se dibuja invertida, como en un tipo de imprenta | A Rebeca y a CreaciónxAcuerpamiento |
+| Cuerpo | Repujar de verdad las placas que Espalda compone y ponerlas sobre un cuerpo que se mueve. El repujado se trabaja por el revés, así que la letra se dibuja invertida, como en un tipo de imprenta | A Rebeca y a CreaciónxAcuerpamiento |
 | Sitio | Azulejos de cerámica con signos de Placa, sueltos en el fondo de la piscina como las baldosas oscuras que se leían como peces | Un taller de cerámica y permiso del edificio |
 | Piel | Una hoja de tatuajes con signos de Placa para Artefacto Tatuajes, el lugar donde los signos se inciden en la piel | El estudio |
 | Archivo | Contenedor (§ 1 y § 2) queda como la letra del archivo: la matriz de las máquinas que registran | Nada; ya está |
@@ -100,22 +110,32 @@ Están en `vasijas/` y se abren en cualquier navegador, sin servidor.
 
 Es el esquema de la tesis aplicado a este caso.
 
-1. **Inmersión.** Ya tienes la tarde en el patio, el poema y el dibujo. Faltan el video, las fotos y el escaneo de la lámina.
+1. **Inmersión.** Ya tienes la tarde en el patio, el poema, el dibujo, las fotos y los videos. Falta el escaneo de la lámina.
 2. **Diálogo.** Con Rebeca Paz y CreaciónxAcuerpamiento; con quienes estuvieron esa tarde (uno escribió que la pieza lo devolvió a «nuestro envase convulso: el cuerpo»); y con hablantes de aimara, para todo lo que toque la lengua.
-3. **Experimentación.** Las tres piezas, y las que salgan de probarlas con esa gente.
+3. **Experimentación.** Las cuatro piezas, y las que salgan de probarlas con esa gente.
 4. **Producción.** Proyección en la piscina, risografía, placas repujadas, azulejos. La tesis pregunta si el modelo puede seguir funcionando sin el diseñador; aquí cada pieza debería poder quedarse con quien la use.
 
 ## 3.7. Cuidados
 
-- **No imitar la iconografía de Tiwanaku.** Se traducen procesos, no motivos. Ningún glifo copia el signo «pez» ni el escalonado.
+- **No imitar la iconografía de Tiwanaku.** Se traducen procesos, no motivos. Ninguna pieza nueva copia el signo «pez» ni el escalonado. Queda uno de la primera versión: el calderón (¶) de Contenedor es el signo escalonado (§ 2). Ruina lo cambia por un calderón de imprenta dibujado en la retícula.
+- **Las fotos, los videos y el audio son de la obra.** No se incrustan en las páginas ni se suben al repositorio. Se usan datos derivados (el contorno del canto, la disposición de las placas) y cargadores locales: quien tenga los archivos puede abrirlos en las piezas, y no salen de su computadora.
 - **La obra es de Rebeca Paz.** Antes de mostrar esto afuera, conviene enseñárselo, preguntarle y acreditarla. Archer lo dice así: mostrarlo como propuesta y por pasos.
 - **Nombrar es otra manera de enterrar.** Lo dice el poema, y por eso ninguna pieza se llama Kochamama.
 - **Tu lugar es el de espectador.** Como la autora de la tesis frente a la escritura sora, estás afuera de la obra que traduces. Conviene decirlo en cualquier texto público.
 
 ## 3.8. Qué haría falta de ti
 
-- El video de la obra, o al menos el audio del canto.
-- Fotos del montaje y de la acción, y el carrusel.
 - El escaneo de la lámina de Posnansky, para el pie textual (§ 1).
-- Hablar con Rebeca.
-- Los otros cinco libros técnicos, que siguen sin llegar.
+- Hablar con Rebeca, y mostrarle las piezas antes de publicarlas.
+- Los otros cinco libros técnicos, que siguen sin llegar. Si son los seis cuadernos de *A Typographic Quest*, de Carl Dair, sirven también para cotejar las páginas que cita el marco (§ 4).
+
+## 3.9. Lo que trajeron las fotos y los videos
+
+| Material | Qué mostró | Dónde entró |
+|---|---|---|
+| Videos de la proyección | La luz rebota en la bandeja, no la atraviesa. La imagen llega en trapecio, con el reflejo de la lámpara, y la bandeja repite la imagen más débil | Tocas el agua |
+| Audio de los videos | Un zumbido de unos 225 Hz con su octava, que oscila unos pocos hercios, y un golpe doble cada dos segundos y medio | La voz sobre la placa (`placa/canto.json`, Lámina II) |
+| Foto de espalda | Ocho placas separadas por piel, no un traje entero | Espalda |
+| Las otras dos fotos | Una placa repujada sola, sobre negro, y otra apoyada contra la pared de azulejos, sobre las baldosas chicas del piso. El relieve del aluminio tiene los bordes blandos, con brillo de un lado y sombra del otro | Ruina: el eje de repujado y la retícula (§ 4) |
+
+Nada de ese material está en el repositorio ni en las páginas publicadas (§ 3.7).

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ruina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<style>
+@font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
+@font-face { font-family: "Ruina"; src: url("{{RUINA}}") format("woff2"); font-display: block; }
+:root {
+  --noche: #0F1110;
+  --panel: #161918;
+  --linea: #2B302E;
+  --luz: #E4E6E1;
+  --tenue: #9AA19E;
+  --plata: #CDD3D1;
+  --fosforo: #8CFF6B;
+  --azulejo: #4C5952;
+  --c: "Contenedor", "Courier New", monospace;
+  --r: "Ruina", "Courier New", monospace;
+  --t: "Newsreader", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--noche); color: var(--luz); }
+body { font-family: var(--t); font-size: 18px; line-height: 1.55; }
+.pagina { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 64px; }
+.c { font-family: var(--c); font-synthesis: none; }
+.r { font-family: var(--r); font-synthesis: none; font-kerning: normal; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-color: var(--linea); }
+a:hover { text-decoration-color: var(--plata); }
+:focus-visible { outline: 2px solid var(--fosforo); outline-offset: 3px; }
+.volver { font-family: var(--c); font-size: 15px; color: var(--tenue); text-decoration: none; }
+.rotulo { font-family: var(--c); font-size: 15px; color: var(--tenue); line-height: 1.3; }
+.cabeza { display: grid; gap: 16px; }
+h1 { font-family: var(--r); font-weight: normal; font-size: clamp(72px, 15vw, 190px); line-height: 1; margin: 0; font-synthesis: none; }
+h2 { font-family: var(--c); font-weight: normal; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; margin: 0; text-wrap: balance; }
+h3 { font-family: var(--c); font-weight: normal; font-size: 21px; line-height: 1.2; margin: 0; }
+.dek { margin: 0; color: var(--tenue); font-size: 20px; max-width: 64ch; }
+.dek em, .prosa em { color: var(--luz); }
+.seccion { display: grid; gap: 26px; }
+.seccion > header { display: grid; gap: 10px; max-width: 68ch; }
+.seccion > header p { margin: 0; color: var(--tenue); }
+
+@media (prefers-reduced-motion: no-preference) {
+  h1 { animation: gasto 18s ease-in-out infinite; }
+  @keyframes gasto {
+    0%, 100% { font-variation-settings: "EROD" 0, "REFL" 0, "ONDA" 0, "GRID" 0; }
+    35% { font-variation-settings: "EROD" 0, "REFL" 100, "ONDA" 20, "GRID" 0; }
+    70% { font-variation-settings: "EROD" 85, "REFL" 40, "ONDA" 45, "GRID" 60; }
+  }
+}
+
+/* --- Probador ------------------------------------------------------------- */
+.probador { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 28px; align-items: start; }
+.muestra {
+  font-family: var(--r); font-kerning: normal; font-synthesis: none;
+  font-size: 64px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere;
+  min-height: 5.2em; padding: 22px 24px; background: var(--panel); border: 1px solid var(--linea);
+  outline: none; color: var(--luz);
+}
+.muestra:focus-visible { border-color: var(--tenue); }
+.mandos { display: grid; gap: 22px; align-content: start; }
+.grupo { display: grid; gap: 10px; }
+.grupo > .rotulo { margin: 0; }
+.botones { display: flex; flex-wrap: wrap; gap: 8px; }
+button {
+  font-family: var(--c); font-size: 15px; line-height: 1; color: var(--luz); background: transparent;
+  border: 1px solid var(--linea); padding: 10px 12px 9px; cursor: pointer;
+}
+button:hover { border-color: var(--tenue); }
+button[aria-pressed="true"] { background: var(--luz); color: var(--noche); border-color: var(--luz); }
+.deslizador { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline; }
+.deslizador label { font-family: var(--c); font-size: 15px; color: var(--tenue); }
+.deslizador label b { font-weight: normal; color: var(--luz); }
+.deslizador output { font-family: var(--c); font-size: 15px; min-width: 3ch; text-align: right; }
+.deslizador input { grid-column: 1 / -1; width: 100%; accent-color: var(--plata); margin: 0; }
+.nota { margin: 0; color: var(--tenue); font-size: 16px; }
+
+/* --- Ejes ----------------------------------------------------------------- */
+.ejes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 18px; }
+.eje { display: grid; gap: 14px; align-content: start; padding: 22px; background: var(--panel); border: 1px solid var(--linea); }
+.eje .cab { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+.eje .tag { font-family: var(--c); font-size: 15px; color: var(--tenue); }
+.eje p { margin: 0; color: var(--tenue); font-size: 17px; }
+.eje p.idea { color: var(--luz); font-style: italic; }
+.tira { display: grid; gap: 2px; }
+.tira figure { margin: 0; display: grid; grid-template-columns: 8.6em minmax(0, 1fr); gap: 10px; align-items: center; }
+.tira .r { font-size: clamp(28px, 6.5vw, 44px); line-height: 1.4; white-space: nowrap; overflow: hidden; }
+.tira figcaption { order: -1; font-family: var(--c); font-size: 13px; color: var(--tenue); }
+
+/* --- Quiebres y signos ---------------------------------------------------- */
+.lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 0 36px; }
+.lista figure { margin: 0; display: grid; gap: 8px; align-content: start; padding-block: 18px; border-top: 1px solid var(--linea); }
+.lista .r { font-size: clamp(36px, 8vw, 56px); line-height: 1.5; white-space: nowrap; overflow: hidden; }
+.lista figcaption { color: var(--tenue); font-size: 17px; }
+.lista figcaption b { font-family: var(--c); font-weight: normal; color: var(--luz); }
+
+/* --- La página (sección VI del marco) ------------------------------------- */
+.hoja {
+  container-type: inline-size;
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(120% 70% at 30% 35%, rgba(255,255,255,0.05), transparent 70%),
+    var(--azulejo);
+  color: var(--plata);
+  margin-inline: calc(50% - 50vw + 20px);
+  min-width: 0;
+}
+.hoja-marco { container-type: inline-size; }
+.hoja .cuerpo {
+  font-family: var(--r); font-kerning: normal; font-synthesis: none;
+  font-size: clamp(13px, 1.32cqi, 21px); line-height: 1.8;
+  margin-left: 13cqi; margin-right: 26cqi; padding-block: 20cqi 26cqi;
+  width: max-content; max-width: calc(100cqi - 13cqi - 26cqi);
+}
+.hoja p { margin: 0; }
+.hoja .titulo { color: var(--fosforo); font-size: 2.2em; line-height: 1.25; }
+.hoja .subtitulo { color: var(--fosforo); margin-bottom: 3.6em; }
+.hoja .estrofa { margin-bottom: 1.8em; }
+.hoja .verso { display: block; padding-left: 1.7em; text-indent: -1.7em; }
+.hoja .plata {
+  background: linear-gradient(180deg, #EEF1F0 0%, #BCC4C1 55%, #E2E6E4 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hoja .verde { color: var(--fosforo); }
+.hoja .agua { font-variation-settings: "ONDA" 45; }
+.hoja .firma { margin-top: 3.2em; font-size: 0.72em; color: #AEB6B2; }
+.hoja .nivel { margin-top: 1.4em; color: rgba(205, 211, 209, 0.45); white-space: nowrap; overflow: hidden; }
+.hoja .suelto {
+  position: absolute; font-family: var(--r); font-kerning: normal; color: #B9C1BD;
+  font-size: calc(clamp(13px, 1.32cqi, 21px) * 1.5); line-height: 1; opacity: 0.85;
+  font-variation-settings: "REFL" 100, "GRID" 100;
+}
+.hoja .s1 { right: 11cqi; top: 21%; transform: rotate(-7deg); }
+.hoja .s2 { right: 17cqi; top: 44%; transform: rotate(5deg); }
+.hoja .s3 { right: 8cqi; top: 67%; transform: rotate(-4deg); }
+.hoja .s4 { right: 14cqi; top: 86%; transform: rotate(9deg); }
+@media (max-width: 760px) {
+  .hoja .cuerpo { font-size: 13px; margin-left: 7cqi; margin-right: 12cqi; max-width: calc(100cqi - 19cqi); }
+  .hoja .s1, .hoja .s3 { right: 3cqi; }
+  .hoja .s2, .hoja .s4 { right: 6cqi; }
+}
+
+/* --- Del marco a la fuente ------------------------------------------------ */
+.cambios { display: grid; }
+.cambio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 8px 36px; padding-block: 16px; border-top: 1px solid var(--linea); }
+.cambio:last-child { border-bottom: 1px solid var(--linea); }
+.cambio p { margin: 0; }
+.cambio .antes { color: var(--tenue); }
+.cambio .antes b { font-family: var(--c); font-weight: normal; color: var(--luz); display: block; font-size: 15px; margin-bottom: 4px; }
+.prosa { max-width: 66ch; }
+.prosa p { margin: 0 0 0.8em; }
+.pie { display: grid; gap: 8px; color: var(--tenue); font-size: 16px; border-top: 1px solid var(--linea); padding-top: 22px; max-width: 76ch; }
+.pie p { margin: 0; }
+
+@media (max-width: 900px) {
+  .probador { grid-template-columns: minmax(0, 1fr); }
+  .muestra { font-size: 40px; }
+  .cambio { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Solo la hoja, para capturarla como imagen: ruina.html#solo-hoja */
+body.solo-hoja { background: var(--azulejo); }
+body.solo-hoja .pagina { max-width: none; padding: 0; display: block; }
+body.solo-hoja .pagina > :not(#pagina) { display: none; }
+body.solo-hoja #pagina > header, body.solo-hoja #pagina > .nota { display: none; }
+body.solo-hoja .hoja { margin-inline: 0; }
+</style>
+
+<div class="pagina" lang="es">
+  <a class="volver" href="index.html">← Vasijas</a>
+
+  <header class="cabeza">
+    <div class="rotulo">Contener una ruina · tipografía · el marco de cuatro ejes</div>
+    <h1>Ruina</h1>
+    <p class="dek">Una fuente variable con cuatro ejes. Cada eje es una fase material de la obra: la piedra que se erosiona, el aluminio que se repuja, el agua que desplaza, la retícula de la piscina que se suelta. Sale del marco que enviaste después de Vasijas; lo que cambió, y por qué, está al final.</p>
+  </header>
+
+  <section class="probador" aria-label="Probador">
+    <div class="muestra" id="muestra" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="Texto de prueba, editable">Tocas el agua y la diosa se deforma.
+No se salvó la piedra,
+de la boca sale un signo.</div>
+    <div class="mandos">
+      <div class="grupo">
+        <p class="rotulo">Instancias</p>
+        <div class="botones" id="instancias" role="group" aria-label="Instancias"></div>
+      </div>
+      <div class="grupo" id="deslizadores"></div>
+      <div class="grupo">
+        <p class="rotulo">Funciones</p>
+        <div class="botones" role="group" aria-label="Funciones OpenType">
+          <button type="button" data-f="calt" aria-pressed="true">Vueltas y boca</button>
+          <button type="button" data-f="kern" aria-pressed="true">Quiebres</button>
+          <button type="button" data-f="liga" aria-pressed="true">Ligaduras</button>
+        </div>
+      </div>
+      <div class="grupo">
+        <div class="botones"><button type="button" id="ciclo" aria-pressed="false">Termina y empieza</button></div>
+        <p class="nota">Recorre las fases una tras otra: piedra, incisión, repujado, intemperie, polvo, y vuelta a la piedra.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-ejes">
+    <header>
+      <h2 id="t-ejes">Cuatro ejes</h2>
+      <p>En lugar de redonda, negrita y cursiva, cuatro fases de la obra. Cada eje va de 0 a 100 y se mezclan. Ninguna letra se dibujó a mano: las cuatro fases salen de las mismas reglas aplicadas a la retícula de Contenedor.</p>
+    </header>
+    <div class="ejes">
+      <article class="eje">
+        <div class="cab"><h3>Erosión</h3><span class="tag">EROD</span></div>
+        <p class="idea">La piedra a la intemperie: un relieve que se va borrando.</p>
+        <div class="tira">
+          <figure><span class="r" style="font-variation-settings:'EROD' 0">piedra</span><figcaption>0 · Piedra</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'EROD' 50">piedra</span><figcaption>50 · Intemperie</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'EROD' 100">piedra</span><figcaption>100 · Polvo</figcaption></figure>
+        </div>
+        <p>En 0 las placas encajan como sillares, con una junta mínima. Cada trazo termina en un corte a 45° y cada unión tiene una trampa en su rincón. En 50 las juntas se abren y las esquinas se desprenden. En 100 desaparecen las placas menos resistentes y las demás quedan como incisiones en la dirección del trazo. Los extremos resisten menos: la letra se gasta por las puntas.</p>
+      </article>
+      <article class="eje">
+        <div class="cab"><h3>Repujado</h3><span class="tag">REFL</span></div>
+        <p class="idea">El asperón reemplazado por papel de aluminio de cocina.</p>
+        <div class="tira">
+          <figure><span class="r" style="font-variation-settings:'REFL' 0">manos</span><figcaption>0 · Piedra</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'REFL' 50">manos</span><figcaption>50 · Incisión</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'REFL' 100">manos</span><figcaption>100 · Repujado</figcaption></figure>
+        </div>
+        <p>Cada placa sabe con quién se toca. Por eso en 50 una incisión corre por el esqueleto de la letra, de placa en placa, y se detiene antes de cada extremo. En 100 se desdobla en dos líneas, una fina del lado de la luz y una gruesa del lado de la sombra, y el prensado achaflana las esquinas. Se ve desde unos 40 píxeles; más chica, la letra vuelve a ser piedra.</p>
+      </article>
+      <article class="eje">
+        <div class="cab"><h3>Onda</h3><span class="tag">ONDA</span></div>
+        <p class="idea">La luz verde que atraviesa la bandeja de agua antes de llegar a la pared.</p>
+        <div class="tira">
+          <figure><span class="r" style="font-variation-settings:'ONDA' 0">flotar</span><figcaption>0</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'ONDA' 50">flotar</span><figcaption>50</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'ONDA' 100">flotar</span><figcaption>100 · Refracción</figcaption></figure>
+        </div>
+        <p>Cada fila de placas se corre a los lados y cada columna sube o baja, siguiendo una onda. Los fustes rectos se escalonan; en 100 la palabra casi se deshace. La fase cambia en cada una de las cuatro vueltas, así que dos letras iguales nunca ondulan igual. El agua mueve las placas, no las deforma.</p>
+      </article>
+      <article class="eje">
+        <div class="cab"><h3>Retícula</h3><span class="tag">GRID</span></div>
+        <p class="idea">El fondo de la piscina, con azulejos que se soltaron.</p>
+        <div class="tira">
+          <figure><span class="r" style="font-variation-settings:'GRID' 0">azulejo</span><figcaption>0</figcaption></figure>
+          <figure><span class="r" style="font-variation-settings:'GRID' 100">azulejo</span><figcaption>100 · Deriva</figcaption></figure>
+        </div>
+        <p>En 0 la letra es monoespaciada: cada una ocupa seis azulejos y todas apoyan en la línea. En 100 cada letra ocupa solo lo que necesita, flota por encima o por debajo de la línea de base, y algunas placas se sueltan y caen, sobre todo las de los extremos y los peces de los acentos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-quiebres">
+    <header>
+      <h2 id="t-quiebres">Quiebres y signos</h2>
+      <p>El marco pide un ritmo sincopado: palabras que cortan o dilatan la línea, como el quiebre en el jazz. Aquí son cinco palabras del poema. Van en la función de espaciado (<span class="c">kern</span>) y en las alternativas contextuales (<span class="c">calt</span>), así que se aplican solas.</p>
+    </header>
+    <div class="lista">
+      <figure><div class="r">boca</div><figcaption><b>boca</b> · La o se sella: es el glifo-boca. A la boca la taparon.</figcaption></figure>
+      <figure><div class="r">agua</div><figcaption><b>agua</b> · Las letras suben y bajan, como vistas a través del agua. «Aguanta», que tiene agua adentro, no se quiebra.</figcaption></figure>
+      <figure><div class="r">piedra</div><figcaption><b>piedra</b> · Una falla: «pie» se queda y «dra» cae. Se mueve apenas, como la piedra.</figcaption></figure>
+      <figure><div class="r">ruinas</div><figcaption><b>ruina, ruinas</b> · Cada letra se hunde un poco más que la anterior.</figcaption></figure>
+      <figure><div class="r">voz</div><figcaption><b>voz</b> · Sale de abajo de la línea: se está desenterrando.</figcaption></figure>
+    </div>
+    <header>
+      <p>Los ornamentos no son florales ni motivos de Tiwanaku: salen de la puntuación, como en los ejercicios de estudiantes que el marco atribuye a Dair.</p>
+    </header>
+    <div class="lista">
+      <figure><div class="r" aria-label="paréntesis">()()()</div><figcaption><b>()</b> · Dos paréntesis enfrentados cierran una vasija con un pez adentro. Repetidos, escamas.</figcaption></figure>
+      <figure><div class="r" aria-label="corchetes">[][][]</div><figcaption><b>[]</b> · Dos corchetes cierran un azulejo vacío. Repetidos, la pared de la piscina.</figcaption></figure>
+      <figure><div class="r" aria-label="plecas">||||||||||||</div><figcaption><b>||</b> · Dos plecas se acuestan: el nivel del agua. Repetidas, la marca de hasta dónde llegaba.</figcaption></figure>
+      <figure><div class="r" aria-label="asterisco">* ◆ ●</div><figcaption><b>*</b> · El asterisco es el glifo-boca: un signo sellado que enmarca un pez. De la boca no sale un fonema, sale una placa.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="seccion" id="pagina" aria-labelledby="t-pagina">
+    <header>
+      <h2 id="t-pagina">La página</h2>
+      <p>El poema compuesto con las instrucciones del marco. Una columna angosta, en bandera. Fondo gris verdoso, el azulejo bajo el agua, y letra gris plateada, el aluminio. El verde fósforo va solo en el título y en los versos que nombran el agua y la voz desenterrada. Dos tercios de la página quedan vacíos, y en el margen exterior hay cuatro signos sueltos, girados, como baldosas desprendidas.</p>
+    </header>
+    <div class="hoja-marco">
+      <div class="hoja" id="hoja">
+        <div class="cuerpo">
+          <p class="titulo">Contener una ruina</p>
+          <p class="subtitulo">acciones para desenterrar una voz</p>
+{{POEMA_HOJA}}
+          <p class="firma plata">Poema de Joaquin Max Cuevas Ventura, escrito después de la acción de Rebeca Paz con CreaciónxAcuerpamiento.</p>
+          <p class="nivel" aria-hidden="true">||||||||||||||||||||||||||||||||||||||||||||||||</p>
+        </div>
+        <span class="suelto s1" aria-hidden="true">◆</span>
+        <span class="suelto s2" aria-hidden="true">()</span>
+        <span class="suelto s3" aria-hidden="true">*</span>
+        <span class="suelto s4" aria-hidden="true">◆</span>
+      </div>
+    </div>
+    <p class="nota">El poema no tiene título; la página lo encabeza con el de la obra, que además nombra la voz desenterrada. Los versos del agua llevan un poco de onda. En pantallas angostas los versos largos se parten con sangría, como en los libros de poesía.</p>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-marco">
+    <header>
+      <h2 id="t-marco">Del marco a la fuente</h2>
+      <p>Casi todo el marco se tomó tal como venía. Estos son los puntos donde la fuente hace otra cosa, o donde el marco necesita una corrección.</p>
+    </header>
+    <div class="cambios">
+      <div class="cambio"><p class="antes"><b>Nombre</b>«Ruina Variable» o «Kochamama Mono».</p><p>Ruina. El poema dice que ponerle nombre a la ídolo fue otra manera de enterrar; una fuente llamada Kochamama repetiría el gesto.</p></div>
+      <div class="cambio"><p class="antes"><b>Remates</b>Aletas de pez inspiradas en los bajorrelieves de Akapana; corchetes que arman el escalonado andino.</p><p>No. Es la iconografía que el mismo marco, con Morcos, pide no copiar. El pez queda como en Contenedor, un azulejo desprendido y girado, y los corchetes arman un azulejo.</p></div>
+      <div class="cambio"><p class="antes"><b>Ondulación</b>Juegos estilísticos (ss01, ss02) que cambian trazos rectos por ondulados.</p><p>Un eje continuo, ONDA, porque el agua no tiene dos estados.</p></div>
+      <div class="cambio"><p class="antes"><b>Glifo-boca</b>En el punto final o en el asterisco.</p><p>En el asterisco y en la o de «boca». El punto sigue siendo un punto, para que el poema se pueda leer.</p></div>
+      <div class="cambio"><p class="antes"><b>Citas de la tesis</b>Cimática en las pp. 33–35, Sora Sompeng en las pp. 84–90, trampas de tinta en la p. 43.</p><p>La cimática está en el proyecto <em>Sonic</em>, en la parte de transmodalidad (p. 42 y siguientes). El estudio de Sora Sompeng está en <em>Ellipsis</em> (p. 154 y siguientes). La tesis no habla de trampas de tinta: las trampas de Ruina salen de la obra, no de la tesis.</p></div>
+      <div class="cambio"><p class="antes"><b>Wael Morcos</b>Habría acuñado «Frankenstein typography».</p><p>En la entrevista de la tesis, Morcos usa la expresión citando a Nadine Chahine.</p></div>
+      <div class="cambio"><p class="antes"><b>Dair</b>Páginas de los seis cuadernos de <em>A Typographic Quest</em>.</p><p>Sin verificar: de los seis libros que mencionaste llegó uno, el de Kimberly Elam. Si los otros son los de Dair, con subirlos se pueden cotejar las páginas.</p></div>
+      <div class="cambio"><p class="antes"><b>El monolito</b>«Asperón rojo de 1903».</p><p>Es de asperón colorado; 1903 es, según Posnansky, el año en que se excavó, no la edad de la piedra. Y que sus relieves sean un calendario es una hipótesis de Posnansky que la arqueología actual no acepta (ver <span class="c">01_verificacion_posnansky.md</span>).</p></div>
+      <div class="cambio"><p class="antes"><b>Licencia</b>Abierta.</p><p>Por definir. La SIL Open Font License es la opción habitual para fuentes libres; conviene decidirlo con Rebeca, porque la fuente sale de su obra.</p></div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <p>Sobre <em>Contener una ruina: acciones para desenterrar una voz</em>, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026). Poema: Joaquin Max Cuevas Ventura.</p>
+    <p>Ruina es un prototipo generado por programa a partir de la retícula de Contenedor: 144 caracteres y tres ligaduras, cuatro vueltas por letra y once maestros. Licencia por definir.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var EJES = [
+    { tag: "EROD", nombre: "Erosión" },
+    { tag: "REFL", nombre: "Repujado" },
+    { tag: "ONDA", nombre: "Onda" },
+    { tag: "GRID", nombre: "Retícula" }
+  ];
+  var INSTANCIAS = [
+    ["Piedra", {}],
+    ["Intemperie", { EROD: 50 }],
+    ["Polvo", { EROD: 100 }],
+    ["Incisión", { REFL: 50 }],
+    ["Repujado", { REFL: 100 }],
+    ["Refracción", { ONDA: 100 }],
+    ["Deriva", { GRID: 100 }],
+    ["Vuelve escrito", { EROD: 30, REFL: 100, ONDA: 40, GRID: 50 }]
+  ];
+  var muestra = document.getElementById("muestra");
+  var valores = { EROD: 0, REFL: 0, ONDA: 0, GRID: 0 };
+  var funciones = { calt: true, kern: true, liga: true };
+  var tam = 64;
+
+  if (location.hash === "#solo-hoja") document.body.classList.add("solo-hoja");
+
+  var contenedor = document.getElementById("deslizadores");
+  var entradas = {};
+  function deslizador(id, etiqueta, min, max, valor) {
+    var d = document.createElement("div");
+    d.className = "deslizador";
+    d.innerHTML = '<label for="' + id + '">' + etiqueta + '</label><output id="' + id + '-v" for="' + id + '">' + valor + '</output>' +
+      '<input type="range" id="' + id + '" min="' + min + '" max="' + max + '" step="1" value="' + valor + '">';
+    contenedor.appendChild(d);
+    return d.querySelector("input");
+  }
+  EJES.forEach(function (e) {
+    var input = deslizador("eje-" + e.tag, e.nombre + " <b>" + e.tag + "</b>", 0, 100, 0);
+    entradas[e.tag] = input;
+    input.addEventListener("input", function () {
+      parar();
+      valores[e.tag] = parseInt(input.value, 10);
+      aplicar();
+    });
+  });
+  var entradaTam = deslizador("tam", "Tamaño", 16, 200, tam);
+  entradaTam.addEventListener("input", function () { tam = parseInt(entradaTam.value, 10); aplicar(); });
+
+  function aplicar() {
+    muestra.style.fontVariationSettings = EJES.map(function (e) { return '"' + e.tag + '" ' + valores[e.tag]; }).join(", ");
+    muestra.style.fontFeatureSettings = '"calt" ' + (funciones.calt ? 1 : 0) + ', "liga" ' + (funciones.liga ? 1 : 0);
+    muestra.style.fontKerning = funciones.kern ? "normal" : "none";
+    muestra.style.fontSize = tam + "px";
+    EJES.forEach(function (e) {
+      entradas[e.tag].value = Math.round(valores[e.tag]);
+      document.getElementById("eje-" + e.tag + "-v").textContent = Math.round(valores[e.tag]);
+    });
+    document.getElementById("tam-v").textContent = tam;
+    var botones = document.querySelectorAll("#instancias button");
+    botones.forEach(function (b, i) {
+      var loc = INSTANCIAS[i][1];
+      var igual = EJES.every(function (e) { return Math.round(valores[e.tag]) === (loc[e.tag] || 0); });
+      b.setAttribute("aria-pressed", igual ? "true" : "false");
+    });
+  }
+
+  var caja = document.getElementById("instancias");
+  INSTANCIAS.forEach(function (par) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = par[0];
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function () {
+      parar();
+      EJES.forEach(function (e) { valores[e.tag] = par[1][e.tag] || 0; });
+      aplicar();
+    });
+    caja.appendChild(b);
+  });
+
+  document.querySelectorAll("[data-f]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var f = b.getAttribute("data-f");
+      funciones[f] = !funciones[f];
+      b.setAttribute("aria-pressed", funciones[f] ? "true" : "false");
+      aplicar();
+    });
+  });
+
+  // Termina y empieza: las fases una tras otra, y vuelta a la piedra.
+  var FASES = [
+    { EROD: 0, REFL: 0, ONDA: 0, GRID: 0 },
+    { EROD: 0, REFL: 50, ONDA: 10, GRID: 0 },
+    { EROD: 0, REFL: 100, ONDA: 25, GRID: 10 },
+    { EROD: 50, REFL: 100, ONDA: 40, GRID: 35 },
+    { EROD: 100, REFL: 60, ONDA: 60, GRID: 80 },
+    { EROD: 0, REFL: 0, ONDA: 0, GRID: 0 }
+  ];
+  var TRAMO = 4200;
+  var anim = null, inicio = 0;
+  var botonCiclo = document.getElementById("ciclo");
+  function suave(t) { return t * t * (3 - 2 * t); }
+  function cuadro(ahora) {
+    var t = (ahora - inicio) / TRAMO;
+    var i = Math.floor(t) % (FASES.length - 1);
+    var f = suave(t - Math.floor(t));
+    var a = FASES[i], b = FASES[i + 1];
+    EJES.forEach(function (e) { valores[e.tag] = a[e.tag] + (b[e.tag] - a[e.tag]) * f; });
+    aplicar();
+    anim = requestAnimationFrame(cuadro);
+  }
+  function parar() {
+    if (anim) cancelAnimationFrame(anim);
+    anim = null;
+    botonCiclo.setAttribute("aria-pressed", "false");
+  }
+  botonCiclo.addEventListener("click", function () {
+    if (anim) { parar(); return; }
+    botonCiclo.setAttribute("aria-pressed", "true");
+    inicio = performance.now();
+    anim = requestAnimationFrame(cuadro);
+  });
+
+  aplicar();
+})();
+</script>
+</html>

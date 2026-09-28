@@ -5,6 +5,7 @@
 <style>
 @font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
 @font-face { font-family: "Placa"; src: url("{{PLACA}}") format("woff2"); font-display: block; }
+@font-face { font-family: "Ruina Vuelve"; src: url("{{RUINA_MUESTRA}}") format("woff2"); font-display: block; }
 :root {
   --noche: #0F1110;
   --panel: #161918;
@@ -37,7 +38,7 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
 .seccion > header { display: grid; gap: 10px; max-width: 66ch; }
 .seccion > header p { margin: 0; color: var(--tenue); }
 
-.piezas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; }
+.piezas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; }
 .pieza { display: grid; gap: 14px; align-content: start; padding: 22px; background: var(--panel); border: 1px solid var(--linea); text-decoration: none; }
 .pieza:hover { border-color: var(--tenue); }
 .pieza .modo { font-family: var(--c); font-size: 15px; }
@@ -46,7 +47,10 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
 .agua .modo, .agua .ir { color: var(--agua); }
 .placa .modo, .placa .ir { color: var(--arena); }
 .cadena .modo, .cadena .ir { color: var(--asperon); }
+.espalda .modo, .espalda .ir { color: #C9CDD1; }
 .muestra-placa { font-family: "Placa", monospace; font-size: 30px; line-height: normal; color: var(--arena); overflow: hidden; white-space: nowrap; }
+.ruina .modo, .ruina .ir { color: #8CFF6B; }
+.muestra-ruina { font-family: "Ruina Vuelve", monospace; font-size: clamp(30px, 5.4vw, 60px); line-height: 1.35; color: var(--luz); overflow: hidden; white-space: nowrap; font-kerning: normal; }
 
 .cambios { display: grid; gap: 0; }
 .cambio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 8px 36px; padding-block: 18px; border-top: 1px solid var(--linea); }
@@ -83,7 +87,7 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
 
   <section class="seccion" aria-labelledby="t-piezas">
     <header>
-      <h2 id="t-piezas">Tres piezas</h2>
+      <h2 id="t-piezas">Cuatro piezas</h2>
       <p>No son productos terminados. Como las de <em>Ellipsis</em> en la tesis, son espacios abiertos para seguir probando.</p>
     </header>
     <div class="piezas">
@@ -100,6 +104,12 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
         <p>Cada letra es un modo de vibración de una placa de aluminio. La arena dibuja el signo y el canto se oye, pero no se lee. Incluye Placa, una escritura para componer.</p>
         <span class="ir">Entrar →</span>
       </a>
+      <a class="pieza espalda" href="espalda.html">
+        <span class="modo">Cuerpo y página</span>
+        <h3>Espalda</h3>
+        <p>Las ocho placas de la foto de espalda son marcos de texto enlazados. El poema entra por el centro y recorre el cuerpo; lo que no cabe se derrama. Repujado, con derecho y revés.</p>
+        <span class="ir">Entrar →</span>
+      </a>
       <a class="pieza cadena" href="cadena.html">
         <span class="modo">Tiempo y materia</span>
         <h3>La cadena</h3>
@@ -107,6 +117,20 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
         <span class="ir">Entrar →</span>
       </a>
     </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-ruina">
+    <header>
+      <h2 id="t-ruina">Ruina</h2>
+      <p>El marco de cuatro ejes que enviaste después pedía otra fuente. Ruina la construye con las mismas reglas de proceso: cada eje es una fase de la obra, y en reposo la letra es piedra.</p>
+    </header>
+    <a class="pieza ruina" href="ruina.html">
+      <span class="modo">Piedra, metal, agua y retícula</span>
+      <h3>Una fuente de cuatro ejes</h3>
+      <div class="muestra-ruina" aria-hidden="true">Contener una ruina</div>
+      <p>Erosión, repujado, onda y retícula. Cinco palabras del poema que se quiebran, ornamentos hechos de puntuación y el poema compuesto en una página, con las instrucciones del marco.</p>
+      <span class="ir">Entrar →</span>
+    </a>
   </section>
 
   <section class="seccion" aria-labelledby="t-cambios">
@@ -127,7 +151,7 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
       <p>Propuestas que todavía no están hechas. Casi todas necesitan a alguien más.</p>
     </header>
     <div class="propuestas">
-      <div><h3>Cuerpo</h3><p>Repujar el poema en placas de aluminio y distribuirlas sobre un cuerpo; el orden de lectura sería el recorrido del cuerpo. El repujado se trabaja por el revés, así que la letra se dibuja al revés, como en un tipo de imprenta. Necesita a Rebeca.</p></div>
+      <div><h3>Placas de verdad</h3><p>Espalda ya compone el poema sobre las placas. Falta repujarlas en aluminio, trabajadas por el revés, y ver cómo se leen puestas en un cuerpo que se mueve. Necesita a Rebeca.</p></div>
       <div><h3>Sitio</h3><p>Azulejos de cerámica con los signos de Placa, sueltos en el fondo de la piscina como las baldosas oscuras que se leían como peces.</p></div>
       <div><h3>Piel</h3><p>Una hoja de tatuajes para Artefacto Tatuajes, donde los signos se inciden en la piel. En la tesis, Tim Brookes cuenta que las mujeres amazigh mantuvieron vivo el tifinagh en joyas y tatuajes.</p></div>
       <div><h3>Archivo</h3><p>Contenedor, la primera versión, queda como una pieza más: la matriz de las máquinas que registran. Todos los archivos funcionan así.</p></div>
@@ -140,9 +164,9 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
       <p>El esquema de la tesis va de la inmersión a la producción, pasando por el juego, la experimentación y la investigación, con el diálogo y las herramientas compartidas en el medio.</p>
     </header>
     <div class="metodo">
-      <div><h3>Inmersión</h3><p>Ya la tienes: la tarde en el patio, el poema, el dibujo. Faltan el video, las fotos y el escaneo de la lámina.</p></div>
+      <div><h3>Inmersión</h3><p>Ya la tienes: la tarde en el patio, el poema, el dibujo, las fotos y los videos. Falta el escaneo de la lámina.</p></div>
       <div><h3>Diálogo</h3><p>Con Rebeca Paz y CreaciónxAcuerpamiento, con quienes estuvieron esa tarde y con hablantes de aimara.</p></div>
-      <div><h3>Experimentación</h3><p>Estas tres piezas, y las que salgan de probarlas con la gente de la obra.</p></div>
+      <div><h3>Experimentación</h3><p>Estas piezas, y las que salgan de probarlas con la gente de la obra.</p></div>
       <div><h3>Producción</h3><p>Proyección en la piscina, risografía, placas repujadas, azulejos. Cada pieza puede quedarse con quien la use.</p></div>
     </div>
   </section>
@@ -154,12 +178,13 @@ h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1
     <div class="prosa">
       <p>En la tesis, Wael Morcos advierte contra dos maneras de diseñar con la escritura de otros: cortar y girar letras latinas para que parezcan de otra escritura, y agregarle al latín adornos que fetichizan lo que uno cree que es la otra cultura. Por eso ninguna pieza imita la iconografía de Tiwanaku. Se traducen procesos, no motivos.</p>
       <p>La obra es de Rebeca Paz. Antes de mostrar esto afuera, conviene enseñárselo, preguntarle y acreditarla. Y el poema dice que ponerle nombre fue otra manera de enterrar: ninguna pieza se llama Kochamama.</p>
+      <p>Las fotos, los videos y el audio también son de la obra, y ninguna página los incluye. Las piezas usan solo lo que se deriva de ellos, como el contorno del canto o la disposición de las placas. Si tienes los archivos, puedes abrirlos en las piezas y no salen de tu computadora.</p>
     </div>
   </section>
 
   <footer class="pie">
     <p>Sobre <em>Contener una ruina: acciones para desenterrar una voz</em>, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026). Poema: Joaquin Max Cuevas Ventura.</p>
     <p>Enfoque tomado de Vaishnavi Mahendran, <em>EthnoGraphemes: Scripts as Vessels for Culture</em>, tesis de MFA en Diseño Gráfico, Rhode Island School of Design, 2020.</p>
-    <p>Placa y las tres piezas son prototipos generados por programa. Licencia por definir.</p>
+    <p>Placa, Ruina y las cuatro piezas son prototipos generados por programa. Licencia por definir.</p>
   </footer>
 </div>

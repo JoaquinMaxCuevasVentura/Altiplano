@@ -91,9 +91,10 @@ python3 articulo/generar_figuras.py                             # necesita Chrom
 
 ## Otro trabajo en este repositorio: tipografía para *Contener una ruina*
 
-`tipografia/` contiene traducciones tipográficas de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz, y del poema que la acompaña. No es parte del artículo. Tiene dos etapas:
+`tipografia/` contiene traducciones tipográficas de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz, y del poema que la acompaña. No es parte del artículo. Tiene tres etapas:
 
 - **Contenedor:** una fuente variable deducida de reglas, con la verificación de la lámina de Posnansky y un muestrario.
-- **Vasijas:** el replanteo a partir de *EthnoGraphemes*, de Vaishnavi Mahendran. Son tres piezas (el poema a través del agua, una escritura de Chladni que se canta y una cadena de traducciones) y la fuente Placa.
+- **Vasijas:** el replanteo a partir de *EthnoGraphemes*, de Vaishnavi Mahendran. Son cuatro piezas (el poema a través del agua, una escritura de Chladni que se canta, el cuerpo como página y una cadena de traducciones) y la fuente Placa.
+- **Ruina:** una fuente variable de cuatro ejes (erosión, repujado, onda y retícula) y el poema compuesto en una página, a partir del marco que llegó después.
 
 Véase `tipografia/README.md`.
