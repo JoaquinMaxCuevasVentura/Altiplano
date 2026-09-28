@@ -1,0 +1,165 @@
+<title>Vasijas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<style>
+@font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
+@font-face { font-family: "Placa"; src: url("{{PLACA}}") format("woff2"); font-display: block; }
+:root {
+  --noche: #0F1110;
+  --panel: #161918;
+  --linea: #2B302E;
+  --luz: #E4E6E1;
+  --tenue: #9AA19E;
+  --agua: #7CCB63;
+  --arena: #CF8A68;
+  --asperon: #C0604A;
+  --c: "Contenedor", "Courier New", monospace;
+  --t: "Newsreader", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--noche); color: var(--luz); }
+body { margin: 0; font-family: var(--t); font-size: 19px; line-height: 1.55; }
+.pagina { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 44px 72px; display: grid; gap: 72px; }
+.c { font-family: var(--c); font-synthesis: none; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-color: var(--linea); }
+:focus-visible { outline: 2px solid var(--agua); outline-offset: 3px; }
+.rotulo { font-family: var(--c); font-size: 15px; color: var(--tenue); }
+h1 { font-family: var(--c); font-weight: normal; font-size: clamp(56px, 12vw, 150px); line-height: 1; margin: 0; }
+h2 { font-family: var(--c); font-weight: normal; font-size: clamp(26px, 3.6vw, 36px); line-height: 1.15; margin: 0; text-wrap: balance; }
+h3 { font-family: var(--c); font-weight: normal; font-size: 22px; line-height: 1.2; margin: 0; }
+.portada { display: grid; gap: 22px; }
+.portada .firma { font-family: "Placa", monospace; font-size: clamp(22px, 3.4vw, 38px); line-height: normal; color: var(--arena); letter-spacing: 0; overflow: hidden; white-space: nowrap; }
+.dek { margin: 0; max-width: 64ch; color: var(--tenue); font-size: 21px; }
+.dek em, .prosa em { color: var(--luz); }
+.seccion { display: grid; gap: 26px; }
+.seccion > header { display: grid; gap: 10px; max-width: 66ch; }
+.seccion > header p { margin: 0; color: var(--tenue); }
+
+.piezas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; }
+.pieza { display: grid; gap: 14px; align-content: start; padding: 22px; background: var(--panel); border: 1px solid var(--linea); text-decoration: none; }
+.pieza:hover { border-color: var(--tenue); }
+.pieza .modo { font-family: var(--c); font-size: 15px; }
+.pieza p { margin: 0; color: var(--tenue); font-size: 17px; }
+.pieza .ir { font-family: var(--c); font-size: 15px; }
+.agua .modo, .agua .ir { color: var(--agua); }
+.placa .modo, .placa .ir { color: var(--arena); }
+.cadena .modo, .cadena .ir { color: var(--asperon); }
+.muestra-placa { font-family: "Placa", monospace; font-size: 30px; line-height: normal; color: var(--arena); overflow: hidden; white-space: nowrap; }
+
+.cambios { display: grid; gap: 0; }
+.cambio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 8px 36px; padding-block: 18px; border-top: 1px solid var(--linea); }
+.cambio:last-child { border-bottom: 1px solid var(--linea); }
+.cambio .antes { color: var(--tenue); }
+.cambio p { margin: 0; }
+
+.propuestas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 30px 56px; }
+.propuestas div { display: grid; gap: 8px; align-content: start; }
+.propuestas p { margin: 0; color: var(--tenue); font-size: 17px; }
+
+.metodo { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 0; border: 1px solid var(--linea); }
+.metodo div { padding: 18px; border-right: 1px solid var(--linea); display: grid; gap: 8px; align-content: start; }
+.metodo div:last-child { border-right: 0; }
+.metodo p { margin: 0; color: var(--tenue); font-size: 17px; }
+.prosa { max-width: 66ch; }
+.prosa p { margin: 0 0 0.8em; }
+.pie { display: grid; gap: 8px; color: var(--tenue); font-size: 16px; border-top: 1px solid var(--linea); padding-top: 22px; max-width: 76ch; }
+.pie p { margin: 0; }
+@media (max-width: 720px) {
+  .cambio { grid-template-columns: minmax(0, 1fr); }
+  .metodo div { border-right: 0; border-bottom: 1px solid var(--linea); }
+  .metodo div:last-child { border-bottom: 0; }
+}
+</style>
+
+<div class="pagina" lang="es">
+  <section class="portada">
+    <div class="rotulo">Contener una ruina · tipografía · segundo intento</div>
+    <h1>Vasijas</h1>
+    <div class="firma" aria-hidden="true">de la boca sale un signo hecho con las manos</div>
+    <p class="dek">La primera versión fue una fuente con su muestrario: una letra para usar. Esta parte de la pregunta de <em>EthnoGraphemes</em>, de Vaishnavi Mahendran: qué pasa si la escritura es una vasija que lleva una cultura, y no un sistema que se aplica. En <em>Contener una ruina</em> ninguna vasija retiene lo que contiene. Por eso aquí la letra solo existe de paso: por el agua, por la voz, por el desgaste.</p>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-piezas">
+    <header>
+      <h2 id="t-piezas">Tres piezas</h2>
+      <p>No son productos terminados. Como las de <em>Ellipsis</em> en la tesis, son espacios abiertos para seguir probando.</p>
+    </header>
+    <div class="piezas">
+      <a class="pieza agua" href="agua.html">
+        <span class="modo">Luz y agua</span>
+        <h3>Tocas el agua</h3>
+        <p>El poema solo llega refractado por una bandeja de agua hasta la pared de azulejo. Tocar el agua lo deforma, con eco. Cada estrofa entra pasando por ella.</p>
+        <span class="ir">Entrar →</span>
+      </a>
+      <a class="pieza placa" href="placa.html">
+        <span class="modo">Voz y metal</span>
+        <h3>La voz sobre la placa</h3>
+        <div class="muestra-placa" aria-hidden="true">voz placa</div>
+        <p>Cada letra es un modo de vibración de una placa de aluminio. La arena dibuja el signo y el canto se oye, pero no se lee. Incluye Placa, una escritura para componer.</p>
+        <span class="ir">Entrar →</span>
+      </a>
+      <a class="pieza cadena" href="cadena.html">
+        <span class="modo">Tiempo y materia</span>
+        <h3>La cadena</h3>
+        <p>Una palabra recorre piedra, erosión, fotografía, lámina, escaneo, repujado, cuerpo, agua y pared. La vuelta siguiente parte de la pared, no de la piedra.</p>
+        <span class="ir">Entrar →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-cambios">
+    <header>
+      <h2 id="t-cambios">Qué cambió</h2>
+    </header>
+    <div class="cambios">
+      <div class="cambio"><p class="antes">Un archivo de fuente, cerrado, para aplicar.</p><p>Un conjunto de piezas sin terminar. La tesis advierte contra el archivo que guarda una cultura «en una botella»; una fuente cerrada es esa botella.</p></div>
+      <div class="cambio"><p class="antes">Traducir la obra en parámetros de forma: ejes, módulos, alternativas.</p><p>Traducir procesos: lo que el agua, la voz y el tiempo le hacen a una letra. La forma es lo que queda después.</p></div>
+      <div class="cambio"><p class="antes">Una sola modalidad: ver.</p><p>Varias a la vez: oír la placa, tocar el agua, esperar la erosión. La tesis lo llama transmodal, que cruza lo sensible y lo temporal.</p></div>
+      <div class="cambio"><p class="antes">Diseñar a partir de la obra.</p><p>Devolverle algo a la obra: estas piezas pueden proyectarse en la piscina o sonar en la próxima acción, si Rebeca quiere.</p></div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-otras">
+    <header>
+      <h2 id="t-otras">Otras vasijas posibles</h2>
+      <p>Propuestas que todavía no están hechas. Casi todas necesitan a alguien más.</p>
+    </header>
+    <div class="propuestas">
+      <div><h3>Cuerpo</h3><p>Repujar el poema en placas de aluminio y distribuirlas sobre un cuerpo; el orden de lectura sería el recorrido del cuerpo. El repujado se trabaja por el revés, así que la letra se dibuja al revés, como en un tipo de imprenta. Necesita a Rebeca.</p></div>
+      <div><h3>Sitio</h3><p>Azulejos de cerámica con los signos de Placa, sueltos en el fondo de la piscina como las baldosas oscuras que se leían como peces.</p></div>
+      <div><h3>Piel</h3><p>Una hoja de tatuajes para Artefacto Tatuajes, donde los signos se inciden en la piel. En la tesis, Tim Brookes cuenta que las mujeres amazigh mantuvieron vivo el tifinagh en joyas y tatuajes.</p></div>
+      <div><h3>Archivo</h3><p>Contenedor, la primera versión, queda como una pieza más: la matriz de las máquinas que registran. Todos los archivos funcionan así.</p></div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-metodo">
+    <header>
+      <h2 id="t-metodo">Cómo seguir</h2>
+      <p>El esquema de la tesis va de la inmersión a la producción, pasando por el juego, la experimentación y la investigación, con el diálogo y las herramientas compartidas en el medio.</p>
+    </header>
+    <div class="metodo">
+      <div><h3>Inmersión</h3><p>Ya la tienes: la tarde en el patio, el poema, el dibujo. Faltan el video, las fotos y el escaneo de la lámina.</p></div>
+      <div><h3>Diálogo</h3><p>Con Rebeca Paz y CreaciónxAcuerpamiento, con quienes estuvieron esa tarde y con hablantes de aimara.</p></div>
+      <div><h3>Experimentación</h3><p>Estas tres piezas, y las que salgan de probarlas con la gente de la obra.</p></div>
+      <div><h3>Producción</h3><p>Proyección en la piscina, risografía, placas repujadas, azulejos. Cada pieza puede quedarse con quien la use.</p></div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-cuidado">
+    <header>
+      <h2 id="t-cuidado">Cuidados</h2>
+    </header>
+    <div class="prosa">
+      <p>En la tesis, Wael Morcos advierte contra dos maneras de diseñar con la escritura de otros: cortar y girar letras latinas para que parezcan de otra escritura, y agregarle al latín adornos que fetichizan lo que uno cree que es la otra cultura. Por eso ninguna pieza imita la iconografía de Tiwanaku. Se traducen procesos, no motivos.</p>
+      <p>La obra es de Rebeca Paz. Antes de mostrar esto afuera, conviene enseñárselo, preguntarle y acreditarla. Y el poema dice que ponerle nombre fue otra manera de enterrar: ninguna pieza se llama Kochamama.</p>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <p>Sobre <em>Contener una ruina: acciones para desenterrar una voz</em>, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026). Poema: Joaquin Max Cuevas Ventura.</p>
+    <p>Enfoque tomado de Vaishnavi Mahendran, <em>EthnoGraphemes: Scripts as Vessels for Culture</em>, tesis de MFA en Diseño Gráfico, Rhode Island School of Design, 2020.</p>
+    <p>Placa y las tres piezas son prototipos generados por programa. Licencia por definir.</p>
+  </footer>
+</div>

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La cadena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<style>
+@font-face { font-family: "Contenedor"; src: url("{{SECA}}") format("woff2"); font-display: block; }
+:root {
+  --noche: #0F1110;
+  --panel: #161918;
+  --linea: #2B302E;
+  --luz: #E4E6E1;
+  --tenue: #9AA19E;
+  --asperon: #C0604A;
+  --c: "Contenedor", "Courier New", monospace;
+  --t: "Newsreader", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--noche); color: var(--luz); }
+body { font-family: var(--t); font-size: 18px; line-height: 1.55; }
+.pagina { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 40px; }
+.volver { font-family: var(--c); font-size: 15px; color: var(--tenue); text-decoration: none; }
+.cabeza { display: grid; gap: 14px; max-width: 70ch; }
+h1 { font-family: var(--c); font-weight: normal; font-size: clamp(34px, 6vw, 64px); line-height: 1.1; margin: 0; }
+.dek { margin: 0; color: var(--tenue); font-size: 20px; }
+:focus-visible { outline: 2px solid var(--asperon); outline-offset: 3px; }
+.mandos { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: end; padding: 18px; background: var(--panel); border: 1px solid var(--linea); }
+.campo { display: grid; gap: 6px; }
+.campo label { font-family: var(--c); font-size: 15px; color: var(--tenue); }
+input[type="text"] { font-family: var(--c); font-size: 20px; color: var(--luz); background: var(--noche); border: 1px solid var(--linea); padding: 9px 12px; width: 14ch; }
+input[type="range"] { width: min(320px, 70vw); accent-color: var(--asperon); }
+output { font-family: var(--c); font-size: 15px; color: var(--luz); }
+button { font-family: var(--c); font-size: 16px; line-height: 1; color: var(--noche); background: var(--asperon); border: 1px solid var(--asperon); padding: 12px 16px 11px; cursor: pointer; }
+button.sec { background: transparent; color: var(--luz); border-color: var(--linea); }
+button:disabled { opacity: 0.5; cursor: default; }
+.vueltas { font-family: var(--c); font-size: 15px; color: var(--tenue); margin-left: auto; align-self: center; }
+.cadena { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 26px 22px; counter-reset: paso; }
+figure { margin: 0; display: grid; gap: 8px; align-content: start; }
+figure canvas { width: 100%; aspect-ratio: 5 / 3; display: block; background: #0A0B0B; }
+figcaption { display: grid; gap: 2px; }
+figcaption b { font-family: var(--c); font-weight: normal; font-size: 18px; }
+figcaption b::before { counter-increment: paso; content: counter(paso) "  "; color: var(--tenue); }
+figcaption span { color: var(--tenue); font-size: 16px; }
+.cierre { max-width: 66ch; color: var(--tenue); margin: 0; }
+</style>
+
+<div class="pagina">
+  <header class="cabeza">
+    <a class="volver" href="index.html">← Vasijas</a>
+    <h1>La cadena</h1>
+    <p class="dek">Una piedra borrada, una fotografía vieja, un dibujo que reconstruye, un escaneo, un repujado, un cuerpo, un charco, una pared. Aquí la palabra que escribas recorre esa cadena. Cada paso pierde materia y gana luz, y la vuelta siguiente parte de la pared, no de la piedra.</p>
+  </header>
+
+  <section class="mandos" aria-label="Controles">
+    <div class="campo">
+      <label for="palabra">Palabra</label>
+      <input type="text" id="palabra" value="ruina" maxlength="9" spellcheck="false" autocomplete="off">
+    </div>
+    <div class="campo">
+      <label for="anios">Erosión</label>
+      <input type="range" id="anios" min="0" max="123" step="1" value="123">
+      <output id="anios-val" for="anios">123 años (1903–2026)</output>
+    </div>
+    <button type="button" id="tallar">Tallar</button>
+    <button type="button" class="sec" id="otra">Otra vuelta</button>
+    <span class="vueltas" id="vueltas">vuelta 1</span>
+  </section>
+
+  <section class="cadena" aria-label="La cadena de traducciones">
+    <figure><canvas id="e1" width="360" height="216"></canvas><figcaption><b>Piedra</b><span>Asperón colorado, el material de los monumentos. La palabra, tallada.</span></figcaption></figure>
+    <figure><canvas id="e2" width="360" height="216"></canvas><figcaption><b>Erosión</b><span>Lluvia y viento. El agua baja por los surcos y se lleva el borde de las letras.</span></figcaption></figure>
+    <figure><canvas id="e3" width="360" height="216"></canvas><figcaption><b>Fotografía</b><span>Una placa de vidrio con luz rasante: lo único que queda del relieve es su sombra.</span></figcaption></figure>
+    <figure><canvas id="e4" width="360" height="216"></canvas><figcaption><b>Lámina</b><span>Reconstrucción hecha a partir de fotografías antiguas. Donde la foto no alcanza, el dibujo completa.</span></figcaption></figure>
+    <figure><canvas id="e5" width="360" height="216"></canvas><figcaption><b>Escaneo</b><span>Un visor de libros digitalizados: la lámina hecha píxel.</span></figcaption></figure>
+    <figure><canvas id="e6" width="360" height="216"></canvas><figcaption><b>Repujado</b><span>Aluminio de cocina, trabajado por el revés. Lo que era hueco ahora sobresale y refleja.</span></figcaption></figure>
+    <figure><canvas id="e7" width="360" height="216"></canvas><figcaption><b>Cuerpo</b><span>Parches sueltos sobre el cuerpo, con piel a la vista entre uno y otro.</span></figcaption></figure>
+    <figure><canvas id="e8" width="360" height="216"></canvas><figcaption><b>Agua</b><span>La imagen pasa por un dedo de agua y se deforma.</span></figcaption></figure>
+    <figure><canvas id="e9" width="360" height="216"></canvas><figcaption><b>Pared</b><span>Llega temblando, en verde, a la pared de azulejo. De aquí sale la vuelta siguiente.</span></figcaption></figure>
+  </section>
+
+  <p class="cierre">Nada de esto imita la iconografía de Tiwanaku. Lo que se traduce es el proceso: lo que cada medio le quita a la letra y lo que le agrega. Frente a un calendario que nadie supo leer, la cadena no traduce; devuelve una temporalidad, la del ciclo.</p>
+</div>
+
+<script>
+(function () {
+  var W = 360, H = 216, N = W * H;
+  var vuelta = 1;
+
+  // --- Utilidades ----------------------------------------------------------------
+  function A() { return new Float32Array(N); }
+  function c01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function azar(s) { return function () { s |= 0; s = s + 0x6D2B79F5 | 0; var t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function ruidoValor(r) {
+    var tabla = new Float32Array(4096);
+    for (var i = 0; i < 4096; i++) tabla[i] = r();
+    function h(x, y) { return tabla[((x * 73856093) ^ (y * 19349663)) & 4095]; }
+    return function (x, y) {
+      var xi = Math.floor(x), yi = Math.floor(y), fx = x - xi, fy = y - yi;
+      fx = fx * fx * (3 - 2 * fx); fy = fy * fy * (3 - 2 * fy);
+      var a = h(xi, yi), b = h(xi + 1, yi), c = h(xi, yi + 1), d = h(xi + 1, yi + 1);
+      return a + (b - a) * fx + (c - a) * fy + (a - b - c + d) * fx * fy;
+    };
+  }
+  function fbm(nz, x, y, oct) { var s = 0, a = 0.5, f = 1; for (var o = 0; o < oct; o++) { s += a * nz(x * f, y * f); a *= 0.5; f *= 2; } return s; }
+  function desenfocar(src, r) {
+    var tmp = A(), out = A(), w = 2 * r + 1;
+    for (var y = 0; y < H; y++) {
+      var s = 0;
+      for (var k = -r; k <= r; k++) s += src[y * W + Math.min(W - 1, Math.max(0, k))];
+      for (var x = 0; x < W; x++) {
+        tmp[y * W + x] = s / w;
+        s += src[y * W + Math.min(W - 1, x + r + 1)] - src[y * W + Math.max(0, x - r)];
+      }
+    }
+    for (var x2 = 0; x2 < W; x2++) {
+      var s2 = 0;
+      for (var k2 = -r; k2 <= r; k2++) s2 += tmp[Math.min(H - 1, Math.max(0, k2)) * W + x2];
+      for (var y2 = 0; y2 < H; y2++) {
+        out[y2 * W + x2] = s2 / w;
+        s2 += tmp[Math.min(H - 1, y2 + r + 1) * W + x2] - tmp[Math.max(0, y2 - r) * W + x2];
+      }
+    }
+    return out;
+  }
+  function bilineal(a, x, y) {
+    x = Math.max(0, Math.min(W - 1.001, x)); y = Math.max(0, Math.min(H - 1.001, y));
+    var xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi, i = yi * W + xi;
+    return a[i] * (1 - fx) * (1 - fy) + a[i + 1] * fx * (1 - fy) + a[i + W] * (1 - fx) * fy + a[i + W + 1] * fx * fy;
+  }
+  function sombra(h, lx, ly, lz, z) {
+    var n = Math.hypot(lx, ly, lz); lx /= n; ly /= n; lz /= n;
+    var s = A();
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var i = y * W + x;
+      var dx = (h[y * W + Math.min(W - 1, x + 1)] - h[y * W + Math.max(0, x - 1)]) * z;
+      var dy = (h[Math.min(H - 1, y + 1) * W + x] - h[Math.max(0, y - 1) * W + x]) * z;
+      var m = Math.hypot(dx, dy, 1);
+      s[i] = Math.max(0, (-dx * lx - dy * ly + lz) / m);
+    }
+    return s;
+  }
+  function rampa(t, cols) {
+    t = c01(t) * (cols.length - 1);
+    var k = Math.min(cols.length - 2, Math.floor(t)), f = t - k, a = cols[k], b = cols[k + 1];
+    return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f];
+  }
+  function pintar(id, fn) {
+    var cv = document.getElementById(id), g = cv.getContext("2d"), img = g.createImageData(W, H), d = img.data;
+    for (var i = 0; i < N; i++) {
+      var c = fn(i), k = i * 4;
+      d[k] = c[0]; d[k + 1] = c[1]; d[k + 2] = c[2]; d[k + 3] = 255;
+    }
+    g.putImageData(img, 0, 0);
+    return img;
+  }
+  function luminancia(img) {
+    var l = A(), d = img.data;
+    for (var i = 0; i < N; i++) l[i] = (d[i * 4] * 0.3 + d[i * 4 + 1] * 0.59 + d[i * 4 + 2] * 0.11) / 255;
+    return l;
+  }
+
+  // --- 1. Piedra ---------------------------------------------------------------------
+  var ASPERON = [[58, 24, 19], [118, 48, 36], [176, 86, 64], [222, 158, 128]];
+  function mascara(palabra) {
+    var cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+    var g = cv.getContext("2d");
+    g.fillStyle = "#000"; g.fillRect(0, 0, W, H);
+    var n = Math.max(1, palabra.length), tam = Math.min(H * 0.6, (W * 0.86) / (n * 0.6));
+    g.font = tam + "px Contenedor, 'Courier New', monospace";
+    g.textBaseline = "alphabetic"; g.fillStyle = "#fff"; g.strokeStyle = "#fff"; g.lineWidth = tam * 0.06;
+    var x = (W - n * tam * 0.6) / 2, y = H / 2 + tam * 0.33;
+    g.fillText(palabra, x, y); g.strokeText(palabra, x, y);
+    var d = g.getImageData(0, 0, W, H).data, m = A();
+    for (var i = 0; i < N; i++) m[i] = d[i * 4] / 255;
+    return m;
+  }
+  function tallar(palabra, r) {
+    var nz = ruidoValor(r), m = desenfocar(desenfocar(mascara(palabra), 1), 1), h = A();
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var i = y * W + x;
+      h[i] = 0.5 + 0.1 * fbm(nz, x / 70, y / 70, 4) + 0.025 * fbm(nz, x / 6, y / 6, 2) - 0.26 * m[i];
+    }
+    return h;
+  }
+  function pintarPiedra(id, h, r) {
+    var s = sombra(h, -1, -1, 1.2, 36), grano = ruidoValor(r);
+    return pintar(id, function (i) {
+      var x = i % W, y = (i / W) | 0;
+      var t = 0.15 + s[i] * 0.75 + (grano(x * 0.9, y * 0.9) - 0.5) * 0.12;
+      return rampa(t, ASPERON);
+    });
+  }
+
+  // --- 2. Erosión: gotas de lluvia que bajan por la piedra ----------------------------
+  function erosionar(h0, anios, r) {
+    var h = new Float32Array(h0), gotas = Math.round(anios * 220);
+    var inercia = 0.05, capacidad = 6, minPend = 0.004, erosion = 0.3, deposito = 0.2, evap = 0.03, gravedad = 4;
+    function repartir(ix, iy, fx, fy, v) {
+      var i = iy * W + ix;
+      h[i] += v * (1 - fx) * (1 - fy); h[i + 1] += v * fx * (1 - fy);
+      h[i + W] += v * (1 - fx) * fy; h[i + W + 1] += v * fx * fy;
+    }
+    for (var g = 0; g < gotas; g++) {
+      var x = 1 + r() * (W - 3), y = 1 + r() * (H - 3), dx = 0, dy = 0, vel = 1, agua = 1, sed = 0;
+      for (var p = 0; p < 32; p++) {
+        var ix = x | 0, iy = y | 0, fx = x - ix, fy = y - iy, i = iy * W + ix;
+        var a = h[i], b = h[i + 1], c = h[i + W], d = h[i + W + 1];
+        var gx = (b - a) * (1 - fy) + (d - c) * fy, gy = (c - a) * (1 - fx) + (d - b) * fx;
+        var alto = a * (1 - fx) * (1 - fy) + b * fx * (1 - fy) + c * (1 - fx) * fy + d * fx * fy;
+        dx = dx * inercia - gx * (1 - inercia); dy = dy * inercia - gy * (1 - inercia);
+        var len = Math.hypot(dx, dy);
+        if (len < 1e-7) break;
+        dx /= len; dy /= len;
+        var nx = x + dx, ny = y + dy;
+        if (nx < 1 || nx > W - 2 || ny < 1 || ny > H - 2) break;
+        var dh = bilineal(h, nx, ny) - alto;
+        var cap = Math.max(-dh, minPend) * vel * agua * capacidad;
+        if (sed > cap || dh > 0) {
+          var dep = dh > 0 ? Math.min(dh, sed) : (sed - cap) * deposito;
+          sed -= dep; repartir(ix, iy, fx, fy, dep);
+        } else {
+          var qu = Math.min((cap - sed) * erosion, -dh);
+          sed += qu; repartir(ix, iy, fx, fy, -qu);
+        }
+        vel = Math.sqrt(Math.max(0, vel * vel - dh * gravedad));
+        agua *= 1 - evap; x = nx; y = ny;
+      }
+    }
+    var nz = ruidoValor(r), f = anios / 123;
+    for (var k = 0; k < N; k++) h[k] -= 0.06 * f * Math.pow(nz((k % W) / 3, ((k / W) | 0) / 3), 3);
+    return f > 0.3 ? desenfocar(h, 1) : h;
+  }
+
+  // --- 3. Fotografía: placa de vidrio, luz rasante --------------------------------------
+  function fotografiar(h, r) {
+    var s = desenfocar(sombra(h, -1, -0.25, 0.42, 55), 1), g = A();
+    var marcas = [];
+    for (var k = 0; k < 3; k++) marcas.push([r() * W, r() * H, (r() - 0.5) * 0.6]);
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var i = y * W + x, u = x / W - 0.5, v = y / H - 0.5;
+      var t = Math.pow(s[i], 0.85) * (1 - 1.1 * (u * u + v * v)) + (r() - 0.5) * 0.16;
+      for (var m = 0; m < marcas.length; m++) {
+        var mm = marcas[m];
+        if (Math.abs((y - mm[1]) - (x - mm[0]) * mm[2]) < 0.6 && r() > 0.2) t += 0.25;
+      }
+      if (r() < 0.0015) t = r() > 0.5 ? 1 : 0.05;
+      g[i] = c01(t);
+    }
+    var img = pintar("e3", function (i) { return rampa(g[i], [[34, 26, 19], [120, 96, 70], [214, 196, 160], [241, 230, 204]]); });
+    return luminancia(img);
+  }
+
+  // --- 4. Lámina: el dibujo reconstructivo ------------------------------------------------
+  function dilatar(m, r) {
+    var o = new Uint8Array(N);
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var v = 0;
+      for (var dy = -r; dy <= r && !v; dy++) for (var dx = -r; dx <= r; dx++) {
+        var xx = x + dx, yy = y + dy;
+        if (xx >= 0 && yy >= 0 && xx < W && yy < H && m[yy * W + xx]) { v = 1; break; }
+      }
+      o[y * W + x] = v;
+    }
+    return o;
+  }
+  function contraer(m, r) {
+    var inv = new Uint8Array(N);
+    for (var i = 0; i < N; i++) inv[i] = m[i] ? 0 : 1;
+    var d = dilatar(inv, r), o = new Uint8Array(N);
+    for (var k = 0; k < N; k++) o[k] = d[k] ? 0 : 1;
+    return o;
+  }
+  function lamina(foto, h) {
+    foto = desenfocar(foto, 1);
+    var fondo = desenfocar(desenfocar(h, 6), 6), hueco = new Uint8Array(N);
+    for (var i = 0; i < N; i++) hueco[i] = fondo[i] - h[i] > 0.045 ? 1 : 0;
+    var rec = contraer(dilatar(hueco, 2), 2);                 // el dibujante completa lo que falta
+    var borde = new Uint8Array(N), c = contraer(rec, 1);
+    for (var k = 0; k < N; k++) borde[k] = rec[k] && !c[k] ? 1 : 0;
+    var tinta = A();
+    for (var y = 1; y < H - 1; y++) for (var x = 1; x < W - 1; x++) {
+      var j = y * W + x;
+      var gx = foto[j + 1] - foto[j - 1], gy = foto[j + W] - foto[j - W];
+      var t = 0;
+      if (Math.hypot(gx, gy) > 0.2) t = 0.55;                  // lo que la foto muestra
+      if (rec[j] && (x + y) % 5 === 0) t = 0.8;                // rayado de lo reconstruido
+      if (borde[j]) t = 1;                                    // el contorno, seguro de sí
+      tinta[j] = t;
+    }
+    var img = pintar("e4", function (i) {
+      var p = [236, 227, 207], k = [42, 38, 34], t = tinta[i];
+      return [p[0] + (k[0] - p[0]) * t, p[1] + (k[1] - p[1]) * t, p[2] + (k[2] - p[2]) * t];
+    });
+    return luminancia(img);
+  }
+
+  // --- 5. Escaneo --------------------------------------------------------------------------
+  function escanear(lam, r) {
+    var g = A(), b = 3;
+    for (var y = 0; y < H; y += b) for (var x = 0; x < W; x += b) {
+      var s = 0, n = 0;
+      for (var dy = 0; dy < b; dy++) for (var dx = 0; dx < b; dx++) if (y + dy < H && x + dx < W) { s += lam[(y + dy) * W + x + dx]; n++; }
+      var v = Math.round((s / n) * 11) / 11;
+      for (var dy2 = 0; dy2 < b; dy2++) for (var dx2 = 0; dx2 < b; dx2++) if (y + dy2 < H && x + dx2 < W) g[(y + dy2) * W + x + dx2] = v;
+    }
+    var bloque = {}, banda = r() * H;
+    var img = pintar("e5", function (i) {
+      var x = i % W, y = (i / W) | 0, kb = ((y >> 3) * 64 + (x >> 3));
+      if (bloque[kb] === undefined) bloque[kb] = (r() - 0.5) * 0.07;
+      var luzBarra = 0.1 * Math.exp(-Math.pow((y - banda) / 10, 2));
+      var rr = g[y * W + Math.min(W - 1, x + 1)], gg = g[i], bb = g[y * W + Math.max(0, x - 1)];
+      var base = [246, 238, 220];
+      return [c01(rr + bloque[kb] + luzBarra) * base[0], c01(gg + bloque[kb] + luzBarra) * base[1], c01(bb + bloque[kb] + luzBarra) * base[2]];
+    });
+    return luminancia(img);
+  }
+
+  // --- 6. Repujado en aluminio ------------------------------------------------------------
+  function repujar(esc, r) {
+    var nz = ruidoValor(r), h = desenfocar(esc.map(function (v) { return 1 - v; }), 2);
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var i = y * W + x, arruga = 1 - Math.abs(2 * nz(x / 22, y / 22) - 1);
+      h[i] = h[i] * 0.5 + arruga * 0.07 + 0.02 * nz(x / 5, y / 5);
+    }
+    var lx = -0.5, ly = -0.7, lz = 0.6, ln = Math.hypot(lx, ly, lz); lx /= ln; ly /= ln; lz /= ln;
+    var img = pintar("e6", function (i) {
+      var x = i % W, y = (i / W) | 0;
+      var dx = (h[y * W + Math.min(W - 1, x + 1)] - h[y * W + Math.max(0, x - 1)]) * 30;
+      var dy = (h[Math.min(H - 1, y + 1) * W + x] - h[Math.max(0, y - 1) * W + x]) * 30;
+      var m = Math.hypot(dx, dy, 1), nx = -dx / m, ny = -dy / m, nzz = 1 / m;
+      var dif = Math.max(0, nx * lx + ny * ly + nzz * lz);
+      var hx = lx, hy = ly, hz = lz + 1, hn = Math.hypot(hx, hy, hz);
+      var esp = Math.pow(Math.max(0, (nx * hx + ny * hy + nzz * hz) / hn), 28);
+      var base = 0.5 + 0.18 * (1 - y / H);
+      var v = c01(base * (0.45 + 0.7 * dif) + esp * 0.9);
+      return [v * 232, v * 236, v * 240];
+    });
+    return img;
+  }
+
+  // --- 7. Cuerpo: parches con piel entre uno y otro ------------------------------------------
+  function vestir(foil, r) {
+    var cv = document.getElementById("e7"), g = cv.getContext("2d");
+    var piel = g.createRadialGradient(W * 0.45, H * 0.4, 10, W * 0.5, H * 0.5, W * 0.7);
+    piel.addColorStop(0, "#7A5646"); piel.addColorStop(1, "#3A2721");
+    g.fillStyle = piel; g.fillRect(0, 0, W, H);
+    var fuente = document.createElement("canvas"); fuente.width = W; fuente.height = H;
+    fuente.getContext("2d").putImageData(foil, 0, 0);
+    var lado = 36;
+    for (var y = 0; y < H; y += lado) for (var x = 0; x < W; x += lado) {
+      if (r() > 0.64) continue;
+      g.save();
+      g.translate(x + lado / 2 + (r() - 0.5) * 8, y + lado / 2 + (r() - 0.5) * 8);
+      g.rotate((r() - 0.5) * 0.3);
+      var s = lado * (0.72 + r() * 0.14);
+      g.shadowColor = "rgba(0,0,0,0.45)"; g.shadowBlur = 5;
+      g.drawImage(fuente, x, y, lado, lado, -s / 2, -s / 2, s, s);
+      g.restore();
+    }
+    return g.getImageData(0, 0, W, H);
+  }
+
+  // --- 8. Agua ---------------------------------------------------------------------------
+  function mojar(cuerpo, r) {
+    var l = luminancia(cuerpo), centros = [];
+    for (var k = 0; k < 2; k++) centros.push([r() * W, r() * H, 4 + r() * 3, r() * 6.28]);
+    var luz = A();
+    for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+      var ox = 0, oy = 0, caus = 0;
+      for (var c = 0; c < centros.length; c++) {
+        var cc = centros[c], dx = x - cc[0], dy = y - cc[1], d = Math.hypot(dx, dy) + 1e-3;
+        var onda = Math.sin(d / cc[2] + cc[3]) * Math.exp(-d / 140);
+        ox += dx / d * onda * 5; oy += dy / d * onda * 5;
+        caus += Math.cos(d / cc[2] + cc[3]) * Math.exp(-d / 140);
+      }
+      luz[y * W + x] = c01(bilineal(l, x + ox, y + oy) * (1 + caus * 0.35));
+    }
+    luz = desenfocar(luz, 1);
+    pintar("e8", function (i) { var v = luz[i]; return [v * 125, v * 205, v * 100]; });
+    return luz;
+  }
+
+  // --- 9. Pared de azulejo -------------------------------------------------------------------
+  function proyectar(luz, r) {
+    var nz = ruidoValor(r), lado = W / 22, out = A();
+    var img = pintar("e9", function (i) {
+      var x = i % W, y = (i / W) | 0;
+      var junta = (x % lado < 1.1 || y % lado < 1.1) ? 1 : 0;
+      var mancha = Math.max(0, fbm(nz, x / 40, y / 30, 3) - 0.55) * 1.6;
+      var pared = (26 - junta * 12 - mancha * 12);
+      var v = luz[i] * (1 - junta * 0.3) * (1 - mancha * 0.5);
+      out[i] = c01(pared / 255 + v * 0.8);
+      return [pared + v * 125, pared + 3 + v * 205, pared + 1 + v * 100];
+    });
+    return out;
+  }
+
+  // --- La cadena completa ---------------------------------------------------------------
+  var piedra = null, ocupado = false;
+  var tallarBtn = document.getElementById("tallar"), otraBtn = document.getElementById("otra");
+  function espera() { return new Promise(function (ok) { setTimeout(ok, 16); }); }
+  async function recorrer(h, anios, semilla) {
+    ocupado = true; tallarBtn.disabled = true; otraBtn.disabled = true;
+    var r = azar(semilla);
+    pintarPiedra("e1", h, r); await espera();
+    var er = erosionar(h, anios, r); pintarPiedra("e2", er, r); await espera();
+    var foto = fotografiar(er, r); await espera();
+    var lam = lamina(foto, er); await espera();
+    var esc = escanear(lam, r); await espera();
+    var foil = repujar(esc, r); await espera();
+    var cuerpo = vestir(foil, r); await espera();
+    var luz = mojar(cuerpo, r); await espera();
+    var pared = proyectar(luz, r);
+    ocupado = false; tallarBtn.disabled = false; otraBtn.disabled = false;
+    return pared;
+  }
+  var ultimaPared = null;
+  function anios() { return parseInt(document.getElementById("anios").value, 10); }
+  async function empezar() {
+    if (ocupado) return;
+    vuelta = 1; document.getElementById("vueltas").textContent = "vuelta 1";
+    var semilla = (Math.random() * 1e9) | 0;
+    piedra = tallar(document.getElementById("palabra").value || " ", azar(semilla));
+    ultimaPared = await recorrer(piedra, anios(), semilla + 1);
+  }
+  async function otraVuelta() {
+    if (ocupado || !ultimaPared) return;
+    vuelta++; document.getElementById("vueltas").textContent = "vuelta " + vuelta;
+    var semilla = (Math.random() * 1e9) | 0, r = azar(semilla), nz = ruidoValor(r);
+    var media = 0; for (var i = 0; i < N; i++) media += ultimaPared[i]; media /= N;
+    piedra = A();
+    for (var k = 0; k < N; k++) piedra[k] = 0.5 - 0.5 * (ultimaPared[k] - media) + 0.08 * fbm(nz, (k % W) / 70, ((k / W) | 0) / 70, 4);
+    piedra = desenfocar(piedra, 1);
+    ultimaPared = await recorrer(piedra, anios(), semilla + 1);
+  }
+  document.getElementById("anios").addEventListener("input", function (ev) {
+    var a = parseInt(ev.target.value, 10);
+    document.getElementById("anios-val").textContent = a + " años (" + (2026 - a) + "–2026)";
+  });
+  tallarBtn.addEventListener("click", empezar);
+  otraBtn.addEventListener("click", otraVuelta);
+  document.getElementById("palabra").addEventListener("keydown", function (ev) { if (ev.key === "Enter") empezar(); });
+
+  var arrancar = function () { empezar(); };
+  if (document.fonts && document.fonts.load) document.fonts.load("60px Contenedor").then(arrancar, arrancar);
+  else arrancar();
+})();
+</script>
+</html>

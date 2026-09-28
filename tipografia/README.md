@@ -1,12 +1,43 @@
-# Contenedor
+# Tipografía para *Contener una ruina*
 
-Tipografía variable derivada de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026), y del poema escrito después de verla (`poema.txt`).
+Traducciones tipográficas de *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026), y del poema escrito después de verla (`poema.txt`).
+
+El proyecto tiene dos etapas:
+
+1. **Contenedor** (`fuente/`, `muestrario/`). Una fuente variable deducida de reglas. Es la primera versión.
+2. **Vasijas** (`vasijas/`). El replanteo que siguió a la lectura de *EthnoGraphemes*, de Vaishnavi Mahendran. Son tres piezas donde la letra solo existe de paso (por el agua, por la voz, por el desgaste), más Placa, una escritura que se canta y no se lee. Por qué cambió el enfoque está en `03_replanteo_vasijas.md`.
+
+## Vasijas
+
+![El poema escrito en Placa](vasijas/placa/lamina.png)
+
+| Archivo | Contenido |
+|---|---|
+| `03_replanteo_vasijas.md` | Qué era convencional en la primera versión, qué propone la tesis, las tres piezas, otras vasijas posibles, el método, los cuidados y lo que falta |
+| `vasijas/index.html` | Portada de las tres piezas |
+| `vasijas/agua.html` | **Tocas el agua:** el poema solo llega refractado por el agua hasta la pared de azulejo; tocarlo lo deforma, con eco |
+| `vasijas/placa.html` | **La voz sobre la placa:** cada letra es un modo de vibración de una placa de aluminio; la arena dibuja el signo y una voz grave lo canta |
+| `vasijas/cadena.html` | **La cadena:** una palabra recorre piedra, erosión, fotografía, lámina, escaneo, repujado, cuerpo, agua y pared, y la vuelta siguiente parte de la pared |
+| `vasijas/placa/Placa.ttf` y `.woff2` | Placa, la escritura de las figuras de Chladni (47 glifos) |
+| `vasijas/placa/lamina.png` | El poema completo escrito en Placa |
+| `vasijas/placa/modos.py`, `generar_placa.py` | El modo de cada letra y la generación de la fuente |
+| `vasijas/plantillas/`, `vasijas/armar.py` | Las páginas antes de incrustarles las fuentes y el poema |
+
+Las páginas se abren en cualquier navegador, sin servidor. Para regenerarlas:
+
+```bash
+pip install fonttools brotli numpy skia-pathops
+python3 tipografia/vasijas/placa/generar_placa.py   # la fuente Placa y modos.json
+python3 tipografia/vasijas/armar.py                 # las cuatro páginas
+```
+
+## Contenedor (primera versión)
 
 Ninguna letra se dibujó a mano. La fuente se deduce de un conjunto de reglas escritas como programa: la retícula de azulejos de la piscina, las placas con piel entre ellas, los terminales que se desprenden, los puntos como peces, el agua que cada letra retiene. Las reglas y su origen están en `02_traducciones.md`.
 
 ![Portada del muestrario](muestrario/01_portada.png)
 
-## Qué tiene
+### Qué tiene
 
 - **144 caracteres:** castellano, las vocales largas del aimara (ä, ï, ü), el apóstrofo de las consonantes glotalizadas (ʼ) y cuatro ornamentos.
 - **Cuatro vueltas de cada carácter.** La función `calt` las alterna para que la misma letra repetida no salga igual.
@@ -24,7 +55,7 @@ Hay además dos instancias combinadas: Presente continuo (temblor 55, agua 35) y
 
 - **Tres juegos estilísticos:** `ss01` Boca tapada, `ss02` Ojos tapados, `ss03` Agua devuelta. El agua sale verde donde el programa sabe de color y del color del texto donde no.
 
-## Archivos
+### Archivos
 
 | Archivo | Contenido |
 |---|---|
@@ -40,7 +71,7 @@ Hay además dos instancias combinadas: Presente continuo (temblor 55, agua 35) y
 | `muestrario/0*.png` | Capturas de cada sección del muestrario |
 | `muestrario/plantilla.html`, `generar_muestrario.py`, `capturar.js` | Arman el muestrario y sus capturas |
 
-## Usarla en una página web
+### Usarla en una página web
 
 ```css
 @font-face {
@@ -56,7 +87,7 @@ Hay además dos instancias combinadas: Presente continuo (temblor 55, agua 35) y
 
 El color del agua se cambia con `@font-palette-values` y `override-colors: 0 <color>`.
 
-## Regenerar
+### Regenerar
 
 ```bash
 pip install fonttools brotli
@@ -68,12 +99,12 @@ python3 tipografia/fuente/vasos.py                     # la tabla de lo que cont
 
 La retícula de cada letra está en `glifos.py` y las reglas, como constantes al comienzo de `generar_fuente.py` (`PIEL`, `MANO`, `ONDA`, `TEMBLOR`, etc.). Al cambiar una, se regenera todo.
 
-## Comprobaciones
+### Comprobaciones
 
 - Las 243 combinaciones de mínimo, defecto y máximo de los cinco ejes se instanciaron y se revisó la orientación de cada contorno: ninguno se invierte.
 - El ciclo de vueltas se probó con HarfBuzz: «diosa diosa diosa» sale en tres combinaciones distintas.
 - La fuente y el muestrario se probaron en Chromium, incluido el verde del agua.
 
-## Estado
+### Estado
 
 Prototipo 0.100. El nombre es provisional y la licencia está por definir (ver `02_traducciones.md`, § 2.6).
