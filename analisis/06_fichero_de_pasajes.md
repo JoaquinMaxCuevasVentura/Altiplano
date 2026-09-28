@@ -58,7 +58,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 147 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 148 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -109,7 +109,8 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 147 
 | 60 | «manchones en el cascajo» | ☐ |
 | 60 | «manchones» | ☐ |
 | 64 | «las nalgas abiertas a la manera de una luna menguante» | ☐ |
-| 65 | «en su secreto, nadie podía entrar» | ☐ |
+| 65 | «nadie podía entrar» | ☐ |
+| 65 | «hierático aspecto» | ☐ |
 | 66 | «La Pacha Mama, sorda, vieja, extenuada, recibía el cuerpo de sus más fieles hijos para encerrarlos en su vientre de sequedad inexorable» | ☐ |
 | 66 | «abortó en plena gestación» | ☐ |
 | 67 | «dos muñequitos de lana» | ☐ |
@@ -248,6 +249,8 @@ Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (
   - «la torpe imaginación de los comunarios habituados a vegetar» (71).
 - **Petrificación y esencialismo telúrico.**
   - «La tierra es su carne, su sangre y sus huesos» (21).
+  - «la actitud hierática y doblegada» de Paulo Huanca (32).
+  - El alma de los comunarios, donde «nadie podía entrar», y su «hierático aspecto» (65). Está en el artículo (Figura 1).
   - «Ancestrales fuerzas telúricas [...] igual que a los pólipos coralíferos» (71).
   - «facciones ásperas, curtidas y secas como la roca» (111).
   - «organismo de piedra del Kollasuyo» (133).

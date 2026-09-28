@@ -32,7 +32,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (las analogías del esgrafiado y de la pirca) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (la Figura 1 y el límite ético, a partir del taller de cine) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
@@ -41,14 +41,14 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 49.477 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.488 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 148 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
@@ -76,6 +76,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/09_recursos_de_carcamo_y_lenguaje_llano.md` | Qué recursos de Cárcamo Pino entraron, cuáles no y por qué; el epígrafe y las opciones descartadas; criterios de la versión en lenguaje llano; autores que salieron |
 | `analisis/10_pallasmaa_y_dos_tesis.md` | Pallasmaa (*La imagen corpórea*), la tesis de Aljohani, *Narrative Structures* y el libro de Potteiger y Purinton, analizado y descartado: qué dicen de verdad, con página; qué entró en el artículo y qué no, y por qué |
 | `analisis/11_analogias_fisicas.md` | Analogías físicas: cómo las usa Cárcamo Pino, criterios para este artículo, los cuatro borradores evaluados (pirca y ripio, válvula, bomba de pistón, cántaro y arco), las dos que entraron (esgrafiado y pirca de doble cara) y cómo hacer otras |
+| `analisis/12_taller_cine_experimental.md` | El taller de Byron Davies sobre cine experimental: qué ya está en el artículo, la corrección que sugirió (el alma «cerrada» y el rostro «hierático» de la Figura 1), lo que no entra y por qué, y lecturas en reserva (tres textos de Davies) |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
