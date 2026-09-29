@@ -29,6 +29,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `02_lo_que_se_toma_de_dos_tesis.md` | Qué se toma de *EthnoGraphemes* y de *Afrography*, con citas cotejadas, qué no y dónde el proyecto se aparta de las dos |
 | `03_sistema_contenida.md` | **El sistema.** Nombre, nueve reglas, el cuadro de correspondencias (cada decisión de la obra y su traducción), el pie, la caja, la pauta, la familia, la póliza, el color, el signo final y el colofón |
 | `03b_anatomia.md` | **La anatomía.** Del pie, el esqueleto; de la obra, el cuerpo: canal, desagüe, bandeja, lluvia, gotas, puntos-tesela, tildes-gota, onda, asta en la retícula, líneas con nombres de la piscina y cifras en celdas |
+| `03c_gramatica.md` | **La gramática.** Anatomía base → estados: parámetros que salen de la obra (canal, cuenca, hombro, facetas, asiento, intemperie, alivio, gota), las curvas maestras de los cuatro generadores (o, l, n, a) y un estado nuevo, *Cinta* |
 | `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad |
 | `05_migracion_digital.md` | Cuándo es coherente migrar, cómo digitalizar, la especificación de la fuente, el espécimen web y cómo cierra el ciclo |
 | `06_etica_fuentes_y_pendientes.md` | Consentimiento, créditos, lo verificado y lo que falta verificar, y los pendientes en orden |
@@ -59,6 +60,8 @@ python3 tipografia/esquemas/generar_esquemas.py \
   --azulejo 150 --teselas 6 --junta 3               # con las medidas reales, en mm; necesita Chromium (CHROME)
 pip install numpy opencv-python-headless scikit-image
 python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (unos cinco minutos)
+pip install shapely
+python3 tipografia/simulacion/gramatica.py          # la gramática: los cuatro generadores y la cinta
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
 python3 tipografia/laminas/generar_laminas.py       #   (necesitan Chromium)
 ```

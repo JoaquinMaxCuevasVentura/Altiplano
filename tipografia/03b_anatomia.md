@@ -1,5 +1,7 @@
 # 03b. La anatomía de *Contenida*
 
+> **Actualización:** `03c_gramatica.md` lleva estas reglas a una gramática paramétrica en vectores, aplicada **antes** de los estados. Lo que cambia está en su §6.
+
 `03` decidió de dónde salen las letras (el pie), dónde viven (la caja), sobre qué se dibujan (la piscina) y por qué estados pasan. Faltaba el cuerpo de cada letra: sus astas, sus ojos, sus remates, sus puntos. Este documento lo resuelve.
 
 ## El principio: del pie, el esqueleto; de la obra, el cuerpo

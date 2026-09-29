@@ -1,0 +1,167 @@
+{
+ "esqueleto": {
+  "fondo": 450.0,
+  "borde": 206.0,
+  "afuera": 79.0,
+  "desague": 572.0,
+  "xh": 244.0,
+  "canal": 31.811947441173732,
+  "o": {
+   "x0": 185.0,
+   "x1": 415.0,
+   "y0": 193.0
+  },
+  "l": {
+   "asta": 298.0,
+   "y0": 73.0
+  },
+  "n": {
+   "izq": 233.0,
+   "der": 375.0,
+   "y0": 203.0
+  },
+  "a": {
+   "asta": 366.5,
+   "y0": 203.0,
+   "ojo": [
+    249.0,
+    322.0,
+    346.0,
+    428.0
+   ],
+   "gancho_x": 229.0
+  }
+ },
+ "parametros": {
+  "canal": {
+   "valor": 31.8,
+   "unidad": "px",
+   "que": "Grosor único del trazo: la media entre el grueso y el fino de la o del pie.",
+   "de_donde": "El punzón y la cinta no modulan: no hay contraste de pluma (D2, D12)"
+  },
+  "radio_chapa": {
+   "valor": 19.1,
+   "unidad": "px",
+   "que": "Radio mínimo de toda curva del eje. Mayor que medio canal: así el contorno interior nunca se cruza.",
+   "de_donde": "El aluminio se rasga en un ángulo agudo (D2)"
+  },
+  "trapecio": {
+   "valor": 0.7,
+   "unidad": "",
+   "que": "Ancho del fondo plano de cada cuenca, sobre su ancho mayor.",
+   "de_donde": "La proyección llega en trapecio; la bandeja con un dedo de agua (D8)"
+  },
+  "pared": {
+   "valor": 0.55,
+   "unidad": "",
+   "que": "Cuánto se abomba la pared de la cuenca al bajar: 0 es la pared recta del trapecio, 1 una vasija redonda.",
+   "de_donde": "El vaso: una ficha llama «vaso» al monolito (a verificar)"
+  },
+  "desague": {
+   "valor": 12.0,
+   "unidad": "px",
+   "que": "Abertura en el fondo de cada cuenca: 3 mm, el surco del punzón con sus lomas.",
+   "de_donde": "«Ningún contenedor aguanta lo que contiene» (D16)"
+  },
+  "hombro": {
+   "valor": 3.0,
+   "unidad": "",
+   "que": "Exponente de la superelipse de los arcos altos (2 sería una elipse).",
+   "de_donde": "La chapa curvada a la fuerza sobre un hombro o una clavícula (D3)"
+  },
+  "hombro_caida": {
+   "valor": 0.4,
+   "unidad": "",
+   "que": "Dónde el arco se vuelve vertical, del borde al fondo.",
+   "de_donde": "Del testigo de la n, a ojo: falta medirlo en el libro"
+  },
+  "facetas": {
+   "valor": 3,
+   "unidad": "",
+   "que": "Planos de cada fuste.",
+   "de_donde": "La placa cambia de plano al apoyarse en el cuerpo (D3, D11)"
+  },
+  "quiebre": {
+   "valor": 1.6,
+   "unidad": "°",
+   "que": "Ángulo entre plano y plano: apenas.",
+   "de_donde": "«Moverse como se mueve la piedra, es decir, apenas» (D11)"
+  },
+  "asiento_ancho": {
+   "valor": 63.6,
+   "unidad": "px",
+   "que": "Ancho del pie de cada fuste sobre el fondo.",
+   "de_donde": "El peso se asienta en la tierra; la piedra en pie"
+  },
+  "asiento_alto": {
+   "valor": 28.6,
+   "unidad": "px",
+   "que": "Altura de la curva cóncava con que el fuste se ensancha.",
+   "de_donde": "Ídem"
+  },
+  "intemperie": {
+   "valor": 3.8,
+   "unidad": "px",
+   "que": "Radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte.",
+   "de_donde": "«Hoy está muy erosionado y casi no se ven esos detalles» (el pie)"
+  },
+  "alivio": {
+   "valor": 8.9,
+   "unidad": "px",
+   "que": "Radio del rebaje en cada encuentro interior en ángulo (v, w, k, x, y). En los generadores no hace falta: todo encuentro es tangente.",
+   "de_donde": "Para que el aluminio no se desgarre bajo el punzón (D2)"
+  },
+  "gancho_fin": {
+   "valor": 125,
+   "unidad": "°",
+   "que": "Dónde termina el gancho alto antes de dejar caer la gota.",
+   "de_donde": "Que la gota cuelgue libre, sin tocar la cuenca"
+  },
+  "gota_masa": {
+   "valor": 39.8,
+   "unidad": "px",
+   "que": "Diámetro de la gota que cuelga de un terminal que mira abajo.",
+   "de_donde": "El líquido que chorrea de la boca (D16)"
+  },
+  "gota_caida": {
+   "valor": 15.9,
+   "unidad": "px",
+   "que": "Cuánto baja la gota antes de juntar peso.",
+   "de_donde": "Ídem: la gravedad"
+  },
+  "gota_cuello": {
+   "valor": 17.5,
+   "unidad": "px",
+   "que": "Ancho del cuello de la gota.",
+   "de_donde": "Ídem"
+  },
+  "cinta": {
+   "valor": 31.8,
+   "unidad": "px",
+   "que": "Ancho de la cinta, a la escala en que iguala al canal (12,5 mm en la de farmacia, a confirmar).",
+   "de_donde": "La cinta que tapó ojos y boca (D12)"
+  }
+ },
+ "generadores": {
+  "o": {
+   "area_px": 23081,
+   "trazos": 1,
+   "alivios": 0
+  },
+  "l": {
+   "area_px": 12583,
+   "trazos": 1,
+   "alivios": 0
+  },
+  "n": {
+   "area_px": 19424,
+   "trazos": 2,
+   "alivios": 0
+  },
+  "a": {
+   "area_px": 22735,
+   "trazos": 3,
+   "alivios": 0
+  }
+ }
+}
