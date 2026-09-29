@@ -58,7 +58,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 150 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 148 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -68,7 +68,6 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 150 
 | 6 | «las chujllas de las familias más antiguas han trepado en los riscos del cerro y desde allí parecen ocupar un sitio de preeminencia sobre el resto de chozas» | ☐ |
 | 7 | «fábula» | ☐ |
 | 8 | «los cimientos y paredes de las chujllas» | ☐ |
-| 8 | «padre del ayllu» | ☐ |
 | 8 | «legión» | ☐ |
 | 8 | «piedrecilla menuda» | ☐ |
 | 9 | «erial de piedras» | ☐ |
@@ -95,7 +94,6 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 150 
 | 31 | «las hoces, el arado, el yugo de madera» | ☐ |
 | 31 | «morada de piojos y pulgas» | ☐ |
 | 34 | «con la madera del arado en un hombro y las correas del yugo en las manos» | ☐ |
-| 34 | «portal de su chujlla» | ☐ |
 | 35 | «amontonó piedras sobre el cadáver» | ☐ |
 | 35 | «una chujlla que estaba abandonada cerro arriba» | ☐ |
 | 36 | «amparados por las Cédulas Reales» | ☐ |
@@ -111,6 +109,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 150 
 | 64 | «las nalgas abiertas a la manera de una luna menguante» | ☐ |
 | 65 | «nadie podía entrar» | ☐ |
 | 65 | «hierático aspecto» | ☐ |
+| 66 | «piedra bezoar» | ☐ |
 | 66 | «La Pacha Mama, sorda, vieja, extenuada, recibía el cuerpo de sus más fieles hijos para encerrarlos en su vientre de sequedad inexorable» | ☐ |
 | 66 | «abortó en plena gestación» | ☐ |
 | 67 | «dos muñequitos de lana» | ☐ |
@@ -200,7 +199,7 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 150 
 | 154 | «quebróse la viga del techo» | ☐ |
 | 154 | «nadie sospechó el crimen» | ☐ |
 | 154 | «informe montón» | ☐ |
-| 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo» | ☐ |
+| 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror» | ☐ |
 | 156 | «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» | ☐ |
 | 156 | «los mismos hombres eran quienes tiraban el arado» | ☐ |
 | 156 | «con una voluntad de siglos de piedra» | ☐ |
@@ -209,7 +208,6 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 150 
 | 156 | «Llegaron los Villca, los Huanca, los Huallpa, los Yupanqui, los Ticona, los Choque, los Chuquihuanca» | ☐ |
 | 159 | «hembra paridora» | ☐ |
 | 159 | «olvidaron la pesadilla pasada» | ☐ |
-| 159 | «su prestigio de hembra paridora y múltiple» | ☐ |
 | 159 | «los patriarcas fecundadores del suelo, los sembradores del destino» | ☐ |
 | 160 | «abra de las cordilleras y cumbre de los caminos» | ☐ |
 | 160 | «anciano» | ☐ |
@@ -287,3 +285,4 @@ Sirven para metáforas que no necesitan fuente nueva (`13_metaforas_populares_y_
 - La bendición de Paulo Huanca a sus hijos: «Que Dios les alumbre el camino y que en las apachetas no les detenga el Supaya» (33).
 - El Ekeko, «dios del placer y la abundancia», junto a San Isidro en el retablo de una chujlla (53).
 - Las «tres deidades maléficas de la mina: el Tío, el Gallo y la Viuda» (149).
+- El yatiri Basilio Quispe vendía «piedra bezoar, dientes de caimán, plantas medicinales» (66). La piedra bezoar es la *jayintilla*, que cura el susto. Está en el artículo (§§6-7; `16_susto_al_susto_libro_completo.md`).

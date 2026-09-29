@@ -117,6 +117,8 @@ Esta vez se suma uno: **verificable**, con página o con fuente.
 - **Norma 4a:** todas cumplen el máximo recomendado de 12 palabras.
 - **Si cambias el título,** hay que tocar el artículo (el título en castellano y en inglés), el README, los documentos 01 y 04 y el Word. La extensión casi no se mueve.
 
+> **Refrán encontrado después:** «la tierra no da así no más», título del libro de Hans van den Berg (1990), citado por Flores en *Susto al susto* (2025: 40). Es andino y verificable, aunque no es de casa ni de piedra (`16_susto_al_susto_libro_completo.md`, §16.7).
+
 > **Decidido el 29 de septiembre de 2026** (`14_evaluacion_propuesta_otra_ia.md`, §14.6): el subtítulo es «piedra, papel y máquina», una idea de la otra IA que salió al iterar. Entraron el juego de piedra, papel o tijera (§1) y las puertas cerradas de la p. 80 (§6). La Alasita, el Tío, la bendición de las apachetas y *uta* siguen en reserva.
 
 ## 13.6. Qué decides tú

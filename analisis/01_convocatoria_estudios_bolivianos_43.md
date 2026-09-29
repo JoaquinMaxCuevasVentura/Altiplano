@@ -49,7 +49,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: piedra, papel y m�
 | N.º | Norma | Estado en `articulo/articulo_cosecha_de_piedras.docx` |
 |---|---|---|
 | 1 | Originalidad e inéditos; el autor responde por ella | Pendiente de revisión autoral (§1.5) |
-| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.473 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
+| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.472 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
 | 3 | Tamaño carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5; cuadros e ilustraciones numerados con su fuente y mencionados en el texto | ✅ El `.docx` generado lo cumple. El Cuadro 1 y las seis figuras llevan número y fuente, y el texto los menciona |
 | 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 9 palabras (ES) / 10 (EN) |
 | 4b | Presentación del autor a pie de página (máx. 100 palabras): formación, grado, adscripción, publicaciones, correo, ciudad, país | ✅ Nota 1 de 80 palabras. No trae adscripción ni publicaciones (`04`, §4.2) |
@@ -71,7 +71,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: piedra, papel y m�
    - Arriarán sigue sin verificar.
    - Véase `04_verificaciones_y_pendientes.md`, §4.7.
 4. **Doble ciego.** Las normas piden la nota del autor, pero el arbitraje es a doble ciego. Conviene preguntar a los editores si prefieren un archivo anonimizado más una portada separada, o enviar ambos.
-5. **Citas de la novela.** Las 150 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
+5. **Citas de la novela.** Las 148 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
 6. **Figuras.** Son los esquemas de encaje de los seis pasteles, hechos con asistencia de IA y declarados así en el pie y en la declaración de IA. Si tienes fotografías de los pasteles, puedes sustituirlos (`articulo/figuras/LEEME.md`).
 
 ## 1.6. Borrador de correo de envío

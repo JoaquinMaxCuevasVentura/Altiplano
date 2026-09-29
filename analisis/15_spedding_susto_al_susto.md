@@ -1,5 +1,9 @@
 # 15. Spedding, «Piedras en el camino»: la fuente del «corazón de piedra»
 
+> **Actualizado con el libro completo** (`16_susto_al_susto_libro_completo.md`):
+> - **«Piedras en el camino» es un relato.** borragán lo dice en la presentación (p. 19): se le pidió a Spedding «un texto de ficción». El artículo lo aclara ahora («en un relato de Spedding»), y las piedras *awicha* de §15.3 piden la misma aclaración si entran.
+> - **El colofón responde §15.5:** la dirección editorial es de Eloísa Paz y alfonso borragán, y el año, 2025. El ISBN no se lee en el OCR.
+
 El 29 de septiembre de 2026 encontraste la fuente de la frase que recordabas («lamer piedra hasta que tu corazón se vuelva piedra»). Enviaste la tapa y el índice del libro, cinco páginas escaneadas y un análisis hecho con otra IA.
 
 - **El texto:** Alison Spedding, «Piedras en el camino», en *Susto al susto*. Es una sección intercalada, con páginas en números romanos (XIII-XXIII).

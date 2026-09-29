@@ -14,8 +14,13 @@
   - Tras el taller de cine de Byron Davies, la Figura 1 distingue por qué se detienen el esquema y el narrador ante el alma de los comunarios, y el segundo límite de las conclusiones dice «el alma», no «los sueños» (`12_taller_cine_experimental.md`).
   - Nuevo subtítulo, «piedra, papel y máquina», y dos metáforas: el juego de piedra, papel o tijera (§1) y las casas que se cierran a los que huyen de la sequía (§6, p. 80) (`14_evaluacion_propuesta_otra_ia.md`).
   - En §7, el *qalachuyma*, «corazón de piedra», de Alison Spedding (2025: XV), la fuente de la frase que recordabas (`15_spedding_susto_al_susto.md`). La bibliografía pasa a 25 entradas.
+  - Con el libro completo de *Susto al susto* (`16_susto_al_susto_libro_completo.md`):
+    - entran la «piedra bezoar» que vendía el yatiri (§6, p. 66) y la cura andina del susto como retorno «al territorio y a la memoria» (§7; Rodríguez y Rodríguez, 2025: 55);
+    - el *qalachuyma* se presenta como parte de «un relato de Spedding», porque el libro dice que su texto es ficción;
+    - diez recortes compensan la extensión;
+    - la bibliografía pasa a 26 entradas.
 
-- **Extensión.** 49.473 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión.** 49.472 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 9 y 10 palabras.
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -23,7 +28,7 @@
   - Investigación «en desarrollo» (final de la sección 1).
   - Conflicto de intereses y declaración de IA, en las declaraciones finales (§4.5).
   - **No quedan marcadores ⟦…⟧.**
-- **Citas de la novela.** Las 150 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
+- **Citas de la novela.** Las 148 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
 - **Figuras.** Seis, numeradas por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6. Son los esquemas de encaje de los pasteles, hechos con asistencia de IA y declarados así (§4.4).
@@ -62,7 +67,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** casi no tiene margen (quedan 27 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** casi no tiene margen (quedan 28 caracteres). Cualquier añadido obliga a acortar otra cosa.
 
 ## 4.3. Verificación de fuentes
 
@@ -74,7 +79,7 @@ Estado de cada dato:
 
 | # | Dato | Estado | Acción |
 |---|---|---|---|
-| 1 | 150 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
+| 1 | 148 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
 | 2 | Cárcamo Pino (2025a: 10, 12; 2025b: 244, 259) | A | — |
 | 3 | Definición de manuaje, Cárcamo Pino (2019: 1412) | B, vía 2025b: 244 | — |
 | 4 | Editorial de Cárcamo Pino (2019) | C | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018. Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Confirmar cuál prefieres |
@@ -96,7 +101,8 @@ Estado de cada dato:
 | 20 | Ingold (2013: 78, 125) | A | Traducción propia del inglés; páginas comprobadas con diez entradas del índice |
 | 21 | Seguí de la Riva (2010: 93) | A | Página del índice de aforismos del propio libro. El libro es de 2010, no de 2012 |
 | 22 | Pallasmaa (2014: 53, 158, 159) y la frase de Bachelard (1978 [1942]: 7-8) que cita en la p. 53 | A / B | Páginas reconstruidas con los encabezados y comprobadas con el índice de nombres (`10_pallasmaa_y_dos_tesis.md`, §10.1). La frase de Bachelard se cita «cit. en» |
-| 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII) | Confirmar en el colofón si hay coordinadores o editores, el ISBN y las páginas de la sección (`15_spedding_susto_al_susto.md`) |
+| 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII y OCR del libro completo) | Es un relato, como dice el propio libro (p. 19), y el artículo lo aclara. El colofón da la dirección editorial (Eloísa Paz y alfonso borragán). Falta confirmar en el impreso el año, el ISBN y las páginas de la sección (`16_susto_al_susto_libro_completo.md`) |
+| 24 | Rodríguez y Rodríguez (2025: 55) y la *jayintilla* de Bertonio (2011 [1612]: 361) | A (OCR del libro, comprobado en la imagen de las pp. 54-55; transcripción de Bertonio) | Confirmar en el impreso la última página del capítulo (61) |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -135,7 +141,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.473 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 27 caracteres de margen.
+- **Ahora:** 49.472 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 28 caracteres de margen.
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -168,6 +174,6 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
 - [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)
-- [x] `.docx` regenerado: 49.473 caracteres; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado: 49.472 caracteres; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)

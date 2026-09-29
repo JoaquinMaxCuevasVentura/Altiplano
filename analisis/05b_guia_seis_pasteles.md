@@ -273,7 +273,7 @@ Cuando termines cada pastel, reescribe en el artículo el plano «(3) *Contraste
 
 > (3) *Contraste*. Al [operación: esgrafiar las vigas, disolver el yunga, incidir el catastro...], apareció [lo que viste], que el texto [no dice / dice de otro modo / contradice en la p. X]. La lectura [se confirma / se matiza / no se sostiene]: [consecuencia para la lectura de la novela].
 
-Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 27, así que lo que añadas tendrás que recortarlo en otra parte.
+Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 28, así que lo que añadas tendrás que recortarlo en otra parte.
 
 ## 5.6. Fotografiar e insertar las figuras
 
