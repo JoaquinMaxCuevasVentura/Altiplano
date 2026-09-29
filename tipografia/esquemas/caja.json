@@ -1,0 +1,485 @@
+{
+ "columnas": 8,
+ "filas": 7,
+ "celdas": [
+  {
+   "signo": ",",
+   "estado": "hallada",
+   "testigos": 6,
+   "procedencia": "KOCHAMAMA",
+   "celda": 1,
+   "fila": 1,
+   "columna": 1
+  },
+  {
+   "signo": "s",
+   "estado": "hallada",
+   "testigos": 25,
+   "procedencia": "según",
+   "celda": 2,
+   "fila": 1,
+   "columna": 2
+  },
+  {
+   "signo": "e",
+   "estado": "hallada",
+   "testigos": 41,
+   "procedencia": "según",
+   "celda": 3,
+   "fila": 1,
+   "columna": 3
+  },
+  {
+   "signo": "g",
+   "estado": "hallada",
+   "testigos": 7,
+   "procedencia": "según",
+   "celda": 4,
+   "fila": 1,
+   "columna": 4
+  },
+  {
+   "signo": "ú",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "según",
+   "celda": 5,
+   "fila": 1,
+   "columna": 5
+  },
+  {
+   "signo": "n",
+   "estado": "hallada",
+   "testigos": 27,
+   "procedencia": "según",
+   "celda": 6,
+   "fila": 1,
+   "columna": 6
+  },
+  {
+   "signo": "o",
+   "estado": "hallada",
+   "testigos": 30,
+   "procedencia": "Posnansky",
+   "celda": 7,
+   "fila": 1,
+   "columna": 7
+  },
+  {
+   "signo": "a",
+   "estado": "hallada",
+   "testigos": 29,
+   "procedencia": "Posnansky",
+   "celda": 8,
+   "fila": 1,
+   "columna": 8
+  },
+  {
+   "signo": "k",
+   "estado": "hallada",
+   "testigos": 1,
+   "procedencia": "Posnansky",
+   "celda": 9,
+   "fila": 2,
+   "columna": 1
+  },
+  {
+   "signo": "y",
+   "estado": "hallada",
+   "testigos": 5,
+   "procedencia": "Posnansky",
+   "celda": 10,
+   "fila": 2,
+   "columna": 2
+  },
+  {
+   "signo": "p",
+   "estado": "hallada",
+   "testigos": 6,
+   "procedencia": "presentado",
+   "celda": 11,
+   "fila": 2,
+   "columna": 3
+  },
+  {
+   "signo": "r",
+   "estado": "hallada",
+   "testigos": 15,
+   "procedencia": "presentado",
+   "celda": 12,
+   "fila": 2,
+   "columna": 4
+  },
+  {
+   "signo": "t",
+   "estado": "hallada",
+   "testigos": 19,
+   "procedencia": "presentado",
+   "celda": 13,
+   "fila": 2,
+   "columna": 5
+  },
+  {
+   "signo": "d",
+   "estado": "hallada",
+   "testigos": 14,
+   "procedencia": "presentado",
+   "celda": 14,
+   "fila": 2,
+   "columna": 6
+  },
+  {
+   "signo": "m",
+   "estado": "hallada",
+   "testigos": 9,
+   "procedencia": "amplio",
+   "celda": 15,
+   "fila": 2,
+   "columna": 7
+  },
+  {
+   "signo": "l",
+   "estado": "hallada",
+   "testigos": 15,
+   "procedencia": "amplio",
+   "celda": 16,
+   "fila": 2,
+   "columna": 8
+  },
+  {
+   "signo": "i",
+   "estado": "hallada",
+   "testigos": 15,
+   "procedencia": "amplio",
+   "celda": 17,
+   "fila": 3,
+   "columna": 1
+  },
+  {
+   "signo": "c",
+   "estado": "hallada",
+   "testigos": 7,
+   "procedencia": "reconstructivo",
+   "celda": 18,
+   "fila": 3,
+   "columna": 2
+  },
+  {
+   "signo": "u",
+   "estado": "hallada",
+   "testigos": 17,
+   "procedencia": "reconstructivo",
+   "celda": 19,
+   "fila": 3,
+   "columna": 3
+  },
+  {
+   "signo": "v",
+   "estado": "hallada",
+   "testigos": 5,
+   "procedencia": "reconstructivo",
+   "celda": 20,
+   "fila": 3,
+   "columna": 4
+  },
+  {
+   "signo": "j",
+   "estado": "hallada",
+   "testigos": 1,
+   "procedencia": "viejas",
+   "celda": 21,
+   "fila": 3,
+   "columna": 5
+  },
+  {
+   "signo": "f",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "fotografías",
+   "celda": 22,
+   "fila": 3,
+   "columna": 6
+  },
+  {
+   "signo": "í",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "fotografías",
+   "celda": 23,
+   "fila": 3,
+   "columna": 7
+  },
+  {
+   "signo": "(",
+   "estado": "hallada",
+   "testigos": 1,
+   "procedencia": "hoy",
+   "celda": 24,
+   "fila": 3,
+   "columna": 8
+  },
+  {
+   "signo": "h",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "hoy",
+   "celda": 25,
+   "fila": 4,
+   "columna": 1
+  },
+  {
+   "signo": "á",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "está",
+   "celda": 26,
+   "fila": 4,
+   "columna": 2
+  },
+  {
+   "signo": ")",
+   "estado": "hallada",
+   "testigos": 1,
+   "procedencia": "detalles",
+   "celda": 27,
+   "fila": 4,
+   "columna": 3
+  },
+  {
+   "signo": ".",
+   "estado": "hallada",
+   "testigos": 3,
+   "procedencia": "detalles",
+   "celda": 28,
+   "fila": 4,
+   "columna": 4
+  },
+  {
+   "signo": "b",
+   "estado": "hallada",
+   "testigos": 2,
+   "procedencia": "bien",
+   "celda": 29,
+   "fila": 4,
+   "columna": 5
+  },
+  {
+   "signo": "q",
+   "estado": "hallada",
+   "testigos": 1,
+   "procedencia": "que",
+   "celda": 30,
+   "fila": 4,
+   "columna": 6
+  },
+  {
+   "signo": "ó",
+   "estado": "reconstruida",
+   "pedida_por": "quedó",
+   "celda": 31,
+   "fila": 4,
+   "columna": 7
+  },
+  {
+   "signo": "z",
+   "estado": "reconstruida",
+   "pedida_por": "vez",
+   "celda": 32,
+   "fila": 4,
+   "columna": 8
+  },
+  {
+   "signo": "?",
+   "estado": "reconstruida",
+   "pedida_por": "no?",
+   "celda": 33,
+   "fila": 5,
+   "columna": 1
+  },
+  {
+   "signo": "é",
+   "estado": "reconstruida",
+   "pedida_por": "después",
+   "celda": 34,
+   "fila": 5,
+   "columna": 2
+  },
+  {
+   "signo": ";",
+   "estado": "reconstruida",
+   "pedida_por": "escrito",
+   "celda": 35,
+   "fila": 5,
+   "columna": 3
+  },
+  {
+   "signo": "ñ",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 36,
+   "fila": 5,
+   "columna": 4
+  },
+  {
+   "signo": "w",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 37,
+   "fila": 5,
+   "columna": 5
+  },
+  {
+   "signo": "x",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 38,
+   "fila": 5,
+   "columna": 6
+  },
+  {
+   "signo": "ü",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 39,
+   "fila": 5,
+   "columna": 7
+  },
+  {
+   "signo": "0",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 40,
+   "fila": 5,
+   "columna": 8
+  },
+  {
+   "signo": "1",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 41,
+   "fila": 6,
+   "columna": 1
+  },
+  {
+   "signo": "2",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 42,
+   "fila": 6,
+   "columna": 2
+  },
+  {
+   "signo": "3",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 43,
+   "fila": 6,
+   "columna": 3
+  },
+  {
+   "signo": "4",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 44,
+   "fila": 6,
+   "columna": 4
+  },
+  {
+   "signo": "5",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 45,
+   "fila": 6,
+   "columna": 5
+  },
+  {
+   "signo": "6",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 46,
+   "fila": 6,
+   "columna": 6
+  },
+  {
+   "signo": "7",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 47,
+   "fila": 6,
+   "columna": 7
+  },
+  {
+   "signo": "8",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 48,
+   "fila": 6,
+   "columna": 8
+  },
+  {
+   "signo": "9",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 49,
+   "fila": 7,
+   "columna": 1
+  },
+  {
+   "signo": ":",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 50,
+   "fila": 7,
+   "columna": 2
+  },
+  {
+   "signo": "¿",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 51,
+   "fila": 7,
+   "columna": 3
+  },
+  {
+   "signo": "«",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 52,
+   "fila": 7,
+   "columna": 4
+  },
+  {
+   "signo": "»",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 53,
+   "fila": 7,
+   "columna": 5
+  },
+  {
+   "signo": "—",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 54,
+   "fila": 7,
+   "columna": 6
+  },
+  {
+   "signo": "…",
+   "estado": "reconstruida",
+   "pedida_por": "",
+   "celda": 55,
+   "fila": 7,
+   "columna": 7
+  },
+  {
+   "signo": "¶",
+   "estado": "manos",
+   "celda": 56,
+   "fila": 7,
+   "columna": 8
+  }
+ ],
+ "celda_vacia": "¡ ! (la voz contenida no exclama) · guion, comillas inglesas, apóstrofo · cualquier otro signo",
+ "sin_celda": "Las mayúsculas no tienen celda: se escriben con la caja baja."
+}

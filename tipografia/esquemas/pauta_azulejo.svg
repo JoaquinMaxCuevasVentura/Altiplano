@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297" font-family="'Courier New', Courier, 'Liberation Mono', monospace">
+<rect width="210" height="297" fill="#ffffff"/>
+<text x="30.00" y="14.00" font-size="5.2" fill="#1f1f1f" text-anchor="start" font-weight="bold" >Contenida · pauta de calco</text>
+<text x="30.00" y="21.00" font-size="3.1" fill="#6d6d6d" text-anchor="start" font-weight="normal" >1 azulejo = 150 mm = 1 letra · 6 teselas de 25.0 mm · junta 3 mm</text>
+<text x="30.00" y="26.50" font-size="3.1" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Imprimir al 100 %. Comprobar la barra de 100 mm. Si el azulejo real mide otra cosa, regenerar.</text>
+<rect x="27.0" y="31" width="156" height="156" fill="#a4a39b" opacity="0.55"/>
+<rect x="30.0" y="34" width="150" height="150" fill="#ffffff" stroke="#a4a39b" stroke-width="0.3"/>
+<line x1="55.00" y1="34" x2="55.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="59.00" x2="180.0" y2="59.00" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="80.00" y1="34" x2="80.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="84.00" x2="180.0" y2="84.00" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="105.00" y1="34" x2="105.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="109.00" x2="180.0" y2="109.00" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="130.00" y1="34" x2="130.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="134.00" x2="180.0" y2="134.00" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="155.00" y1="34" x2="155.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="159.00" x2="180.0" y2="159.00" stroke="#a4a39b" stroke-width="0.25"/>
+<line x1="30.0" y1="171.50" x2="180.0" y2="171.50" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
+<text x="185.00" y="172.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >descendentes</text>
+<line x1="30.0" y1="146.50" x2="180.0" y2="146.50" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
+<text x="185.00" y="147.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >base</text>
+<line x1="30.0" y1="84.00" x2="180.0" y2="84.00" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
+<text x="185.00" y="85.10" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >altura x</text>
+<line x1="30.0" y1="46.50" x2="180.0" y2="46.50" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
+<text x="185.00" y="47.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >ascendentes</text>
+<text x="185.00" y="189.00" font-size="2.6" fill="#6d6d6d" text-anchor="start" font-weight="normal" >(provisional)</text>
+<text x="30.00" y="198.00" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Celda nº ______   Signo ______   [ ] hallado   [ ] reconstruido</text>
+<text x="30.00" y="206.20" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Hallado en (palabra y línea del pie): ______________________________</text>
+<text x="30.00" y="214.40" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Reconstruido por analogía con: _____________________________________</text>
+<text x="30.00" y="222.60" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Generación de ampliación: ______   Mano: ___________________________</text>
+<text x="30.00" y="230.80" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Fecha: ____________   Intentos: ______   Roturas: ______</text>
+<text x="30.00" y="239.00" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Notas: _____________________________________________________________</text>
+<text x="30.00" y="247.20" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >____________________________________________________________________</text>
+<line x1="30.0" y1="271" x2="130.0" y2="271" stroke="#1f1f1f" stroke-width="0.5"/>
+<line x1="30.0" y1="271" x2="30.0" y2="268" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="40.0" y1="271" x2="40.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="50.0" y1="271" x2="50.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="60.0" y1="271" x2="60.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="70.0" y1="271" x2="70.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="80.0" y1="271" x2="80.0" y2="268" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="90.0" y1="271" x2="90.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="100.0" y1="271" x2="100.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="110.0" y1="271" x2="110.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="120.0" y1="271" x2="120.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
+<line x1="130.0" y1="271" x2="130.0" y2="268" stroke="#1f1f1f" stroke-width="0.35"/>
+<text x="134.00" y="271.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >100 mm</text>
+<text x="30.00" y="281.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Dibujar al derecho, con línea continua lo hallado y punteada lo reconstruido.</text>
+<text x="30.00" y="286.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Para repujar: dar vuelta el calco (espejo) y repasarlo por el reverso de la placa.</text>
+</svg>

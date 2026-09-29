@@ -89,3 +89,7 @@ python3 articulo/generar_docx.py                                # artículo defi
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```
+
+## Otro proyecto en este repositorio: *Contenida*
+
+`tipografia/` contiene *Contenida: acciones para componer una voz*, un proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz Prada. Es independiente del artículo. Primero es analógico: placas de papel de aluminio repujado, la pauta de la piscina y un hectógrafo. Después, digital, si cierra. Empieza por `tipografia/README.md`.
