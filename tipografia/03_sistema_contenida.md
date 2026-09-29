@@ -33,9 +33,10 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
    - El pie escribe en mayúsculas justamente el nombre impuesto: «EL IDOLO KOCHAMAMA».
    - La obra cambia el material del monumento por uno doméstico, y la tipografía cambia la letra del monumento por la de la mano.
    - Una mayúscula tecleada se escribe en caja baja.
-5. **Monoespaciada: una letra, un azulejo.**
-   - La piscina, las celdas de la lámina y la máquina de escribir de tu poema son retículas de celdas iguales.
-   - La letra se adapta a su contenedor, y no al revés: la «m» llena su azulejo y la «i» queda rodeada de piel.
+5. **Monoespaciada: una letra, una celda.**
+   - Las celdas de la cabeza del ídolo y la máquina de escribir de tu poema son retículas de celdas iguales. La celda mide 0,84 de ancho por alto.
+   - La letra se adapta a su contenedor, y no al revés: la «m» llena su celda y la «i» queda rodeada de piel.
+   - Antes la medida era el azulejo. Ya no: la piscina fue escenario y pantalla, no molde. La pared recibe la letra al final (estado *Azulejo*) y sus juntas la cortan.
 6. **No hay Regular.**
    - La figura de la obra no tiene rostro distinguible: la cinta color piel le tapa los ojos y la boca.
    - La familia tampoco tiene una cara neutra. Cada estilo es un estado, y ninguno es la versión «normal» de los demás.
@@ -62,7 +63,7 @@ Cada decisión de la obra (numerada como en `01`) y su traducción. La tercera c
 | D3 | Placas sueltas, con piel entre ellas | Cada letra es una placa suelta: un tipo móvil. Entre palabras, un azulejo vacío: la piel | La composición es distribuir placas sobre un soporte, como en el cuerpo |
 | D4 | Puertas en el pecho y la espalda | La tapa de la caja tiene una sola puerta, calada del tamaño de una celda, sobre la celda 1 | *Portada* viene de *puerta*. Con la caja cerrada se ve solo la coma que sigue al nombre del ídolo, el primer signo hallado |
 | D5 | Iconografía interpretada, no copiada | Ningún signo del monolito entra como letra. Se toma su retícula (la caja) y su celda vacía (el `.notdef`) | Rebeca interpreta; *Contenida* toma solo el marco vacío |
-| D6 | Piscina de azulejo vacía, en un estudio de tatuajes | La pauta es la piscina: un azulejo por letra, la tesela como unidad, la junta como espacio entre letras. El esténcil de tatuaje como matriz | El contenedor de la obra es la caja de la tipografía. El lugar donde los signos se ponen en la piel da la técnica de transferencia |
+| D6 | Piscina de azulejo vacía, en un estudio de tatuajes | La piscina es el lugar donde la letra llega: la pared la recibe y sus juntas la cortan (estado *Azulejo*). Sus palabras nombran las líneas (fondo, borde, desagüe, afuera). El esténcil de tatuaje como matriz | Un contenedor vacío recibe a otro. El lugar donde los signos se ponen en la piel da la técnica de transferencia |
 | D7 | Placas en el fondo, que se leen como peces | No se dibujan peces. Las letras sueltas en el fondo de la piscina ya se leen como peces | El signo «pez» de la Kochamama llega sin copiarlo |
 | D8 | Proyección a través de una bandeja con un dedo de agua | Estado *Agua* y *pliego de agua*: un impreso que solo se lee reflejado | La imagen solo llega pasando por el elemento que al lugar le falta |
 | D9 | La piscina es escenario, pantalla y tema | La pauta definitiva es un frotado de la pared. El espécimen final se proyecta sobre esa misma pared | La piscina escribe, sostiene y recibe la letra |
@@ -153,26 +154,18 @@ Todo eso, y cualquier otro signo, se ve como el `.notdef`: la celda vacía de la
 - **Contenido:** cada compartimento guarda las placas de su signo y sus fichas.
 - **La tapa:** tiene una sola puerta calada, sobre la celda 1.
 
-## 3.6. La pauta: el azulejo
+## 3.6. La pauta: la celda
 
-Las cuatro líneas se llaman como la piscina: **desagüe** (descendentes), **fondo** (base), **borde** (altura de x) y **afuera** (ascendentes). La anatomía las hace caer en líneas de media tesela (`03b_anatomia.md`, reglas 10 y 11).
+> **Actualización.** La pauta era el azulejo: una letra por azulejo y la tesela como unidad. Se cambió por la celda de la cabeza del ídolo, y la anatomía pasó a una gramática paramétrica (`03c_gramatica.md`). Lo que sigue es la pauta vigente.
 
-- **Cuerpo:** un azulejo de la pared. En la foto parece medir entre cinco y media y seis teselas del piso. Hay que medirlo.
-- **Unidad:** una tesela del piso.
-- **Ancho:** todas las letras miden un azulejo. Nada se estira para llenar.
-- **Espacios:**
-  - entre letras, la junta;
-  - entre palabras, un azulejo vacío;
-  - entre líneas, nada: las filas de azulejos se apilan, y el interlineado es igual al cuerpo.
-- **Escala:** la decide el pie.
-  - La ascendente más alta y la descendente más baja de las letras halladas tienen que entrar en el azulejo, con media tesela de aire arriba y abajo.
-  - La línea de base y la altura de x caen donde caen, redondeadas a media tesela.
-  - La pauta impresa trae líneas provisionales, a partir de la tesela de abajo: descendentes 0,5; base 1,5; altura de x 4; ascendentes 5,5.
-- **Lo que no entra, desborda.** Si una descendente del pie sale del azulejo, invade la junta y se registra. No se recorta.
-- **Dos cuerpos, los dos de la piscina:**
-  - **cuerpo azulejo:** placas y pared;
-  - **cuerpo tesela:** impresos (hectógrafo, fichas). En cuerpo tesela, la caja entera cabe en una hoja A4: 20 × 17,5 cm, si la tesela mide 2,5 cm.
-- **La pauta impresa es provisional.** La definitiva es un frotado (grafito sobre papel) de un paño de 8 × 7 azulejos de la pared de la piscina: la retícula real, con sus juntas torcidas y sus grietas, no una retícula ideal.
+- **Cuerpo:** una celda de 0,84 de ancho por alto, la proporción de las celdas de la cabeza en la lámina (la misma del `.notdef`). A confirmar en el impreso.
+- **Líneas:** las da el pie: **afuera** (ascendentes), **borde** (altura de x), **fondo** (base) y **desagüe** (descendentes). Los nombres son de vasija. No se redondean a ninguna retícula.
+- **Ancho:** todas las letras miden una celda. Nada se estira para llenar.
+- **Espacios:** entre palabras, una celda vacía: la piel.
+- **Placa:** la celda cabe en una placa cuadrada de 150 mm. En cuerpo pequeño (hectógrafo, fichas), la caja entera cabe en una hoja A4.
+- **La piscina, al final.** El frotado de la pared no es pauta: es el papel sobre el que se calca, y la pared, la superficie donde la letra llega y se corta.
+
+La plantilla de calco de `esquemas/` todavía dibuja el azulejo. Hay que regenerarla con la celda.
 
 Plantilla: `esquemas/pauta_azulejo.svg`, a escala 1:1. Se regenera con las medidas reales (`esquemas/generar_esquemas.py --azulejo … --teselas … --junta …`).
 

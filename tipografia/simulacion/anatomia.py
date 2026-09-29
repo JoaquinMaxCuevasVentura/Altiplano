@@ -1,5 +1,9 @@
 """Anatomía de Contenida: lo que la obra le hace al esqueleto que da el pie.
 
+Reemplazada por gramatica.py (03c_gramatica.md): la anatomía ya no se aplica al
+final sobre la silueta del testigo, sino antes, en vectores. Este archivo queda
+como registro de la primera versión (03b_anatomia.md); simular.py ya no lo usa.
+
 Del pie se toma el esqueleto: dónde va cada trazo y cuánto mide. La anatomía
 la dicta la obra (03b_anatomia.md). Estas funciones la aplican a las máscaras
 de la simulación, en este orden:

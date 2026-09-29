@@ -21,7 +21,7 @@ AQUI = Path(__file__).resolve().parent
 TIPO = AQUI.parent
 sys.path.insert(0, str(TIPO / "simulacion"))
 
-from comun import CELDAS, SALIDA, T, a8, a_rgb, azar, caja_tinta, componentes, poliza  # noqa: E402
+from comun import CELDAS, SALIDA, T, a8, a_rgb, azar, poliza  # noqa: E402
 from contener import repujar_placa, sesiones_de_vestir, vestir  # noqa: E402
 from desenterrar import calco, desenterrar, frotado, pared  # noqa: E402
 from devolver import agua, foto_agua, voz_del_verso  # noqa: E402
@@ -107,22 +107,6 @@ def signo_final_grande():
     guardar("celda_56.jpg", foto_placa(p, azar("foto", 56, 1)))
 
 
-def anatomia_grande(D, escala=1.45):
-    """Los seis paneles de 03c_anatomia.png, uno por archivo y con rótulos más grandes para la lámina."""
-    import simular
-    from comun import rotulo
-    simular.rotulo = lambda tam: rotulo(int(tam * escala))
-    med = D["med"]
-    extra = {"a": [("remate gastado", np.array([D["astas"].get("a") or T / 2, med["base"] - 4]))]}
-    x0, y0, x1, y1 = caja_tinta(D["R"]["8"])
-    extra["8"] = [("celda", np.array([x1 - 3, (y0 + y1) / 2 + 60]))]
-    comps = [c for c in componentes(D["R"]["ñ"]) if c[2][1] < med["base"] - med["xh"] * 1.05]
-    if comps:
-        extra["ñ"] = [("onda", np.array(comps[0][2]))]
-    for n, s in enumerate("aojá8ñ", 1):
-        simular._panel_letra(D, s, extra.get(s, ()), solo_derecha=(s == "8")).save(IMG / f"anatomia_{n}.png")
-
-
 # ---------------------------------------------------------------- recortes
 
 def abrir(ruta):
@@ -140,7 +124,8 @@ def sin_titulo(im, arriba):
 
 def recortes():
     S = SALIDA
-    for nombre in ("03_calco.png", "04_placa.jpg", "06_piel.jpg", "11_azulejo.png"):
+    for nombre in ("03_calco.png", "04_placa.jpg", "06_piel.jpg", "07_cinta.jpg", "11_azulejo.png",
+                   "21_gramatica_caja.png"):
         im = abrir(S / nombre)
         base = Path(nombre).stem
         reticula_de_lamina(im).save(IMG / f"{base}_reticula.jpg", quality=90)
@@ -151,6 +136,9 @@ def recortes():
     sin_titulo(abrir(S / "04b_placas_rotas.jpg"), 58).save(IMG / "04b_placas_rotas.jpg", quality=90)
     for n in ("08", "32"):
         sin_titulo(abrir(S / f"12_cadena_{n}.jpg"), 58).save(IMG / f"12_cadena_{n}.jpg", quality=90)
+    # los cuatro generadores: testigo, curvas, cuerpo y calco (sin la cinta, que tiene su lámina)
+    g = abrir(S / "20_gramatica.png")
+    g.crop((0, 110, 40 + 4 * 440 + 3 * 16 + 10, g.height)).save(IMG / "20_gramatica_generadores.jpg", quality=90)
     # los esquemas, sin el título (lo pone la lámina)
     caja = abrir(ESQ / "caja_8x7.png")
     caja.crop((80, 235, caja.width - 80, caja.height)).save(IMG / "caja_8x7.png")
@@ -167,9 +155,8 @@ if __name__ == "__main__":
     IMG.mkdir(exist_ok=True)
     recortes()
     D = desenterrar()
-    datos = {"ajuste": {k: round(float(v), 3) for k, v in D["med"]["ajuste"].items()}}
+    datos = {k: round(float(D["med"][k]), 1) for k in ("canal", "asc", "xh", "desc")}
     (IMG / "datos.json").write_text(json.dumps(datos, ensure_ascii=False, indent=1), encoding="utf8")
-    anatomia_grande(D)
     signo_final_grande()
     vs = placas_vestidas(D, [("c", 1), ("o", 1), ("n", 1), ("t", 1), ("e", 1), ("n", 2), ("i", 1), ("d", 1), ("a", 1)])
     portada(vs)

@@ -113,32 +113,47 @@ def caja(datos):
 # ---------------------------------------------------------------- pauta de calco (mm, A4)
 
 def pauta(azulejo, teselas, junta):
+    """La pauta de calco: la placa, la celda de la cabeza del ídolo (0,84) y las cuatro líneas del pie.
+
+    Las líneas salen de la gramática (simulacion/salida/gramatica/gramatica.json) si existe;
+    si no, de la pauta provisional. La placa mide lo que el azulejo: 150 mm hasta medir.
+    """
     W, H = 210, 297
     x0, y0 = (W - azulejo) / 2, 34
-    tes = azulejo / teselas
-    # Líneas provisionales, en teselas desde abajo; se corrigen al medir las letras del pie.
-    lineas = [(0.5, "desagüe"), (1.5, "fondo"), (4.0, "borde"), (5.5, "afuera")]
+    k = azulejo / 600                                   # la simulación trabaja en 600 px por placa
+    ruta = Path(__file__).resolve().parent.parent / "simulacion" / "salida" / "gramatica" / "gramatica.json"
+    if ruta.exists():
+        e = json.loads(ruta.read_text(encoding="utf8"))["esqueleto"]
+        lineas = [(e["desague"] * k, "desagüe"), (e["fondo"] * k, "fondo"), (e["borde"] * k, "borde"),
+                  (e["afuera"] * k, "afuera")]
+        alto = (e["desague"] - e["afuera"]) * 1.1 * k
+        cy = (e["desague"] + e["afuera"]) / 2 * k
+        origen = "del pie (testigo sustituto)"
+    else:
+        tes = azulejo / 6
+        lineas = [(azulejo - v * tes, n) for v, n in ((0.5, "desagüe"), (1.5, "fondo"), (4.0, "borde"), (5.5, "afuera"))]
+        alto, cy = azulejo * 0.92, azulejo / 2
+        origen = "provisional"
+    ancho = 0.84 * alto
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}" font-family="{MONO}">',
          f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
          t(x0, 14, "Contenida · pauta de calco", 5.2, peso="bold"),
-         t(x0, 21, f"1 azulejo = {azulejo:g} mm = 1 letra · {teselas} teselas de {tes:.1f} mm · junta {junta:g} mm", 3.1, GRIS),
-         t(x0, 26.5, "Imprimir al 100 %. Comprobar la barra de 100 mm. Si el azulejo real mide otra cosa, regenerar.", 3.1, GRIS),
-         f'<rect x="{x0 - junta}" y="{y0 - junta}" width="{azulejo + 2 * junta}" height="{azulejo + 2 * junta}" fill="{JUNTA}" opacity="0.55"/>',
-         f'<rect x="{x0}" y="{y0}" width="{azulejo}" height="{azulejo}" fill="#ffffff" stroke="{JUNTA}" stroke-width="0.3"/>']
-    for i in range(1, teselas):
-        o.append(f'<line x1="{x0 + i * tes:.2f}" y1="{y0}" x2="{x0 + i * tes:.2f}" y2="{y0 + azulejo}" stroke="{JUNTA}" stroke-width="0.25"/>')
-        o.append(f'<line x1="{x0}" y1="{y0 + i * tes:.2f}" x2="{x0 + azulejo}" y2="{y0 + i * tes:.2f}" stroke="{JUNTA}" stroke-width="0.25"/>')
-    for v, nombre in lineas:
-        y = y0 + azulejo - v * tes
+         t(x0, 21, f"1 placa = {azulejo:g} mm = 1 letra · la celda: 0,84 de ancho por alto · líneas: {origen}", 3.1, GRIS),
+         t(x0, 26.5, "Imprimir al 100 %. Comprobar la barra de 100 mm.", 3.1, GRIS),
+         f'<rect x="{x0}" y="{y0}" width="{azulejo}" height="{azulejo}" fill="#ffffff" stroke="{JUNTA}" stroke-width="0.3"/>',
+         f'<rect x="{x0 + (azulejo - ancho) / 2:.2f}" y="{y0 + cy - alto / 2:.2f}" width="{ancho:.2f}" height="{alto:.2f}" '
+         f'fill="none" stroke="{JUNTA}" stroke-width="0.6"/>']
+    for y, nombre in lineas:
+        yy = y0 + y
         grosor = "0.5" if nombre.startswith(("fondo", "borde")) else "0.3"
-        o.append(f'<line x1="{x0}" y1="{y:.2f}" x2="{x0 + azulejo}" y2="{y:.2f}" stroke="{TEXTO}" stroke-width="{grosor}" stroke-dasharray="2 1.2"/>')
-        o.append(t(x0 + azulejo + junta + 2, y + 1.1, nombre, 2.8, GRIS))
-    o.append(t(x0 + azulejo + junta + 2, y0 + azulejo + 5, "(provisional)", 2.6, GRIS))
+        o.append(f'<line x1="{x0}" y1="{yy:.2f}" x2="{x0 + azulejo}" y2="{yy:.2f}" stroke="{TEXTO}" stroke-width="{grosor}" stroke-dasharray="2 1.2"/>')
+        o.append(t(x0 + azulejo + 2, yy + 1.1, nombre, 2.8, GRIS))
+    o.append(t(x0 + azulejo + 2, y0 + cy - alto / 2 - 1, "celda", 2.6, GRIS))
     # campos
-    yc = y0 + azulejo + junta + 11
+    yc = y0 + azulejo + 11
     campos = ["Celda nº ______   Signo ______   [ ] hallado   [ ] reconstruido",
               "Hallado en (palabra y línea del pie): ______________________________",
-              "Reconstruido por analogía con: _____________________________________",
+              "Reconstruido con las partes de: ____________________________________",
               "Generación de ampliación: ______   Mano: ___________________________",
               "Fecha: ____________   Intentos: ______   Roturas: ______",
               "Notas: _____________________________________________________________",
@@ -170,6 +185,7 @@ def ficha():
              ("Calco", "mano ______________ fecha ________"),
              ("Placa", "mano ______ fecha ______ intentos __ roturas __"),
              ("Piel", "la vistió ______ cuánto ______ dónde ______"),
+             ("Cinta", "tramos __ pliegues __   foto nº ______"),
              ("Copia", "hectógrafo nº __ copias legibles __ última __"),
              ("Agua", "[ ] quieta  [ ] tocada   foto nº ______"),
              ("Voz", "verso leído ____________   foto nº ______"),
@@ -186,7 +202,7 @@ def ficha():
         o.append(t(W - 62, oy + 72, "celda nº ____", 3.1))
         o.append(t(16, oy + 34, "[ ] hallado   [ ] reconstruido   [ ] signo final", 3.2))
         for i, (a, b) in enumerate(filas):
-            y = oy + 44 + i * 9.4
+            y = oy + 44 + i * 8.8
             o.append(t(16, y, a, 3.3, peso="bold"))
             o.append(t(46, y, b, 3.1))
             o.append(f'<line x1="16" y1="{y + 2.6}" x2="{W - 70 if i < 3 else W - 16}" y2="{y + 2.6}" stroke="{AZULEJO}" stroke-width="0.3"/>')
@@ -199,10 +215,11 @@ def ficha():
 
 ESTADOS = [
     # nombre, verbo, material (| corta la línea), verso, pierde, gana
-    ("Pie", "hallar", "el libro", "«le pusieron nombre»", "—", "lo que dice el archivo"),
-    ("Calco", "calcar y|reconstruir", "calco|lápiz", "«solo la opinión sobre ella»", "la tinta del libro", "la hipótesis, punteada"),
+    ("Pie", "hallar y|medir", "el libro", "«le pusieron nombre»", "—", "las medidas del archivo"),
+    ("Calco", "calcar la|gramática", "calco|lápiz", "«solo la opinión sobre ella»", "la tinta del libro", "el cuerpo base"),
     ("Placa", "repujar", "aluminio|punzón", "«un signo hecho con las manos»", "la línea", "relieve y reflejo"),
     ("Piel", "vestir", "la placa|sobre el cuerpo", "«como se mueve la piedra»", "lo plano", "los pliegues del cuerpo"),
+    ("Cinta", "tapar", "masking|hueso claro", "«a la boca la taparon»", "la curva y la gota", "el pliegue"),
     ("Copia", "hectografiar", "gelatina|tinta", "«se dio de beber a sí misma»", "tinta en cada copia", "transparencia"),
     ("Agua", "reflejar", "bandeja|un dedo de agua", "«tocas el agua»", "el papel", "temblor y luz"),
     ("Voz", "hacer vibrar", "parlante|bajo la bandeja", "«pocas veces vuelve hablado»", "la palabra", "la vibración"),

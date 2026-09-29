@@ -26,7 +26,7 @@ Cada parámetro tiene un valor, controla una sola cosa y viene de una decisión 
 
 | Parámetro | Valor | Qué controla | De dónde sale |
 |---|---|---|---|
-| `canal` | 31,8 px (8 mm) | El grosor único del trazo: la media entre el grueso y el fino de la o del pie. **Sin contraste** | El punzón y la cinta no modulan: no hay pluma (D2, D12) |
+| `canal` | 36 px (9 mm) | El grosor único del trazo: la media entre el grueso y el fino de la o del pie. **Sin contraste** | El punzón y la cinta no modulan: no hay pluma (D2, D12) |
 | `radio_chapa` | 0,6 canal | El radio mínimo de toda curva. Al ser mayor que medio canal, el contorno interior nunca se cruza | El aluminio se rasga en un ángulo agudo (D2) |
 | `trapecio` | 0,70 | El ancho del fondo plano de cada cuenca, sobre su ancho mayor | La proyección llega en trapecio; la bandeja (D8) |
 | `pared` | 0,55 | Cuánto se abomba la pared de la cuenca al bajar: 0 es recta, 1 es una vasija redonda | El vaso |
@@ -37,9 +37,11 @@ Cada parámetro tiene un valor, controla una sola cosa y viene de una decisión 
 | `asiento_ancho`, `asiento_alto` | 2 y 0,9 canales | El pie de cada fuste se ensancha hacia el fondo en una curva cóncava | El peso se asienta en la tierra |
 | `intemperie` | 0,12 canal | El radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |
 | `alivio` | 0,28 canal | El rebaje en cada encuentro interior en ángulo | Para que el aluminio no se desgarre (D2) |
-| `gancho_fin` | 125° | Dónde termina el gancho alto antes de soltar la gota | Que la gota cuelgue libre |
-| `gota_masa`, `gota_caida`, `gota_cuello` | 1,25, 0,5 y 0,55 canales | La gota: un cuello y una masa que cae vertical, por su peso | El líquido que chorrea de la boca (D16) |
-| `cinta` | 1 canal | El ancho de la cinta, a la escala en que iguala al canal | La cinta que tapó ojos y boca (D12) |
+| `gancho_fin` | 105° | Dónde termina el gancho alto antes de soltar la gota | Que la gota cuelgue libre |
+| `gota_masa`, `gota_caida`, `gota_cuello` | 1,25, 0,3 y 0,55 canales | La gota: un cuello y una masa que cae vertical, por su peso. Solo gotea el terminal que mira abajo | El líquido que chorrea de la boca (D16) |
+| `sifon` | 0,6 canal | El cuello que une dos cuencas (g): el único trazo más fino | Vasos comunicantes |
+| `cinta` | 1 canal | El ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro | La cinta que tapó ojos y boca (D12) |
+| `punto` | 1 canal | El punto: un trozo cuadrado de cinta, tan ancho como la cinta | Ídem: un parche, no una gota de tinta |
 
 **Una condición geométrica que es también una condición material:** si una curva tiene un radio menor que medio canal, el contorno interior se cruza consigo mismo. Es la misma curva en la que el aluminio se rasga. `radio_chapa` cumple las dos.
 
@@ -92,12 +94,47 @@ Así la o, la l y la n dan las piezas de las demás letras: la cuenca, el fuste 
 5. la cinta puesta;
 6. la cinta arrancada.
 
+## 4b. De los cuatro generadores a los 55 signos
+
+Los otros 51 signos no se dibujan uno por uno: se arman con las partes de los generadores. Es el método con que Agüero, Uribe y Berenguer (2003) leen la litoescultura de Tiwanaku: los **elementos** se combinan en **motivos** y los motivos en **figuras**. Aquí, las partes se combinan en signos. Del pie se toma solo dónde va cada parte y cuánto mide.
+
+**Las partes:**
+
+| Parte | Viene de | Está en |
+|---|---|---|
+| La **cuenca**, con su desagüe | la o | b, d, p, q, a, e, g, 0, 6, 8, 9 |
+| La cuenca **abierta** | la o, sin cerrar | c, e, u, j, t |
+| El **fuste**, con asiento si llega al fondo | la l | casi todas |
+| El **hombro** | la n | h, m, r, f, s, 2, 3, 5, 6, 9, ?, ¿ |
+| El **gancho** con su **gota** | la a | a, á, c, f, r, s, y, 2, 3, 6, ?, la coma |
+| La **recta**, con **alivio** en cada rincón agudo | nueva | k, v, w, x, y, z, 1, 2, 4, 7, « » |
+| El **punto**: un trozo cuadrado de cinta | la cinta (D12) | i, j, ü, punto, coma, ;, :, …, ?, ¿ |
+| La **tilde** en gota | la gota | á, é, í, ó, ú |
+| La **onda** | el agua tocada (D15) | ñ |
+| El **sifón**: dos cuencas comunicadas | la cuenca, dos veces | g, 8 |
+| La **celda**: un rectángulo dentro de otro, con desagüe | la cabeza del ídolo | las diez cifras |
+
+**Las reglas de la derivación:**
+
+1. **Todo lo cerrado es una cuenca y se abre abajo.** El ojo de la e se abre en su barra; el del 8, en el ojo de abajo.
+2. **Solo gotea lo que mira abajo.** Un terminal que mira arriba termina en un corte. La gravedad no se da vuelta.
+3. **Los dobles opuestos varían.** En la litoescultura de Tiwanaku, las figuras enfrentadas casi nunca son idénticas (Agüero, Uribe y Berenguer 2003).
+   - La ¿ no es la ? dada vuelta: su gancho está abajo y no gotea.
+   - El 9 no es el 6: su trazo baja y termina en un corte.
+   - Las » se arman con su propio azar.
+4. **La coma es un punto de cinta del que cae una gota.**
+5. **Las cifras son elzevirianas**, cada una en su celda: el 6 y el 8 suben; el 3, el 4, el 5, el 7 y el 9 bajan del fondo.
+6. **Lo reconstruido usa las mismas partes.** Solo cambia la ejecución: se calca y se repuja a puntos.
+
+La receta de cada signo está en `simulacion/salida/gramatica/gramatica.json` y en `simulacion/informe.md`. Los 55 cuerpos base están en `simulacion/salida/21_gramatica_caja.png`.
+
 ## 5. Un estado nuevo: *Cinta*
 
 La cinta que tapó ojos y boca (D12) tiene sus propias leyes. La simulación las aplica sobre las curvas maestras:
 
 | Ley | Cómo se simula |
 |---|---|
+| **Masking blanca, tirando a hueso claro** | Papel crepé con arrugas finas a lo ancho, casi opaco. Se pone sobre el plástico negro de la plataforma (D8), donde se ve |
 | **Ancho constante** | Cada tramo es una banda del ancho de `cinta` |
 | **No curva en su plano** | La curva maestra se vuelve tramos rectos: se simplifica con una tolerancia de 0,3 del ancho. Para girar, la cinta se pliega (el pliegue sigue la bisectriz del giro) o se superpone otro tramo. Donde hay dos capas, la luz pasa por dos capas |
 | **Memoria de adhesión** | Arrugas cortas junto a cada pliegue |
@@ -110,9 +147,9 @@ La cinta que tapó ojos y boca (D12) tiene sus propias leyes. La simulación las
 
 > calco → placa → piel | cinta → copia → agua → voz → azulejo
 
-**Qué falta saber:**
-- **El tipo de cinta:** ¿masking o cinta color piel de farmacia? Cambia el color, el ancho (la de farmacia suele medir 12,5 mm) y cómo se rasga. La simulación usa, por ahora, el color piel.
-- **Qué se usa de la obra:** el material, no el rostro de Rebeca. La cinta se pone sobre papel o sobre la placa, nunca sobre una cara.
+**Qué se usa de la obra:** el material, no el rostro de Rebeca. La cinta se pone sobre plástico negro, papel o la placa, nunca sobre una cara.
+
+En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cinta.jpg`. Cada ficha cuenta sus tramos y sus pliegues.
 
 ## 6. Qué cambia respecto de `03b`
 
@@ -123,7 +160,7 @@ La cinta que tapó ojos y boca (D12) tiene sus propias leyes. La simulación las
 | La lluvia gasta, más arriba que abajo | La intemperie: corte arriba y asiento abajo, con un radio de desgaste |
 | El asta cae en una línea de media tesela | Sale: la tesela ya no es unidad de medida |
 | La media caña de la piscina en la panza | El radio de la chapa: la curva mínima la pone el aluminio, no el zócalo |
-| El marco de la letra: el azulejo | **La celda de la cabeza del ídolo**, 0,84 de ancho por alto, como el `.notdef` (a confirmar) |
+| El marco de la letra: el azulejo | **La celda de la cabeza del ídolo**, 0,84 de ancho por alto, como el `.notdef` |
 | Las juntas de la pared | Solo en el estado *Azulejo*, cuando la letra llega a la pared |
 
 **Se quedan:**
@@ -135,7 +172,6 @@ La cinta que tapó ojos y boca (D12) tiene sus propias leyes. La simulación las
 
 ## 7. Lo que falta
 
-1. **Derivar de los cuatro generadores los otros 51 signos:** 26 hallados y 25 reconstruidos. Ahí entran el alivio (v, w, k, x, y) y el sifón (g).
-2. **Conectar la gramática a `simular.py`** en lugar de `anatomia.py`, para que todos los estados partan del cuerpo base.
-3. **Rehacer las láminas de exposición** que dependen de la anatomía anterior.
-4. **Medir en el libro** lo que hoy es a ojo: `hombro_caida`, y el grueso y el fino.
+1. **Medir en el libro** lo que hoy es a ojo: `hombro_caida`, el grueso y el fino, y la proporción de la celda. El artículo de Agüero, Uribe y Berenguer da la pista: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a.
+2. **Regenerar la pauta de calco** de `esquemas/` con la celda en lugar del azulejo.
+3. **Confrontar con la mano:** la mano puede discutir cada parámetro. Si lo cambia, se cambia en `parametros()` y todo el juego se rehace.

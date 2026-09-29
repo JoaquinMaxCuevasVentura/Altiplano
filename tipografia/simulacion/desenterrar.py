@@ -15,8 +15,6 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from anatomia import (ajustar_metricas, anatomia_de_lo_hallado, anatomia_de_lo_reconstruido, apoyar_todo,
-                      enmarcar_cifras)
 from comun import (AZULEJO_MM, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta, centrar_h, componentes,
                    escalar, lineas_pie, mover, rotar, ruido, ruido_1d)
 
@@ -612,19 +610,16 @@ def desenterrar():
         todos[signo] = mejores
     M, s, base, desbordes = escalar_y_colocar(testigos)
     med = medidas(M, base)
-    # la anatomía: del pie, el esqueleto; de la obra, el cuerpo (03b_anatomia.md)
-    M, base, ajuste = ajustar_metricas(M, med)
-    med = medidas(M, base)
+    med["escala"] = s
+    # la gramática (03c_gramatica.md): del pie, las medidas; de la obra, la forma. Anatomía base → estados
+    from gramatica import construir_todo
     antes = {k: v.copy() for k, v in M.items()}
-    M, marcas = anatomia_de_lo_hallado(M, med)
-    med = medidas(M, base)
-    med["escala"], med["ajuste"] = s, ajuste
-    R, receta = reconstruir(M, med, azar("reconstruir"))
-    R, marcas_r = anatomia_de_lo_reconstruido(R, med)
-    marcas.update(marcas_r)
-    M, R, astas = apoyar_todo(M, R, med["xh"], marcas)
-    R = enmarcar_cifras(R, med["fino"])
-    for c in "0123456789":
-        receta[c] += "; dentro de una celda de la cabeza del ídolo"
+    todo, esq, par = construir_todo(antes, med)
+    med["canal"] = esq["canal"]
+    M = {k: todo[k]["mascara"] for k in halladas}
+    R = {k: v["mascara"] for k, v in todo.items() if k not in halladas}
+    receta = {k: v["receta"] for k, v in todo.items() if k not in halladas}
+    marcas = {k: v["glifo"].marcas for k, v in todo.items()}
     return dict(tinta=tinta, foto=foto, ocurrencias=ocurrencias, testigos=testigos, candidatas=todos,
-                M=M, R=R, receta=receta, med=med, desbordes=desbordes, antes=antes, marcas=marcas, astas=astas)
+                M=M, R=R, receta=receta, med=med, desbordes=desbordes, antes=antes, marcas=marcas,
+                gramatica=todo, esqueleto=esq, parametros=par)

@@ -43,6 +43,12 @@ El objeto de origen es ilegible, su registro es una hipótesis y lo que codifica
 
 **El nombre.** Según tu texto, *qucha* es lago o agua, y el ídolo es literalmente una madre del agua. Falta verificar quién le dio el nombre y cuándo, y en qué lengua: *qucha* es quechua; en aymara, lago es *quta*.
 
+**Una fuente publicada.** Agüero, Uribe y Berenguer (2003) estudian la iconografía de la escultura lítica de Tiwanaku, con la Kochamama entre sus piezas. Su dibujo de la Kochamama (Fig. 12) está basado en Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a. Tres datos sirven aquí:
+
+- en la Kochamama, el Personaje Frontal aparece dos veces: **uno en el pecho y otro en la espalda**. Rima con las puertas del pecho y la espalda (D4);
+- en sus personajes de perfil aparecen **cabezas de pez de perfil** (lo que tu texto llama el signo «pez», todavía sin verificar en Posnansky);
+- las figuras enfrentadas tienen **dobles opuestos con variaciones**: casi nunca son idénticas.
+
 ## 1.3. Las decisiones
 
 | Nº | Decisión de la obra | Procedencia |

@@ -38,7 +38,8 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 | El texto del pie | Transcrito desde una foto de baja resolución | Transcribirlo desde el libro y volver a correr `inventario.py` |
 | 8 × 7 = 56 celdas en la cabeza | Contado en la foto | Recontar en el impreso |
 | El libro de la lámina | Sin identificar. Pistas: es un desplegable, el pie habla de Posnansky en tercera persona y la página de enfrente cita a Ponce Sanginés | Autor, título, año, página |
-| Registro de Posnansky: hallado al sur del Akapana, asperón colorado, excavado en 1903, cuerpo cubierto por el signo «pez» | Según tu texto | Buscar la lámina o la figura en *Tihuanacu, la cuna del hombre americano* (Posnansky, 1945-1957) |
+| El dibujo de Posnansky | Agüero, Uribe y Berenguer (2003, fig. 12) lo citan: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a | Cotejar esas figuras con la lámina de Rebeca |
+| Registro de Posnansky: hallado al sur del Akapana, asperón colorado, excavado en 1903, cuerpo cubierto por el signo «pez» | Según tu texto. Agüero, Uribe y Berenguer (2003) registran cabezas de pez de perfil en los personajes de la Kochamama, y un Personaje Frontal en el pecho y otro en la espalda | Buscar la lámina o la figura en *Tihuanacu, la cuna del hombre americano* (Posnansky, 1945-1957) |
 | Quién excavó en 1903 | Sin dato | En 1903 trabajó en Tiwanaku una misión francesa (Créqui-Montfort); hay que confirmar si esta pieza fue suya |
 | El nombre «Kochamama» y su sentido (madre del agua) | Según tu texto | Quién la nombró y cuándo. *Qucha* es quechua y *quta*, aymara: revisar Bertonio (ya citado en el artículo) y un diccionario quechua |
 | El monolito se llama «vaso» en su ficha | Según tu texto | ¿Qué ficha? ¿De qué museo o catálogo? |
@@ -50,6 +51,8 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 | La receta del hectógrafo y la compatibilidad del esténcil térmico con la gelatina | Receta de partida | Probarlas antes de la tirada (Acción 8) |
 | Citas de las dos tesis | Cotejadas con el texto de los `.docx` | Agregar páginas desde los PDF originales si se citan en público |
 | La frase de otro asistente sobre «nuestro envase convulso: el cuerpo» | Citada en tu texto | No se usa. Si se usa, pedir permiso y nombrar a su autor |
+
+**Fuente publicada:** Agüero Piwonka, Carolina; Mauricio Uribe Rodríguez y José Berenguer Rodríguez (2003). «La iconografía Tiwanaku: el caso de la escultura lítica». *Textos Antropológicos* 14 (2): 47-82. El PDF no se sube al repositorio: se cita.
 
 ## 6.5. Lo que el proyecto no afirma
 

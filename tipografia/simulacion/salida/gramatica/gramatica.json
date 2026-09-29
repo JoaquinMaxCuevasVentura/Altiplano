@@ -1,46 +1,210 @@
 {
  "esqueleto": {
-  "fondo": 450.0,
-  "borde": 206.0,
-  "afuera": 79.0,
-  "desague": 572.0,
-  "xh": 244.0,
-  "canal": 31.811947441173732,
-  "o": {
-   "x0": 185.0,
-   "x1": 415.0,
-   "y0": 193.0
-  },
-  "l": {
-   "asta": 298.0,
-   "y0": 73.0
-  },
-  "n": {
-   "izq": 233.0,
-   "der": 375.0,
-   "y0": 203.0
-  },
-  "a": {
-   "asta": 366.5,
-   "y0": 203.0,
-   "ojo": [
-    249.0,
-    322.0,
-    346.0,
+  "fondo": 429.2961393596987,
+  "borde": 181.0,
+  "afuera": 53.0,
+  "desague": 550.0,
+  "xh": 248.2961393596987,
+  "canal": 36.124783736376884,
+  "cajas": {
+   ",": [
+    264.0,
+    376.0,
+    336.0,
+    511.0
+   ],
+   "s": [
+    215.0,
+    180.0,
+    385.0,
+    434.0
+   ],
+   "e": [
+    197.0,
+    182.0,
+    403.0,
+    434.0
+   ],
+   "g": [
+    184.0,
+    171.0,
+    416.0,
+    550.0
+   ],
+   "ú": [
+    182.0,
+    50.0,
+    418.0,
+    433.0
+   ],
+   "n": [
+    199.0,
+    184.0,
+    401.0,
+    431.0
+   ],
+   "o": [
+    186.0,
+    174.0,
+    414.0,
+    439.0
+   ],
+   "a": [
+    210.0,
+    184.0,
+    390.0,
+    431.0
+   ],
+   "k": [
+    196.0,
+    69.0,
+    404.0,
+    433.0
+   ],
+   "y": [
+    177.0,
+    182.0,
+    423.0,
+    544.0
+   ],
+   "p": [
+    185.0,
+    181.0,
+    415.0,
+    550.0
+   ],
+   "r": [
+    226.0,
+    179.0,
+    374.0,
+    434.0
+   ],
+   "t": [
+    240.0,
+    132.0,
+    360.0,
+    437.0
+   ],
+   "d": [
+    185.0,
+    55.0,
+    415.0,
+    430.0
+   ],
+   "m": [
+    119.0,
+    181.0,
+    481.0,
+    434.0
+   ],
+   "l": [
+    258.0,
+    55.0,
+    342.0,
+    432.0
+   ],
+   "i": [
+    267.0,
+    80.0,
+    333.0,
     428.0
    ],
-   "gancho_x": 229.0
-  }
+   "c": [
+    203.0,
+    181.0,
+    397.0,
+    432.0
+   ],
+   "u": [
+    192.0,
+    181.0,
+    408.0,
+    439.0
+   ],
+   "v": [
+    181.0,
+    184.0,
+    419.0,
+    430.0
+   ],
+   "j": [
+    237.0,
+    81.0,
+    363.0,
+    544.0
+   ],
+   "f": [
+    226.0,
+    58.0,
+    374.0,
+    434.0
+   ],
+   "í": [
+    242.0,
+    53.0,
+    358.0,
+    434.0
+   ],
+   "(": [
+    231.0,
+    81.0,
+    369.0,
+    532.0
+   ],
+   "h": [
+    182.0,
+    58.0,
+    418.0,
+    434.0
+   ],
+   "á": [
+    207.0,
+    55.0,
+    393.0,
+    431.0
+   ],
+   ")": [
+    236.0,
+    85.0,
+    364.0,
+    536.0
+   ],
+   ".": [
+    280.0,
+    377.0,
+    320.0,
+    422.0
+   ],
+   "b": [
+    186.0,
+    63.0,
+    414.0,
+    434.0
+   ],
+   "q": [
+    189.0,
+    181.0,
+    411.0,
+    544.0
+   ]
+  },
+  "ojo_a": [
+   249.0,
+   302.0,
+   346.0,
+   407.0
+  ],
+  "gancho_a": 229.0
  },
  "parametros": {
   "canal": {
-   "valor": 31.8,
+   "valor": 36.1,
    "unidad": "px",
    "que": "Grosor único del trazo: la media entre el grueso y el fino de la o del pie.",
    "de_donde": "El punzón y la cinta no modulan: no hay contraste de pluma (D2, D12)"
   },
   "radio_chapa": {
-   "valor": 19.1,
+   "valor": 21.7,
    "unidad": "px",
    "que": "Radio mínimo de toda curva del eje. Mayor que medio canal: así el contorno interior nunca se cruza.",
    "de_donde": "El aluminio se rasga en un ángulo agudo (D2)"
@@ -88,79 +252,556 @@
    "de_donde": "«Moverse como se mueve la piedra, es decir, apenas» (D11)"
   },
   "asiento_ancho": {
-   "valor": 63.6,
+   "valor": 72.2,
    "unidad": "px",
    "que": "Ancho del pie de cada fuste sobre el fondo.",
    "de_donde": "El peso se asienta en la tierra; la piedra en pie"
   },
   "asiento_alto": {
-   "valor": 28.6,
+   "valor": 32.5,
    "unidad": "px",
    "que": "Altura de la curva cóncava con que el fuste se ensancha.",
    "de_donde": "Ídem"
   },
   "intemperie": {
-   "valor": 3.8,
+   "valor": 4.3,
    "unidad": "px",
    "que": "Radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte.",
    "de_donde": "«Hoy está muy erosionado y casi no se ven esos detalles» (el pie)"
   },
   "alivio": {
-   "valor": 8.9,
+   "valor": 10.1,
    "unidad": "px",
-   "que": "Radio del rebaje en cada encuentro interior en ángulo (v, w, k, x, y). En los generadores no hace falta: todo encuentro es tangente.",
+   "que": "Radio del rebaje en cada encuentro interior en ángulo agudo (k, v, w, x, y, z, 1, 2, 4, 7, « »). Donde el encuentro es tangente no hace falta.",
    "de_donde": "Para que el aluminio no se desgarre bajo el punzón (D2)"
   },
   "gancho_fin": {
-   "valor": 125,
+   "valor": 105,
    "unidad": "°",
    "que": "Dónde termina el gancho alto antes de dejar caer la gota.",
    "de_donde": "Que la gota cuelgue libre, sin tocar la cuenca"
   },
   "gota_masa": {
-   "valor": 39.8,
+   "valor": 45.2,
    "unidad": "px",
-   "que": "Diámetro de la gota que cuelga de un terminal que mira abajo.",
+   "que": "Diámetro de la gota que cuelga de un terminal que mira abajo. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta.",
    "de_donde": "El líquido que chorrea de la boca (D16)"
   },
   "gota_caida": {
-   "valor": 15.9,
+   "valor": 10.8,
    "unidad": "px",
    "que": "Cuánto baja la gota antes de juntar peso.",
    "de_donde": "Ídem: la gravedad"
   },
   "gota_cuello": {
-   "valor": 17.5,
+   "valor": 19.9,
    "unidad": "px",
    "que": "Ancho del cuello de la gota.",
    "de_donde": "Ídem"
   },
+  "sifon": {
+   "valor": 0.6,
+   "unidad": "",
+   "que": "Ancho del cuello que une dos cuencas (g, 8), sobre el canal: el único trazo más fino.",
+   "de_donde": "Vasos comunicantes: el agua que pasa de una cuenca a otra"
+  },
   "cinta": {
-   "valor": 31.8,
+   "valor": 36.1,
    "unidad": "px",
-   "que": "Ancho de la cinta, a la escala en que iguala al canal (12,5 mm en la de farmacia, a confirmar).",
+   "que": "Ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro.",
    "de_donde": "La cinta que tapó ojos y boca (D12)"
+  },
+  "punto": {
+   "valor": 36.1,
+   "unidad": "px",
+   "que": "Lado del punto: un trozo cuadrado de cinta, tan ancho como la cinta.",
+   "de_donde": "La cinta sobre ojos y boca (D12): un parche, no una gota de tinta"
   }
  },
- "generadores": {
-  "o": {
-   "area_px": 23081,
-   "trazos": 1,
+ "signos": {
+  ",": {
+   "receta": "un punto de cinta del que cae una gota",
+   "partes": [
+    "gota",
+    "punto"
+   ],
+   "area_px": 3704,
    "alivios": 0
   },
-  "l": {
-   "area_px": 12583,
-   "trazos": 1,
+  "s": {
+   "receta": "dos hombros encontrados; arriba gotea",
+   "partes": [
+    "corte: mira arriba",
+    "gota"
+   ],
+   "area_px": 21189,
+   "alivios": 0
+  },
+  "e": {
+   "receta": "una cuenca abierta a la derecha, con barra; el ojo se abre en su desagüe, en la barra",
+   "partes": [
+    "corte: mira arriba",
+    "desagüe del ojo"
+   ],
+   "area_px": 25544,
+   "alivios": 0
+  },
+  "g": {
+   "receta": "dos cuencas unidas por un cuello angosto: un sifón; y una oreja",
+   "partes": [
+    "desagüe",
+    "sifón"
+   ],
+   "area_px": 39433,
+   "alivios": 0
+  },
+  "ú": {
+   "receta": "la u y una tilde en gota",
+   "partes": [
+    "asiento",
+    "cuenca abierta",
+    "tilde"
+   ],
+   "area_px": 23653,
    "alivios": 0
   },
   "n": {
-   "area_px": 19424,
-   "trazos": 2,
+   "receta": "un fuste y un hombro que baja como otro fuste",
+   "partes": [
+    "asiento",
+    "hombro"
+   ],
+   "area_px": 22009,
+   "alivios": 0
+  },
+  "o": {
+   "receta": "la cuenca: arriba, el ojo del pie; abajo, pared, fondo plano y desagüe",
+   "partes": [
+    "desagüe"
+   ],
+   "area_px": 25275,
    "alivios": 0
   },
   "a": {
-   "area_px": 22735,
-   "trazos": 3,
+   "receta": "un gancho que gotea, un fuste y una cuenca",
+   "partes": [
+    "asiento",
+    "desagüe",
+    "gota"
+   ],
+   "area_px": 24290,
+   "alivios": 0
+  },
+  "k": {
+   "receta": "un fuste, un brazo y una pierna, con dos alivios",
+   "partes": [
+    "alivio",
+    "asiento"
+   ],
+   "area_px": 25402,
+   "alivios": 2
+  },
+  "y": {
+   "receta": "la v con la cola larga, que gotea",
+   "partes": [
+    "alivio",
+    "gota"
+   ],
+   "area_px": 21768,
+   "alivios": 1
+  },
+  "p": {
+   "receta": "un fuste que baja del fondo y una cuenca a su derecha",
+   "partes": [
+    "desagüe"
+   ],
+   "area_px": 30742,
+   "alivios": 0
+  },
+  "r": {
+   "receta": "un fuste y un brazo que gotea",
+   "partes": [
+    "asiento",
+    "gota"
+   ],
+   "area_px": 13883,
+   "alivios": 0
+  },
+  "t": {
+   "receta": "un fuste que dobla en una pared de cuenca, y una barra",
+   "partes": [
+    "corte"
+   ],
+   "area_px": 13555,
+   "alivios": 0
+  },
+  "d": {
+   "receta": "una cuenca y un fuste alto",
+   "partes": [
+    "asiento",
+    "desagüe"
+   ],
+   "area_px": 32267,
+   "alivios": 0
+  },
+  "m": {
+   "receta": "un fuste y dos hombros",
+   "partes": [
+    "asiento",
+    "hombro"
+   ],
+   "area_px": 35109,
+   "alivios": 0
+  },
+  "l": {
+   "receta": "un fuste en tres planos, con asiento",
+   "partes": [
+    "asiento",
+    "corte"
+   ],
+   "area_px": 14023,
+   "alivios": 0
+  },
+  "i": {
+   "receta": "un fuste y un punto de cinta",
+   "partes": [
+    "asiento",
+    "punto"
+   ],
+   "area_px": 10715,
+   "alivios": 0
+  },
+  "c": {
+   "receta": "una cuenca abierta a la derecha; arriba gotea",
+   "partes": [
+    "gota"
+   ],
+   "area_px": 19608,
+   "alivios": 0
+  },
+  "u": {
+   "receta": "una cuenca abierta arriba y un fuste",
+   "partes": [
+    "asiento",
+    "cuenca abierta"
+   ],
+   "area_px": 22304,
+   "alivios": 0
+  },
+  "v": {
+   "receta": "dos rectas que se juntan en el fondo, redondeadas al radio de la chapa, con alivio",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 16358,
+   "alivios": 1
+  },
+  "j": {
+   "receta": "un fuste que baja y dobla en una pared de cuenca; un punto de cinta",
+   "partes": [
+    "corte: mira arriba",
+    "punto"
+   ],
+   "area_px": 16274,
+   "alivios": 0
+  },
+  "f": {
+   "receta": "un fuste, un gancho que gotea y una barra",
+   "partes": [
+    "asiento",
+    "gota"
+   ],
+   "area_px": 19856,
+   "alivios": 0
+  },
+  "í": {
+   "receta": "un fuste y una tilde en gota",
+   "partes": [
+    "asiento",
+    "tilde"
+   ],
+   "area_px": 10935,
+   "alivios": 0
+  },
+  "(": {
+   "receta": "un arco alto",
+   "partes": [],
+   "area_px": 14671,
+   "alivios": 0
+  },
+  "h": {
+   "receta": "el fuste de la l y el hombro de la n",
+   "partes": [
+    "asiento",
+    "hombro"
+   ],
+   "area_px": 26673,
+   "alivios": 0
+  },
+  "á": {
+   "receta": "la a y una tilde en gota",
+   "partes": [
+    "asiento",
+    "desagüe",
+    "gota",
+    "tilde"
+   ],
+   "area_px": 25797,
+   "alivios": 0
+  },
+  ")": {
+   "receta": "el arco alto, medido en su propio testigo",
+   "partes": [],
+   "area_px": 14515,
+   "alivios": 0
+  },
+  ".": {
+   "receta": "un punto de cinta",
+   "partes": [
+    "punto"
+   ],
+   "area_px": 1353,
+   "alivios": 0
+  },
+  "b": {
+   "receta": "un fuste alto y una cuenca a su derecha",
+   "partes": [
+    "asiento",
+    "desagüe"
+   ],
+   "area_px": 31300,
+   "alivios": 0
+  },
+  "q": {
+   "receta": "una cuenca y un fuste que baja del fondo",
+   "partes": [
+    "desagüe"
+   ],
+   "area_px": 30534,
+   "alivios": 0
+  },
+  "ó": {
+   "receta": "la cuenca de la o y una tilde en gota",
+   "partes": [
+    "desagüe",
+    "tilde"
+   ],
+   "area_px": 26854,
+   "alivios": 0
+  },
+  "z": {
+   "receta": "dos barras y una diagonal, redondeadas al radio de la chapa, con alivio en los dos rincones",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 20615,
+   "alivios": 2
+  },
+  "?": {
+   "receta": "un gancho que gotea, un fuste corto y un punto de cinta",
+   "partes": [
+    "gota",
+    "punto"
+   ],
+   "area_px": 19851,
+   "alivios": 0
+  },
+  "é": {
+   "receta": "la e y una tilde en gota",
+   "partes": [
+    "corte: mira arriba",
+    "desagüe del ojo",
+    "tilde"
+   ],
+   "area_px": 27124,
+   "alivios": 0
+  },
+  ";": {
+   "receta": "un punto de cinta sobre la coma: un punto del que cae una gota",
+   "partes": [
+    "gota",
+    "punto"
+   ],
+   "area_px": 5086,
+   "alivios": 0
+  },
+  "ñ": {
+   "receta": "la n y la onda del agua tocada",
+   "partes": [
+    "asiento",
+    "hombro",
+    "onda"
+   ],
+   "area_px": 27914,
+   "alivios": 0
+  },
+  "w": {
+   "receta": "dos v: cuatro rectas y tres alivios",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 25278,
+   "alivios": 3
+  },
+  "x": {
+   "receta": "dos rectas que se cruzan, con alivio arriba y abajo del cruce",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 21393,
+   "alivios": 2
+  },
+  "ü": {
+   "receta": "la u y dos puntos de cinta",
+   "partes": [
+    "asiento",
+    "cuenca abierta",
+    "punto"
+   ],
+   "area_px": 25015,
+   "alivios": 0
+  },
+  "0": {
+   "receta": "una cuenca más angosta que la o; en su celda",
+   "partes": [
+    "celda",
+    "desagüe"
+   ],
+   "area_px": 68556,
+   "alivios": 0
+  },
+  "1": {
+   "receta": "un fuste con asiento y una bandera, con alivio; en su celda",
+   "partes": [
+    "alivio",
+    "asiento",
+    "celda"
+   ],
+   "area_px": 59221,
+   "alivios": 1
+  },
+  "2": {
+   "receta": "un gancho que gotea, una diagonal y una barra de fondo, con alivio; en su celda",
+   "partes": [
+    "alivio",
+    "celda",
+    "gota"
+   ],
+   "area_px": 67559,
+   "alivios": 1
+  },
+  "3": {
+   "receta": "dos hombros apilados que bajan del fondo; el de arriba gotea, el de abajo mira arriba y no; en su celda",
+   "partes": [
+    "celda",
+    "corte: mira arriba",
+    "gota"
+   ],
+   "area_px": 70161,
+   "alivios": 0
+  },
+  "4": {
+   "receta": "una diagonal, una barra y un fuste que baja del fondo, con dos alivios; en su celda",
+   "partes": [
+    "alivio",
+    "celda"
+   ],
+   "area_px": 68684,
+   "alivios": 2
+  },
+  "5": {
+   "receta": "una barra, un fuste corto y un hombro que baja del fondo; en su celda",
+   "partes": [
+    "celda",
+    "corte: mira arriba"
+   ],
+   "area_px": 71276,
+   "alivios": 0
+  },
+  "6": {
+   "receta": "una cuenca y un hombro que sube y gotea; en su celda",
+   "partes": [
+    "celda",
+    "desagüe",
+    "gota"
+   ],
+   "area_px": 77208,
+   "alivios": 0
+  },
+  "7": {
+   "receta": "una barra y una diagonal que baja del fondo, con alivio; en su celda",
+   "partes": [
+    "alivio",
+    "celda"
+   ],
+   "area_px": 63378,
+   "alivios": 1
+  },
+  "8": {
+   "receta": "dos cuencas apiladas y comunicadas: un sifón; en su celda",
+   "partes": [
+    "celda",
+    "desagüe",
+    "sifón"
+   ],
+   "area_px": 76823,
+   "alivios": 0
+  },
+  "9": {
+   "receta": "el doble opuesto del 6, con variación: la cuenca y un trazo que baja; no gotea, porque la gravedad no se da vuelta; en su celda",
+   "partes": [
+    "celda",
+    "desagüe",
+    "sin gota: la gravedad no se da vuelta"
+   ],
+   "area_px": 74344,
+   "alivios": 0
+  },
+  ":": {
+   "receta": "dos puntos de cinta",
+   "partes": [
+    "punto"
+   ],
+   "area_px": 2735,
+   "alivios": 0
+  },
+  "¿": {
+   "receta": "el doble opuesto de la ?, con variación: el punto arriba y el gancho abajo, que no gotea porque la gravedad no se da vuelta",
+   "partes": [
+    "punto",
+    "sin gota: la gravedad no se da vuelta"
+   ],
+   "area_px": 17742,
+   "alivios": 0
+  },
+  "«": {
+   "receta": "dos ángulos redondeados al radio de la chapa, con alivio",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 12447,
+   "alivios": 2
+  },
+  "»": {
+   "receta": "el doble opuesto de «, con variación: armado con su propio azar",
+   "partes": [
+    "alivio"
+   ],
+   "area_px": 12395,
+   "alivios": 2
+  },
+  "—": {
+   "receta": "una recta en tres planos",
+   "partes": [],
+   "area_px": 10599,
+   "alivios": 0
+  },
+  "…": {
+   "receta": "tres puntos de cinta",
+   "partes": [
+    "punto"
+   ],
+   "area_px": 4057,
    "alivios": 0
   }
  }

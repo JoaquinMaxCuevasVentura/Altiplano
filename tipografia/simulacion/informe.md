@@ -8,7 +8,8 @@ La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. 
 
 - **El testigo.** No tenemos el pie del libro en alta resolución: en la foto, la altura de x mide unos 4 px y no se puede calcar. La máquina lo reemplaza por una letra de imprenta parecida, **LiberationSerif-Regular**, impresa con tipos de plomo simulados. Es su suposición más débil: tu propuesta partirá del libro.
 - **El cuerpo del pie:** 8,5 puntos.
-- **La piscina:** azulejo de 150 mm, 6 teselas y junta de 3 mm, hasta que se mida.
+- **La piscina:** azulejo de 150 mm y junta de 3 mm, hasta que se mida. Ya no mide la letra: la pared solo la recibe (estado *Azulejo*).
+- **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo en la lámina. Es el cuerpo de cada letra.
 - **El bucle:** 5 minutos, hasta que Rebeca diga cuánto dura.
 - **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.
 - **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.
@@ -62,79 +63,109 @@ Para cada signo hallado, la máquina amplió todos sus testigos en tres generaci
 
 ![Calco](salida/03_calco.png)
 
-**La escala la decidió el pie.** La letra más alta y la más baja caben en el azulejo con media tesela de aire. Después, la anatomía corre y escala todo el juego para que el fondo y el borde caigan en líneas de media tesela (`03b_anatomia.md`, regla 8). Así caen las líneas, en teselas desde abajo:
+**La escala la decidió el pie.** La letra más alta y la más baja caben en la placa con aire. Del pie salen las cuatro líneas; ya no se ajustan a ninguna retícula de teselas. Medidas desde el fondo:
 
-| Línea | Pauta provisional (`03`, §3.6) | Lo que dio el pie | En la retícula |
-|---|---|---|---|
-| Desagüe (descendentes) | 0,5 | — | 0,28 |
-| Fondo (base) | 1,5 | 1,71 | 1,5 |
-| Borde (altura de x) | 4 | 4,19 (la x mide 2,48) | 4,0 (la x mide 2,5) |
-| Afuera (ascendentes) | 5,5 | — | 5,21 |
+| Línea | Desde el fondo |
+|---|---|
+| Afuera (ascendentes) | 94,1 mm |
+| Borde (altura de x) | 62,1 mm |
+| Fondo (base) | 0 |
+| Desagüe (descendentes) | −30,2 mm |
 
-El trazo grueso de la o mide 11,5 mm y el fino, 5,5 mm. Ningún signo desborda el azulejo.
+El trazo grueso de la o del pie mide 11,2 mm y el fino, 7,2 mm. El canal de la gramática, sin contraste, mide 9,0 mm: la media entre los dos. Ningún signo desborda la placa.
 
 **Las reconstrucciones de la máquina:**
 
 | Signo | Receta |
 |---|---|
-| `ó` | la o con la tilde de la á |
-| `z` | la diagonal de la x reconstruida (hipótesis sobre hipótesis) y dos barras del grueso fino de la o |
-| `?` | el arco de arriba de la o, un asta que baja al centro y el punto |
-| `é` | la e con la tilde de la á |
-| `;` | la coma y el punto subido |
-| `ñ` | la n con una virgulilla sin modelo, del grueso fino de la o |
-| `w` | dos v estrechadas |
-| `x` | los dos trazos de la v, inclinados hasta cruzarse (quedan con remates solo arriba) |
-| `ü` | la u con dos puntos de la i |
-| `0` | la o, algo más estrecha; dentro de una celda de la cabeza del ídolo |
-| `1` | la i sin punto, con una bandera; dentro de una celda de la cabeza del ídolo |
-| `2` | el arco de arriba de la o, una diagonal y una barra de base; dentro de una celda de la cabeza del ídolo |
-| `3` | dos mitades derechas de la o, la de abajo bajo la línea; dentro de una celda de la cabeza del ídolo |
-| `4` | un asta que baja, una diagonal fina y una barra; dentro de una celda de la cabeza del ídolo |
-| `5` | una barra, un asta corta y la mitad baja de la o, bajo la línea; dentro de una celda de la cabeza del ídolo |
-| `6` | la o con la curva de una c agrandada que sube (achicada en alto al 93 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
-| `7` | una barra y una diagonal que baja (achicada en alto al 90 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
-| `8` | dos o apiladas, la de arriba más chica; dentro de una celda de la cabeza del ídolo |
-| `9` | el 6 dado vuelta (achicada en alto al 67 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
-| `:` | dos puntos |
-| `¿` | la ? dada vuelta, bajo la línea |
-| `«` | ángulos de la v girada y achicada |
-| `»` | ángulos de la v girada y achicada |
-| `—` | una barra sin modelo, del grueso fino de la o |
-| `…` | tres puntos |
+| `ó` | la cuenca de la o y una tilde en gota |
+| `z` | dos barras y una diagonal, redondeadas al radio de la chapa, con alivio en los dos rincones |
+| `?` | un gancho que gotea, un fuste corto y un punto de cinta |
+| `é` | la e y una tilde en gota |
+| `;` | un punto de cinta sobre la coma: un punto del que cae una gota |
+| `ñ` | la n y la onda del agua tocada |
+| `w` | dos v: cuatro rectas y tres alivios |
+| `x` | dos rectas que se cruzan, con alivio arriba y abajo del cruce |
+| `ü` | la u y dos puntos de cinta |
+| `0` | una cuenca más angosta que la o; en su celda |
+| `1` | un fuste con asiento y una bandera, con alivio; en su celda |
+| `2` | un gancho que gotea, una diagonal y una barra de fondo, con alivio; en su celda |
+| `3` | dos hombros apilados que bajan del fondo; el de arriba gotea, el de abajo mira arriba y no; en su celda |
+| `4` | una diagonal, una barra y un fuste que baja del fondo, con dos alivios; en su celda |
+| `5` | una barra, un fuste corto y un hombro que baja del fondo; en su celda |
+| `6` | una cuenca y un hombro que sube y gotea; en su celda |
+| `7` | una barra y una diagonal que baja del fondo, con alivio; en su celda |
+| `8` | dos cuencas apiladas y comunicadas: un sifón; en su celda |
+| `9` | el doble opuesto del 6, con variación: la cuenca y un trazo que baja; no gotea, porque la gravedad no se da vuelta; en su celda |
+| `:` | dos puntos de cinta |
+| `¿` | el doble opuesto de la ?, con variación: el punto arriba y el gancho abajo, que no gotea porque la gravedad no se da vuelta |
+| `«` | dos ángulos redondeados al radio de la chapa, con alivio |
+| `»` | el doble opuesto de «, con variación: armado con su propio azar |
+| `—` | una recta en tres planos |
+| `…` | tres puntos de cinta |
 
 Una decisión propia de la máquina: **cifras elzevirianas**, de altura de x, con 6 y 8 que suben y 3, 4, 5, 7 y 9 que bajan. En una tipografía de caja baja, las cifras de monumento (todas a la altura de las mayúsculas) serían ajenas.
 
+**Los dobles opuestos varían.** En la litoescultura de Tiwanaku, las figuras enfrentadas casi nunca son idénticas (Agüero, Uribe y Berenguer 2003). Aquí tampoco: la ¿ no es la ? dada vuelta, ni el 9 el 6, porque la gravedad no se da vuelta: la gota cae siempre hacia abajo, y el terminal que mira arriba termina en un corte. Las » se arman con su propio azar.
+
 El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)
 
-## La anatomía
+## La gramática
 
-Del pie, la máquina tomó el esqueleto; la anatomía la dicta la obra (`03b_anatomia.md`). Estas son las reglas que aplicó y a qué signos alcanzaron:
+La anatomía base se construye antes de los estados, en vectores (`03c_gramatica.md`, `gramatica.py`). Del pie se toman medidas; la forma la dictan parámetros que salen de la obra. Cuatro generadores (o, l, n, a) dan las partes; con ellas se arman los 55 signos: los elementos forman motivos y los motivos, signos.
 
-![Anatomía](salida/03c_anatomia.png)
+![Generadores](salida/20_gramatica.png)
+
+![Los 55](salida/21_gramatica_caja.png)
+
+![Partes](salida/03c_anatomia.png)
 
 ![Antes y después](salida/03d_antes_y_despues.png)
 
-| Regla | Qué hizo la máquina | Signos |
-|---|---|---|
-| El canal | Dibujó solo el contorno: la letra es hueca | los 55 |
-| El desagüe | Abrió cada contorno en su punto más bajo, con una junta de ancho | 111 desagües en 55 signos |
-| La bandeja | Rehízo la mitad baja de cada ojo y asentó plana la panza | «e», «g», «o», «p», «á», «b», «ó», «é», «0», «4», «6», «8», «9» |
-| La lluvia | Redondeó todo y gastó más arriba: los remates altos casi desaparecen | los 30 hallados |
-| Las gotas | Colgó una gota donde un trazo termina mirando hacia abajo | «s», «a», «c», «f», «á» |
-| Los puntos | Los volvió cuadrados de media tesela | «i», «j», «.», y los que heredan sus puntos |
-| Las tildes | Las volvió gotas | «ú», «í», «á», y la é y la ó, que heredan la de la á |
-| La onda | La virgulilla de la ñ es una onda de agua tocada | «ñ» |
-| El asta | Corrió la letra hasta que su asta cae en una línea de media tesela | 37 signos con asta |
-| La celda | Cada cifra, dentro de una celda de la cabeza del ídolo | las 10 cifras |
+| Parámetro | Valor | Qué controla | De dónde sale |
+|---|---|---|---|
+| `canal` | 36,1 px | Grosor único del trazo: la media entre el grueso y el fino de la o del pie. | El punzón y la cinta no modulan: no hay contraste de pluma (D2, D12) |
+| `radio_chapa` | 21,7 px | Radio mínimo de toda curva del eje. Mayor que medio canal: así el contorno interior nunca se cruza. | El aluminio se rasga en un ángulo agudo (D2) |
+| `trapecio` | 0,7  | Ancho del fondo plano de cada cuenca, sobre su ancho mayor. | La proyección llega en trapecio; la bandeja con un dedo de agua (D8) |
+| `pared` | 0,55  | Cuánto se abomba la pared de la cuenca al bajar: 0 es la pared recta del trapecio, 1 una vasija redonda. | El vaso: una ficha llama «vaso» al monolito (a verificar) |
+| `desague` | 12,0 px | Abertura en el fondo de cada cuenca: 3 mm, el surco del punzón con sus lomas. | «Ningún contenedor aguanta lo que contiene» (D16) |
+| `hombro` | 3,0  | Exponente de la superelipse de los arcos altos (2 sería una elipse). | La chapa curvada a la fuerza sobre un hombro o una clavícula (D3) |
+| `hombro_caida` | 0,4  | Dónde el arco se vuelve vertical, del borde al fondo. | Del testigo de la n, a ojo: falta medirlo en el libro |
+| `facetas` | 3  | Planos de cada fuste. | La placa cambia de plano al apoyarse en el cuerpo (D3, D11) |
+| `quiebre` | 1,6 ° | Ángulo entre plano y plano: apenas. | «Moverse como se mueve la piedra, es decir, apenas» (D11) |
+| `asiento_ancho` | 72,2 px | Ancho del pie de cada fuste sobre el fondo. | El peso se asienta en la tierra; la piedra en pie |
+| `asiento_alto` | 32,5 px | Altura de la curva cóncava con que el fuste se ensancha. | Ídem |
+| `intemperie` | 4,3 px | Radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte. | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |
+| `alivio` | 10,1 px | Radio del rebaje en cada encuentro interior en ángulo agudo (k, v, w, x, y, z, 1, 2, 4, 7, « »). Donde el encuentro es tangente no hace falta. | Para que el aluminio no se desgarre bajo el punzón (D2) |
+| `gancho_fin` | 105 ° | Dónde termina el gancho alto antes de dejar caer la gota. | Que la gota cuelgue libre, sin tocar la cuenca |
+| `gota_masa` | 45,2 px | Diámetro de la gota que cuelga de un terminal que mira abajo. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta. | El líquido que chorrea de la boca (D16) |
+| `gota_caida` | 10,8 px | Cuánto baja la gota antes de juntar peso. | Ídem: la gravedad |
+| `gota_cuello` | 19,9 px | Ancho del cuello de la gota. | Ídem |
+| `sifon` | 0,6  | Ancho del cuello que une dos cuencas (g, 8), sobre el canal: el único trazo más fino. | Vasos comunicantes: el agua que pasa de una cuenca a otra |
+| `cinta` | 36,1 px | Ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro. | La cinta que tapó ojos y boca (D12) |
+| `punto` | 36,1 px | Lado del punto: un trozo cuadrado de cinta, tan ancho como la cinta. | La cinta sobre ojos y boca (D12): un parche, no una gota de tinta |
+
+| Parte | Signos |
+|---|---|
+| La cuenca con su desagüe | «e», «g», «o», «a», «p», «d», «á», «b», «q», «ó», «é», «0», «6», «8», «9» |
+| El asiento | «ú», «n», «a», «k», «r», «d», «m», «l», «i», «u», «f», «í», «h», «á», «b», «ñ», «ü», «1» |
+| La gota | «,», «s», «a», «y», «r», «c», «f», «á», «?», «;», «2», «3», «6» |
+| El alivio | «k», «y», «v», «z», «w», «x», «1», «2», «4», «7», ««», «»» |
+| El punto de cinta | «,», «i», «j», «.», «?», «;», «ü», «:», «¿», «…» |
+| La tilde en gota | «ú», «í», «á», «ó», «é» |
+| El sifón | «g», «8» |
+| La onda | «ñ» |
+| La celda | «0», «1», «2», «3», «4», «5», «6», «7», «8», «9» |
+
+Al calcar, la mano abre además cada contorno en su punto más bajo: 97 desagües en 55 signos.
 
 ## Acción 4 · Repujar
 
 ![Placa](salida/04_placa.jpg)
 
 - **119 placas** (93 de signos hallados, 25 reconstruidos y 1 signo final).
-- **Tiempo simulado:** 69,3 horas de repujado, contando las placas que se rompieron. El plan estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos para preparar cada placa.
-- **Roturas:** 9 en 93 placas halladas y 2 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).
+- **Tiempo simulado:** 87,0 horas de repujado, contando las placas que se rompieron. El plan estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos para preparar cada placa.
+- **Roturas:** 6 en 93 placas halladas y 4 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).
 
 ![Rotas](salida/04b_placas_rotas.jpg)
 
@@ -150,17 +181,23 @@ Cerrada, por la única puerta se ve la coma.
 
 ![Piel](salida/06_piel.jpg)
 
+## Cinta
+
+![Cinta](salida/07_cinta.jpg)
+
+La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta 446 tramos y 305 pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.
+
 ## Acción 8 · El hectógrafo
 
 ![Copias](salida/08_hectografo_copias.jpg)
 
 ![La bandeja bebe](salida/08b_la_bandeja_bebe.jpg)
 
-Se leyeron **27 copias**. La primera sale casi negra y las siguientes, violeta: el color depende de cuánta tinta queda. Las halladas se leen, en promedio, hasta la copia 23,1; las reconstruidas, hasta la 21,7. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, dejan menos tinta en la matriz y se borran antes.
+Se leyeron **26 copias**. La primera sale casi negra y las siguientes, violeta: el color depende de cuánta tinta queda. Las halladas se leen, en promedio, hasta la copia 23,1; las reconstruidas, hasta la 21,9. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, dejan menos tinta en la matriz y se borran antes.
 
-**Los primeros en borrarse:** «6» (20), «z» (21), «?» (21), «é» (21), «ü» (21), «1» (21), «2» (21), «7» (21).
+**Los primeros en borrarse:** «6» (20), «?» (21), «é» (21), «ü» (21), «1» (21), «2» (21), «:» (21), «—» (21).
 
-**Los últimos:** «d» (24), «i» (24), «c» (24), «í» (24), «(» (24), «.» (24), «¶» (26), «l» (27).
+**Los últimos:** «i» (24), «c» (24), «u» (24), «j» (24), «(» (24), «4» (24), «8» (24), «¶» (26).
 
 ## Acción 9 · Agua
 
@@ -170,7 +207,7 @@ Se leyeron **27 copias**. La primera sale casi negra y las siguientes, violeta: 
 
 ![voz](salida/voz.gif)
 
-Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 2,10 en las halladas y 1,26 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos.
+Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 2,22 en las halladas y 1,13 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos.
 
 ## Acción 10 · Voz
 
@@ -180,7 +217,7 @@ Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la l
 
 ![Azulejo](salida/11_azulejo.png)
 
-Juntas que cortan cada letra al caer ampliada: entre 1 y 4 (media 2,3).
+Juntas que cortan cada letra al caer ampliada: entre 0 y 6 (media 2,3).
 
 ![Estrofa](salida/11b_estrofa_en_la_pared.jpg)
 

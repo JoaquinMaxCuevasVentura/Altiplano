@@ -14,7 +14,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 1. **Las letras salen del pie de la lámina que Rebeca usó.** Ella tomó lo que la lámina muestra; la tipografía toma lo que la lámina dice.
 2. **Lo hallado y lo reconstruido se distinguen siempre**, en línea continua y en punteado. De 55 signos, el pie da 30 y hay que reconstruir 25: entre ellos, las diez cifras, porque el pie no trae ningún número, y la z de «voz».
 3. **La caja tiene 56 celdas**, las de la retícula de la cabeza en la lámina. Lo que no cabe se ve como celda vacía: la celda de la lámina, calcada a mano.
-4. **La pauta es la piscina.** Una letra por azulejo, la tesela como unidad y la junta como espacio entre letras. Monoespaciada, solo caja baja: la letra de la mano, no la del monumento.
+4. **Una letra, una celda.** La de la cabeza del ídolo, 0,84 de ancho por alto. Monoespaciada, solo caja baja: la letra de la mano, no la del monumento. La piscina no mide la letra: la recibe, y sus juntas la cortan.
 5. **Las letras son placas de papel de aluminio repujado**, el material de Rebeca. Sueltas, como tipos móviles: 119 placas, 94 de ellas para componer el poema verso a verso sin repetir placa.
 6. **No hay Regular.** Los estilos son estados de la letra: *Calco*, *Placa*, *Piel*, *Copia* (el peso se mide en copias de hectógrafo), *Agua*, *Voz* y *Azulejo*.
 7. **Lo digital es un estado más.** Vuelve a pasar por el agua y vuelve a ser placa: «termina y empieza».
@@ -29,7 +29,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `02_lo_que_se_toma_de_dos_tesis.md` | Qué se toma de *EthnoGraphemes* y de *Afrography*, con citas cotejadas, qué no y dónde el proyecto se aparta de las dos |
 | `03_sistema_contenida.md` | **El sistema.** Nombre, nueve reglas, el cuadro de correspondencias (cada decisión de la obra y su traducción), el pie, la caja, la pauta, la familia, la póliza, el color, el signo final y el colofón |
 | `03b_anatomia.md` | **La anatomía.** Del pie, el esqueleto; de la obra, el cuerpo: canal, desagüe, bandeja, lluvia, gotas, puntos-tesela, tildes-gota, onda, asta en la retícula, líneas con nombres de la piscina y cifras en celdas |
-| `03c_gramatica.md` | **La gramática.** Anatomía base → estados: parámetros que salen de la obra (canal, cuenca, hombro, facetas, asiento, intemperie, alivio, gota), las curvas maestras de los cuatro generadores (o, l, n, a) y un estado nuevo, *Cinta* |
+| `03c_gramatica.md` | **La gramática.** Anatomía base → estados. Parámetros que salen de la obra (canal, cuenca, hombro, facetas, asiento, intemperie, alivio, gota, sifón, punto de cinta), los cuatro generadores (o, l, n, a), cómo se arman con ellos los 55 signos y un estado nuevo, *Cinta*. Reemplaza a `03b` |
 | `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad |
 | `05_migracion_digital.md` | Cuándo es coherente migrar, cómo digitalizar, la especificación de la fuente, el espécimen web y cómo cierra el ciclo |
 | `06_etica_fuentes_y_pendientes.md` | Consentimiento, créditos, lo verificado y lo que falta verificar, y los pendientes en orden |
@@ -40,7 +40,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
 | `simulacion/informe.md` | **La propuesta de la máquina:** el taller entero simulado con código, de la pared frotada a la estrofa compuesta en la pared, con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `contener.py`, `devolver.py`: un módulo por cuaderno) |
-| `laminas/` | **Las láminas de exposición:** dieciséis láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
+| `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 
 ## Estado
 
@@ -54,14 +54,12 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 ## Regenerar
 
 ```bash
-pip install pillow
+pip install pillow numpy opencv-python-headless scikit-image scipy shapely
 python3 tipografia/inventario.py                    # después de corregir textos/pie_de_lamina.txt
+python3 tipografia/simulacion/gramatica.py          # la gramática: los 55 cuerpos base y la cinta
 python3 tipografia/esquemas/generar_esquemas.py \
-  --azulejo 150 --teselas 6 --junta 3               # con las medidas reales, en mm; necesita Chromium (CHROME)
-pip install numpy opencv-python-headless scikit-image
+  --azulejo 150                                     # la placa, en mm; la pauta toma las líneas de la gramática
 python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (unos cinco minutos)
-pip install shapely
-python3 tipografia/simulacion/gramatica.py          # la gramática: los cuatro generadores y la cinta
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
-python3 tipografia/laminas/generar_laminas.py       #   (necesitan Chromium)
+python3 tipografia/laminas/generar_laminas.py       #   (los esquemas y las láminas necesitan Chromium: CHROME)
 ```

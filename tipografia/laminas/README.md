@@ -1,14 +1,14 @@
 # Láminas de exposición
 
-Dieciséis láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sistema, el taller simulado y lo que queda. Siguen el modo de las dos tesis de referencia: fichas con rótulo y valor, como en *Afrography*; figuras numeradas con su leyenda y mucho blanco, como en *EthnoGraphemes*.
+Diecisiete láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sistema, el taller simulado y lo que queda. Siguen el modo de las dos tesis de referencia: fichas con rótulo y valor, como en *Afrography*; figuras numeradas con su leyenda y mucho blanco, como en *EthnoGraphemes*.
 
 - `png/`: cada lámina a 2400 × 1800 px.
-- `contenida_laminas.pdf`: las dieciséis, una por página.
+- `contenida_laminas.pdf`: las diecisiete, una por página.
 - `html/`: las páginas de las que salen las dos cosas anteriores. Se abren en un navegador.
 
 ![Portada](png/01_portada.png)
 
-## Las dieciséis
+## Las diecisiete
 
 | Nº | Lámina | Capítulo |
 |---|---|---|
@@ -17,21 +17,22 @@ Dieciséis láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sis
 | 03 | lo que dice la lámina | 1 · la obra |
 | 04 | dos tesis, un método | 1 · la obra |
 | 05 | 56 celdas | 2 · el sistema |
-| 06 | la piscina es la pauta | 2 · el sistema |
-| 07 | del pie, el esqueleto; de la obra, el cuerpo | 2 · el sistema |
-| 08 | doce reglas | 2 · el sistema |
+| 06 | la celda es la pauta | 2 · el sistema |
+| 07 | del pie, las medidas; de la obra, la forma | 2 · el sistema |
+| 08 | cuatro generadores, cincuenta y cinco signos | 2 · el sistema |
 | 09 | no hay regular | 2 · el sistema |
 | 10 | la propuesta de la máquina | 3 · el taller simulado |
-| 11 | piel y copia | 3 · el taller simulado |
-| 12 | agua y voz | 3 · el taller simulado |
-| 13 | la letra llega a la pared | 3 · el taller simulado |
-| 14 | una letra de punta a punta | 3 · el taller simulado |
-| 15 | lo que apareció sin buscarlo | 4 · lo que queda |
-| 16 | lo que sigue (y colofón) | 4 · lo que queda |
+| 11 | piel y cinta | 3 · el taller simulado |
+| 12 | copia | 3 · el taller simulado |
+| 13 | agua y voz | 3 · el taller simulado |
+| 14 | la letra llega a la pared | 3 · el taller simulado |
+| 15 | una letra de punta a punta | 3 · el taller simulado |
+| 16 | lo que apareció sin buscarlo | 4 · lo que queda |
+| 17 | lo que sigue (y colofón) | 4 · lo que queda |
 
 ## Decisiones
 
-- **La retícula es la de la piscina:** 16 × 12 azulejos de 150 px, con un azulejo de margen. La lámina 06 la deja ver.
+- **La retícula** es de 16 × 12 módulos de 150 px, con uno de margen. La letra, en cambio, vive en su celda: 0,84 de ancho por alto.
 - **La marca de capítulo** son cuatro celdas de la cabeza del ídolo, cada una con su desagüe abajo. La del capítulo en curso lleva el centro violeta.
 - **El color es el del proyecto.** El violeta es tinta: versos, testigos y lo reconstruido. El verde solo aparece como luz, en las fotos del agua.
 - **Las cifras son elzevirianas**, como las de *Contenida*.
