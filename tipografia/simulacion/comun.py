@@ -247,6 +247,8 @@ def fila_de_paneles(paneles, rotulos, ruta, alto=300, titulo=None):
         im = Image.fromarray(a8(a_rgb(p)) if p.dtype != np.uint8 else a_rgb(p))
         ims.append(im.resize((int(im.width * alto / im.height), alto), Image.LANCZOS))
     W = sum(i.width for i in ims) + 12 * (len(ims) + 1)
+    if titulo:   # que el título no se corte cuando las imágenes son angostas
+        W = max(W, int(ImageDraw.Draw(Image.new("RGB", (1, 1))).textlength(titulo, font=rotulo(24))) + 24)
     H = alto + 70 + (50 if titulo else 0)
     lienzo = Image.new("RGB", (W, H), (247, 246, 242))
     d = ImageDraw.Draw(lienzo)

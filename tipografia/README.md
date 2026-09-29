@@ -39,12 +39,14 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
 | `simulacion/informe.md` | **La propuesta de la máquina:** el taller entero simulado con código, de la pared frotada a la estrofa compuesta en la pared, con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `contener.py`, `devolver.py`: un módulo por cuaderno) |
+| `laminas/` | **Las láminas de exposición:** dieciséis láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 
 ## Estado
 
 - **Hecho:**
   - el plan completo del proyecto y las plantillas para empezar el taller;
-  - la propuesta de la máquina (`simulacion/`): el taller simulado, para confrontarla con la propuesta de la mano.
+  - la propuesta de la máquina (`simulacion/`): el taller simulado, para confrontarla con la propuesta de la mano;
+  - las láminas para exponerlo (`laminas/`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
 - **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
 
@@ -57,4 +59,6 @@ python3 tipografia/esquemas/generar_esquemas.py \
   --azulejo 150 --teselas 6 --junta 3               # con las medidas reales, en mm; necesita Chromium (CHROME)
 pip install numpy opencv-python-headless scikit-image
 python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (unos cinco minutos)
+python3 tipografia/laminas/imagenes.py              # las láminas de exposición
+python3 tipografia/laminas/generar_laminas.py       #   (necesitan Chromium)
 ```

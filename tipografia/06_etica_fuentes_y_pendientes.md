@@ -27,7 +27,7 @@ Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
 ## 6.3. Asistencia de inteligencia artificial
 
-Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/` y el código de `simulacion/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
+Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/` y las láminas de `laminas/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
 
 **Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie del libro no se puede calcar desde la foto. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
