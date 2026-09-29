@@ -30,7 +30,7 @@ Pide enfoques **disciplinarios, interdisciplinarios y transdisciplinarios**. Est
 
 ## 1.3. Ejes temáticos y encaje del artículo
 
-Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez». Es la versión 2 reforzada con cinco libros y con la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). No hace falta reclamar todos los ejes para justificar la pertinencia.
+Estado para el artículo definitivo, «La cosecha de piedras: piedra, papel y máquina en *Altiplano*». Es la versión 2 reforzada con cinco libros y con la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`). No hace falta reclamar todos los ejes para justificar la pertinencia.
 
 | Eje de la convocatoria | Encaje | Cómo lo toca el artículo |
 |---|---|---|
@@ -49,9 +49,9 @@ Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar
 | N.º | Norma | Estado en `articulo/articulo_cosecha_de_piedras.docx` |
 |---|---|---|
 | 1 | Originalidad e inéditos; el autor responde por ella | Pendiente de revisión autoral (§1.5) |
-| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.488 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
+| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.482 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
 | 3 | Tamaño carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5; cuadros e ilustraciones numerados con su fuente y mencionados en el texto | ✅ El `.docx` generado lo cumple. El Cuadro 1 y las seis figuras llevan número y fuente, y el texto los menciona |
-| 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 12 palabras (ES) / 10 (EN) |
+| 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 9 palabras (ES) / 10 (EN) |
 | 4b | Presentación del autor a pie de página (máx. 100 palabras): formación, grado, adscripción, publicaciones, correo, ciudad, país | ✅ Nota 1 de 80 palabras. No trae adscripción ni publicaciones (`04`, §4.2) |
 | 4c | Resumen en español e inglés (máx. 100 palabras cada uno) | ✅ 99 / 90 palabras |
 | 4d | Palabras clave (máx. 5 en cada lengua) | ✅ 5 / 5 |
@@ -71,7 +71,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar
    - Arriarán sigue sin verificar.
    - Véase `04_verificaciones_y_pendientes.md`, §4.7.
 4. **Doble ciego.** Las normas piden la nota del autor, pero el arbitraje es a doble ciego. Conviene preguntar a los editores si prefieren un archivo anonimizado más una portada separada, o enviar ambos.
-5. **Citas de la novela.** Las 148 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
+5. **Citas de la novela.** Las 150 citas se comprobaron contra la transcripción; falta cotejarlas con el impreso, sobre todo las de las pp. 88-107 (`06_fichero_de_pasajes.md`).
 6. **Figuras.** Son los esquemas de encaje de los seis pasteles, hechos con asistencia de IA y declarados así en el pie y en la declaración de IA. Si tienes fotografías de los pasteles, puedes sustituirlos (`articulo/figuras/LEEME.md`).
 
 ## 1.6. Borrador de correo de envío
@@ -80,7 +80,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: dibujar el habitar
 >
 > Estimado Comité Editorial:
 >
-> Adjunto el artículo «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez» para su consideración en el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» del número 43 de *Estudios Bolivianos*. Se trata de una investigación en desarrollo, original e inédita, que no ha sido enviada a otra revista. El texto incluye la declaración sobre el uso de herramientas de inteligencia artificial que exige el punto 8 de las normas.
+> Adjunto el artículo «La cosecha de piedras: piedra, papel y máquina en *Altiplano*», sobre la novela de Raúl Botelho Gosálvez, para su consideración en el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» del número 43 de *Estudios Bolivianos*. Se trata de una investigación en desarrollo, original e inédita, que no ha sido enviada a otra revista. El texto incluye la declaración sobre el uso de herramientas de inteligencia artificial que exige el punto 8 de las normas.
 >
 > Quedo atento a sus indicaciones sobre el formato de anonimización para el arbitraje a doble ciego.
 >

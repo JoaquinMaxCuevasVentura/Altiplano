@@ -4,8 +4,8 @@ Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativa
 
 ## Artículo definitivo
 
-**«La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez»**
-*The Harvest of Stones: Drawing Dwelling in Botelho Gosálvez's* Altiplano
+**«La cosecha de piedras: piedra, papel y máquina en *Altiplano*»**
+*The Harvest of Stones: Stone, Paper and Machine in* Altiplano
 Joaquin Max Cuevas Ventura
 
 Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la arquitectura y el dibujo, siguiendo sus piedras. Está escrito en lenguaje llano y abre con un epígrafe aymara: el lema del Taller de Historia Oral Andina, tomado de Silvia Rivera Cusicanqui.
@@ -32,7 +32,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (la Figura 1 y el límite ético, a partir del taller de cine) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (el subtítulo nuevo y dos metáforas: el juego de piedra, papel o tijera y las puertas que se cierran) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
@@ -41,14 +41,14 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 49.488 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.482 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 148 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 150 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;

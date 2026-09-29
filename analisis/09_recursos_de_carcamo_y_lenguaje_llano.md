@@ -130,7 +130,7 @@ Después pediste cambiar el epígrafe propuesto, de Saramago, porque venía de C
 - **Bibliografía:** 23 entradas, sin huérfanas.
 - **Notas:** tres, la de autor, la de traducciones y la del pastel al óleo.
 
-> **Después de esta revisión** entró Pallasmaa, y con él la frase de Bachelard sobre la vista y la mano. El nido de Bachelard salió, la bibliografía pasó a 24 entradas y la extensión, a 49.479 caracteres. Detalle en `10_pallasmaa_y_dos_tesis.md`. Más tarde entraron dos analogías físicas, el esgrafiado (§1) y la pirca de doble cara (§7), y la extensión quedó en 49.477 (`11_analogias_fisicas.md`). La corrección que sugirió el taller de cine la dejó en 49.488 (`12_taller_cine_experimental.md`).
+> **Después de esta revisión** entró Pallasmaa, y con él la frase de Bachelard sobre la vista y la mano. El nido de Bachelard salió, la bibliografía pasó a 24 entradas y la extensión, a 49.479 caracteres. Detalle en `10_pallasmaa_y_dos_tesis.md`. Más tarde entraron dos analogías físicas, el esgrafiado (§1) y la pirca de doble cara (§7), y la extensión quedó en 49.477 (`11_analogias_fisicas.md`). La corrección que sugirió el taller de cine la dejó en 49.488 (`12_taller_cine_experimental.md`), y el subtítulo nuevo con dos metáforas, en 49.482 (`14_evaluacion_propuesta_otra_ia.md`).
 
 ## 9.4. Qué revisar tú
 

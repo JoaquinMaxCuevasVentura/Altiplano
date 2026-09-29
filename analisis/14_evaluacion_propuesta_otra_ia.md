@@ -136,6 +136,35 @@ Dice «corazón de piedra» sin decirlo, con casas, puertas y piedras.
   - los pururaucas con Dean (§2; 281), si aceptas recortar más.
 - **Costo de las tres:** 503 caracteres. El margen es de 12, así que hay que recortar unos 500 en otras partes. Te propondría los recortes con cambios marcados en Word.
 
+## 14.6. Qué se aplicó (29 de septiembre de 2026)
+
+**Entró en el artículo:**
+
+- **Subtítulo:** «La cosecha de piedras: piedra, papel y máquina en *Altiplano*». En inglés: *The Harvest of Stones: Stone, Paper and Machine in* Altiplano. Son 9 y 10 palabras.
+- **§1, el juego:**
+
+  > Como en el juego de piedra, papel o tijera, el papel le gana a la piedra por regla, no por peso: ante la ley, un mojón no vale lo que un título.
+
+- **§6, las puertas cerradas,** con el sujeto aclarado: el alma que se endurece es la de los vecinos, no la de los comunarios.
+
+  > Al salir del ayllu, las casas ajenas se les cierran: a los vecinos, la sequía «les endureció el alma como había endurecido la tierra», y los reciben «dándoles con las puertas» y a pedradas (ibid.: 80).
+
+**Quedó en reserva:** los pururaucas con Dean (§14.3). Cuestan 281 caracteres y se superponen con Duviols, que ya muestra en §2 que la piedra andina guarda memoria. La frase está lista si la quieres.
+
+**Recortes para que cupiera:**
+
+- §1: «La misma palabra nombra la piedra que se saca del campo y la que sujeta el techo». La cita de Bertonio que la precede ya lo dice.
+- §2: «*Altiplano* pone los dos a la vista». Los ejemplos que siguen lo muestran.
+- §3: «La chujlla de los Huanca permite medir la casa. Tiene dos metros…» queda en «La chujlla de los Huanca tiene dos metros…».
+- §4: «Rechaza la defensa, aunque una amenaza lo obliga a pagar la consulta». Para mostrar que Vicente no es un indio ignorante basta con que sepa leer al tinterillo.
+
+**Verificación:**
+
+- **Extensión:** 49.482 caracteres; quedan 18 de margen.
+- **Citas de la novela:** las 150 están en su página. Entran «les endureció el alma como había endurecido la tierra» y «dándoles con las puertas», ambas de la p. 80.
+- **Cadenas de «ibid.»:** revisadas.
+- **Word:** `articulo/articulo_cosecha_de_piedras_cambios.docx` marca los 14 cambios.
+
 ## Fuentes consultadas en la web
 
 - «Sacar agua de las piedras», con la definición de la RAE: https://en.wiktionary.org/wiki/sacar_agua_de_las_piedras y https://www.significadode.org/sacar%20agua%20de%20las%20piedras.htm

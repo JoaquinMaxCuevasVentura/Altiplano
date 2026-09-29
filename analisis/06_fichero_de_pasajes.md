@@ -1,6 +1,6 @@
 # 6. Fichero de pasajes de *Altiplano*
 
-Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: dibujar el habitar en *Altiplano* de Botelho Gosálvez», en la versión que incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`) y la revisión en lenguaje llano (`09_recursos_de_carcamo_y_lenguaje_llano.md`). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
+Este fichero reúne los pasajes del artículo definitivo, «La cosecha de piedras: piedra, papel y máquina en *Altiplano*», en la versión que incorpora la respuesta al arbitraje (`08_respuesta_al_arbitraje.md`) y la revisión en lenguaje llano (`09_recursos_de_carcamo_y_lenguaje_llano.md`). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
 - **Fuente de trabajo.** Transcripción digital (`.docx`) de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
@@ -58,7 +58,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 ## 6.4. Todas las citas de la novela en el artículo, por página
 
-Se comprobaron automáticamente, una por una, contra la transcripción: las 148 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
+Se comprobaron automáticamente, una por una, contra la transcripción: las 150 citas del texto existen literalmente, con las correcciones de §6.2, y están en la página que se indica. También se comprobaron las del Cuadro 1 y se revisaron a mano los datos parafraseados (cifras, orden de los hechos, quién dice qué). Falta la comprobación contra el impreso: marca ☐ cuando la hagas.
 
 | Pág. | Cita | Impreso |
 |---|---|---|
@@ -130,6 +130,8 @@ Se comprobaron automáticamente, una por una, contra la transcripción: las 148 
 | 80 | «para mirar el cielo» | ☐ |
 | 80 | «cancerberos» | ☐ |
 | 80 | «muertos en vida» | ☐ |
+| 80 | «les endureció el alma como había endurecido la tierra» | ☐ |
+| 80 | «dándoles con las puertas» | ☐ |
 | 83 | «situar la Sub-prefectura, el Municipio y la Policía donde antes aposentaba la reducida guarnición hispana» | ☐ |
 | 86 | «con el fajo de expedientes bajo el brazo» | ☐ |
 | 86 | «tejer obscuras mallas de términos seudo jurídicos» | ☐ |
