@@ -13,8 +13,9 @@
   - Por último entran dos analogías físicas: el esgrafiado, para el método (§1), y la pirca de doble cara, para la memoria (§7) (`11_analogias_fisicas.md`).
   - Tras el taller de cine de Byron Davies, la Figura 1 distingue por qué se detienen el esquema y el narrador ante el alma de los comunarios, y el segundo límite de las conclusiones dice «el alma», no «los sueños» (`12_taller_cine_experimental.md`).
   - Nuevo subtítulo, «piedra, papel y máquina», y dos metáforas: el juego de piedra, papel o tijera (§1) y las casas que se cierran a los que huyen de la sequía (§6, p. 80) (`14_evaluacion_propuesta_otra_ia.md`).
+  - En §7, el *qalachuyma*, «corazón de piedra», de Alison Spedding (2025: XV), la fuente de la frase que recordabas (`15_spedding_susto_al_susto.md`). La bibliografía pasa a 25 entradas.
 
-- **Extensión.** 49.482 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión.** 49.473 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 9 y 10 palabras.
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -37,7 +38,8 @@
    - los dos agarres de la mano y la huella «como un sello»;
    - las dos analogías nuevas: el esgrafiado (§1) y la pirca de doble cara (§7) (`11_analogias_fisicas.md`);
    - el nuevo final de la Figura 1: el narrador ve a los comunarios «como estatuas» (`12_taller_cine_experimental.md`);
-   - el subtítulo y las dos metáforas nuevas (`14_evaluacion_propuesta_otra_ia.md`).
+   - el subtítulo y las dos metáforas nuevas (`14_evaluacion_propuesta_otra_ia.md`);
+   - el *qalachuyma* de §7 (`15_spedding_susto_al_susto.md`).
 2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
 3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
 4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
@@ -60,7 +62,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** casi no tiene margen (quedan 18 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** casi no tiene margen (quedan 27 caracteres). Cualquier añadido obliga a acortar otra cosa.
 
 ## 4.3. Verificación de fuentes
 
@@ -94,6 +96,7 @@ Estado de cada dato:
 | 20 | Ingold (2013: 78, 125) | A | Traducción propia del inglés; páginas comprobadas con diez entradas del índice |
 | 21 | Seguí de la Riva (2010: 93) | A | Página del índice de aforismos del propio libro. El libro es de 2010, no de 2012 |
 | 22 | Pallasmaa (2014: 53, 158, 159) y la frase de Bachelard (1978 [1942]: 7-8) que cita en la p. 53 | A / B | Páginas reconstruidas con los encabezados y comprobadas con el índice de nombres (`10_pallasmaa_y_dos_tesis.md`, §10.1). La frase de Bachelard se cita «cit. en» |
+| 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII) | Confirmar en el colofón si hay coordinadores o editores, el ISBN y las páginas de la sección (`15_spedding_susto_al_susto.md`) |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -132,7 +135,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.482 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 18 caracteres de margen.
+- **Ahora:** 49.473 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 27 caracteres de margen.
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -165,6 +168,6 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
 - [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)
-- [x] `.docx` regenerado: 49.482 caracteres; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado: 49.473 caracteres; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)

@@ -116,6 +116,8 @@ Cada punto se verificó en los documentos del proyecto (la novela, Bertonio, Dea
 
 **No la encontré.** Busqué en fuentes consultables, en Alison Spedding (si era ella) y en colecciones de dichos aymaras. Si tienes el libro, dime cuál es y en qué página, y lo verifico.
 
+> **Encontrada después:** es de Alison Spedding, «Piedras en el camino», en *Susto al susto* (2025: XV), y entró en §7 (`15_spedding_susto_al_susto.md`).
+
 **La idea de fondo sí tiene respaldo, doble:**
 
 - **En aymara.** Entre las formas de decir «duro de corazón» está *qala chuymani* (Bertonio, 2011 [1612]: 153), formada con *qala*, «piedra» (ibid.: 444).

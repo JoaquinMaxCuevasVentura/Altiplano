@@ -18,7 +18,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - Hace de la memoria una reparación selectiva del lugar.
 
 - **Marco:**
-  - **Fuentes andinas:** léxico aymara colonial (Bertonio), el *huanca* (Duviols), historiografía andina (Rivera Cusicanqui, Barnadas, Choque Canqui), las dos concepciones del espacio de Zavaleta y la heterogeneidad de Cornejo Polar.
+  - **Fuentes andinas:** léxico aymara colonial (Bertonio), el *huanca* (Duviols), historiografía andina (Rivera Cusicanqui, Barnadas, Choque Canqui), las dos concepciones del espacio de Zavaleta, la heterogeneidad de Cornejo Polar y el *qalachuyma*, el «corazón de piedra», según Alison Spedding (*Susto al susto*, 2025).
   - **Arquitectura y dibujo:** la crítica histórica del espacio (Vázquez Ramos *et al.* y Hall), la tectónica (Frampton), el manuaje y los agarres de la mano (Cárcamo Pino), la arquitectura como verbo y la casa como cuerpo (Pallasmaa, que además trae la frase de Bachelard sobre la vista y la mano), el método de Lundberg y el dibujo según Seguí e Ingold.
   - **De la versión 2 queda** Bacon, a través de Martin.
   - **Cinco libros:** Frampton, Dean, Garrington, Scott y Le Guin.
@@ -32,7 +32,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (el subtítulo nuevo y dos metáforas: el juego de piedra, papel o tijera y las puertas que se cierran) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (el *qalachuyma* de Spedding en §7 y los recortes para que cupiera) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
@@ -41,7 +41,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 49.482 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.473 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
@@ -79,6 +79,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/12_taller_cine_experimental.md` | El taller de Byron Davies sobre cine experimental: qué ya está en el artículo, la corrección que sugirió (el alma «cerrada» y el rostro «hierático» de la Figura 1), lo que no entra y por qué, y lecturas en reserva (tres textos de Davies) |
 | `analisis/13_metaforas_populares_y_titulo.md` | Metáforas populares para simplificar el texto (piedra, papel o tijera; la casita de la Alasita; el Tío de la mina; *uta*, techo y casa), con la frase lista y su costo en caracteres, y cinco opciones de subtítulo más simples |
 | `analisis/14_evaluacion_propuesta_otra_ia.md` | Evaluación de una propuesta hecha con otra IA: títulos con «manuaje» y «grafuaje» (no), «piedra, papel y máquina» (sí), cuatro metáforas verificadas (los pururaucas entran con Dean; la sopa de piedra y la casa sobre la roca, no) y el «corazón de piedra» de la novela (p. 80) |
+| `analisis/15_spedding_susto_al_susto.md` | La fuente del «corazón de piedra»: Alison Spedding, «Piedras en el camino», en *Susto al susto* (2025). Cita verificada en el escaneo (p. XV), correcciones al análisis de otra IA, lo que entró (§7) y lo que queda en reserva (las piedras *awicha* de los cimientos) |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |

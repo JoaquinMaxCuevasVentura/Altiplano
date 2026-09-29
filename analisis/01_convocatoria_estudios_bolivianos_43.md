@@ -49,7 +49,7 @@ Estado para el artículo definitivo, «La cosecha de piedras: piedra, papel y m�
 | N.º | Norma | Estado en `articulo/articulo_cosecha_de_piedras.docx` |
 |---|---|---|
 | 1 | Originalidad e inéditos; el autor responde por ella | Pendiente de revisión autoral (§1.5) |
-| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.482 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
+| 2 | Extensión de 20.000 a 50.000 caracteres con espacios, bibliografía incluida | ✅ 49.473 caracteres, con notas y epígrafe (rango pedido: 47.500-49.500) |
 | 3 | Tamaño carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5; cuadros e ilustraciones numerados con su fuente y mencionados en el texto | ✅ El `.docx` generado lo cumple. El Cuadro 1 y las seis figuras llevan número y fuente, y el texto los menciona |
 | 4a | Título en español e inglés (máximo 12 palabras recomendado) | ✅ 9 palabras (ES) / 10 (EN) |
 | 4b | Presentación del autor a pie de página (máx. 100 palabras): formación, grado, adscripción, publicaciones, correo, ciudad, país | ✅ Nota 1 de 80 palabras. No trae adscripción ni publicaciones (`04`, §4.2) |
