@@ -269,7 +269,19 @@ Pasajes para sostener, ampliar o matizar la crítica al narrador del artículo (
   - «su bocaza africana» (114).
   - «sudaban como negros» (144).
 - **Proyecciones europeas** (la cautela histórica de Vázquez Ramos *et al.*, §2 del artículo).
+  - Las piedras que caen del cerro, «como cabezotas decapitadas a una hidra gigantesca» (8): un mito griego donde La Paz tiene el suyo, el Mururata sin cabeza (`13_metaforas_populares_y_titulo.md`, §13.4).
   - «burguesía», «pequeño-burgueses», «proletariado» (22).
   - «fantásticas construcciones góticas» (109).
   - «geórgica plenitud» (157).
   - «sinfonía wagneriana del viento» (158).
+
+## 6.6. Creencias y fórmulas populares en la novela (reserva)
+
+Sirven para metáforas que no necesitan fuente nueva (`13_metaforas_populares_y_titulo.md`).
+
+- El «nutrido libro sin páginas de la leyenda», la memoria oral del ayllu (7).
+- La cruz del techo con «una pequeña huaca de barro cocido», «contra los perpetuos peligros del rayo» (10). Está en la Figura 1 y en el Cuadro 1.
+- El abuelo que cuenta fábulas del halcón, la culebra, el puma y el cóndor (23).
+- La bendición de Paulo Huanca a sus hijos: «Que Dios les alumbre el camino y que en las apachetas no les detenga el Supaya» (33).
+- El Ekeko, «dios del placer y la abundancia», junto a San Isidro en el retablo de una chujlla (53).
+- Las «tres deidades maléficas de la mina: el Tío, el Gallo y la Viuda» (149).

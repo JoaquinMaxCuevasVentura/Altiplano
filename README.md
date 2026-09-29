@@ -77,6 +77,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/10_pallasmaa_y_dos_tesis.md` | Pallasmaa (*La imagen corpórea*), la tesis de Aljohani, *Narrative Structures* y el libro de Potteiger y Purinton, analizado y descartado: qué dicen de verdad, con página; qué entró en el artículo y qué no, y por qué |
 | `analisis/11_analogias_fisicas.md` | Analogías físicas: cómo las usa Cárcamo Pino, criterios para este artículo, los cuatro borradores evaluados (pirca y ripio, válvula, bomba de pistón, cántaro y arco), las dos que entraron (esgrafiado y pirca de doble cara) y cómo hacer otras |
 | `analisis/12_taller_cine_experimental.md` | El taller de Byron Davies sobre cine experimental: qué ya está en el artículo, la corrección que sugirió (el alma «cerrada» y el rostro «hierático» de la Figura 1), lo que no entra y por qué, y lecturas en reserva (tres textos de Davies) |
+| `analisis/13_metaforas_populares_y_titulo.md` | Metáforas populares para simplificar el texto (piedra, papel o tijera; la casita de la Alasita; el Tío de la mina; *uta*, techo y casa), con la frase lista y su costo en caracteres, y cinco opciones de subtítulo más simples |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
