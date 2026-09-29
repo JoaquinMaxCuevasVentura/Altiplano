@@ -92,4 +92,4 @@ python3 articulo/generar_figuras.py                             # necesita Chrom
 
 ## Otro proyecto en este repositorio: *Contenida*
 
-`tipografia/` contiene *Contenida: acciones para componer una voz*, un proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz Prada. Es independiente del artículo. Primero es analógico: placas de papel de aluminio repujado, la pauta de la piscina y un hectógrafo. Después, digital, si cierra. Empieza por `tipografia/README.md`.
+`tipografia/` contiene *Contenida: acciones para componer una voz*, un proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz Prada. Es independiente del artículo. Primero es analógico: placas de papel de aluminio repujado, la pauta de la piscina y un hectógrafo. Después, digital, si cierra. `tipografia/simulacion/` trae el taller simulado con código, la propuesta de la máquina para confrontarla con la de la mano. Empieza por `tipografia/README.md`.

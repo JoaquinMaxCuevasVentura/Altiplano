@@ -2,7 +2,7 @@
 
 *Contenida* es una familia tipográfica de caja baja, monoespaciada, hecha a mano en papel de aluminio. Sus letras salen del pie de la lámina que Rebeca usó. Su pauta sale de la piscina donde ocurrió la obra, y su caja, de la retícula de la cabeza del ídolo. Sus estilos no son pesos: son los estados por los que pasa la letra, del papel a la placa, al cuerpo, al agua y a la pared.
 
-Ninguna letra de este repositorio está dibujada. Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y los montajes. Las letras las hace la mano (§3.2, regla 9).
+Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y los montajes. Las letras las hace la mano (§3.2, regla 9). La única excepción es `simulacion/`, la propuesta de la máquina, hecha para confrontarla con la de la mano; ninguna de sus formas entra en la caja.
 
 ## 3.1. El nombre
 
@@ -45,6 +45,7 @@ Ninguna letra de este repositorio está dibujada. Las láminas de `esquemas/` so
    - «Nos fuimos con las manos secas, / que es como se sale de todas las ruinas.»
    - La piscina se mide, se frota y se fotografía. No se despega ni se pinta nada, y no queda nada pegado.
    - Tampoco hay letras hechas por una máquina en lugar de la mano: «desenterrar una voz / es desenterrar la mano del que la escribió».
+   - La simulación de `simulacion/` no reemplaza a la mano: es una propuesta de la máquina, para confrontarla con la tuya. Sus formas no entran en la caja ni en la fuente.
 
 ## 3.3. Cuadro de correspondencias
 

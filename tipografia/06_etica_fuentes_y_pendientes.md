@@ -27,9 +27,9 @@ Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
 ## 6.3. Asistencia de inteligencia artificial
 
-Los textos de esta carpeta, el recuento de `inventario.py` y los esquemas de `esquemas/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
+Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/` y el código de `simulacion/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
 
-**Ninguna forma de letra se generó.** Los esquemas son planos (caja, pauta, ficha, cadena, montajes) y las letras quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
+**Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie del libro no se puede calcar desde la foto. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
 ## 6.4. Qué está verificado y qué no
 
@@ -67,3 +67,4 @@ Los textos de esta carpeta, el recuento de `inventario.py` y los esquemas de `es
 - [ ] Probar el repujado en hoja simple y doble; decidir.
 - [ ] Probar la receta del hectógrafo y los dos tipos de matriz.
 - [ ] Verificar los datos de Posnansky, el nombre y la ficha del «vaso».
+- [ ] Confrontar la propuesta de la mano con la de la máquina (`simulacion/informe.md`, «Cómo confrontar»).

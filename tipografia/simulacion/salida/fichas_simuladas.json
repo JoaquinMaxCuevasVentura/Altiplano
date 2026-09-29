@@ -1,0 +1,4235 @@
+{
+ "01.01": {
+  "placa": ",.01",
+  "celda": 1,
+  "signo": ",",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "reconstructivo,",
+   "linea": 1,
+   "testigo": 3,
+   "de": 6,
+   "opinion_pct": 5.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 8.6,
+   "recorrido_mm": 89
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 2.16
+  },
+  "voz": {
+   "verso": "quedó el contenedor",
+   "silaba": "5 de 7",
+   "hz": 140,
+   "volumen": 0.77,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 1
+  }
+ },
+ "01.02": {
+  "placa": ",.02",
+  "celda": 1,
+  "signo": ",",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "reconstructivo,",
+   "linea": 1,
+   "testigo": 3,
+   "de": 6,
+   "opinion_pct": 5.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 9.0,
+   "recorrido_mm": 88
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 6
+  }
+ },
+ "01.03": {
+  "placa": ",.03",
+  "celda": 1,
+  "signo": ",",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "reconstructivo,",
+   "linea": 1,
+   "testigo": 3,
+   "de": 6,
+   "opinion_pct": 5.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 7.8,
+   "recorrido_mm": 90
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 7
+  }
+ },
+ "01.04": {
+  "placa": ",.04",
+  "celda": 1,
+  "signo": ",",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "reconstructivo,",
+   "linea": 1,
+   "testigo": 3,
+   "de": 6,
+   "opinion_pct": 5.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 7.6,
+   "recorrido_mm": 88
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 5
+  }
+ },
+ "02.01": {
+  "placa": "s.01",
+  "celda": 2,
+  "signo": "s",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.2,
+   "recorrido_mm": 284
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 2.33
+  },
+  "voz": {
+   "verso": "quedó el contenedor",
+   "silaba": "6 de 7",
+   "hz": 145,
+   "volumen": 0.23,
+   "lambda_mm": 4.4
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "02.02": {
+  "placa": "s.02",
+  "celda": 2,
+  "signo": "s",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 38.9,
+   "recorrido_mm": 286
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 1,
+   "pliegues": 7
+  }
+ },
+ "02.03": {
+  "placa": "s.03",
+  "celda": 2,
+  "signo": "s",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.5,
+   "recorrido_mm": 284
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 6
+  }
+ },
+ "02.04": {
+  "placa": "s.04",
+  "celda": 2,
+  "signo": "s",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.8,
+   "recorrido_mm": 283
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 7
+  }
+ },
+ "02.05": {
+  "placa": "s.05",
+  "celda": 2,
+  "signo": "s",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 38.7,
+   "recorrido_mm": 285
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 7
+  }
+ },
+ "02.06": {
+  "placa": "s.06",
+  "celda": 2,
+  "signo": "s",
+  "variante": 6,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 7,
+   "de": 25,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.6,
+   "recorrido_mm": 286
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 5
+  }
+ },
+ "03.01": {
+  "placa": "e.01",
+  "celda": 3,
+  "signo": "e",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.6,
+   "recorrido_mm": 316
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.76
+  },
+  "voz": {
+   "verso": "de lo que ya no está.",
+   "silaba": "6 de 7",
+   "hz": 123,
+   "volumen": 0.64,
+   "lambda_mm": 4.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "03.02": {
+  "placa": "e.02",
+  "celda": 3,
+  "signo": "e",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.3,
+   "recorrido_mm": 316
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 2,
+   "pliegues": 6
+  }
+ },
+ "03.03": {
+  "placa": "e.03",
+  "celda": 3,
+  "signo": "e",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.4,
+   "recorrido_mm": 315
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 5
+  }
+ },
+ "03.04": {
+  "placa": "e.04",
+  "celda": 3,
+  "signo": "e",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.4,
+   "recorrido_mm": 315
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 7
+  }
+ },
+ "03.05": {
+  "placa": "e.05",
+  "celda": 3,
+  "signo": "e",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.9,
+   "recorrido_mm": 316
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 7
+  }
+ },
+ "03.06": {
+  "placa": "e.06",
+  "celda": 3,
+  "signo": "e",
+  "variante": 6,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 42.4,
+   "recorrido_mm": 315
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 7
+  }
+ },
+ "03.07": {
+  "placa": "e.07",
+  "celda": 3,
+  "signo": "e",
+  "variante": 7,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.4,
+   "recorrido_mm": 318
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 6
+  }
+ },
+ "03.08": {
+  "placa": "e.08",
+  "celda": 3,
+  "signo": "e",
+  "variante": 8,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "bien",
+   "linea": 2,
+   "testigo": 18,
+   "de": 41,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.0,
+   "recorrido_mm": 314
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 3,
+   "pliegues": 7
+  }
+ },
+ "04.01": {
+  "placa": "g.01",
+  "celda": 4,
+  "signo": "g",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "fotografías",
+   "linea": 1,
+   "testigo": 3,
+   "de": 7,
+   "opinion_pct": 1.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 29.0,
+   "recorrido_mm": 524
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.99
+  },
+  "voz": {
+   "verso": "una piscina vacía,",
+   "silaba": "7 de 8",
+   "hz": 141,
+   "volumen": 0.45,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "04.02": {
+  "placa": "g.02",
+  "celda": 4,
+  "signo": "g",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "fotografías",
+   "linea": 1,
+   "testigo": 3,
+   "de": 7,
+   "opinion_pct": 1.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 27.4,
+   "recorrido_mm": 522
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 6
+  }
+ },
+ "05.01": {
+  "placa": "ú.01",
+  "celda": 5,
+  "signo": "ú",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "según",
+   "linea": 1,
+   "testigo": 2,
+   "de": 2,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 26.1,
+   "recorrido_mm": 399
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.26
+  },
+  "voz": {
+   "verso": "donde una vez aprendí a flotar,",
+   "silaba": "8 de 11",
+   "hz": 158,
+   "volumen": 0.57,
+   "lambda_mm": 4.2
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "06.01": {
+  "placa": "n.01",
+  "celda": 6,
+  "signo": "n",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.8,
+   "recorrido_mm": 303
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 2.11
+  },
+  "voz": {
+   "verso": "donde una vez aprendí a flotar,",
+   "silaba": "1 de 11",
+   "hz": 200,
+   "volumen": 0.53,
+   "lambda_mm": 3.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "06.02": {
+  "placa": "n.02",
+  "celda": 6,
+  "signo": "n",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.9,
+   "recorrido_mm": 306
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 5
+  }
+ },
+ "06.03": {
+  "placa": "n.03",
+  "celda": 6,
+  "signo": "n",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 34.0,
+   "recorrido_mm": 303
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 4,
+   "pliegues": 7
+  }
+ },
+ "06.04": {
+  "placa": "n.04",
+  "celda": 6,
+  "signo": "n",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.7,
+   "recorrido_mm": 302
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 6
+  }
+ },
+ "06.05": {
+  "placa": "n.05",
+  "celda": 6,
+  "signo": "n",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.3,
+   "recorrido_mm": 302
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 5
+  }
+ },
+ "06.06": {
+  "placa": "n.06",
+  "celda": 6,
+  "signo": "n",
+  "variante": 6,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.1,
+   "recorrido_mm": 305
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 7
+  }
+ },
+ "06.07": {
+  "placa": "n.07",
+  "celda": 6,
+  "signo": "n",
+  "variante": 7,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.7,
+   "recorrido_mm": 303
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 6
+  }
+ },
+ "06.08": {
+  "placa": "n.08",
+  "celda": 6,
+  "signo": "n",
+  "variante": 8,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "no",
+   "linea": 2,
+   "testigo": 9,
+   "de": 27,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.0,
+   "recorrido_mm": 304
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 7
+  }
+ },
+ "07.01": {
+  "placa": "o.01",
+  "celda": 7,
+  "signo": "o",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.3,
+   "recorrido_mm": 343
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 5,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 2.3
+  },
+  "voz": {
+   "verso": "ahora aprendo a mirar.",
+   "silaba": "7 de 9",
+   "hz": 158,
+   "volumen": 0.26,
+   "lambda_mm": 4.2
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "07.02": {
+  "placa": "o.02",
+  "celda": 7,
+  "signo": "o",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.7,
+   "recorrido_mm": 343
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 6
+  }
+ },
+ "07.03": {
+  "placa": "o.03",
+  "celda": 7,
+  "signo": "o",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.5,
+   "recorrido_mm": 344
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 6
+  }
+ },
+ "07.04": {
+  "placa": "o.04",
+  "celda": 7,
+  "signo": "o",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.1,
+   "recorrido_mm": 344
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 5
+  }
+ },
+ "07.05": {
+  "placa": "o.05",
+  "celda": 7,
+  "signo": "o",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 23.8,
+   "recorrido_mm": 344
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 6
+  }
+ },
+ "07.06": {
+  "placa": "o.06",
+  "celda": 7,
+  "signo": "o",
+  "variante": 6,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "donde",
+   "linea": 3,
+   "testigo": 28,
+   "de": 30,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 23.5,
+   "recorrido_mm": 344
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 7
+  }
+ },
+ "08.01": {
+  "placa": "a.01",
+  "celda": 8,
+  "signo": "a",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.0,
+   "recorrido_mm": 321
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 6,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.15
+  },
+  "voz": {
+   "verso": "moverse como se mueve la piedra,",
+   "silaba": "5 de 11",
+   "hz": 153,
+   "volumen": 0.57,
+   "lambda_mm": 4.3
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "08.02": {
+  "placa": "a.02",
+  "celda": 8,
+  "signo": "a",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.9,
+   "recorrido_mm": 318
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 6
+  }
+ },
+ "08.03": {
+  "placa": "a.03",
+  "celda": 8,
+  "signo": "a",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.2,
+   "recorrido_mm": 317
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 7
+  }
+ },
+ "08.04": {
+  "placa": "a.04",
+  "celda": 8,
+  "signo": "a",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.8,
+   "recorrido_mm": 317
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 7
+  }
+ },
+ "08.05": {
+  "placa": "a.05",
+  "celda": 8,
+  "signo": "a",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.0,
+   "recorrido_mm": 317
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 6
+  }
+ },
+ "08.06": {
+  "placa": "a.06",
+  "celda": 8,
+  "signo": "a",
+  "variante": 6,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.6,
+   "recorrido_mm": 317
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 7
+  }
+ },
+ "08.07": {
+  "placa": "a.07",
+  "celda": 8,
+  "signo": "a",
+  "variante": 7,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.9,
+   "recorrido_mm": 317
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 7,
+   "pliegues": 7
+  }
+ },
+ "08.08": {
+  "placa": "a.08",
+  "celda": 8,
+  "signo": "a",
+  "variante": 8,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.6,
+   "recorrido_mm": 319
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 7
+  }
+ },
+ "08.09": {
+  "placa": "a.09",
+  "celda": 8,
+  "signo": "a",
+  "variante": 9,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 8,
+   "de": 29,
+   "opinion_pct": 1.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.9,
+   "recorrido_mm": 318
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 7
+  }
+ },
+ "09.01": {
+  "placa": "k.01",
+  "celda": 9,
+  "signo": "k",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Posnansky,",
+   "linea": 1,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 1.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 20.9,
+   "recorrido_mm": 361
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 2.12
+  },
+  "voz": {
+   "verso": "es decir, apenas, es decir, temblor,",
+   "silaba": "10 de 11",
+   "hz": 147,
+   "volumen": 0.59,
+   "lambda_mm": 4.4
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "10.01": {
+  "placa": "y.01",
+  "celda": 10,
+  "signo": "y",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "(hoy",
+   "linea": 1,
+   "testigo": 2,
+   "de": 5,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 22.0,
+   "recorrido_mm": 346
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.21
+  },
+  "voz": {
+   "verso": "es decir, apenas, es decir, temblor,",
+   "silaba": "11 de 11",
+   "hz": 137,
+   "volumen": 0.63,
+   "lambda_mm": 4.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "11.01": {
+  "placa": "p.01",
+  "celda": 11,
+  "signo": "p",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Suponemos",
+   "linea": 3,
+   "testigo": 4,
+   "de": 6,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 24.3,
+   "recorrido_mm": 412
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.91
+  },
+  "voz": {
+   "verso": "es decir, un presente continuo.",
+   "silaba": "2 de 10",
+   "hz": 169,
+   "volumen": 0.79,
+   "lambda_mm": 4.0
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "11.02": {
+  "placa": "p.02",
+  "celda": 11,
+  "signo": "p",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Suponemos",
+   "linea": 3,
+   "testigo": 4,
+   "de": 6,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 25.8,
+   "recorrido_mm": 410
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 8,
+   "pliegues": 6
+  }
+ },
+ "12.01": {
+  "placa": "r.01",
+  "celda": 12,
+  "signo": "r",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "presentado",
+   "linea": 1,
+   "testigo": 1,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 15.7,
+   "recorrido_mm": 198
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 2.21
+  },
+  "voz": {
+   "verso": "tocas el agua y la diosa se deforma.",
+   "silaba": "3 de 12",
+   "hz": 181,
+   "volumen": 0.89,
+   "lambda_mm": 3.8
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "12.02": {
+  "placa": "r.02",
+  "celda": 12,
+  "signo": "r",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "presentado",
+   "linea": 1,
+   "testigo": 1,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 14.4,
+   "recorrido_mm": 199
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 7
+  }
+ },
+ "12.03": {
+  "placa": "r.03",
+  "celda": 12,
+  "signo": "r",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "presentado",
+   "linea": 1,
+   "testigo": 1,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 12.9,
+   "recorrido_mm": 196
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 5
+  }
+ },
+ "12.04": {
+  "placa": "r.04",
+  "celda": 12,
+  "signo": "r",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "presentado",
+   "linea": 1,
+   "testigo": 1,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 14.8,
+   "recorrido_mm": 198
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 5
+  }
+ },
+ "12.05": {
+  "placa": "r.05",
+  "celda": 12,
+  "signo": "r",
+  "variante": 5,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "presentado",
+   "linea": 1,
+   "testigo": 1,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.7,
+   "recorrido_mm": 197
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 6
+  }
+ },
+ "13.01": {
+  "placa": "t.01",
+  "celda": 13,
+  "signo": "t",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "distinto",
+   "linea": 2,
+   "testigo": 11,
+   "de": 19,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.1,
+   "recorrido_mm": 196
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 9,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.11
+  },
+  "voz": {
+   "verso": "todos los archivos funcionan así.",
+   "silaba": "7 de 11",
+   "hz": 154,
+   "volumen": 0.89,
+   "lambda_mm": 4.2
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "13.02": {
+  "placa": "t.02",
+  "celda": 13,
+  "signo": "t",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "distinto",
+   "linea": 2,
+   "testigo": 11,
+   "de": 19,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.5,
+   "recorrido_mm": 196
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 6
+  }
+ },
+ "13.03": {
+  "placa": "t.03",
+  "celda": 13,
+  "signo": "t",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "distinto",
+   "linea": 2,
+   "testigo": 11,
+   "de": 19,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 13.9,
+   "recorrido_mm": 196
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 7
+  }
+ },
+ "14.01": {
+  "placa": "d.01",
+  "celda": 14,
+  "signo": "d",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 3,
+   "de": 14,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 24.3,
+   "recorrido_mm": 415
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 2.02
+  },
+  "voz": {
+   "verso": "todos los archivos funcionan así.",
+   "silaba": "4 de 11",
+   "hz": 155,
+   "volumen": 0.72,
+   "lambda_mm": 4.2
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "14.02": {
+  "placa": "d.02",
+  "celda": 14,
+  "signo": "d",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 3,
+   "de": 14,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 26.0,
+   "recorrido_mm": 415
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 7
+  }
+ },
+ "14.03": {
+  "placa": "d.03",
+  "celda": 14,
+  "signo": "d",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "erosionado",
+   "linea": 2,
+   "testigo": 3,
+   "de": 14,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 24.6,
+   "recorrido_mm": 414
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 6
+  }
+ },
+ "15.01": {
+  "placa": "m.01",
+  "celda": 15,
+  "signo": "m",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "originariamente",
+   "linea": 3,
+   "testigo": 8,
+   "de": 9,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 29.3,
+   "recorrido_mm": 504
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 10,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.0
+  },
+  "voz": {
+   "verso": "a la ídolo la desenterraron,",
+   "silaba": "10 de 11",
+   "hz": 136,
+   "volumen": 0.19,
+   "lambda_mm": 4.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "15.02": {
+  "placa": "m.02",
+  "celda": 15,
+  "signo": "m",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "originariamente",
+   "linea": 3,
+   "testigo": 8,
+   "de": 9,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 29.3,
+   "recorrido_mm": 505
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 7
+  }
+ },
+ "15.03": {
+  "placa": "m.03",
+  "celda": 15,
+  "signo": "m",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "originariamente",
+   "linea": 3,
+   "testigo": 8,
+   "de": 9,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 29.3,
+   "recorrido_mm": 506
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 5
+  }
+ },
+ "16.01": {
+  "placa": "l.01",
+  "celda": 16,
+  "signo": "l",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Sol",
+   "linea": 2,
+   "testigo": 10,
+   "de": 15,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 15.7,
+   "recorrido_mm": 222
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 2.17
+  },
+  "voz": {
+   "verso": "le pusieron nombre,",
+   "silaba": "4 de 6",
+   "hz": 151,
+   "volumen": 0.62,
+   "lambda_mm": 4.3
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "16.02": {
+  "placa": "l.02",
+  "celda": 16,
+  "signo": "l",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Sol",
+   "linea": 2,
+   "testigo": 10,
+   "de": 15,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 32.4,
+   "recorrido_mm": 223
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 7
+  }
+ },
+ "16.03": {
+  "placa": "l.03",
+  "celda": 16,
+  "signo": "l",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Sol",
+   "linea": 2,
+   "testigo": 10,
+   "de": 15,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 14.7,
+   "recorrido_mm": 222
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 5
+  }
+ },
+ "16.04": {
+  "placa": "l.04",
+  "celda": 16,
+  "signo": "l",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "Sol",
+   "linea": 2,
+   "testigo": 10,
+   "de": 15,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 13.8,
+   "recorrido_mm": 222
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 11,
+   "pliegues": 5
+  }
+ },
+ "17.01": {
+  "placa": "i.01",
+  "celda": 17,
+  "signo": "i",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "motivos",
+   "linea": 3,
+   "testigo": 11,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 12.5,
+   "recorrido_mm": 179
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 2.48
+  },
+  "voz": {
+   "verso": "otra manera de enterrar.",
+   "silaba": "1 de 9",
+   "hz": 209,
+   "volumen": 0.52,
+   "lambda_mm": 3.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "17.02": {
+  "placa": "i.02",
+  "celda": 17,
+  "signo": "i",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "motivos",
+   "linea": 3,
+   "testigo": 11,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 11.3,
+   "recorrido_mm": 179
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 6
+  }
+ },
+ "17.03": {
+  "placa": "i.03",
+  "celda": 17,
+  "signo": "i",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "motivos",
+   "linea": 3,
+   "testigo": 11,
+   "de": 15,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 12.1,
+   "recorrido_mm": 179
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 5
+  }
+ },
+ "18.01": {
+  "placa": "c.01",
+  "celda": 18,
+  "signo": "c",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "encontraba",
+   "linea": 3,
+   "testigo": 6,
+   "de": 7,
+   "opinion_pct": 2.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.2,
+   "recorrido_mm": 252
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.27
+  },
+  "voz": {
+   "verso": "otra manera de enterrar.",
+   "silaba": "8 de 9",
+   "hz": 142,
+   "volumen": 0.8,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "18.02": {
+  "placa": "c.02",
+  "celda": 18,
+  "signo": "c",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "encontraba",
+   "linea": 3,
+   "testigo": 6,
+   "de": 7,
+   "opinion_pct": 2.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 14.8,
+   "recorrido_mm": 253
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 6
+  }
+ },
+ "18.03": {
+  "placa": "c.03",
+  "celda": 18,
+  "signo": "c",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "encontraba",
+   "linea": 3,
+   "testigo": 6,
+   "de": 7,
+   "opinion_pct": 2.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.0,
+   "recorrido_mm": 253
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 12,
+   "pliegues": 6
+  }
+ },
+ "19.01": {
+  "placa": "u.01",
+  "celda": 19,
+  "signo": "u",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "luego",
+   "linea": 3,
+   "testigo": 14,
+   "de": 17,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.5,
+   "recorrido_mm": 316
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 2.09
+  },
+  "voz": {
+   "verso": "es lo que hacemos con todo, no?",
+   "silaba": "9 de 10",
+   "hz": 129,
+   "volumen": 0.54,
+   "lambda_mm": 4.8
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "19.02": {
+  "placa": "u.02",
+  "celda": 19,
+  "signo": "u",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "luego",
+   "linea": 3,
+   "testigo": 14,
+   "de": 17,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.3,
+   "recorrido_mm": 315
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 6
+  }
+ },
+ "19.03": {
+  "placa": "u.03",
+  "celda": 19,
+  "signo": "u",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "luego",
+   "linea": 3,
+   "testigo": 14,
+   "de": 17,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.4,
+   "recorrido_mm": 316
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 7
+  }
+ },
+ "19.04": {
+  "placa": "u.04",
+  "celda": 19,
+  "signo": "u",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "luego",
+   "linea": 3,
+   "testigo": 14,
+   "de": 17,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.2,
+   "recorrido_mm": 318
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 7
+  }
+ },
+ "20.01": {
+  "placa": "v.01",
+  "celda": 20,
+  "signo": "v",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "todavía",
+   "linea": 2,
+   "testigo": 4,
+   "de": 5,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.2,
+   "recorrido_mm": 259
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.28
+  },
+  "voz": {
+   "verso": "primero enterramos,",
+   "silaba": "4 de 7",
+   "hz": 174,
+   "volumen": 0.74,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "20.02": {
+  "placa": "v.02",
+  "celda": 20,
+  "signo": "v",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "todavía",
+   "linea": 2,
+   "testigo": 4,
+   "de": 5,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.1,
+   "recorrido_mm": 260
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 13,
+   "pliegues": 5
+  }
+ },
+ "20.03": {
+  "placa": "v.03",
+  "celda": 20,
+  "signo": "v",
+  "variante": 3,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "todavía",
+   "linea": 2,
+   "testigo": 4,
+   "de": 5,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.7,
+   "recorrido_mm": 260
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 6
+  }
+ },
+ "20.04": {
+  "placa": "v.04",
+  "celda": 20,
+  "signo": "v",
+  "variante": 4,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "todavía",
+   "linea": 2,
+   "testigo": 4,
+   "de": 5,
+   "opinion_pct": 1.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 15.9,
+   "recorrido_mm": 261
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 6
+  }
+ },
+ "21.01": {
+  "placa": "j.01",
+  "celda": 21,
+  "signo": "j",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "viejas",
+   "linea": 1,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 0.6
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.1,
+   "recorrido_mm": 264
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 2.19
+  },
+  "voz": {
+   "verso": "después nos emocionamos.",
+   "silaba": "8 de 8",
+   "hz": 135,
+   "volumen": 0.69,
+   "lambda_mm": 4.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "22.01": {
+  "placa": "f.01",
+  "celda": 22,
+  "signo": "f",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "fotografías",
+   "linea": 1,
+   "testigo": 1,
+   "de": 2,
+   "opinion_pct": 0.7
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.2,
+   "recorrido_mm": 270
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 2.4
+  },
+  "voz": {
+   "verso": "después nos emocionamos.",
+   "silaba": "4 de 8",
+   "hz": 164,
+   "volumen": 0.68,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "23.01": {
+  "placa": "í.01",
+  "celda": 23,
+  "signo": "í",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "fotografías",
+   "linea": 1,
+   "testigo": 1,
+   "de": 2,
+   "opinion_pct": 2.2
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.7,
+   "recorrido_mm": 229
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.3
+  },
+  "voz": {
+   "verso": "no se salvó la piedra,",
+   "silaba": "4 de 7",
+   "hz": 162,
+   "volumen": 0.51,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 3
+  }
+ },
+ "24.01": {
+  "placa": "(.01",
+  "celda": 24,
+  "signo": "(",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "(hoy",
+   "linea": 1,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 2.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 18.7,
+   "recorrido_mm": 263
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 14,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 24,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.84
+  },
+  "voz": {
+   "verso": "solo la opinión sobre ella.",
+   "silaba": "3 de 10",
+   "hz": 165,
+   "volumen": 0.79,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "25.01": {
+  "placa": "h.01",
+  "celda": 25,
+  "signo": "h",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "(hoy",
+   "linea": 1,
+   "testigo": 1,
+   "de": 2,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.8,
+   "recorrido_mm": 384
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.06
+  },
+  "voz": {
+   "verso": "la tierra se dio de beber a sí misma",
+   "silaba": "7 de 12",
+   "hz": 142,
+   "volumen": 0.56,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "25.02": {
+  "placa": "h.02",
+  "celda": 25,
+  "signo": "h",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "(hoy",
+   "linea": 1,
+   "testigo": 1,
+   "de": 2,
+   "opinion_pct": 0.4
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 23.1,
+   "recorrido_mm": 386
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 5
+  }
+ },
+ "26.01": {
+  "placa": "á.01",
+  "celda": 26,
+  "signo": "á",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "está",
+   "linea": 2,
+   "testigo": 1,
+   "de": 2,
+   "opinion_pct": 0.8
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 21.1,
+   "recorrido_mm": 379
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.99
+  },
+  "voz": {
+   "verso": "la tierra se dio de beber a sí misma",
+   "silaba": "5 de 12",
+   "hz": 172,
+   "volumen": 0.77,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "27.01": {
+  "placa": ").01",
+  "celda": 27,
+  "signo": ")",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "detalles).",
+   "linea": 2,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 2.0
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.1,
+   "recorrido_mm": 263
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.92
+  },
+  "voz": {
+   "verso": "y ningún contenedor aguanta lo que contiene.",
+   "silaba": "1 de 14",
+   "hz": 203,
+   "volumen": 0.52,
+   "lambda_mm": 3.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "28.01": {
+  "placa": "..01",
+  "celda": 28,
+  "signo": ".",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "antiguos.",
+   "linea": 3,
+   "testigo": 2,
+   "de": 3,
+   "opinion_pct": 10.9
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 5,
+   "recorrido_mm": 34
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 2.27
+  },
+  "voz": {
+   "verso": "vuelve sin que la llames.",
+   "silaba": "1 de 7",
+   "hz": 175,
+   "volumen": 0.71,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 1
+  }
+ },
+ "29.01": {
+  "placa": "b.01",
+  "celda": 29,
+  "signo": "b",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "encontraba",
+   "linea": 3,
+   "testigo": 2,
+   "de": 2,
+   "opinion_pct": 1.3
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 24.8,
+   "recorrido_mm": 401
+  },
+  "piel": {
+   "parte": "cadera",
+   "minutos": 5,
+   "sesion": 15,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 2.1
+  },
+  "voz": {
+   "verso": "termina y empieza,",
+   "silaba": "3 de 6",
+   "hz": 172,
+   "volumen": 0.39,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "29.02": {
+  "placa": "b.02",
+  "celda": 29,
+  "signo": "b",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "encontraba",
+   "linea": 3,
+   "testigo": 2,
+   "de": 2,
+   "opinion_pct": 1.3
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 23.6,
+   "recorrido_mm": 401
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 6
+  }
+ },
+ "30.01": {
+  "placa": "q.01",
+  "celda": 30,
+  "signo": "q",
+  "variante": 1,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "que",
+   "linea": 3,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 24.5,
+   "recorrido_mm": 404
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 2.16
+  },
+  "voz": {
+   "verso": "termina y empieza,",
+   "silaba": "2 de 6",
+   "hz": 162,
+   "volumen": 0.53,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "30.02": {
+  "placa": "q.02",
+  "celda": 30,
+  "signo": "q",
+  "variante": 2,
+  "estado": "hallada",
+  "mano": "simulación (semilla fija)",
+  "pie": {
+   "palabra": "que",
+   "linea": 3,
+   "testigo": 1,
+   "de": 1,
+   "opinion_pct": 0.5
+  },
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 26.5,
+   "recorrido_mm": 403
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 5
+  }
+ },
+ "31.01": {
+  "placa": "ó.01",
+  "celda": 31,
+  "signo": "ó",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la o con la tilde de la á",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 50.0,
+   "recorrido_mm": 398
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.41
+  },
+  "voz": {
+   "verso": "termina y empieza.",
+   "silaba": "4 de 6",
+   "hz": 152,
+   "volumen": 1.0,
+   "lambda_mm": 4.3
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "32.01": {
+  "placa": "z.01",
+  "celda": 32,
+  "signo": "z",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la diagonal de la x reconstruida (hipótesis sobre hipótesis) y dos barras del grueso fino de la o",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 41.2,
+   "recorrido_mm": 333
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.06
+  },
+  "voz": {
+   "verso": "cada vuelta pasa por el agua",
+   "silaba": "3 de 10",
+   "hz": 171,
+   "volumen": 0.73,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "33.01": {
+  "placa": "?.01",
+  "celda": 33,
+  "signo": "?",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "el arco de arriba de la o, un asta que baja al centro y el punto",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 40.2,
+   "recorrido_mm": 330
+  },
+  "piel": {
+   "parte": "muslo",
+   "minutos": 5,
+   "sesion": 16,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 1.24
+  },
+  "voz": {
+   "verso": "y el agua no repite,",
+   "silaba": "2 de 7",
+   "hz": 204,
+   "volumen": 0.48,
+   "lambda_mm": 3.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "34.01": {
+  "placa": "é.01",
+  "celda": 34,
+  "signo": "é",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la e con la tilde de la á",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 44.7,
+   "recorrido_mm": 372
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.06
+  },
+  "voz": {
+   "verso": "y el agua no repite,",
+   "silaba": "1 de 7",
+   "hz": 207,
+   "volumen": 0.76,
+   "lambda_mm": 3.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "35.01": {
+  "placa": ";.01",
+  "celda": 35,
+  "signo": ";",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la coma y el punto subido",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 16.6,
+   "recorrido_mm": 120
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 1.47
+  },
+  "voz": {
+   "verso": "la misma diosa dos veces",
+   "silaba": "8 de 8",
+   "hz": 133,
+   "volumen": 0.24,
+   "lambda_mm": 4.7
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "36.01": {
+  "placa": "ñ.01",
+  "celda": 36,
+  "signo": "ñ",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la n con una virgulilla sin modelo, del grueso fino de la o",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 49.7,
+   "recorrido_mm": 417
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 0.93
+  },
+  "voz": {
+   "verso": "y ninguna igual.",
+   "silaba": "3 de 5",
+   "hz": 146,
+   "volumen": 1.0,
+   "lambda_mm": 4.4
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "37.01": {
+  "placa": "w.01",
+  "celda": 37,
+  "signo": "w",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "dos v estrechadas",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 55.0,
+   "recorrido_mm": 442
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.07
+  },
+  "voz": {
+   "verso": "es lo más parecido a estar viva",
+   "silaba": "9 de 12",
+   "hz": 135,
+   "volumen": 0.92,
+   "lambda_mm": 4.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "38.01": {
+  "placa": "x.01",
+  "celda": 38,
+  "signo": "x",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "los dos trazos de la v, inclinados hasta cruzarse (quedan con remates solo arriba)",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 38.3,
+   "recorrido_mm": 304
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 1.13
+  },
+  "voz": {
+   "verso": "es lo más parecido a estar viva",
+   "silaba": "4 de 12",
+   "hz": 178,
+   "volumen": 0.76,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "39.01": {
+  "placa": "ü.01",
+  "celda": 39,
+  "signo": "ü",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la u con dos puntos de la i",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 94.3,
+   "recorrido_mm": 380
+  },
+  "piel": {
+   "parte": "espalda",
+   "minutos": 5,
+   "sesion": 17,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.21
+  },
+  "voz": {
+   "verso": "que puede hacer una imagen.",
+   "silaba": "3 de 10",
+   "hz": 188,
+   "volumen": 0.97,
+   "lambda_mm": 3.7
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "40.01": {
+  "placa": "0.01",
+  "celda": 40,
+  "signo": "0",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la o, algo más estrecha",
+  "placa_": {
+   "intentos": 3,
+   "roturas": 2,
+   "minutos": 123.6,
+   "recorrido_mm": 330
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 1.37
+  },
+  "voz": {
+   "verso": "al final del ciclo,",
+   "silaba": "6 de 6",
+   "hz": 121,
+   "volumen": 0.7,
+   "lambda_mm": 5.0
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "41.01": {
+  "placa": "1.01",
+  "celda": 41,
+  "signo": "1",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la i sin punto, con una bandera",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 22.4,
+   "recorrido_mm": 179
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.14
+  },
+  "voz": {
+   "verso": "de la boca sale un signo",
+   "silaba": "9 de 9",
+   "hz": 140,
+   "volumen": 0.71,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "42.01": {
+  "placa": "2.01",
+  "celda": 42,
+  "signo": "2",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "el arco de arriba de la o, una diagonal y una barra de base",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 43.9,
+   "recorrido_mm": 384
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.31
+  },
+  "voz": {
+   "verso": "de la boca sale un signo",
+   "silaba": "7 de 9",
+   "hz": 142,
+   "volumen": 0.68,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "43.01": {
+  "placa": "3.01",
+  "celda": 43,
+  "signo": "3",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "dos mitades derechas de la o, la de abajo bajo la línea",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 36.6,
+   "recorrido_mm": 291
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 1.25
+  },
+  "voz": {
+   "verso": "hecho con las manos,",
+   "silaba": "3 de 6",
+   "hz": 179,
+   "volumen": 0.91,
+   "lambda_mm": 3.8
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "44.01": {
+  "placa": "4.01",
+  "celda": 44,
+  "signo": "4",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "un asta que baja, una diagonal fina y una barra",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 42.6,
+   "recorrido_mm": 330
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.36
+  },
+  "voz": {
+   "verso": "ninguna palabra,",
+   "silaba": "2 de 6",
+   "hz": 171,
+   "volumen": 0.37,
+   "lambda_mm": 4.0
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "45.01": {
+  "placa": "5.01",
+  "celda": 45,
+  "signo": "5",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "una barra, un asta corta y la mitad baja de la o, bajo la línea",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 73.4,
+   "recorrido_mm": 306
+  },
+  "piel": {
+   "parte": "hombro",
+   "minutos": 5,
+   "sesion": 18,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 1.24
+  },
+  "voz": {
+   "verso": "acciones del cuerpo.",
+   "silaba": "5 de 6",
+   "hz": 131,
+   "volumen": 0.65,
+   "lambda_mm": 4.7
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "46.01": {
+  "placa": "6.01",
+  "celda": 46,
+  "signo": "6",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la o con la curva de una c agrandada que sube (achicada en alto al 88 % para caber en el azulejo)",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 110.5,
+   "recorrido_mm": 453
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 20,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.31
+  },
+  "voz": {
+   "verso": "acciones del cuerpo.",
+   "silaba": "5 de 6",
+   "hz": 138,
+   "volumen": 0.66,
+   "lambda_mm": 4.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "47.01": {
+  "placa": "7.01",
+  "celda": 47,
+  "signo": "7",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "una barra y una diagonal que baja",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 35.9,
+   "recorrido_mm": 271
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.33
+  },
+  "voz": {
+   "verso": "y es que lo que vuelve, vuelve escrito;",
+   "silaba": "6 de 11",
+   "hz": 163,
+   "volumen": 0.53,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "48.01": {
+  "placa": "8.01",
+  "celda": 48,
+  "signo": "8",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "dos o apiladas, la de arriba más chica",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 101.2,
+   "recorrido_mm": 429
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 1.34
+  },
+  "voz": {
+   "verso": "pocas veces vuelve hablado.",
+   "silaba": "5 de 9",
+   "hz": 166,
+   "volumen": 0.55,
+   "lambda_mm": 4.0
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "49.01": {
+  "placa": "9.01",
+  "celda": 49,
+  "signo": "9",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "el 6 dado vuelta (achicada en alto al 71 % para caber en el azulejo)",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 49.2,
+   "recorrido_mm": 395
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.12
+  },
+  "voz": {
+   "verso": "desenterrar una voz",
+   "silaba": "4 de 7",
+   "hz": 158,
+   "volumen": 0.56,
+   "lambda_mm": 4.2
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "50.01": {
+  "placa": ":.01",
+  "celda": 50,
+  "signo": ":",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "dos puntos",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 12.2,
+   "recorrido_mm": 69
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 1.44
+  },
+  "voz": {
+   "verso": "desenterrar una voz",
+   "silaba": "6 de 7",
+   "hz": 133,
+   "volumen": 0.84,
+   "lambda_mm": 4.7
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "51.01": {
+  "placa": "¿.01",
+  "celda": 51,
+  "signo": "¿",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "la ? dada vuelta, bajo la línea",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 83.2,
+   "recorrido_mm": 332
+  },
+  "piel": {
+   "parte": "antebrazo",
+   "minutos": 5,
+   "sesion": 19,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 23,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 1.29
+  },
+  "voz": {
+   "verso": "es desenterrar la mano del que la escribió.",
+   "silaba": "2 de 14",
+   "hz": 172,
+   "volumen": 0.64,
+   "lambda_mm": 3.9
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "52.01": {
+  "placa": "«.01",
+  "celda": 52,
+  "signo": "«",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "ángulos de la v girada y achicada",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 39.9,
+   "recorrido_mm": 323
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 20,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.5,
+   "contraste_de_la_letra": 1.18
+  },
+  "voz": {
+   "verso": "nos fuimos con las manos secas,",
+   "silaba": "4 de 9",
+   "hz": 162,
+   "volumen": 0.45,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "53.01": {
+  "placa": "».01",
+  "celda": 53,
+  "signo": "»",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "ángulos de la v girada y achicada",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 40.0,
+   "recorrido_mm": 331
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 20,
+   "pliegues": 6
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.0,
+   "contraste_de_la_letra": 1.33
+  },
+  "voz": {
+   "verso": "que es como se sale de todas las ruinas.",
+   "silaba": "2 de 13",
+   "hz": 200,
+   "volumen": 0.58,
+   "lambda_mm": 3.6
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ },
+ "54.01": {
+  "placa": "—.01",
+  "celda": 54,
+  "signo": "—",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "una barra sin modelo, del grueso fino de la o",
+  "placa_": {
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 65.2,
+   "recorrido_mm": 275
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 20,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 21,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 3.5,
+   "contraste_de_la_letra": 1.14
+  },
+  "voz": {
+   "verso": "que es como se sale de todas las ruinas.",
+   "silaba": "5 de 13",
+   "hz": 164,
+   "volumen": 0.82,
+   "lambda_mm": 4.1
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 3
+  }
+ },
+ "55.01": {
+  "placa": "….01",
+  "celda": 55,
+  "signo": "…",
+  "variante": 1,
+  "estado": "reconstruida",
+  "mano": "simulación (semilla fija)",
+  "reconstruccion": "tres puntos",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 13.6,
+   "recorrido_mm": 102
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 20,
+   "pliegues": 7
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 22,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 1.5,
+   "contraste_de_la_letra": 1.27
+  },
+  "voz": {
+   "verso": "a la boca la taparon, a las manos no,",
+   "silaba": "7 de 13",
+   "hz": 179,
+   "volumen": 0.61,
+   "lambda_mm": 3.8
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 1
+  }
+ },
+ "56.01": {
+  "placa": "¶.01",
+  "celda": 56,
+  "signo": "¶",
+  "variante": 1,
+  "estado": "manos",
+  "mano": "simulación (semilla fija)",
+  "signo_final": "una presión de pulgar genérico: la máquina no tiene dedos",
+  "placa_": {
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 3.0,
+   "recorrido_mm": 0
+  },
+  "piel": {
+   "parte": "esternón",
+   "minutos": 5,
+   "sesion": 20,
+   "pliegues": 5
+  },
+  "copia": {
+   "hectografo": 1,
+   "ultima_legible": 26,
+   "tirada": 26
+  },
+  "agua": {
+   "quieta": true,
+   "tocada": true,
+   "fase_de_la_onda": 2.0,
+   "contraste_de_la_letra": 0.95
+  },
+  "voz": {
+   "verso": "no tiene lengua pero igual dice.",
+   "silaba": "9 de 11",
+   "hz": 143,
+   "volumen": 0.91,
+   "lambda_mm": 4.5
+  },
+  "azulejo": {
+   "juntas_que_la_cortan": 2
+  }
+ }
+}
