@@ -28,6 +28,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `01_la_obra_decision_por_decision.md` | Las 16 decisiones de la obra, con su procedencia. Lo que muestran los videos y las fotos. Lo que se deja afuera |
 | `02_lo_que_se_toma_de_dos_tesis.md` | Qué se toma de *EthnoGraphemes* y de *Afrography*, con citas cotejadas, qué no y dónde el proyecto se aparta de las dos |
 | `03_sistema_contenida.md` | **El sistema.** Nombre, nueve reglas, el cuadro de correspondencias (cada decisión de la obra y su traducción), el pie, la caja, la pauta, la familia, la póliza, el color, el signo final y el colofón |
+| `03b_anatomia.md` | **La anatomía.** Del pie, el esqueleto; de la obra, el cuerpo: canal, desagüe, bandeja, lluvia, gotas, puntos-tesela, tildes-gota, onda, asta en la retícula, líneas con nombres de la piscina y cifras en celdas |
 | `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad |
 | `05_migracion_digital.md` | Cuándo es coherente migrar, cómo digitalizar, la especificación de la fuente, el espécimen web y cómo cierra el ciclo |
 | `06_etica_fuentes_y_pendientes.md` | Consentimiento, créditos, lo verificado y lo que falta verificar, y los pendientes en orden |

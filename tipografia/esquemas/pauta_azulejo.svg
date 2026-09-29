@@ -16,13 +16,13 @@
 <line x1="155.00" y1="34" x2="155.00" y2="184" stroke="#a4a39b" stroke-width="0.25"/>
 <line x1="30.0" y1="159.00" x2="180.0" y2="159.00" stroke="#a4a39b" stroke-width="0.25"/>
 <line x1="30.0" y1="171.50" x2="180.0" y2="171.50" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
-<text x="185.00" y="172.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >descendentes</text>
+<text x="185.00" y="172.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >desagüe</text>
 <line x1="30.0" y1="146.50" x2="180.0" y2="146.50" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
-<text x="185.00" y="147.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >base</text>
+<text x="185.00" y="147.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >fondo</text>
 <line x1="30.0" y1="84.00" x2="180.0" y2="84.00" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
-<text x="185.00" y="85.10" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >altura x</text>
+<text x="185.00" y="85.10" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >borde</text>
 <line x1="30.0" y1="46.50" x2="180.0" y2="46.50" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
-<text x="185.00" y="47.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >ascendentes</text>
+<text x="185.00" y="47.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >afuera</text>
 <text x="185.00" y="189.00" font-size="2.6" fill="#6d6d6d" text-anchor="start" font-weight="normal" >(provisional)</text>
 <text x="30.00" y="198.00" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Celda nº ______   Signo ______   [ ] hallado   [ ] reconstruido</text>
 <text x="30.00" y="206.20" font-size="3.2" fill="#1f1f1f" text-anchor="start" font-weight="normal" >Hallado en (palabra y línea del pie): ______________________________</text>
@@ -44,6 +44,7 @@
 <line x1="120.0" y1="271" x2="120.0" y2="269.4" stroke="#1f1f1f" stroke-width="0.35"/>
 <line x1="130.0" y1="271" x2="130.0" y2="268" stroke="#1f1f1f" stroke-width="0.35"/>
 <text x="134.00" y="271.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >100 mm</text>
+<text x="30.00" y="276.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >desagüe = descendentes · fondo = base · borde = altura de x · afuera = ascendentes</text>
 <text x="30.00" y="281.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Dibujar al derecho, con línea continua lo hallado y punteada lo reconstruido.</text>
 <text x="30.00" y="286.00" font-size="3" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Para repujar: dar vuelta el calco (espejo) y repasarlo por el reverso de la placa.</text>
 </svg>

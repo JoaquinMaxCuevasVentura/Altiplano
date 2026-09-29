@@ -15,6 +15,8 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+from anatomia import (ajustar_metricas, anatomia_de_lo_hallado, anatomia_de_lo_reconstruido, apoyar_todo,
+                      enmarcar_cifras)
 from comun import (AZULEJO_MM, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta, centrar_h, componentes,
                    escalar, lineas_pie, mover, rotar, ruido, ruido_1d)
 
@@ -474,8 +476,35 @@ def reconstruir(M, med, rng):
     return R, receta
 
 
-def contornos_temblorosos(m, rng, amplitud=1.3):
-    """Contornos de la máscara, recorridos por una mano que tiembla un poco."""
+def abrir_desague(q, junta=JUNTA_MM * 4):
+    """Todo contorno cerrado se abre en su punto más bajo, con una abertura del ancho de una junta.
+
+    Recibe un contorno cerrado (sin repetir el primer punto) y devuelve una línea
+    abierta que empieza y termina a los lados del desagüe.
+    """
+    ymax = q[:, 1].max()
+    fondo = np.nonzero(q[:, 1] >= ymax - 1.5)[0]
+    i = fondo[np.argmin(np.abs(q[fondo, 0] - q[fondo, 0].mean()))]
+    q = np.roll(q, -i, axis=0)                      # el desagüe queda en el punto 0
+    seg = np.linalg.norm(np.diff(np.vstack([q, q[:1]]), axis=0), axis=1)
+    s = np.concatenate([[0], np.cumsum(seg)])[:-1]
+    total = s[-1] + seg[-1]
+    fuera = (s < junta / 2) | (s > total - junta / 2)
+    return q[~fuera]
+
+
+def punto_de_desague(q):
+    """Dónde quedó el desagüe de una línea abierta: entre su último punto y el primero."""
+    return (q[0] + q[-1]) / 2
+
+
+def contornos_temblorosos(m, rng, amplitud=1.3, desague=True):
+    """Contornos de la máscara, recorridos por una mano que tiembla un poco.
+
+    La letra es hueca: se dibuja su contorno (el canal). Con desagüe, cada
+    contorno queda abierto en su punto más bajo; sin él, se devuelve cerrado
+    (el último punto repite el primero).
+    """
     cont, _ = cv2.findContours(m.astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
     salida = []
     for c in cont:
@@ -494,14 +523,16 @@ def contornos_temblorosos(m, rng, amplitud=1.3):
         norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
         norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
         temblor = amplitud * ruido_1d(n, 14, rng) + 0.35 * ruido_1d(n, 2, rng)
-        salida.append(q + norm * temblor[:, None])
+        q = q + norm * temblor[:, None]
+        salida.append(abrir_desague(q) if desague else np.vstack([q, q[:1]]))
     return salida
 
 
 def dibujar_trazos(forma, trazos, punteado, rng, grosor=2, raya=16, hueco=10):
+    """Dibuja las líneas tal como vienen: abiertas en el desagüe o cerradas."""
     capa = np.zeros(forma, np.float32)
     for q in trazos:
-        cerr = np.vstack([q, q[:1]])
+        cerr = q
         if not punteado:
             cv2.polylines(capa, [np.round(cerr * 4).astype(np.int32)], False, 1.0, grosor, cv2.LINE_AA, shift=2)
             continue
@@ -536,7 +567,10 @@ def calco(m, reconstruida, fondo_frotado, med, rng):
 
 
 def celda_notdef(rng):
-    """La celda de la lámina, calcada a mano: un rectángulo dentro de otro (proporciones medidas en la foto)."""
+    """La celda de la lámina, calcada a mano: un rectángulo dentro de otro (proporciones medidas en la foto).
+
+    También tiene desagüe: ni la celda vacía retiene.
+    """
     alto = 0.62 * T
     ancho = 0.84 * alto
     x0, y0 = (T - ancho) / 2, (T - alto) / 2
@@ -550,7 +584,7 @@ def celda_notdef(rng):
         tang = np.roll(pts, -1, 0) - np.roll(pts, 1, 0)
         norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
         norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
-        trazos.append(pts + norm * (1.3 * ruido_1d(len(pts), 14, rng))[:, None])
+        trazos.append(abrir_desague(pts + norm * (1.3 * ruido_1d(len(pts), 14, rng))[:, None]))
     return trazos
 
 
@@ -578,7 +612,19 @@ def desenterrar():
         todos[signo] = mejores
     M, s, base, desbordes = escalar_y_colocar(testigos)
     med = medidas(M, base)
-    med["escala"] = s
+    # la anatomía: del pie, el esqueleto; de la obra, el cuerpo (03b_anatomia.md)
+    M, base, ajuste = ajustar_metricas(M, med)
+    med = medidas(M, base)
+    antes = {k: v.copy() for k, v in M.items()}
+    M, marcas = anatomia_de_lo_hallado(M, med)
+    med = medidas(M, base)
+    med["escala"], med["ajuste"] = s, ajuste
     R, receta = reconstruir(M, med, azar("reconstruir"))
+    R, marcas_r = anatomia_de_lo_reconstruido(R, med)
+    marcas.update(marcas_r)
+    M, R, astas = apoyar_todo(M, R, med["xh"], marcas)
+    R = enmarcar_cifras(R, med["fino"])
+    for c in "0123456789":
+        receta[c] += "; dentro de una celda de la cabeza del ídolo"
     return dict(tinta=tinta, foto=foto, ocurrencias=ocurrencias, testigos=testigos, candidatas=todos,
-                M=M, R=R, receta=receta, med=med, desbordes=desbordes)
+                M=M, R=R, receta=receta, med=med, desbordes=desbordes, antes=antes, marcas=marcas, astas=astas)

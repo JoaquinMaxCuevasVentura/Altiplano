@@ -16,8 +16,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 8.6,
-   "recorrido_mm": 89
+   "minutos": 9.5,
+   "recorrido_mm": 83
   },
   "piel": {
    "parte": "antebrazo",
@@ -25,16 +25,20 @@
    "sesion": 1,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 2.16
+   "contraste_de_la_letra": 1.89
   },
   "voz": {
    "verso": "quedó el contenedor",
@@ -64,8 +68,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 9.0,
-   "recorrido_mm": 88
+   "minutos": 10.2,
+   "recorrido_mm": 82
   },
   "piel": {
    "parte": "antebrazo",
@@ -91,8 +95,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 7.8,
-   "recorrido_mm": 90
+   "minutos": 8.6,
+   "recorrido_mm": 83
   },
   "piel": {
    "parte": "antebrazo",
@@ -118,8 +122,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 7.6,
-   "recorrido_mm": 88
+   "minutos": 7.3,
+   "recorrido_mm": 82
   },
   "piel": {
    "parte": "antebrazo",
@@ -145,8 +149,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.2,
-   "recorrido_mm": 284
+   "minutos": 19.8,
+   "recorrido_mm": 300
   },
   "piel": {
    "parte": "antebrazo",
@@ -154,16 +158,21 @@
    "sesion": 1,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null,
+   "gotas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 2.33
+   "contraste_de_la_letra": 2.25
   },
   "voz": {
    "verso": "quedó el contenedor",
@@ -191,10 +200,10 @@
    "opinion_pct": 1.0
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 38.9,
-   "recorrido_mm": 286
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 15.7,
+   "recorrido_mm": 297
   },
   "piel": {
    "parte": "antebrazo",
@@ -220,8 +229,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.5,
-   "recorrido_mm": 284
+   "minutos": 19.2,
+   "recorrido_mm": 297
   },
   "piel": {
    "parte": "esternón",
@@ -247,8 +256,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.8,
-   "recorrido_mm": 283
+   "minutos": 17.4,
+   "recorrido_mm": 298
   },
   "piel": {
    "parte": "esternón",
@@ -272,10 +281,10 @@
    "opinion_pct": 1.0
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 38.7,
-   "recorrido_mm": 285
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 17.6,
+   "recorrido_mm": 299
   },
   "piel": {
    "parte": "esternón",
@@ -301,8 +310,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.6,
-   "recorrido_mm": 286
+   "minutos": 19.8,
+   "recorrido_mm": 296
   },
   "piel": {
    "parte": "esternón",
@@ -328,8 +337,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.6,
-   "recorrido_mm": 316
+   "minutos": 15.9,
+   "recorrido_mm": 305
   },
   "piel": {
    "parte": "esternón",
@@ -337,16 +346,21 @@
    "sesion": 2,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 250.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 2.76
+   "contraste_de_la_letra": 2.73
   },
   "voz": {
    "verso": "de lo que ya no está.",
@@ -374,10 +388,10 @@
    "opinion_pct": 0.7
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 19.3,
-   "recorrido_mm": 316
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 35.9,
+   "recorrido_mm": 303
   },
   "piel": {
    "parte": "esternón",
@@ -403,8 +417,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.4,
-   "recorrido_mm": 315
+   "minutos": 17.1,
+   "recorrido_mm": 304
   },
   "piel": {
    "parte": "cadera",
@@ -430,8 +444,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.4,
-   "recorrido_mm": 315
+   "minutos": 16.8,
+   "recorrido_mm": 303
   },
   "piel": {
    "parte": "cadera",
@@ -457,8 +471,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.9,
-   "recorrido_mm": 316
+   "minutos": 20.6,
+   "recorrido_mm": 304
   },
   "piel": {
    "parte": "cadera",
@@ -484,8 +498,8 @@
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 42.4,
-   "recorrido_mm": 315
+   "minutos": 37.4,
+   "recorrido_mm": 304
   },
   "piel": {
    "parte": "cadera",
@@ -511,8 +525,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.4,
-   "recorrido_mm": 318
+   "minutos": 20.4,
+   "recorrido_mm": 305
   },
   "piel": {
    "parte": "cadera",
@@ -539,7 +553,7 @@
    "intentos": 1,
    "roturas": 0,
    "minutos": 20.0,
-   "recorrido_mm": 314
+   "recorrido_mm": 305
   },
   "piel": {
    "parte": "cadera",
@@ -565,8 +579,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 29.0,
-   "recorrido_mm": 524
+   "minutos": 30.5,
+   "recorrido_mm": 518
   },
   "piel": {
    "parte": "muslo",
@@ -574,16 +588,21 @@
    "sesion": 4,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 200.0,
+   "bandejas": 2
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.99
+   "contraste_de_la_letra": 1.95
   },
   "voz": {
    "verso": "una piscina vacía,",
@@ -613,8 +632,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 27.4,
-   "recorrido_mm": 522
+   "minutos": 28.8,
+   "recorrido_mm": 518
   },
   "piel": {
    "parte": "muslo",
@@ -638,10 +657,10 @@
    "opinion_pct": 0.5
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 26.1,
-   "recorrido_mm": 399
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 44.9,
+   "recorrido_mm": 366
   },
   "piel": {
    "parte": "muslo",
@@ -649,16 +668,21 @@
    "sesion": 4,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 250.0,
+   "tildes": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.26
+   "contraste_de_la_letra": 2.19
   },
   "voz": {
    "verso": "donde una vez aprendí a flotar,",
@@ -688,8 +712,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.8,
-   "recorrido_mm": 303
+   "minutos": 19.9,
+   "recorrido_mm": 295
   },
   "piel": {
    "parte": "muslo",
@@ -697,16 +721,20 @@
    "sesion": 4,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 2.11
+   "contraste_de_la_letra": 2.05
   },
   "voz": {
    "verso": "donde una vez aprendí a flotar,",
@@ -736,8 +764,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.9,
-   "recorrido_mm": 306
+   "minutos": 19.3,
+   "recorrido_mm": 296
   },
   "piel": {
    "parte": "muslo",
@@ -761,10 +789,10 @@
    "opinion_pct": 0.5
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 34.0,
-   "recorrido_mm": 303
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.1,
+   "recorrido_mm": 295
   },
   "piel": {
    "parte": "muslo",
@@ -790,8 +818,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.7,
-   "recorrido_mm": 302
+   "minutos": 17.3,
+   "recorrido_mm": 294
   },
   "piel": {
    "parte": "espalda",
@@ -817,8 +845,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.3,
-   "recorrido_mm": 302
+   "minutos": 16.8,
+   "recorrido_mm": 296
   },
   "piel": {
    "parte": "espalda",
@@ -842,10 +870,10 @@
    "opinion_pct": 0.5
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 17.1,
-   "recorrido_mm": 305
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 35.8,
+   "recorrido_mm": 294
   },
   "piel": {
    "parte": "espalda",
@@ -871,8 +899,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.7,
-   "recorrido_mm": 303
+   "minutos": 16.1,
+   "recorrido_mm": 295
   },
   "piel": {
    "parte": "espalda",
@@ -898,8 +926,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.0,
-   "recorrido_mm": 304
+   "minutos": 19.0,
+   "recorrido_mm": 298
   },
   "piel": {
    "parte": "espalda",
@@ -926,7 +954,7 @@
    "intentos": 1,
    "roturas": 0,
    "minutos": 21.3,
-   "recorrido_mm": 343
+   "recorrido_mm": 339
   },
   "piel": {
    "parte": "espalda",
@@ -934,16 +962,21 @@
    "sesion": 5,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 200.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 23,
-   "tirada": 26
+   "ultima_legible": 22,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 2.3
+   "contraste_de_la_letra": 2.2
   },
   "voz": {
    "verso": "ahora aprendo a mirar.",
@@ -973,8 +1006,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.7,
-   "recorrido_mm": 343
+   "minutos": 22.5,
+   "recorrido_mm": 338
   },
   "piel": {
    "parte": "hombro",
@@ -998,10 +1031,10 @@
    "opinion_pct": 0.8
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 21.5,
-   "recorrido_mm": 344
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 42.6,
+   "recorrido_mm": 340
   },
   "piel": {
    "parte": "hombro",
@@ -1027,8 +1060,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.1,
-   "recorrido_mm": 344
+   "minutos": 21.2,
+   "recorrido_mm": 339
   },
   "piel": {
    "parte": "hombro",
@@ -1054,8 +1087,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.8,
-   "recorrido_mm": 344
+   "minutos": 21.9,
+   "recorrido_mm": 339
   },
   "piel": {
    "parte": "hombro",
@@ -1081,8 +1114,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.5,
-   "recorrido_mm": 344
+   "minutos": 18.9,
+   "recorrido_mm": 339
   },
   "piel": {
    "parte": "hombro",
@@ -1108,8 +1141,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 321
+   "minutos": 18.7,
+   "recorrido_mm": 309
   },
   "piel": {
    "parte": "hombro",
@@ -1117,16 +1150,21 @@
    "sesion": 6,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 350.0,
+   "gotas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 2.15
+   "contraste_de_la_letra": 2.12
   },
   "voz": {
    "verso": "moverse como se mueve la piedra,",
@@ -1156,8 +1194,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.9,
-   "recorrido_mm": 318
+   "minutos": 17.5,
+   "recorrido_mm": 309
   },
   "piel": {
    "parte": "antebrazo",
@@ -1183,8 +1221,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.2,
-   "recorrido_mm": 317
+   "minutos": 22.2,
+   "recorrido_mm": 310
   },
   "piel": {
    "parte": "antebrazo",
@@ -1210,8 +1248,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.8,
-   "recorrido_mm": 317
+   "minutos": 16.7,
+   "recorrido_mm": 308
   },
   "piel": {
    "parte": "antebrazo",
@@ -1237,8 +1275,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.0,
-   "recorrido_mm": 317
+   "minutos": 18.4,
+   "recorrido_mm": 308
   },
   "piel": {
    "parte": "antebrazo",
@@ -1264,8 +1302,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.6,
-   "recorrido_mm": 317
+   "minutos": 18.3,
+   "recorrido_mm": 307
   },
   "piel": {
    "parte": "antebrazo",
@@ -1291,8 +1329,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.9,
-   "recorrido_mm": 317
+   "minutos": 20.1,
+   "recorrido_mm": 311
   },
   "piel": {
    "parte": "antebrazo",
@@ -1318,8 +1356,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.6,
-   "recorrido_mm": 319
+   "minutos": 18.5,
+   "recorrido_mm": 312
   },
   "piel": {
    "parte": "esternón",
@@ -1343,10 +1381,10 @@
    "opinion_pct": 1.0
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 19.9,
-   "recorrido_mm": 318
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 40.9,
+   "recorrido_mm": 311
   },
   "piel": {
    "parte": "esternón",
@@ -1372,8 +1410,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.9,
-   "recorrido_mm": 361
+   "minutos": 20.5,
+   "recorrido_mm": 342
   },
   "piel": {
    "parte": "esternón",
@@ -1381,16 +1419,20 @@
    "sesion": 8,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 200.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 2.12
+   "contraste_de_la_letra": 2.11
   },
   "voz": {
    "verso": "es decir, apenas, es decir, temblor,",
@@ -1420,8 +1462,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.0,
-   "recorrido_mm": 346
+   "minutos": 18.7,
+   "recorrido_mm": 335
   },
   "piel": {
    "parte": "esternón",
@@ -1429,16 +1471,20 @@
    "sesion": 8,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 300.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.21
+   "contraste_de_la_letra": 2.01
   },
   "voz": {
    "verso": "es decir, apenas, es decir, temblor,",
@@ -1468,8 +1514,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.3,
-   "recorrido_mm": 412
+   "minutos": 24.7,
+   "recorrido_mm": 403
   },
   "piel": {
    "parte": "esternón",
@@ -1477,16 +1523,21 @@
    "sesion": 8,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 200.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.91
+   "contraste_de_la_letra": 1.87
   },
   "voz": {
    "verso": "es decir, un presente continuo.",
@@ -1516,8 +1567,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 25.8,
-   "recorrido_mm": 410
+   "minutos": 22.9,
+   "recorrido_mm": 402
   },
   "piel": {
    "parte": "esternón",
@@ -1543,8 +1594,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.7,
-   "recorrido_mm": 198
+   "minutos": 13.4,
+   "recorrido_mm": 185
   },
   "piel": {
    "parte": "cadera",
@@ -1552,16 +1603,20 @@
    "sesion": 9,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 22,
-   "tirada": 26
+   "ultima_legible": 23,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 2.21
+   "contraste_de_la_letra": 2.15
   },
   "voz": {
    "verso": "tocas el agua y la diosa se deforma.",
@@ -1591,8 +1646,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.4,
-   "recorrido_mm": 199
+   "minutos": 11.7,
+   "recorrido_mm": 185
   },
   "piel": {
    "parte": "cadera",
@@ -1618,8 +1673,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.9,
-   "recorrido_mm": 196
+   "minutos": 13.1,
+   "recorrido_mm": 183
   },
   "piel": {
    "parte": "cadera",
@@ -1645,8 +1700,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.8,
-   "recorrido_mm": 198
+   "minutos": 14.3,
+   "recorrido_mm": 183
   },
   "piel": {
    "parte": "cadera",
@@ -1672,8 +1727,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.7,
-   "recorrido_mm": 197
+   "minutos": 13.0,
+   "recorrido_mm": 186
   },
   "piel": {
    "parte": "cadera",
@@ -1697,10 +1752,10 @@
    "opinion_pct": 0.5
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 16.1,
-   "recorrido_mm": 196
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 25.5,
+   "recorrido_mm": 183
   },
   "piel": {
    "parte": "cadera",
@@ -1708,16 +1763,20 @@
    "sesion": 9,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 300.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 2.11
+   "contraste_de_la_letra": 2.08
   },
   "voz": {
    "verso": "todos los archivos funcionan así.",
@@ -1747,8 +1806,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.5,
-   "recorrido_mm": 196
+   "minutos": 12.0,
+   "recorrido_mm": 182
   },
   "piel": {
    "parte": "muslo",
@@ -1774,8 +1833,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.9,
-   "recorrido_mm": 196
+   "minutos": 15.4,
+   "recorrido_mm": 182
   },
   "piel": {
    "parte": "muslo",
@@ -1801,8 +1860,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.3,
-   "recorrido_mm": 415
+   "minutos": 21.1,
+   "recorrido_mm": 383
   },
   "piel": {
    "parte": "muslo",
@@ -1810,16 +1869,20 @@
    "sesion": 10,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 400.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 2.02
+   "contraste_de_la_letra": 2.0
   },
   "voz": {
    "verso": "todos los archivos funcionan así.",
@@ -1849,8 +1912,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 26.0,
-   "recorrido_mm": 415
+   "minutos": 23.6,
+   "recorrido_mm": 385
   },
   "piel": {
    "parte": "muslo",
@@ -1876,8 +1939,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.6,
-   "recorrido_mm": 414
+   "minutos": 22.2,
+   "recorrido_mm": 379
   },
   "piel": {
    "parte": "muslo",
@@ -1903,8 +1966,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 29.3,
-   "recorrido_mm": 504
+   "minutos": 28.3,
+   "recorrido_mm": 494
   },
   "piel": {
    "parte": "muslo",
@@ -1912,16 +1975,20 @@
    "sesion": 10,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 150.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.0
+   "contraste_de_la_letra": 1.93
   },
   "voz": {
    "verso": "a la ídolo la desenterraron,",
@@ -1951,8 +2018,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 29.3,
-   "recorrido_mm": 505
+   "minutos": 30.8,
+   "recorrido_mm": 497
   },
   "piel": {
    "parte": "espalda",
@@ -1978,8 +2045,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 29.3,
-   "recorrido_mm": 506
+   "minutos": 29.2,
+   "recorrido_mm": 496
   },
   "piel": {
    "parte": "espalda",
@@ -2005,8 +2072,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.7,
-   "recorrido_mm": 222
+   "minutos": 14.1,
+   "recorrido_mm": 207
   },
   "piel": {
    "parte": "espalda",
@@ -2014,16 +2081,20 @@
    "sesion": 11,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 300.0
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 24,
-   "tirada": 26
+   "ultima_legible": 27,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 2.17
+   "contraste_de_la_letra": 2.11
   },
   "voz": {
    "verso": "le pusieron nombre,",
@@ -2051,10 +2122,10 @@
    "opinion_pct": 0.4
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 32.4,
-   "recorrido_mm": 223
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 12.6,
+   "recorrido_mm": 209
   },
   "piel": {
    "parte": "espalda",
@@ -2080,8 +2151,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.7,
-   "recorrido_mm": 222
+   "minutos": 15.7,
+   "recorrido_mm": 209
   },
   "piel": {
    "parte": "espalda",
@@ -2107,8 +2178,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.8,
-   "recorrido_mm": 222
+   "minutos": 14.4,
+   "recorrido_mm": 208
   },
   "piel": {
    "parte": "espalda",
@@ -2134,7 +2205,7 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.5,
+   "minutos": 13.2,
    "recorrido_mm": 179
   },
   "piel": {
@@ -2143,16 +2214,21 @@
    "sesion": 12,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 300.0,
+   "puntos": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 2.48
+   "contraste_de_la_letra": 2.35
   },
   "voz": {
    "verso": "otra manera de enterrar.",
@@ -2182,7 +2258,7 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 11.3,
+   "minutos": 12.6,
    "recorrido_mm": 179
   },
   "piel": {
@@ -2209,7 +2285,7 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.1,
+   "minutos": 13.8,
    "recorrido_mm": 179
   },
   "piel": {
@@ -2236,8 +2312,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.2,
-   "recorrido_mm": 252
+   "minutos": 18.8,
+   "recorrido_mm": 266
   },
   "piel": {
    "parte": "hombro",
@@ -2245,10 +2321,15 @@
    "sesion": 12,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 250.0,
+   "gotas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
@@ -2284,8 +2365,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.8,
-   "recorrido_mm": 253
+   "minutos": 16.9,
+   "recorrido_mm": 265
   },
   "piel": {
    "parte": "hombro",
@@ -2311,8 +2392,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.0,
-   "recorrido_mm": 253
+   "minutos": 18.2,
+   "recorrido_mm": 266
   },
   "piel": {
    "parte": "hombro",
@@ -2338,8 +2419,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.5,
-   "recorrido_mm": 316
+   "minutos": 22.6,
+   "recorrido_mm": 301
   },
   "piel": {
    "parte": "antebrazo",
@@ -2347,10 +2428,14 @@
    "sesion": 13,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 24,
-   "tirada": 26
+   "ultima_legible": 22,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
@@ -2386,8 +2471,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.3,
-   "recorrido_mm": 315
+   "minutos": 20.1,
+   "recorrido_mm": 300
   },
   "piel": {
    "parte": "antebrazo",
@@ -2413,8 +2498,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.4,
-   "recorrido_mm": 316
+   "minutos": 20.0,
+   "recorrido_mm": 301
   },
   "piel": {
    "parte": "antebrazo",
@@ -2440,8 +2525,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.2,
-   "recorrido_mm": 318
+   "minutos": 19.5,
+   "recorrido_mm": 301
   },
   "piel": {
    "parte": "antebrazo",
@@ -2467,8 +2552,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.2,
-   "recorrido_mm": 259
+   "minutos": 16.1,
+   "recorrido_mm": 244
   },
   "piel": {
    "parte": "antebrazo",
@@ -2476,16 +2561,20 @@
    "sesion": 13,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.28
+   "contraste_de_la_letra": 2.25
   },
   "voz": {
    "verso": "primero enterramos,",
@@ -2515,8 +2604,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.1,
-   "recorrido_mm": 260
+   "minutos": 15.9,
+   "recorrido_mm": 243
   },
   "piel": {
    "parte": "antebrazo",
@@ -2542,8 +2631,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.7,
-   "recorrido_mm": 260
+   "minutos": 17.1,
+   "recorrido_mm": 244
   },
   "piel": {
    "parte": "esternón",
@@ -2569,8 +2658,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.9,
-   "recorrido_mm": 261
+   "minutos": 16.6,
+   "recorrido_mm": 245
   },
   "piel": {
    "parte": "esternón",
@@ -2596,8 +2685,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.1,
-   "recorrido_mm": 264
+   "minutos": 18.3,
+   "recorrido_mm": 260
   },
   "piel": {
    "parte": "esternón",
@@ -2605,16 +2694,21 @@
    "sesion": 14,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 350.0,
+   "puntos": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 24,
-   "tirada": 26
+   "ultima_legible": 22,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 2.19
+   "contraste_de_la_letra": 2.15
   },
   "voz": {
    "verso": "después nos emocionamos.",
@@ -2624,7 +2718,7 @@
    "lambda_mm": 4.6
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 3
   }
  },
  "22.01": {
@@ -2644,8 +2738,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.2,
-   "recorrido_mm": 270
+   "minutos": 14.8,
+   "recorrido_mm": 276
   },
   "piel": {
    "parte": "esternón",
@@ -2653,16 +2747,21 @@
    "sesion": 14,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 300.0,
+   "gotas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 2.4
+   "contraste_de_la_letra": 2.23
   },
   "voz": {
    "verso": "después nos emocionamos.",
@@ -2690,10 +2789,10 @@
    "opinion_pct": 2.2
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 16.7,
-   "recorrido_mm": 229
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 31.4,
+   "recorrido_mm": 207
   },
   "piel": {
    "parte": "esternón",
@@ -2701,16 +2800,21 @@
    "sesion": 14,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 300.0,
+   "tildes": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 23,
-   "tirada": 26
+   "ultima_legible": 24,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 2.3
+   "contraste_de_la_letra": 2.17
   },
   "voz": {
    "verso": "no se salvó la piedra,",
@@ -2720,7 +2824,7 @@
    "lambda_mm": 4.1
   },
   "azulejo": {
-   "juntas_que_la_cortan": 3
+   "juntas_que_la_cortan": 2
   }
  },
  "24.01": {
@@ -2740,8 +2844,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.7,
-   "recorrido_mm": 263
+   "minutos": 16.8,
+   "recorrido_mm": 250
   },
   "piel": {
    "parte": "esternón",
@@ -2749,16 +2853,20 @@
    "sesion": 14,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 300.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 24,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.84
+   "contraste_de_la_letra": 1.91
   },
   "voz": {
    "verso": "solo la opinión sobre ella.",
@@ -2788,8 +2896,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.8,
-   "recorrido_mm": 384
+   "minutos": 23.8,
+   "recorrido_mm": 373
   },
   "piel": {
    "parte": "cadera",
@@ -2797,16 +2905,20 @@
    "sesion": 15,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 23,
-   "tirada": 26
+   "ultima_legible": 22,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.06
+   "contraste_de_la_letra": 2.0
   },
   "voz": {
    "verso": "la tierra se dio de beber a sí misma",
@@ -2836,8 +2948,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.1,
-   "recorrido_mm": 386
+   "minutos": 22.1,
+   "recorrido_mm": 375
   },
   "piel": {
    "parte": "cadera",
@@ -2863,8 +2975,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.1,
-   "recorrido_mm": 379
+   "minutos": 20.7,
+   "recorrido_mm": 376
   },
   "piel": {
    "parte": "cadera",
@@ -2872,16 +2984,23 @@
    "sesion": 15,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 350.0,
+   "bandejas": 1,
+   "gotas": 1,
+   "tildes": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.99
+   "contraste_de_la_letra": 1.86
   },
   "voz": {
    "verso": "la tierra se dio de beber a sí misma",
@@ -2911,8 +3030,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.1,
-   "recorrido_mm": 263
+   "minutos": 14.8,
+   "recorrido_mm": 249
   },
   "piel": {
    "parte": "cadera",
@@ -2920,16 +3039,20 @@
    "sesion": 15,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 350.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.92
+   "contraste_de_la_letra": 1.77
   },
   "voz": {
    "verso": "y ningún contenedor aguanta lo que contiene.",
@@ -2959,8 +3082,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 5,
-   "recorrido_mm": 34
+   "minutos": 8.8,
+   "recorrido_mm": 43
   },
   "piel": {
    "parte": "cadera",
@@ -2968,16 +3091,21 @@
    "sesion": 15,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null,
+   "puntos": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 22,
-   "tirada": 26
+   "ultima_legible": 24,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 2.27
+   "contraste_de_la_letra": 2.09
   },
   "voz": {
    "verso": "vuelve sin que la llames.",
@@ -3008,7 +3136,7 @@
    "intentos": 1,
    "roturas": 0,
    "minutos": 24.8,
-   "recorrido_mm": 401
+   "recorrido_mm": 393
   },
   "piel": {
    "parte": "cadera",
@@ -3016,10 +3144,15 @@
    "sesion": 15,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 200.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
@@ -3055,8 +3188,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.6,
-   "recorrido_mm": 401
+   "minutos": 22.0,
+   "recorrido_mm": 394
   },
   "piel": {
    "parte": "muslo",
@@ -3080,10 +3213,10 @@
    "opinion_pct": 0.5
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 24.5,
-   "recorrido_mm": 404
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 45.6,
+   "recorrido_mm": 389
   },
   "piel": {
    "parte": "muslo",
@@ -3091,16 +3224,20 @@
    "sesion": 16,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": 400.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 2.16
+   "contraste_de_la_letra": 2.07
   },
   "voz": {
    "verso": "termina y empieza,",
@@ -3130,8 +3267,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 26.5,
-   "recorrido_mm": 403
+   "minutos": 23.3,
+   "recorrido_mm": 386
   },
   "piel": {
    "parte": "muslo",
@@ -3151,8 +3288,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 50.0,
-   "recorrido_mm": 398
+   "minutos": 45.5,
+   "recorrido_mm": 377
   },
   "piel": {
    "parte": "muslo",
@@ -3160,16 +3297,21 @@
    "sesion": 16,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 200.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.41
+   "contraste_de_la_letra": 1.52
   },
   "voz": {
    "verso": "termina y empieza.",
@@ -3193,8 +3335,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 41.2,
-   "recorrido_mm": 333
+   "minutos": 37.6,
+   "recorrido_mm": 317
   },
   "piel": {
    "parte": "muslo",
@@ -3202,16 +3344,20 @@
    "sesion": 16,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 22,
-   "tirada": 26
+   "ultima_legible": 21,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.06
+   "contraste_de_la_letra": 1.11
   },
   "voz": {
    "verso": "cada vuelta pasa por el agua",
@@ -3235,7 +3381,7 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 40.2,
+   "minutos": 41.0,
    "recorrido_mm": 330
   },
   "piel": {
@@ -3244,16 +3390,20 @@
    "sesion": 16,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.24
+   "contraste_de_la_letra": 1.23
   },
   "voz": {
    "verso": "y el agua no repite,",
@@ -3277,8 +3427,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 44.7,
-   "recorrido_mm": 372
+   "minutos": 43.9,
+   "recorrido_mm": 343
   },
   "piel": {
    "parte": "espalda",
@@ -3286,16 +3436,21 @@
    "sesion": 17,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 250.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.06
+   "contraste_de_la_letra": 1.12
   },
   "voz": {
    "verso": "y el agua no repite,",
@@ -3319,8 +3474,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.6,
-   "recorrido_mm": 120
+   "minutos": 17.0,
+   "recorrido_mm": 123
   },
   "piel": {
    "parte": "espalda",
@@ -3328,16 +3483,20 @@
    "sesion": 17,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 21,
-   "tirada": 26
+   "ultima_legible": 22,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.47
+   "contraste_de_la_letra": 1.45
   },
   "voz": {
    "verso": "la misma diosa dos veces",
@@ -3361,8 +3520,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 49.7,
-   "recorrido_mm": 417
+   "minutos": 50.9,
+   "recorrido_mm": 395
   },
   "piel": {
    "parte": "espalda",
@@ -3370,16 +3529,20 @@
    "sesion": 17,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 22,
-   "tirada": 26
+   "ultima_legible": 23,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 0.93
+   "contraste_de_la_letra": 0.94
   },
   "voz": {
    "verso": "y ninguna igual.",
@@ -3403,8 +3566,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 55.0,
-   "recorrido_mm": 442
+   "minutos": 51.1,
+   "recorrido_mm": 419
   },
   "piel": {
    "parte": "espalda",
@@ -3412,16 +3575,20 @@
    "sesion": 17,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.07
+   "contraste_de_la_letra": 1.09
   },
   "voz": {
    "verso": "es lo más parecido a estar viva",
@@ -3445,8 +3612,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 38.3,
-   "recorrido_mm": 304
+   "minutos": 38.4,
+   "recorrido_mm": 294
   },
   "piel": {
    "parte": "espalda",
@@ -3454,16 +3621,20 @@
    "sesion": 17,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.13
+   "contraste_de_la_letra": 1.23
   },
   "voz": {
    "verso": "es lo más parecido a estar viva",
@@ -3485,10 +3656,10 @@
   "mano": "simulación (semilla fija)",
   "reconstruccion": "la u con dos puntos de la i",
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 94.3,
-   "recorrido_mm": 380
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 48.1,
+   "recorrido_mm": 383
   },
   "piel": {
    "parte": "espalda",
@@ -3496,16 +3667,20 @@
    "sesion": 17,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 250.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.21
+   "contraste_de_la_letra": 1.27
   },
   "voz": {
    "verso": "que puede hacer una imagen.",
@@ -3525,12 +3700,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "la o, algo más estrecha",
+  "reconstruccion": "la o, algo más estrecha; dentro de una celda de la cabeza del ídolo",
   "placa_": {
-   "intentos": 3,
-   "roturas": 2,
-   "minutos": 123.6,
-   "recorrido_mm": 330
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 140.5,
+   "recorrido_mm": 1239
   },
   "piel": {
    "parte": "hombro",
@@ -3538,10 +3713,15 @@
    "sesion": 18,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 4,
+   "asta_en": 250.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 21,
-   "tirada": 26
+   "ultima_legible": 23,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
@@ -3557,7 +3737,7 @@
    "lambda_mm": 5.0
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 3
   }
  },
  "41.01": {
@@ -3567,12 +3747,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "la i sin punto, con una bandera",
+  "reconstruccion": "la i sin punto, con una bandera; dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.4,
-   "recorrido_mm": 179
+   "minutos": 126.0,
+   "recorrido_mm": 1086
   },
   "piel": {
    "parte": "hombro",
@@ -3580,16 +3760,20 @@
    "sesion": 18,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": 350.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.14
+   "contraste_de_la_letra": 1.42
   },
   "voz": {
    "verso": "de la boca sale un signo",
@@ -3599,7 +3783,7 @@
    "lambda_mm": 4.5
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "42.01": {
@@ -3609,12 +3793,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "el arco de arriba de la o, una diagonal y una barra de base",
+  "reconstruccion": "el arco de arriba de la o, una diagonal y una barra de base; dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 43.9,
-   "recorrido_mm": 384
+   "minutos": 151.5,
+   "recorrido_mm": 1301
   },
   "piel": {
    "parte": "hombro",
@@ -3622,16 +3806,20 @@
    "sesion": 18,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.31
+   "contraste_de_la_letra": 1.48
   },
   "voz": {
    "verso": "de la boca sale un signo",
@@ -3641,7 +3829,7 @@
    "lambda_mm": 4.5
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "43.01": {
@@ -3651,12 +3839,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "dos mitades derechas de la o, la de abajo bajo la línea",
+  "reconstruccion": "dos mitades derechas de la o, la de abajo bajo la línea; dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 36.6,
-   "recorrido_mm": 291
+   "minutos": 138.1,
+   "recorrido_mm": 1207
   },
   "piel": {
    "parte": "hombro",
@@ -3664,16 +3852,20 @@
    "sesion": 18,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 4,
+   "asta_en": 300.0
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.25
+   "contraste_de_la_letra": 1.15
   },
   "voz": {
    "verso": "hecho con las manos,",
@@ -3683,7 +3875,7 @@
    "lambda_mm": 3.8
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "44.01": {
@@ -3693,12 +3885,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "un asta que baja, una diagonal fina y una barra",
+  "reconstruccion": "un asta que baja, una diagonal fina y una barra; dentro de una celda de la cabeza del ídolo",
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 42.6,
-   "recorrido_mm": 330
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 280.8,
+   "recorrido_mm": 1226
   },
   "piel": {
    "parte": "hombro",
@@ -3706,16 +3898,21 @@
    "sesion": 18,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 4,
+   "asta_en": 350.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.36
+   "contraste_de_la_letra": 1.41
   },
   "voz": {
    "verso": "ninguna palabra,",
@@ -3725,7 +3922,7 @@
    "lambda_mm": 4.0
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "45.01": {
@@ -3735,12 +3932,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "una barra, un asta corta y la mitad baja de la o, bajo la línea",
+  "reconstruccion": "una barra, un asta corta y la mitad baja de la o, bajo la línea; dentro de una celda de la cabeza del ídolo",
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 73.4,
-   "recorrido_mm": 306
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 141.6,
+   "recorrido_mm": 1230
   },
   "piel": {
    "parte": "hombro",
@@ -3748,16 +3945,20 @@
    "sesion": 18,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 4,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.24
+   "contraste_de_la_letra": 1.22
   },
   "voz": {
    "verso": "acciones del cuerpo.",
@@ -3767,7 +3968,7 @@
    "lambda_mm": 4.7
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "46.01": {
@@ -3777,12 +3978,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "la o con la curva de una c agrandada que sube (achicada en alto al 88 % para caber en el azulejo)",
+  "reconstruccion": "la o con la curva de una c agrandada que sube (achicada en alto al 93 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo",
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 110.5,
-   "recorrido_mm": 453
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 157.4,
+   "recorrido_mm": 1379
   },
   "piel": {
    "parte": "antebrazo",
@@ -3790,16 +3991,21 @@
    "sesion": 19,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 4,
+   "asta_en": 200.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 20,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.31
+   "contraste_de_la_letra": 1.24
   },
   "voz": {
    "verso": "acciones del cuerpo.",
@@ -3809,7 +4015,7 @@
    "lambda_mm": 4.6
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 4
   }
  },
  "47.01": {
@@ -3819,12 +4025,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "una barra y una diagonal que baja",
+  "reconstruccion": "una barra y una diagonal que baja (achicada en alto al 90 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 35.9,
-   "recorrido_mm": 271
+   "minutos": 135.2,
+   "recorrido_mm": 1163
   },
   "piel": {
    "parte": "antebrazo",
@@ -3832,16 +4038,20 @@
    "sesion": 19,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.33
+   "contraste_de_la_letra": 1.31
   },
   "voz": {
    "verso": "y es que lo que vuelve, vuelve escrito;",
@@ -3851,7 +4061,7 @@
    "lambda_mm": 4.1
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 3
   }
  },
  "48.01": {
@@ -3861,12 +4071,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "dos o apiladas, la de arriba más chica",
+  "reconstruccion": "dos o apiladas, la de arriba más chica; dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 101.2,
-   "recorrido_mm": 429
+   "minutos": 302.7,
+   "recorrido_mm": 1333
   },
   "piel": {
    "parte": "antebrazo",
@@ -3874,16 +4084,21 @@
    "sesion": 19,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 5,
+   "asta_en": 250.0,
+   "bandejas": 2
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.34
+   "contraste_de_la_letra": 1.38
   },
   "voz": {
    "verso": "pocas veces vuelve hablado.",
@@ -3893,7 +4108,7 @@
    "lambda_mm": 4.0
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 3
   }
  },
  "49.01": {
@@ -3903,12 +4118,12 @@
   "variante": 1,
   "estado": "reconstruida",
   "mano": "simulación (semilla fija)",
-  "reconstruccion": "el 6 dado vuelta (achicada en alto al 71 % para caber en el azulejo)",
+  "reconstruccion": "el 6 dado vuelta (achicada en alto al 67 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 49.2,
-   "recorrido_mm": 395
+   "minutos": 143.1,
+   "recorrido_mm": 1257
   },
   "piel": {
    "parte": "antebrazo",
@@ -3916,16 +4131,21 @@
    "sesion": 19,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 5,
+   "asta_en": 400.0,
+   "bandejas": 1
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 21,
-   "tirada": 26
+   "ultima_legible": 23,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.12
+   "contraste_de_la_letra": 1.35
   },
   "voz": {
    "verso": "desenterrar una voz",
@@ -3935,7 +4155,7 @@
    "lambda_mm": 4.2
   },
   "azulejo": {
-   "juntas_que_la_cortan": 2
+   "juntas_que_la_cortan": 3
   }
  },
  "50.01": {
@@ -3949,8 +4169,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.2,
-   "recorrido_mm": 69
+   "minutos": 12.8,
+   "recorrido_mm": 83
   },
   "piel": {
    "parte": "antebrazo",
@@ -3958,16 +4178,20 @@
    "sesion": 19,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.44
+   "contraste_de_la_letra": 1.09
   },
   "voz": {
    "verso": "desenterrar una voz",
@@ -3989,10 +4213,10 @@
   "mano": "simulación (semilla fija)",
   "reconstruccion": "la ? dada vuelta, bajo la línea",
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 83.2,
-   "recorrido_mm": 332
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 39.7,
+   "recorrido_mm": 333
   },
   "piel": {
    "parte": "antebrazo",
@@ -4000,16 +4224,20 @@
    "sesion": 19,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 23,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.29
+   "contraste_de_la_letra": 1.23
   },
   "voz": {
    "verso": "es desenterrar la mano del que la escribió.",
@@ -4033,8 +4261,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 39.9,
-   "recorrido_mm": 323
+   "minutos": 39.6,
+   "recorrido_mm": 298
   },
   "piel": {
    "parte": "esternón",
@@ -4042,16 +4270,20 @@
    "sesion": 20,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.18
+   "contraste_de_la_letra": 1.12
   },
   "voz": {
    "verso": "nos fuimos con las manos secas,",
@@ -4075,8 +4307,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 40.0,
-   "recorrido_mm": 331
+   "minutos": 37.9,
+   "recorrido_mm": 299
   },
   "piel": {
    "parte": "esternón",
@@ -4084,10 +4316,14 @@
    "sesion": 20,
    "pliegues": 6
   },
+  "anatomia": {
+   "desagues": 2,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 22,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
@@ -4115,10 +4351,10 @@
   "mano": "simulación (semilla fija)",
   "reconstruccion": "una barra sin modelo, del grueso fino de la o",
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 65.2,
-   "recorrido_mm": 275
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 36.4,
+   "recorrido_mm": 267
   },
   "piel": {
    "parte": "esternón",
@@ -4126,16 +4362,20 @@
    "sesion": 20,
    "pliegues": 5
   },
+  "anatomia": {
+   "desagues": 1,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
    "ultima_legible": 21,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.14
+   "contraste_de_la_letra": 1.16
   },
   "voz": {
    "verso": "que es como se sale de todas las ruinas.",
@@ -4159,8 +4399,8 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.6,
-   "recorrido_mm": 102
+   "minutos": 17.7,
+   "recorrido_mm": 126
   },
   "piel": {
    "parte": "esternón",
@@ -4168,16 +4408,20 @@
    "sesion": 20,
    "pliegues": 7
   },
+  "anatomia": {
+   "desagues": 3,
+   "asta_en": null
+  },
   "copia": {
    "hectografo": 1,
-   "ultima_legible": 22,
-   "tirada": 26
+   "ultima_legible": 21,
+   "tirada": 27
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.27
+   "contraste_de_la_letra": 1.34
   },
   "voz": {
    "verso": "a la boca la taparon, a las manos no,",
@@ -4213,7 +4457,7 @@
   "copia": {
    "hectografo": 1,
    "ultima_legible": 26,
-   "tirada": 26
+   "tirada": 27
   },
   "agua": {
    "quieta": true,

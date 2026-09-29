@@ -20,6 +20,7 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
 ## 3.2. Nueve reglas
 
 1. **De la lámina se toma el pie, no la imagen.** Rebeca tomó lo que la lámina muestra; la tipografía toma lo que la lámina dice. Es la misma hoja, en dos mitades.
+   - Del pie se toma el esqueleto de cada letra. Su cuerpo (canal, desagüe, bandeja, remates, gotas, puntos, tildes, cifras) lo dicta la obra: `03b_anatomia.md`.
 2. **Lo hallado y lo reconstruido se distinguen siempre.**
    - Lo hallado va en línea continua; lo reconstruido, en punteado.
    - Vale para el calco, el repujado (punteado con el punzón) y todos los estados que siguen.
@@ -153,6 +154,8 @@ Todo eso, y cualquier otro signo, se ve como el `.notdef`: la celda vacía de la
 - **La tapa:** tiene una sola puerta calada, sobre la celda 1.
 
 ## 3.6. La pauta: el azulejo
+
+Las cuatro líneas se llaman como la piscina: **desagüe** (descendentes), **fondo** (base), **borde** (altura de x) y **afuera** (ascendentes). La anatomía las hace caer en líneas de media tesela (`03b_anatomia.md`, reglas 10 y 11).
 
 - **Cuerpo:** un azulejo de la pared. En la foto parece medir entre cinco y media y seis teselas del piso. Hay que medirlo.
 - **Unidad:** una tesela del piso.

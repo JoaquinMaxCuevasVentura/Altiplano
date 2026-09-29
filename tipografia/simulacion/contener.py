@@ -85,7 +85,7 @@ def repujar(trazos, punteado, rng):
     surco = np.zeros((T, T), np.float32)
     largo = 0.0
     for q in _repasar(trazos, rng):
-        cerr = np.vstack([q, q[:1]])
+        cerr = q                      # el punzón se detiene en el desagüe: la línea queda abierta
         seg = np.linalg.norm(np.diff(cerr, axis=0), axis=1)
         largo += seg.sum()
         presion = np.clip(0.95 + 0.18 * ruido_1d(len(cerr), 25, rng), 0.6, 1.3)

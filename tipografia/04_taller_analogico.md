@@ -107,6 +107,8 @@ Antes de repujar la primera letra:
 
 **Rima con:** el dibujo reconstructivo de Posnansky, hecho desde fotos viejas.
 
+**La anatomía.** Del pie se calca el esqueleto; el cuerpo de la letra lo dicta la obra. Las reglas y el orden en que se aplican están en `03b_anatomia.md` («Cómo lo hace la mano»): gastar los remates, rehacer la mitad baja de los ojos como bandeja, colgar las gotas, cambiar puntos y tildes, correr la letra hasta la retícula, enmarcar las cifras y abrir el desagüe.
+
 **Materiales:**
 
 - la pauta impresa o el frotado;
@@ -147,7 +149,7 @@ Antes de repujar la primera letra:
 
 1. **Cortar la placa** del tamaño de un azulejo, con las esquinas redondeadas como la placa de la foto.
 2. **Poner el calco en espejo.** Darlo vuelta, porque el repujado se trabaja por el reverso, y pegarlo con cinta sobre el reverso de la placa, que va apoyada en la base blanda.
-3. **Repasar el contorno con el punzón.**
+3. **Repasar el contorno con el punzón.** El punzón se detiene 3 mm antes de cerrar cada contorno: es el desagüe.
    - Lo hallado, con un trazo continuo.
    - Lo reconstruido, a puntos: el punteado queda en relieve para siempre.
 4. **Retirar el calco y dar vuelta la placa.** Por el frente, la letra está al derecho y en relieve.

@@ -117,7 +117,7 @@ def pauta(azulejo, teselas, junta):
     x0, y0 = (W - azulejo) / 2, 34
     tes = azulejo / teselas
     # Líneas provisionales, en teselas desde abajo; se corrigen al medir las letras del pie.
-    lineas = [(0.5, "descendentes"), (1.5, "base"), (4.0, "altura x"), (5.5, "ascendentes")]
+    lineas = [(0.5, "desagüe"), (1.5, "fondo"), (4.0, "borde"), (5.5, "afuera")]
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}" font-family="{MONO}">',
          f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
          t(x0, 14, "Contenida · pauta de calco", 5.2, peso="bold"),
@@ -130,7 +130,7 @@ def pauta(azulejo, teselas, junta):
         o.append(f'<line x1="{x0}" y1="{y0 + i * tes:.2f}" x2="{x0 + azulejo}" y2="{y0 + i * tes:.2f}" stroke="{JUNTA}" stroke-width="0.25"/>')
     for v, nombre in lineas:
         y = y0 + azulejo - v * tes
-        grosor = "0.5" if nombre in ("base", "altura x") else "0.3"
+        grosor = "0.5" if nombre.startswith(("fondo", "borde")) else "0.3"
         o.append(f'<line x1="{x0}" y1="{y:.2f}" x2="{x0 + azulejo}" y2="{y:.2f}" stroke="{TEXTO}" stroke-width="{grosor}" stroke-dasharray="2 1.2"/>')
         o.append(t(x0 + azulejo + junta + 2, y + 1.1, nombre, 2.8, GRIS))
     o.append(t(x0 + azulejo + junta + 2, y0 + azulejo + 5, "(provisional)", 2.6, GRIS))
@@ -152,6 +152,7 @@ def pauta(azulejo, teselas, junta):
         alto = 3 if i % 5 == 0 else 1.6
         o.append(f'<line x1="{x0 + i * 10}" y1="{yb}" x2="{x0 + i * 10}" y2="{yb - alto}" stroke="{TEXTO}" stroke-width="0.35"/>')
     o.append(t(x0 + 104, yb, "100 mm", 3, GRIS))
+    o.append(t(x0, H - 21, "desagüe = descendentes · fondo = base · borde = altura de x · afuera = ascendentes", 3, GRIS))
     o.append(t(x0, H - 16, "Dibujar al derecho, con línea continua lo hallado y punteada lo reconstruido.", 3, GRIS))
     o.append(t(x0, H - 11, "Para repujar: dar vuelta el calco (espejo) y repasarlo por el reverso de la placa.", 3, GRIS))
     o.append("</svg>")

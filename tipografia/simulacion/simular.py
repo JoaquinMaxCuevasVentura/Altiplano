@@ -25,7 +25,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from comun import (BUCLE_MIN, CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, TES, VERSOS, a8, a_rgb, azar,
-                   fila_de_paneles, guardar, lamina, poliza, rotulo)
+                   caja_tinta, componentes, fila_de_paneles, guardar, lamina, poliza, rotulo)
 from contener import caja_abierta, caja_cerrada, foto_placa, repujar_placa, sesiones_de_vestir, signo_final, vestir
 from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared
 from devolver import (agua, armar_matriz, aterrizar, componer, foto_agua, hectografiar, la_bandeja_bebe, matriz_de,
@@ -88,12 +88,15 @@ def main():
         cv2.imwrite(str(GLIFOS / f"forma_{c['celda']:02d}.png"), (~m).astype(np.uint8) * 255)
         img, tr = calco(m, c["estado"] == "reconstruida", fondos[c["celda"]], med, azar("calco", c["celda"]))
         calcos[c["celda"]], trazos[c["celda"]] = img, tr
+    D["desagues"] = {celda: len(tr) for celda, tr in trazos.items()}
     lamina(calcos, "Calco · simulación",
-           "Continuo lo hallado, punteado lo reconstruido. Calcado sobre papel de calco puesto encima del frotado.\n"
-           f"Líneas de la máquina: base a {coma(med['base_teselas'])} teselas, altura de x a {coma(med['x_teselas'])}. La celda 56 no se calca: se hace con los dedos.",
+           "Continuo lo hallado, punteado lo reconstruido: solo el contorno, abierto en su punto más bajo (el desagüe).\n"
+           f"Fondo a {coma(med['base_teselas'])} teselas, borde a {coma(med['x_teselas'])}. La celda 56 no se calca: se hace con los dedos.",
            SALIDA / "03_calco.png")
     notdef = dibujar_trazos((T, T), celda_notdef(azar("notdef")), False, azar("notdef"))
     guardar(SALIDA / "03b_notdef.png", 1 - 0.85 * notdef)
+    lamina_anatomia(D)
+    lamina_antes_y_despues(D)
 
     # ------------------------------------------------ acción 4 y 6: repujar y vestir
     paso("acciones 4 y 6: repujar 119 placas y vestirlas")
@@ -221,6 +224,9 @@ def ficha_base(c, v, D, p, vs, sesion):
     f["placa_"] = {"intentos": p["intentos"], "roturas": p["roturas"], "minutos": p["minutos"],
                    "recorrido_mm": round(float(p["largo_mm"]))}
     f["piel"] = {"parte": vs["parte"], "minutos": vs["minutos"], "sesion": sesion, "pliegues": vs["n_pliegues"]}
+    if v == 1 and c["estado"] != "manos":
+        f["anatomia"] = {"desagues": D["desagues"].get(c["celda"], 0), "asta_en": D["astas"].get(s)}
+        f["anatomia"].update({k: len(p_) for k, p_ in D["marcas"].get(s, {}).items() if p_})
     return f
 
 
@@ -267,6 +273,110 @@ def lamina_pie(D):
     guardar(SALIDA / "02_el_pie.jpg", lienzo.crop((0, 0, lienzo.width, y + mini.shape[0] + 30)))
 
 
+TINTA_ANAT = (74, 36, 112)       # violeta de hectógrafo para las marcas
+
+
+def _panel_letra(D, s, marcas_extra=(), lado=900, lineas=True, solo_derecha=False):
+    """Una letra grande: retícula de teselas, líneas con nombre, relleno pálido, contorno con desagües."""
+    from desenterrar import contornos_temblorosos, dibujar_trazos, punto_de_desague
+    med = D["med"]
+    m = D["M"].get(s, D["R"].get(s))
+    k = lado / T
+    img = np.full((T, T, 3), (0.955, 0.95, 0.93), np.float32)
+    for i in range(1, 6):
+        img[i * TES, :] *= 0.88
+        img[:, i * TES] *= 0.88
+    img[m] = (0.86, 0.85, 0.82)
+    tr = contornos_temblorosos(m, azar("anat", s))
+    linea = dibujar_trazos((T, T), tr, s in D["R"], azar("anat l", s), grosor=3)
+    img *= (1 - 0.9 * linea)[..., None]
+    im = Image.fromarray(a8(img)).resize((lado, lado), Image.LANCZOS)
+    d = ImageDraw.Draw(im)
+    f = rotulo(22)
+    base, xh = med["base"], med["xh"]
+    if lineas:
+        for y, nombre in ((base + med["desc"], "desagüe"), (base, "fondo"), (base - xh, "borde"), (base - med["asc"], "afuera")):
+            yy = int(y * k)
+            for x in range(0, lado, 14):
+                d.line([(x, yy), (x + 7, yy)], fill=(120, 120, 120), width=1)
+            d.text((6, yy - 26), nombre, font=rotulo(18), fill=(110, 110, 110))
+    puntos = []
+    if tr:
+        exterior = max(tr, key=lambda q: np.ptp(q[:, 0]) * np.ptp(q[:, 1]))
+        puntos.append(("desagüe", punto_de_desague(exterior)))
+    mk = D["marcas"].get(s, {})
+    for regla, nombre in (("bandejas", "bandeja"), ("gotas", "gota"), ("puntos", "tesela"), ("tildes", "tilde: gota")):
+        for p in mk.get(regla, [])[:1]:
+            puntos.append((nombre, np.array(p)))
+    partes = [c for c in componentes(m) if c[1][2] < 3 * TES] or componentes(m)   # sin el marco de la celda
+    cuerpo = max(partes, key=lambda c: c[1][4])[0]
+    dist = cv2.distanceTransform(cuerpo.astype(np.uint8), cv2.DIST_L2, 5)
+    yx = np.unravel_index(np.argmax(dist), dist.shape)
+    puntos.append(("canal", np.array([yx[1], yx[0]], float)))
+    puntos += list(marcas_extra)
+    ocupados = []
+    for nombre, p in puntos:
+        px, py = p[0] * k, p[1] * k
+        derecha = solo_derecha or px > lado / 2
+        tx = lado - 16 if derecha else 130
+        ty = py
+        while any(abs(ty - o) < 34 for o in ocupados):
+            ty += 34
+        ocupados.append(ty)
+        d.ellipse([px - 7, py - 7, px + 7, py + 7], outline=TINTA_ANAT, width=3)
+        ancho = d.textlength(nombre, font=f)
+        fin = tx - ancho - 10 if derecha else tx + ancho + 10
+        d.line([(px + (9 if derecha else -9), py), (fin, ty)], fill=TINTA_ANAT, width=2)
+        d.text((tx - ancho if derecha else tx, ty - 14), nombre, font=f, fill=TINTA_ANAT)
+    return im
+
+
+def lamina_anatomia(D):
+    """Seis letras con sus partes nombradas."""
+    med = D["med"]
+    extra = {"a": [("remate gastado", np.array([D["astas"].get("a") or T / 2, med["base"] - 4]))]}
+    o8 = D["R"]["8"]
+    x0, y0, x1, y1 = caja_tinta(o8)
+    extra["8"] = [("celda", np.array([x1 - 3, (y0 + y1) / 2 + 60]))]
+    comps = [c for c in componentes(D["R"]["ñ"]) if c[2][1] < med["base"] - med["xh"] * 1.05]
+    if comps:
+        extra["ñ"] = [("onda", np.array(comps[0][2]))]
+    paneles = [_panel_letra(D, s, extra.get(s, ()), solo_derecha=(s == "8")) for s in ("a", "o", "j", "á", "8", "ñ")]
+    W = 3 * 900 + 4 * 30
+    H = 2 * 900 + 3 * 30 + 110
+    lienzo = Image.new("RGB", (W, H), (247, 246, 242))
+    d = ImageDraw.Draw(lienzo)
+    d.text((30, 26), "Anatomía de Contenida · simulación", font=rotulo(34), fill=(30, 30, 30))
+    d.text((30, 72), "Del pie, el esqueleto. De la obra, el cuerpo: canal, desagüe, bandeja, lluvia, gota, tesela, onda, celda.",
+           font=rotulo(20), fill=(90, 90, 90))
+    for i, p in enumerate(paneles):
+        lienzo.paste(p, (30 + (i % 3) * 930, 110 + (i // 3) * 930))
+    guardar(SALIDA / "03c_anatomia.png", lienzo)
+
+
+def lamina_antes_y_despues(D, letras="aoegrcfsjiáqbp"):
+    """Arriba, la letra que dio el pie; en el medio, la anatomía; abajo, el calco con sus desagües."""
+    from desenterrar import contornos_temblorosos, dibujar_trazos
+    lado = 170
+    cols = []
+    for s in letras:
+        antes = D["antes"][s]
+        despues = D["M"][s]
+        tr = contornos_temblorosos(despues, azar("ad", s))
+        linea = dibujar_trazos((T, T), tr, False, azar("ad l", s), grosor=4)
+        celdas = [1 - 0.88 * antes.astype(np.float32), 1 - 0.88 * despues.astype(np.float32), 1 - 0.9 * linea]
+        cols.append(np.vstack([cv2.resize(c, (lado, lado), interpolation=cv2.INTER_AREA) for c in celdas]))
+    tabla = np.hstack(cols)
+    W, H = tabla.shape[1] + 260, tabla.shape[0] + 110
+    lienzo = Image.new("RGB", (W, H), (247, 246, 242))
+    lienzo.paste(Image.fromarray(a8(a_rgb(tabla))), (230, 90))
+    d = ImageDraw.Draw(lienzo)
+    d.text((30, 24), "Antes y después · simulación", font=rotulo(30), fill=(30, 30, 30))
+    for i, r in enumerate(("lo que dio el pie", "la anatomía", "el calco")):
+        d.text((30, 90 + i * lado + lado // 2 - 12), r, font=rotulo(20), fill=(90, 90, 90))
+    guardar(SALIDA / "03d_antes_y_despues.png", lienzo)
+
+
 def t_e(D):
     return D["testigos"]["e"]["elegido"]
 
@@ -301,6 +411,10 @@ def gif_voz(vestidas):
 
 def informe(D, fichas, ultima, tirada, pol):
     med = D["med"]
+    ajuste = med["ajuste"]
+
+    def con(regla):
+        return [c["signo"] for c in CELDAS if D["marcas"].get(c["signo"], {}).get(regla)]
     halladas = [c for c in CELDAS if c["estado"] == "hallada"]
     placas = list(fichas.values())
     minutos = sum(f["placa_"]["minutos"] for f in placas)
@@ -361,14 +475,14 @@ def informe(D, fichas, ultima, tirada, pol):
           "",
           "![Calco](salida/03_calco.png)",
           "",
-          "**La escala la decidió el pie.** La letra más alta y la más baja caben en el azulejo con media tesela de aire. Así caen las líneas:",
+          "**La escala la decidió el pie.** La letra más alta y la más baja caben en el azulejo con media tesela de aire. Después, la anatomía corre y escala todo el juego para que el fondo y el borde caigan en líneas de media tesela (`03b_anatomia.md`, regla 8). Así caen las líneas, en teselas desde abajo:",
           "",
-          "| Línea | Pauta provisional (`03`, §3.6) | Máquina |",
-          "|---|---|---|",
-          f"| Descendentes | 0,5 teselas | {coma(med['desc_teselas'], 2)} |",
-          f"| Base | 1,5 | {coma(med['base_teselas'], 2)} |",
-          f"| Altura de x | 4 | {coma(med['x_teselas'], 2)} (la x mide {coma(med['xh'] / TES, 2)} teselas) |",
-          f"| Ascendentes | 5,5 | {coma(med['asc_teselas'], 2)} |",
+          "| Línea | Pauta provisional (`03`, §3.6) | Lo que dio el pie | En la retícula |",
+          "|---|---|---|---|",
+          f"| Desagüe (descendentes) | 0,5 | — | {coma(med['desc_teselas'], 2)} |",
+          f"| Fondo (base) | 1,5 | {coma(ajuste['base_de'], 2)} | {coma(ajuste['base_a'], 1)} |",
+          f"| Borde (altura de x) | 4 | {coma(ajuste['base_de'] + ajuste['x_de'], 2)} (la x mide {coma(ajuste['x_de'], 2)}) | {coma(ajuste['base_a'] + ajuste['x_a'], 1)} (la x mide {coma(ajuste['x_a'], 1)}) |",
+          f"| Afuera (ascendentes) | 5,5 | — | {coma(med['asc_teselas'], 2)} |",
           "",
           f"El trazo grueso de la o mide {coma(med['grueso'] / 4)} mm y el fino, {coma(med['fino'] / 4)} mm. " +
           ("Ningún signo desborda el azulejo." if not D["desbordes"] else "Desbordan: " + ", ".join(f"«{k}» {v} mm" for k, v in D["desbordes"].items()) + "."),
@@ -383,6 +497,27 @@ def informe(D, fichas, ultima, tirada, pol):
           "Una decisión propia de la máquina: **cifras elzevirianas**, de altura de x, con 6 y 8 que suben y 3, 4, 5, 7 y 9 que bajan. En una tipografía de caja baja, las cifras de monumento (todas a la altura de las mayúsculas) serían ajenas.",
           "",
           "El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)",
+          "",
+          "## La anatomía",
+          "",
+          "Del pie, la máquina tomó el esqueleto; la anatomía la dicta la obra (`03b_anatomia.md`). Estas son las reglas que aplicó y a qué signos alcanzaron:",
+          "",
+          "![Anatomía](salida/03c_anatomia.png)",
+          "",
+          "![Antes y después](salida/03d_antes_y_despues.png)",
+          "",
+          "| Regla | Qué hizo la máquina | Signos |",
+          "|---|---|---|",
+          "| El canal | Dibujó solo el contorno: la letra es hueca | los 55 |",
+          f"| El desagüe | Abrió cada contorno en su punto más bajo, con una junta de ancho | {sum(D['desagues'].values())} desagües en 55 signos |",
+          f"| La bandeja | Rehízo la mitad baja de cada ojo y asentó plana la panza | {', '.join(f'«{s}»' for s in con('bandejas'))} |",
+          "| La lluvia | Redondeó todo y gastó más arriba: los remates altos casi desaparecen | los 30 hallados |",
+          f"| Las gotas | Colgó una gota donde un trazo termina mirando hacia abajo | {', '.join(f'«{s}»' for s in con('gotas'))} |",
+          f"| Los puntos | Los volvió cuadrados de media tesela | {', '.join(f'«{s}»' for s in con('puntos'))}, y los que heredan sus puntos |",
+          f"| Las tildes | Las volvió gotas | {', '.join(f'«{s}»' for s in con('tildes'))}, y la é y la ó, que heredan la de la á |",
+          "| La onda | La virgulilla de la ñ es una onda de agua tocada | «ñ» |",
+          f"| El asta | Corrió la letra hasta que su asta cae en una línea de media tesela | {sum(1 for v in D['astas'].values() if v is not None)} signos con asta |",
+          "| La celda | Cada cifra, dentro de una celda de la cabeza del ídolo | las 10 cifras |",
           "",
           "## Acción 4 · Repujar",
           "",

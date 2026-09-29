@@ -62,16 +62,16 @@ Para cada signo hallado, la máquina amplió todos sus testigos en tres generaci
 
 ![Calco](salida/03_calco.png)
 
-**La escala la decidió el pie.** La letra más alta y la más baja caben en el azulejo con media tesela de aire. Así caen las líneas:
+**La escala la decidió el pie.** La letra más alta y la más baja caben en el azulejo con media tesela de aire. Después, la anatomía corre y escala todo el juego para que el fondo y el borde caigan en líneas de media tesela (`03b_anatomia.md`, regla 8). Así caen las líneas, en teselas desde abajo:
 
-| Línea | Pauta provisional (`03`, §3.6) | Máquina |
-|---|---|---|
-| Descendentes | 0,5 teselas | 0,50 |
-| Base | 1,5 | 1,71 |
-| Altura de x | 4 | 4,19 (la x mide 2,48 teselas) |
-| Ascendentes | 5,5 | 5,47 |
+| Línea | Pauta provisional (`03`, §3.6) | Lo que dio el pie | En la retícula |
+|---|---|---|---|
+| Desagüe (descendentes) | 0,5 | — | 0,28 |
+| Fondo (base) | 1,5 | 1,71 | 1,5 |
+| Borde (altura de x) | 4 | 4,19 (la x mide 2,48) | 4,0 (la x mide 2,5) |
+| Afuera (ascendentes) | 5,5 | — | 5,21 |
 
-El trazo grueso de la o mide 11,2 mm y el fino, 7,2 mm. Ningún signo desborda el azulejo.
+El trazo grueso de la o mide 11,5 mm y el fino, 5,5 mm. Ningún signo desborda el azulejo.
 
 **Las reconstrucciones de la máquina:**
 
@@ -86,16 +86,16 @@ El trazo grueso de la o mide 11,2 mm y el fino, 7,2 mm. Ningún signo desborda e
 | `w` | dos v estrechadas |
 | `x` | los dos trazos de la v, inclinados hasta cruzarse (quedan con remates solo arriba) |
 | `ü` | la u con dos puntos de la i |
-| `0` | la o, algo más estrecha |
-| `1` | la i sin punto, con una bandera |
-| `2` | el arco de arriba de la o, una diagonal y una barra de base |
-| `3` | dos mitades derechas de la o, la de abajo bajo la línea |
-| `4` | un asta que baja, una diagonal fina y una barra |
-| `5` | una barra, un asta corta y la mitad baja de la o, bajo la línea |
-| `6` | la o con la curva de una c agrandada que sube (achicada en alto al 88 % para caber en el azulejo) |
-| `7` | una barra y una diagonal que baja |
-| `8` | dos o apiladas, la de arriba más chica |
-| `9` | el 6 dado vuelta (achicada en alto al 71 % para caber en el azulejo) |
+| `0` | la o, algo más estrecha; dentro de una celda de la cabeza del ídolo |
+| `1` | la i sin punto, con una bandera; dentro de una celda de la cabeza del ídolo |
+| `2` | el arco de arriba de la o, una diagonal y una barra de base; dentro de una celda de la cabeza del ídolo |
+| `3` | dos mitades derechas de la o, la de abajo bajo la línea; dentro de una celda de la cabeza del ídolo |
+| `4` | un asta que baja, una diagonal fina y una barra; dentro de una celda de la cabeza del ídolo |
+| `5` | una barra, un asta corta y la mitad baja de la o, bajo la línea; dentro de una celda de la cabeza del ídolo |
+| `6` | la o con la curva de una c agrandada que sube (achicada en alto al 93 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
+| `7` | una barra y una diagonal que baja (achicada en alto al 90 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
+| `8` | dos o apiladas, la de arriba más chica; dentro de una celda de la cabeza del ídolo |
+| `9` | el 6 dado vuelta (achicada en alto al 67 % para caber en el azulejo); dentro de una celda de la cabeza del ídolo |
 | `:` | dos puntos |
 | `¿` | la ? dada vuelta, bajo la línea |
 | `«` | ángulos de la v girada y achicada |
@@ -107,13 +107,34 @@ Una decisión propia de la máquina: **cifras elzevirianas**, de altura de x, co
 
 El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)
 
+## La anatomía
+
+Del pie, la máquina tomó el esqueleto; la anatomía la dicta la obra (`03b_anatomia.md`). Estas son las reglas que aplicó y a qué signos alcanzaron:
+
+![Anatomía](salida/03c_anatomia.png)
+
+![Antes y después](salida/03d_antes_y_despues.png)
+
+| Regla | Qué hizo la máquina | Signos |
+|---|---|---|
+| El canal | Dibujó solo el contorno: la letra es hueca | los 55 |
+| El desagüe | Abrió cada contorno en su punto más bajo, con una junta de ancho | 111 desagües en 55 signos |
+| La bandeja | Rehízo la mitad baja de cada ojo y asentó plana la panza | «e», «g», «o», «p», «á», «b», «ó», «é», «0», «4», «6», «8», «9» |
+| La lluvia | Redondeó todo y gastó más arriba: los remates altos casi desaparecen | los 30 hallados |
+| Las gotas | Colgó una gota donde un trazo termina mirando hacia abajo | «s», «a», «c», «f», «á» |
+| Los puntos | Los volvió cuadrados de media tesela | «i», «j», «.», y los que heredan sus puntos |
+| Las tildes | Las volvió gotas | «ú», «í», «á», y la é y la ó, que heredan la de la á |
+| La onda | La virgulilla de la ñ es una onda de agua tocada | «ñ» |
+| El asta | Corrió la letra hasta que su asta cae en una línea de media tesela | 37 signos con asta |
+| La celda | Cada cifra, dentro de una celda de la cabeza del ídolo | las 10 cifras |
+
 ## Acción 4 · Repujar
 
 ![Placa](salida/04_placa.jpg)
 
 - **119 placas** (93 de signos hallados, 25 reconstruidos y 1 signo final).
-- **Tiempo simulado:** 53,2 horas de repujado, contando las placas que se rompieron. El plan estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos para preparar cada placa.
-- **Roturas:** 5 en 93 placas halladas y 8 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).
+- **Tiempo simulado:** 69,3 horas de repujado, contando las placas que se rompieron. El plan estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos para preparar cada placa.
+- **Roturas:** 9 en 93 placas halladas y 2 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).
 
 ![Rotas](salida/04b_placas_rotas.jpg)
 
@@ -135,11 +156,11 @@ Cerrada, por la única puerta se ve la coma.
 
 ![La bandeja bebe](salida/08b_la_bandeja_bebe.jpg)
 
-Se leyeron **26 copias**. La primera sale casi negra y las siguientes, violeta: el color depende de cuánta tinta queda. Las halladas se leen, en promedio, hasta la copia 23,1; las reconstruidas, hasta la 21,6. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, dejan menos tinta en la matriz y se borran antes.
+Se leyeron **27 copias**. La primera sale casi negra y las siguientes, violeta: el color depende de cuánta tinta queda. Las halladas se leen, en promedio, hasta la copia 23,1; las reconstruidas, hasta la 21,7. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, dejan menos tinta en la matriz y se borran antes.
 
-**Los primeros en borrarse:** «6» (20), «?» (21), «é» (21), «;» (21), «ü» (21), «0» (21), «1» (21), «2» (21).
+**Los primeros en borrarse:** «6» (20), «z» (21), «?» (21), «é» (21), «ü» (21), «1» (21), «2» (21), «7» (21).
 
-**Los últimos:** «d» (24), «l» (24), «i» (24), «c» (24), «u» (24), «j» (24), «(» (24), «¶» (26).
+**Los últimos:** «d» (24), «i» (24), «c» (24), «í» (24), «(» (24), «.» (24), «¶» (26), «l» (27).
 
 ## Acción 9 · Agua
 
@@ -149,7 +170,7 @@ Se leyeron **26 copias**. La primera sale casi negra y las siguientes, violeta: 
 
 ![voz](salida/voz.gif)
 
-Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 2,17 en las halladas y 1,24 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos.
+Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 2,10 en las halladas y 1,26 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos.
 
 ## Acción 10 · Voz
 
@@ -159,7 +180,7 @@ Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la l
 
 ![Azulejo](salida/11_azulejo.png)
 
-Juntas que cortan cada letra al caer ampliada: entre 1 y 3 (media 2,0).
+Juntas que cortan cada letra al caer ampliada: entre 1 y 4 (media 2,3).
 
 ![Estrofa](salida/11b_estrofa_en_la_pared.jpg)
 
