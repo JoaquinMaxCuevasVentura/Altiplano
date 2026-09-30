@@ -19,7 +19,7 @@ Para regenerarlas después de editar un SVG: `python3 articulo/generar_figuras.p
 
 El 30 de septiembre de 2026 se corrigió el esquema de la Figura 2. El cerro ya no es una pirámide simétrica: el Signo Escalonado se traza encima y no encaja en la pendiente, como dice el texto.
 
-Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis/esquemas/guias/`. Los prompts están en `analisis/17_estilo_y_prompts_gpt_image.md`. Esas imágenes no se publican: las figuras finales serán los escaneos de los pasteles.
+Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis/esquemas/guias/`. Los prompts están en `analisis/17_estilo_y_prompts_gpt_image.md`. Para los diagramas hay dos guías más, con sus prompts en `analisis/20_prompts_diagramas_estilo_referencias.md`. Esas imágenes no se publican: las figuras finales serán los escaneos de los pasteles.
 
 ## Los diagramas (Figuras 7 y 8)
 

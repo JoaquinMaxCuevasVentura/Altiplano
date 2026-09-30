@@ -14,6 +14,11 @@ pastel. Los colores salen de la paleta matérica de
 analisis/17_estilo_y_prompts_gpt_image.md. Para cambiar una guía, edita su
 función y vuelve a correr el script; o abre el SVG en un editor vectorial.
 
+Además pasa a PNG las dos guías de los diagramas de las figuras 7 y 8
+(guia_fig7_memoria_retorno.svg y guia_fig8_tres_montones.svg), que escribe
+`node analisis/esquemas/diagramas/generar_diagramas.js`; sus prompts están en
+analisis/20_prompts_diagramas_estilo_referencias.md.
+
 Necesita Chromium (ruta en la variable CHROME).
 """
 
@@ -316,6 +321,20 @@ def fig6():
 
 GUIAS = [(1, "craneo_nido", fig1, 3), (2, "signo_mapa", fig2, 5), (3, "apacheta", fig3, 7),
          (4, "castillete", fig4, 11), (5, "pelvis", fig5, 13), (6, "centinela", fig6, 17)]
+# Guías de los diagramas: el SVG lo escribe generar_diagramas.js; aquí solo se pasa a PNG.
+DIAGRAMAS = ["guia_fig7_memoria_retorno", "guia_fig8_tres_montones"]
+
+
+def a_png(texto, w, h, png, tmp):
+    html = Path(tmp) / f"{png.stem}.html"
+    html.write_text("<!doctype html><meta charset='utf-8'><style>html,body{margin:0;background:#000}"
+                    f"svg{{display:block}}</style>{texto}", encoding="utf8")
+    captura = Path(tmp) / f"{png.stem}_captura.png"
+    subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+                    "--force-device-scale-factor=1", f"--window-size={w},{h + 200}",
+                    f"--screenshot={captura}", html.as_uri()],
+                   check=True, capture_output=True)
+    Image.open(captura).convert("RGB").crop((0, 0, w, h)).save(png)
 
 
 def main():
@@ -325,17 +344,16 @@ def main():
             texto = svg(w, h, cuerpo, semilla)
             destino = DIR / f"guia_fig{n}_{nombre}.svg"
             destino.write_text(texto, encoding="utf8")
-            html = Path(tmp) / f"g{n}.html"
-            html.write_text("<!doctype html><meta charset='utf-8'><style>html,body{margin:0;background:#000}"
-                            f"svg{{display:block}}</style>{texto}", encoding="utf8")
             png = DIR / f"guia_fig{n}_{nombre}.png"
-            captura = Path(tmp) / f"g{n}.png"
-            subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
-                            "--force-device-scale-factor=1", f"--window-size={w},{h + 200}",
-                            f"--screenshot={captura}", html.as_uri()],
-                           check=True, capture_output=True)
-            Image.open(captura).convert("RGB").crop((0, 0, w, h)).save(png)
+            a_png(texto, w, h, png, tmp)
             print(destino.name, "->", png.name, f"({w} x {h})")
+        for nombre in DIAGRAMAS:
+            origen = DIR / f"{nombre}.svg"
+            if not origen.exists():
+                print(f"falta {origen.name}: corre antes generar_diagramas.js")
+                continue
+            a_png(origen.read_text(encoding="utf8"), 1536, 1024, DIR / f"{nombre}.png", tmp)
+            print(origen.name, "->", f"{nombre}.png (1536 x 1024)")
     mascara_fig5()
 
 

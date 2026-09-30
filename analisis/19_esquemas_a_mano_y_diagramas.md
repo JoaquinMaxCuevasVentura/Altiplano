@@ -19,7 +19,7 @@ El 30 de septiembre de 2026 enviaste cinco esquemas dibujados a mano y pediste t
   - la extensión queda en **49.485 caracteres**, dentro del rango;
   - las citas se volvieron a comprobar (§19.6).
 - **La herramienta queda en el repositorio** (`esquemas/diagramas/`): rough.js para el trazo y la letra Caveat.
-- **Para explorar una versión a mano,** hay prompts de GPT Image 2 como los de los pasteles (§19.8). Si los redibujas tú, cambian el pie y la declaración (§19.9).
+- **Para explorar una versión a mano,** hay prompts de GPT Image 2 como los de los pasteles, ahora en `20` (§19.8). Si los redibujas tú, cambian el pie y la declaración (§19.9).
 
 ## 19.1. Las cinco referencias, de cerca
 
@@ -232,7 +232,7 @@ La prueba es la de la skill: ¿el lector tendría que armar el mecanismo leyendo
 
 1. **Para cambiar un rótulo o una posición,** edita `esquemas/diagramas/generar_diagramas.js`. Cada figura tiene su función y los rótulos están en castellano, a la vista.
 2. **Después, corre en este orden:**
-   - `node analisis/esquemas/diagramas/generar_diagramas.js`, que escribe los SVG;
+   - `node analisis/esquemas/diagramas/generar_diagramas.js`, que escribe los SVG (y las dos guías de `20`);
    - `python3 articulo/generar_figuras.py`, que escribe `figura_7.png` y `figura_8.png` (y rehace las demás, que no cambian);
    - `python3 articulo/generar_docx.py`, que rehace el Word.
 3. **Si vas a abrir los SVG en Illustrator o Inkscape,** instala antes la letra: `esquemas/diagramas/fuentes/Caveat-Regular-sub.ttf`, o la familia completa de Google Fonts.
@@ -241,41 +241,18 @@ La prueba es la de la skill: ¿el lector tendría que armar el mecanismo leyendo
 
 Es opcional, y sirve igual que con los pasteles: ver qué propone la IA antes de dibujar tú. Lo que genere no se publica.
 
-**Qué adjuntar:**
+**Los prompts están en `20_prompts_diagramas_estilo_referencias.md`.** Reemplazan los que había aquí, que no bastaban para llegar al estilo de tus referencias. Traen:
 
-- **la figura** (`figura_7.png` o `figura_8.png`) como guía;
-- **una o dos de tus referencias** como estilo: la 20 o la 21 para la notación, la 17 para la arquitectura.
-
-**Cuidado con las referencias:**
-
-- son obras de otros artistas: sirven para mirar, no para copiar;
-- no nombres a nadie en el prompt; el modelo imitaría a esa persona y no a ti (lo mismo que en `17`, §17.1).
-
-**Bloque de estilo:**
-
-> Dibujo de notación hecho a mano sobre papel de algodón blanco, sin sombras. Línea fina de grafito, algo temblorosa; rótulos pequeños escritos a mano, pegados a las cosas o a lo largo de las líneas; flechas finas con punta abierta. Las cantidades se hacen con marcas pequeñas repetidas, no con números. Un solo acento de color: pigmento siena de óxido de hierro, en lo más importante. Las líneas de construcción quedan a la vista, muy suaves. Usa la imagen adjunta como guía exacta de la composición: conserva la posición de cada elemento y copia sus rótulos palabra por palabra; si no puedes escribirlos bien, deja en su lugar una línea en blanco. Toma de las imágenes de estilo solo la manera de trazar. Nada de aspecto digital ni de infografía.
-
-**Figura 7:**
-
-> Una sección de terreno vista de lado. A la izquierda, una torre de piedras apiladas con siete figuras mínimas arriba, que miran a la derecha. Una línea de trazos sale de sus ojos y cruza todo el dibujo hasta una marca vertical en el borde derecho: el horizonte. En el medio, un muro de doble cara: dos columnas de piedras grandes y, entre ellas, un relleno de piedras menudas en siena. Más allá del muro, un foso hondo cavado en el suelo, rayado en cruz como alquitrán, con rótulos en siena adentro. Desde la línea de la mirada, una línea de puntos baja hacia el foso y se detiene en una barra corta: la mirada no baja. Abajo, un eje de tiempo con tres marcas.
-
-**Figura 8:**
-
-> Tres columnas iguales separadas por líneas de puntos, con un título grande a mano sobre cada una: PIEDRA, PAPEL, MÁQUINA. En cada columna, arriba, lo que entra y lo que sale, unidos por flechas con nombre: en la primera, piedras sueltas y un suelo arado; en la segunda, un círculo trazado con compás con animales dentro, un embudo y billetes que caen; en la tercera, una torre de mina con rueda, un pique y una jaula. En el medio de cada columna, un montón del mismo tamaño y la misma silueta, dibujado en siena con muchas piezas pequeñas: piedras redondeadas en la primera, hojas de papel y libros en la segunda, fragmentos angulosos de roca en la tercera. Abajo, bajo una línea fina, tres rótulos: quién quedó enterrado en cada lugar.
-
-**Qué mirar en lo que salga:**
-
-- ¿El mecanismo se lee antes que los rótulos? Si no, sobran adornos.
-- ¿El acento siena cae donde está la afirmación (el relleno y el foso; los tres montones) o se reparte por todo el dibujo?
-- ¿La belleza del trazo tapa lo que se dice? Es el mismo riesgo que con los pasteles (`18`, §18.2.4).
-- **Los rótulos que invente el modelo no valen:** cada palabra y cada página tienen que venir de las figuras.
+- dos guías sin texto (`esquemas/guias/guia_fig7_memoria_retorno.png` y `guia_fig8_tres_montones.png`);
+- un bloque de estilo que nombra, rasgo por rasgo, el lenguaje de tus referencias;
+- dos variantes por figura, correcciones cortas y qué mirar.
 
 ## 19.9. Si los redibujas a mano
 
 1. **Materiales:**
    - grafito HB o 2H para la línea;
    - un solo acento siena: pastel, sanguina o tierra de siena;
-   - mejor sin pan de oro: embellece, y el artículo desconfía de embellecer (conclusiones, segundo límite).
+   - el pan de oro, solo donde lo justifica el material: en la Figura 7, como la superficie que mira la memoria (`20`, §20.3). En lo demás, no, porque embellece, y el artículo desconfía de embellecer (conclusiones, segundo límite).
 2. **Medida:** a 14 cm de ancho, las letras necesitan unos 2,5 mm de alto para leerse. Conserva las páginas entre paréntesis.
 3. **Pie:** «Diagrama. Fuente: elaboración propia con asistencia de IA» pasa a algo como «Diagrama a mano, grafito y pastel sobre papel, 2026. Fuente: elaboración propia».
 4. **Declaración de IA:**

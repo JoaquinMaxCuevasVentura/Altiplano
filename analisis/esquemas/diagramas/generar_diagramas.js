@@ -8,6 +8,11 @@
  * Luego `python3 articulo/generar_figuras.py` los pasa a figura_7.png y
  * figura_8.png.
  *
+ * También escribe dos guías para explorar los diagramas con GPT Image 2
+ * (../guias/guia_fig7_memoria_retorno.svg y guia_fig8_tres_montones.svg):
+ * sin texto, con línea fina y los materiales marcados (analisis/20). Las pasa
+ * a PNG de 1536 x 1024 `python3 analisis/esquemas/guias/generar_guias.py`.
+ *
  * El trazo irregular sale de rough.js (MIT, vendor/) y la letra es Caveat
  * (SIL Open Font License, fuentes/), incrustada en cada SVG. Las semillas son
  * fijas: el mismo código da siempre el mismo dibujo. Para cambiar un rótulo,
@@ -29,6 +34,20 @@ const TEXTO = '#2f2a26';
 const GRIS = '#8a8079';
 const SIENA = '#b5542b';
 
+// Solo en las guías: papel blanco, línea fina y los materiales de analisis/20.
+const PAPEL_GUIA = '#fbfaf6';
+const LINEA_GUIA = '#4a4541';
+const ALQUITRAN = '#231e1b';
+const HUESO = '#efe8da';
+const ORO = '#c9a54e';
+const PLATA = '#c4c8cc';
+const PLATA_BRILLO = '#eceef0';
+const MARFIL = '#fffdf6';
+const GRAFITO = '#5f5b57';
+const PLOMIZO = '#d6d3cf';
+const LANA = '#7a5c47';
+const NEGRO = '#161312';
+
 const FUENTE = fs.readFileSync(path.join(DIR, 'fuentes', 'Caveat-Regular-sub.ttf')).toString('base64');
 
 function azar(semilla) {
@@ -47,10 +66,11 @@ function esc(s) {
 }
 
 class Hoja {
-  constructor(ancho, alto, semilla, etiqueta, y0) {
+  constructor(ancho, alto, semilla, etiqueta, y0, guia) {
     this.ancho = ancho;
     this.alto = alto;
     this.y0 = y0 || 0;
+    this.guia = !!guia;
     this.semilla = semilla;
     this.rnd = azar(semilla);
     this.etiqueta = etiqueta;
@@ -58,7 +78,16 @@ class Hoja {
   }
 
   op(extra) {
-    return Object.assign({ roughness: 0.7, bowing: 0.6, stroke: TINTA, strokeWidth: 1, seed: this.semilla++ }, extra || {});
+    const o = Object.assign({ roughness: 0.7, bowing: 0.6, stroke: TINTA, strokeWidth: 1, seed: this.semilla++ }, extra || {});
+    if (this.guia) {
+      // Guía: línea fina y segura, sin temblor de marcador.
+      o.roughness = Math.min(o.roughness, 0.3);
+      o.bowing = Math.min(o.bowing, 0.3);
+      if (o.stroke === TINTA) o.stroke = LINEA_GUIA;
+      if (!o.grueso) o.strokeWidth *= 0.6;
+      if (o.fill === PAPEL) o.fill = PAPEL_GUIA;
+    }
+    return o;
   }
 
   agregar(dibujo, atributos) {
@@ -117,6 +146,7 @@ class Hoja {
   }
 
   texto(x, y, cadena, o) {
+    if (this.guia) return;  // las guías no llevan texto: el modelo lo copiaría
     o = o || {};
     const t = o.tam || 13;
     const color = o.color || TEXTO;
@@ -166,6 +196,17 @@ class Hoja {
   }
 
   svg(titulo) {
+    if (this.guia) {
+      // 1536 x 1024 (3:2), con aire alrededor del dibujo, como en las referencias.
+      const W = Math.max(this.ancho * 1.16, this.alto * 1.16 * 1.5);
+      const H = W / 1.5;
+      const x0 = ((this.ancho - W) / 2).toFixed(1);
+      const y0 = (this.y0 + (this.alto - H) / 2).toFixed(1);
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="${x0} ${y0} ${W.toFixed(1)} ${H.toFixed(1)}">\n` +
+        `  <title>${esc(titulo)}</title>\n` +
+        `  <rect x="${x0}" y="${y0}" width="${W.toFixed(1)}" height="${H.toFixed(1)}" fill="${PAPEL_GUIA}"/>\n  ` +
+        this.capas.join('\n  ') + '\n</svg>\n';
+    }
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 ${this.y0} ${this.ancho} ${this.alto}" role="img" aria-label="${esc(this.etiqueta)}" font-family="Caveat, 'Segoe Print', 'Comic Sans MS', cursive">\n` +
       `  <title>${esc(titulo)}</title>\n` +
       `  <defs><style>@font-face{font-family:'Caveat';src:url(data:font/ttf;base64,${FUENTE}) format('truetype');}</style></defs>\n` +
@@ -177,22 +218,40 @@ class Hoja {
 /* ------------------------------------------------------------------ */
 /* Figura 7. La memoria del retorno, en sección (pp. 156-157)          */
 /* ------------------------------------------------------------------ */
-function figura7() {
+function figura7(guia) {
   const h = new Hoja(700, 416, 7101,
     'Sección de la memoria del retorno: desde la atalaya, la mirada pasa sobre la muralla y el foso hasta el horizonte; ' +
     'la muralla es una pirca de doble cara cuyas caras son los apellidos que vuelven y cuyo relleno son los sin tierra; ' +
-    'en el foso quedan los muertos del hambre.', 36);
+    'en el foso quedan los muertos del hambre.', 36, guia);
   const suelo = 300;
   const ojo = 114;
 
   // Terreno cortado: una banda rayada bajo el suelo, con el foso.
   const foso = [[334, suelo], [360, 392], [532, 392], [558, suelo]];
-  h.poligono([[16, suelo], [334, suelo], [360, 392], [532, 392], [558, suelo], [684, suelo], [684, suelo + 11],
-    [566, suelo + 11], [540, 403], [352, 403], [326, suelo + 11], [16, suelo + 11]],
-  { stroke: 'none', fill: GRIS, fillStyle: 'hachure', hachureGap: 4.2, fillWeight: 0.55, hachureAngle: -41, roughness: 0.6 });
-  // El foso «hondo y alquitranado»: rayado cruzado.
-  h.poligono(foso, { stroke: 'none', fill: TINTA, fillStyle: 'cross-hatch', hachureGap: 6.5, fillWeight: 0.45, roughness: 0.8 },
-    ' opacity="0.42"');
+  if (!h.guia) {
+    h.poligono([[16, suelo], [334, suelo], [360, 392], [532, 392], [558, suelo], [684, suelo], [684, suelo + 11],
+      [566, suelo + 11], [540, 403], [352, 403], [326, suelo + 11], [16, suelo + 11]],
+    { stroke: 'none', fill: GRIS, fillStyle: 'hachure', hachureGap: 4.2, fillWeight: 0.55, hachureAngle: -41, roughness: 0.6 });
+    // El foso «hondo y alquitranado»: rayado cruzado.
+    h.poligono(foso, { stroke: 'none', fill: TINTA, fillStyle: 'cross-hatch', hachureGap: 6.5, fillWeight: 0.45, roughness: 0.8 },
+      ' opacity="0.42"');
+  } else {
+    // Guía: el terreno cortado como un haz de líneas paralelas que se doblan en el foso.
+    for (const d of [4, 8, 12]) {
+      h.trazo([[16, suelo + d], [334 - d * 0.3, suelo + d], [360 - d * 0.3, 392 + d], [532 + d * 0.3, 392 + d],
+        [558 + d * 0.3, suelo + d], [684, suelo + d]], { stroke: GRIS, strokeWidth: 1.2 });
+    }
+    // El foso, negro de alquitrán; adentro, más de ciento cincuenta marcas raspadas.
+    h.poligono(foso, { stroke: 'none', fill: ALQUITRAN, fillStyle: 'solid', roughness: 0.4 });
+    for (let n = 0; n < 150; n++) {
+      const y = suelo + 8 + h.rnd() * (392 - suelo - 14);
+      const f = (y - suelo) / (392 - suelo);
+      const xl = 334 + 26 * f + 7, xr = 558 - 26 * f - 7;
+      const x = xl + h.rnd() * (xr - xl);
+      const a = h.rnd() * Math.PI, l = 2 + h.rnd() * 2.5;
+      h.linea(x, y, x + l * Math.cos(a), y + l * Math.sin(a), { stroke: HUESO, strokeWidth: 1.1, roughness: 0.1, grueso: true });
+    }
+  }
   h.trazo([[16, suelo], [120, suelo - 1], [214, suelo + 1], [334, suelo], [360, 392], [532, 392], [558, suelo], [684, suelo - 1]],
     { strokeWidth: 1.3 });
 
@@ -216,6 +275,10 @@ function figura7() {
   h.texto(113, 206, ['atalaya', 'de la esperanza (157)'], { tam: 13 });
 
   // La mirada: sólo el horizonte.
+  if (h.guia) {
+    // Guía: «lo pasado antiguo», una tira de pan de oro en el horizonte.
+    h.poligono([[598, ojo - 2.4], [684, ojo - 3], [684, ojo + 2.8], [598, ojo + 2.2]], { stroke: 'none', fill: ORO, fillStyle: 'solid', roughness: 0.4 });
+  }
   h.circulo(108, ojo, 3.2, { strokeWidth: 0.9, fill: TINTA, fillStyle: 'solid' });
   h.punteada(112, ojo, 676, ojo);
   h.punta(676, ojo, 0);
@@ -277,16 +340,16 @@ function figura7() {
 /* ------------------------------------------------------------------ */
 /* Figura 8. Tres montones: piedra, papel y máquina                    */
 /* ------------------------------------------------------------------ */
-function figura8() {
+function figura8(guia) {
   const h = new Hoja(700, 432, 8101,
     'Tres estaciones con el mismo esquema. En el ayllu se extraen piedras y se amontonan para rescatar tierra; ' +
     'en la aldea los animales entran por el embudo y sale papel, que termina en el montón de papeles del tinterillo; ' +
-    'en la mina salen estaño para la compañía y desmonte. Debajo, quién queda enterrado en cada lugar.');
+    'en la mina salen estaño para la compañía y desmonte. Debajo, quién queda enterrado en cada lugar.', 0, guia);
   const cols = [118, 350, 582];
   const base = 290;
 
   // Separadores y suelo común.
-  for (const x of [234, 466]) h.punteada(x, 18, x, 410, GRIS, '1.5 5');
+  if (!h.guia) for (const x of [234, 466]) h.punteada(x, 18, x, 410, GRIS, '1.5 5');
   h.trazo([[16, base], [230, base + 1], [470, base - 1], [684, base]], { strokeWidth: 1.2 });
 
   h.texto(684, 424, '( ) páginas de la novela', { ancla: 'end', color: GRIS, tam: 12 });
@@ -317,6 +380,13 @@ function figura8() {
   h.circulo(rx, ry, 2.2, { fill: TINTA, fillStyle: 'solid', strokeWidth: 0.6 });
   for (const [dx, dy, s] of [[-11, -10, 1], [5, -12, -1], [-13, 5, 1], [3, 8, -1], [12, -1, 1]]) {
     const x = rx + dx, y = ry + dy;
+    if (h.guia) {
+      // Guía: animales como siluetas planas de lana parda.
+      h.agregar(gen.ellipse(x, y, 7.5, 4, h.op({ stroke: 'none', fill: LANA, fillStyle: 'solid', roughness: 0.3 })));
+      h.agregar(gen.ellipse(x + s * 4.4, y - 2, 3, 2.4, h.op({ stroke: 'none', fill: LANA, fillStyle: 'solid', roughness: 0.2 })));
+      for (const px of [-2.4, -0.8, 1, 2.6]) h.linea(x + px, y + 1.6, x + px * 1.1, y + 4.6, { stroke: LANA, strokeWidth: 0.9, roughness: 0.2, grueso: true });
+      continue;
+    }
     h.agregar(gen.ellipse(x, y, 7.5, 4, h.op({ strokeWidth: 0.8, roughness: 0.4 })));
     h.circulo(x + s * 4.6, y - 2, 2.6, { strokeWidth: 0.7, roughness: 0.2 });
     for (const px of [-2.4, -0.8, 1, 2.6]) h.linea(x + px, y + 1.6, x + px * 1.1, y + 4.6, { strokeWidth: 0.55, roughness: 0.2 });
@@ -324,14 +394,22 @@ function figura8() {
   h.curva([[rx + 13, ry + 25], [rx + 18, ry + 21], [rx + 22, ry + 26], [rx + 28, ry + 20]], { strokeWidth: 0.8, roughness: 0.5 });
   h.texto(rx, ry + 42, ['radio urbano,', 'ordenanza, firma (96)'], { ancla: 'middle', tam: 12.5, interlinea: 13 });
   const fx = c + 18, fy = 100;
-  h.poligono([[fx - 24, fy], [fx + 24, fy], [fx + 4, fy + 26], [fx + 4, fy + 38], [fx - 4, fy + 38], [fx - 4, fy + 26]], { strokeWidth: 1.1 });
+  if (h.guia) {
+    // Guía: el embudo en perspectiva, con la boca elíptica.
+    h.agregar(gen.ellipse(fx, fy, 48, 11, h.op({ strokeWidth: 1.1 })));
+    h.trazo([[fx - 24, fy], [fx - 4, fy + 26], [fx - 4, fy + 38]], { strokeWidth: 1.1 });
+    h.trazo([[fx + 24, fy], [fx + 4, fy + 26], [fx + 4, fy + 38]], { strokeWidth: 1.1 });
+  } else {
+    h.poligono([[fx - 24, fy], [fx + 24, fy], [fx + 4, fy + 26], [fx + 4, fy + 38], [fx - 4, fy + 38], [fx - 4, fy + 26]], { strokeWidth: 1.1 });
+  }
   h.flecha(rx + 28, ry - 2, fx - 28, fy + 6);
   h.texto(fx, fy - 9, '«embudo» (102)', { ancla: 'middle' });
   h.flecha(fx + 26, fy + 8, c + 104, fy + 8);
   h.texto(c + 104, fy + 26, ['«hasta esfumarse»:', 'propiedades', 'del Alcalde (102)'], { ancla: 'end', tam: 12.5, interlinea: 13 });
   for (const [dx, dy, a] of [[-3, 50, 12], [5, 62, -18], [-2, 74, 8]]) {
     const x = fx + dx, y = fy + dy;
-    h.agregar(gen.rectangle(x - 5, y - 3, 10, 6, h.op({ strokeWidth: 0.8, roughness: 0.4 })), ` transform="rotate(${a} ${x} ${y})"`);
+    const billete = h.guia ? { strokeWidth: 0.8, roughness: 0.4, stroke: GRIS, fill: MARFIL, fillStyle: 'solid' } : { strokeWidth: 0.8, roughness: 0.4 };
+    h.agregar(gen.rectangle(x - 5, y - 3, 10, 6, h.op(billete)), ` transform="rotate(${a} ${x} ${y})"`);
   }
   h.flecha(fx, fy + 84, fx - 10, 208);
   h.texto(fx + 10, 178, ['«mil seiscientos', 'bolivianos en papel»', '(103), para el', 'tinterillo (105)'], { tam: 12.5, interlinea: 13 });
@@ -339,35 +417,71 @@ function figura8() {
   // --- Mina: castillete, pique, estaño y desmonte. ---
   c = cols[2];
   const tx = c - 24;
-  h.trazo([[tx - 22, 150], [tx, 84], [tx + 22, 150]], { strokeWidth: 1.1 });
-  h.linea(tx - 14, 126, tx + 14, 126, { strokeWidth: 0.8 });
-  h.linea(tx - 7, 104, tx + 7, 104, { strokeWidth: 0.8 });
-  h.circulo(tx, 84, 13, { strokeWidth: 1 });
-  for (let i = 0; i < 10; i++) {
-    const a = (i / 10) * Math.PI * 2;
-    h.linea(tx + 6.5 * Math.cos(a), 84 + 6.5 * Math.sin(a), tx + 9 * Math.cos(a), 84 + 9 * Math.sin(a), { strokeWidth: 0.9, roughness: 0.2 });
+  if (h.guia) {
+    // Guía: el castillete como una silueta negra, el contrapeso de la hoja.
+    const negro = { stroke: NEGRO, strokeWidth: 4.2, roughness: 0.2, grueso: true };
+    h.trazo([[tx - 22, 150], [tx, 84], [tx + 22, 150]], negro);
+    h.linea(tx - 14, 126, tx + 14, 126, Object.assign({}, negro, { strokeWidth: 2.6 }));
+    h.linea(tx - 7, 104, tx + 7, 104, Object.assign({}, negro, { strokeWidth: 2.6 }));
+    h.circulo(tx, 84, 17, { stroke: 'none', fill: NEGRO, fillStyle: 'solid', roughness: 0.2 });
+    h.circulo(tx, 84, 4, { stroke: 'none', fill: PAPEL_GUIA, fillStyle: 'solid', roughness: 0.1 });
+    h.linea(tx - 6, 150, tx - 6, 196, Object.assign({}, negro, { strokeWidth: 2 }));
+    h.linea(tx + 6, 150, tx + 6, 196, Object.assign({}, negro, { strokeWidth: 2 }));
+    h.agregar(gen.rectangle(tx - 4, 160, 8, 12, h.op({ stroke: 'none', fill: NEGRO, fillStyle: 'solid', roughness: 0.1 })));
+    // La doble flecha de la jaula que sube y baja.
+    h.linea(tx + 16, 158, tx + 16, 186, Object.assign({}, negro, { strokeWidth: 2 }));
+    h.poligono([[tx + 12, 160], [tx + 20, 160], [tx + 16, 153]], { stroke: 'none', fill: NEGRO, fillStyle: 'solid', roughness: 0.1 });
+    h.poligono([[tx + 12, 184], [tx + 20, 184], [tx + 16, 191]], { stroke: 'none', fill: NEGRO, fillStyle: 'solid', roughness: 0.1 });
+  } else {
+    h.trazo([[tx - 22, 150], [tx, 84], [tx + 22, 150]], { strokeWidth: 1.1 });
+    h.linea(tx - 14, 126, tx + 14, 126, { strokeWidth: 0.8 });
+    h.linea(tx - 7, 104, tx + 7, 104, { strokeWidth: 0.8 });
+    h.circulo(tx, 84, 13, { strokeWidth: 1 });
+    for (let i = 0; i < 10; i++) {
+      const a = (i / 10) * Math.PI * 2;
+      h.linea(tx + 6.5 * Math.cos(a), 84 + 6.5 * Math.sin(a), tx + 9 * Math.cos(a), 84 + 9 * Math.sin(a), { strokeWidth: 0.9, roughness: 0.2 });
+    }
+    h.linea(tx - 6, 150, tx - 6, 196, { strokeWidth: 1 });
+    h.linea(tx + 6, 150, tx + 6, 196, { strokeWidth: 1 });
+    h.agregar(gen.rectangle(tx - 4.5, 160, 9, 12, h.op({ strokeWidth: 0.8, roughness: 0.3, fill: TINTA, fillStyle: 'cross-hatch', hachureGap: 2.5, fillWeight: 0.4 })));
   }
-  h.linea(tx - 6, 150, tx - 6, 196, { strokeWidth: 1 });
-  h.linea(tx + 6, 150, tx + 6, 196, { strokeWidth: 1 });
-  h.agregar(gen.rectangle(tx - 4.5, 160, 9, 12, h.op({ strokeWidth: 0.8, roughness: 0.3, fill: TINTA, fillStyle: 'cross-hatch', hachureGap: 2.5, fillWeight: 0.4 })));
   h.texto(c - 102, 76, ['«rieles,', 'maderos,', 'dinamita,', 'hombres»', '(151)'], { tam: 12.5, interlinea: 12.5 });
   h.flechaCurva([[c - 90, 136], [c - 86, 158], [c - 64, 170], [tx - 8, 170]]);
-  h.flecha(tx + 16, 84, c + 102, 84);
+  if (h.guia) {
+    // Guía: el estaño sale como una tira de hoja de plata.
+    h.poligono([[tx + 12, 81.5], [c + 94, 81], [c + 94, 87], [tx + 12, 86.5]], { stroke: 'none', fill: PLATA, fillStyle: 'solid', roughness: 0.3 });
+    h.linea(tx + 14, 83, c + 92, 82.6, { stroke: PLATA_BRILLO, strokeWidth: 1, roughness: 0.2, grueso: true });
+    h.punta(c + 102, 84, 0);
+  } else {
+    h.flecha(tx + 16, 84, c + 102, 84);
+  }
   h.texto(c + 102, 100, ['«cosecharás miles de', 'cargas de estaño» (142):', 'para la compañía'], { ancla: 'end', tam: 12.5, interlinea: 13 });
   h.flechaCurva([[tx + 7, 190], [tx + 18, 202], [tx + 32, 214]]);
   h.texto(tx + 26, 186, 'roca sin mineral', { tam: 12.5 });
 
   // --- Los tres montones, el mismo gesto. ---
+  // En la figura, los tres en siena; en la guía, cada uno con su material:
+  // tierra siena, papel marfil y roca plomiza.
+  const colorPapel = h.guia ? GRIS : SIENA;
   const piedras = hh => h.piedra(hh.x, hh.y, hh.r, SIENA, PAPEL);
   h.monton(cols[0], base, 72, 70, piedras, 3.2, 6.5);
   h.monton(cols[1], base, 72, 66, p => {
     const ang = (h.rnd() - 0.5) * 50;
     const w = p.r * 2.2, al = p.r * (h.rnd() < 0.2 ? 1.25 : 0.9);
     const giro = ` transform="rotate(${ang.toFixed(1)} ${p.x.toFixed(1)} ${p.y.toFixed(1)})"`;
-    h.agregar(gen.rectangle(p.x - w / 2, p.y - al / 2, w, al, h.op({ stroke: SIENA, strokeWidth: 0.85, roughness: 0.5, fill: PAPEL, fillStyle: 'solid' })), giro);
-    if (al > p.r) h.linea(p.x - w / 2 + 2, p.y, p.x + w / 2 - 2, p.y, { stroke: SIENA, strokeWidth: 0.5, roughness: 0.2 }, giro);
+    h.agregar(gen.rectangle(p.x - w / 2, p.y - al / 2, w, al, h.op({ stroke: colorPapel, strokeWidth: 0.85, roughness: 0.5, fill: h.guia ? MARFIL : PAPEL, fillStyle: 'solid' })), giro);
+    if (al > p.r) h.linea(p.x - w / 2 + 2, p.y, p.x + w / 2 - 2, p.y, { stroke: colorPapel, strokeWidth: 0.5, roughness: 0.2 }, giro);
   }, 3.6, 6.8);
-  h.monton(cols[2], base, 76, 74, p => h.piedra(p.x, p.y, p.r, SIENA, PAPEL, true), 3, 7);
+  h.monton(cols[2], base, 76, 74, p => h.piedra(p.x, p.y, p.r, h.guia ? GRAFITO : SIENA, h.guia ? PLOMIZO : PAPEL, true), 3, 7);
+  if (h.guia) {
+    // Guía: cada montón en el centro de sus órbitas, con su eje, y una línea larga que los une.
+    for (const cx of cols) {
+      for (const [rxo, ryo] of [[98, 21], [84, 15]]) h.agregar(gen.ellipse(cx, base - 34, rxo * 2, ryo * 2, h.op({ stroke: GRIS, strokeWidth: 1.2, roughness: 0.2 })));
+      h.linea(cx, 62, cx, 330, { stroke: GRIS, strokeWidth: 1.1, roughness: 0.1 });
+      h.punta(cx, 62, -Math.PI / 2, GRIS, 5);
+    }
+    h.curva([[10, 246], [118, 214], [234, 196], [350, 220], [466, 196], [582, 214], [690, 240]], { stroke: GRIS, strokeWidth: 1.2, roughness: 0.2 });
+  }
 
   const nombres = [['«montaña de piedras» (9)', 'de los comunarios'], ['«montón de papeles', 'y libracos» (103)', 'del tinterillo'],
     ['desmonte (140)', 'de la compañía']];
@@ -391,6 +505,9 @@ function figura8() {
 }
 
 for (const [nombre, hacer] of [['fig7_memoria_retorno.svg', figura7], ['fig8_tres_montones.svg', figura8]]) {
-  fs.writeFileSync(path.join(DIR, nombre), hacer(), 'utf8');
+  fs.writeFileSync(path.join(DIR, nombre), hacer(false), 'utf8');
   console.log('escrito', nombre);
+  const guia = path.join(DIR, '..', 'guias', 'guia_' + nombre);
+  fs.writeFileSync(guia, hacer(true), 'utf8');
+  console.log('escrito', path.relative(DIR, guia));
 }
