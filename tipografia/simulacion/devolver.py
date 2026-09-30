@@ -1,4 +1,10 @@
-"""Cuaderno 3 · Devolver: el agua y la voz (acciones 9 y 10), simuladas.
+"""Cuaderno 3 · Devolver: el frotado, el agua y la voz (acciones 8 a 10), simulados.
+
+El frotado: un papel sobre la placa, por el anverso, frotado con grafito, el mismo
+gesto con el que empezó todo (la pared). El papel toca toda la hoja, pero se carga
+donde la placa sube por encima de su entorno. Cada frotada aplasta un poco el
+relieve: se frota hasta que la letra no se lee. El peso de una letra se mide en
+frotadas.
 
 La placa en el fondo de una bandeja con un dedo de agua. La luz de una lámpara
 rebota en la placa y cae en unos azulejos: cada punto de la placa desvía la luz
@@ -19,6 +25,67 @@ from desenterrar import pared
 
 VERDE = np.array([0.30, 1.0, 0.58])
 
+
+# ---------------------------------------------------------------- acción 8: el frotado
+
+def _trazos_de_grafito(rng, forma, n=3):
+    """Unas pocas texturas de trazos diagonales: la mano va y viene."""
+    k = np.zeros((25, 25), np.float32)
+    np.fill_diagonal(k, 1)
+    salida = []
+    for _ in range(n):
+        t = cv2.filter2D(rng.standard_normal(forma).astype(np.float32), -1, k / k.sum())
+        salida.append(t / (t.std() + 1e-9))
+    return salida
+
+
+def frotar(altura, mascara, rng, trazo, grano):
+    """Una frotada: el papel no entra en los valles finos (se apoya a unos 2 mm); toca toda la hoja
+    y se carga donde la placa sube por encima de su entorno, y en el filo del corte."""
+    forma = altura.shape
+    h = np.where(mascara, altura, altura[mascara].min() - 0.3)
+    envolvente = cv2.GaussianBlur(h, (0, 0), 7)
+    contacto = 0.16 + 0.84 * np.clip((h - envolvente) / 0.9, 0, 1) ** 1.2
+    presion = 0.85 + 0.12 * ruido(forma, 150, rng)
+    oscuro = 0.8 * contacto * np.clip(presion + 0.14 * trazo + 0.08 * grano, 0, 1.1)
+    return np.clip((0.965 + 0.012 * grano) * (1 - oscuro), 0, 1)
+
+
+def frotadas(placa, rng, maximo=45, guardar=(1, 5, 10, 20)):
+    """Frotadas sucesivas de una misma placa, hasta que la letra no se lee.
+
+    Cada frotada aplasta entre un 5 y un 9 % del relieve del surco, y un poco las arrugas
+    de la hoja. La letra se lee mientras el grafito sobre el surco se aparta del de su
+    alrededor más de tres veces lo que varía ese alrededor. Devuelve las frotadas pedidas
+    (y la última legible) y cuántas se leyeron.
+    """
+    forma = placa["altura"].shape
+    trazos = _trazos_de_grafito(rng, forma)
+    grano = ruido(forma, 0.7, rng)
+    relieve = placa["relieve"].astype(np.float32).copy()
+    base = placa["altura"] - relieve
+    letra = cv2.dilate((np.abs(relieve) > 0.32).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+    lejos = ~(cv2.dilate(letra.astype(np.uint8), np.ones((21, 21), np.uint8)) > 0)
+    adentro = cv2.distanceTransform(placa["mascara"].astype(np.uint8), cv2.DIST_L2, 5) > 12
+    alrededor = lejos & adentro                         # la hoja lejos de la letra y del filo del corte
+    imagenes, legibles, ultima = {}, 0, None
+    for n in range(1, maximo + 1):
+        img = frotar(base + relieve, placa["mascara"], rng, np.roll(trazos[n % 3], 37 * n, axis=1), grano)
+        d = cv2.GaussianBlur(1 - img, (0, 0), 1.5)       # el ojo junta los granos del grafito
+        se_lee = d[letra].mean() - d[alrededor].mean() > 3 * d[alrededor].std()
+        if n in guardar:
+            imagenes[n] = img
+        if not se_lee:
+            break
+        legibles, ultima = n, img
+        relieve *= 1 - rng.uniform(0.05, 0.09)
+        base = base * 0.98
+    if ultima is not None:
+        imagenes[legibles] = ultima
+    return imagenes, legibles
+
+
+# ---------------------------------------------------------------- acciones 9 y 10: agua y voz
 
 def superficie_quieta(forma, rng):
     return 1.0 * ruido(forma, 60, rng)

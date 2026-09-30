@@ -31,6 +31,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 21
+  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
@@ -155,6 +158,9 @@
     "corte: mira arriba",
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 24
   },
   "cinta": {
    "tramos": 9,
@@ -330,6 +336,9 @@
     "corte: mira arriba",
     "desagüe del ojo"
    ]
+  },
+  "frotado": {
+   "legibles": 21
   },
   "cinta": {
    "tramos": 9,
@@ -556,6 +565,9 @@
     "sifón"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 16,
    "pliegues": 12
@@ -632,6 +644,9 @@
     "tilde"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 6,
    "pliegues": 3
@@ -681,6 +696,9 @@
     "asiento",
     "hombro"
    ]
+  },
+  "frotado": {
+   "legibles": 22
   },
   "cinta": {
    "tramos": 5,
@@ -906,6 +924,9 @@
     "desagüe"
    ]
   },
+  "frotado": {
+   "legibles": 24
+  },
   "cinta": {
    "tramos": 8,
    "pliegues": 7
@@ -1081,6 +1102,9 @@
     "desagüe",
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 21
   },
   "cinta": {
    "tramos": 9,
@@ -1332,6 +1356,9 @@
     "asiento"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 3,
    "pliegues": 0
@@ -1382,6 +1409,9 @@
     "gota"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
@@ -1430,6 +1460,9 @@
    "partes": [
     "desagüe"
    ]
+  },
+  "frotado": {
+   "legibles": 23
   },
   "cinta": {
    "tramos": 10,
@@ -1505,6 +1538,9 @@
     "asiento",
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 24
   },
   "cinta": {
    "tramos": 3,
@@ -1655,6 +1691,9 @@
     "corte"
    ]
   },
+  "frotado": {
+   "legibles": 20
+  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
@@ -1754,6 +1793,9 @@
     "asiento",
     "desagüe"
    ]
+  },
+  "frotado": {
+   "legibles": 23
   },
   "cinta": {
    "tramos": 10,
@@ -1855,6 +1897,9 @@
     "hombro"
    ]
   },
+  "frotado": {
+   "legibles": 21
+  },
   "cinta": {
    "tramos": 9,
    "pliegues": 6
@@ -1954,6 +1999,9 @@
     "asiento",
     "corte"
    ]
+  },
+  "frotado": {
+   "legibles": 24
   },
   "cinta": {
    "tramos": 1,
@@ -2080,6 +2128,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 21
+  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
@@ -2178,6 +2229,9 @@
    "partes": [
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 24
   },
   "cinta": {
    "tramos": 7,
@@ -2278,6 +2332,9 @@
     "asiento",
     "cuenca abierta"
    ]
+  },
+  "frotado": {
+   "legibles": 23
   },
   "cinta": {
    "tramos": 5,
@@ -2402,6 +2459,9 @@
    "partes": [
     "alivio"
    ]
+  },
+  "frotado": {
+   "legibles": 19
   },
   "cinta": {
    "tramos": 3,
@@ -2528,6 +2588,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
@@ -2577,6 +2640,9 @@
     "asiento",
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 20
   },
   "cinta": {
    "tramos": 5,
@@ -2628,6 +2694,9 @@
     "tilde"
    ]
   },
+  "frotado": {
+   "legibles": 24
+  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
@@ -2674,6 +2743,9 @@
    "desagues": 1,
    "alivios": 0,
    "partes": []
+  },
+  "frotado": {
+   "legibles": 22
   },
   "cinta": {
    "tramos": 4,
@@ -2724,6 +2796,9 @@
     "asiento",
     "hombro"
    ]
+  },
+  "frotado": {
+   "legibles": 22
   },
   "cinta": {
    "tramos": 5,
@@ -2802,6 +2877,9 @@
     "tilde"
    ]
   },
+  "frotado": {
+   "legibles": 21
+  },
   "cinta": {
    "tramos": 10,
    "pliegues": 5
@@ -2848,6 +2926,9 @@
    "desagues": 1,
    "alivios": 0,
    "partes": []
+  },
+  "frotado": {
+   "legibles": 23
   },
   "cinta": {
    "tramos": 4,
@@ -2898,6 +2979,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 22
+  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
@@ -2947,6 +3031,9 @@
     "asiento",
     "desagüe"
    ]
+  },
+  "frotado": {
+   "legibles": 23
   },
   "cinta": {
    "tramos": 10,
@@ -3022,6 +3109,9 @@
     "desagüe"
    ]
   },
+  "frotado": {
+   "legibles": 20
+  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
@@ -3091,6 +3181,9 @@
     "tilde"
    ]
   },
+  "frotado": {
+   "legibles": 11
+  },
   "cinta": {
    "tramos": 9,
    "pliegues": 7
@@ -3133,6 +3226,9 @@
    "partes": [
     "alivio"
    ]
+  },
+  "frotado": {
+   "legibles": 9
   },
   "cinta": {
    "tramos": 5,
@@ -3177,6 +3273,9 @@
     "gota",
     "punto"
    ]
+  },
+  "frotado": {
+   "legibles": 9
   },
   "cinta": {
    "tramos": 10,
@@ -3223,6 +3322,9 @@
     "tilde"
    ]
   },
+  "frotado": {
+   "legibles": 7
+  },
   "cinta": {
    "tramos": 10,
    "pliegues": 6
@@ -3266,6 +3368,9 @@
     "gota",
     "punto"
    ]
+  },
+  "frotado": {
+   "legibles": 8
   },
   "cinta": {
    "tramos": 2,
@@ -3312,6 +3417,9 @@
     "onda"
    ]
   },
+  "frotado": {
+   "legibles": 9
+  },
   "cinta": {
    "tramos": 8,
    "pliegues": 5
@@ -3355,6 +3463,9 @@
     "alivio"
    ]
   },
+  "frotado": {
+   "legibles": 10
+  },
   "cinta": {
    "tramos": 6,
    "pliegues": 5
@@ -3397,6 +3508,9 @@
    "partes": [
     "alivio"
    ]
+  },
+  "frotado": {
+   "legibles": 11
   },
   "cinta": {
    "tramos": 2,
@@ -3443,6 +3557,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 11
+  },
   "cinta": {
    "tramos": 7,
    "pliegues": 3
@@ -3486,6 +3603,9 @@
     "celda",
     "desagüe"
    ]
+  },
+  "frotado": {
+   "legibles": 11
   },
   "cinta": {
    "tramos": 18,
@@ -3532,6 +3652,9 @@
     "celda"
    ]
   },
+  "frotado": {
+   "legibles": 10
+  },
   "cinta": {
    "tramos": 12,
    "pliegues": 8
@@ -3576,6 +3699,9 @@
     "celda",
     "gota"
    ]
+  },
+  "frotado": {
+   "legibles": 9
   },
   "cinta": {
    "tramos": 18,
@@ -3622,6 +3748,9 @@
     "gota"
    ]
   },
+  "frotado": {
+   "legibles": 11
+  },
   "cinta": {
    "tramos": 20,
    "pliegues": 17
@@ -3666,6 +3795,9 @@
     "celda"
    ]
   },
+  "frotado": {
+   "legibles": 10
+  },
   "cinta": {
    "tramos": 13,
    "pliegues": 8
@@ -3709,6 +3841,9 @@
     "celda",
     "corte: mira arriba"
    ]
+  },
+  "frotado": {
+   "legibles": 11
   },
   "cinta": {
    "tramos": 20,
@@ -3755,6 +3890,9 @@
     "gota"
    ]
   },
+  "frotado": {
+   "legibles": 11
+  },
   "cinta": {
    "tramos": 22,
    "pliegues": 18
@@ -3798,6 +3936,9 @@
     "alivio",
     "celda"
    ]
+  },
+  "frotado": {
+   "legibles": 10
   },
   "cinta": {
    "tramos": 13,
@@ -3844,6 +3985,9 @@
     "sifón"
    ]
   },
+  "frotado": {
+   "legibles": 10
+  },
   "cinta": {
    "tramos": 26,
    "pliegues": 21
@@ -3889,6 +4033,9 @@
     "sin gota: la gravedad no se da vuelta"
    ]
   },
+  "frotado": {
+   "legibles": 10
+  },
   "cinta": {
    "tramos": 22,
    "pliegues": 18
@@ -3931,6 +4078,9 @@
    "partes": [
     "punto"
    ]
+  },
+  "frotado": {
+   "legibles": 8
   },
   "cinta": {
    "tramos": 2,
@@ -3976,6 +4126,9 @@
     "sin gota: la gravedad no se da vuelta"
    ]
   },
+  "frotado": {
+   "legibles": 9
+  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
@@ -4018,6 +4171,9 @@
    "partes": [
     "alivio"
    ]
+  },
+  "frotado": {
+   "legibles": 11
   },
   "cinta": {
    "tramos": 4,
@@ -4062,6 +4218,9 @@
     "alivio"
    ]
   },
+  "frotado": {
+   "legibles": 8
+  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
@@ -4102,6 +4261,9 @@
    "desagues": 1,
    "alivios": 0,
    "partes": []
+  },
+  "frotado": {
+   "legibles": 11
   },
   "cinta": {
    "tramos": 1,
@@ -4146,6 +4308,9 @@
     "punto"
    ]
   },
+  "frotado": {
+   "legibles": 11
+  },
   "cinta": {
    "tramos": 3,
    "pliegues": 0
@@ -4177,6 +4342,9 @@
    "roturas": 0,
    "minutos": 3.0,
    "recorrido_mm": 0
+  },
+  "frotado": {
+   "legibles": 0
   },
   "agua": {
    "quieta": true,

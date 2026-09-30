@@ -5,7 +5,7 @@ Uso (desde la raíz del repositorio, después de inventario.py):
     python3 tipografia/simulacion/simular.py
 
 Arma el testigo del pie y la gramática, y corre los simuladores del taller
-—calco, placa, cinta, agua y voz— sobre las 56 celdas y las 119 placas.
+—calco, placa, frotado, cinta, agua y voz— sobre las 56 celdas y las 119 placas.
 Escribe en tipografia/simulacion/salida/:
   láminas (JPG y PNG) por estado,
   agua.gif (la palabra «agua» en el agua tocada) y voz.gif (la palabra «voz» movida por una voz),
@@ -29,7 +29,7 @@ from comun import (CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS,
                    guardar, lamina, poliza, rotulo)
 from contener import foto_placa, repujar_placa, reverso, signo_final
 from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared
-from devolver import agua, agua_tocada_en_bucle, foto_agua, voz_del_verso, voz_en_bucle
+from devolver import agua, agua_tocada_en_bucle, foto_agua, frotadas, voz_del_verso, voz_en_bucle
 from gramatica import V, celda, encintar, imagen_cuerpo
 
 OSCURO = dict(fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
@@ -131,6 +131,26 @@ def main():
         fila_de_paneles([f for _, f in rotas], [f"«{s}» rota" for s, _ in rotas], SALIDA / "04b_placas_rotas.jpg", alto=260,
                         titulo="Placas que se rompieron: se guardan en la caja y se hace otra")
 
+    # ------------------------------------------------ frotado: papel y grafito sobre la placa
+    paso("frotado: frotar cada placa hasta que no se lea")
+    frotados, legibles = {}, {}
+    for c in CELDAS:
+        celda_ = c["celda"]
+        imgs, n = frotadas(placas[(celda_, 1)], azar("frotado", celda_))
+        frotados[celda_] = imgs[1]
+        legibles[celda_] = n
+        fichas[f"{celda_:02d}.01"]["frotado"] = {"legibles": n}
+        if celda_ == POR_SIGNO["a"]["celda"]:
+            orden = sorted(imgs)
+            fila_de_paneles([imgs[k] for k in orden], [f"frotada {k}" + (" (la última que se lee)" if k == n else "")
+                                                         for k in orden],
+                            SALIDA / "08b_frotadas_de_la_a.jpg", alto=300,
+                            titulo=f"La misma «a» frotada una y otra vez: cada frotada aplasta el relieve. Se leyeron {n}")
+    lamina(frotados, "Frotado · simulación",
+           "Un papel sobre la placa, por el anverso, frotado con grafito: el mismo gesto con el que empezó todo (la pared).\n"
+           "Se marca lo que sobresale. Primera frotada de cada placa; cada una aplasta un poco el relieve.",
+           SALIDA / "08_frotado.jpg")
+
     # ------------------------------------------------ cinta: la letra con la masking de ojos y boca
     paso("cinta: la letra puesta con masking")
     cintas = {}
@@ -192,16 +212,17 @@ def main():
         t = D["testigos"].get(s)
         primero = [cuadrado(1 - t["crudo"].astype(np.float32) * 0.9)] if t else [np.ones((T, T), np.float32)]
         paneles = primero + [imagen_cuerpo(D["gramatica"][s]["mascara"]), calcos[celda_], foto_r[celda_], foto_a[celda_],
-                             cintas[celda_], quietas[celda_], tocadas[celda_], voces[celda_]]
+                             frotados[celda_], cintas[celda_], quietas[celda_], tocadas[celda_], voces[celda_]]
         rot = (["pie (ampliado)"] if t else ["no está en el pie"]) + ["gramática", "calco", "placa, reverso", "placa",
-                                                                     "cinta", "agua quieta", "agua tocada", "voz"]
+                                                                     "frotado", "cinta", "agua quieta", "agua tocada",
+                                                                     "voz"]
         fila_de_paneles(paneles, rot, SALIDA / f"12_cadena_{celda_:02d}.jpg", alto=260,
                         titulo=f"La cadena de una letra: «{s}» (celda {celda_}, {'hallada' if t else 'reconstruida'})")
 
     # ------------------------------------------------ fichas e informe
     paso("fichas e informe")
     (SALIDA / "fichas_simuladas.json").write_text(json.dumps(fichas, ensure_ascii=False, indent=1), encoding="utf8")
-    informe(D, fichas, pol)
+    informe(D, fichas, pol, legibles)
     paso("listo")
 
 
@@ -412,7 +433,7 @@ def lamina_antes_y_despues(D, letras="aoegrcfsjiáqbp"):
     guardar(SALIDA / "03d_antes_y_despues.png", lienzo)
 
 
-def informe(D, fichas, pol):
+def informe(D, fichas, pol, legibles):
     med, e = D["med"], D["esqueleto"]
     P = D["parametros"]
 
@@ -437,6 +458,14 @@ def informe(D, fichas, pol):
                 + ("**Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. "
                    "El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos."
                    if cr < ch else "Las reconstruidas no llegan más débiles al agua."))
+    sig = {c["celda"]: c["signo"] for c in CELDAS}
+    orden = sorted(((c, n) for c, n in legibles.items() if est[c] != "manos"), key=lambda kv: kv[1])
+    final = next(n for c, n in legibles.items() if est[c] == "manos")
+    fh = np.mean([n for c, n in legibles.items() if est[c] == "hallada"])
+    fr = np.mean([n for c, n in legibles.items() if est[c] == "reconstruida"])
+    frotado_txt = (f"Las halladas se leen, en promedio, hasta la frotada {coma(fh)}; las reconstruidas, hasta la {coma(fr)}. "
+                   + ("**Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, tienen menos relieve que "
+                      "tomar el grafito y se borran antes." if fr < fh else "Las reconstruidas no se borran antes que las halladas."))
     tramos = sum(f.get("cinta", {}).get("tramos", 0) for f in fichas.values())
     pliegues = sum(f.get("cinta", {}).get("pliegues", 0) for f in fichas.values())
     xh = e["xh"]
@@ -448,8 +477,8 @@ def informe(D, fichas, pol):
          "",
          "La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.",
          "",
-         "La máquina simula cinco estados del taller: **calco, placa, cinta, agua y voz**. Antes arma el testigo del pie y "
-         "la gramática, que da el cuerpo base de cada signo.",
+         "La máquina simula seis estados del taller: **calco, placa, frotado, cinta, agua y voz**. Antes arma el testigo del "
+         "pie y la gramática, que da el cuerpo base de cada signo.",
          "",
          "## Lo que la máquina tuvo que suponer",
          "",
@@ -462,6 +491,7 @@ def informe(D, fichas, pol):
          "- **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo. En la foto cercana de la "
          "cabeza, el paso de la retícula de 8 × 7 mide 0,81 en los bordes y 0,91 al centro (promedio 0,86): el dibujo curva "
          "la cabeza como un cilindro. El 0,84 cae dentro.",
+         "- **El frotado:** cada frotada aplasta entre un 5 y un 9 % del relieve del surco. Es un supuesto: se mide frotando.",
          "- **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.",
          "- **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.",
          "",
@@ -593,6 +623,23 @@ def informe(D, fichas, pol):
           "",
           "![Rotas](salida/04b_placas_rotas.jpg)",
           "",
+          "## Frotado",
+          "",
+          "![Frotado](salida/08_frotado.jpg)",
+          "",
+          "![Frotadas de la a](salida/08b_frotadas_de_la_a.jpg)",
+          "",
+          "Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acción 1, ahora sobre la letra. El papel "
+          "no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Se frota "
+          "hasta que la letra no se lee: **el peso de una letra se mide en frotadas.** " + frotado_txt,
+          "",
+          "**Las primeras en borrarse:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[:8]) + ".",
+          "",
+          "**Las últimas:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[-8:]) + ".",
+          "",
+          (f"El signo final, una presión de pulgar, da {final} frotadas legibles: el domo es liso y el papel lo acompaña; "
+           "solo marca el filo." if final == 0 else f"El signo final, una presión de pulgar, da {final} frotadas legibles."),
+          "",
           "## Cinta",
           "",
           "![Cinta](salida/07_cinta.jpg)",
@@ -634,6 +681,7 @@ def informe(D, fichas, pol):
           "- **El libro:** qué letra tiene el pie en su tamaño real, ni cómo se imprimió. La foto da sus medidas, no sus formas.",
           "- **La mano:** el temblor es ruido con un ritmo; no cansa, no duda, no se distrae.",
           "- **El aluminio:** cómo se rompe de verdad. Aquí se rompe con una probabilidad.",
+          "- **El grafito:** cuánto relieve se lleva cada frotada.",
           "- **La cinta:** cómo se despega de verdad; aquí cada tramo deja un residuo supuesto.",
           "- **El agua:** un solo rebote, un eco desplazado y ninguna polarización.",
           "- **La voz:** no es la tuya.",
@@ -643,7 +691,7 @@ def informe(D, fichas, pol):
           "Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compararlas placa por placa:",
           "",
           "- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas "
-          "carpetas de estado: `calco`, `placa`, `cinta`, `agua`, `voz`.",
+          "carpetas de estado: `calco`, `placa`, `frotado`, `cinta`, `agua`, `voz`.",
           "- **Fichas:** `tipografia/mano/fichas.json`, con los mismos campos que `salida/fichas_simuladas.json`.",
           "",
           "**Qué se compara:**",
@@ -654,8 +702,9 @@ def informe(D, fichas, pol):
           "3. **Reconstrucciones:** las 25 recetas de la máquina contra las tuyas. Es donde más van a diferir, y donde más "
           "interesa.",
           "4. **Tiempo y roturas:** horas, intentos y roturas por placa.",
-          "5. **Agua:** si las reconstruidas también llegan más débiles.",
-          "6. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.",
+          "5. **Frotado:** cuántas frotadas se leen, y qué signos se borran primero.",
+          "6. **Agua:** si las reconstruidas también llegan más débiles.",
+          "7. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.",
           ""]
     (SALIDA.parent / "informe.md").write_text("\n".join(L), encoding="utf8")
 

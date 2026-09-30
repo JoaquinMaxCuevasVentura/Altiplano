@@ -4,7 +4,7 @@ Generado por `simular.py`. Es una **hipótesis hecha por código**, para confron
 
 La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.
 
-La máquina simula cinco estados del taller: **calco, placa, cinta, agua y voz**. Antes arma el testigo del pie y la gramática, que da el cuerpo base de cada signo.
+La máquina simula seis estados del taller: **calco, placa, frotado, cinta, agua y voz**. Antes arma el testigo del pie y la gramática, que da el cuerpo base de cada signo.
 
 ## Lo que la máquina tuvo que suponer
 
@@ -12,6 +12,7 @@ La máquina simula cinco estados del taller: **calco, placa, cinta, agua y voz**
 - **El cuerpo del pie:** 8,5 puntos.
 - **La piscina:** azulejo de 150 mm y junta de 3 mm, hasta que se mida. La pared da el frotado sobre el que se calca.
 - **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo. En la foto cercana de la cabeza, el paso de la retícula de 8 × 7 mide 0,81 en los bordes y 0,91 al centro (promedio 0,86): el dibujo curva la cabeza como un cilindro. El 0,84 cae dentro.
+- **El frotado:** cada frotada aplasta entre un 5 y un 9 % del relieve del surco. Es un supuesto: se mide frotando.
 - **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.
 - **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.
 
@@ -184,6 +185,20 @@ Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, c
 
 ![Rotas](salida/04b_placas_rotas.jpg)
 
+## Frotado
+
+![Frotado](salida/08_frotado.jpg)
+
+![Frotadas de la a](salida/08b_frotadas_de_la_a.jpg)
+
+Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acción 1, ahora sobre la letra. El papel no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Se frota hasta que la letra no se lee: **el peso de una letra se mide en frotadas.** Las halladas se leen, en promedio, hasta la frotada 22,1; las reconstruidas, hasta la 9,8. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, tienen menos relieve que tomar el grafito y se borran antes.
+
+**Las primeras en borrarse:** «é» (7), «;» (8), «:» (8), «»» (8), «z» (9), «?» (9), «ñ» (9), «2» (9).
+
+**Las últimas:** «)» (23), «b» (23), «s» (24), «o» (24), «r» (24), «l» (24), «c» (24), «í» (24).
+
+El signo final, una presión de pulgar, da 0 frotadas legibles: el domo es liso y el papel lo acompaña; solo marca el filo.
+
 ## Cinta
 
 ![Cinta](salida/07_cinta.jpg)
@@ -219,6 +234,7 @@ El poema se lee una vez en voz alta junto a la bandeja, mientras se fotografían
 - **El libro:** qué letra tiene el pie en su tamaño real, ni cómo se imprimió. La foto da sus medidas, no sus formas.
 - **La mano:** el temblor es ruido con un ritmo; no cansa, no duda, no se distrae.
 - **El aluminio:** cómo se rompe de verdad. Aquí se rompe con una probabilidad.
+- **El grafito:** cuánto relieve se lleva cada frotada.
 - **La cinta:** cómo se despega de verdad; aquí cada tramo deja un residuo supuesto.
 - **El agua:** un solo rebote, un eco desplazado y ninguna polarización.
 - **La voz:** no es la tuya.
@@ -227,7 +243,7 @@ El poema se lee una vez en voz alta junto a la bandeja, mientras se fotografían
 
 Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compararlas placa por placa:
 
-- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas carpetas de estado: `calco`, `placa`, `cinta`, `agua`, `voz`.
+- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas carpetas de estado: `calco`, `placa`, `frotado`, `cinta`, `agua`, `voz`.
 - **Fichas:** `tipografia/mano/fichas.json`, con los mismos campos que `salida/fichas_simuladas.json`.
 
 **Qué se compara:**
@@ -236,5 +252,6 @@ Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compa
 2. **Métricas:** la base y la altura de x que dio la foto contra las que dio el testigo sustituto.
 3. **Reconstrucciones:** las 25 recetas de la máquina contra las tuyas. Es donde más van a diferir, y donde más interesa.
 4. **Tiempo y roturas:** horas, intentos y roturas por placa.
-5. **Agua:** si las reconstruidas también llegan más débiles.
-6. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.
+5. **Frotado:** cuántas frotadas se leen, y qué signos se borran primero.
+6. **Agua:** si las reconstruidas también llegan más débiles.
+7. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.
