@@ -1,26 +1,22 @@
-"""Los mapas del informe de decisiones de Contenida.
+"""Los mapas del informe de decisiones de Contenida, dibujados a mano (con código).
 
 Uso (desde la raíz del repositorio):
-    python3 tipografia/informe/mapas.py
+    python3 tipografia/informe/mapas.py            # los seis
+    python3 tipografia/informe/mapas.py 1 4        # solo esos
 
 Escribe en tipografia/informe/mapas/ seis mapas en SVG y en PNG (con Chromium,
-como las láminas). Toman de las referencias (planos de dibujo, análisis de
-borde, haces de líneas con rótulos, redes sobre un plano) el modo de dibujar,
-y de Contenida todo lo demás:
-  - la tinta es el violeta del esténcil y el gris del grafito; el verde, que es
-    solo luz, no aparece;
-  - los nodos son celdas de la cabeza del ídolo, un rectángulo dentro de otro,
-    abiertos abajo en su desagüe; o círculos, cuando son fuentes;
-  - las vasijas son los cuatro generadores (o, l, n, a), rayados en violeta y
-    acotados en milímetros;
-  - los rótulos van en Courier Prime; los versos, en Newsreader cursiva;
-  - cada mapa lleva su ficha, como las placas, y su folio.
+como las láminas). El repertorio de trazos está en mano.py: líneas que tiemblan
+apenas, órbitas abiertas en su punto más bajo, aguadas de tinta de esténcil,
+rayados de grafito, notas a mano sobre las líneas y, a máquina, lo que ya estaba
+escrito. No hay marcos, ni cajas, ni tablas: cada mapa lleva su leyenda a mano,
+en una esquina, y su firma.
+
+Los cuerpos de los signos vienen de la gramática (simulacion/desenterrar.py): son
+la propuesta de la máquina y, como en las láminas, no entran en la caja.
 """
 
 import json
 import math
-import random
-import re
 import subprocess
 import sys
 from pathlib import Path
@@ -29,840 +25,1113 @@ AQUI = Path(__file__).resolve().parent
 TIPO = AQUI.parent
 SALIDA = AQUI / "mapas"
 FUENTES = TIPO / "laminas" / "fuentes"
+sys.path.insert(0, str(AQUI))
 sys.path.insert(0, str(TIPO / "laminas"))
 
-PAPEL, TINTA, VIOLETA, LILA = "#f6f4ee", "#1d1c1a", "#4a2470", "#b9a6d6"
-GRIS, GRIS2, FILETE, OBRA = "#6d6a63", "#9a968d", "#cfcac0", "#d9d4c8"
-MONO, SERIF = "Courier Prime", "Newsreader"
-FECHA = "30.09.2026"
+from mano import (GRAFITO, GRAFITO2, HUESO, LILA, PAPEL, PLATA, TINTA, VIOLETA, Hoja,  # noqa: E402
+                  Perspectiva, bezier, d_suave, elipse_pts, normales, remuestrear, spline)
+
 TOTAL = 6
+CAJA = json.loads((TIPO / "esquemas" / "caja.json").read_text(encoding="utf8"))
+ESTADO = {c["signo"]: c["estado"] for c in CAJA["celdas"]}
+C_ACTUAL = {}
 
 
-def esc(t):
-    return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+# ------------------------------------------------------------------ los cuerpos de la gramática
+
+def cuerpos(cache=None):
+    """{signo: path d} en el lienzo de la placa (600 px = 150 mm), y el esqueleto."""
+    if cache and Path(cache).exists():
+        return json.loads(Path(cache).read_text(encoding="utf8"))
+    sys.path.insert(0, str(TIPO / "simulacion"))
+    from desenterrar import desenterrar
+    D = desenterrar()
+
+    def d_de(geo):
+        out = []
+        for p in (list(geo.geoms) if hasattr(geo, "geoms") else [geo]):
+            for anillo in [p.exterior, *p.interiors]:
+                c = list(anillo.coords)[:-1]
+                out.append("M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in c) + "Z")
+        return " ".join(out)
+
+    e = D["esqueleto"]
+    datos = dict(signos={s: dict(d=d_de(v["geo"].simplify(0.4)), receta=v["receta"]) for s, v in D["gramatica"].items()},
+                 esqueleto={k: float(e[k]) for k in ("afuera", "borde", "fondo", "desague", "xh", "canal")})
+    if cache:
+        Path(cache).write_text(json.dumps(datos, ensure_ascii=False), encoding="utf8")
+    return datos
 
 
 def partir(texto, ancho):
-    """Corta un texto en líneas de a lo sumo `ancho` caracteres, por palabras."""
-    lineas, linea = [], ""
+    """Corta un texto en renglones de a lo sumo `ancho` caracteres, por palabras."""
+    renglones, r = [], ""
     for p in texto.split():
-        if linea and len(linea) + 1 + len(p) > ancho:
-            lineas.append(linea)
-            linea = p
+        if r and len(r) + 1 + len(p) > ancho:
+            renglones.append(r)
+            r = p
         else:
-            linea = f"{linea} {p}".strip()
-    if linea:
-        lineas.append(linea)
-    return lineas
+            r = f"{r} {p}".strip()
+    return renglones + ([r] if r else [])
 
 
-class Lienzo:
-    def __init__(self, ancho, alto, semilla):
-        self.W, self.H = ancho, alto
-        self.capas = {"fondo": [], "construccion": [], "rayado": [], "haces": [], "nodos": [], "textos": []}
-        self.defs = []
-        self.rng = random.Random(semilla)
-        self.n_clip = 0
-
-    def add(self, capa, s):
-        self.capas[capa].append(s)
-
-    # -------------------------------------------------------------- texto
-    def texto(self, x, y, t, tam=14, color=TINTA, fuente=MONO, ancla="start", estilo="", peso=400, esp=0.0,
-              capa="textos", rot=0.0):
-        tr = f' transform="rotate({rot:.2f} {x:.1f} {y:.1f})"' if rot else ""
-        st = f' font-style="{estilo}"' if estilo else ""
-        ls = f' letter-spacing="{esp}"' if esp else ""
-        self.add(capa, f'<text x="{x:.1f}" y="{y:.1f}" font-family="{fuente}" font-size="{tam}" fill="{color}" '
-                       f'text-anchor="{ancla}" font-weight="{peso}"{st}{ls}{tr}>{esc(t)}</text>')
-
-    def bloque(self, x, y, lineas, tam=14, color=TINTA, fuente=MONO, ancla="start", estilo="", inter=1.25, fondo=True):
-        """Varias líneas; con fondo de papel para que los haces no las crucen."""
-        if fondo:
-            ancho = max(len(l) for l in lineas) * tam * (0.6 if fuente == MONO else 0.47)
-            x0 = x if ancla == "start" else x - ancho if ancla == "end" else x - ancho / 2
-            self.add("textos", f'<rect x="{x0 - 3:.1f}" y="{y - tam * 0.95:.1f}" width="{ancho + 6:.1f}" '
-                               f'height="{tam * inter * (len(lineas) - 1) + tam * 1.3:.1f}" fill="{PAPEL}" opacity=".86"/>')
-        for i, l in enumerate(lineas):
-            self.texto(x, y + i * tam * inter, l, tam, color, fuente, ancla, estilo)
-        return y + (len(lineas) - 1) * tam * inter
-
-    # -------------------------------------------------------------- líneas
-    def linea(self, x0, y0, x1, y1, color=TINTA, grosor=0.6, opacidad=1.0, guiones="", capa="haces"):
-        g = f' stroke-dasharray="{guiones}"' if guiones else ""
-        self.add(capa, f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="{color}" '
-                       f'stroke-width="{grosor}" opacity="{opacidad}"{g}/>')
-
-    def curva(self, p0, p1, p2, p3, color=TINTA, grosor=0.55, opacidad=0.8, guiones="", capa="haces"):
-        g = f' stroke-dasharray="{guiones}"' if guiones else ""
-        self.add(capa, f'<path d="M{p0[0]:.1f},{p0[1]:.1f} C{p1[0]:.1f},{p1[1]:.1f} {p2[0]:.1f},{p2[1]:.1f} '
-                       f'{p3[0]:.1f},{p3[1]:.1f}" fill="none" stroke="{color}" stroke-width="{grosor}" '
-                       f'opacity="{opacidad}"{g}/>')
-
-    def haz(self, origen, nudo, destino, hebras=5, color=TINTA, abre=10.0, opacidad=0.55, llegada=None, grosor=0.5,
-            guiones=""):
-        """Un haz de hebras finas: sale junto del origen, se aprieta en el nudo y se abre hacia el destino."""
-        r = self.rng
-        llegada = llegada if llegada is not None else (destino[0] - nudo[0], destino[1] - nudo[1])
-        L = math.hypot(*llegada) or 1
-        ux, uy = llegada[0] / L, llegada[1] / L
-        for _ in range(hebras):
-            j = lambda s: r.uniform(-s, s)                                            # noqa: E731
-            p0 = (origen[0] + j(3), origen[1] + j(3))
-            p1 = (nudo[0] + j(2.5), nudo[1] + j(2.5))
-            d = math.hypot(destino[0] - nudo[0], destino[1] - nudo[1]) * r.uniform(0.35, 0.55)
-            p2 = (destino[0] - ux * d + j(abre), destino[1] - uy * d + j(abre))
-            p3 = (destino[0] + j(abre * 0.25), destino[1] + j(abre * 0.25))
-            self.curva(p0, p1, p2, p3, color, grosor, opacidad * r.uniform(0.6, 1.0), guiones)
-
-    # -------------------------------------------------------------- nodos
-    def celda(self, cx, cy, w, color=TINTA, grosor=1.3, relleno=PAPEL, desague=True, doble=True):
-        """La celda de la cabeza del ídolo: 0,84 de ancho por alto, un rectángulo dentro de otro, con desagüe."""
-        h = w / 0.84
-        x0, y0 = cx - w / 2, cy - h / 2
-        self.add("nodos", f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{w:.1f}" height="{h:.1f}" fill="{relleno}" stroke="none"/>')
-        rects = [(x0, y0, w, h)]
-        if doble:
-            rects.append((x0 + 0.18 * w, y0 + 0.13 * h, w * 0.64, h * 0.74))
-        for (a, b, ww, hh) in rects:
-            m, g = a + ww / 2, min(6.0, ww * 0.08) if desague else 0
-            self.add("nodos", f'<path d="M{m + g:.1f},{b + hh:.1f} H{a + ww:.1f} V{b:.1f} H{a:.1f} V{b + hh:.1f} H{m - g:.1f}" '
-                              f'fill="none" stroke="{color}" stroke-width="{grosor}"/>')
-        return (x0, y0, w, h)
-
-    def circulo(self, cx, cy, r, color=TINTA, grosor=0.9, relleno="none", opacidad=1.0, capa="nodos", guiones=""):
-        g = f' stroke-dasharray="{guiones}"' if guiones else ""
-        self.add(capa, f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="{relleno}" stroke="{color}" '
-                       f'stroke-width="{grosor}" opacity="{opacidad}"{g}/>')
-
-    def punto(self, cx, cy, r=2.6, color=TINTA):
-        self.add("nodos", f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{color}"/>')
-
-    # -------------------------------------------------------------- rayado y vasijas
-    def rayado(self, d, caja, paso=3.2, color=VIOLETA, grosor=0.9, transform=""):
-        """Rayado vertical recortado a una forma (el rojo de las referencias, aquí violeta)."""
-        self.n_clip += 1
-        cid = f"clip{self.n_clip}"
-        self.defs.append(f'<clipPath id="{cid}"><path d="{d}" transform="{transform}" clip-rule="evenodd"/></clipPath>')
-        x0, y0, x1, y1 = caja
-        lineas = []
-        x = x0
-        while x <= x1:
-            ya = y0 + self.rng.uniform(-2, 2)
-            yb = y1 + self.rng.uniform(-2, 2)
-            lineas.append(f'<line x1="{x:.1f}" y1="{ya:.1f}" x2="{x:.1f}" y2="{yb:.1f}"/>')
-            x += paso * self.rng.uniform(0.75, 1.25)
-        self.add("rayado", f'<g clip-path="url(#{cid})" stroke="{color}" stroke-width="{grosor}">{"".join(lineas)}</g>')
-
-    def cortina(self, x0, x1, base, alturas, colores, grosor=1.0, arriba=True):
-        """Líneas verticales que cuelgan (o suben) de una base, una por dato: el análisis de borde."""
-        n = len(alturas)
-        for i, (a, c) in enumerate(zip(alturas, colores)):
-            x = x0 + (x1 - x0) * (i + 0.5) / n
-            y1 = base - a if arriba else base + a
-            self.linea(x, base, x, y1, c, grosor, 1.0, capa="rayado")
-
-    def cota(self, x0, x1, y, texto, color=GRIS, tam=11):
-        """Una cota horizontal, con topes y flechas, como en los planos."""
-        self.linea(x0, y - 5, x0, y + 5, color, 0.8, capa="textos")
-        self.linea(x1, y - 5, x1, y + 5, color, 0.8, capa="textos")
-        self.linea(x0, y, x1, y, color, 0.6, capa="textos")
-        for x, s in ((x0, 1), (x1, -1)):
-            self.add("textos", f'<path d="M{x:.1f},{y:.1f} l{6 * s},-2.5 v5 z" fill="{color}"/>')
-        self.texto((x0 + x1) / 2, y + tam + 4, texto, tam, color, ancla="middle")
-
-    def corchetes(self, x0, y0, x1, y1, color=GRIS):
-        for x, s in ((x0, 1), (x1, -1)):
-            self.add("textos", f'<path d="M{x + 7 * s:.1f},{y0:.1f} H{x:.1f} V{y1:.1f} H{x + 7 * s:.1f}" fill="none" '
-                               f'stroke="{color}" stroke-width="0.9"/>')
-
-    # -------------------------------------------------------------- marco, ficha y folio
-    def marco(self, numero, titulo, ficha, fw=380):
-        W, H = self.W, self.H
-        self.add("fondo", f'<rect width="{W}" height="{H}" fill="{PAPEL}"/>')
-        self.add("fondo", f'<rect x="18" y="18" width="{W - 36}" height="{H - 36}" fill="none" stroke="{FILETE}" stroke-width="1"/>')
-        self.texto(W - 36, 46, f"contenida · informe de decisiones · mapa {numero} / {TOTAL}", 12, GRIS, ancla="end")
-        self.texto(36, 46, "(" + str(numero) + ")", 12, GRIS)
-        self.texto(W - 36, H - 34, f"MAPA {numero} · {titulo.upper()}", 13, TINTA, ancla="end", esp=1.6)
-        # la ficha, abajo a la derecha, como la de las placas
-        fh = 22 * (len(ficha) + 1)
-        fx, fy = W - 36 - fw, H - 62 - fh
-        self.add("textos", f'<rect x="{fx}" y="{fy}" width="{fw}" height="{fh}" fill="{PAPEL}" stroke="{GRIS2}" stroke-width="0.8"/>')
-        self.texto(fx + 10, fy + 16, "ficha", 12, TINTA, peso=700)
-        for i, (k, v) in enumerate(ficha, 1):
-            y = fy + 22 * i
-            self.linea(fx, y, fx + fw, y, FILETE, 0.8, capa="textos")
-            self.linea(fx + 120, y, fx + 120, y + 22, FILETE, 0.8, capa="textos")
-            self.texto(fx + 10, y + 15, k, 11.5, GRIS)
-            self.texto(fx + 130, y + 15, v, 11.5, TINTA)
-        return fx, fy
-
-    def svg(self):
-        orden = ["fondo", "construccion", "rayado", "haces", "nodos", "textos"]
-        cuerpo = "\n".join("\n".join(self.capas[c]) for c in orden)
-        return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {self.W} {self.H}" width="{self.W}" '
-                f'height="{self.H}"><defs>{"".join(self.defs)}</defs>\n{cuerpo}\n</svg>\n')
+def ref(s):
+    return f"s{ord(s)}"
 
 
-# ------------------------------------------------------------------ datos del proyecto
-
-def generadores():
-    """El cuerpo base de o, l, n y a, en el lienzo de la placa (600 px = 150 mm)."""
-    out = {}
-    for s in "olna":
-        t = (TIPO / "simulacion" / "salida" / "gramatica" / f"{s}.svg").read_text(encoding="utf8")
-        d = re.search(r'<path d="([^"]+)"', t).group(1)
-        nums = [float(v) for v in re.findall(r"-?\d+\.?\d*", d)]
-        xs, ys = nums[0::2], nums[1::2]
-        out[s] = dict(d=d, caja=(min(xs), min(ys), max(xs), max(ys)))
-    return out
+def definir(H, signos):
+    """Pone en defs los cuerpos que el mapa usa (cada uno una vez)."""
+    for s in dict.fromkeys(signos):
+        H.defs.append(f'<path id="{ref(s)}" d="{C_ACTUAL["signos"][s]["d"]}" fill-rule="evenodd"/>')
 
 
-def vasija(L, s, g, x, y, escala, rotulo=True):
-    """Un generador rayado en violeta, entre corchetes y acotado en milímetros."""
-    x0, y0, x1, y1 = g["caja"]
-    tr = f"translate({x - x0 * escala:.2f} {y - y0 * escala:.2f}) scale({escala})"
-    ancho, alto = (x1 - x0) * escala, (y1 - y0) * escala
-    L.rayado(g["d"], (x - 4, y - 4, x + ancho + 4, y + alto + 4), paso=3.0, transform=tr)
-    L.add("nodos", f'<path d="{g["d"]}" transform="{tr}" fill="none" stroke="{VIOLETA}" stroke-width="{0.7 / escala:.2f}" '
-                   f'fill-rule="evenodd"/>')
-    L.corchetes(x - 12, y - 6, x + ancho + 12, y + alto + 6)
-    if rotulo:
-        L.cota(x - 12, x + ancho + 12, y + alto + 20, f"{s} · {(x1 - x0) / 4:.0f} × {(y1 - y0) / 4:.0f} mm".replace(".", ","))
-    return ancho, alto
+def _tr(x, y, escala, rot):
+    return f"translate({x:.1f} {y:.1f}) rotate({rot:.1f}) scale({escala:.4f}) translate(-300 -320)"
 
+
+def contorno(H, s, x, y, escala, color=TINTA, ancho=0.9, punteado=False, rot=0.0, capa="objetos", opac=1.0):
+    """El contorno de un signo, como se calca: continuo si es hallado, punteado si es reconstruido."""
+    dash = f' stroke-dasharray="0.1 {3.6 / escala:.1f}" stroke-linecap="round"' if punteado else ""
+    op = f' opacity="{opac}"' if opac < 1 else ""
+    H.add(capa, f'<use href="#{ref(s)}" transform="{_tr(x, y, escala, rot)}" fill="none" stroke="{color}" '
+                f'stroke-width="{ancho / escala:.2f}" stroke-linejoin="round"{dash}{op}/>')
+
+
+def cuerpo(H, s, x, y, escala, color=TINTA, rot=0.0, opac=1.0, capa="objetos", espejo=False):
+    op = f' opacity="{opac}"' if opac < 1 else ""
+    tr = _tr(x, y, escala, rot).replace(f"scale({escala:.4f})", f"scale({escala:.4f} {-escala:.4f})") if espejo \
+        else _tr(x, y, escala, rot)
+    H.add(capa, f'<use href="#{ref(s)}" transform="{tr}" fill="{color}"{op}/>')
+
+
+def aguada_signo(H, s, x, y, escala, color=VIOLETA, opac=0.6, rot=0.0):
+    """Un signo en aguada: la tinta del esténcil con agua, dentro de la forma de la letra."""
+    H.aguada(C_ACTUAL["signos"][s]["d"], color, opac, transform=_tr(x, y, escala, rot), desplaza=3.0, capas=2, borde=0.6,
+             erosion=1.0)
+
+
+def lineas_de_la_letra(H, ys, x0=40, x1=None):
+    """Las cuatro líneas de la anatomía (afuera, borde, fondo, desagüe) cruzando la hoja, apenas."""
+    x1 = x1 or H.W - 40
+    for nombre, y in ys:
+        borde = nombre == "borde"
+        p = H.trazo([(x0, y), (x1, y + H.rng.uniform(-4, 4))], LILA if borde else GRAFITO2, 1.0 if borde else 0.6,
+                    1.0 if borde else 0.55, guiones=None if borde else "7 6", deriva=2.5)
+        H.sobre(p[:40], nombre, 15, VIOLETA if borde else GRAFITO, desde=0, ancla="start", dy=-5)
+
+
+# ------------------------------------------------------------------ objetos del proyecto
+
+def piscina(H, cx, arriba, ancho=300, fondo_=260, prof=(60, 110), baldosa=30, agua=True, foco=380, altura=260,
+            distancia=380):
+    """La piscina vacía en perspectiva, desde el borde: el lugar de la obra."""
+    P = Perspectiva(cx, arriba - altura * foco / distancia, foco, altura, distancia)
+    X = ancho / 2
+    borde = [P(-X, 0, 0), P(X, 0, 0), P(X, fondo_, 0), P(-X, fondo_, 0)]
+    cid = H.uid("pileta")
+    H.defs.append(f'<clipPath id="{cid}"><path d="M{" L".join(f"{x:.1f},{y:.1f}" for x, y in borde)}Z"/></clipPath>')
+    z = lambda Y: -prof[0] - (prof[1] - prof[0]) * Y / fondo_   # noqa: E731
+    g = []
+
+    def lin(pts, c=GRAFITO2, w=0.5, o=0.8):
+        g.append(f'<path d="{d_suave(H.temblar(pts, 0.25, 0.6))}" fill="none" stroke="{c}" stroke-width="{w}" '
+                 f'opacity="{o}"/>')
+    n = max(2, int(ancho // baldosa))
+    for i in range(n + 1):                                   # el piso: baldosas que se van al fondo
+        x = -X + i * ancho / n
+        lin([P(x, Y, z(Y)) for Y in range(0, fondo_ + 1, 20)])
+    for Y in range(0, fondo_ + 1, baldosa):
+        lin([P(-X, Y, z(Y)), P(X, Y, z(Y))])
+    for Zs in range(0, int(prof[1]) + 1, baldosa):           # la pared del fondo
+        lin([P(-X, fondo_, -Zs), P(X, fondo_, -Zs)], w=0.45)
+    for i in range(n + 1):
+        x = -X + i * ancho / n
+        lin([P(x, fondo_, 0), P(x, fondo_, z(fondo_))], w=0.45)
+    for s in (-1, 1):                                        # las paredes de los lados
+        lin([P(s * X, Y, z(Y)) for Y in range(0, fondo_ + 1, 20)], TINTA, 0.6, 0.9)
+        for Zs in range(baldosa, int(prof[1]) + 1, baldosa):
+            lin([P(s * X, Y, max(-Zs, z(Y))) for Y in range(0, fondo_ + 1, 20)], w=0.4, o=0.6)
+    lin([P(-X, fondo_, z(fondo_)), P(X, fondo_, z(fondo_))], TINTA, 0.6, 0.9)
+    for s in (-1, 1):
+        lin([P(s * X, fondo_, 0), P(s * X, fondo_, z(fondo_))], TINTA, 0.6, 0.9)
+    H.add("lineas", f'<g clip-path="url(#{cid})" stroke-linecap="round">{"".join(g)}</g>')
+    for k, w in ((0, 1.0), (1, 0.5)):                        # el borde, doble: la piedra de la orilla
+        e = 6 * k
+        H.trazo([P(-X - e, -e, 0), P(X + e, -e, 0), P(X + e, fondo_ + e, 0), P(-X - e, fondo_ + e, 0), P(-X - e, -e, 0)],
+                TINTA, w, temblor=0.3, deriva=1.0)
+    dx, dy = P(0, fondo_ * 0.72, z(fondo_ * 0.72))           # el desagüe y lo que queda del agua
+    if agua:
+        d, _ = H.mancha(dx + ancho * 0.06, dy + 3, ancho * 0.2, ancho * 0.045, 0.15, 9, 2)
+        H.aguada(d, LILA, 0.95, desplaza=8)
+    H.add("objetos", f'<ellipse cx="{dx:.1f}" cy="{dy:.1f}" rx="{ancho / 60:.1f}" ry="{ancho / 150:.1f}" fill="{TINTA}"/>')
+    return P, z
+
+
+PIE = ["EL IDOLO KOCHAMAMA, según Posnansky, presentado en amplio detalle reconstructivo,",
+       "según viejas fotografías (hoy está muy erosionado y casi no se ven esos detalles).",
+       "Su calendario, todavía no bien interpretado, es distinto del de la Puerta del Sol y",
+       "muestra motivos mucho más antiguos. Suponemos que originariamente se encontraba en",
+       "Pumapuncu, en el lugar en donde luego se puso la Puerta de la Luna."]
+
+
+def tira_del_pie(H, cx, cy, ancho=380, alto=78, rot=-3.0, lineas=4, tam=7.1):
+    """La tira del pie de la lámina: papel rasgado con sus líneas a máquina."""
+    r = H.rng
+    x0, x1, y0, y1 = -ancho / 2, ancho / 2, -alto / 2, alto / 2
+    arriba = [(x0 + (x1 - x0) * k / 30, y0 + r.uniform(-1.8, 1.8)) for k in range(31)]
+    abajo = [(x1 - (x1 - x0) * k / 30, y1 + r.uniform(-2.2, 2.2)) for k in range(31)]
+    pts = arriba + [(x1 + r.uniform(-3, 3), 0)] + abajo + [(x0 + r.uniform(-3, 3), 0)]
+    tr = f"translate({cx:.1f} {cy:.1f}) rotate({rot})"
+    d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts) + "Z"
+    H.add("objetos", f'<path d="{d}" transform="{tr}" fill="#fbfaf6" stroke="{GRAFITO2}" stroke-width="0.7"/>')
+    paso = (alto - 18) / lineas
+    for i, l in enumerate(PIE[:lineas]):
+        H.add("objetos", f'<text transform="{tr}" x="{x0 + 12:.1f}" y="{y0 + 14 + tam + i * paso:.1f}" '
+                         f'font-family="Courier Prime" font-size="{tam}" fill="{GRAFITO}" textLength="{ancho - 24}" '
+                         f'lengthAdjust="spacingAndGlyphs">{l}</text>')
+    return tr
+
+
+def placa(H, cx, cy, w, h, rot=0.0, opac=0.6):
+    """Una placa de papel de aluminio: plata, con el borde apenas arrugado y algún pliegue."""
+    r = H.rng
+    pts = []
+    for k in range(48):
+        t = k / 48
+        if t < 0.25:
+            x, y = -w / 2 + w * t * 4, -h / 2
+        elif t < 0.5:
+            x, y = w / 2, -h / 2 + h * (t - 0.25) * 4
+        elif t < 0.75:
+            x, y = w / 2 - w * (t - 0.5) * 4, h / 2
+        else:
+            x, y = -w / 2, h / 2 - h * (t - 0.75) * 4
+        pts.append((x + r.uniform(-2.2, 2.2), y + r.uniform(-2.2, 2.2)))
+    c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    gira = lambda x, y: (cx + x * c - y * s, cy + x * s + y * c)   # noqa: E731
+    pts = [gira(x, y) for x, y in pts]
+    d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts) + "Z"
+    H.aguada(d, PLATA, opac, desplaza=4, capas=2, borde=0.5)
+    H.trazo(pts + pts[:1], GRAFITO, 0.6, 0.8, temblor=0.2, deriva=0.4)
+    for _ in range(5):                                        # pliegues
+        x0, y0 = r.uniform(-w / 2, w / 2), r.uniform(-h / 2, h / 2)
+        a = r.uniform(0, math.pi)
+        L = r.uniform(12, 30)
+        H.trazo([gira(x0, y0), gira(x0 + L * math.cos(a), y0 + L * math.sin(a))], GRAFITO2, 0.5, 0.6, temblor=0.2,
+                deriva=0.5)
+    return d
+
+
+def repujado(H, s, x, y, escala, rot=0.0):
+    """La letra repujada: el contorno y su luz, corrida medio milímetro."""
+    contorno(H, s, x + 1.3, y + 1.3, escala, "#ffffff", 1.4, rot=rot, opac=0.9)
+    contorno(H, s, x, y, escala, GRAFITO, 0.9, rot=rot)
+
+
+def charco(H, cx, cy, rx, ry, ondas=3, color=LILA):
+    """Un charco: aguada y sus ondas, abiertas abajo."""
+    d, _ = H.mancha(cx, cy, rx, ry, 0.08, 10)
+    H.aguada(d, color, 0.95, desplaza=7)
+    for k in range(1, ondas + 1):
+        H.orbita(cx, cy, rx * (0.25 + 0.28 * k), ry * (0.25 + 0.28 * k), 0, hueco=18, color=VIOLETA, ancho=0.55,
+                 pasadas=1, opac=0.8 - 0.15 * k)
+
+
+def frotado(H, s, cx, cy, w, h, escala, capa="objetos"):
+    """Una frotada: el grafito sobre el papel apoyado en la placa. La letra sale más oscura."""
+    x0, y0 = cx - w / 2, cy - h / 2
+    d = f"M{x0:.1f},{y0:.1f} h{w:.1f} v{h:.1f} h{-w:.1f}Z"
+    H.add(capa, f'<path d="{d}" fill="#fbfaf6" stroke="{GRAFITO2}" stroke-width="0.6"/>')
+    H.rayado(d, (x0, y0, x0 + w, y0 + h), -52, 3.2, GRAFITO, 0.6, 0.4, capa=capa, desvanece=0.6)
+    H.rayado(C_ACTUAL["signos"][s]["d"], (x0, y0, x0 + w, y0 + h), -52, 1.3, GRAFITO, 0.9, 1.0,
+             transform=_tr(cx, cy + 8, escala, 0), capa=capa, desvanece=0.3)
+
+
+def caja_a_mano(H, gx, gy, gl, marcas=True, color=GRAFITO):
+    """La caja de 8 × 7, a mano; un punto por signo: tinta si es hallado, violeta si es reconstruido."""
+    for i in range(9):
+        H.trazo([(gx + i * gl, gy), (gx + i * gl, gy + 7 * gl)], color, 0.5, 0.8, temblor=0.25, deriva=0.5)
+    for j in range(8):
+        H.trazo([(gx, gy + j * gl), (gx + 8 * gl, gy + j * gl)], color, 0.5, 0.8, temblor=0.25, deriva=0.5)
+    if marcas:
+        for c in CAJA["celdas"]:
+            x, y = gx + (c["columna"] - 0.5) * gl, gy + (c["fila"] - 0.5) * gl
+            if c["estado"] == "hallada":
+                H.punto(x, y, gl * 0.15, TINTA)
+            elif c["estado"] == "reconstruida":
+                H.punto(x, y, gl * 0.15, VIOLETA, opac=0.8)
+
+
+def tramo(p, a, b):
+    """Un tramo de una polilínea, de la fracción a a la b."""
+    return p[int(len(p) * a):max(int(len(p) * a) + 2, int(len(p) * b))]
+
+
+# ------------------------------------------------------------------ mapa 1: el proyecto entero
+
+def mapa_1():
+    H = Hoja(1200, 1600, 11)
+    definir(H, "oaqgln")
+    cx = 600
+    lineas_de_la_letra(H, [("afuera", 118), ("borde", 392), ("fondo", 1112), ("desagüe", 1392)])
+    H.eje(cx, 58, cx - 4, 1452, TINTA, 0.8, marcas=(0.13, 0.34, 0.54, 0.73, 0.9))
+    H.mano(cx + 12, 1446, "hacia el desagüe", 15, GRAFITO)
+    arco = (0.34, 0.62)                                       # las notas van en el arco de arriba de cada órbita
+
+    # 1 · la obra: la piscina vacía
+    o = H.orbita(cx, 236, 350, 96, -5, color=TINTA, ancho=0.75, sentido=0.2)
+    piscina(H, cx, 190, 290, 240, baldosa=29)
+    H.sobre(tramo(o, 0.25, 0.42), "vuelta 1/5 · la obra", 15, GRAFITO)
+    H.mano(92, 196, "La obra", 30, TINTA, rot=-2)
+    H.mano(94, 222, "Contener una ruina · 22.8.2026", 15, GRAFITO)
+    H.manos(975, 196, ["partir del registro,", "no de la piedra"], 17)
+    H.manos(975, 272, ["todo es un continente,", "y ninguno retiene"], 17)
+    H.maquinas(96, 300, ["«Quedó el contenedor", " de lo que ya no está.»"], 13)
+
+    # 2 · desenterrar: el pie y el calco
+    o = H.orbita(cx + 10, 540, 330, 112, 7, color=TINTA, ancho=0.75, sentido=0.8)
+    tira_del_pie(H, cx - 30, 530, 380, 76, -3)
+    calco = H.mancha(cx + 120, 500, 118, 64, 0.06, 8, 5)[0]
+    H.aguada(calco, PLATA, 0.35, desplaza=3, capas=1)
+    contorno(H, "o", cx + 72, 500, 0.19, TINTA, 1.0)
+    contorno(H, "g", cx + 132, 492, 0.19, TINTA, 1.0)
+    contorno(H, "q", cx + 192, 500, 0.19, VIOLETA, 1.4, punteado=True)
+    H.sobre(tramo(o, *arco), "vuelta 2/5 · desenterrar · acciones 0 a 3", 15, GRAFITO)
+    H.mano(952, 478, "Desenterrar", 30, TINTA, rot=-2)
+    H.manos(952, 620, ["del pie, las medidas:", "30 hallados y 25", "por reconstruir"], 17)
+    H.mano(262, 676, "sinécdoque: el pie por la lámina", 16, VIOLETA, rot=-3)
+    H.maquinas(78, 452, ["«No se salvó la piedra,", " solo la opinión sobre ella.»"], 13)
+
+    # 3 · contener: la placa y la caja
+    o = H.orbita(cx - 6, 812, 340, 118, -8, color=TINTA, ancho=0.75, sentido=0.25)
+    H.orbita(cx + 2, 806, 118, 150, 12, color=GRAFITO, ancho=0.5, pasadas=1, opac=0.8)
+    placa(H, cx, 800, 136, 160, -3, 0.5)
+    repujado(H, "a", cx - 2, 812, 0.25, -3)
+    for i, s in enumerate("olna"):
+        aguada_signo(H, s, 318 + i * 50 + (6 if s == "l" else 0), 808 + (i % 2) * 8, 0.19, VIOLETA, 0.62)
+    H.mano(318, 890, "las cuatro vasijas: o, l, n, a", 15, GRAFITO, rot=-2)
+    caja_a_mano(H, 770, 758, 15)
+    H.mano(768, 886, "la caja de 8 × 7", 15, GRAFITO)
+    H.sobre(tramo(o, *arco), "vuelta 3/5 · contener · acciones 4 a 7", 15, GRAFITO)
+    H.mano(70, 742, "Contener", 30, TINTA, rot=-2)
+    H.manos(72, 776, ["cada letra, una placa", "suelta de aluminio"], 17)
+    H.manos(958, 890, ["lo que no cabe", "se ve vacío"], 17)
+    H.mano(520, 962, "paradoja: toda cuenca se abre abajo", 16, VIOLETA, rot=2)
+    H.maquinas(70, 1000, ["«y ningún contenedor", " aguanta lo que contiene.»"], 13)
+
+    # 4 · devolver: la frotada y el charco
+    o = H.orbita(cx + 4, 1086, 350, 100, 4, color=TINTA, ancho=0.75, sentido=0.72)
+    H.orbita(cx + 128, 1106, 130, 44, -12, color=VIOLETA, ancho=0.55, pasadas=1, opac=0.85)
+    frotado(H, "a", cx - 120, 1072, 120, 132, 0.2)
+    charco(H, cx + 128, 1110, 92, 22)
+    cuerpo(H, "o", cx + 128, 1116, 0.11, VIOLETA, opac=0.35, espejo=True)
+    H.aguada(H.gota(cx + 128, 1040, 7), VIOLETA, 0.8, desplaza=2, capas=1)
+    H.trazo([(cx + 128, 1002), (cx + 128, 1028)], VIOLETA, 0.9, punteado=True)
+    H.sobre(tramo(o, *arco), "vuelta 4/5 · devolver · acciones 8 a 12", 15, GRAFITO)
+    H.mano(962, 1040, "Devolver", 30, TINTA, rot=-2)
+    H.manos(72, 1176, ["estados, no pesos:", "el peso se mide en frotadas"], 17)
+    H.mano(700, 1204, "la voz deforma, no dice", 16, VIOLETA, rot=-2)
+    H.maquinas(70, 1062, ["«Tocas el agua", " y la diosa se deforma.»"], 13)
+
+    # 5 · lo digital: todavía punteado
+    H.orbita(cx - 10, 1318, 170, 48, -6, color=VIOLETA, ancho=0.9, punteado=True, pasadas=1)
+    H.celda(cx - 10, 1310, 62, VIOLETA, 1.2, punteada=True, doble=False)
+    contorno(H, "o", cx - 10, 1318, 0.13, VIOLETA, 1.3, punteado=True)
+    H.mano(410, 1266, "Digital", 30, TINTA, rot=-2, ancla="end")
+    H.mano(410, 1290, "si cierra: un estado más", 15, GRAFITO, ancla="end")
+    v = H.flecha([(cx + 168, 1316), (1030, 1300), (1142, 1150), (1132, 930), (900, 812)], VIOLETA, 1.1, punteado=True)
+    H.sobre(tramo(v, 0.0, 0.42), "termina y empieza · vuelve a la caja (generación 2)", 15, VIOLETA, desde=45)
+    H.maquinas(700, 1374, ["«Termina y empieza,", " termina y empieza.»"], 13)
+
+    # los centros externos: de dónde se toma
+    externos = [
+        ((70, 604), [(cx - 200, 560)], "Posnansky, 1945: la lámina y su pie", "start"),
+        ((1150, 420), [(cx + 205, 506)], "Tshuma, 2025: sankofa, ¿quién la escribió?", "end"),
+        ((70, 940), [(300, 846)], "Mahendran, 2020: la escritura como vasija", "start"),
+        ((70, 1346), [(cx - 186, 1326)], "Tshuma: objeto, signo, objeto otra vez", "start"),
+    ]
+    for (x, y), destino, texto, ancla in externos:
+        H.cruz(x, y)
+        H.mano(x + (14 if ancla == "start" else -14), y - 8, texto, 16, TINTA, ancla)
+        d = destino[0]
+        medio = ((x + d[0]) / 2, (y + d[1]) / 2 + 12)
+        H.flecha([(x + (8 if ancla == "start" else -8), y + 6), medio, d], TINTA, 0.6, deriva=2)
+
+    H.leyenda(60, 1478, "mapa 1 · el proyecto entero", [("continuo", "lo hallado"),
+                                                        ("punteado", "lo reconstruido, lo que aún no es"),
+                                                        ("orbita", "una etapa; se abre abajo")])
+    H.leyenda(470, 1478, "", [("cruz", "una fuente, afuera"), ("violeta", "la tinta del esténcil"), ("lila", "el agua")])
+    H.leyenda(790, 1478, "", [("plata", "el aluminio"), ("grafito", "el frotado"),
+                              ("maquina", "lo escrito; a mano, lo que se hace")])
+    H.firma(1150, 50, 1, TOTAL, "el proyecto entero")
+    return H
+
+
+# ------------------------------------------------------------------ mapa 2: teoría y fuentes
+
+FUENTES_T = {
+    "EthnoGraphemes": dict(autor="Mahendran, 2020", toma=[
+        "la escritura como vasija (aquí no retiene)", "transmodalidad: la letra se toca, se moja",
+        "la cimática: el estado Voz", "caja baja, la letra de la mano (Brookes)",
+        "contra el exotismo: ningún motivo pegado", "el diccionario de cartas: la caja de placas",
+        "Ellipsis, lo inacabado: el signo …", "la ética del que viene de afuera: Acción 0"],
+        no=["revitalizar una lengua", "una frecuencia por letra", "tatuar: se queda en el esténcil"]),
+    "Afrography": dict(autor="Tshuma, 2025", toma=[
+        "sankofa: ¿quién lo escribió?", "Nedmural: letras sacadas de un muro, el pie",
+        "The Great Stone: la restricción de la ruina", "la cabeza de Oba: el colofón como custodia",
+        "tres cuadernos: desenterrar, contener, devolver", "objeto, signo, objeto: la vuelta a la placa",
+        "herramientas libres; la economía del trabajo", "la placa rota no se corrige"],
+        no=["inventar una escritura", "el estallido: el agua vuelve", "letras hechas con módulos"]),
+    "Tihuanacu": dict(autor="Posnansky, 1945", toma=[
+        "La Paz contiene la ruina", "la cloaca máxima hecha piso: el desagüe", "el agua que se fue: la piscina vacía",
+        "el asperón, elegido por blando: el material decide", "lo que no está se reconstruye: el punteado"],
+        no=["su cronología", "su tesis del título", "su lectura racial de la historia"]),
+    "La iconografía Tiwanaku": dict(autor="Agüero, Uribe y Berenguer, 2003", toma=[
+        "elementos, motivos, figuras: partes y signos", "dobles opuestos: la {¿} no es la {?} al revés",
+        "el Personaje Frontal en pecho y espalda (D4)", "cabezas de pez de perfil (D7)"],
+        no=["interpretar la iconografía", "traducir el «calendario»"]),
+    "Contener una ruina": dict(autor="Rebeca Paz Prada, 2026", toma=[
+        "partir del registro: el pie de la lámina", "el aluminio, la cinta, el agua, la voz",
+        "la piscina vacía: escenario y pantalla"],
+        no=["las lecturas rituales", "las fotos y el cuerpo de Rebeca"]),
+}
+
+
+def vasija(H, cx, cy, alto=150):
+    """Una vasija de metal con una grieta: la escritura como vasija, que aquí no retiene."""
+    a = alto
+    medio = [(0.10, 0.0), (0.12, 0.06), (0.09, 0.12), (0.11, 0.18), (0.30, 0.34), (0.36, 0.52), (0.30, 0.74),
+             (0.18, 0.92), (0.15, 1.0)]
+    der = [(cx + x * a, cy - a / 2 + y * a) for x, y in medio]
+    izq = [(cx - x * a, cy - a / 2 + y * a) for x, y in medio[::-1]]
+    pts = spline(der + izq, 8, True)
+    d = d_suave(pts, True)
+    H.aguada(d, PLATA, 0.75, desplaza=5, capas=2, borde=0.55)
+    H.trazo(pts, TINTA, 0.9, temblor=0.25, deriva=0.6)
+    grieta = [(cx + 0.05 * a, cy - a * 0.38), (cx + 0.11 * a, cy - a * 0.2), (cx + 0.04 * a, cy - a * 0.05),
+              (cx + 0.12 * a, cy + a * 0.12), (cx + 0.07 * a, cy + a * 0.3), (cx + 0.1 * a, cy + a * 0.44)]
+    H.trazo(grieta, TINTA, 1.0, temblor=0.6, deriva=0.3)
+    H.aguada(H.gota(cx + 0.1 * a, cy + a * 0.62, 5), VIOLETA, 0.85, desplaza=1.5, capas=1)
+
+
+def taburete(H, cx, cy, ancho=130):
+    """Un taburete tallado, en negro: el objeto que se vuelve signo y otra vez objeto."""
+    w = ancho
+    pts = [(-0.5, -0.36), (-0.25, -0.28), (0, -0.26), (0.25, -0.28), (0.5, -0.36), (0.46, -0.2), (0.2, -0.14),
+           (0.14, 0.0), (0.16, 0.2), (0.28, 0.3), (0.42, 0.36), (-0.42, 0.36), (-0.28, 0.3), (-0.16, 0.2),
+           (-0.14, 0.0), (-0.2, -0.14), (-0.46, -0.2)]
+    P = spline([(cx + x * w, cy + y * w) for x, y in pts], 5, True)
+    H.add("objetos", f'<path d="{d_suave(H.temblar(P, 0.3, 0.5), True)}" fill="{TINTA}"/>')
+    for k in (-1, 1):                                         # los calados
+        d, _ = H.mancha(cx + k * 0.05 * w, cy + 0.05 * w, 0.025 * w, 0.07 * w, 0.1, 6)
+        H.add("objetos", f'<path d="{d}" fill="{PAPEL}"/>')
+
+
+def piedra(H, cx, cy, ancho=170):
+    """Una losa con su canal: la cloaca máxima de Tiwanaku, hecha piso."""
+    w, h, p = ancho, ancho * 0.28, ancho * 0.22
+    frente = [(cx - w / 2, cy), (cx + w / 2, cy), (cx + w / 2, cy + h), (cx - w / 2, cy + h)]
+    tapa = [(cx - w / 2, cy), (cx - w / 2 + p, cy - p * 0.6), (cx + w / 2 + p, cy - p * 0.6), (cx + w / 2, cy)]
+    lado = [(cx + w / 2, cy), (cx + w / 2 + p, cy - p * 0.6), (cx + w / 2 + p, cy + h - p * 0.6), (cx + w / 2, cy + h)]
+    for cara, paso, op in ((frente, 3.2, 0.9), (lado, 2.4, 1.0), (tapa, 5.0, 0.5)):
+        d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in cara) + "Z"
+        xs, ys = [q[0] for q in cara], [q[1] for q in cara]
+        H.rayado(d, (min(xs), min(ys), max(xs), max(ys)), -35 if cara is not tapa else 10, paso, GRAFITO, 0.6, op)
+        H.trazo(cara + cara[:1], TINTA, 0.8, temblor=0.3, deriva=0.6)
+    c0, c1 = 0.42, 0.58                                       # el canal, a lo largo de la tapa
+    for t in (c0, c1):
+        H.trazo([(cx - w / 2 + p * 0.1 + w * t, cy - p * 0.06), (cx - w / 2 + p * 0.9 + w * t, cy - p * 0.54)], TINTA,
+                0.8)
+    H.trazo([(cx - w / 2 + w * c0 + 2, cy), (cx - w / 2 + w * c0 + 2, cy + h * 0.35),
+             (cx - w / 2 + w * c1 - 2, cy + h * 0.35), (cx - w / 2 + w * c1 - 2, cy)], TINTA, 0.8)
+
+
+def haz_de_fuente(H, etiquetas, x, y0, paso, lado, destino, nudo, color=TINTA, tam=15.5, inter_haz=4.2):
+    """Una lista a mano; de la punta de cada renglón sale una hebra, y las hebras hacen un haz hacia el centro."""
+    n = len(etiquetas)
+    for i, t in enumerate(etiquetas):
+        y = y0 + i * paso
+        H.mano(x, y, t, tam, TINTA if color == TINTA else color, "start" if lado > 0 else "end",
+               rot=H.rng.uniform(-0.8, 0.6))
+        largo = len(t.replace("{", "").replace("}", "")) * tam * 0.43
+        xa = x + lado * (largo + 8)
+        off = (i - (n - 1) / 2) * inter_haz
+        pts = [(xa, y - 5), (xa + lado * 24, y - 5 + (nudo[1] - y) * 0.15),
+               (nudo[0], nudo[1] + off), (destino[0] + (nudo[0] - destino[0]) * 0.35, destino[1] + off * 0.8 +
+                                          (nudo[1] - destino[1]) * 0.25),
+               (destino[0], destino[1] + off * 0.35)]
+        cs = [color, GRAFITO2] if color == TINTA else [color, LILA]
+        H.trazo(spline(pts), cs[i % 2], 0.55, 0.9, temblor=0.25, deriva=0.8)
+        H.punto(xa, y - 5, 1.6, cs[i % 2])
+
+
+def no_se_toma(H, etiquetas, origen, puntas, tam=14.5):
+    """Lo que no se toma: una línea que sale hacia afuera y se corta con un tope; la nota, en grafito."""
+    for t, (x1, y1, ancla) in zip(etiquetas, puntas):
+        H.trazo([origen, (x1, y1)], GRAFITO, 0.6, 0.9, temblor=0.25, deriva=0.5)
+        ang = math.atan2(y1 - origen[1], x1 - origen[0]) + math.pi / 2
+        H.trazo([(x1 - 5 * math.cos(ang), y1 - 5 * math.sin(ang)), (x1 + 5 * math.cos(ang), y1 + 5 * math.sin(ang))],
+                GRAFITO, 1.0, temblor=0.1, deriva=0)
+        H.mano(x1 + (9 if ancla == "start" else -9), y1 + 5, "no: " + t, tam, GRAFITO, ancla)
+
+
+def mapa_2():
+    H = Hoja(1600, 1200, 22)
+    definir(H, "o¿?")
+    F = FUENTES_T
+    centro = (806, 640)
+    # el centro: la o como vasija, con sus órbitas; se abre abajo y gotea
+    H.eje(centro[0] - 4, 360, centro[0] + 6, 930, TINTA, 0.7, marcas=(0.49,))
+    for rx, ry, rot, c, w in ((190, 64, -9, TINTA, 0.8), (128, 170, 14, GRAFITO, 0.55), (250, 100, 6, VIOLETA, 0.6)):
+        H.orbita(centro[0], centro[1], rx, ry, rot, color=c, ancho=w, sentido=0.62)
+    aguada_signo(H, "o", centro[0], centro[1] + 6, 0.5, VIOLETA, 0.7)
+    H.aguada(H.gota(centro[0] - 2, centro[1] + 128, 7), VIOLETA, 0.8, desplaza=2, capas=1)
+    H.mano(centro[0] + 26, centro[1] + 196, "Contenida", 34, TINTA, rot=-2)
+    H.mano(centro[0] + 30, centro[1] + 222, "lo que entra en la vasija no se queda:", 15, GRAFITO)
+    H.mano(centro[0] + 30, centro[1] + 242, "se abre abajo, en su desagüe", 15, GRAFITO)
+    llegada = centro
+
+    # EthnoGraphemes: arriba a la izquierda
+    vasija(H, 190, 190, 150)
+    H.orbita(190, 196, 118, 40, -12, color=TINTA, ancho=0.6, sentido=0.3)
+    H.orbita(186, 190, 70, 110, 8, color=GRAFITO, ancho=0.45, pasadas=1)
+    H.cruz(282, 112)
+    H.mano(296, 118, "EthnoGraphemes", 26, TINTA, rot=-2)
+    H.mano(298, 142, F["EthnoGraphemes"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["EthnoGraphemes"]["toma"], 60, 322, 24, 1, (llegada[0] - 150, llegada[1] - 40), (520, 470))
+    no_se_toma(H, F["EthnoGraphemes"]["no"], (262, 214), [(350, 186, "start"), (360, 212, "start"), (352, 238, "start")])
+
+    # Afrography: abajo a la izquierda
+    taburete(H, 180, 800, 130)
+    H.orbita(180, 806, 120, 38, 8, color=TINTA, ancho=0.6, sentido=0.7)
+    H.cruz(270, 738)
+    H.mano(286, 744, "Afrography", 26, TINTA, rot=-2)
+    H.mano(288, 768, F["Afrography"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["Afrography"]["toma"], 60, 880, 24, 1, (llegada[0] - 160, llegada[1] + 40), (540, 820))
+    no_se_toma(H, F["Afrography"]["no"], (130, 752), [(66, 612, "start"), (80, 640, "start"), (94, 668, "start")])
+
+    # Contener una ruina: arriba, al centro
+    placa(H, 792, 150, 62, 74, 6, 0.8)
+    charco(H, 800, 206, 70, 13, ondas=2)
+    H.orbita(796, 170, 130, 48, -4, color=VIOLETA, ancho=0.7, sentido=0.25)
+    H.cruz(946, 110)
+    H.mano(960, 116, "Contener una ruina", 26, TINTA, rot=-2)
+    H.mano(962, 140, F["Contener una ruina"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["Contener una ruina"]["toma"], 960, 190, 25, 1, (llegada[0] + 30, llegada[1] - 60),
+                  (960, 330), color=VIOLETA)
+    no_se_toma(H, F["Contener una ruina"]["no"], (700, 214), [(690, 292, "end"), (676, 318, "end")])
+
+    # Tihuanacu (Posnansky): arriba a la derecha
+    piedra(H, 1370, 210, 170)
+    H.orbita(1400, 206, 140, 46, 10, color=TINTA, ancho=0.6, sentido=0.3)
+    H.cruz(1300, 300)
+    H.mano(1316, 306, "Tihuanacu", 26, TINTA, rot=-2)
+    H.mano(1318, 330, F["Tihuanacu"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["Tihuanacu"]["toma"], 1540, 390, 25, -1, (llegada[0] + 160, llegada[1] - 20), (1080, 520))
+    no_se_toma(H, F["Tihuanacu"]["no"], (1440, 160), [(1500, 64, "end"), (1520, 90, "end"), (1540, 116, "end")])
+
+    # La iconografía Tiwanaku (Agüero, Uribe y Berenguer): a la derecha, abajo
+    cuerpo(H, "¿", 1352, 790, 0.2, TINTA)
+    cuerpo(H, "?", 1446, 790, 0.2, TINTA)
+    H.trazo([(1398, 712), (1398, 868)], VIOLETA, 1.0, punteado=True)
+    H.mano(1500, 800, "no es", 14, VIOLETA, rot=-2)
+    H.mano(1500, 818, "su espejo", 14, VIOLETA, rot=-2)
+    H.orbita(1400, 790, 128, 60, -6, color=TINTA, ancho=0.6, sentido=0.75)
+    H.cruz(1260, 896)
+    H.mano(1274, 902, "La iconografía Tiwanaku", 24, TINTA, rot=-2)
+    H.mano(1276, 924, F["La iconografía Tiwanaku"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["La iconografía Tiwanaku"]["toma"], 1540, 968, 24, -1, (llegada[0] + 170, llegada[1] + 50),
+                  (1110, 850))
+    no_se_toma(H, F["La iconografía Tiwanaku"]["no"], (1360, 734), [(1300, 628, "end"), (1316, 654, "end")])
+
+    H.leyenda(60, 1124, "mapa 2 · teoría y fuentes", [])
+    H.leyenda(420, 1110, "", [("cruz", "una fuente: un centro externo"), ("continuo", "una hebra: lo que se toma")])
+    H.leyenda(780, 1110, "", [("violeta", "lo que viene de la obra"), ("corte", "una línea cortada: lo que no se toma")])
+    H.firma(1550, 1150, 2, TOTAL, "teoría y fuentes")
+    return H
+
+
+# ------------------------------------------------------------------ mapa 3: la obra, decisión por decisión
+
+CADENA = [("piedra borrada", GRAFITO), ("fotografía vieja", GRAFITO), ("dibujo reconstructivo", GRAFITO2),
+          ("escaneo", GRAFITO2), ("repujado en aluminio", PLATA), ("cuerpo", VIOLETA), ("video", VIOLETA),
+          ("charco", LILA), ("pared de azulejo", LILA)]
+DECISIONES = [
+    # número, lo que hizo la obra, lo que hace la letra, eslabón de la cadena del que sale
+    ("D1", "partir de la lámina y no de la piedra", "las letras salen del pie de la lámina", 1),
+    ("D2", "del asperón al papel de aluminio", "matrices de aluminio repujado; solo caja baja", 4),
+    ("D3", "placas sueltas, con piel entre ellas", "cada letra es un tipo móvil; entre palabras, la piel", 5),
+    ("D4", "puertas en el pecho y la espalda", "la tapa de la caja: una puerta sobre la celda 1", 5),
+    ("D5", "iconografía interpretada, no copiada", "del monolito, solo la retícula y la celda vacía", 2),
+    ("D6", "la piscina vacía, en un estudio de tatuajes", "fondo, borde, desagüe; el violeta del esténcil", 8),
+    ("D7", "placas en el fondo, como peces", "no se dibujan peces: las letras ya lo parecen", 7),
+    ("D8", "la bandeja con un dedo de agua", "el estado Agua: se lee reflejada", 7),
+    ("D9", "escenario, pantalla y tema", "la pared frotada es el papel del calco", 6),
+    ("D10", "el bucle", "frotar hasta que no se lea, y repujar otra", 6),
+    ("D11", "moverse como la piedra: apenas", "el temblor de la mano; fustes de tres planos a 1,6°", 5),
+    ("D12", "ojos y boca tapados con cinta", "no hay Regular; el estado Cinta; el punto de cinta", 5),
+    ("D13", "de la boca sale una placa", "el signo final {¶}, hecho con los dedos", 5),
+    ("D14", "un canto que no se entiende", "el estado Voz: la voz deforma, no se graba", 6),
+    ("D15", "tocar el agua deforma la imagen", "el agua tocada; en lo digital, tocar deforma", 7),
+    ("D16", "el líquido que chorrea de la boca", "toda cuenca se abre abajo; solo gotea lo que mira abajo", 7),
+]
+
+
+def rio(H, puntos, ancho0, ancho1, colores):
+    """Un río de aguada: la cadena de desplazamientos. Pierde materia (ancho, tinta) y gana luz."""
+    base = remuestrear(spline(puntos, 20), 6)
+    n = len(base)
+    nor = normales(base)
+    r = H.ruido(260)
+    orillas = []
+    for i, ((x, y), (nx, ny)) in enumerate(zip(base, nor)):
+        t = i / (n - 1)
+        w = (ancho0 + (ancho1 - ancho0) * t ** 0.8) * (1 + 0.12 * r(i * 6)) / 2
+        orillas.append(((x + nx * w, y + ny * w), (x - nx * w, y - ny * w)))
+    gid = H.uid("cadena")
+    y0, y1 = base[0][1], base[-1][1]
+    opac = {GRAFITO: 0.75, GRAFITO2: 0.6, PLATA: 0.85, VIOLETA: 0.6, LILA: 0.9}
+    paradas = "".join(f'<stop offset="{(k + 0.5) / len(colores):.3f}" stop-color="{c}" stop-opacity="{opac[c]}"/>'
+                      for k, c in enumerate(colores))
+    H.defs.append(f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="0" y1="{y0:.0f}" x2="0" '
+                  f'y2="{y1:.0f}">{paradas}</linearGradient>')
+    d = d_suave([o[0] for o in orillas] + [o[1] for o in orillas][::-1], True)
+    H.aguada(d, f"url(#{gid})", 0.8, desplaza=16, capas=2, borde=0.62)
+    return base, orillas
+
+
+def mapa_3():
+    H = Hoja(1200, 1600, 33)
+    # el borde de la piscina: la línea del horizonte
+    b = H.trazo([(40, 214), (560, 204), (1160, 222)], LILA, 1.1, deriva=3)
+    H.sobre(b[:50], "borde", 15, VIOLETA, desde=0, ancla="start", dy=-5)
+    H.sobre(b[-80:], "aquí estaba el agua", 15, VIOLETA, desde=100, ancla="end", dy=-5)
+    base, orillas = rio(H, [(70, 96), (250, 250), (390, 520), (350, 830), (250, 1110), (160, 1350)], 124, 26,
+                        [c for _, c in CADENA])
+    n = len(base)
+    # los eslabones, en la orilla izquierda
+    pos = {}
+    for k, (nombre, _) in enumerate(CADENA):
+        i = min(n - 1, int((k + 0.5) * n / len(CADENA)))
+        (xi, yi), (xd, yd) = orillas[i]
+        izq_x, izq_y = (xi, yi) if xi < xd else (xd, yd)
+        der = (xd, yd) if xi < xd else (xi, yi)
+        pos[k] = der
+        H.trazo([(izq_x - 4, izq_y), (izq_x - 16, izq_y + 2)], TINTA, 0.8, temblor=0.1, deriva=0)
+        if izq_x > 200:
+            H.mano(izq_x - 20, izq_y + 5, nombre, 16, TINTA, "end", rot=-2)
+        else:
+            H.mano(izq_x + 8, izq_y - 10, nombre, 16, TINTA, "start", rot=-2, halo=False)
+    for i in range(5):                                        # la pared de azulejo, donde el río se deshace
+        for j in range(3):
+            x, y = 104 + i * 26 + j * 3, 1352 + j * 24
+            H.trazo([(x, y), (x + 23, y), (x + 23, y + 21), (x, y + 21), (x, y + 1)], LILA, 0.8, 0.9, temblor=0.2,
+                    deriva=0.3)
+    H.mano(96, 70, "la cadena de desplazamientos", 20, TINTA, rot=-1.5)
+    H.mano(98, 92, "cada paso pierde materia y gana luz", 15, GRAFITO)
+    # el haz: cada decisión sale de su eslabón y va a su traducción, a la derecha
+    x_txt, y0, paso = 690, 286, 74
+    for j, (num, obra, letra, k) in enumerate(DECISIONES):
+        ox, oy = pos[k]
+        ox += H.rng.uniform(-6, 6)
+        oy += (j % 5 - 2) * 7
+        ty = y0 + j * paso
+        off = (j - 7.5) * 4.4
+        color = {GRAFITO: TINTA, GRAFITO2: TINTA, PLATA: GRAFITO, VIOLETA: VIOLETA, LILA: LILA}[CADENA[k][1]]
+        ida = spline([(ox, oy), (ox + 40, oy + (790 - oy) * 0.3), (420, 782 + off), (490, 790 + off)])
+        abanico = bezier((490, 790 + off), (570, 790 + off), (560, ty - 6), (x_txt - 46, ty - 6))
+        H.trazo(ida + abanico[1:], color, 1.3 if color == LILA else 0.8, 0.9, temblor=0.2, deriva=0.6)
+        H.punto(ox, oy, 2.2, VIOLETA if color == LILA else color)
+        H.maquina(x_txt - 42, ty - 2, num, 12, VIOLETA, halo=False)
+        H.mano(x_txt, ty - 8, obra, 15, GRAFITO, rot=H.rng.uniform(-1, 0.6))
+        H.mano(x_txt + 8, ty + 14, letra, 17, TINTA, rot=H.rng.uniform(-1, 0.6))
+    # dos rizos: el bucle (D10) y la placa que sale de la boca (D13)
+    for j in (9, 12):
+        H.orbita(x_txt - 70, y0 + j * paso - 4, 46, 18, -18, color=VIOLETA, ancho=1.0, pasadas=2, sentido=0.4)
+    H.mano(x_txt - 20, 1480, "gris: lo que hizo la obra · tinta: lo que hace la letra", 15, GRAFITO, rot=-1)
+    H.leyenda(60, 1488, "mapa 3 · la obra, decisión por decisión", [])
+    H.leyenda(60, 1500, "", [("gris", "la piedra, la foto, el dibujo"), ("plata", "el aluminio")], inter=23)
+    H.leyenda(380, 1500, "", [("violeta", "el cuerpo, la tinta, el video"), ("lila", "el agua: charco y pared")],
+              inter=23)
+    H.firma(1150, 50, 3, TOTAL, "la obra, decisión por decisión")
+    return H
+
+
+# ------------------------------------------------------------------ mapa 4: del pie a los 55 signos
+
+GENERADORES = {
+    "o": dict(nombre="la cuenca", centro=(262, 640), notas=["canal 8,9 mm", "trapecio 0,70", "pared 0,55",
+                                                             "desagüe 3 mm", "radio de chapa 5,3 mm"]),
+    "l": dict(nombre="el fuste", centro=(880, 600), notas=["facetas 3", "quiebre 1,6°", "asiento 17,8 × 8 mm",
+                                                           "intemperie 1,1 mm"]),
+    "n": dict(nombre="el hombro", centro=(290, 1000), notas=["hombro 3", "caída del hombro 0,40", "alivio 2,5 mm"]),
+    "a": dict(nombre="el gancho y la gota", centro=(880, 980), notas=["gancho 105°", "gota 11,1 mm", "cuello 4,9 mm",
+                                                                      "sifón 0,6", "cinta y punto 8,9 mm"]),
+}
+FAMILIA = {"o": "oecdbpqóéá0689", "l": "litjfkí1|()47", "n": "nmhuúürvwxyzñ235"}
+FUERZAS = [  # de la obra, la forma: centros externos que empujan la gramática
+    ((1150, 404), "l", "el punzón sobre el aluminio (D2)", "end"),
+    ((50, 430), "o", "la vasija abierta (D16)", "start"),
+    ((50, 846), "n", "la chapa sobre el cuerpo (D3)", "start"),
+    ((1150, 800), "a", "la gravedad: solo gotea lo que mira abajo", "end"),
+    ((50, 1180), "n", "la intemperie (el pie)", "start"),
+    ((1150, 1190), "a", "la cinta de ojos y boca (D12)", "end"),
+]
+MEDIDAS = [((96, 318), "x: los ascendentes miden 1,71 veces la x"),
+           ((500, 350), "la o del pie: 11,2 y 7,0 mm; el canal, 8,9"),
+           ((150, 386), "las astas, los ojos y la caja de cada testigo"),
+           ((640, 300), "afuera, borde, fondo y desagüe, en milímetros")]
+PARTES = ["cuenca", "fuste", "hombro", "gancho", "gota", "asiento", "punto", "tilde", "onda", "recta", "alivio", "sifón"]
+
+
+def familia(s):
+    for g, signos in FAMILIA.items():
+        if s in signos:
+            return g
+    return "a"
+
+
+def mapa_4():
+    H = Hoja(1200, 1600, 44)
+    signos = [c["signo"] for c in CAJA["celdas"] if c["signo"] in C_ACTUAL["signos"]]
+    definir(H, "olna" + "".join(signos))
+    eje_x = 580
+    # el pie, arriba: a máquina; las medidas, a mano
+    H.mano(80, 88, "el pie de la lámina: la foto da medidas, no formas", 18, TINTA, rot=-1.5)
+    tira_del_pie(H, 560, 196, 700, 118, -1.5, lineas=5, tam=10.5)
+    for (x, y), t in MEDIDAS:
+        H.flecha([(x + 30, 262 if y > 280 else 256), (x + 22, y - 26), (x + 14, y - 16)], GRAFITO, 0.6)
+        H.mano(x, y, t, 15, TINTA)
+    x0 = 928                                                    # una cota a mano: x y 1,71 x
+    for (ya, yb, t) in ((168, 216, "x"), (134, 216, "1,71 x")):
+        xx = x0 + (0 if t == "x" else 22)
+        H.trazo([(xx, ya), (xx, yb)], VIOLETA, 0.8, temblor=0.2, deriva=0)
+        for y in (ya, yb):
+            H.trazo([(xx - 5, y), (xx + 5, y)], VIOLETA, 0.8, temblor=0.1, deriva=0)
+        H.mano(xx + 8, (ya + yb) / 2 + 5, t, 14, VIOLETA, halo=False)
+    # el eje de la gramática: del pie a la caja
+    H.eje(eje_x, 270, eje_x + 6, 1168, TINTA, 0.8, marcas=(0.3, 0.72))
+    H.sobre([(eje_x + 14, 470), (eje_x + 16, 700)], "20 parámetros y la altura de x", 15, GRAFITO, dy=-2)
+    # las cuatro vasijas, con sus órbitas anotadas
+    for s, g in GENERADORES.items():
+        cx, cy = g["centro"]
+        H.eje(cx, cy - 170, cx + 2, cy + 150, GRAFITO, 0.55)
+        a = H.orbita(cx, cy, 158, 54, -8 if s in "on" else 7, color=TINTA, ancho=0.7, sentido=0.3)
+        b = H.orbita(cx + 4, cy - 6, 76, 132, 12 if s in "on" else -10, color=GRAFITO, ancho=0.5, pasadas=1)
+        aguada_signo(H, s, cx, cy + 10, 0.36, VIOLETA, 0.72)
+        notas = g["notas"]
+        H.sobre(tramo(a, 0.36, 0.64), notas[0], 15, TINTA)
+        H.sobre(tramo(b, 0.38, 0.62), notas[1], 14, GRAFITO)
+        for k, t in enumerate(notas[2:]):
+            H.mano(cx + 70, cy + 96 + k * 20, t, 14.5, TINTA)
+        H.mano(cx - 140, cy + 118, s, 34, VIOLETA, rot=0)
+        H.mano(cx - 118, cy + 116, "· " + g["nombre"], 17, TINTA)
+    # de la obra, la forma: centros externos
+    for (x, y), s, t, ancla in FUERZAS:
+        cx, cy = GENERADORES[s]["centro"]
+        H.cruz(x, y)
+        H.mano(x + (14 if ancla == "start" else -14), y - 8, t, 15.5, VIOLETA, ancla)
+        dx = cx + (160 if x > cx else -160)
+        H.flecha([(x + (-8 if x > cx else 8), y + 6), ((x + dx) / 2, (y + cy) / 2 + 14), (dx, cy - 10)], VIOLETA, 0.6,
+                 deriva=2)
+    # las partes, a los lados del eje
+    for k, p in enumerate(PARTES):
+        izq = k % 2 == 0
+        y = 730 + (k // 2) * 26
+        H.punto(eje_x + (-12 if izq else 16), y - 5, 1.6, TINTA)
+        H.mano(eje_x + (-20 if izq else 24), y, p, 15, TINTA, "end" if izq else "start")
+    H.mano(eje_x - 20, 706, "las partes", 16, GRAFITO, "end", rot=-2)
+    # la bandada: de cada vasija bajan sus signos, como peces, hasta la caja
+    lado, gx, gy = 36, eje_x - 4 * 36 + 3, 1196
+    celdas = {c["signo"]: c for c in CAJA["celdas"]}
+    por_familia = {g: [s for s in signos if familia(s) == g] for g in "olna"}
+    rutas = {"o": [(336, 772), (440, 930), (505, 1070), (548, gy - 22)],
+             "l": [(816, 740), (716, 900), (650, 1066), (614, gy - 22)],
+             "n": [(400, 1070), (470, 1046), (522, 1110), (550, gy - 20)],
+             "a": [(764, 1010), (692, 1060), (650, 1120), (618, gy - 20)]}
+    for g, lista in por_familia.items():
+        ruta = remuestrear(spline(rutas[g]), 3)
+        for k, s in enumerate(lista):
+            t = (k + 0.5) / len(lista)
+            i = int(t * (len(ruta) - 1))
+            x, y = ruta[i]
+            a = math.degrees(math.atan2(ruta[min(i + 2, len(ruta) - 1)][1] - ruta[max(i - 2, 0)][1],
+                                        ruta[min(i + 2, len(ruta) - 1)][0] - ruta[max(i - 2, 0)][0]))
+            x += (k % 3 - 1) * 12 + H.rng.uniform(-4, 4)
+            y += H.rng.uniform(-5, 5)
+            color = TINTA if celdas[s]["estado"] == "hallada" else VIOLETA
+            cuerpo(H, s, x, y, 0.032 if s.isdigit() else 0.044, color, rot=(a - 90) * 0.3 + H.rng.uniform(-10, 10),
+                   opac=0.85)
+    # la caja de 8 × 7, a mano, con los 55 y el ¶
+    for i in range(9):
+        H.trazo([(gx + i * lado, gy), (gx + i * lado, gy + 7 * lado)], GRAFITO, 0.55, 0.85, temblor=0.25, deriva=0.6)
+    for j in range(8):
+        H.trazo([(gx, gy + j * lado), (gx + 8 * lado, gy + j * lado)], GRAFITO, 0.55, 0.85, temblor=0.25, deriva=0.6)
+    for c in CAJA["celdas"]:
+        x = gx + (c["columna"] - 0.5) * lado
+        y = gy + (c["fila"] - 0.5) * lado
+        if c["signo"] in C_ACTUAL["signos"]:
+            cuerpo(H, c["signo"], x, y + 2, 0.052, TINTA if c["estado"] == "hallada" else VIOLETA)
+        else:
+            H.maquina(x, y + 6, c["signo"], 16, GRAFITO, "middle", halo=False)
+    H.mano(gx + 8 * lado + 18, gy + 20, "30 hallados", 16, TINTA)
+    H.mano(gx + 8 * lado + 18, gy + 42, "25 reconstruidos", 16, VIOLETA)
+    H.mano(gx + 8 * lado + 18, gy + 64, "1 hecho con los dedos: {¶}", 16, GRAFITO)
+    H.mano(gx - 18, gy + 20, "la caja de 8 × 7", 16, GRAFITO, "end")
+    H.mano(gx - 18, gy + 42, "como peces, al fondo (D7)", 15, GRAFITO, "end")
+    H.leyenda(60, 1500, "mapa 4 · del pie a los 55 signos", [])
+    H.leyenda(420, 1486, "", [("violeta", "una vasija: un generador"), ("cruz", "de la obra, la forma")])
+    H.leyenda(760, 1486, "", [("maquina", "el pie, como está escrito"), ("orbita", "sus parámetros, en órbita")])
+    H.firma(1150, 50, 4, TOTAL, "del pie a los 55 signos")
+    return H
+
+
+# ------------------------------------------------------------------ mapa 5: la cadena de estados
 
 def fichas_simuladas():
     return json.loads((TIPO / "simulacion" / "salida" / "fichas_simuladas.json").read_text(encoding="utf8"))
 
 
-def construccion(L, cx, cy, radios, rayos=(), color=OBRA):
-    for r in radios:
-        L.circulo(cx, cy, r, color, 0.8, capa="construccion")
-    for ang in rayos:
-        a = math.radians(ang)
-        R = max(radios) * 1.08
-        L.linea(cx - R * math.cos(a), cy - R * math.sin(a), cx + R * math.cos(a), cy + R * math.sin(a), color, 0.7,
-                capa="construccion")
+def cinta_letra(H, cx, cy, escala=1.0):
+    """La letra de cinta: tiras de masking, color hueso, sobre plástico negro. No curva: se pliega."""
+    e = escala
+    fondo = [(cx - 52 * e, cy - 46 * e), (cx + 52 * e, cy - 50 * e), (cx + 56 * e, cy + 48 * e), (cx - 50 * e, cy + 50 * e)]
+    H.add("objetos", f'<path d="{d_suave(H.temblar(fondo + fondo[:1], 0.4, 0.6), True)}" fill="{TINTA}"/>')
+    tiras = [((-26, 34), (-24, -26)), ((-24, -26), (14, -28)), ((14, -28), (24, -16)), ((24, -16), (24, 34))]
+    for (a, b) in tiras:
+        x0, y0, x1, y1 = cx + a[0] * e, cy + a[1] * e, cx + b[0] * e, cy + b[1] * e
+        L = math.hypot(x1 - x0, y1 - y0)
+        nx, ny = -(y1 - y0) / L * 8 * e, (x1 - x0) / L * 8 * e
+        tira = [(x0 + nx, y0 + ny), (x1 + nx, y1 + ny), (x1 - nx, y1 - ny), (x0 - nx, y0 - ny)]
+        H.add("objetos", f'<path d="{d_suave(H.temblar(tira + tira[:1], 0.5, 0.3), True)}" fill="{HUESO}" '
+                         f'stroke="#cbbf9f" stroke-width="0.5" opacity="0.97"/>')
 
 
-# ------------------------------------------------------------------ rótulos por tipo
-
-TIPOS = {
-    "concepto": dict(color=TINTA, fuente=MONO, estilo="", tam=13.5, ancho=34),
-    "teoría": dict(color=TINTA, fuente=MONO, estilo="", tam=13.5, ancho=34),
-    "retórica": dict(color=VIOLETA, fuente=MONO, estilo="", tam=13.5, ancho=34),
-    "poética": dict(color=VIOLETA, fuente=SERIF, estilo="italic", tam=16.5, ancho=38),
-}
+def estratos(H, x, y, n, ancho=64, color=GRAFITO, paso=4.2):
+    """Frotadas apiladas: cada una más clara que la anterior, hasta que no se lee."""
+    for k in range(n):
+        op = max(0.06, 1 - k / (n + 2))
+        H.trazo([(x, y + k * paso), (x + ancho, y + k * paso + H.rng.uniform(-1, 1))], color, 1.1, op, temblor=0.5,
+                deriva=0.6, capa="grafito")
 
 
-def rotulo(L, x, y, tipo, texto, ancla="start", ancho=None):
-    """Un rótulo de mapa: el tipo en versalitas grises y el texto. Devuelve el alto que ocupa."""
-    t = TIPOS[tipo]
-    L.texto(x, y, tipo.upper(), 9.5, GRIS2, ancla=ancla, esp=1.2)
-    lineas = partir(texto, ancho or t["ancho"])
-    fin = L.bloque(x, y + t["tam"] + 3, lineas, t["tam"], t["color"], t["fuente"], ancla, t["estilo"])
-    return fin - y + 10
+def faraday(H, cx, cy, rx, ry, anillos=4):
+    """Las ondas de Faraday sobre el charco: puntos en anillos, a la mitad de la frecuencia de la voz."""
+    for k in range(1, anillos + 1):
+        n = 10 + k * 8
+        for i in range(n):
+            if (i + k) % 2:
+                continue
+            a = 2 * math.pi * i / n + k * 0.2
+            H.punto(cx + rx * k / anillos * math.cos(a), cy + ry * k / anillos * math.sin(a), 1.5, VIOLETA, opac=0.8)
 
-
-# ------------------------------------------------------------------ mapa 1: el proyecto entero
-
-ETAPAS = [
-    ("La obra", "Contener una ruina, 2026", [
-        ("concepto", "Partir del registro, no de la piedra: la lámina del ídolo y su pie"),
-        ("concepto", "Todo es un continente, y ninguno retiene lo que le ponen adentro"),
-        ("teoría", "La cadena de desplazamientos: cada paso pierde materia y gana luz"),
-        ("retórica", "Confesión: el pie admite un dibujo reconstructivo, un calendario sin leer y otro lugar"),
-        ("poética", "«Quedó el contenedor / de lo que ya no está.»"),
-    ]),
-    ("Desenterrar", "acciones 0 a 3", [
-        ("concepto", "Del pie, las medidas: 30 signos hallados y 25 por reconstruir"),
-        ("teoría", "Nedmural (Tshuma): letras sacadas de un muro, tal como están"),
-        ("teoría", "Sankofa: ¿de quién es esta historia?, ¿quién la escribió?"),
-        ("retórica", "Sinécdoque: el pie por la lámina. Antítesis: continuo lo hallado, punteado lo reconstruido"),
-        ("poética", "«No se salvó la piedra, / solo la opinión sobre ella.»"),
-    ]),
-    ("Contener", "acciones 4 a 7", [
-        ("concepto", "Cada letra es una placa suelta: un tipo móvil de aluminio"),
-        ("concepto", "La caja de 8 × 7; lo que no cabe se ve como celda vacía"),
-        ("teoría", "La escritura como vasija (Mahendran), pero una que no retiene"),
-        ("retórica", "Paradoja hecha forma: toda cuenca se abre abajo, en un desagüe"),
-        ("poética", "«ningún contenedor aguanta lo que contiene»"),
-    ]),
-    ("Devolver", "acciones 8 a 12", [
-        ("concepto", "Estados, no pesos: el peso se mide en frotadas"),
-        ("teoría", "Transmodalidad y cimática (Mahendran): la voz mueve el agua"),
-        ("retórica", "La voz como deformación, no como palabra"),
-        ("poética", "«Tocas el agua y la diosa se deforma.»"),
-        ("poética", "«la misma diosa dos veces / y ninguna igual»"),
-    ]),
-    ("Digital", "si cierra", [
-        ("concepto", "Un estado más, no el final limpio: vuelve al agua y a la placa"),
-        ("teoría", "Objeto, signo y objeto otra vez: la mesa serif (Tshuma)"),
-        ("retórica", "El colofón como cadena de custodia: «sin nombre registrado»"),
-        ("poética", "«Termina y empieza, / termina y empieza.»"),
-    ]),
-]
-
-
-def mapa_1(G):
-    L = Lienzo(1200, 1600, 1)
-    cx, cy, R = 600, 820, 235
-    construccion(L, cx, cy, (R, 390, 560), rayos=(90, 18, -54, 54, -18))
-    angulos = [-90, -18, 54, 126, 198]
-    nodos = [(cx + R * math.cos(math.radians(a)), cy + R * math.sin(math.radians(a))) for a in angulos]
-    # el ciclo de las etapas: termina y empieza
-    for i in range(5):
-        a0, a1 = math.radians(angulos[i] + 9), math.radians(angulos[(i + 1) % 5] - 9)
-        if a1 < a0:
-            a1 += 2 * math.pi
-        L.add("haces", f'<path d="M{cx + R * math.cos(a0):.1f},{cy + R * math.sin(a0):.1f} A{R},{R} 0 0 1 '
-                       f'{cx + R * math.cos(a1):.1f},{cy + R * math.sin(a1):.1f}" fill="none" stroke="{VIOLETA}" stroke-width="1.4"/>')
-        ax, ay = cx + R * math.cos(a1), cy + R * math.sin(a1)
-        t = a1 + math.pi / 2
-        L.add("haces", f'<path d="M{ax:.1f},{ay:.1f} l{-8 * math.cos(t) + 4 * math.cos(a1):.1f},{-8 * math.sin(t) + 4 * math.sin(a1):.1f} '
-                       f'M{ax:.1f},{ay:.1f} l{-8 * math.cos(t) - 4 * math.cos(a1):.1f},{-8 * math.sin(t) - 4 * math.sin(a1):.1f}" '
-                       f'stroke="{VIOLETA}" stroke-width="1.4" fill="none"/>')
-    L.texto(cx, cy + R - 20, "termina y empieza", 12, VIOLETA, ancla="middle")
-    # el centro
-    L.celda(cx, cy, 230, TINTA, 1.6)
-    L.texto(cx, cy - 6, "Contenida", 30, TINTA, SERIF, "middle", peso=300)
-    L.texto(cx, cy + 20, "acciones para", 12, GRIS, ancla="middle")
-    L.texto(cx, cy + 36, "componer una voz", 12, GRIS, ancla="middle")
-    # dónde van los rótulos de cada etapa
-    zonas = [
-        ("arriba", 330, 870, 96, 430),
-        ("derecha", 860, 1165, 370, 800),
-        ("derecha", 860, 1165, 900, 1330),
-        ("izquierda", 35, 340, 900, 1330),
-        ("izquierda", 35, 340, 400, 800),
-    ]
-    for (nombre, sub, items), (nx, ny), (lado, xa, xb, ya, yb) in zip(ETAPAS, nodos, zonas):
-        L.celda(nx, ny, 70, VIOLETA, 1.3)
-        L.texto(nx, ny + 60, nombre, 17, TINTA, SERIF, "middle", peso=500)
-        L.texto(nx, ny + 76, sub, 11, GRIS, ancla="middle")
-        # posiciones de los rótulos
-        if lado == "arriba":
-            cols = [(xa, ya), (xa + 290, ya)]
-            pos, fila = [], [0, 0]
-            for i, it in enumerate(items):
-                c = i % 2
-                pos.append((cols[c][0], cols[c][1] + fila[c]))
-                fila[c] += 118 if it[0] == "retórica" else 92
-        else:
-            paso = (yb - ya) / len(items)
-            pos = [(xa if lado == "derecha" else xb, ya + i * paso) for i in range(len(items))]
-        nudo = (nx + (0 if lado == "arriba" else (70 if lado == "derecha" else -70)),
-                ny - (95 if lado == "arriba" else 0))
-        for (tipo, texto), (x, y) in zip(items, pos):
-            ancla = "end" if lado == "izquierda" else "start"
-            alto = rotulo(L, x, y, tipo, texto, ancla, ancho=30 if lado == "arriba" else None)
-            destino = (x - 8 if ancla == "start" else x + 8, y + 10)
-            if lado == "arriba":
-                destino = (x + 40, y + alto - 6)
-            L.haz((nx, ny - (0 if lado != "arriba" else 42)), nudo, destino, hebras=7, abre=14,
-                  color=VIOLETA if tipo in ("retórica", "poética") else TINTA)
-    # las cuatro vasijas: los generadores, abajo, como en el plano de referencia
-    x = 70
-    for s in "olna":
-        a, _ = vasija(L, s, G[s], x, 1395, 0.22)
-        x += a + 70
-    L.texto(70, 1372, "las cuatro vasijas: los generadores de la gramática", 11.5, GRIS)
-    L.marco(1, "El proyecto entero", [("etapas", "5, en ciclo"), ("rótulos", "24"),
-                                        ("tipos", "concepto, teoría, retórica, poética"),
-                                        ("tinta", "violeta del esténcil"), ("fecha", FECHA)])
-    return L
-
-
-# ------------------------------------------------------------------ mapa 2: teoría y fuentes
-
-FUENTES_T = [
-    # nombre, año, x, y, radio
-    ("EthnoGraphemes", "Mahendran, 2020", 150, 300, 78),
-    ("Afrography", "Tshuma, 2025", 150, 880, 78),
-    ("Tihuanacu", "Posnansky, 1945", 1450, 290, 62),
-    ("La iconografía Tiwanaku", "Agüero, Uribe y Berenguer, 2003", 1455, 880, 54),
-    ("Contener una ruina", "Rebeca Paz Prada, 2026", 800, 150, 58),
-]
-TOMA = [
-    # fuente, texto, columna, fila (en la caja de 8 × 7; solo columnas impares: cada rótulo ocupa dos)
-    (0, "la escritura como vasija, que aquí no retiene", 1, 1),
-    (0, "transmodalidad: la letra se toca, se moja", 1, 2),
-    (0, "cimática → el estado Voz", 1, 3),
-    (0, "caja baja: la letra de la mano (Brookes)", 1, 4),
-    (0, "contra el exotismo: ningún motivo pegado (Morcos)", 3, 1),
-    (0, "el diccionario de cartas → la caja de placas", 3, 2),
-    (0, "Ellipsis: lo inacabado → el signo …", 3, 3),
-    (0, "la ética del que viene de afuera → Acción 0", 3, 4),
-    (1, "sankofa: ¿quién lo escribió?", 1, 5),
-    (1, "Nedmural: letras sacadas de un muro → el pie", 1, 6),
-    (1, "The Great Stone: la restricción de la ruina", 1, 7),
-    (1, "la cabeza de Oba → el colofón como custodia", 3, 5),
-    (1, "tres cuadernos → Desenterrar, Contener, Devolver", 3, 6),
-    (1, "objeto → signo → objeto: la vuelta a la placa", 3, 7),
-    (1, "herramientas libres; la economía del trabajo", 5, 6),
-    (1, "la transformación: la placa rota no se corrige", 5, 7),
-    (2, "La Paz contiene la ruina", 7, 1),
-    (2, "la cloaca máxima hecha piso: el desagüe", 7, 2),
-    (2, "el agua que se fue: la piscina vacía", 7, 3),
-    (2, "el asperón, elegido por blando: el material decide", 5, 1),
-    (2, "lo que no está se reconstruye: el punteado", 5, 2),
-    (3, "elementos → motivos → figuras: partes → signos", 7, 4),
-    (3, "dobles opuestos con variación: la ¿ no es la ? al revés", 7, 5),
-    (3, "Personaje Frontal en pecho y espalda (D4)", 7, 6),
-    (3, "cabezas de pez de perfil (D7)", 7, 7),
-    (4, "partir del registro: el pie de la lámina", 5, 3),
-    (4, "el aluminio, la cinta, el agua, la voz", 5, 4),
-    (4, "la piscina vacía: escenario y pantalla", 5, 5),
-]
-NO_TOMA = [
-    (0, "revitalizar una lengua", 40, 470, "start"),
-    (0, "una frecuencia por letra", 40, 495, "start"),
-    (0, "tatuar: se queda en el esténcil", 40, 520, "start"),
-    (1, "inventar una escritura", 40, 1010, "start"),
-    (1, "el estallido: el agua vuelve", 40, 1035, "start"),
-    (1, "letras hechas con módulos", 40, 1060, "start"),
-    (2, "su cronología", 1570, 445, "end"),
-    (2, "su tesis del título", 1570, 470, "end"),
-    (2, "su lectura racial de la historia", 1570, 495, "end"),
-    (3, "interpretar la iconografía", 1170, 962, "end"),
-    (3, "traducir el «calendario»", 1170, 986, "end"),
-    (4, "las lecturas rituales", 735, 120, "end"),
-    (4, "las fotos y el cuerpo de Rebeca", 735, 145, "end"),
-]
-
-
-def mapa_2():
-    L = Lienzo(1600, 1200, 2)
-    # el plano: la caja de 8 × 7 en líneas finas, como las manzanas de un plano
-    gx0, gy0, gw, gh = 330, 250, 940, 700
-    cw, ch = gw / 8, gh / 7
-    for i in range(9):
-        L.linea(gx0 + i * cw, gy0 - 30, gx0 + i * cw, gy0 + gh + 30, OBRA, 0.9, capa="construccion")
-    for j in range(8):
-        L.linea(gx0 - 30, gy0 + j * ch, gx0 + gw + 30, gy0 + j * ch, OBRA, 0.9, capa="construccion")
-    for i in range(8):
-        for j in range(7):
-            L.add("construccion", f'<rect x="{gx0 + i * cw + 0.18 * cw:.1f}" y="{gy0 + j * ch + 0.13 * ch:.1f}" '
-                                  f'width="{0.64 * cw:.1f}" height="{0.74 * ch:.1f}" fill="none" stroke="{OBRA}" stroke-width="0.6"/>')
-    # el hilo del proyecto: una curva oscura que cruza la caja
-    L.add("haces", f'<path d="M{gx0 - 60},{gy0 + gh * 0.55} C{gx0 + 200},{gy0 + gh * 0.2} {gx0 + 420},{gy0 + gh * 0.95} '
-                   f'{gx0 + 620},{gy0 + gh * 0.5} S{gx0 + gw - 60},{gy0 + gh * 0.25} {gx0 + gw + 10},{gy0 + gh * 0.45}" '
-                   f'fill="none" stroke="{TINTA}" stroke-width="2.2"/>')
-    for k in range(4):
-        d = (k - 1.5) * 4
-        L.add("haces", f'<path d="M{gx0 - 60},{gy0 + gh * 0.55 + d} C{gx0 + 200},{gy0 + gh * 0.2 + d} {gx0 + 420},{gy0 + gh * 0.95 + d} '
-                       f'{gx0 + 620},{gy0 + gh * 0.5 + d} S{gx0 + gw - 60},{gy0 + gh * 0.25 + d} {gx0 + gw + 10},{gy0 + gh * 0.45 + d}" '
-                       f'fill="none" stroke="{VIOLETA}" stroke-width="0.6" opacity=".7"/>')
-    L.bloque(gx0 - 60, gy0 + gh * 0.55 + 24, ["el hilo: obra → pie → gramática", "→ estados → digital"], 12, TINTA)
-    # las fuentes: círculos en el borde; lo que se toma, puntos en la caja
-    for f, (nombre, autor, x, y, r) in enumerate(FUENTES_T):
-        L.circulo(x, y, r, TINTA, 1.1, PAPEL)
-        L.circulo(x, y, r * 0.18, VIOLETA, 0, VIOLETA)
-        if f == 4:                                   # la obra: el nombre a la derecha del círculo
-            L.texto(x + r + 16, y - 4, nombre, 17, TINTA, SERIF, estilo="italic")
-            L.texto(x + r + 16, y + 16, autor, 11.5, GRIS)
-            continue
-        lineas = partir(nombre, 16)
-        for k, l in enumerate(lineas):
-            L.texto(x, y - r - 14 - (len(lineas) - 1 - k) * 18, l, 16, TINTA, SERIF, "middle", "italic")
-        L.texto(x, y + r + 18, autor, 11.5, GRIS, ancla="middle")
-    for f, texto, col, fila in TOMA:
-        px = gx0 + (col - 1) * cw + 14
-        py = gy0 + (fila - 0.5) * ch - 14
-        _, _, fx, fy, fr = FUENTES_T[f]
-        for _ in range(3):
-            a = math.atan2(py - fy, px - fx) + L.rng.uniform(-0.35, 0.35)
-            L.linea(fx + fr * math.cos(a), fy + fr * math.sin(a), px, py, VIOLETA, 0.55, 0.6)
-        L.punto(px, py, 2.8, VIOLETA)
-        lineas = partir(texto, 27)
-        L.bloque(px + 7, py + 4, lineas, 11.5, TINTA, fondo=True, inter=1.2)
-    for f, texto, x, y, ancla in NO_TOMA:
-        _, _, fx, fy, fr = FUENTES_T[f]
-        largo = len("no: " + texto) * 6.9
-        xl = x + largo + 6 if ancla == "start" else x - largo - 6
-        a = math.atan2(y - 4 - fy, xl - fx)
-        L.linea(fx + fr * math.cos(a), fy + fr * math.sin(a), xl, y - 4, GRIS2, 0.7, 0.9, "3 4")
-        L.texto(x, y, "no: " + texto, 11.5, GRIS, ancla=ancla)
-    L.texto(gx0, gy0 - 46, "lo que se toma, sobre la caja de 8 × 7", 12, VIOLETA)
-    L.texto(gx0 + gw, gy0 - 46, "- - -  lo que no se toma", 12, GRIS, ancla="end")
-    L.marco(2, "Teoría y fuentes", [("fuentes", "5 y el poema"), ("se toma", f"{len(TOMA)} ideas"),
-                                      ("no se toma", f"{len(NO_TOMA)}"), ("plano", "la caja de 8 × 7"),
-                                      ("fecha", FECHA)])
-    return L
-
-
-# ------------------------------------------------------------------ mapa 3: la obra, decisión por decisión
-
-DECISIONES = [
-    ("D1", "Partir de la lámina y no de la piedra", "Las letras salen del pie de la lámina"),
-    ("D2", "Asperón → papel de aluminio", "Matrices de aluminio repujado; solo caja baja"),
-    ("D3", "Placas sueltas, con piel entre ellas", "Cada letra es un tipo móvil; entre palabras, la piel"),
-    ("D4", "Puertas en el pecho y la espalda", "La tapa de la caja: una puerta sobre la celda 1"),
-    ("D5", "Iconografía interpretada, no copiada", "Del monolito, solo la retícula y la celda vacía"),
-    ("D6", "La piscina vacía, en un estudio de tatuajes", "Fondo, borde, desagüe; el violeta del esténcil"),
-    ("D7", "Placas en el fondo, como peces", "No se dibujan peces: las letras ya lo parecen"),
-    ("D8", "La bandeja con un dedo de agua", "El estado Agua: se lee reflejada"),
-    ("D9", "Escenario, pantalla y tema", "La pared frotada es el papel del calco"),
-    ("D10", "El bucle", "Frotar hasta que no se lea, y repujar otra"),
-    ("D11", "Moverse como la piedra: apenas", "El temblor de la mano; fustes de tres planos a 1,6°"),
-    ("D12", "Ojos y boca tapados con cinta", "No hay Regular; el estado Cinta; el punto de cinta"),
-    ("D13", "De la boca sale una placa", "El signo final ¶, hecho con los dedos"),
-    ("D14", "Un canto que no se entiende", "El estado Voz: la voz deforma, no se graba"),
-    ("D15", "Tocar el agua deforma la imagen", "El agua tocada; en lo digital, tocar deforma"),
-    ("D16", "El líquido que chorrea de la boca", "Toda cuenca se abre abajo; solo gotea lo que mira abajo"),
-]
-CADENA = ["piedra borrada", "fotografía vieja", "dibujo reconstructivo", "escaneo", "repujado en aluminio", "cuerpo",
-          "video", "charco", "pared de azulejo"]
-
-
-def mapa_3():
-    L = Lienzo(1200, 1600, 3)
-    # la espina: la cadena de desplazamientos, una S que baja
-    pts = []
-    for i in range(200):
-        t = i / 199
-        pts.append((600 + 210 * math.sin(t * math.pi * 2.1 + 0.3), 150 + t * 1260))
-    d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-    L.add("haces", f'<path d="{d}" fill="none" stroke="{TINTA}" stroke-width="2"/>')
-    for k in range(5):
-        dd = (k - 2) * 3.2
-        L.add("haces", f'<path d="{"M" + " L".join(f"{x + dd:.1f},{y:.1f}" for x, y in pts)}" fill="none" '
-                       f'stroke="{VIOLETA}" stroke-width="0.5" opacity=".7"/>')
-    for i, c in enumerate(CADENA):
-        x, y = pts[int(i * 199 / (len(CADENA) - 1))]
-        L.punto(x, y, 4, VIOLETA)
-        adentro = x > 600
-        L.bloque(x + (-14 if adentro else 14), y + 22, [c], 12, VIOLETA, ancla="end" if adentro else "start")
-    L.texto(600, 118, "la cadena de desplazamientos: cada paso pierde materia y gana luz", 12.5, TINTA, ancla="middle")
-    # las decisiones: nodos sobre la espina, haces hacia su traducción
-    for i, (n, obra, tipo) in enumerate(DECISIONES):
-        t = (i + 0.5) / len(DECISIONES)
-        x, y = pts[int(t * 199)]
-        L.celda(x, y, 26, TINTA, 1.0)
-        izquierda = i % 2 == 0
-        tx = 70 if izquierda else 1130
-        ty = 175 + i * 76
-        L.haz((x, y), (x + (-60 if izquierda else 60), y + 6), (tx + (262 if izquierda else -262), ty + 16), hebras=9,
-              color=TINTA, abre=16, opacidad=0.5)
-        ancla = "start" if izquierda else "end"
-        L.texto(tx, ty, n, 13, VIOLETA, ancla=ancla, peso=700)
-        L.bloque(tx + (38 if izquierda else -38), ty, partir(obra, 30), 12, GRIS, ancla=ancla, inter=1.2)
-        L.bloque(tx, ty + 20 + (len(partir(obra, 30)) - 1) * 14, partir(tipo, 36), 13.5, TINTA, ancla=ancla, inter=1.2)
-    L.texto(70, 150, "la obra · su traducción en Contenida", 12, GRIS)
-    L.marco(3, "La obra, decisión por decisión", [("decisiones", "16 (D1 a D16)"), ("espina", "la cadena de la obra"),
-                                                    ("gris", "lo que hizo la obra"), ("tinta", "lo que hace la letra"),
-                                                    ("fecha", FECHA)])
-    return L
-
-
-# ------------------------------------------------------------------ mapa 4: del pie a los 55 signos
-
-PIE = ["EL IDOLO KOCHAMAMA, según Posnansky, presentado en amplio detalle reconstructivo, según",
-       "viejas fotografías (hoy está muy erosionado y casi no se ven esos detalles). Su calendario, todavía",
-       "no bien interpretado, es distinto del de la Puerta del Sol y muestra motivos mucho más antiguos.",
-       "Suponemos que originariamente se encontraba en Pumapuncu, en el lugar en donde luego se puso la Puerta de la Luna."]
-MEDIDAS = ["altura de x: ascendentes 1,71 veces la x (la foto)", "grueso 11,2 mm y fino 7,0 mm de la o: canal 8,9 mm",
-           "las astas, los ojos y las cajas de cada testigo", "afuera 94,1 · borde 54,8 · fondo 0 · desagüe −30,2 mm"]
-OBRA_FORMA = [("el punzón sobre el aluminio", "D2"), ("la vasija abierta", "D16"), ("la chapa sobre el cuerpo", "D3"),
-              ("la intemperie", "el pie"), ("la gravedad", "D16"), ("la cinta de ojos y boca", "D12")]
-PARAMS = ["canal 8,9 mm", "radio_chapa 0,6 canal", "trapecio 0,70", "pared 0,55", "desagüe 3 mm", "hombro 3",
-          "hombro_caida 0,40", "facetas 3 · quiebre 1,6°", "asiento 2 × 0,9 canal", "intemperie 0,12 canal",
-          "alivio 0,28 canal", "gancho_fin 105°", "gota 1,25 · 0,3 · 0,55 canal", "sifón 0,6 canal",
-          "cinta 1 canal · punto 1 canal"]
-PARTES = ["fuste", "cuenca", "hombro", "gancho", "gota", "asiento", "punto", "tilde", "onda", "recta", "alivio", "sifón"]
-
-
-def mapa_4(G):
-    L = Lienzo(1200, 1600, 4)
-    construccion(L, 600, 760, (300, 520), rayos=(90, 0, 45, -45))
-    # el pie, arriba, en letra chica
-    for i, l in enumerate(PIE):
-        L.texto(70, 110 + i * 17, l, 11, GRIS)
-    L.texto(70, 88, "el pie de la lámina (la foto da medidas, no formas)", 12, TINTA)
-    # del pie, las medidas: un nudo a la izquierda
-    nudo_m = (300, 420)
-    for i, m in enumerate(MEDIDAS):
-        y = 250 + i * 32
-        L.haz((110 + i * 240, 170), (nudo_m[0] - 20, nudo_m[1] - 60), (nudo_m[0] + 0, nudo_m[1] - 8), hebras=5,
-              color=GRIS, opacidad=0.45)
-    L.celda(nudo_m[0], nudo_m[1], 54, TINTA, 1.2)
-    L.texto(nudo_m[0] - 40, nudo_m[1] + 6, "del pie, las medidas", 14, TINTA, ancla="end", peso=700)
-    for i, m in enumerate(MEDIDAS):
-        L.bloque(70, 520 + i * 36, partir(m, 34), 12.5, TINTA)
-        L.haz(nudo_m, (nudo_m[0] - 30, nudo_m[1] + 60), (330, 516 + i * 36), hebras=3, color=TINTA, opacidad=0.5)
-    # de la obra, la forma: un nudo a la derecha
-    nudo_o = (900, 420)
-    L.celda(nudo_o[0], nudo_o[1], 54, VIOLETA, 1.2)
-    L.texto(nudo_o[0] + 40, nudo_o[1] + 6, "de la obra, la forma", 14, VIOLETA, peso=700)
-    for i, (f, dd) in enumerate(OBRA_FORMA):
-        y = 230 + i * 30
-        L.texto(1130, y, f"{f} ({dd})", 12.5, VIOLETA, ancla="end")
-        L.haz((1130 - len(f + dd) * 7.8 - 30, y - 4), (nudo_o[0] + 30, nudo_o[1] - 50), nudo_o, hebras=3, color=VIOLETA,
-              opacidad=0.5)
-    # los parámetros: la columna del centro
-    px, py = 600, 330
-    L.texto(px, py - 26, "20 parámetros", 15, TINTA, SERIF, "middle", "italic")
-    for i, p in enumerate(PARAMS):
-        y = py + i * 25
-        L.bloque(px, y, [p], 12, TINTA, ancla="middle")
-        for (nx, ny), c in ((nudo_m, TINTA), (nudo_o, VIOLETA)):
-            if (i % 3 == 0 and c == TINTA) or (i % 2 == 1 and c == VIOLETA) or i == 0:
-                L.curva((nx, ny), (nx + (px - nx) * 0.5, ny), (px + (nx - px) * 0.4, y - 4), (px + (95 if nx > px else -95), y - 4),
-                        c, 0.5, 0.45)
-    # las partes: un abanico hacia abajo
-    nudo_p = (600, 760)
-    L.punto(*nudo_p, 5, TINTA)
-    for i in range(len(PARAMS)):
-        L.curva((px, py + i * 25 + 6), (px + (i - 7) * 4, 700), (nudo_p[0], nudo_p[1] - 40), nudo_p, TINTA, 0.45, 0.4)
-    L.texto(nudo_p[0] + 14, nudo_p[1] + 5, "las partes", 14, TINTA, peso=700)
-    for i, p in enumerate(PARTES):
-        a = math.radians(200 + i * (140 / (len(PARTES) - 1)))
-        x, y = nudo_p[0] + 250 * math.cos(-a + math.pi), nudo_p[1] + 120 + 110 * math.sin(-a + math.pi) * 0.8
-        x = 180 + i * (840 / (len(PARTES) - 1))
-        y = 880 + (35 if i % 2 else 0)
-        L.haz(nudo_p, (nudo_p[0], nudo_p[1] + 40), (x, y - 14), hebras=4, color=TINTA, opacidad=0.5)
-        L.bloque(x, y, [p], 13, TINTA, ancla="middle")
-    # los cuatro generadores: vasijas rayadas, acotadas
-    L.texto(70, 975, "cuatro generadores dan las partes; con ellas se arman los 55 signos", 12.5, TINTA)
-    x, bases = 120, []
-    for s_ in "olna":
-        a, h = vasija(L, s_, G[s_], x, 1010, 0.36)
-        bases.append((x + a / 2, 1010 + h + 44))
-        x += a + 150
-    # los 55: una caja de 8 × 7 chiquita, abajo
-    cx0, cy0, lado = 470, 1262, 30
-    nudo = (cx0 + 4 * (lado + 4) - 2, cy0 - 36)
-    for bx, by in bases:
-        L.haz((bx, by), (bx + (nudo[0] - bx) * 0.5, by + 12), nudo, hebras=5, color=VIOLETA, opacidad=0.45, abre=4)
-    L.haz(nudo, (nudo[0], nudo[1] + 12), (nudo[0], cy0 - 2), hebras=6, color=VIOLETA, opacidad=0.45, abre=40)
-    for c in json.loads((TIPO / "esquemas" / "caja.json").read_text(encoding="utf8"))["celdas"]:
-        x = cx0 + (c["columna"] - 1) * (lado + 4)
-        y = cy0 + (c["fila"] - 1) * (lado + 4)
-        color = TINTA if c["estado"] == "hallada" else VIOLETA if c["estado"] == "reconstruida" else GRIS2
-        L.add("nodos", f'<rect x="{x}" y="{y}" width="{lado}" height="{lado}" fill="{PAPEL}" stroke="{FILETE}" stroke-width="0.8"/>')
-        L.texto(x + lado / 2, y + lado * 0.68, c["signo"], 16, color, SERIF, "middle")
-    lx = cx0 + 8 * (lado + 4) + 16
-    L.texto(lx, cy0 + 16, "30 hallados", 12, TINTA)
-    L.texto(lx, cy0 + 34, "25 reconstruidos", 12, VIOLETA)
-    L.texto(lx, cy0 + 52, "1 con los dedos", 12, GRIS)
-    L.texto(lx, cy0 + 76, "la caja de 8 × 7", 12, GRIS)
-    L.marco(4, "Del pie a los 55 signos", [("del pie", "medidas, no formas"), ("de la obra", "la forma"),
-                                            ("parámetros", "20 y la altura de x"), ("generadores", "o, l, n, a"),
-                                            ("fecha", FECHA)])
-    return L
-
-
-# ------------------------------------------------------------------ mapa 5: la cadena de estados
 
 ESTADOS = [
-    ("pie", "el registro", ["la foto mide; el sustituto da la forma", "D1"], "«le pusieron nombre, / otra manera de enterrar»"),
-    ("calco", "acción 3", ["continuo lo hallado, punteado lo reconstruido", "sobre el frotado de la pared", "D9"],
-     "«No se salvó la piedra, / solo la opinión sobre ella.»"),
-    ("placa", "acción 4", ["punzón de bola de 1 mm, por el reverso", "119 placas · 12 rotas", "D2 · D3"],
-     "«de la boca sale un signo / hecho con las manos»"),
-    ("cinta", "acción 6", ["masking sobre plástico negro", "no curva: se pliega", "D12"],
-     "«A la boca la taparon, a las manos no,»"),
-    ("frotado", "acción 8", ["papel y grafito: cada frotada aplasta", "el peso se mide en frotadas", "D10"],
-     "«otra manera de enterrar»"),
-    ("agua", "acción 9", ["la placa en una bandeja", "llega al revés y en trapecio", "D8 · D15"],
-     "«Tocas el agua y la diosa se deforma.»"),
-    ("voz", "acción 10", ["ondas de Faraday, a la mitad de la frecuencia", "no es tu voz", "D14"],
-     "«pocas veces vuelve hablado»"),
-    ("digital", "si cierra", ["un estado más", "vuelve al agua y a la placa: generación 2", "D10"],
-     "«Termina y empieza»"),
+    # nombre, acción, notas, verso, D
+    ("el pie", "el registro", ["la foto mide; el sustituto da la forma"], "«le pusieron nombre, / otra manera de enterrar.»", "D1"),
+    ("calco", "acción 3", ["continuo lo hallado, punteado lo reconstruido"], "«No se salvó la piedra, / solo la opinión sobre ella.»", "D9"),
+    ("placa", "acción 4", ["punzón de bola de 1 mm, por el reverso", "119 placas · 12 rotas"],
+     "«de la boca sale un signo / hecho con las manos»", "D2 · D3"),
+    ("cinta", "acción 6", ["masking sobre plástico negro: no curva, se pliega"], "«A la boca la taparon, a las manos no,»", "D12"),
+    ("frotado", "acción 8", ["papel y grafito: cada frotada aplasta", "el peso se mide en frotadas"],
+     "«Es lo que hacemos con todo, no?»", "D10"),
+    ("agua", "acción 9", ["la placa en una bandeja: llega al revés y en trapecio"], "«Tocas el agua y la diosa se deforma.»",
+     "D8 · D15"),
+    ("voz", "acción 10", ["ondas de Faraday, a la mitad", "de la frecuencia: no es tu voz"], "«ninguna palabra»", "D14"),
 ]
 
 
 def mapa_5():
-    L = Lienzo(1600, 1200, 5)
+    H = Hoja(1200, 1600, 55)
+    definir(H, "oagqnse")
     F = fichas_simuladas()
-    y0 = 470
-    xs = [120 + i * 194 for i in range(len(ESTADOS))]
-    # materia arriba (baja), luz abajo (sube): la cadena pierde materia y gana luz
-    n = len(xs)
-    for i, x in enumerate(xs):
-        materia = 100 * (1 - i / (n - 1)) + 18
-        luz = 18 + 100 * i / (n - 1)
-        for k in range(14):
-            xx = x - 40 + k * 6
-            L.linea(xx, y0 - 72, xx, y0 - 72 - materia * L.rng.uniform(0.75, 1.0), VIOLETA, 1.0, 0.9, capa="rayado")
-            L.linea(xx, y0 + 72, xx, y0 + 72 + luz * L.rng.uniform(0.75, 1.0), GRIS2, 0.8, 0.9, capa="rayado")
-    L.texto(40, y0 - 150, "materia", 12, VIOLETA)
-    L.texto(40, y0 + 160, "luz", 12, GRIS)
-    L.linea(xs[0] - 60, y0, xs[-1] + 60, y0, TINTA, 1.6)
-    for i, (nombre, accion, notas, verso) in enumerate(ESTADOS):
-        x = xs[i]
-        L.celda(x, y0, 56, VIOLETA if nombre not in ("pie", "digital") else TINTA, 1.3)
-        L.bloque(x, y0 - 46, [nombre], 18, TINTA, SERIF, "middle")
-        L.texto(x, y0 + 50, accion, 11, GRIS, ancla="middle")
-        arriba = i % 2 == 0
-        ty = 100 if arriba else 740
-        yy = ty
-        for nt in notas:
-            yy = L.bloque(x, yy, partir(nt, 22), 12, TINTA, ancla="middle", inter=1.2) + 18
-        fin = L.bloque(x, yy + 6, partir(verso, 24), 14.5, VIOLETA, SERIF, "middle", "italic", inter=1.15)
-        if arriba:
-            L.haz((x, y0 - 70), (x, y0 - 200), (x, fin + 10), hebras=5, color=TINTA, opacidad=0.4, abre=12)
-        else:
-            L.haz((x, y0 + 40), (x, y0 + 200), (x, ty - 20), hebras=5, color=TINTA, opacidad=0.4, abre=12)
-    # la vuelta: de lo digital a la placa (esténcil → repujado)
-    xa, xb = xs[-1], xs[2]
-    L.add("haces", f'<path d="M{xa},{y0 + 34} C{xa},{y0 + 250} {xb},{y0 + 250} {xb},{y0 + 34}" fill="none" '
-                   f'stroke="{VIOLETA}" stroke-width="1.3" stroke-dasharray="5 4"/>')
-    L.bloque((xa + xb) / 2, y0 + 200, ["termina y empieza: esténcil → placa nueva (generación 2)"], 12, VIOLETA, ancla="middle")
-    # el frotado, por signo: la cortina de las frotadas legibles
-    x0, x1, base = 330, 1180, 1072
-    datos = sorted(((v["celda"], v["frotado"]["legibles"], v["estado"]) for v in F.values() if v["variante"] == 1),
-                   key=lambda t: t[0])
-    L.cortina(x0, x1, base, [f * 4.0 for _, f, _ in datos],
-              [TINTA if e == "hallada" else VIOLETA if e == "reconstruida" else GRIS2 for _, _, e in datos], grosor=1.8)
-    L.linea(x0, base, x1, base, GRIS, 0.8)
-    L.texto(x0, base + 20, "frotadas legibles de cada celda, de la 1 a la 56", 12, TINTA)
-    L.texto(x0, base + 38, "en tinta las halladas (22,1 en promedio); en violeta las reconstruidas (9,8)", 11.5, GRIS)
-    L.marco(5, "La cadena de estados", [("estados", "6, más el pie y lo digital"), ("arriba", "la materia que se pierde"),
-                                         ("abajo", "la luz que se gana"), ("datos", "fichas_simuladas.json"),
-                                         ("fecha", FECHA)])
-    return L
+    # la sala: la piscina vacía en perspectiva, y las líneas de la sala que van a su fondo
+    P, z = piscina(H, 600, 1196, ancho=860, fondo_=700, prof=(160, 300), baldosa=62, agua=False, foco=600, altura=500,
+                   distancia=600)
+    for (x0, y0), (X, Y) in (((40, 40), (-430, 700)), ((1160, 40), (430, 700)), ((40, 1560), (-430, 0)),
+                             ((1160, 1560), (430, 0))):
+        x1, y1 = P(X, Y, 0)
+        H.trazo([(x0, y0), (x1, y1)], GRAFITO2, 0.45, 0.55, temblor=0.2)
+    # el embudo: un reloj de arena. Arriba entra el pie; en la cintura, la placa (la matriz); abajo, el charco
+    cx, arriba, cintura = 600, 196, 470
+    charco_y = P(0, 504, z(504))[1] - 4                       # el charco, sobre el desagüe
+    H.orbita(cx, arriba, 172, 28, 0, color=GRAFITO, ancho=0.7, pasadas=1, hueco=8)
+    trap = [(cx - 250, 120), (cx + 250, 120), (cx + 190, 176), (cx - 190, 176), (cx - 250, 120)]
+    H.trazo(trap, GRAFITO, 0.6, 0.8, temblor=0.2)
+    for s in (-1, 1):
+        H.trazo([(cx + s * 172, arriba), (cx + s * 12, cintura), (cx + s * 150, charco_y)], GRAFITO, 0.6, 0.85,
+                temblor=0.25)
+    # la grieta: por donde baja la gota
+    grieta = [(cx + 8, 150), (cx - 14, 250), (cx + 10, 330), (cx - 4, 420), (cx + 2, cintura), (cx + 20, 620),
+              (cx - 16, 760), (cx + 12, 900), (cx - 2, charco_y - 10)]
+    H.trazo(spline(grieta), TINTA, 0.8, temblor=0.9, deriva=1.0)
+    H.trazo([(cx - 14, 250), (cx - 40, 280), (cx - 52, 318)], TINTA, 0.6, temblor=0.8)
+    H.trazo([(cx + 20, 620), (cx + 46, 652)], TINTA, 0.6, temblor=0.8)
+    H.aguada(H.gota(cx + 4, 940, 6), VIOLETA, 0.85, desplaza=1.5, capas=1)
+    # los estados, bajando
+    tira_del_pie(H, cx, arriba - 2, 150, 34, -2, lineas=2, tam=5.4)
+    calco = H.mancha(420, 330, 78, 50, 0.06, 8, -6)[0]
+    H.aguada(calco, PLATA, 0.35, desplaza=3, capas=1)
+    contorno(H, "g", 396, 334, 0.15, TINTA, 1.0)
+    contorno(H, "q", 450, 334, 0.15, VIOLETA, 1.3, punteado=True)
+    placa(H, 700, cintura, 78, 92, 4, 0.7)
+    repujado(H, "a", 699, cintura + 6, 0.15, 4)
+    cinta_letra(H, 460, 610, 0.9)
+    estratos(H, 708, 700, 22)
+    estratos(H, 790, 700, 10, color=VIOLETA)
+    H.mano(708, 812, "22", 14, TINTA, halo=False)
+    H.mano(790, 752, "10", 14, VIOLETA, halo=False)
+    d, _ = H.mancha(cx, charco_y, 150, 32, 0.07, 11)
+    H.aguada(d, LILA, 0.95, desplaza=9)
+    H.aguada(H.mancha(cx + 20, charco_y + 2, 90, 18, 0.1, 9)[0], VIOLETA, 0.35, desplaza=6)
+    cuerpo(H, "a", cx - 40, charco_y + 4, 0.1, VIOLETA, opac=0.4, espejo=True)
+    faraday(H, cx + 214, charco_y - 30, 62, 14)
+    for k in range(1, 4):
+        H.orbita(cx, charco_y, 150 + k * 26, 32 + k * 7, 0, hueco=16, color=VIOLETA, ancho=0.5, pasadas=1,
+                 opac=0.75 - 0.15 * k)
+    for k, (s, X, Y) in enumerate((("o", -250, 380), ("n", -200, 300), ("s", -300, 250), ("e", 180, 420),
+                                   ("g", 260, 330), ("q", 120, 260))):      # placas en el fondo, como peces
+        x, y = P(X, Y, z(Y))
+        cuerpo(H, s, x, y - 10, 0.05 * 600 / (Y + 600), TINTA, rot=H.rng.uniform(-40, 40), opac=0.6)
+    # la vuelta: de lo digital a una placa nueva (generación 2)
+    v = H.flecha([(cx + 176, charco_y - 20), (1010, 1000), (1134, 760), (1080, 520), (900, 420), (760, cintura - 10)],
+                 VIOLETA, 1.1, punteado=True)
+    H.sobre(tramo(v, 0.3, 0.62), "digital, si cierra: termina y empieza", 15, VIOLETA, dy=-6)
+    H.mano(930, 372, "generación 2: el esténcil", 15, VIOLETA, rot=-3)
+    H.mano(940, 392, "vuelve a ser placa", 15, VIOLETA, rot=-3)
+    # rótulos: a la izquierda y a la derecha del embudo
+    lugares = [(860, 206, "start"), (330, 316, "end"), (820, 452, "start"), (370, 590, "end"), (880, 704, "start"),
+               (330, 1000, "end"), (900, 1030, "start")]
+    for (nombre, accion, notas, verso, dd), (x, y, ancla) in zip(ESTADOS, lugares):
+        H.mano(x, y, nombre, 26, TINTA, ancla, rot=-2)
+        H.mano(x + (0 if ancla == "start" else 0), y + 20, f"{accion} · {dd}", 14, GRAFITO, ancla)
+        yy = y + 42
+        for t in notas:
+            H.mano(x, yy, t, 15, TINTA, ancla)
+            yy += 19
+        H.maquinas(x, yy + 6, [p.strip() for p in verso.split("/")], 12, VIOLETA, ancla=ancla)
+    H.sobre([(cx - 190, 160), (cx + 190, 160)], "baja la materia, sube la luz", 15, GRAFITO, dy=-2)
+    # los datos: las frotadas legibles de cada celda, colgando del borde
+    datos = sorted(((v["celda"], v["frotado"]["legibles"], v["estado"]) for v in F.values() if v["variante"] == 1))
+    x0, x1, base = 210, 990, 1210
+    for i, (celda, n, estado) in enumerate(datos):
+        x = x0 + (x1 - x0) * (i + 0.5) / len(datos)
+        color = TINTA if estado == "hallada" else VIOLETA if estado == "reconstruida" else GRAFITO2
+        H.trazo([(x, base), (x + H.rng.uniform(-1, 1), base + n * 3.6)], color, 1.6, 0.9, temblor=0.25, deriva=0.3)
+    H.mano(x0, base + 124, "las frotadas legibles de cada celda, de la 1 a la 56: la tinta cuelga del borde", 15, TINTA)
+    H.mano(x0, base + 144, "las halladas aguantan 22,1 en promedio; las reconstruidas, 9,8", 15, GRAFITO)
+    H.leyenda(60, 1450, "mapa 5 · la cadena de estados", [])
+    H.leyenda(60, 1462, "", [("plata", "el calco, la placa"), ("hueso", "la cinta")], inter=23)
+    H.leyenda(380, 1462, "", [("grafito", "el frotado"), ("lila", "el agua")], inter=23)
+    H.leyenda(680, 1462, "", [("punteado", "lo que todavía no es"), ("maquina", "los versos, a máquina")], inter=23)
+    H.firma(1150, 50, 5, TOTAL, "la cadena de estados")
+    return H
 
 
 # ------------------------------------------------------------------ mapa 6: retórica y poética
 
+def picto(H, tipo, x, y):
+    """Los pictogramas de las figuras, a mano, en unos 70 px."""
+    if tipo == "anáfora":                                     # olas que se repiten, cada vez menos: apenas
+        for k, amp in enumerate((9, 6, 3)):
+            H.trazo([(x - 34 + i * 2, y - 16 + k * 16 + amp * math.sin(i * 0.5)) for i in range(35)], TINTA, 0.9)
+    elif tipo == "paradoja":                                  # una vasija con un agujero y su gota
+        pts = elipse_pts(x, y - 4, 26, 24, 0, math.pi * 0.62, math.pi * 2.38)
+        H.trazo(pts, TINTA, 1.1)
+        H.aguada(H.gota(x, y + 34, 5), VIOLETA, 0.85, desplaza=1.2, capas=1)
+        H.trazo([(x, y + 22), (x, y + 27)], VIOLETA, 0.9, punteado=True)
+    elif tipo == "derivación":                                # una raíz: enterrar, desenterrar, contener, contenida
+        H.trazo([(x, y - 30), (x, y)], TINTA, 1.0)
+        for dx, dy in ((-26, 28), (-8, 34), (10, 32), (28, 24)):
+            H.curva([(x, y), (x + dx * 0.5, y + dy * 0.4), (x + dx, y + dy)], color=TINTA, ancho=0.7)
+        H.trazo([(x - 36, y - 2), (x + 36, y + 1)], GRAFITO, 0.6)
+    elif tipo == "apóstrofe":                                 # ondas desde un punto: tocas el agua
+        H.punto(x, y, 2.6, VIOLETA)
+        for k in (1, 2, 3):
+            H.orbita(x, y, 10 * k, 5 * k, 0, hueco=20, color=VIOLETA, ancho=0.7, pasadas=1, opac=1 - 0.2 * k)
+    elif tipo == "prosopopeya":                               # la tierra que se bebe a sí misma
+        d = f"M{x - 36},{y + 20} Q{x},{y - 34} {x + 36},{y + 20} Z"
+        H.rayado(d, (x - 36, y - 14, x + 36, y + 20), -40, 2.6, GRAFITO, 0.7, 0.9)
+        H.trazo([(x - 38, y + 20), (x + 38, y + 20)], TINTA, 0.8)
+        pts = [(x + 14 * (1 - t) * math.cos(t * 9), y - 20 + 34 * t + 5 * (1 - t) * math.sin(t * 9)) for t in
+               [i / 40 for i in range(41)]]
+        H.trazo(pts, VIOLETA, 0.9)
+    elif tipo == "ciclo":                                     # una espiral abierta: termina y empieza
+        pts = [(x + (4 + 2.6 * t) * math.cos(t), y + (4 + 2.6 * t) * math.sin(t)) for t in
+               [i * 0.1 for i in range(120)]]
+        H.trazo(pts, TINTA, 0.9)
+        H.punta(pts[-1][0], pts[-1][1], math.atan2(pts[-1][1] - pts[-4][1], pts[-1][0] - pts[-4][0]), TINTA, 0.9, 8)
+    elif tipo == "antítesis":                                 # dos flechas opuestas: una continua, otra punteada
+        H.flecha([(x - 34, y - 8), (x + 34, y - 8)], TINTA, 1.0, curva=False)
+        H.flecha([(x + 34, y + 10), (x - 34, y + 10)], VIOLETA, 1.3, punteado=True, curva=False)
+    elif tipo == "metáfora":                                  # la letra es una vasija: agua en la cuenca de la a
+        H.aguada(f"M{x - 22},{y + 4} L{x + 22},{y + 4} L{x + 20},{y + 28} L{x - 20},{y + 28}Z", LILA, 0.9, desplaza=2,
+                 capas=1)
+        contorno(H, "a", x, y, 0.16, TINTA, 1.0)
+    elif tipo == "sinécdoque":                                # la cinta por el rostro tapado
+        H.punto(x - 12, y - 4, 2.4, TINTA)
+        H.punto(x + 12, y - 4, 2.4, TINTA)
+        tira = [(x - 32, y - 14), (x + 32, y - 8), (x + 30, y + 4), (x - 34, y - 2)]
+        H.add("objetos", f'<path d="{d_suave(H.temblar(tira + tira[:1], 0.4, 0.3), True)}" fill="{HUESO}" '
+                         f'stroke="#cbbf9f" stroke-width="0.6"/>')
+        H.trazo([(x - 12, y + 18), (x + 12, y + 18)], TINTA, 0.9)
+    elif tipo == "elipsis":                                   # una celda vacía
+        H.celda(x, y, 40, VIOLETA, 1.1, punteada=True, doble=False)
+        H.maquina(x, y + 44, "…", 16, VIOLETA, "middle", halo=False)
+    elif tipo == "etimología":                                # la portada: una puerta abierta
+        H.trazo([(x - 20, y + 28), (x - 20, y - 18), (x - 12, y - 28), (x + 12, y - 28), (x + 20, y - 18), (x + 20, y + 28)],
+                TINTA, 1.0)
+        H.trazo([(x - 20, y + 28), (x - 4, y + 34), (x - 4, y - 16), (x - 20, y - 18)], TINTA, 0.8)
+    elif tipo == "sentencia":                                 # una piedra
+        d, _ = H.mancha(x, y, 30, 20, 0.16, 8, -8)
+        H.rayado(d, (x - 34, y - 24, x + 34, y + 24), 30, 2.4, GRAFITO, 0.7, 0.95)
+        H.add("lineas", f'<path d="{d}" fill="none" stroke="{TINTA}" stroke-width="0.9"/>')
+    elif tipo == "interrogación":                             # una ? de la que cae una gota
+        cuerpo(H, "?", x, y, 0.13, TINTA)
+        H.aguada(H.gota(x + 2, y + 44, 4.5), VIOLETA, 0.85, desplaza=1.2, capas=1)
+
+
 FIGURAS = [
-    ("anáfora y gradación", "«es decir, apenas, es decir, temblor»"),
-    ("paradoja", "ningún contenedor aguanta lo que contiene"),
-    ("derivación", "enterrar, desenterrar, contener, contenida"),
-    ("apóstrofe", "«Tocas el agua»: le habla a quien mira"),
-    ("prosopopeya", "«La tierra se dio de beber a sí misma»"),
-    ("repetición y ciclo", "«termina y empieza, / termina y empieza»"),
-    ("antítesis", "vuelve escrito / vuelve hablado; hallado / reconstruido"),
-    ("metáfora", "la letra es una vasija; sus líneas tienen nombres de vasija"),
-    ("sinécdoque y metonimia", "el pie por la lámina; la cinta por el rostro tapado"),
-    ("elipsis", "lo que falta se ve vacío: la celda del .notdef, el …"),
-    ("etimología", "portada y puerta; el ojo del tipo; componer; el calderón"),
-    ("sentencia", "«Todos los archivos funcionan así»"),
-    ("interrogación retórica", "«Es lo que hacemos con todo, no?»"),
+    # figura, pictograma, glosa, lo que hace la letra, verso que la lleva, lado
+    ("anáfora y gradación", "anáfora", "«es decir» vuelve, y cada vez dice menos", "el temblor de la mano; tres planos a 1,6°",
+     "es decir, apenas, es decir, temblor,"),
+    ("paradoja", "paradoja", "ningún contenedor aguanta lo que contiene", "toda cuenca se abre en un desagüe",
+     "y ningún contenedor aguanta lo que contiene."),
+    ("derivación", "derivación", "enterrar, desenterrar, contener, contenida", "el nombre no es Kochamama",
+     "A la ídolo la desenterraron,"),
+    ("apóstrofe", "apóstrofe", "«Tocas»: le habla a quien mira", "tocar deforma el espécimen",
+     "Tocas el agua y la diosa se deforma."),
+    ("prosopopeya", "prosopopeya", "la tierra bebe, como un cuerpo", "la gota: solo gotea lo que mira abajo",
+     "La tierra se dio de beber a sí misma"),
+    ("repetición y ciclo", "ciclo", "«termina y empieza», dos veces", "el bucle; frotar y repujar otra",
+     "Termina y empieza,"),
+    ("antítesis", "antítesis", "escrito y hablado; hallado y reconstruido", "continuo y punteado, en todos los estados",
+     "Y es que lo que vuelve, vuelve escrito;"),
+    ("metáfora", "metáfora", "la letra es una vasija", "fondo, borde, desagüe y afuera", "Quedó el contenedor"),
+    ("sinécdoque y metonimia", "sinécdoque", "el pie por la lámina; la cinta por el rostro",
+     "las letras salen del pie; el punto de cinta", "A la boca la taparon, a las manos no,"),
+    ("elipsis", "elipsis", "lo que falta se ve vacío", "la celda vacía: lo que no cabe", "ninguna palabra,"),
+    ("etimología", "etimología", "portada y puerta; el ojo del tipo; componer", "la puerta sobre la celda 1; el {¶}",
+     "de la boca sale un signo"),
+    ("sentencia", "sentencia", "«Todos los archivos funcionan así»", "de la piscina no se saca nada",
+     "Todos los archivos funcionan así."),
+    ("interrogación retórica", "interrogación", "«no?»: pregunta sin esperar respuesta",
+     "la {?} se arma sin modelo; la {¿} no es su espejo", "Es lo que hacemos con todo, no?"),
 ]
-OPERACIONES = [
-    ("el temblor de la mano; tres planos a 1,6°", [0]),
-    ("toda cuenca se abre en un desagüe", [1, 4]),
-    ("el nombre no es Kochamama", [2, 7]),
-    ("el agua tocada; tocar deforma el espécimen", [3]),
-    ("la gota: solo gotea lo que mira abajo", [4]),
-    ("el bucle; frotar y repujar otra; generación 2", [5]),
-    ("continuo y punteado en todos los estados", [6]),
-    ("fondo, borde, desagüe, afuera", [7]),
-    ("las letras salen del pie; el punto de cinta", [8]),
-    ("la celda vacía; lo que no cabe", [9]),
-    ("la puerta sobre la celda 1; no hay Regular; ¶", [10]),
-    ("el estado Voz: deforma, no se graba", [6]),
-    ("de la piscina no se saca nada", [11]),
-    ("la ? se arma sin modelo; la ¿ no es su espejo", [12]),
-]
-VERSO_FIGURA = {
-    "moverse como se mueve la piedra,": [0], "es decir, apenas, es decir, temblor,": [0], "es decir, un presente continuo.": [0],
-    "y ningún contenedor aguanta lo que contiene.": [1], "quedó el contenedor": [1, 7], "de lo que ya no está.": [1],
-    "a la ídolo la desenterraron,": [2], "otra manera de enterrar.": [2], "desenterrar una voz": [2],
-    "tocas el agua y la diosa se deforma.": [3], "la tierra se dio de beber a sí misma": [4],
-    "termina y empieza,": [5], "termina y empieza.": [5], "vuelve sin que la llames.": [5], "cada vuelta pasa por el agua": [5],
-    "y es que lo que vuelve, vuelve escrito;": [6], "pocas veces vuelve hablado.": [6],
-    "primero enterramos,": [6], "después nos emocionamos.": [6],
-    "una piscina vacía,": [7], "le pusieron nombre,": [7], "a la boca la taparon, a las manos no,": [8, 6],
-    "donde una vez aprendí a flotar,": [6], "ahora aprendo a mirar.": [6],
-    "todos los archivos funcionan así.": [11], "nos fuimos con las manos secas,": [11],
-    "que es como se sale de todas las ruinas.": [11], "es lo que hacemos con todo, no?": [12],
-    "es lo más parecido a estar viva": [4], "que puede hacer una imagen.": [4],
-    "es desenterrar la mano del que la escribió.": [2],
-    "no se salvó la piedra,": [8], "solo la opinión sobre ella.": [8],
-    "no tiene lengua pero igual dice.": [9], "ninguna palabra,": [9],
-    "de la boca sale un signo": [10], "hecho con las manos,": [10], "al final del ciclo,": [10, 5],
-    "la misma diosa dos veces": [5, 6], "y ninguna igual.": [6],
-}
 
 
 def mapa_6():
-    L = Lienzo(1200, 1600, 6)
-    versos = [v for v in (TIPO / "textos" / "poema.txt").read_text(encoding="utf8").lower().split("\n")]
-    construccion(L, 610, 820, (330, 560), rayos=(0, 90))
-    # los versos: una columna a la izquierda, con los blancos entre estrofas
-    y, pos = 110, {}
+    H = Hoja(1200, 1600, 66)
+    definir(H, "a?")
+    versos = (TIPO / "textos" / "poema.txt").read_text(encoding="utf8").split("\n")
+    # los márgenes: los verbos, como en un cuaderno
+    H.add("textos", f'<text x="58" y="300" font-family="La Belle Aurore" font-size="40" fill="{TINTA}" '
+                    f'transform="rotate(-90 58 300)" letter-spacing="3">ENTERRAR</text>')
+    H.add("textos", f'<text x="1162" y="120" font-family="La Belle Aurore" font-size="40" fill="{TINTA}" '
+                    f'transform="rotate(90 1162 120)" letter-spacing="3">CONTENER</text>')
+    H.mano(1150, 1560, "DESENTERRAR", 40, TINTA, "end", rot=0)
+    # el agua: el poema entero, a máquina, adentro
+    cx, cy, rx, ry = 600, 800, 226, 356
+    d, _ = H.mancha(cx, cy, rx, ry, 0.05, 12)
+    H.aguada(d, LILA, 0.42, desplaza=18, capas=2, borde=0.7)
+    H.orbita(cx, cy, rx + 16, ry + 10, 2, hueco=10, color=TINTA, ancho=0.8, pasadas=2)
+    H.aguada(H.gota(cx + 4, cy + ry + 44, 7), VIOLETA, 0.85, desplaza=2, capas=1)
+    H.trazo([(cx + 4, cy + ry + 14), (cx + 4, cy + ry + 32)], VIOLETA, 1.0, punteado=True)
+    y = cy - 316
+    pos = {}
+    operan = {f[4] for f in FIGURAS}
     for v in versos:
         if not v.strip():
-            y += 12
+            y += 7
             continue
         pos[v.strip()] = y
-        L.texto(60, y, v.strip(), 13.5, VIOLETA if v.strip() in VERSO_FIGURA else GRIS2, SERIF, estilo="italic")
-        y += 29
-    L.texto(60, 80, "el poema, verso a verso", 12, GRIS)
-    # las figuras: nudos al centro
-    fx = 640
-    fys = [150 + i * 98 for i in range(len(FIGURAS))]
-    for i, (fig, ej) in enumerate(FIGURAS):
-        L.punto(fx - 30, fys[i], 4.5, TINTA)
-        L.texto(fx - 16, fys[i] + 5, fig, 15, TINTA, peso=700)
-        L.bloque(fx - 16, fys[i] + 24, partir(ej, 30), 11.5, GRIS, inter=1.2)
-    for v, figs in VERSO_FIGURA.items():
-        if v not in pos:
-            continue
-        largo = len(v) * 6.4
-        for f in figs:
-            L.haz((60 + largo + 10, pos[v] - 5), (60 + largo + 60, pos[v] - 5), (fx - 36, fys[f]), hebras=4,
-                  color=VIOLETA, opacidad=0.45, abre=5)
-    # las operaciones: a la derecha
-    ox = 1150
-    for j, (op, figs) in enumerate(OPERACIONES):
-        oy = 170 + j * 88
-        L.bloque(ox, oy, partir(op, 26), 13, TINTA, ancla="end", inter=1.2)
-        for f in figs:
-            L.haz((fx + 175, fys[f]), (fx + 230, fys[f]), (ox - 200, oy - 4), hebras=4, color=TINTA, opacidad=0.45, abre=5)
-    L.texto(ox, 130, "lo que hace la letra", 12, GRIS, ancla="end")
-    L.texto(fx - 16, 115, "las figuras", 12, GRIS)
-    L.marco(6, "Retórica y poética", [("versos", f"{len(pos)} del poema"), ("figuras", f"{len(FIGURAS)}"),
-                                       ("operaciones", f"{len(OPERACIONES)}"), ("violeta", "los versos que operan"),
-                                       ("fecha", FECHA)])
-    return L
+        H.maquina(cx, y, v.strip(), 11, VIOLETA if v.strip() in operan else GRAFITO, "middle", halo=False)
+        y += 13.4
+    # las figuras, alrededor, en el orden de sus versos; cada una unida al suyo por una línea que serpentea
+    orden = sorted(FIGURAS, key=lambda f: pos[f[4]])
+    izq = [(96, 150 + 210 * k) for k in range(6)]
+    der = [(872, 176 + 210 * k) for k in range(6)]
+    lugares = [izq[k // 2] if k % 2 == 0 else der[k // 2] for k in range(12)] + [(470, 1300)]
+    for (nombre, tipo, glosa, letra, verso), (x, y0) in zip(orden, lugares):
+        picto(H, tipo, x + 36, y0)
+        H.mano(x + 84, y0 + 4, nombre, 20, TINTA, rot=-1.5)
+        yy = H.manos(x, y0 + 58, partir(glosa, 36), 14.5, GRAFITO, inter=1.2)
+        H.manos(x, yy + 22, partir("la letra: " + letra, 34), 15, TINTA, inter=1.2)
+        vy = pos[verso] - 4
+        medio_verso = len(verso) * 11 * 0.6 / 2
+        abajo = y0 > 1250
+        izquierda = x < cx
+        if abajo:                                               # la de abajo sube al último verso
+            vx = cx - medio_verso - 6
+            camino = [(x + 36, y0 - 44), (x + 10, y0 - 120), (cx - rx - 10, vy + 30), (cx - rx + 30, vy), (vx, vy)]
+        else:
+            vx = cx - medio_verso - 6 if izquierda else cx + medio_verso + 6
+            borde = cx - rx - 30 if izquierda else cx + rx + 30
+            sx = x + 92 + len(nombre) * 8.6 if izquierda else x - 6
+            camino = [(sx, y0), ((sx + borde) / 2 + H.rng.uniform(-20, 20), (y0 + vy) / 2 + H.rng.uniform(-30, 30)),
+                      (borde, vy + (18 if vy > y0 else -18)), (borde + (26 if izquierda else -26), vy), (vx, vy)]
+        c = spline(camino, 22)
+        ondulado = [(px + 2.6 * math.sin(i * 0.33), py + 2.6 * math.cos(i * 0.27)) for i, (px, py) in enumerate(c)]
+        H.trazo(ondulado, GRAFITO, 0.6, 0.85, temblor=0.3, deriva=1.0)
+        H.punto(vx, vy, 2.2, VIOLETA)
+    H.leyenda(60, 1440, "mapa 6 · retórica y poética", [])
+    H.leyenda(60, 1452, "", [("maquina", "el poema: en violeta, los versos que operan"),
+                             ("lila", "el agua: cada vuelta pasa por ella")], inter=23)
+    H.mano(96, 1540, "un dibujo por figura; debajo, lo que hace la letra", 15, GRAFITO)
+    H.firma(1090, 50, 6, TOTAL, "retórica y poética")
+    return H
 
 
 # ------------------------------------------------------------------ salida
 
+CARAS = (("Courier Prime", "courier-prime-latin-400-normal.woff2", 400, "normal"),
+         ("Courier Prime", "courier-prime-latin-700-normal.woff2", 700, "normal"),
+         ("Courier Prime", "courier-prime-latin-400-italic.woff2", 400, "italic"),
+         ("Newsreader", "newsreader-latin-300-normal.woff2", 300, "normal"),
+         ("Newsreader", "newsreader-latin-400-normal.woff2", 400, "normal"),
+         ("Newsreader", "newsreader-latin-400-italic.woff2", 400, "italic"),
+         ("La Belle Aurore", "la-belle-aurore-latin-400-normal.woff2", 400, "normal"))
+
+
 def html(svg, W, H):
-    caras = "".join(
-        f'@font-face{{font-family:"{fam}";src:url("{(FUENTES / arch).as_uri()}") format("woff2");'
-        f'font-weight:{peso};font-style:{est}}}'
-        for fam, arch, peso, est in (
-            ("Courier Prime", "courier-prime-latin-400-normal.woff2", 400, "normal"),
-            ("Courier Prime", "courier-prime-latin-700-normal.woff2", 700, "normal"),
-            ("Courier Prime", "courier-prime-latin-400-italic.woff2", 400, "italic"),
-            ("Newsreader", "newsreader-latin-300-normal.woff2", 300, "normal"),
-            ("Newsreader", "newsreader-latin-400-normal.woff2", 400, "normal"),
-            ("Newsreader", "newsreader-latin-500-normal.woff2", 500, "normal"),
-            ("Newsreader", "newsreader-latin-400-italic.woff2", 400, "italic"),
-            ("Newsreader", "newsreader-latin-300-italic.woff2", 300, "italic")))
+    caras = "".join(f'@font-face{{font-family:"{fam}";src:url("{(FUENTES / arch).as_uri()}") format("woff2");'
+                    f'font-weight:{peso};font-style:{est}}}' for fam, arch, peso, est in CARAS)
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>{caras}html,body{{margin:0;background:{PAPEL}}}'
             f'svg{{display:block;width:{W}px;height:{H}px}}</style></head><body>{svg}</body></html>')
 
 
-def main():
+MAPAS = {1: ("el_proyecto_entero", mapa_1), 2: ("teoria_y_fuentes", mapa_2),
+         3: ("la_obra_decision_por_decision", mapa_3), 4: ("del_pie_a_los_55", mapa_4),
+         5: ("la_cadena_de_estados", mapa_5), 6: ("retorica_y_poetica", mapa_6)}
+
+
+def preparar(cache=None):
+    global C_ACTUAL
+    C_ACTUAL = cuerpos(cache)
+    return C_ACTUAL
+
+
+def main(numeros=None, cache=None):
     from generar_laminas import chrome
     SALIDA.mkdir(exist_ok=True)
-    G = generadores()
-    mapas = [("el_proyecto_entero", mapa_1(G)), ("teoria_y_fuentes", mapa_2()), ("la_obra_decision_por_decision", mapa_3()),
-             ("del_pie_a_los_55", mapa_4(G)), ("la_cadena_de_estados", mapa_5()), ("retorica_y_poetica", mapa_6())]
+    preparar(cache)
     ejecutable = chrome()
     modo = [] if ejecutable.endswith("headless_shell") else ["--headless=new"]
-    for i, (nombre, L) in enumerate(mapas, 1):
-        svg = L.svg()
+    for i in numeros or sorted(MAPAS):
+        nombre, hacer = MAPAS[i]
+        H = hacer()
+        svg = H.svg()
         base = SALIDA / f"mapa_{i}_{nombre}"
         base.with_suffix(".svg").write_text(svg, encoding="utf8")
         pagina = SALIDA / f".mapa_{i}.html"
-        pagina.write_text(html(svg, L.W, L.H), encoding="utf8")
+        pagina.write_text(html(svg, H.W, H.H), encoding="utf8")
         subprocess.run([ejecutable, *modo, "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
                         "--force-device-scale-factor=2", "--allow-file-access-from-files", "--virtual-time-budget=5000",
-                        f"--window-size={L.W},{L.H}", f"--screenshot={base.with_suffix('.png')}", pagina.as_uri()],
+                        f"--window-size={H.W},{H.H}", f"--screenshot={base.with_suffix('.png')}", pagina.as_uri()],
                        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         pagina.unlink()
         print(f"mapa {i}: {nombre}")
 
 
 if __name__ == "__main__":
-    main()
+    main([int(a) for a in sys.argv[1:] if not a.startswith("--")] or None)

@@ -42,8 +42,9 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `gramatica.py`, `contener.py`, `devolver.py`) |
 | `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |
+| `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
-| `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas que conectan conceptos, teoría, retórica y poética en cada etapa |
+| `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
 | `aplicacion/` | **La gramática en el navegador:** la ficha de parámetros, la caja, el signo con sus partes, el texto compuesto y los seis estados. Exporta `parametros.json` para `simular.py --parametros` |
 
 ## Estado

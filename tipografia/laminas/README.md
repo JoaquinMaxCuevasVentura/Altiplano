@@ -46,8 +46,9 @@ Diecisiete láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sis
 
 - **Newsreader** (Production Type), para el texto.
 - **Courier Prime** (Alan Dague-Greene), para fichas y leyendas: una monoespaciada de máquina de escribir, como la del poema.
+- **La Belle Aurore** (Kimberly Geswein), solo para las notas a mano de los mapas del informe (`../informe/`). Es una fuente, no una mano.
 
-Las dos tienen licencia SIL OFL (`fuentes/LICENSE_*.txt`).
+Las tres tienen licencia SIL OFL (`fuentes/LICENSE_*.txt`).
 
 ## Regenerar
 
