@@ -38,8 +38,10 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `inventario.py` | Recalcula el inventario desde los textos |
 | `esquemas/` | La caja, la pauta de calco 1:1, la ficha de hallazgo, la cadena de estados y los montajes con agua (SVG y PNG), y `plantillas_imprimibles.pdf` |
 | `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
-| `simulacion/informe.md` | **La propuesta de la máquina:** el taller entero simulado con código, de la pared frotada a la estrofa compuesta en la pared, con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
-| `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `contener.py`, `devolver.py`: un módulo por cuaderno) |
+| `simulacion/informe.md` | **La propuesta de la máquina:** el pie, la gramática y cinco estados simulados con código (calco, placa, cinta, agua y voz), con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
+| `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `gramatica.py`, `contener.py`, `devolver.py`) |
+| `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
+| `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 
 ## Estado
@@ -56,10 +58,12 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 ```bash
 pip install pillow numpy opencv-python-headless scikit-image scipy shapely
 python3 tipografia/inventario.py                    # después de corregir textos/pie_de_lamina.txt
+python3 tipografia/simulacion/extraer_testigos.py \
+  RUTA/A/LA/FOTO_DEL_PIE                            # solo si cambia la foto (necesita tesseract, spa)
 python3 tipografia/simulacion/gramatica.py          # la gramática: los 55 cuerpos base y la cinta
 python3 tipografia/esquemas/generar_esquemas.py \
   --azulejo 150                                     # la placa, en mm; la pauta toma las líneas de la gramática
-python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (unos cinco minutos)
+python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (un minuto y medio)
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
 python3 tipografia/laminas/generar_laminas.py       #   (los esquemas y las láminas necesitan Chromium: CHROME)
 ```

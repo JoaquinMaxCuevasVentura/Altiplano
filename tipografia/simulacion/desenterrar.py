@@ -1,22 +1,26 @@
 """Cuaderno 1 · Desenterrar: acciones 1 a 3, simuladas.
 
 Acción 1: una pared de azulejo con juntas torcidas, craquelado, manchas y
-desportillados, y su frotado con grafito.
-Acción 2: el pie impreso con tipos de plomo (tinta que se corre, tinta que
-falta, mellas), fotografiado con luz rasante, ampliado en tres generaciones de
-fotocopia; para cada signo se elige el testigo mejor conservado.
-Acción 3: la escala que decide el pie, el calco con temblor de mano y la
-reconstrucción por analogía de los signos que el pie no trae.
+desportillados, y su frotado con grafito: el papel sobre el que se calca.
+Acción 2: el pie. En la foto de la lámina se lee y se mide, pero no alcanza para
+calcar (testigos/, de extraer_testigos.py). El testigo de las formas es el pie
+impreso con una letra sustituta y tipos de plomo simulados (tinta que se corre,
+tinta que falta, mellas), fotografiado con luz rasante y ampliado en tres
+generaciones de fotocopia; para cada signo se elige el testigo mejor conservado.
+De la foto se toma una proporción: la altura de x, más baja que la del sustituto.
+Acción 3: la escala que decide el pie, y el calco: el contorno del cuerpo de la
+gramática, con temblor de mano, abierto en su punto más bajo.
 """
 
+import json
 import re
 
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from comun import (AZULEJO_MM, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta, centrar_h, componentes,
-                   escalar, lineas_pie, mover, rotar, ruido, ruido_1d)
+from comun import (AZULEJO_MM, BASE, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta, componentes,
+                   lineas_pie, ruido, ruido_1d)
 
 PX_IMPRENTA = 40      # px/mm del papel impreso simulado
 PX_FOTO = 12          # px/mm de la foto con luz rasante
@@ -89,19 +93,6 @@ def frotado(p, rng):
     oscuro = 0.74 * contacto * np.clip(presion + 0.1 * trazo + 0.07 * grano, 0, 1.1)
     papel = 0.96 + 0.015 * grano
     return np.clip(papel * (1 - oscuro), 0, 1)
-
-
-def foto_pared(p, rng, luz_desde_izquierda=True):
-    """Foto de la pared: esmalte blanco con manchas, grietas sucias y juntas grises."""
-    H, W = p["relieve"].shape
-    esmalte = 0.9 - p["mancha"] - 0.12 * p["grietas"] + 0.015 * ruido((H, W), 1.0, rng)
-    junta = 0.42 + 0.06 * ruido((H, W), 3, rng)
-    alb = np.where(p["juntas"], junta, esmalte)
-    alb = alb * (0.75 + 0.25 * np.clip(p["relieve"], 0, 1))
-    x = np.linspace(0, 1, W)[None, :]
-    luz = (0.72 + 0.3 * x) if luz_desde_izquierda else (1.02 - 0.3 * x)
-    img = np.clip(alb * luz, 0, 1)
-    return np.dstack([img * 0.98, img * 0.97, img * 0.93])
 
 
 # ---------------------------------------------------------------- acción 2: el pie
@@ -253,6 +244,40 @@ def opinar(signo, propia):
     return m, 100 * cambio
 
 
+# ---------------------------------------------------------------- el pie en la foto
+
+TESTIGOS = BASE / "testigos"
+
+
+def pie_de_la_foto():
+    """El pie tal como está en la foto de la lámina: armado de vuelta, línea por línea, con
+    las letras que recortó extraer_testigos.py; y lo que la foto deja medir.
+
+    La foto no alcanza para calcar (una altura de x de unos 11 px, con la tinta corrida:
+    los ojos de la a y de la e se cierran). Alcanza para medir alturas y grosor. El testigo
+    de las formas sigue siendo el sustituto impreso; esto queda como el pie real, para
+    mirarlo y para comparar.
+    """
+    ruta = TESTIGOS / "pie.json"
+    if not ruta.exists():
+        return None
+    datos = json.loads(ruta.read_text(encoding="utf8"))
+    lineas = {}
+    for l in datos["letras"]:
+        g = cv2.imread(str(TESTIGOS / l["archivo"]), cv2.IMREAD_GRAYSCALE).astype(np.float32) / 255
+        lineas.setdefault(l["linea"], []).append((l["x_linea"], g))
+    filas = []
+    for li in sorted(lineas):
+        W = max(x + g.shape[1] for x, g in lineas[li])
+        fila = np.ones((max(g.shape[0] for _, g in lineas[li]), W), np.float32)
+        for x, g in lineas[li]:
+            fila[:g.shape[0], x:x + g.shape[1]] = np.minimum(fila[:g.shape[0], x:x + g.shape[1]], g)
+        filas.append(fila)
+    W = max(f.shape[1] for f in filas)
+    imagen = np.vstack([np.pad(f, ((0, 0), (0, W - f.shape[1])), constant_values=1) for f in filas])
+    return dict(imagen=imagen, medidas=datos["tinta"], letras=len(datos["letras"]))
+
+
 # ---------------------------------------------------------------- acción 3: escala, calco y reconstrucción
 
 LETRAS_X = "acemnorsuv"
@@ -280,6 +305,21 @@ def escalar_y_colocar(testigos):
     return colocadas, s, base_azulejo, desbordes
 
 
+def achatar(m, base, asc, xh, xh_nueva):
+    """Lleva la altura de x de una letra a xh_nueva sin mover la base ni la línea de afuera: la
+    zona de x se comprime y la de las ascendentes se estira. Abajo de la base, nada cambia."""
+    afuera, borde, borde_n = base - asc, base - xh, base - xh_nueva
+    y = np.arange(T, dtype=np.float32)
+    fuente = y.copy()
+    arriba = (y >= afuera) & (y < borde_n)
+    fuente[arriba] = afuera + (y[arriba] - afuera) * (borde - afuera) / (borde_n - afuera)
+    medio = (y >= borde_n) & (y <= base)
+    fuente[medio] = borde + (y[medio] - borde_n) * (base - borde) / (base - borde_n)
+    mapa_y = np.repeat(fuente[:, None], T, axis=1)
+    mapa_x = np.repeat(np.arange(T, dtype=np.float32)[None, :], T, axis=0)
+    return cv2.remap(m.astype(np.float32), mapa_x, mapa_y, cv2.INTER_LINEAR) > 0.5
+
+
 def medidas(M, base):
     tops = [caja_tinta(M[c])[1] for c in LETRAS_X if c in M]
     xh = float(np.median([base - t for t in tops]))
@@ -298,180 +338,6 @@ def medidas(M, base):
     return dict(base=base, xh=xh, asc=asc, desc=desc, grueso=grueso, fino=fino,
                 base_teselas=(T - base) / TES, x_teselas=(T - base + xh) / TES,
                 asc_teselas=(T - base + asc) / TES, desc_teselas=(T - base - desc) / TES)
-
-
-def _arriba_de_x(m, med, margen=0.08):
-    """Las partes que están por encima de la altura de x: tildes y puntos."""
-    linea = med["base"] - med["xh"] * (1 + margen)
-    out = np.zeros_like(m)
-    for c, st, cen in componentes(m):
-        if cen[1] < linea:
-            out |= c
-    return out
-
-
-def _abajo_de_x(m, med):
-    linea = med["base"] - med["xh"] * 1.08
-    out = np.zeros_like(m)
-    for c, st, cen in componentes(m):
-        if cen[1] >= linea:
-            out |= c
-    return out
-
-
-def _linea(pts, grosor):
-    m = np.zeros((T, T), np.uint8)
-    cv2.polylines(m, [np.array(pts, np.int32)], False, 255, max(1, int(round(grosor))), cv2.LINE_AA)
-    return m > 127
-
-
-def _rect(x0, y0, x1, y1):
-    m = np.zeros((T, T), bool)
-    m[int(max(0, y0)):int(min(T, y1)), int(max(0, x0)):int(min(T, x1))] = True
-    return m
-
-
-def _poner_encima(base_m, acento, ref_m):
-    """Pone un acento sobre base_m con la misma posición relativa que tenía sobre ref_m."""
-    bx0, _, bx1, _ = caja_tinta(base_m)
-    rx0, _, rx1, _ = caja_tinta(_sin(ref_m, acento))
-    return base_m | mover(acento, (bx0 + bx1) / 2 - (rx0 + rx1) / 2, 0)
-
-
-def _sin(m, parte):
-    return m & ~parte
-
-
-def reconstruir(M, med, rng):
-    """Los 25 signos que el pie no trae, por analogía. Devuelve máscaras y la receta de cada una."""
-    b, xh, g, f = med["base"], med["xh"], med["grueso"], med["fino"]
-    xl = b - xh
-    R, receta = {}, {}
-    tilde = _arriba_de_x(M["á"], med)
-    punto_i = _arriba_de_x(M["i"], med)
-    o = M["o"]
-    ox0, oy0, ox1, oy1 = caja_tinta(o)
-    ocx, ocy, ow, oh = (ox0 + ox1) / 2, (oy0 + oy1) / 2, ox1 - ox0, oy1 - oy0
-
-    R["ó"] = _poner_encima(M["o"], tilde, M["á"]); receta["ó"] = "la o con la tilde de la á"
-    R["é"] = _poner_encima(M["e"], tilde, M["á"]); receta["é"] = "la e con la tilde de la á"
-    u0, _, u1, _ = caja_tinta(M["u"])
-    px0, _, px1, _ = caja_tinta(punto_i)
-    uc, uw = (u0 + u1) / 2, u1 - u0
-    R["ü"] = M["u"] | mover(punto_i, uc - 0.22 * uw - (px0 + px1) / 2, 0) | mover(punto_i, uc + 0.22 * uw - (px0 + px1) / 2, 0)
-    receta["ü"] = "la u con dos puntos de la i"
-    n0, _, n1, _ = caja_tinta(M["n"])
-    _, ty0, _, ty1 = caja_tinta(tilde)
-    xs = np.linspace(n0 + 0.08 * (n1 - n0), n1 - 0.08 * (n1 - n0), 40)
-    ys = (ty0 + ty1) / 2 + 0.045 * xh * np.sin(np.linspace(0.2, 2 * np.pi - 0.2, 40) + np.pi)
-    R["ñ"] = M["n"] | _linea(np.stack([xs, ys], 1), f * 1.15)
-    receta["ñ"] = "la n con una virgulilla sin modelo, del grueso fino de la o"
-
-    v = M["v"]
-    vx0, vy0, vx1, vy1 = caja_tinta(v)
-    vc = (vx0 + vx1) / 2
-    vv = escalar(v, 0.72, 1, vc, 0)
-    R["w"] = centrar_h(mover(vv, -0.3 * (vx1 - vx0), 0) | mover(vv, 0.3 * (vx1 - vx0), 0))
-    receta["w"] = "dos v estrechadas"
-    k = ((vx1 - vx0) / 2) / max(vy1 - vy0, 1)
-    izq = v & (np.arange(T)[None, :] < vc)
-    der = v & (np.arange(T)[None, :] >= vc)
-    inclinar = lambda m, kk: cv2.warpAffine(m.astype(np.float32), np.float32([[1, kk, -kk * vy0], [0, 1, 0]]), (T, T)) > 0.5
-    R["x"] = centrar_h(escalar(inclinar(izq, k) | inclinar(der, -k), 0.92, 1, vc, 0))
-    receta["x"] = "los dos trazos de la v, inclinados hasta cruzarse (quedan con remates solo arriba)"
-    xx0, xy0, xx1, xy1 = caja_tinta(R["x"])
-    yy, xxg = np.mgrid[0:T, 0:T]
-    d = np.abs((xy1 - xy0) * xxg + (xx1 - xx0) * yy - (xx1 * xy1 - xx0 * xy0)) / np.hypot(xy1 - xy0, xx1 - xx0)
-    diag = R["x"] & (d < g * 0.55) & (yy > xy0 + f) & (yy < xy1 - f)
-    R["z"] = diag | _rect(xx0 + 0.05 * (xx1 - xx0), xy0, xx1, xy0 + f * 1.3) | _rect(xx0, xy1 - f * 1.3, xx1 - 0.03 * (xx1 - xx0), xy1)
-    receta["z"] = "la diagonal de la x reconstruida (hipótesis sobre hipótesis) y dos barras del grueso fino de la o"
-
-    # cifras elzevirianas: de altura de x; 6 y 8 suben; 3, 4, 5, 7 y 9 bajan
-    baja = b + 0.38 * xh
-    R["0"] = escalar(o, 0.9, 1, ocx, ocy); receta["0"] = "la o, algo más estrecha"
-    stem = _abajo_de_x(M["i"], med)
-    sx0, sy0, sx1, _ = caja_tinta(stem)
-    R["1"] = stem | _linea([(sx0 + 2, sy0 + f), (sx0 - 0.18 * xh, sy0 + 0.22 * xh)], f * 1.2)
-    receta["1"] = "la i sin punto, con una bandera"
-    arco = o & (yy < ocy + 0.05 * oh) & (xxg > ocx - 0.42 * ow)
-    R["2"] = arco | _linea([(ox1 - 0.08 * ow, ocy), (ox0 + 0.04 * ow, b - f)], g * 0.75) | _rect(ox0, b - f * 1.3, ox1, b)
-    receta["2"] = "el arco de arriba de la o, una diagonal y una barra de base"
-    mitad_d = o & (xxg > ocx - 0.12 * ow)
-    alto3 = baja - xl
-    s1 = escalar(mitad_d, 0.85, 0.52 * alto3 / oh, ocx, oy0)
-    s1 = mover(s1, 0, xl - oy0)
-    s2 = escalar(mitad_d, 1.0, 0.6 * alto3 / oh, ocx, oy1)
-    s2 = mover(s2, 0, baja - oy1)
-    R["3"] = s1 | s2; receta["3"] = "dos mitades derechas de la o, la de abajo bajo la línea"
-    tx = ocx + 0.12 * ow
-    R["4"] = _rect(tx - g * 0.45, xl, tx + g * 0.45, baja) | _linea([(tx, xl), (ocx - 0.42 * ow, b - 0.08 * xh)], f * 1.3) | \
-        _rect(ocx - 0.45 * ow, b - 0.08 * xh - f * 0.7, ocx + 0.4 * ow, b - 0.08 * xh + f * 0.7)
-    receta["4"] = "un asta que baja, una diagonal fina y una barra"
-    cuenco = o & (yy > ocy - 0.1 * oh) & (xxg > ocx - 0.25 * ow)
-    cuenco = mover(escalar(cuenco, 1.05, 1.15, ocx, ocy), 0, baja - (oy1 + 0.07 * oh))
-    R["5"] = _rect(ocx - 0.28 * ow, xl, ocx + 0.35 * ow, xl + f * 1.3) | _rect(ocx - 0.28 * ow - g * 0.4, xl, ocx - 0.28 * ow + g * 0.4, xl + 0.5 * xh) | cuenco
-    receta["5"] = "una barra, un asta corta y la mitad baja de la o, bajo la línea"
-    c = M["c"]
-    cx0, cy0, cx1, cy1 = caja_tinta(c)
-    grande = escalar(c, 1.0, 1.75, cx1, cy1)
-    subida = grande & (yy < oy0 + 0.1 * oh) & (xxg < ocx + 0.3 * ow)
-    subida = mover(subida, ox0 - caja_tinta(subida)[0], 0)
-    R["6"] = centrar_h(o | subida); receta["6"] = "la o con la curva de una c agrandada que sube"
-    R["7"] = _rect(ocx - 0.38 * ow, xl, ocx + 0.38 * ow, xl + f * 1.3) | _linea([(ocx + 0.36 * ow, xl + f), (ocx - 0.12 * ow, baja)], g * 0.8)
-    receta["7"] = "una barra y una diagonal que baja"
-    o_b = escalar(o, 0.78, 0.74, ocx, oy1)
-    o_a = escalar(o, 0.66, 0.62, ocx, oy1)
-    o_a = mover(o_a, 0, -(caja_tinta(o_b)[3] - caja_tinta(o_b)[1]) * 0.9)
-    R["8"] = o_b | o_a; receta["8"] = "dos o apiladas, la de arriba más chica"
-    x6 = caja_tinta(R["6"])
-    nueve = rotar(R["6"], 180, (x6[0] + x6[2]) / 2, (x6[1] + x6[3]) / 2)
-    R["9"] = mover(nueve, 0, xl - caja_tinta(nueve)[1]); receta["9"] = "el 6 dado vuelta"
-
-    punto = M["."]
-    p0, py0, p1, py1 = caja_tinta(punto)
-    R[";"] = M[","] | mover(punto, 0, xl + 0.05 * xh - py0); receta[";"] = "la coma y el punto subido"
-    R[":"] = punto | mover(punto, 0, xl + 0.05 * xh - py0); receta[":"] = "dos puntos"
-    gancho = o & (yy < ocy + 0.22 * oh) & (xxg > ocx - 0.45 * ow)
-    gancho = mover(escalar(gancho, 0.9, 0.9, ocx, oy0), 0, (b - med["asc"]) - oy0)
-    gx0, gy0, gx1, gy1 = caja_tinta(gancho)
-    gcx = (gx0 + gx1) / 2
-    R["?"] = gancho | _linea([(gx1 - g * 0.5, gy1 - f * 0.5), (gcx, gy1 + 0.1 * xh), (gcx, b - 0.4 * xh)], g * 0.6) | \
-        mover(punto, gcx - (p0 + p1) / 2, 0)
-    receta["?"] = "el arco de arriba de la o, un asta que baja al centro y el punto"
-    q = caja_tinta(R["?"])
-    inv = rotar(R["?"], 180, (q[0] + q[2]) / 2, (q[1] + q[3]) / 2)
-    R["¿"] = mover(inv, 0, baja - caja_tinta(inv)[3]); receta["¿"] = "la ? dada vuelta, bajo la línea"
-    ang = escalar(v, 0.68, 0.62, vc, (vy0 + vy1) / 2)
-    menor = rotar(ang, -90, vc, (vy0 + vy1) / 2)
-    mayor = rotar(ang, 90, vc, (vy0 + vy1) / 2)
-    cy_ = b - 0.45 * xh
-    def _dos(m):
-        x0, y0, x1, y1 = caja_tinta(m)
-        m = mover(m, 0, cy_ - (y0 + y1) / 2)
-        return centrar_h(mover(m, -0.26 * xh, 0) | mover(m, 0.26 * xh, 0))
-    R["«"], R["»"] = _dos(menor), _dos(mayor)
-    receta["«"] = receta["»"] = "ángulos de la v girada y achicada"
-    R["—"] = _rect(0.06 * T, cy_ - f * 0.6, 0.94 * T, cy_ + f * 0.6); receta["—"] = "una barra sin modelo, del grueso fino de la o"
-    R["…"] = mover(punto, T / 2 - 0.26 * T - (p0 + p1) / 2, 0) | mover(punto, T / 2 - (p0 + p1) / 2, 0) | \
-        mover(punto, T / 2 + 0.26 * T - (p0 + p1) / 2, 0)
-    receta["…"] = "tres puntos"
-
-    for k in R:
-        if k not in "—…«»":
-            R[k] = centrar_h(R[k])
-    # lo que se sale del azulejo se achica en alto, sobre la línea de base, y se anota
-    arriba, abajo = TES / 2, T - TES / 2
-    for k in R:
-        x0, y0, x1, y1 = caja_tinta(R[k])
-        sy = 1.0
-        if y0 < arriba:
-            sy = min(sy, (b - arriba) / (b - y0))
-        if y1 > abajo:
-            sy = min(sy, (abajo - b) / (y1 - b))
-        if sy < 1:
-            R[k] = escalar(R[k], 1, sy, (x0 + x1) / 2, b)
-            receta[k] += f" (achicada en alto al {100 * sy:.0f} % para caber en el azulejo)"
-    return R, receta
 
 
 def abrir_desague(q, junta=JUNTA_MM * 4):
@@ -496,34 +362,45 @@ def punto_de_desague(q):
     return (q[0] + q[-1]) / 2
 
 
-def contornos_temblorosos(m, rng, amplitud=1.3, desague=True):
-    """Contornos de la máscara, recorridos por una mano que tiembla un poco.
+def temblar(p, rng, amplitud=1.3, desague=True):
+    """Un contorno cerrado recorrido por una mano que tiembla un poco. Con desagüe, queda
+    abierto en su punto más bajo; sin él, se devuelve cerrado (el último punto repite el primero)."""
+    p = np.asarray(p, np.float32)
+    seg = np.linalg.norm(np.diff(np.vstack([p, p[:1]]), axis=0), axis=1)
+    s = np.concatenate([[0], np.cumsum(seg)])
+    n = max(12, int(s[-1] / 3))
+    t = np.linspace(0, s[-1], n, endpoint=False)
+    pc = np.vstack([p, p[:1]])
+    q = np.stack([np.interp(t, s, pc[:, 0]), np.interp(t, s, pc[:, 1])], 1)
+    k = 3
+    q = np.stack([np.convolve(np.r_[q[-k:, i], q[:, i], q[:k, i]], np.ones(2 * k + 1) / (2 * k + 1), "valid") for i in (0, 1)], 1)
+    tang = np.roll(q, -1, 0) - np.roll(q, 1, 0)
+    norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
+    norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
+    temblor = amplitud * ruido_1d(n, 14, rng) + 0.35 * ruido_1d(n, 2, rng)
+    q = q + norm * temblor[:, None]
+    return abrir_desague(q) if desague else np.vstack([q, q[:1]])
 
-    La letra es hueca: se dibuja su contorno (el canal). Con desagüe, cada
-    contorno queda abierto en su punto más bajo; sin él, se devuelve cerrado
-    (el último punto repite el primero).
-    """
+
+def contornos_temblorosos(m, rng, amplitud=1.3, desague=True):
+    """Los contornos de una máscara, calcados con temblor (para lo que solo existe en píxeles)."""
     cont, _ = cv2.findContours(m.astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
-    salida = []
-    for c in cont:
-        p = c[:, 0, :].astype(np.float32)
-        if len(p) < 16:
-            continue
-        seg = np.linalg.norm(np.diff(np.vstack([p, p[:1]]), axis=0), axis=1)
-        s = np.concatenate([[0], np.cumsum(seg)])
-        n = max(12, int(s[-1] / 3))
-        t = np.linspace(0, s[-1], n, endpoint=False)
-        pc = np.vstack([p, p[:1]])
-        q = np.stack([np.interp(t, s, pc[:, 0]), np.interp(t, s, pc[:, 1])], 1)
-        k = 3
-        q = np.stack([np.convolve(np.r_[q[-k:, i], q[:, i], q[:k, i]], np.ones(2 * k + 1) / (2 * k + 1), "valid") for i in (0, 1)], 1)
-        tang = np.roll(q, -1, 0) - np.roll(q, 1, 0)
-        norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
-        norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
-        temblor = amplitud * ruido_1d(n, 14, rng) + 0.35 * ruido_1d(n, 2, rng)
-        q = q + norm * temblor[:, None]
-        salida.append(abrir_desague(q) if desague else np.vstack([q, q[:1]]))
-    return salida
+    return [temblar(c[:, 0, :], rng, amplitud, desague) for c in cont if len(c) >= 16]
+
+
+def anillos(geo):
+    """Los contornos del cuerpo en vectores: el borde de cada parte y el de cada hueco."""
+    partes = list(geo.geoms) if hasattr(geo, "geoms") else [geo]
+    out = []
+    for p in partes:
+        out.append(np.array(p.exterior.coords)[:-1])
+        out += [np.array(h.coords)[:-1] for h in p.interiors]
+    return [q for q in out if len(q) >= 4 and np.ptp(q[:, 0]) + np.ptp(q[:, 1]) > 8]
+
+
+def calcar(geo, rng, amplitud=1.3):
+    """El calco de un cuerpo de la gramática: su contorno, en vectores, con el temblor de la mano."""
+    return [temblar(q, rng, amplitud) for q in anillos(geo)]
 
 
 def dibujar_trazos(forma, trazos, punteado, rng, grosor=2, raya=16, hueco=10):
@@ -551,15 +428,22 @@ def dibujar_trazos(forma, trazos, punteado, rng, grosor=2, raya=16, hueco=10):
     return np.clip(capa, 0, 1) * grafito
 
 
-def calco(m, reconstruida, fondo_frotado, med, rng):
-    """El calco sobre papel de calco puesto encima del frotado: línea continua o punteada."""
-    trazos = contornos_temblorosos(m, rng)
+def calco(geo, reconstruida, fondo_frotado, pauta, rng):
+    """El calco en papel de calco puesto sobre el frotado de la pared: línea continua lo
+    hallado, punteada lo reconstruido. Se calca el cuerpo de la gramática, en vectores. La
+    pauta es la celda de la letra, con sus líneas de fondo y de borde, en lápiz muy suave:
+    una letra, una celda."""
+    trazos = calcar(geo, rng)
     linea = dibujar_trazos((T, T), trazos, reconstruida, rng)
-    fondo = 1 - 0.22 * (1 - fondo_frotado)
-    img = fondo.copy()
-    for y, alto in ((med["base"], 1), (med["base"] - med["xh"], 1)):
-        yy = int(round(y))
-        img[yy:yy + alto, ::9] *= 0.82
+    img = 1 - 0.22 * (1 - fondo_frotado)
+    img = img * (0.985 + 0.015 * ruido((T, T), 30, rng))          # el papel de calco no es parejo
+    x0, y0, x1, y1 = (int(round(v)) for v in pauta["celda"])
+    for y in (y0, y1):
+        img[y, x0:x1:7] *= 0.8
+    for x in (x0, x1):
+        img[y0:y1:7, x] *= 0.8
+    for y in (pauta["fondo"], pauta["borde"]):
+        img[int(round(y)), x0:x1:9] *= 0.82
     img = img * (1 - 0.82 * linea)
     return np.clip(img, 0, 1), trazos
 
@@ -610,6 +494,16 @@ def desenterrar():
         todos[signo] = mejores
     M, s, base, desbordes = escalar_y_colocar(testigos)
     med = medidas(M, base)
+    # del pie real, la proporción: la foto da una altura de x más baja que la del sustituto (sus
+    # ascendentes miden 1,71 veces la altura de x). Las formas siguen siendo las del testigo; la
+    # zona de x se achata y las ascendentes crecen hasta la misma línea de afuera.
+    pie_foto = pie_de_la_foto()
+    if pie_foto:
+        f = pie_foto["medidas"]
+        razon = f["ascendente"] / f["alto_x"]
+        xh_foto = med["asc"] / razon
+        M = {k: achatar(v, base, med["asc"], med["xh"], xh_foto) for k, v in M.items()}
+        med = dict(medidas(M, base), xh_sustituto=med["xh"], razon_foto=round(razon, 3))
     med["escala"] = s
     # la gramática (03c_gramatica.md): del pie, las medidas; de la obra, la forma. Anatomía base → estados
     from gramatica import construir_todo
@@ -621,5 +515,6 @@ def desenterrar():
     receta = {k: v["receta"] for k, v in todo.items() if k not in halladas}
     marcas = {k: v["glifo"].marcas for k, v in todo.items()}
     return dict(tinta=tinta, foto=foto, ocurrencias=ocurrencias, testigos=testigos, candidatas=todos,
+                pie_foto=pie_foto,
                 M=M, R=R, receta=receta, med=med, desbordes=desbordes, antes=antes, marcas=marcas,
                 gramatica=todo, esqueleto=esq, parametros=par)

@@ -1,46 +1,101 @@
-"""Cuaderno 2 · Contener: acciones 4 a 7, simuladas.
+"""Cuaderno 2 · Contener: la placa (acción 4), simulada.
 
-Acción 4: el repujado. El calco se da vuelta (espejo) y se repasa por el
-reverso de una hoja de papel de aluminio con un punzón de 1 mm: la mano que
-repuja tiembla distinto de la que calcó. Lo hallado es un surco continuo; lo
-reconstruido, puntos. El punteado perfora: las placas reconstruidas se rompen
-más. Si una placa se rompe, se guarda y se hace otra.
-Acción 5: la caja abierta y cerrada.
-Acción 6: la placa vestida el tiempo de un bucle; deja pliegues que siguen el
-eje de la parte del cuerpo, y después se aplana solo con la palma.
-Acción 7: el signo final. La máquina no tiene dedos: simula una sola presión
-de un pulgar genérico.
+El calco se da vuelta (espejo) y se repasa por el reverso de una hoja de papel de
+aluminio de cocina, cortada a tijera, con un punzón de bola de 1 mm sobre una base
+blanda. La mano que repuja tiembla distinto de la que calcó. Por el reverso queda
+un surco: la letra al revés, hundida, un canal que podría contener agua. Por el
+anverso, un relieve que se lee. Lo hallado es un surco continuo; lo reconstruido,
+puntos. El punteado perfora: las placas reconstruidas se rompen más. Si una placa
+se rompe, se guarda y se hace otra.
+
+El signo final: la máquina no tiene dedos. Simula una sola presión de un pulgar
+genérico.
 """
 
 import cv2
 import numpy as np
+from shapely.geometry import Polygon
 
-from comun import BUCLE_MIN, T, azar, ruido, ruido_1d, sombrear
+from comun import T, azar, ruido, ruido_1d, sombrear
 
-ESTILETE_PX = 4            # punzón de 1 mm
-PARTES = [("antebrazo", 0), ("esternón", 5), ("cadera", 35), ("muslo", 0), ("espalda", 85), ("hombro", 50)]
+ESTILETE_PX = 4            # punzón de bola de 1 mm
+
+
+# ---------------------------------------------------------------- la hoja
+
+def tijera(rng, margen=16):
+    """El contorno de una hoja cortada a tijera (un polígono de shapely).
+
+    Cada lado es una recta apenas inclinada; se corta en dos o tres tramos casi rectos y,
+    donde la tijera se retoma, queda un escalón chico. A veces una esquina se corta en
+    diagonal.
+    """
+    m = [margen + rng.uniform(-5, 9) for _ in range(4)]
+    a = [np.tan(np.radians(rng.normal(0, 0.8))) for _ in range(4)]
+    c = T / 2
+
+    def esquina(i):
+        """Cruce del lado i con el siguiente (0 arriba, 1 derecha, 2 abajo, 3 izquierda)."""
+        x, y = c, c
+        for _ in range(4):
+            if i == 0:      # arriba y derecha
+                y = m[0] + (x - c) * a[0]
+                x = T - m[1] - (y - c) * a[1]
+            elif i == 1:    # derecha y abajo
+                x = T - m[1] - (y - c) * a[1]
+                y = T - m[2] - (x - c) * a[2]
+            elif i == 2:    # abajo e izquierda
+                y = T - m[2] - (x - c) * a[2]
+                x = m[3] + (y - c) * a[3]
+            else:           # izquierda y arriba
+                x = m[3] + (y - c) * a[3]
+                y = m[0] + (x - c) * a[0]
+        return np.array([x, y])
+
+    esquinas = [esquina(3), esquina(0), esquina(1), esquina(2)]      # arriba-izq, arriba-der, abajo-der, abajo-izq
+    pts = []
+    for lado in range(4):
+        P, Q = esquinas[lado], esquinas[(lado + 1) % 4]
+        u = (Q - P) / np.linalg.norm(Q - P)
+        n = np.array([-u[1], u[0]])                                     # hacia adentro, en sentido horario
+        cortes = np.concatenate([[0.0], np.sort(rng.uniform(0.2, 0.8, int(rng.integers(1, 3)))), [1.0]])
+        for i in range(len(cortes) - 1):
+            escalon = rng.normal(0, 1.1) if i > 0 else 0.0
+            desvio = rng.normal(0, 1.4)                                 # cada tramo con su propio ángulo, apenas
+            pts.append(P + cortes[i] * (Q - P) + escalon * n)
+            pts.append(P + cortes[i + 1] * (Q - P) + (escalon + desvio) * n)
+    hoja = Polygon(pts).buffer(0)
+    for e in esquinas:
+        if rng.random() < 0.35:                                         # la esquina, cortada en diagonal
+            corte = rng.uniform(24, 50)
+            hacia = (np.array([c, c]) - e) / np.linalg.norm(np.array([c, c]) - e)
+            linea = e + hacia * corte / np.sqrt(2)
+            normal = np.array([-hacia[1], hacia[0]])
+            triangulo = Polygon([e - hacia * 40, linea + normal * 80, linea - normal * 80])
+            hoja = hoja.difference(triangulo)
+    if hasattr(hoja, "geoms"):
+        hoja = max(hoja.geoms, key=lambda g: g.area)
+    return hoja
 
 
 def hoja(rng):
-    """Una hoja de papel de aluminio de cocina cortada a tijera, nunca del todo plana."""
-    y, x = np.mgrid[0:T, 0:T].astype(np.float32)
-    m = 14 + 1.8 * ruido((T, T), 40, rng)
-    r = 26
-    dx = np.maximum(np.maximum(m - x, x - (T - 1 - m)), 0)
-    dy = np.maximum(np.maximum(m - y, y - (T - 1 - m)), 0)
-    mascara = (dx == 0) & (dy == 0)
-    for fx in (False, True):
-        for fy in (False, True):
-            xx = T - 1 - x if fx else x
-            yy = T - 1 - y if fy else y
-            fuera = (xx < m + r) & (yy < m + r) & ((xx - (m + r)) ** 2 + (yy - (m + r)) ** 2 > r * r)
-            mascara &= ~fuera
+    """Una hoja de papel de aluminio de cocina cortada a tijera, nunca del todo plana.
+
+    Tiene arrugas grandes y suaves, el veteado del laminado y uno o dos pliegues; el filo
+    del corte queda un poco levantado y agarra la luz.
+    """
+    contorno = np.array(tijera(rng).exterior.coords)
+    m8 = np.zeros((T, T), np.uint8)
+    cv2.fillPoly(m8, [np.round(contorno * 16).astype(np.int32)], 1, cv2.LINE_8, shift=4)
+    mascara = m8.astype(bool)
     h = 0.22 * ruido((T, T), 70, rng) + 0.05 * ruido((T, T), 12, rng)
     vetas = rng.standard_normal((T, 1)).astype(np.float32) * np.ones((1, T), np.float32)
     vetas = cv2.GaussianBlur(vetas + 0.3 * rng.standard_normal((T, T)).astype(np.float32), (0, 0), sigmaX=30, sigmaY=0.7)
     h += 0.007 * vetas / (vetas.std() + 1e-9)
     for _ in range(2):
         h += _pliegue(rng, rng.uniform(0, 180), rng.uniform(0.03, 0.07), rng.uniform(2, 4), largo=rng.uniform(0.5, 1.2) * T)
+    distancia = cv2.distanceTransform(m8, cv2.DIST_L2, 5)
+    h += 0.16 * np.exp(-distancia / 2.5) * (1 + 0.5 * ruido((T, T), 8, rng))       # el filo levantado
     return h.astype(np.float32), mascara
 
 
@@ -51,7 +106,7 @@ def _pliegue(rng, angulo, alto, ancho, largo=None, centro=None):
     ux, uy = np.cos(a), np.sin(a)
     d = -(x - cx) * uy + (y - cy) * ux
     s = (x - cx) * ux + (y - cy) * uy
-    d = d + 3.5 * _ondulacion(rng)
+    d = d + 3.5 * ruido((T, T), 45, rng)                  # un pliegue de aluminio nunca es recto
     signo = rng.choice([-1, 1])
     perfil = signo * (alto * np.exp(-0.5 * (d / ancho) ** 2) + 0.25 * alto * np.tanh(d / 30))
     if largo is not None:
@@ -59,10 +114,7 @@ def _pliegue(rng, angulo, alto, ancho, largo=None, centro=None):
     return perfil
 
 
-def _ondulacion(rng):
-    """Un pliegue de aluminio nunca es recto: se ondula un poco."""
-    return ruido((T, T), 45, rng)
-
+# ---------------------------------------------------------------- el repujado
 
 def _repasar(trazos, rng):
     """El calco dado vuelta y repasado por el reverso: la mano que repuja agrega su temblor."""
@@ -80,27 +132,39 @@ def _repasar(trazos, rng):
 
 
 def repujar(trazos, punteado, rng):
-    """Una placa: relieve, máscara, largo del recorrido en mm y si se rompió."""
+    """Una placa, vista por el anverso: relieve, máscara, largo del recorrido en mm y si se rompió.
+
+    El perfil del surco es el de una bola apretada contra una base blanda: por el reverso,
+    una canaleta redonda con dos lomas bajas a los lados (el aluminio que se corrió); por
+    el anverso, al revés, una cresta entre dos cunetas. Donde la mano arranca y donde se
+    detiene, el punzón descansa y hunde un poco más. Cerca del surco, la herramienta alisa
+    las arrugas de la hoja.
+    """
     h, mascara = hoja(rng)
     surco = np.zeros((T, T), np.float32)
     largo = 0.0
     for q in _repasar(trazos, rng):
-        cerr = q                      # el punzón se detiene en el desagüe: la línea queda abierta
-        seg = np.linalg.norm(np.diff(cerr, axis=0), axis=1)
+        seg = np.linalg.norm(np.diff(q, axis=0), axis=1)
         largo += seg.sum()
-        presion = np.clip(0.95 + 0.18 * ruido_1d(len(cerr), 25, rng), 0.6, 1.3)
+        presion = np.clip(0.95 + 0.18 * ruido_1d(len(q), 25, rng), 0.6, 1.3)
         if punteado:
             s = np.concatenate([[0], np.cumsum(seg)])
             for t_ in np.arange(rng.uniform(0, 9), s[-1], 9.0):
-                i = min(np.searchsorted(s, t_), len(cerr) - 1)
-                p = cerr[i] + rng.normal(0, 0.6, 2)
+                i = min(np.searchsorted(s, t_), len(q) - 1)
+                p = q[i] + rng.normal(0, 0.6, 2)
                 cv2.circle(surco, (int(round(p[0] * 4)), int(round(p[1] * 4))), 2 * 4, float(presion[i]), -1, cv2.LINE_AA, shift=2)
         else:
-            pts = np.round(cerr * 4).astype(np.int32)
+            pts = np.round(q * 4).astype(np.int32)
             for i in range(len(pts) - 1):
                 cv2.line(surco, tuple(pts[i]), tuple(pts[i + 1]), float(presion[i]), ESTILETE_PX - 1, cv2.LINE_AA, shift=2)
-    relieve = cv2.GaussianBlur(surco, (0, 0), 2.2) * 2.6
-    h = h + relieve
+            for extremo, pr in ((q[0], presion[0]), (q[-1], presion[-1])):      # donde el punzón descansa
+                cv2.circle(surco, (int(round(extremo[0] * 4)), int(round(extremo[1] * 4))), 3 * 4, float(1.35 * pr), -1,
+                           cv2.LINE_AA, shift=2)
+    cresta = cv2.GaussianBlur(surco, (0, 0), 2.0)
+    ancho = cv2.GaussianBlur(surco, (0, 0), 5.5)
+    relieve = 2.6 * cresta - 1.1 * np.clip(ancho - cresta, 0, None)
+    alisado = np.clip(cv2.GaussianBlur(surco, (0, 0), 10) * 6, 0, 0.65)
+    h = h * (1 - alisado) + relieve
     rota = rng.random() < (0.16 if punteado else 0.06)
     if rota:
         ys, xs = np.nonzero(surco > 0.5)
@@ -114,7 +178,8 @@ def repujar(trazos, punteado, rng):
         labios = cv2.GaussianBlur(cv2.dilate(grieta, np.ones((5, 5), np.uint8)).astype(np.float32) / 255, (0, 0), 2)
         h = h + 0.35 * labios
         mascara = mascara & (grieta < 128)
-    return dict(altura=h, relieve=relieve, mascara=mascara, largo_mm=largo / 4, rota=rota)
+    return dict(altura=h.astype(np.float32), relieve=relieve.astype(np.float32), mascara=mascara, largo_mm=largo / 4,
+                rota=rota)
 
 
 def repujar_placa(trazos, punteado, celda, variante):
@@ -133,31 +198,14 @@ def repujar_placa(trazos, punteado, celda, variante):
     return p
 
 
+def reverso(p):
+    """La misma hoja dada vuelta: la letra al revés y hundida."""
+    return dict(p, altura=-np.fliplr(p["altura"]), relieve=-np.fliplr(p["relieve"]), mascara=np.fliplr(p["mascara"]))
+
+
 def foto_placa(p, rng):
+    """Foto con luz rasante desde la izquierda (15°)."""
     return sombrear(p["altura"], p["mascara"], rng=rng)
-
-
-def vestir(p, parte, angulo, minutos, rng):
-    """La placa sobre el cuerpo el tiempo de un bucle; después se aplana con la palma."""
-    y, x = np.mgrid[0:T, 0:T].astype(np.float32)
-    dx = (x + 6 * ruido((T, T), 90, rng)).astype(np.float32)
-    dy = (y + 6 * ruido((T, T), 90, rng)).astype(np.float32)
-    h = cv2.remap(p["altura"], dx, dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-    relieve = cv2.remap(p["relieve"], dx, dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-    mascara = cv2.remap(p["mascara"].astype(np.float32), dx, dy, cv2.INTER_LINEAR) > 0.5
-    n = 3 + int(minutos // 2) + int(rng.integers(0, 3))
-    pliegues = np.zeros((T, T), np.float32)
-    for _ in range(n):
-        ang = angulo + rng.normal(0, 18) if rng.random() < 0.7 else rng.uniform(0, 180)
-        pliegues += _pliegue(rng, ang, rng.uniform(0.2, 0.5), rng.uniform(2.0, 4.5), largo=rng.uniform(0.4, 1.2) * T)
-    for _ in range(rng.integers(4, 10)):
-        borde = rng.choice(4)
-        t_ = rng.uniform(0.05, 0.95) * T
-        centro = [(t_, 20), (t_, T - 20), (20, t_), (T - 20, t_)][borde]
-        ang = (90 if borde < 2 else 0) + rng.normal(0, 20)
-        pliegues += _pliegue(rng, ang, rng.uniform(0.1, 0.3), rng.uniform(1, 2), largo=rng.uniform(30, 80), centro=centro)
-    h = h + pliegues
-    return dict(altura=h, relieve=relieve, pliegues=pliegues, mascara=mascara, parte=parte, minutos=minutos, n_pliegues=n)
 
 
 def signo_final(rng):
@@ -175,59 +223,9 @@ def signo_final(rng):
     rho = r * a + 5 * np.sin(2 * theta) + 3 * np.sin(theta) + 1.5 * ruido((T, T), 6, rng)
     crestas = 0.018 * np.sin(2 * np.pi * rho / 3.4) * np.clip(1 - r, 0, 1) * 2
     h = h + domo + crestas
-    for k in range(rng.integers(6, 11)):
+    for _ in range(rng.integers(6, 11)):
         ang = rng.uniform(0, 360)
         c = (cx + 1.15 * a * np.cos(np.radians(ang)), cy + 1.15 * b * np.sin(np.radians(ang)))
         h += _pliegue(rng, ang, rng.uniform(0.08, 0.2), rng.uniform(1.2, 2.2), largo=rng.uniform(40, 110), centro=c)
-    relieve = domo
-    return dict(altura=h, relieve=relieve, mascara=mascara, largo_mm=0.0, rota=False, intentos=1, roturas=0,
-                minutos=3.0, rotas=[])
-
-
-def sesiones_de_vestir(placas):
-    """Reparte las placas en sesiones de seis, cada una en una parte del cuerpo."""
-    asignacion = {}
-    for i, clave in enumerate(placas):
-        parte, ang = PARTES[(i // 6) % len(PARTES)]
-        asignacion[clave] = (parte, ang, BUCLE_MIN, i // 6 + 1)
-    return asignacion
-
-
-def caja_abierta(fotos, poliza, celdas, rng, lado=150, j=18):
-    """La caja de cartón abierta: en cada compartimento, la pila de placas de su signo."""
-    col, fil = 8, 7
-    W, H = col * lado + (col + 1) * j, fil * lado + (fil + 1) * j
-    carton = 0.46 + 0.03 * ruido((H, W), 1.2, rng) + 0.04 * ruido((H, W), 40, rng)
-    img = np.dstack([carton * 1.02, carton * 0.97, carton * 0.9])
-    for c in celdas:
-        x = j + (c["columna"] - 1) * (lado + j)
-        yy = j + (c["fila"] - 1) * (lado + j)
-        img[yy:yy + lado, x:x + lado] *= 0.55
-        n = poliza.get(c["signo"], 1)
-        for k in range(min(n, 3) - 1, -1, -1):
-            f = fotos.get((c["celda"], k + 1))
-            if f is None:
-                continue
-            ang = rng.normal(0, 3)
-            chica = cv2.resize(f, (lado - 14, lado - 14), interpolation=cv2.INTER_AREA)
-            M = cv2.getRotationMatrix2D(((lado - 14) / 2, (lado - 14) / 2), ang, 1.0)
-            M[:, 2] += [7 + k * 3, 7 + k * 3]
-            rot = cv2.warpAffine(chica, M, (lado, lado), borderValue=0)
-            alfa = cv2.warpAffine(np.ones_like(chica), M, (lado, lado), borderValue=0)
-            sub = img[yy:yy + lado, x:x + lado]
-            sub[:] = sub * (1 - alfa[..., None]) + np.dstack([rot] * 3) * alfa[..., None]
-    return np.clip(img, 0, 1)
-
-
-def caja_cerrada(foto_coma, rng, lado=150, j=18):
-    """La tapa, con una sola puerta calada sobre la celda 1: se ve la coma."""
-    col, fil = 8, 7
-    W, H = col * lado + (col + 1) * j, fil * lado + (fil + 1) * j
-    carton = 0.5 + 0.03 * ruido((H, W), 1.2, rng) + 0.05 * ruido((H, W), 50, rng)
-    img = np.dstack([carton * 1.02, carton * 0.97, carton * 0.9])
-    x, y = j, j
-    puerta = cv2.resize(foto_coma, (lado, lado), interpolation=cv2.INTER_AREA)
-    img[y:y + lado, x:x + lado] = np.dstack([puerta] * 3) * 0.85
-    img[y:y + 6, x:x + lado] *= 0.55
-    img[y:y + lado, x:x + 6] *= 0.6
-    return np.clip(img, 0, 1)
+    return dict(altura=h.astype(np.float32), relieve=domo.astype(np.float32), mascara=mascara, largo_mm=0.0, rota=False,
+                intentos=1, roturas=0, minutos=3.0, rotas=[])

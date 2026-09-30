@@ -1,33 +1,33 @@
 {
  "esqueleto": {
   "fondo": 429.2961393596987,
-  "borde": 181.0,
+  "borde": 210.0,
   "afuera": 53.0,
   "desague": 550.0,
-  "xh": 248.2961393596987,
-  "canal": 36.124783736376884,
+  "xh": 219.2961393596987,
+  "canal": 35.4964786985977,
   "cajas": {
    ",": [
     264.0,
-    376.0,
+    382.0,
     336.0,
     511.0
    ],
    "s": [
     215.0,
-    180.0,
+    208.0,
     385.0,
     434.0
    ],
    "e": [
     197.0,
-    182.0,
+    211.0,
     403.0,
     434.0
    ],
    "g": [
     184.0,
-    171.0,
+    197.0,
     416.0,
     550.0
    ],
@@ -39,49 +39,49 @@
    ],
    "n": [
     199.0,
-    184.0,
+    212.0,
     401.0,
     431.0
    ],
    "o": [
     186.0,
-    174.0,
+    201.0,
     414.0,
     439.0
    ],
    "a": [
     210.0,
-    184.0,
+    212.0,
     390.0,
     431.0
    ],
    "k": [
     196.0,
-    69.0,
+    72.0,
     404.0,
     433.0
    ],
    "y": [
     177.0,
-    182.0,
+    211.0,
     423.0,
     544.0
    ],
    "p": [
     185.0,
-    181.0,
+    210.0,
     415.0,
     550.0
    ],
    "r": [
     226.0,
-    179.0,
+    207.0,
     374.0,
     434.0
    ],
    "t": [
     240.0,
-    132.0,
+    150.0,
     360.0,
     437.0
    ],
@@ -93,7 +93,7 @@
    ],
    "m": [
     119.0,
-    181.0,
+    210.0,
     481.0,
     434.0
    ],
@@ -105,37 +105,37 @@
    ],
    "i": [
     267.0,
-    80.0,
+    86.0,
     333.0,
     428.0
    ],
    "c": [
     203.0,
-    181.0,
+    210.0,
     397.0,
     432.0
    ],
    "u": [
     192.0,
-    181.0,
+    210.0,
     408.0,
     439.0
    ],
    "v": [
     181.0,
-    184.0,
+    212.0,
     419.0,
     430.0
    ],
    "j": [
     237.0,
-    81.0,
+    87.0,
     363.0,
     544.0
    ],
    "f": [
     226.0,
-    58.0,
+    59.0,
     374.0,
     434.0
    ],
@@ -147,13 +147,13 @@
    ],
    "(": [
     231.0,
-    81.0,
+    87.0,
     369.0,
     532.0
    ],
    "h": [
     182.0,
-    58.0,
+    59.0,
     418.0,
     434.0
    ],
@@ -165,46 +165,46 @@
    ],
    ")": [
     236.0,
-    85.0,
+    92.0,
     364.0,
     536.0
    ],
    ".": [
     280.0,
-    377.0,
+    383.0,
     320.0,
-    422.0
+    423.0
    ],
    "b": [
     186.0,
-    63.0,
+    65.0,
     414.0,
     434.0
    ],
    "q": [
     189.0,
-    181.0,
+    210.0,
     411.0,
     544.0
    ]
   },
   "ojo_a": [
    249.0,
-   302.0,
+   317.0,
    346.0,
-   407.0
+   410.0
   ],
   "gancho_a": 229.0
  },
  "parametros": {
   "canal": {
-   "valor": 36.1,
+   "valor": 35.5,
    "unidad": "px",
    "que": "Grosor único del trazo: la media entre el grueso y el fino de la o del pie.",
    "de_donde": "El punzón y la cinta no modulan: no hay contraste de pluma (D2, D12)"
   },
   "radio_chapa": {
-   "valor": 21.7,
+   "valor": 21.3,
    "unidad": "px",
    "que": "Radio mínimo de toda curva del eje. Mayor que medio canal: así el contorno interior nunca se cruza.",
    "de_donde": "El aluminio se rasga en un ángulo agudo (D2)"
@@ -252,13 +252,13 @@
    "de_donde": "«Moverse como se mueve la piedra, es decir, apenas» (D11)"
   },
   "asiento_ancho": {
-   "valor": 72.2,
+   "valor": 71.0,
    "unidad": "px",
    "que": "Ancho del pie de cada fuste sobre el fondo.",
    "de_donde": "El peso se asienta en la tierra; la piedra en pie"
   },
   "asiento_alto": {
-   "valor": 32.5,
+   "valor": 31.9,
    "unidad": "px",
    "que": "Altura de la curva cóncava con que el fuste se ensancha.",
    "de_donde": "Ídem"
@@ -270,7 +270,7 @@
    "de_donde": "«Hoy está muy erosionado y casi no se ven esos detalles» (el pie)"
   },
   "alivio": {
-   "valor": 10.1,
+   "valor": 9.9,
    "unidad": "px",
    "que": "Radio del rebaje en cada encuentro interior en ángulo agudo (k, v, w, x, y, z, 1, 2, 4, 7, « »). Donde el encuentro es tangente no hace falta.",
    "de_donde": "Para que el aluminio no se desgarre bajo el punzón (D2)"
@@ -282,19 +282,19 @@
    "de_donde": "Que la gota cuelgue libre, sin tocar la cuenca"
   },
   "gota_masa": {
-   "valor": 45.2,
+   "valor": 44.4,
    "unidad": "px",
    "que": "Diámetro de la gota que cuelga de un terminal que mira abajo. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta.",
    "de_donde": "El líquido que chorrea de la boca (D16)"
   },
   "gota_caida": {
-   "valor": 10.8,
+   "valor": 10.6,
    "unidad": "px",
    "que": "Cuánto baja la gota antes de juntar peso.",
    "de_donde": "Ídem: la gravedad"
   },
   "gota_cuello": {
-   "valor": 19.9,
+   "valor": 19.5,
    "unidad": "px",
    "que": "Ancho del cuello de la gota.",
    "de_donde": "Ídem"
@@ -306,13 +306,13 @@
    "de_donde": "Vasos comunicantes: el agua que pasa de una cuenca a otra"
   },
   "cinta": {
-   "valor": 36.1,
+   "valor": 35.5,
    "unidad": "px",
    "que": "Ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro.",
    "de_donde": "La cinta que tapó ojos y boca (D12)"
   },
   "punto": {
-   "valor": 36.1,
+   "valor": 35.5,
    "unidad": "px",
    "que": "Lado del punto: un trozo cuadrado de cinta, tan ancho como la cinta.",
    "de_donde": "La cinta sobre ojos y boca (D12): un parche, no una gota de tinta"
@@ -325,7 +325,7 @@
     "gota",
     "punto"
    ],
-   "area_px": 3704,
+   "area_px": 3593,
    "alivios": 0
   },
   "s": {
@@ -334,7 +334,7 @@
     "corte: mira arriba",
     "gota"
    ],
-   "area_px": 21189,
+   "area_px": 19627,
    "alivios": 0
   },
   "e": {
@@ -343,7 +343,7 @@
     "corte: mira arriba",
     "desagüe del ojo"
    ],
-   "area_px": 25544,
+   "area_px": 23701,
    "alivios": 0
   },
   "g": {
@@ -352,7 +352,7 @@
     "desagüe",
     "sifón"
    ],
-   "area_px": 39433,
+   "area_px": 37453,
    "alivios": 0
   },
   "ú": {
@@ -362,7 +362,7 @@
     "cuenca abierta",
     "tilde"
    ],
-   "area_px": 23653,
+   "area_px": 21224,
    "alivios": 0
   },
   "n": {
@@ -371,7 +371,7 @@
     "asiento",
     "hombro"
    ],
-   "area_px": 22009,
+   "area_px": 19251,
    "alivios": 0
   },
   "o": {
@@ -379,7 +379,7 @@
    "partes": [
     "desagüe"
    ],
-   "area_px": 25275,
+   "area_px": 23177,
    "alivios": 0
   },
   "a": {
@@ -389,7 +389,7 @@
     "desagüe",
     "gota"
    ],
-   "area_px": 24290,
+   "area_px": 21904,
    "alivios": 0
   },
   "k": {
@@ -398,7 +398,7 @@
     "alivio",
     "asiento"
    ],
-   "area_px": 25402,
+   "area_px": 23885,
    "alivios": 2
   },
   "y": {
@@ -407,7 +407,7 @@
     "alivio",
     "gota"
    ],
-   "area_px": 21768,
+   "area_px": 19692,
    "alivios": 1
   },
   "p": {
@@ -415,7 +415,7 @@
    "partes": [
     "desagüe"
    ],
-   "area_px": 30742,
+   "area_px": 28043,
    "alivios": 0
   },
   "r": {
@@ -424,7 +424,7 @@
     "asiento",
     "gota"
    ],
-   "area_px": 13883,
+   "area_px": 12524,
    "alivios": 0
   },
   "t": {
@@ -432,7 +432,7 @@
    "partes": [
     "corte"
    ],
-   "area_px": 13555,
+   "area_px": 12873,
    "alivios": 0
   },
   "d": {
@@ -441,7 +441,7 @@
     "asiento",
     "desagüe"
    ],
-   "area_px": 32267,
+   "area_px": 30675,
    "alivios": 0
   },
   "m": {
@@ -450,7 +450,7 @@
     "asiento",
     "hombro"
    ],
-   "area_px": 35109,
+   "area_px": 31344,
    "alivios": 0
   },
   "l": {
@@ -459,7 +459,7 @@
     "asiento",
     "corte"
    ],
-   "area_px": 14023,
+   "area_px": 14007,
    "alivios": 0
   },
   "i": {
@@ -468,7 +468,7 @@
     "asiento",
     "punto"
    ],
-   "area_px": 10715,
+   "area_px": 9611,
    "alivios": 0
   },
   "c": {
@@ -476,7 +476,7 @@
    "partes": [
     "gota"
    ],
-   "area_px": 19608,
+   "area_px": 18157,
    "alivios": 0
   },
   "u": {
@@ -485,7 +485,7 @@
     "asiento",
     "cuenca abierta"
    ],
-   "area_px": 22304,
+   "area_px": 19746,
    "alivios": 0
   },
   "v": {
@@ -493,7 +493,7 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 16358,
+   "area_px": 14608,
    "alivios": 1
   },
   "j": {
@@ -502,7 +502,7 @@
     "corte: mira arriba",
     "punto"
    ],
-   "area_px": 16274,
+   "area_px": 14840,
    "alivios": 0
   },
   "f": {
@@ -511,7 +511,7 @@
     "asiento",
     "gota"
    ],
-   "area_px": 19856,
+   "area_px": 19727,
    "alivios": 0
   },
   "í": {
@@ -520,13 +520,13 @@
     "asiento",
     "tilde"
    ],
-   "area_px": 10935,
+   "area_px": 9741,
    "alivios": 0
   },
   "(": {
    "receta": "un arco alto",
    "partes": [],
-   "area_px": 14671,
+   "area_px": 14269,
    "alivios": 0
   },
   "h": {
@@ -535,7 +535,7 @@
     "asiento",
     "hombro"
    ],
-   "area_px": 26673,
+   "area_px": 25507,
    "alivios": 0
   },
   "á": {
@@ -546,13 +546,13 @@
     "gota",
     "tilde"
    ],
-   "area_px": 25797,
+   "area_px": 23399,
    "alivios": 0
   },
   ")": {
    "receta": "el arco alto, medido en su propio testigo",
    "partes": [],
-   "area_px": 14515,
+   "area_px": 14062,
    "alivios": 0
   },
   ".": {
@@ -560,7 +560,7 @@
    "partes": [
     "punto"
    ],
-   "area_px": 1353,
+   "area_px": 1315,
    "alivios": 0
   },
   "b": {
@@ -569,7 +569,7 @@
     "asiento",
     "desagüe"
    ],
-   "area_px": 31300,
+   "area_px": 29358,
    "alivios": 0
   },
   "q": {
@@ -577,7 +577,7 @@
    "partes": [
     "desagüe"
    ],
-   "area_px": 30534,
+   "area_px": 27890,
    "alivios": 0
   },
   "ó": {
@@ -586,7 +586,7 @@
     "desagüe",
     "tilde"
    ],
-   "area_px": 26854,
+   "area_px": 24709,
    "alivios": 0
   },
   "z": {
@@ -594,7 +594,7 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 20615,
+   "area_px": 19115,
    "alivios": 2
   },
   "?": {
@@ -603,7 +603,7 @@
     "gota",
     "punto"
    ],
-   "area_px": 19851,
+   "area_px": 19234,
    "alivios": 0
   },
   "é": {
@@ -613,7 +613,7 @@
     "desagüe del ojo",
     "tilde"
    ],
-   "area_px": 27124,
+   "area_px": 25233,
    "alivios": 0
   },
   ";": {
@@ -622,7 +622,7 @@
     "gota",
     "punto"
    ],
-   "area_px": 5086,
+   "area_px": 4939,
    "alivios": 0
   },
   "ñ": {
@@ -632,7 +632,7 @@
     "hombro",
     "onda"
    ],
-   "area_px": 27914,
+   "area_px": 25027,
    "alivios": 0
   },
   "w": {
@@ -640,7 +640,7 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 25278,
+   "area_px": 22646,
    "alivios": 3
   },
   "x": {
@@ -648,7 +648,7 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 21393,
+   "area_px": 19565,
    "alivios": 2
   },
   "ü": {
@@ -658,7 +658,7 @@
     "cuenca abierta",
     "punto"
    ],
-   "area_px": 25015,
+   "area_px": 22385,
    "alivios": 0
   },
   "0": {
@@ -667,7 +667,7 @@
     "celda",
     "desagüe"
    ],
-   "area_px": 68556,
+   "area_px": 65704,
    "alivios": 0
   },
   "1": {
@@ -677,7 +677,7 @@
     "asiento",
     "celda"
    ],
-   "area_px": 59221,
+   "area_px": 57296,
    "alivios": 1
   },
   "2": {
@@ -687,7 +687,7 @@
     "celda",
     "gota"
    ],
-   "area_px": 67559,
+   "area_px": 65287,
    "alivios": 1
   },
   "3": {
@@ -697,7 +697,7 @@
     "corte: mira arriba",
     "gota"
    ],
-   "area_px": 70161,
+   "area_px": 68244,
    "alivios": 0
   },
   "4": {
@@ -706,7 +706,7 @@
     "alivio",
     "celda"
    ],
-   "area_px": 68684,
+   "area_px": 66146,
    "alivios": 2
   },
   "5": {
@@ -715,7 +715,7 @@
     "celda",
     "corte: mira arriba"
    ],
-   "area_px": 71276,
+   "area_px": 69290,
    "alivios": 0
   },
   "6": {
@@ -725,7 +725,7 @@
     "desagüe",
     "gota"
    ],
-   "area_px": 77208,
+   "area_px": 76305,
    "alivios": 0
   },
   "7": {
@@ -734,7 +734,7 @@
     "alivio",
     "celda"
    ],
-   "area_px": 63378,
+   "area_px": 61705,
    "alivios": 1
   },
   "8": {
@@ -744,7 +744,7 @@
     "desagüe",
     "sifón"
    ],
-   "area_px": 76823,
+   "area_px": 75916,
    "alivios": 0
   },
   "9": {
@@ -754,7 +754,7 @@
     "desagüe",
     "sin gota: la gravedad no se da vuelta"
    ],
-   "area_px": 74344,
+   "area_px": 71784,
    "alivios": 0
   },
   ":": {
@@ -762,7 +762,7 @@
    "partes": [
     "punto"
    ],
-   "area_px": 2735,
+   "area_px": 2661,
    "alivios": 0
   },
   "¿": {
@@ -771,7 +771,7 @@
     "punto",
     "sin gota: la gravedad no se da vuelta"
    ],
-   "area_px": 17742,
+   "area_px": 16551,
    "alivios": 0
   },
   "«": {
@@ -779,7 +779,7 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 12447,
+   "area_px": 11310,
    "alivios": 2
   },
   "»": {
@@ -787,13 +787,13 @@
    "partes": [
     "alivio"
    ],
-   "area_px": 12395,
+   "area_px": 11206,
    "alivios": 2
   },
   "—": {
    "receta": "una recta en tres planos",
    "partes": [],
-   "area_px": 10599,
+   "area_px": 10316,
    "alivios": 0
   },
   "…": {
@@ -801,7 +801,7 @@
    "partes": [
     "punto"
    ],
-   "area_px": 4057,
+   "area_px": 3883,
    "alivios": 0
   }
  }

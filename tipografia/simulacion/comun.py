@@ -31,8 +31,6 @@ SEMILLA = 20260822              # el día de la obra
 # Proporción del trapecio de la proyección: la base mide 0,72 del borde
 # superior visible en el video 1 (el borde superior se sale del cuadro).
 TRAPECIO = 0.70
-# Duración supuesta del bucle, en minutos: no la sabemos (se le pide a Rebeca).
-BUCLE_MIN = 5
 
 FUENTES_TESTIGO = [
     "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
@@ -145,21 +143,6 @@ def mover(m, dx, dy, forma=(T, T)):
     return cv2.warpAffine(m.astype(np.float32), M, (forma[1], forma[0])) > 0.5
 
 
-def escalar(m, sx, sy, cx, cy):
-    M = np.float32([[sx, 0, cx - sx * cx], [0, sy, cy - sy * cy]])
-    return cv2.warpAffine(m.astype(np.float32), M, (m.shape[1], m.shape[0])) > 0.5
-
-
-def rotar(m, grados, cx, cy):
-    M = cv2.getRotationMatrix2D((float(cx), float(cy)), grados, 1.0)
-    return cv2.warpAffine(m.astype(np.float32), M, (m.shape[1], m.shape[0])) > 0.5
-
-
-def centrar_h(m):
-    x0, _, x1, _ = caja_tinta(m)
-    return mover(m, T / 2 - (x0 + x1) / 2, 0, m.shape)
-
-
 # ---------------------------------------------------------------- luz
 
 def sombrear(altura, mascara, azimut=200, elevacion=15, k=7.0, brillo=0.9, fondo=0.05, rng=None):
@@ -178,12 +161,6 @@ def sombrear(altura, mascara, azimut=200, elevacion=15, k=7.0, brillo=0.9, fondo
     if rng is not None:
         img = img + 0.012 * rng.standard_normal(img.shape)
     return np.clip(img, 0, 1)
-
-
-def densidad_a_violeta(d, papel=(0.955, 0.94, 0.905)):
-    """Tinta de anilina sobre papel: casi negra cuando es densa, violeta cuando queda poca."""
-    absorcion = np.array([2.1, 3.3, 1.35])
-    return np.clip(np.array(papel)[None, None, :] * np.exp(-d[..., None] * absorcion[None, None, :]), 0, 1)
 
 
 # ---------------------------------------------------------------- salida

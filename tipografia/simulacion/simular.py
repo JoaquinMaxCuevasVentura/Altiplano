@@ -1,13 +1,14 @@
 """Simula el taller analógico de Contenida: la propuesta de la máquina.
 
 Uso (desde la raíz del repositorio, después de inventario.py):
-    pip install numpy opencv-python-headless pillow scikit-image
+    pip install numpy scipy opencv-python-headless pillow scikit-image shapely
     python3 tipografia/simulacion/simular.py
 
-Corre las acciones 1 a 11 de 04_taller_analogico.md sobre las 56 celdas y las
-119 placas y escribe en tipografia/simulacion/salida/:
-  láminas (JPG y PNG) por acción y por estado,
-  voz.gif (la palabra «voz» en el agua tocada),
+Arma el testigo del pie y la gramática, y corre los simuladores del taller
+—calco, placa, cinta, agua y voz— sobre las 56 celdas y las 119 placas.
+Escribe en tipografia/simulacion/salida/:
+  láminas (JPG y PNG) por estado,
+  agua.gif (la palabra «agua» en el agua tocada) y voz.gif (la palabra «voz» movida por una voz),
   fichas_simuladas.json (una ficha por placa, con los campos de la ficha de hallazgo),
   informe.md (lo que decidió la máquina, con sus números).
 
@@ -24,15 +25,14 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 
-from comun import (BUCLE_MIN, CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS, a8, a_rgb, azar,
-                   fila_de_paneles, guardar, lamina, poliza, rotulo)
-from contener import caja_abierta, caja_cerrada, foto_placa, repujar_placa, sesiones_de_vestir, signo_final, vestir
+from comun import (CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS, a8, a_rgb, azar, fila_de_paneles,
+                   guardar, lamina, poliza, rotulo)
+from contener import foto_placa, repujar_placa, reverso, signo_final
 from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared
-from gramatica import V, encintar, imagen_cuerpo
-from devolver import (agua, armar_matriz, aterrizar, componer, foto_agua, hectografiar, la_bandeja_bebe, matriz_de,
-                      pagina, voz_del_verso)
+from devolver import agua, agua_tocada_en_bucle, foto_agua, voz_del_verso, voz_en_bucle
+from gramatica import V, celda, encintar, imagen_cuerpo
 
-ESTROFA = ["cada vuelta pasa por el agua", "y el agua no repite,", "la misma diosa dos veces", "y ninguna igual."]
+OSCURO = dict(fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
 
 
 def coma(x, d=1):
@@ -43,7 +43,7 @@ def coma(x, d=1):
 def contraste_en_el_agua(luz, relieve):
     """Cuánto se aparta la luz de su entorno donde cae la letra, contra el resto de la placa."""
     desvio = np.abs(luz - cv2.GaussianBlur(luz, (0, 0), 16))
-    letra = cv2.dilate((relieve > 0.32).astype(np.uint8), np.ones((9, 9), np.uint8)) > 0
+    letra = cv2.dilate((np.abs(relieve) > 0.32).astype(np.uint8), np.ones((9, 9), np.uint8)) > 0
     resto = ~cv2.dilate(letra.astype(np.uint8), np.ones((25, 25), np.uint8)).astype(bool)
     return float(desvio[letra].mean() / (desvio[resto].mean() + 1e-9))
 
@@ -62,8 +62,16 @@ def main():
     pol = poliza()
     fichas = {}
 
-    # ------------------------------------------------ acción 1: medir y frotar
-    paso("acción 1: la pared y su frotado")
+    # ------------------------------------------------ el pie y la gramática
+    paso("el pie, los testigos, la escala y la gramática")
+    D = desenterrar()
+    med, e = D["med"], D["esqueleto"]
+    lamina_pie(D)
+    lamina_anatomia(D)
+    lamina_antes_y_despues(D)
+
+    # ------------------------------------------------ calco: sobre el frotado de la pared
+    paso("calco: la pared, su frotado y el calco de la gramática")
     P = pared(7, 8, 300, azar("pared"))
     F = frotado(P, azar("frotado"))
     guardar(SALIDA / "01_frotado_de_la_pared.jpg", cv2.resize(F, (1600, int(1600 * F.shape[0] / F.shape[1])), interpolation=cv2.INTER_AREA))
@@ -73,65 +81,57 @@ def main():
         x = j + (c["columna"] - 1) * (px + j)
         y = j + (c["fila"] - 1) * (px + j)
         fondos[c["celda"]] = cv2.resize(F[y:y + px, x:x + px], (T, T), interpolation=cv2.INTER_LINEAR)
-
-    # ------------------------------------------------ acciones 2 y 3: el pie, la escala, el calco
-    paso("acciones 2 y 3: el pie, los testigos, la escala y las reconstrucciones")
-    D = desenterrar()
-    med = D["med"]
-    lamina_pie(D)
+    pauta = dict(celda=celda(e), fondo=e["fondo"], borde=e["borde"])
     calcos, trazos = {}, {}
     for c in CELDAS:
         s = c["signo"]
         if c["estado"] == "manos":
             calcos[c["celda"]] = 1 - 0.22 * (1 - fondos[c["celda"]])
             continue
-        m = D["M"][s] if c["estado"] == "hallada" else D["R"][s]
-        cv2.imwrite(str(GLIFOS / f"forma_{c['celda']:02d}.png"), (~m).astype(np.uint8) * 255)
-        img, tr = calco(m, c["estado"] == "reconstruida", fondos[c["celda"]], med, azar("calco", c["celda"]))
+        cuerpo = D["gramatica"][s]
+        cv2.imwrite(str(GLIFOS / f"forma_{c['celda']:02d}.png"), (~cuerpo["mascara"]).astype(np.uint8) * 255)
+        img, tr = calco(cuerpo["geo"], c["estado"] == "reconstruida", fondos[c["celda"]], pauta, azar("calco", c["celda"]))
         calcos[c["celda"]], trazos[c["celda"]] = img, tr
-    D["desagues"] = {celda: len(tr) for celda, tr in trazos.items()}
+    D["desagues"] = {celda_: len(tr) for celda_, tr in trazos.items()}
     lamina(calcos, "Calco · simulación",
-           "Continuo lo hallado, punteado lo reconstruido: solo el contorno, abierto en su punto más bajo (el desagüe).\n"
-           f"Es el contorno del cuerpo base de la gramática: canal de {coma(med['canal'] / 4)} mm. La celda 56 no se calca: se hace con los dedos.",
-           SALIDA / "03_calco.png")
+           "En papel de calco, sobre el frotado de la pared: el contorno del cuerpo de la gramática, abierto en su punto más bajo\n"
+           f"(el desagüe). Continuo lo hallado, punteado lo reconstruido; la celda, en lápiz. Canal de {coma(med['canal'] / 4)} mm. "
+           "La celda 56 no se calca: se hace con los dedos.", SALIDA / "03_calco.png")
     notdef = dibujar_trazos((T, T), celda_notdef(azar("notdef")), False, azar("notdef"))
     guardar(SALIDA / "03b_notdef.png", 1 - 0.85 * notdef)
-    lamina_anatomia(D)
-    lamina_antes_y_despues(D)
 
-    # ------------------------------------------------ acción 4 y 6: repujar y vestir
-    paso("acciones 4 y 6: repujar 119 placas y vestirlas")
+    # ------------------------------------------------ placa: repujar por el reverso
+    paso("placa: repujar 119 placas")
     claves = [(c["celda"], v) for c in CELDAS for v in range(1, pol[c["signo"]] + 1)]
-    sesiones = sesiones_de_vestir(claves)
-    foto_p, foto_v, vestidas, rotas = {}, {}, {}, []
-    for celda, v in claves:
-        c = next(x for x in CELDAS if x["celda"] == celda)
+    para_el_agua = {(POR_SIGNO["a"]["celda"], 2)}                 # la segunda «a» de la palabra «agua»
+    foto_a, foto_r, placas, rotas = {}, {}, {}, []
+    for celda_, v in claves:
+        c = next(x for x in CELDAS if x["celda"] == celda_)
         if c["estado"] == "manos":
             p = signo_final(azar("signo", v))
         else:
-            p = repujar_placa(trazos[celda], c["estado"] == "reconstruida", celda, v)
-        foto_p[(celda, v)] = u8(foto_placa(p, azar("foto", celda, v)))
+            p = repujar_placa(trazos[celda_], c["estado"] == "reconstruida", celda_, v)
+        if v == 1:
+            foto_a[celda_] = u8(foto_placa(p, azar("foto", celda_, v)))
+            foto_r[celda_] = u8(foto_placa(reverso(p), azar("foto reverso", celda_)))
+        if v == 1 or (celda_, v) in para_el_agua:
+            placas[(celda_, v)] = dict(altura=p["altura"], relieve=p["relieve"], mascara=p["mascara"])
         for r in p["rotas"][:1]:
             if len(rotas) < 6:
-                rotas.append((c["signo"], foto_placa(r, azar("rota", celda, v))))
-        parte, ang, minutos, sesion = sesiones[(celda, v)]
-        vs = vestir(p, parte, ang, minutos, azar("vestir", celda, v))
-        foto_v[(celda, v)] = u8(foto_placa(vs, azar("foto piel", celda, v)))
-        if v == 1:
-            vestidas[celda] = dict(altura=vs["altura"].astype(np.float32), relieve=vs["relieve"].astype(np.float16),
-                                   pliegues=vs["pliegues"].astype(np.float16), mascara=vs["mascara"])
-        fichas[f"{celda:02d}.{v:02d}"] = ficha_base(c, v, D, p, vs, sesion)
-    lamina({k[0]: f for k, f in foto_p.items() if k[1] == 1}, "Placa · simulación",
-           "Papel de aluminio repujado por el reverso con un punzón de 1 mm; foto con luz rasante desde la izquierda (15°).\n"
-           "Las reconstruidas, a puntos. Primera placa de cada celda.", SALIDA / "04_placa.jpg")
+                rotas.append((c["signo"], foto_placa(r, azar("rota", celda_, v))))
+        fichas[f"{celda_:02d}.{v:02d}"] = ficha_base(c, v, D, p)
+    lamina(foto_r, "Placa por el reverso · simulación",
+           "Papel de aluminio de cocina cortado a tijera. El calco, dado vuelta, se repasa por el reverso con un punzón de bola\n"
+           "de 1 mm sobre una base blanda: la letra queda al revés y hundida, un canal. Las reconstruidas, a puntos.",
+           SALIDA / "04_placa_reverso.jpg")
+    lamina(foto_a, "Placa · simulación",
+           "La misma placa por el anverso: la letra se lee, en relieve. Foto con luz rasante desde la izquierda (15°).\n"
+           "Primera placa de cada celda. La celda 56, una presión de pulgar.", SALIDA / "04_placa.jpg")
     if rotas:
         fila_de_paneles([f for _, f in rotas], [f"«{s}» rota" for s, _ in rotas], SALIDA / "04b_placas_rotas.jpg", alto=260,
                         titulo="Placas que se rompieron: se guardan en la caja y se hace otra")
-    lamina({k[0]: f for k, f in foto_v.items() if k[1] == 1}, "Piel · simulación",
-           f"La placa vestida {BUCLE_MIN} minutos (el bucle, supuesto) y aplanada con la palma. Los pliegues siguen el eje\n"
-           "de la parte del cuerpo: antebrazo, esternón, cadera, muslo, espalda, hombro, por sesiones de seis.", SALIDA / "06_piel.jpg")
 
-    # ------------------------------------------------ el estado Cinta: la letra con la masking de ojos y boca
+    # ------------------------------------------------ cinta: la letra con la masking de ojos y boca
     paso("cinta: la letra puesta con masking")
     cintas = {}
     for c in CELDAS:
@@ -146,88 +146,77 @@ def main():
            "curva en su plano: va recta, se pliega o se superpone. No hace gotas ni asientos. La celda 56 es de los dedos.",
            SALIDA / "07_cinta.jpg", fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.85, 0.82), junta=(0.12, 0.12, 0.14))
 
-    # ------------------------------------------------ acción 5: la caja
-    paso("acción 5: la caja")
-    fl = {k: f.astype(np.float32) / 255 for k, f in foto_v.items()}
-    guardar(SALIDA / "05_caja_abierta.jpg", caja_abierta(fl, pol, CELDAS, azar("caja")))
-    guardar(SALIDA / "05b_caja_cerrada.jpg", caja_cerrada(fl[(1, 1)], azar("tapa")))
-
-    # ------------------------------------------------ acción 8: hectógrafo
-    paso("acción 8: el hectógrafo")
-    matrices = {c: matriz_de(v) for c, v in vestidas.items()}
-    mat, cajas = armar_matriz(matrices, CELDAS)
-    copias, ultima, tirada, gel = hectografiar(mat, cajas, matrices, azar("hectografo"))
-    for celda, n in ultima.items():
-        for k in fichas:
-            if int(k[:2]) == celda and k.endswith(".01"):
-                fichas[k]["copia"] = {"hectografo": 1, "ultima_legible": n, "tirada": tirada}
-    lamina_hectografo(copias, tirada, ultima, gel, cajas)
-
-    # ------------------------------------------------ acciones 9, 10 y 11: agua, voz, pared
-    paso("acciones 9 a 11: agua, voz y pared")
-    quietas, tocadas, voces, azulejos = {}, {}, {}, {}
+    # ------------------------------------------------ agua: la placa en la bandeja
+    paso("agua: quieta y tocada")
+    quietas, tocadas = {}, {}
     for c in CELDAS:
-        celda = c["celda"]
-        vs = vestidas[celda]
-        vs = dict(vs, relieve=vs["relieve"].astype(np.float32), pliegues=vs["pliegues"].astype(np.float32))
-        lq, iq = agua(vs, azar("agua", celda))
-        quietas[celda] = u8(foto_agua(lq, azar("foto agua", celda)))
-        fase = 1.5 + (celda % 5) * 0.5
-        lt, _ = agua(vs, azar("tocada", celda), fase=fase)
-        tocadas[celda] = u8(foto_agua(lt, azar("foto tocada", celda)))
-        verso = VERSOS[(celda - 1) * len(VERSOS) // len(CELDAS)]
-        hz, vol, sil, nsil = voz_del_verso(verso, azar("voz", celda))
-        lv, iv = agua(vs, azar("agua voz", celda), voz=(hz, vol))
-        voces[celda] = u8(foto_agua(lv, azar("foto voz", celda)))
-        foto_pared, calco_pared, n_juntas, (x, y, l) = aterrizar(lq, vs, iq["superficie"], azar("pared", celda))
-        azulejos[celda] = u8(cv2.resize(calco_pared[y:y + l, x:x + l], (T, T), interpolation=cv2.INTER_AREA))
-        k1 = f"{celda:02d}.01"
-        fichas[k1]["agua"] = {"quieta": True, "tocada": True, "fase_de_la_onda": fase,
-                              "contraste_de_la_letra": round(contraste_en_el_agua(lq, vs["relieve"]), 2)}
-        fichas[k1]["voz"] = {"verso": verso, "silaba": f"{sil} de {nsil}", "hz": round(hz), "volumen": round(vol, 2),
-                             "lambda_mm": round(iv["lambda_mm"], 1)}
-        fichas[k1]["azulejo"] = {"juntas_que_la_cortan": n_juntas}
+        celda_ = c["celda"]
+        pl = placas[(celda_, 1)]
+        lq, _ = agua(pl, azar("agua", celda_))
+        quietas[celda_] = u8(foto_agua(lq, azar("foto agua", celda_)))
+        fase = 1.5 + (celda_ % 5) * 0.5
+        lt, _ = agua(pl, azar("tocada", celda_), fase=fase)
+        tocadas[celda_] = u8(foto_agua(lt, azar("foto tocada", celda_)))
+        fichas[f"{celda_:02d}.01"]["agua"] = {"quieta": True, "tocada": True, "fase_de_la_onda": fase,
+                                              "contraste_de_la_letra": round(contraste_en_el_agua(lq, pl["relieve"]), 2)}
     lamina(quietas, "Agua quieta · simulación",
            "La placa en el fondo de una bandeja con un dedo de agua; la luz rebota y cae, al revés y en trapecio,\n"
-           "sobre dos por dos azulejos sueltos. El punto brillante es la lámpara reflejada en el agua.", SALIDA / "09_agua_quieta.jpg",
-           fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
-    lamina(tocadas, "Agua tocada · simulación", "Un dedo toca el agua en una esquina: ondas concéntricas. Cada foto, en otro momento de la onda.",
-           SALIDA / "09b_agua_tocada.jpg", fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
+           "sobre dos por dos azulejos sueltos. El punto brillante es la lámpara reflejada en el agua.",
+           SALIDA / "09_agua_quieta.jpg", **OSCURO)
+    lamina(tocadas, "Agua tocada · simulación",
+           "Un dedo toca el agua en una esquina: ondas concéntricas. Cada foto, en otro momento de la onda.",
+           SALIDA / "09b_agua_tocada.jpg", **OSCURO)
+    gif_agua(placas)
+
+    # ------------------------------------------------ voz: el verso mueve el agua
+    paso("voz: el poema leído junto a la bandeja")
+    voces = {}
+    for c in CELDAS:
+        celda_ = c["celda"]
+        verso = VERSOS[(celda_ - 1) * len(VERSOS) // len(CELDAS)]
+        hz, vol, sil, nsil = voz_del_verso(verso, azar("voz", celda_))
+        lv, iv = agua(placas[(celda_, 1)], azar("agua voz", celda_), voz=(hz, vol))
+        voces[celda_] = u8(foto_agua(lv, azar("foto voz", celda_)))
+        fichas[f"{celda_:02d}.01"]["voz"] = {"verso": verso, "silaba": f"{sil} de {nsil}", "hz": round(hz),
+                                             "volumen": round(vol, 2), "lambda_mm": round(iv["lambda_mm"], 1)}
     lamina(voces, "Voz · simulación",
            "El agua vibra con el ritmo silábico del poema, leído una vez mientras se fotografían las 56 placas.\n"
-           "Ondas de Faraday: la longitud de onda sale de la altura de la voz (inventada, no la tuya).", SALIDA / "10_voz.jpg",
-           fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
-    lamina(azulejos, "Azulejo · simulación",
-           "La luz de la letra cae ampliada en la pared de la piscina y se calca lo que quedó:\n"
-           "al revés, en trapecio y cortada por las juntas (quien calca no puede seguirla por la junta).", SALIDA / "11_azulejo.png")
+           "Ondas de Faraday: la longitud de onda sale de la altura de la voz (inventada, no la tuya).",
+           SALIDA / "10_voz.jpg", **OSCURO)
+    gif_voz(placas)
 
-    # ------------------------------------------------ componer un verso y la cadena de una letra
-    paso("acción 11: componer una estrofa en la pared")
-    fotos_por_signo = {(c["signo"], v): foto_v[(c["celda"], v)].astype(np.float32) / 255
-                       for c in CELDAS for v in range(1, pol[c["signo"]] + 1)}
-    img, usadas = componer(ESTROFA, fotos_por_signo, azar("componer"))
-    guardar(SALIDA / "11b_estrofa_en_la_pared.jpg", img)
-    for celda in (8, 32):
-        s = next(c["signo"] for c in CELDAS if c["celda"] == celda)
+    # ------------------------------------------------ una letra de punta a punta
+    paso("una letra de punta a punta")
+    for celda_ in (8, 32):
+        s = next(c["signo"] for c in CELDAS if c["celda"] == celda_)
         t = D["testigos"].get(s)
-        primero = [cv2.resize(1 - t["crudo"].astype(np.float32) * 0.9, (T, T))] if t else [np.ones((T, T), np.float32)]
-        m = D["M"][s] if t else D["R"][s]
-        paneles = primero + [imagen_cuerpo(m), calcos[celda], foto_p[(celda, 1)], foto_v[(celda, 1)], cintas[celda],
-                             quietas[celda], tocadas[celda], voces[celda], azulejos[celda]]
-        rot = (["pie (ampliado)"] if t else ["no está en el pie"]) + ["gramática", "calco", "placa", "piel", "cinta",
-                                                                     "agua quieta", "agua tocada", "voz", "azulejo"]
-        fila_de_paneles(paneles, rot, SALIDA / f"12_cadena_{celda:02d}.jpg", alto=260,
-                        titulo=f"La cadena de una letra: «{s}» (celda {celda}, {'hallada' if t else 'reconstruida'})")
-    gif_voz(vestidas)
+        primero = [cuadrado(1 - t["crudo"].astype(np.float32) * 0.9)] if t else [np.ones((T, T), np.float32)]
+        paneles = primero + [imagen_cuerpo(D["gramatica"][s]["mascara"]), calcos[celda_], foto_r[celda_], foto_a[celda_],
+                             cintas[celda_], quietas[celda_], tocadas[celda_], voces[celda_]]
+        rot = (["pie (ampliado)"] if t else ["no está en el pie"]) + ["gramática", "calco", "placa, reverso", "placa",
+                                                                     "cinta", "agua quieta", "agua tocada", "voz"]
+        fila_de_paneles(paneles, rot, SALIDA / f"12_cadena_{celda_:02d}.jpg", alto=260,
+                        titulo=f"La cadena de una letra: «{s}» (celda {celda_}, {'hallada' if t else 'reconstruida'})")
 
     # ------------------------------------------------ fichas e informe
     paso("fichas e informe")
     (SALIDA / "fichas_simuladas.json").write_text(json.dumps(fichas, ensure_ascii=False, indent=1), encoding="utf8")
-    informe(D, fichas, ultima, tirada, pol)
+    informe(D, fichas, pol)
     paso("listo")
 
 
-def ficha_base(c, v, D, p, vs, sesion):
+def cuadrado(img, lado=T):
+    """La imagen entera en un cuadrado, sin deformarla: se completa con papel."""
+    h, w = img.shape[:2]
+    k = lado / max(h, w)
+    chica = cv2.resize(img, (max(1, round(w * k)), max(1, round(h * k))), interpolation=cv2.INTER_AREA)
+    out = np.ones((lado, lado), np.float32)
+    y, x = (lado - chica.shape[0]) // 2, (lado - chica.shape[1]) // 2
+    out[y:y + chica.shape[0], x:x + chica.shape[1]] = chica
+    return out
+
+
+def ficha_base(c, v, D, p):
     s = c["signo"]
     f = {"placa": f"{s}.{v:02d}", "celda": c["celda"], "signo": s, "variante": v, "estado": c["estado"],
          "mano": "simulación (semilla fija)"}
@@ -239,9 +228,11 @@ def ficha_base(c, v, D, p, vs, sesion):
         f["reconstruccion"] = D["receta"][s]
     else:
         f["signo_final"] = "una presión de pulgar genérico: la máquina no tiene dedos"
+    if c["estado"] != "manos":
+        f["calco"] = {"linea": "punteada" if c["estado"] == "reconstruida" else "continua",
+                      "desagues": D["desagues"].get(c["celda"], 0)}
     f["placa_"] = {"intentos": p["intentos"], "roturas": p["roturas"], "minutos": p["minutos"],
                    "recorrido_mm": round(float(p["largo_mm"]))}
-    f["piel"] = {"parte": vs["parte"], "minutos": vs["minutos"], "sesion": sesion, "pliegues": vs["n_pliegues"]}
     if v == 1 and c["estado"] != "manos":
         g = D["gramatica"][s]["glifo"]
         f["gramatica"] = {"desagues": D["desagues"].get(c["celda"], 0), "alivios": len(g.menos),
@@ -249,62 +240,98 @@ def ficha_base(c, v, D, p, vs, sesion):
     return f
 
 
+def gif_agua(placas):
+    """La palabra «agua» en el agua tocada, en bucle: cada «a» es otra placa."""
+    a, g, u = (POR_SIGNO[s]["celda"] for s in "agu")
+    fila = [placas[(a, 1)], placas[(g, 1)], placas[(u, 1)], placas.get((a, 2), placas[(a, 1)])]
+    cuadros = [Image.fromarray(a8(f)).convert("P", palette=Image.ADAPTIVE, colors=64)
+               for f in agua_tocada_en_bucle(fila, "agua", ancho=900, alto=300)]
+    cuadros[0].save(SALIDA / "agua.gif", save_all=True, append_images=cuadros[1:], duration=110, loop=0, optimize=True)
+
+
+def gif_voz(placas):
+    """La palabra «voz» en el agua, movida por una voz: la onda quieta que va y vuelve."""
+    fila = [placas[(POR_SIGNO[s]["celda"], 1)] for s in "voz"]
+    hz, vol, _, _ = voz_del_verso("acciones para componer una voz", azar("voz", "gif"))
+    cuadros = [Image.fromarray(a8(f)).convert("P", palette=Image.ADAPTIVE, colors=64)
+               for f in voz_en_bucle(fila, hz, vol, "voz", ancho=720, alto=300)]
+    cuadros[0].save(SALIDA / "voz.gif", save_all=True, append_images=cuadros[1:], duration=90, loop=0, optimize=True)
+
+
 def lamina_pie(D):
-    """El pie impreso, fotografiado y ampliado; y los testigos de la «e»."""
-    tinta, foto = D["tinta"], D["foto"]
+    """El pie: en la foto de la lámina y, como testigo de las formas, impreso con una letra sustituta."""
     W = 1700
+    bloques = []
+    pf = D.get("pie_foto")
+    if pf:
+        real = pf["imagen"]
+        real = cv2.resize(real, (W, int(W * real.shape[0] / real.shape[1])), interpolation=cv2.INTER_AREA)
+        m = pf["medidas"]
+        bloques.append((f"El pie en la foto de la lámina, enderezado línea por línea. La altura de x mide {coma(m['alto_x'])} px y la tinta "
+                        f"se corrió (σ = {coma(m['sigma'], 2)} px):", real))
+        bloques.append(("se lee, se mide, pero no se calca: los ojos de la a y de la e se cierran.", None))
+    tinta, foto = D["tinta"], D["foto"]
     impreso = 1 - 0.85 * tinta[:, : tinta.shape[1] // 2]
     impreso = cv2.resize(impreso, (W, int(W * impreso.shape[0] / impreso.shape[1])), interpolation=cv2.INTER_AREA)
     fot = foto[:, : foto.shape[1] // 2]
     fot = cv2.resize(fot, (W, int(W * fot.shape[0] / fot.shape[1])), interpolation=cv2.INTER_NEAREST)
+    bloques.append((f"El testigo de las formas: el pie impreso con una letra sustituta ({Path(FUENTE_TESTIGO).stem})", None))
+    bloques.append(("y tipos de plomo simulados. La tinta se corre, falta o se mella", impreso))
+    bloques.append(("Fotografiado con luz rasante, a 12 px por milímetro (ampliado sin suavizar)", fot))
     t = D["testigos"]["a"]
     gens = [cv2.resize(t["recorte"], (int(300 * t["recorte"].shape[1] / t["recorte"].shape[0]), 300), interpolation=cv2.INTER_NEAREST)]
     gens += [cv2.resize(1 - g * 0.9, (int(300 * g.shape[1] / g.shape[0]), 300), interpolation=cv2.INTER_AREA) for g in t["gens"]]
     gens += [cv2.resize(1 - t["mascara"].astype(np.float32) * 0.9, (int(300 * t["mascara"].shape[1] / t["mascara"].shape[0]), 300))]
     cands = D["candidatas"]["e"]
+    te = D["testigos"]["e"]
     miniaturas = []
     for cd in cands:
-        m = cv2.resize(1 - cd["propia"].astype(np.float32) * 0.9, (70, 110), interpolation=cv2.INTER_AREA)
-        m = np.dstack([m] * 3)
-        if cd["k"] == t_e(D):
-            m[:4], m[-4:], m[:, :4], m[:, -4:] = (0.35, 0.15, 0.55), (0.35, 0.15, 0.55), (0.35, 0.15, 0.55), (0.35, 0.15, 0.55)
-        miniaturas.append(m)
-    filas_m = [np.hstack(miniaturas[i:i + 21] + [np.ones((110, 70, 3))] * (21 - len(miniaturas[i:i + 21]))) for i in range(0, len(miniaturas), 21)]
-    mini = np.vstack(filas_m)
-    lienzo = Image.new("RGB", (W + 60, 60 + impreso.shape[0] + fot.shape[0] + 440 + mini.shape[0] + 200), (247, 246, 242))
+        m_ = cv2.resize(1 - cd["propia"].astype(np.float32) * 0.9, (70, 110), interpolation=cv2.INTER_AREA)
+        m_ = np.dstack([m_] * 3)
+        if cd["k"] == te["elegido"]:
+            for sl in (np.s_[:4], np.s_[-4:], np.s_[:, :4], np.s_[:, -4:]):
+                m_[sl] = (0.35, 0.15, 0.55)
+        miniaturas.append(m_)
+    mini = np.vstack([np.hstack(miniaturas[i:i + 21] + [np.ones((110, 70, 3))] * (21 - len(miniaturas[i:i + 21])))
+                      for i in range(0, len(miniaturas), 21)])
+    alto = 60 + sum(34 + (b.shape[0] + 16 if b is not None else 0) for _, b in bloques) + 34 + 320 + 34 + mini.shape[0] + 40
+    lienzo = Image.new("RGB", (W + 60, alto), (247, 246, 242))
     d = ImageDraw.Draw(lienzo)
     y = 20
-    d.text((30, y), "El pie, impreso con tipos de plomo (simulado): la tinta se corre, falta o se mella", font=rotulo(20), fill=(40, 40, 40))
+    for texto, img in bloques:
+        d.text((30, y), texto, font=rotulo(20), fill=(40, 40, 40))
+        y += 34
+        if img is not None:
+            lienzo.paste(Image.fromarray(a8(a_rgb(img))), (30, y))
+            y += img.shape[0] + 16
+    d.text((30, y), f"La «a» elegida (testigo {t['elegido']} de {t['de']}, «{t['palabra']}», línea {t['linea']}): la foto, tres "
+                    f"fotocopias ampliadas y la opinión ({coma(t['opinion'])} % del borde)", font=rotulo(18), fill=(40, 40, 40))
     y += 34
-    lienzo.paste(Image.fromarray(a8(a_rgb(impreso))), (30, y)); y += impreso.shape[0] + 16
-    d.text((30, y), "Fotografiado con luz rasante, a 12 px por milímetro (ampliado sin suavizar)", font=rotulo(20), fill=(40, 40, 40)); y += 34
-    lienzo.paste(Image.fromarray(a8(a_rgb(fot))), (30, y)); y += fot.shape[0] + 24
-    d.text((30, y), f"La «a» elegida (testigo {t['elegido']} de {t['de']}, «{t['palabra']}», línea {t['linea']}): foto, tres fotocopias ampliadas y la opinión ({coma(t['opinion'])} % del borde)",
-           font=rotulo(18), fill=(40, 40, 40)); y += 34
     x = 30
     for g in gens:
         im = Image.fromarray(a8(a_rgb(g)))
-        lienzo.paste(im, (x, y)); x += im.width + 14
+        lienzo.paste(im, (x, y))
+        x += im.width + 14
     y += 320
-    te = D["testigos"]["e"]
-    d.text((30, y), f"Los {len(cands)} testigos de la «e» en el pie; en violeta, el elegido (nº {te['elegido']}, «{te['palabra']}»)", font=rotulo(18), fill=(40, 40, 40)); y += 34
+    d.text((30, y), f"Los {len(cands)} testigos de la «e» en el pie; en violeta, el elegido (nº {te['elegido']}, «{te['palabra']}»)",
+           font=rotulo(18), fill=(40, 40, 40))
+    y += 34
     lienzo.paste(Image.fromarray(a8(mini)), (30, y))
     guardar(SALIDA / "02_el_pie.jpg", lienzo.crop((0, 0, lienzo.width, y + mini.shape[0] + 30)))
 
 
-TINTA_ANAT = (74, 36, 112)       # violeta de hectógrafo para las marcas
+TINTA_ANAT = (74, 36, 112)       # el violeta de la tinta para las marcas
 
 
 def _panel_letra(D, s, lado=900, lineas=True):
     """Una letra grande: su celda, las líneas con nombre, relleno pálido, contorno abierto y sus partes nombradas."""
-    from desenterrar import contornos_temblorosos, dibujar_trazos, punto_de_desague
-    from gramatica import celda
+    from desenterrar import calcar, punto_de_desague
     med = D["med"]
-    m = D["M"].get(s, D["R"].get(s))
+    m = D["gramatica"][s]["mascara"]
     k = lado / T
     img = np.full((T, T, 3), (0.955, 0.95, 0.93), np.float32)
     img[m] = (0.86, 0.85, 0.82)
-    tr = contornos_temblorosos(m, azar("anat", s))
+    tr = calcar(D["gramatica"][s]["geo"], azar("anat", s))
     linea = dibujar_trazos((T, T), tr, s in D["R"], azar("anat l", s), grosor=3)
     img *= (1 - 0.9 * linea)[..., None]
     im = Image.fromarray(a8(img)).resize((lado, lado), Image.LANCZOS)
@@ -363,14 +390,14 @@ def lamina_anatomia(D):
 
 
 def lamina_antes_y_despues(D, letras="aoegrcfsjiáqbp"):
-    """Arriba, la letra que dio el pie; en el medio, el cuerpo base de la gramática; abajo, el calco con sus desagües."""
-    from desenterrar import contornos_temblorosos, dibujar_trazos
+    """Arriba, la letra que dio el pie; en el medio, el cuerpo base de la gramática; abajo, su calco con los desagües."""
+    from desenterrar import calcar
     lado = 170
     cols = []
     for s in letras:
         antes = D["antes"][s]
-        despues = D["M"][s]
-        tr = contornos_temblorosos(despues, azar("ad", s))
+        despues = D["gramatica"][s]["mascara"]
+        tr = calcar(D["gramatica"][s]["geo"], azar("ad", s))
         linea = dibujar_trazos((T, T), tr, False, azar("ad l", s), grosor=4)
         celdas = [1 - 0.88 * antes.astype(np.float32), 1 - 0.88 * despues.astype(np.float32), 1 - 0.9 * linea]
         cols.append(np.vstack([cv2.resize(c, (lado, lado), interpolation=cv2.INTER_AREA) for c in celdas]))
@@ -385,40 +412,8 @@ def lamina_antes_y_despues(D, letras="aoegrcfsjiáqbp"):
     guardar(SALIDA / "03d_antes_y_despues.png", lienzo)
 
 
-def t_e(D):
-    return D["testigos"]["e"]["elegido"]
-
-
-def lamina_hectografo(copias, tirada, ultima, gel, cajas):
-    paginas = []
-    rot = []
-    for n in sorted(copias):
-        pg = pagina(copias[n], azar("pagina", n))
-        paginas.append(cv2.resize(pg, (pg.shape[1] // 3, pg.shape[0] // 3), interpolation=cv2.INTER_AREA))
-        rot.append(f"copia {n}")
-    fila_de_paneles(paginas, rot, SALIDA / "08_hectografo_copias.jpg", alto=560,
-                    titulo=f"Hectógrafo: la caja en cuerpo tesela, en una A4. Se leyeron {tirada} copias; cada una sale más clara")
-    beber = la_bandeja_bebe(gel, cajas, azar("bebe"))
-    fila_de_paneles(beber, ["0 h", "12 h", "24 h", "48 h"], SALIDA / "08b_la_bandeja_bebe.jpg", alto=220,
-                    titulo="La gelatina después de la tirada: la tinta se hunde y la bandeja queda limpia")
-
-
-def gif_voz(vestidas):
-    """La palabra «voz» en el agua tocada, en bucle."""
-    celdas = [POR_SIGNO[s]["celda"] for s in "voz"]
-    alt = np.hstack([vestidas[c]["altura"] for c in celdas])
-    mas = np.hstack([vestidas[c]["mascara"] for c in celdas])
-    vs = {"altura": alt, "mascara": mas}
-    cuadros = []
-    for i in range(16):
-        luz, _ = agua(vs, azar("gif"), fase=i / 16 * 4)
-        f = foto_agua(luz, azar("gif foto"), ancho=720, alto=300)
-        cuadros.append(Image.fromarray(a8(f)).convert("P", palette=Image.ADAPTIVE, colors=64))
-    cuadros[0].save(SALIDA / "voz.gif", save_all=True, append_images=cuadros[1:], duration=110, loop=0, optimize=True)
-
-
-def informe(D, fichas, ultima, tirada, pol):
-    med = D["med"]
+def informe(D, fichas, pol):
+    med, e = D["med"], D["esqueleto"]
     P = D["parametros"]
 
     def con(parte):
@@ -426,6 +421,7 @@ def informe(D, fichas, ultima, tirada, pol):
 
     def lista(signos):
         return ", ".join(f"«{s}»" for s in signos) or "—"
+
     halladas = [c for c in CELDAS if c["estado"] == "hallada"]
     placas = list(fichas.values())
     minutos = sum(f["placa_"]["minutos"] for f in placas)
@@ -433,88 +429,82 @@ def informe(D, fichas, ultima, tirada, pol):
     rot_r = sum(f["placa_"]["roturas"] for f in placas if f["estado"] == "reconstruida")
     n_h = sum(1 for f in placas if f["estado"] == "hallada")
     n_r = sum(1 for f in placas if f["estado"] == "reconstruida")
-    orden = sorted(ultima.items(), key=lambda kv: kv[1])
-    sig = {c["celda"]: c["signo"] for c in CELDAS}
-    juntas = [fichas[f"{c['celda']:02d}.01"]["azulejo"]["juntas_que_la_cortan"] for c in CELDAS]
     est = {c["celda"]: c["estado"] for c in CELDAS}
-    uh = np.mean([v for c, v in ultima.items() if est[c] == "hallada"])
-    ur = np.mean([v for c, v in ultima.items() if est[c] == "reconstruida"])
-    hecto = (f"Las halladas se leen, en promedio, hasta la copia {coma(uh)}; las reconstruidas, hasta la {coma(ur)}. "
-             + ("**Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, dejan menos tinta en la matriz y se borran antes." if ur < uh
-                else "Las reconstruidas no se borran antes que las halladas."))
     ch = np.mean([fichas[f"{c:02d}.01"]["agua"]["contraste_de_la_letra"] for c in est if est[c] == "hallada"])
     cr = np.mean([fichas[f"{c:02d}.01"]["agua"]["contraste_de_la_letra"] for c in est if est[c] == "reconstruida"])
     agua_txt = (f"Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): "
                 f"{coma(ch, 2)} en las halladas y {coma(cr, 2)} en las reconstruidas. "
-                + ("**Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos." if cr < ch
-                   else "Las reconstruidas no llegan más débiles al agua."))
-    L = []
-    L += ["# La propuesta de la máquina: el taller simulado",
-          "",
-          "Generado por `simular.py`. Es una **hipótesis hecha por código**, para confrontarla con la que se haga a mano. Ninguna de estas formas entra en la caja ni en la fuente: la caja se llena con placas repujadas por una persona.",
-          "",
-          "La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.",
-          "",
-          "## Lo que la máquina tuvo que suponer",
-          "",
-          f"- **El testigo.** No tenemos el pie del libro en alta resolución: en la foto, la altura de x mide unos 4 px y no se puede calcar. La máquina lo reemplaza por una letra de imprenta parecida, **{Path(FUENTE_TESTIGO).stem}**, impresa con tipos de plomo simulados. Es su suposición más débil: tu propuesta partirá del libro.",
-          "- **El cuerpo del pie:** 8,5 puntos.",
-          "- **La piscina:** azulejo de 150 mm y junta de 3 mm, hasta que se mida. Ya no mide la letra: la pared solo la recibe (estado *Azulejo*).",
-          "- **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo en la lámina. Es el cuerpo de cada letra.",
-          f"- **El bucle:** {BUCLE_MIN} minutos, hasta que Rebeca diga cuánto dura.",
-          "- **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.",
-          "- **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.",
-          "",
-          "## Acción 1 · La pared y su frotado",
-          "",
-          "![Frotado](salida/01_frotado_de_la_pared.jpg)",
-          "",
-          "Un paño de 8 × 7 azulejos con juntas torcidas, craquelado, manchas y desportillados. En el frotado se marca lo que sobresale: juntas y grietas quedan blancas; las manchas no salen, porque no tienen relieve.",
-          "",
-          "## Acción 2 · El pie",
-          "",
-          "![El pie](salida/02_el_pie.jpg)",
-          "",
-          "Para cada signo hallado, la máquina amplió todos sus testigos en tres generaciones de fotocopia y eligió el mejor conservado: el que tiene las partes que debe tener (la i, dos) y el borde menos roto. La *opinión* es cuánto del borde tuvo que decidir al limpiar.",
-          "",
-          "| Celda | Signo | Testigo elegido | Palabra | Línea | Opinión |",
-          "|---|---|---|---|---|---|"]
+                + ("**Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. "
+                   "El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos."
+                   if cr < ch else "Las reconstruidas no llegan más débiles al agua."))
+    tramos = sum(f.get("cinta", {}).get("tramos", 0) for f in fichas.values())
+    pliegues = sum(f.get("cinta", {}).get("pliegues", 0) for f in fichas.values())
+    xh = e["xh"]
+    foto = (D.get("pie_foto") or {}).get("medidas")
+    L = ["# La propuesta de la máquina: el taller simulado",
+         "",
+         "Generado por `simular.py`. Es una **hipótesis hecha por código**, para confrontarla con la que se haga a mano. "
+         "Ninguna de estas formas entra en la caja ni en la fuente: la caja se llena con placas repujadas por una persona.",
+         "",
+         "La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.",
+         "",
+         "La máquina simula cinco estados del taller: **calco, placa, cinta, agua y voz**. Antes arma el testigo del pie y "
+         "la gramática, que da el cuerpo base de cada signo.",
+         "",
+         "## Lo que la máquina tuvo que suponer",
+         "",
+         "- **El testigo de las formas.** El pie está en la foto de la lámina, pero la foto no alcanza para calcar: la altura "
+         "de x mide unos 12 px y la tinta se corrió; los ojos de la a y de la e se cierran. Las formas del testigo salen de "
+         f"una letra de imprenta parecida, **{Path(FUENTE_TESTIGO).stem}**, impresa con tipos de plomo simulados. La foto "
+         "queda para mirar el pie real y para medirlo (más abajo, *Lo que dice la foto*).",
+         "- **El cuerpo del pie:** 8,5 puntos.",
+         "- **La piscina:** azulejo de 150 mm y junta de 3 mm, hasta que se mida. La pared da el frotado sobre el que se calca.",
+         "- **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo. En la foto cercana de la "
+         "cabeza, el paso de la retícula de 8 × 7 mide 0,81 en los bordes y 0,91 al centro (promedio 0,86): el dibujo curva "
+         "la cabeza como un cilindro. El 0,84 cae dentro.",
+         "- **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.",
+         "- **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.",
+         "",
+         "## El pie",
+         "",
+         "![El pie](salida/02_el_pie.jpg)",
+         "",
+         "Para cada signo hallado, la máquina amplió todos sus testigos en tres generaciones de fotocopia y eligió el mejor "
+         "conservado: el que tiene las partes que debe tener (la i, dos) y el borde menos roto. La *opinión* es cuánto del "
+         "borde tuvo que decidir al limpiar.",
+         "",
+         "| Celda | Signo | Testigo elegido | Palabra | Línea | Opinión |",
+         "|---|---|---|---|---|---|"]
     for c in halladas:
         t = D["testigos"][c["signo"]]
         L.append(f"| {c['celda']} | `{c['signo']}` | {t['elegido']} de {t['de']} | {t['palabra']} | {t['linea']} | {coma(t['opinion'])} % |")
+    if foto:
+        L += ["",
+              "### Lo que dice la foto",
+              "",
+              "`extraer_testigos.py` endereza las cuatro líneas de la foto (la tercera sube sobre el pliegue del papel), deshace "
+              "en parte el desenfoque y corta cada palabra en sus letras, como con tijera. Las 336 letras quedan en "
+              "`testigos/`, sin la foto. Lo que se puede medir, contra el sustituto:",
+              "",
+              "| Medida | La foto | El sustituto |",
+              "|---|---|---|",
+              f"| Altura de x | {coma(foto['alto_x'])} px de foto | — |",
+              f"| Ascendentes, sobre la altura de x | {coma(foto['ascendente'] / foto['alto_x'], 2)} | {coma((e['fondo'] - e['afuera']) / xh, 2)} |",
+              f"| Descendentes, sobre la altura de x | {coma(foto['descendente'] / foto['alto_x'], 2)} | {coma((e['desague'] - e['fondo']) / xh, 2)} |",
+              f"| Trazo, sobre la altura de x | {coma(foto['asta'] / foto['alto_x'], 2)} o más | {coma(e['canal'] / xh, 2)} (el canal) |",
+              f"| Desenfoque de la foto | σ = {coma(foto['sigma'], 2)} px | — |",
+              "",
+              f"El trazo se mide por la tinta que junta, no por su borde: el desenfoque corre la tinta, pero no cambia cuánta "
+              f"hay. En {foto['trazos']} trazos aislados, el pico y la tinta total dan el desenfoque; la tinta llena no se puede "
+              "despejar, porque todos los trazos son más finos que el desenfoque. Se la toma como negro pleno, y el ancho que "
+              "resulta es un mínimo. El pie real tiene ascendentes más largas, descendentes más cortas y un trazo más "
+              "grueso que el sustituto."]
     L += ["",
-          "## Acción 3 · La escala y el calco",
-          "",
-          "![Calco](salida/03_calco.png)",
-          "",
-          "**La escala la decidió el pie.** La letra más alta y la más baja caben en la placa con aire. Del pie salen las cuatro líneas; ya no se ajustan a ninguna retícula de teselas. Medidas desde el fondo:",
-          "",
-          "| Línea | Desde el fondo |",
-          "|---|---|",
-          f"| Afuera (ascendentes) | {coma(med['asc'] / 4)} mm |",
-          f"| Borde (altura de x) | {coma(med['xh'] / 4)} mm |",
-          "| Fondo (base) | 0 |",
-          f"| Desagüe (descendentes) | −{coma(med['desc'] / 4)} mm |",
-          "",
-          f"El trazo grueso de la o del pie mide {coma(med['grueso'] / 4)} mm y el fino, {coma(med['fino'] / 4)} mm. El canal de la gramática, sin contraste, mide {coma(med['canal'] / 4)} mm: la media entre los dos. " +
-          ("Ningún signo desborda la placa." if not D["desbordes"] else "Desbordan: " + ", ".join(f"«{k}» {v} mm" for k, v in D["desbordes"].items()) + "."),
-          "",
-          "**Las reconstrucciones de la máquina:**",
-          "",
-          "| Signo | Receta |", "|---|---|"]
-    for c in CELDAS:
-        if c["estado"] == "reconstruida":
-            L.append(f"| `{c['signo']}` | {D['receta'][c['signo']]} |")
-    L += ["",
-          "Una decisión propia de la máquina: **cifras elzevirianas**, de altura de x, con 6 y 8 que suben y 3, 4, 5, 7 y 9 que bajan. En una tipografía de caja baja, las cifras de monumento (todas a la altura de las mayúsculas) serían ajenas.",
-          "",
-          "**Los dobles opuestos varían.** En la litoescultura de Tiwanaku, las figuras enfrentadas casi nunca son idénticas (Agüero, Uribe y Berenguer 2003). Aquí tampoco: la ¿ no es la ? dada vuelta, ni el 9 el 6, porque la gravedad no se da vuelta: la gota cae siempre hacia abajo, y el terminal que mira arriba termina en un corte. Las » se arman con su propio azar.",
-          "",
-          "El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)",
-          "",
           "## La gramática",
           "",
-          "La anatomía base se construye antes de los estados, en vectores (`03c_gramatica.md`, `gramatica.py`). Del pie se toman medidas; la forma la dictan parámetros que salen de la obra. Cuatro generadores (o, l, n, a) dan las partes; con ellas se arman los 55 signos: los elementos forman motivos y los motivos, signos.",
+          "La anatomía base se construye antes de los estados, en vectores (`03c_gramatica.md`, `gramatica.py`). Del pie se "
+          "toman medidas; la forma la dictan parámetros que salen de la obra. Cuatro generadores (o, l, n, a) dan las partes; "
+          "con ellas se arman los 55 signos: los elementos forman motivos y los motivos, signos.",
           "",
           "![Generadores](salida/20_gramatica.png)",
           "",
@@ -525,9 +515,9 @@ def informe(D, fichas, ultima, tirada, pol):
           "![Antes y después](salida/03d_antes_y_despues.png)",
           "",
           "| Parámetro | Valor | Qué controla | De dónde sale |",
-          "|---|---|---|---|"] + [
-          f"| `{k}` | {str(v['valor']).replace('.', ',')} {v['unidad']} | {v['que']} | {v['de_donde']} |" for k, v in P.items()] + [
-          "",
+          "|---|---|---|---|"]
+    L += [f"| `{k}` | {str(v['valor']).replace('.', ',')} {v['unidad']} | {v['que']} | {v['de_donde']} |" for k, v in P.items()]
+    L += ["",
           "| Parte | Signos |",
           "|---|---|",
           f"| La cuenca con su desagüe | {lista(con('desagüe'))} |",
@@ -540,71 +530,98 @@ def informe(D, fichas, ultima, tirada, pol):
           f"| La onda | {lista(con('onda'))} |",
           f"| La celda | {lista(con('celda'))} |",
           "",
-          f"Al calcar, la mano abre además cada contorno en su punto más bajo: {sum(D['desagues'].values())} desagües en 55 signos.",
+          "**Las reconstrucciones:**",
           "",
-          "## Acción 4 · Repujar",
+          "| Signo | Receta |", "|---|---|"]
+    for c in CELDAS:
+        if c["estado"] == "reconstruida":
+            L.append(f"| `{c['signo']}` | {D['receta'][c['signo']]} |")
+    L += ["",
+          "Una decisión propia de la máquina: **cifras elzevirianas**, de altura de x, con 6 y 8 que suben y 3, 4, 5, 7 y 9 "
+          "que bajan. Cada cifra vive en su celda: un rectángulo dentro de otro, con desagüe.",
+          "",
+          "**Los dobles opuestos varían.** En la litoescultura de Tiwanaku, las figuras enfrentadas casi nunca son idénticas "
+          "(Agüero, Uribe y Berenguer 2003). Aquí tampoco: la ¿ no es la ? dada vuelta, ni el 9 el 6, porque la gravedad no "
+          "se da vuelta: la gota cae siempre hacia abajo, y el terminal que mira arriba termina en un corte.",
+          "",
+          "## Calco",
+          "",
+          "![Frotado](salida/01_frotado_de_la_pared.jpg)",
+          "",
+          "Un paño de 8 × 7 azulejos con juntas torcidas, craquelado, manchas y desportillados. En el frotado se marca lo que "
+          "sobresale: juntas y grietas quedan blancas; las manchas no salen, porque no tienen relieve. Sobre ese frotado se "
+          "pone el papel de calco.",
+          "",
+          "![Calco](salida/03_calco.png)",
+          "",
+          "Se calca el cuerpo de la gramática, en vectores: su contorno, con el temblor de la mano, abierto en su punto más "
+          f"bajo. {sum(D['desagues'].values())} desagües en 55 signos. **La escala la decidió el pie:** la letra más alta y la "
+          "más baja caben en la placa con aire. Medidas desde el fondo:",
+          "",
+          "| Línea | Desde el fondo |",
+          "|---|---|",
+          f"| Afuera (ascendentes) | {coma(med['asc'] / 4)} mm |",
+          f"| Borde (altura de x) | {coma(med['xh'] / 4)} mm |",
+          "| Fondo (base) | 0 |",
+          f"| Desagüe (descendentes) | −{coma(med['desc'] / 4)} mm |",
+          "",
+          f"El trazo grueso de la o del testigo mide {coma(med['grueso'] / 4)} mm y el fino, {coma(med['fino'] / 4)} mm. El "
+          f"canal de la gramática, sin contraste, mide {coma(med['canal'] / 4)} mm: la media entre los dos. "
+          + ("Ningún signo desborda la placa." if not D["desbordes"]
+             else "Desbordan: " + ", ".join(f"«{k}» {v} mm" for k, v in D["desbordes"].items()) + "."),
+          "",
+          "El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)",
+          "",
+          "## Placa",
+          "",
+          "![Placa por el reverso](salida/04_placa_reverso.jpg)",
           "",
           "![Placa](salida/04_placa.jpg)",
           "",
+          "Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, con un escalón donde la tijera se "
+          "retoma y, a veces, una esquina cortada en diagonal. El calco se da vuelta y se repasa por el reverso con un punzón "
+          "de bola de 1 mm sobre una base blanda. Por el reverso la letra queda al revés y hundida: una canaleta con dos lomas "
+          "bajas, un canal. Por el anverso se lee, en relieve. Donde la mano arranca y donde se detiene, el punzón hunde un "
+          "poco más; cerca del surco, las arrugas de la hoja se alisan.",
+          "",
           f"- **119 placas** ({n_h} de signos hallados, {n_r} reconstruidos y {pol['¶']} signo final).",
-          f"- **Tiempo simulado:** {coma(minutos / 60)} horas de repujado, contando las placas que se rompieron. El plan estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos para preparar cada placa.",
-          f"- **Roturas:** {rot_h} en {n_h} placas halladas y {rot_r} en {n_r} reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).",
+          f"- **Tiempo simulado:** {coma(minutos / 60)} horas de repujado, contando las placas que se rompieron. El plan "
+          "estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos "
+          "para preparar cada placa.",
+          f"- **Roturas:** {rot_h} en {n_h} placas halladas y {rot_r} en {n_r} reconstruidas. La máquina supuso que el "
+          "punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).",
           "",
           "![Rotas](salida/04b_placas_rotas.jpg)",
-          "",
-          "## Acción 5 · La caja",
-          "",
-          "![Caja abierta](salida/05_caja_abierta.jpg)",
-          "",
-          "![Caja cerrada](salida/05b_caja_cerrada.jpg)",
-          "",
-          "Cerrada, por la única puerta se ve la coma.",
-          "",
-          "## Acción 6 · Vestir",
-          "",
-          "![Piel](salida/06_piel.jpg)",
           "",
           "## Cinta",
           "",
           "![Cinta](salida/07_cinta.jpg)",
           "",
-          f"La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta {sum(f.get('cinta', {}).get('tramos', 0) for f in fichas.values())} tramos y {sum(f.get('cinta', {}).get('pliegues', 0) for f in fichas.values())} pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.",
+          "La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que "
+          f"tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta {tramos} tramos y {pliegues} "
+          "pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.",
           "",
-          "## Acción 8 · El hectógrafo",
-          "",
-          "![Copias](salida/08_hectografo_copias.jpg)",
-          "",
-          "![La bandeja bebe](salida/08b_la_bandeja_bebe.jpg)",
-          "",
-          f"Se leyeron **{tirada} copias**. La primera sale casi negra y las siguientes, violeta: el color depende de cuánta tinta queda. " + hecto,
-          "",
-          "**Los primeros en borrarse:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[:8]) + ".",
-          "",
-          "**Los últimos:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[-8:]) + ".",
-          "",
-          "## Acción 9 · Agua",
+          "## Agua",
           "",
           "![Agua quieta](salida/09_agua_quieta.jpg)",
           "",
           "![Agua tocada](salida/09b_agua_tocada.jpg)",
           "",
-          "![voz](salida/voz.gif)",
+          "![agua](salida/agua.gif)",
           "",
-          agua_txt,
+          "La placa, por el anverso, en el fondo de una bandeja con un dedo de agua. " + agua_txt,
           "",
-          "## Acción 10 · Voz",
+          "## Voz",
           "",
           "![Voz](salida/10_voz.jpg)",
           "",
-          "## Acción 11 · Azulejo y la estrofa en la pared",
+          "![voz](salida/voz.gif)",
           "",
-          "![Azulejo](salida/11_azulejo.png)",
-          "",
-          f"Juntas que cortan cada letra al caer ampliada: entre {min(juntas)} y {max(juntas)} (media {coma(np.mean(juntas))}).",
-          "",
-          "![Estrofa](salida/11b_estrofa_en_la_pared.jpg)",
-          "",
-          "La séptima estrofa compuesta con placas vestidas: cada aparición de una letra es otra placa, así que ninguna se repite igual dentro de un verso.",
+          "El poema se lee una vez en voz alta junto a la bandeja, mientras se fotografían las 56 placas: a cada placa le toca "
+          "una sílaba de su verso. El agua responde con ondas de Faraday, a la mitad de la frecuencia de la voz; cuanto más "
+          f"aguda la sílaba, más corta la onda (entre {coma(min(f['voz']['lambda_mm'] for f in fichas.values() if 'voz' in f))} "
+          f"y {coma(max(f['voz']['lambda_mm'] for f in fichas.values() if 'voz' in f))} mm). Con volumen alto, la onda cruza "
+          "tres frentes en lugar de dos.",
           "",
           "## Una letra de punta a punta",
           "",
@@ -614,11 +631,10 @@ def informe(D, fichas, ultima, tirada, pol):
           "",
           "## Lo que la máquina no sabe",
           "",
-          "- **El libro:** qué letra tiene realmente el pie, ni cómo se imprimió.",
+          "- **El libro:** qué letra tiene el pie en su tamaño real, ni cómo se imprimió. La foto da sus medidas, no sus formas.",
           "- **La mano:** el temblor es ruido con un ritmo; no cansa, no duda, no se distrae.",
           "- **El aluminio:** cómo se rompe de verdad. Aquí se rompe con una probabilidad.",
-          "- **El cuerpo:** los pliegues siguen un eje supuesto para cada parte.",
-          "- **La gelatina:** transfiere una fracción fija por copia, con presión irregular.",
+          "- **La cinta:** cómo se despega de verdad; aquí cada tramo deja un residuo supuesto.",
           "- **El agua:** un solo rebote, un eco desplazado y ninguna polarización.",
           "- **La voz:** no es la tuya.",
           "",
@@ -626,17 +642,20 @@ def informe(D, fichas, ultima, tirada, pol):
           "",
           "Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compararlas placa por placa:",
           "",
-          "- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas carpetas de estado: `calco`, `placa`, `piel`, `copia`, `agua`, `voz`, `azulejo`.",
+          "- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas "
+          "carpetas de estado: `calco`, `placa`, `cinta`, `agua`, `voz`.",
           "- **Fichas:** `tipografia/mano/fichas.json`, con los mismos campos que `salida/fichas_simuladas.json`.",
           "",
           "**Qué se compara:**",
           "",
-          "1. **Forma:** la silueta de cada calco superpuesta a la de la máquina, en dos colores; qué testigo eligió cada una y cuánto opinó.",
-          "2. **Métricas:** la base y la altura de x que dio el libro contra las que dio el testigo sustituto.",
-          "3. **Reconstrucciones:** las 25 recetas de la máquina contra las tuyas. Es donde más van a diferir, y donde más interesa.",
+          "1. **Forma:** la silueta de cada calco superpuesta a la de la máquina, en dos colores; qué testigo eligió cada una "
+          "y cuánto opinó.",
+          "2. **Métricas:** la base y la altura de x que dio la foto contra las que dio el testigo sustituto.",
+          "3. **Reconstrucciones:** las 25 recetas de la máquina contra las tuyas. Es donde más van a diferir, y donde más "
+          "interesa.",
           "4. **Tiempo y roturas:** horas, intentos y roturas por placa.",
-          "5. **Hectógrafo:** la tirada, y qué signos se borran primero.",
-          "6. **Agua y pared:** si las reconstruidas también llegan más débiles, y cuántas juntas cortan cada letra.",
+          "5. **Agua:** si las reconstruidas también llegan más débiles.",
+          "6. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.",
           ""]
     (SALIDA.parent / "informe.md").write_text("\n".join(L), encoding="utf8")
 
