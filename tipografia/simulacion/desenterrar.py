@@ -19,8 +19,8 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from comun import (AZULEJO_MM, BASE, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta, componentes,
-                   lineas_pie, ruido, ruido_1d)
+from comun import (AJUSTES, AZULEJO_MM, BASE, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta,
+                   componentes, lineas_pie, ruido, ruido_1d)
 
 PX_IMPRENTA = 40      # px/mm del papel impreso simulado
 PX_FOTO = 12          # px/mm de la foto con luz rasante
@@ -500,10 +500,10 @@ def desenterrar():
     pie_foto = pie_de_la_foto()
     if pie_foto:
         f = pie_foto["medidas"]
-        razon = f["ascendente"] / f["alto_x"]
+        razon = AJUSTES.get("razon_x", f["ascendente"] / f["alto_x"])
         xh_foto = med["asc"] / razon
         M = {k: achatar(v, base, med["asc"], med["xh"], xh_foto) for k, v in M.items()}
-        med = dict(medidas(M, base), xh_sustituto=med["xh"], razon_foto=round(razon, 3))
+        med = dict(medidas(M, base), xh_sustituto=med["xh"], razon_x=round(razon, 3))
     med["escala"] = s
     # la gramática (03c_gramatica.md): del pie, las medidas; de la obra, la forma. Anatomía base → estados
     from gramatica import construir_todo

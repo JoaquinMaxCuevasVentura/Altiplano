@@ -176,4 +176,21 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 
 1. **Medir en el libro** lo que hoy es a ojo: `hombro_caida`, el grueso y el fino, y la proporción de la celda. El artículo de Agüero, Uribe y Berenguer da la pista: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a.
 2. **Regenerar la pauta de calco** de `esquemas/` con la celda en lugar del azulejo.
-3. **Confrontar con la mano:** la mano puede discutir cada parámetro. Si lo cambia, se cambia en `parametros()` y todo el juego se rehace.
+3. **Confrontar con la mano:** la mano puede discutir cada parámetro en la aplicación (§8). Lo que cambia viaja en `parametros.json`, y todo el juego se rehace.
+
+## 8. La gramática en el navegador
+
+La aplicación (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. El pie se achata a la altura de x pedida y se mide. De ahí salen el esqueleto, los parámetros, el taller y las 55 recetas, y el cuerpo en vectores.
+
+- **Qué se puede mover:** la altura de x (ascendente sobre x: 1,52 en el sustituto, 1,71 en la foto) y los 20 parámetros de §2. Cada uno lleva su valor, qué controla y de dónde sale.
+- **Qué se ve:**
+  - la caja;
+  - un signo con sus partes;
+  - un texto compuesto celda por celda, que puede ir sobre la piscina;
+  - los seis estados de un signo.
+- **Cómo vuelve a Python:** como `parametros.json`, con solo los ajustes. Se usa con `gramatica.py --parametros` y `simular.py --parametros`. Con los mismos ajustes, los 55 cuerpos coinciden con los de Python hasta el píxel del borde: la página repite el azar de las recetas.
+
+**Lo que aparece al mover:**
+
+- **Con intemperie, las cifras pierden su celda.** Si la intemperie pasa de 0,175 canales, se borra la celda de las cifras: su trazo mide 0,35 canal, y el desgaste se come todo lo que tenga menos del doble de su radio.
+- **Con otra altura de x cambia el canal.** El canal sale del fino de la o, que se achata con la zona de x.

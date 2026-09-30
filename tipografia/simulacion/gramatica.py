@@ -2,7 +2,9 @@
 
 Uso (desde la raíz del repositorio):
     pip install shapely
-    python3 tipografia/simulacion/gramatica.py
+    python3 tipografia/simulacion/gramatica.py [--parametros parametros.json]
+
+Con --parametros usa los ajustes exportados por la aplicación (tipografia/aplicacion/).
 
 El orden es: anatomía base → estados. Del pie se toman solo medidas: dónde
 van las astas, cuánto miden los ojos, los hombros y las líneas (el esqueleto
@@ -38,7 +40,8 @@ from shapely import affinity
 from shapely.geometry import LineString, Point, Polygon
 from shapely.ops import unary_union
 
-from comun import CELDAS, SALIDA, T, a8, azar, caja_tinta, componentes, guardar, lamina as lamina_8x7, rotulo
+from comun import (AJUSTES, CELDAS, SALIDA, T, a8, argumento_parametros, azar, caja_tinta, componentes, guardar,
+                   lamina as lamina_8x7, rotulo)
 
 GRAM = SALIDA / "gramatica"
 GENERADORES = "olna"
@@ -79,7 +82,9 @@ def esqueleto(A, med):
 # ---------------------------------------------------------------- los parámetros: de la obra
 
 def parametros(e):
-    c = e["canal"]
+    """Los parámetros, con su valor y de dónde sale. Si la aplicación ajustó alguno (comun.AJUSTES),
+    vale el ajuste; el canal se ajusta primero, porque los demás se miden en canales."""
+    c = AJUSTES.get("canal", e["canal"])
     P = {
         "canal": (round(c, 1), "px", "Grosor único del trazo: la media entre el grueso y el fino de la o del pie.",
                   "El punzón y la cinta no modulan: no hay contraste de pluma (D2, D12)"),
@@ -121,7 +126,11 @@ def parametros(e):
         "punto": (round(c, 1), "px", "Lado del punto: un trozo cuadrado de cinta, tan ancho como la cinta.",
                   "La cinta sobre ojos y boca (D12): un parche, no una gota de tinta"),
     }
-    return {k: dict(valor=v, unidad=u, que=q, de_donde=f) for k, (v, u, q, f) in P.items()}
+    P = {k: dict(valor=v, unidad=u, que=q, de_donde=f) for k, (v, u, q, f) in P.items()}
+    for k, v in AJUSTES.items():
+        if k in P:
+            P[k].update(valor=int(round(v)) if k == "facetas" else round(v, 3), ajustado=True)
+    return P
 
 
 def V(P, k):
@@ -1051,6 +1060,7 @@ def construir_todo(A, med):
     """Los 55 signos: {signo: dict(glifo, geo, mascara, receta)}; más el esqueleto y los parámetros."""
     e = esqueleto(A, med)
     P = parametros(e)
+    e["canal"] = AJUSTES.get("canal", e["canal"])
     t = Taller(e, P, A)
     salida = {}
     for s in HALLADAS + RECONSTRUIDAS:
@@ -1357,4 +1367,6 @@ def main():
 
 
 if __name__ == "__main__":
+    import sys
+    argumento_parametros(sys.argv)
     main()

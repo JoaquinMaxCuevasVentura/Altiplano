@@ -85,6 +85,31 @@ def lineas_pie():
     return lineas
 
 
+# ---------------------------------------------------------------- ajustes de la gramática
+
+# Lo que se cambió a mano en la aplicación (tipografia/aplicacion/): {parámetro: valor}. Vacío,
+# la gramática usa los valores que salen del pie y de la obra.
+AJUSTES = {}
+
+
+def usar_parametros(ruta):
+    """Lee un parametros.json exportado por la aplicación y lo deja en AJUSTES.
+
+    Se usan solo los parámetros ajustados a mano; el resto sigue saliendo del testigo.
+    """
+    datos = json.loads(Path(ruta).read_text(encoding="utf8"))
+    AJUSTES.clear()
+    AJUSTES.update({k: float(v) for k, v in datos.get("ajustes", {}).items()})
+    return dict(AJUSTES)
+
+
+def argumento_parametros(argv):
+    """Busca --parametros RUTA en la línea de comandos; si está, carga los ajustes."""
+    if "--parametros" in argv:
+        ruta = argv[argv.index("--parametros") + 1]
+        print("parámetros ajustados:", usar_parametros(ruta))
+
+
 def poliza():
     """Placas por signo: el máximo de apariciones en un verso (como inventario.py)."""
     p = Counter()

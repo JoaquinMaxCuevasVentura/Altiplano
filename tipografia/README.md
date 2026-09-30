@@ -43,12 +43,14 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
+| `aplicacion/` | **La gramática en el navegador:** la ficha de parámetros, la caja, el signo con sus partes, el texto compuesto y los seis estados. Exporta `parametros.json` para `simular.py --parametros` |
 
 ## Estado
 
 - **Hecho:**
   - el plan completo del proyecto y las plantillas para empezar el taller;
   - la propuesta de la máquina (`simulacion/`): el taller simulado, para confrontarla con la propuesta de la mano;
+  - la gramática en el navegador (`aplicacion/`), para discutir cada parámetro;
   - las láminas para exponerlo (`laminas/`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
 - **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
@@ -63,7 +65,9 @@ python3 tipografia/simulacion/extraer_testigos.py \
 python3 tipografia/simulacion/gramatica.py          # la gramática: los 55 cuerpos base y la cinta
 python3 tipografia/esquemas/generar_esquemas.py \
   --azulejo 150                                     # la placa, en mm; la pauta toma las líneas de la gramática
-python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (un minuto y medio)
+python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (un minuto y medio);
+                                                    #   con --parametros parametros.json, los ajustes de la aplicación
+python3 tipografia/aplicacion/exportar.py           # los datos del pie para la aplicación
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
 python3 tipografia/laminas/generar_laminas.py       #   (los esquemas y las láminas necesitan Chromium: CHROME)
 ```

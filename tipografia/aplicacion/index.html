@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<!-- contenido: lo que se publica como artefacto (la envoltura la pone el visor) -->
+<title>Gramática de Contenida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap">
+<style>
+/* Mesa de taller: a la izquierda la ficha de parámetros; a la derecha, el azulejo de trabajo.
+   Un solo tema, a propósito: papel de calco, tinta, violeta para lo reconstruido (las láminas). */
+:root {
+  --papel: #f3f1ea;
+  --papel-2: #e9e6dc;
+  --papel-3: #ddd9cd;
+  --tinta: #1d1c1a;
+  --violeta: #4a2470;
+  --lila: #b9a6d6;
+  --gris: #6d6a63;
+  --gris-2: #8f8b82;
+  --filete: #cfcac0;
+  --junta: #a8a49a;
+  --oscuro: #0f1011;
+  --claro: #e8e6df;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: "Courier Prime", "Courier New", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--papel); color: var(--tinta); }
+body {
+  margin: 0;
+  padding-block: 0 48px;
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.45;
+  font-variant-numeric: oldstyle-nums;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--violeta); outline-offset: 2px; }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------- cabeza */
+.cabeza {
+  max-width: 1480px; margin: 0 auto; padding-block: 28px 18px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 32px; align-items: end;
+  border-bottom: 1px solid var(--filete);
+}
+.volanta { font-family: var(--mono); font-size: 14px; color: var(--gris); margin: 0 0 6px; letter-spacing: .02em; }
+h1 { font-weight: 300; font-size: clamp(34px, 5vw, 58px); line-height: 1; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.bajada { font-style: italic; font-weight: 300; font-size: 20px; color: var(--gris); margin: 10px 0 0; max-width: 60ch; text-wrap: pretty; }
+.aviso { font-family: var(--mono); font-size: 13px; color: var(--gris); margin: 0; max-width: 34ch; text-align: right; }
+.aviso b { color: var(--violeta); font-weight: 400; }
+
+/* ---------------------------------------------------------------- mesa */
+.mesa {
+  max-width: 1480px; margin: 0 auto; padding-top: 22px;
+  display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 28px; align-items: start;
+}
+@media (max-width: 980px) {
+  .mesa { grid-template-columns: minmax(0, 1fr); }
+  .ficha { order: 2; position: static !important; max-height: none !important; }
+  .cabeza { grid-template-columns: minmax(0, 1fr); }
+  .aviso { text-align: left; }
+}
+
+/* ---------------------------------------------------------------- la ficha de parámetros */
+.ficha {
+  background: var(--papel-2); border: 1px solid var(--filete);
+  position: sticky; top: calc(12px + env(safe-area-inset-top, 0px)); max-height: calc(100vh - 24px); overflow: auto;
+}
+.ficha-cabeza { padding: 14px 16px 10px; border-bottom: 1px solid var(--filete); display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.ficha-cabeza h2 { font-family: var(--mono); font-weight: 700; font-size: 14px; margin: 0; letter-spacing: .04em; }
+.ficha-cabeza p { margin: 0; font-family: var(--mono); font-size: 12px; color: var(--gris); }
+.grupo { border-bottom: 1px solid var(--filete); }
+.grupo > summary {
+  list-style: none; cursor: pointer; padding: 10px 16px; display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .03em;
+}
+.grupo > summary::-webkit-details-marker { display: none; }
+.grupo > summary::after { content: "+"; color: var(--gris); }
+.grupo[open] > summary::after { content: "−"; }
+.grupo > summary .cuenta { color: var(--violeta); font-size: 12px; margin-left: auto; margin-right: 10px; }
+.param { padding: 8px 16px 12px; border-top: 1px dashed var(--filete); }
+.param-linea { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: baseline; }
+.param label { font-size: 16px; }
+.param .codigo { font-family: var(--mono); font-size: 11px; color: var(--gris-2); margin-left: 6px; }
+.param .valor { display: flex; align-items: baseline; gap: 4px; font-family: var(--mono); font-size: 13px; }
+.param .valor input {
+  width: 5.2em; text-align: right; border: 1px solid transparent; background: transparent; padding: 1px 3px;
+  font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums;
+}
+.param .valor input:hover, .param .valor input:focus { border-color: var(--filete); background: var(--papel); }
+.param .unidad { color: var(--gris); min-width: 1.4em; }
+.param .mm { grid-column: 1 / -1; font-family: var(--mono); font-size: 11px; color: var(--gris-2); }
+.param input[type=range] { width: 100%; margin: 6px 0 2px; accent-color: var(--violeta); }
+.param .que { font-size: 14px; line-height: 1.35; margin: 2px 0 0; text-wrap: pretty; }
+.param .de-donde { font-size: 13px; line-height: 1.35; font-style: italic; color: var(--gris); margin: 3px 0 0; text-wrap: pretty; }
+.param .volver { font-family: var(--mono); font-size: 11px; border: 0; background: none; color: var(--violeta); padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.param.ajustado label::before { content: "●"; color: var(--violeta); font-size: 10px; margin-right: 6px; vertical-align: 2px; }
+.param .marcas-rango { position: relative; height: 12px; font-family: var(--mono); font-size: 10px; color: var(--gris); }
+.param .marcas-rango span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.acciones { padding: 14px 16px 16px; display: grid; gap: 10px; }
+.acciones .fila { display: flex; flex-wrap: wrap; gap: 8px; }
+.boton {
+  font-family: var(--mono); font-size: 13px; padding: 6px 10px; border: 1px solid var(--tinta); background: var(--papel);
+  cursor: pointer; border-radius: 0;
+}
+.boton:hover { background: var(--tinta); color: var(--papel); }
+.boton.suave { border-color: var(--filete); }
+.boton.suave:hover { background: var(--papel-3); color: var(--tinta); }
+.boton[disabled] { opacity: .45; cursor: default; }
+.boton[disabled]:hover { background: var(--papel); color: var(--tinta); }
+.estado-linea { font-family: var(--mono); font-size: 12px; color: var(--gris); min-height: 1.3em; margin: 0; }
+textarea.json { width: 100%; min-height: 150px; font-family: var(--mono); font-size: 12px; border: 1px solid var(--filete); background: var(--papel); padding: 8px; resize: vertical; }
+.versiones { padding: 0 16px 16px; }
+.versiones h3 { font-family: var(--mono); font-size: 13px; font-weight: 700; margin: 14px 0 6px; letter-spacing: .03em; }
+.versiones ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.versiones li { border: 1px solid var(--filete); background: var(--papel); padding: 8px 10px; display: grid; gap: 4px; }
+.versiones li .nombre { font-size: 15px; }
+.versiones li .detalle { font-family: var(--mono); font-size: 11px; color: var(--gris); overflow-wrap: anywhere; }
+.versiones li .fila { display: flex; gap: 6px; flex-wrap: wrap; }
+.versiones .vacia { font-size: 14px; color: var(--gris); font-style: italic; margin: 0; }
+.guardar { display: grid; gap: 6px; }
+.guardar input { border: 1px solid var(--filete); background: var(--papel); padding: 6px 8px; font-size: 15px; width: 100%; }
+
+/* ---------------------------------------------------------------- pestañas */
+.trabajo { min-width: 0; }
+.pestanas { display: flex; gap: 0; border-bottom: 1px solid var(--tinta); overflow-x: auto; }
+.pestanas button {
+  font-family: var(--mono); font-size: 14px; padding: 9px 16px 8px; border: 1px solid transparent; border-bottom: 0;
+  background: none; cursor: pointer; color: var(--gris); white-space: nowrap; margin-bottom: -1px;
+}
+.pestanas button[aria-selected=true] { color: var(--tinta); border-color: var(--tinta); background: var(--papel); }
+.pestanas button .n { color: var(--gris-2); margin-left: 6px; font-size: 12px; }
+@media (max-width: 560px) { .pestanas button { padding-inline: 10px; } .pestanas button .n { display: none; } }
+.vista { padding-top: 18px; }
+.barra { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-family: var(--mono); font-size: 13px; color: var(--gris); margin-bottom: 14px; }
+.barra label { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; cursor: pointer; min-width: 0; max-width: 100%; }
+.barra input[type=checkbox] { accent-color: var(--violeta); }
+.barra select, .barra input[type=range] { accent-color: var(--violeta); }
+.barra select { font-family: var(--mono); font-size: 13px; background: var(--papel); border: 1px solid var(--filete); padding: 3px 6px; min-width: 0; max-width: 100%; }
+#verso { width: min(100%, 40ch); }
+
+/* ---------------------------------------------------------------- la caja */
+.caja {
+  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; padding: 5px; background: var(--junta);
+  max-width: 980px;
+}
+.celda {
+  position: relative; aspect-ratio: 1; padding: 0; border: 0; background: var(--papel); cursor: pointer; min-width: 0;
+  display: block; max-width: 100%;
+}
+.celda canvas { display: block; width: 100%; height: 100%; }
+.celda .num { position: absolute; left: 3px; top: 2px; padding: 0 2px; background: var(--papel); font-family: var(--mono); font-size: 11px; line-height: 1.3; color: var(--gris-2); pointer-events: none; }
+.celda[aria-pressed=true] { outline: 3px solid var(--violeta); outline-offset: -3px; z-index: 1; }
+.celda:hover .num { color: var(--tinta); }
+.celda .fallo { position: absolute; inset: auto 4px 4px; font-family: var(--mono); font-size: 10px; color: #8a2a2a; }
+.celda.manos { cursor: default; }
+.celda.manos .dedos { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--gris); padding: 8px; }
+.leyenda { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 14px 0 0; font-family: var(--mono); font-size: 13px; color: var(--gris); max-width: 980px; }
+.leyenda .muestra { display: inline-block; width: 11px; height: 11px; vertical-align: -1px; margin-right: 6px; }
+.medidas { margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--filete); border: 1px solid var(--filete); max-width: 980px; }
+.medidas div { background: var(--papel); padding: 8px 10px; }
+.medidas dt { font-family: var(--mono); font-size: 11px; color: var(--gris); }
+.medidas dd { margin: 2px 0 0; font-family: var(--mono); font-size: 15px; font-variant-numeric: tabular-nums; }
+.medidas dd small { color: var(--gris); font-size: 11px; }
+
+/* ---------------------------------------------------------------- el signo */
+.signo-mesa { display: grid; grid-template-columns: minmax(0, 620px) minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (max-width: 1180px) { .signo-mesa { grid-template-columns: minmax(0, 1fr); } }
+.lamina-signo { background: var(--papel); border: 1px solid var(--filete); max-width: 620px; }
+.lamina-signo canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.ficha-signo { min-width: 0; }
+.ficha-signo .grande { font-size: 96px; line-height: .9; font-weight: 300; margin: 0 0 8px; }
+.ficha-signo .grande.reconstruida { color: var(--violeta); }
+.ficha-signo .celda-n { font-family: var(--mono); font-size: 14px; color: var(--gris); margin: 0 0 14px; }
+.ficha-signo .receta { font-size: 20px; line-height: 1.35; margin: 0 0 16px; max-width: 42ch; text-wrap: pretty; }
+.ficha-signo dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; margin: 0 0 16px; font-size: 15px; }
+.ficha-signo dt { font-family: var(--mono); font-size: 12px; color: var(--gris); padding-top: 2px; }
+.ficha-signo dd { margin: 0; font-variant-numeric: tabular-nums; }
+.nav-signo { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---------------------------------------------------------------- el texto */
+.texto-entrada { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-bottom: 14px; }
+.texto-entrada textarea { width: 100%; min-height: 64px; border: 1px solid var(--filete); background: var(--papel); padding: 8px 10px; font-size: 18px; resize: vertical; }
+.composicion { background: var(--papel); border: 1px solid var(--filete); overflow-x: auto; }
+.composicion canvas { display: block; }
+.nota-texto { font-family: var(--mono); font-size: 12px; color: var(--gris); margin: 10px 0 0; max-width: 90ch; }
+
+/* ---------------------------------------------------------------- los estados */
+.estados { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+.estado { margin: 0; min-width: 0; }
+.estado .marco { position: relative; background: var(--papel-3); aspect-ratio: 1; }
+.estado .marco.ancho { aspect-ratio: 5 / 4; }
+.estado canvas { display: block; width: 100%; height: 100%; }
+.estado .espera { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: var(--gris); }
+.estado figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.4; color: var(--gris); margin-top: 8px; }
+.estado figcaption b { color: var(--tinta); font-weight: 700; margin-right: 6px; }
+.estado .controles { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-top: 6px; font-family: var(--mono); font-size: 12px; }
+.estado .controles input[type=range] { flex: 1 1 120px; accent-color: var(--violeta); min-width: 0; }
+.estado .controles select { font-family: var(--mono); font-size: 12px; background: var(--papel); border: 1px solid var(--filete); padding: 2px 4px; max-width: 100%; }
+
+/* ---------------------------------------------------------------- pie de página */
+.colofon { max-width: 1480px; margin: 36px auto 0; border-top: 1px solid var(--filete); padding-top: 14px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 28px; }
+.colofon p { margin: 0; font-size: 14px; color: var(--gris); max-width: 62ch; }
+.colofon code { font-family: var(--mono); font-size: 12px; color: var(--tinta); background: var(--papel-2); padding: 1px 4px; overflow-wrap: anywhere; }
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<header class="cabeza">
+  <div>
+    <p class="volanta">Contenida · acciones para componer una voz</p>
+    <h1>Gramática de Contenida</h1>
+    <p class="bajada">Del pie, las medidas; de la obra, la forma. Mueve un parámetro y los 55 signos se vuelven a armar, con sus estados.</p>
+  </div>
+  <p class="aviso">Propuesta de la máquina: <b>no entra en la caja ni en la fuente.</b> Lo hallado, en tinta; lo reconstruido, en violeta.</p>
+</header>
+
+<main class="mesa">
+  <aside class="ficha" aria-label="Parámetros de la gramática">
+    <div class="ficha-cabeza">
+      <h2>Parámetros</h2>
+      <p id="cuenta-ajustes">sin ajustes</p>
+    </div>
+    <div id="grupos"></div>
+    <div class="acciones">
+      <div class="fila">
+        <button class="boton" id="copiar-json" type="button">Copiar parametros.json</button>
+        <button class="boton suave" id="bajar-json" type="button" hidden>Descargar</button>
+        <button class="boton suave" id="restablecer" type="button">Restablecer todo</button>
+      </div>
+      <p class="estado-linea" id="estado-json" role="status"></p>
+      <details>
+        <summary class="mono" style="font-size:13px;cursor:pointer">Ver o pegar el JSON</summary>
+        <div style="display:grid;gap:8px;margin-top:8px">
+          <textarea class="json" id="json" spellcheck="false" aria-label="parametros.json"></textarea>
+          <div class="fila">
+            <button class="boton suave" id="aplicar-json" type="button">Aplicar lo pegado</button>
+            <label class="boton suave" style="display:inline-flex;align-items:center">Abrir archivo<input id="archivo" type="file" accept=".json,application/json" hidden></label>
+          </div>
+        </div>
+      </details>
+    </div>
+    <section class="versiones" id="versiones" hidden aria-label="Versiones guardadas">
+      <h3>Versiones guardadas</h3>
+      <form class="guardar" id="form-guardar">
+        <input id="nombre-version" maxlength="80" placeholder="Nombre de esta versión" aria-label="Nombre de esta versión">
+        <input id="nota-version" maxlength="240" placeholder="Qué cambia y por qué (opcional)" aria-label="Nota">
+        <button class="boton" type="submit" id="guardar-version">Guardar versión</button>
+        <p class="estado-linea" id="estado-version" role="status"></p>
+      </form>
+      <h3>Para la simulación</h3>
+      <ol id="lista-versiones"><li class="vacia" style="border:0;background:none;padding:0"><p class="vacia">Todavía no hay versiones. Guarda una y pide a Claude que corra la simulación con ella.</p></li></ol>
+    </section>
+  </aside>
+
+  <section class="trabajo">
+    <nav class="pestanas" role="tablist" aria-label="Vistas">
+      <button role="tab" id="t-caja" aria-controls="vista-caja" aria-selected="true">Caja<span class="n">8 × 7</span></button>
+      <button role="tab" id="t-signo" aria-controls="vista-signo" aria-selected="false">Signo<span class="n" id="n-signo">a</span></button>
+      <button role="tab" id="t-texto" aria-controls="vista-texto" aria-selected="false">Texto<span class="n">componer</span></button>
+      <button role="tab" id="t-estados" aria-controls="vista-estados" aria-selected="false">Estados<span class="n">6 simuladores</span></button>
+    </nav>
+
+    <div class="vista" id="vista-caja" role="tabpanel" aria-labelledby="t-caja">
+      <div class="barra">
+        <label><input type="checkbox" id="caja-lineas"> líneas de la piscina</label>
+        <label><input type="checkbox" id="caja-testigo"> testigo del pie</label>
+        <span id="caja-estado" role="status"></span>
+      </div>
+      <div class="caja" id="caja"></div>
+      <p class="leyenda">
+        <span><span class="muestra" style="background:var(--tinta)"></span>hallada en el pie · 30</span>
+        <span><span class="muestra" style="background:var(--violeta)"></span>reconstruida por analogía · 25</span>
+        <span>celda 56 · con los dedos</span>
+      </p>
+      <dl class="medidas" id="medidas"></dl>
+    </div>
+
+    <div class="vista" id="vista-signo" role="tabpanel" aria-labelledby="t-signo" hidden>
+      <div class="barra">
+        <label><input type="checkbox" id="capa-testigo" checked> testigo</label>
+        <label><input type="checkbox" id="capa-cuerpo" checked> cuerpo</label>
+        <label><input type="checkbox" id="capa-ejes" checked> ejes y nodos</label>
+        <label><input type="checkbox" id="capa-marcas" checked> partes</label>
+        <label><input type="checkbox" id="capa-lineas" checked> líneas y celda</label>
+        <label>encuadre <select id="encuadre"><option value="letra">la letra</option><option value="azulejo">el azulejo entero</option></select></label>
+      </div>
+      <div class="signo-mesa">
+        <div class="lamina-signo"><canvas id="lienzo-signo" width="1200" height="1200" role="img" aria-label="El signo con sus partes"></canvas></div>
+        <div class="ficha-signo" id="ficha-signo"></div>
+      </div>
+    </div>
+
+    <div class="vista" id="vista-texto" role="tabpanel" aria-labelledby="t-texto" hidden>
+      <div class="texto-entrada">
+        <textarea id="texto" spellcheck="false" aria-label="Texto para componer">tocas el agua y la diosa se deforma.</textarea>
+        <div class="barra" style="margin:0">
+          <label>verso <select id="verso"></select></label>
+          <label>cuerpo <input type="range" id="cuerpo-texto" min="24" max="160" value="64" aria-label="Alto de la celda en píxeles de pantalla"> <span id="cuerpo-mm" class="mono"></span></label>
+          <label><input type="checkbox" id="juntas-texto"> sobre la piscina</label>
+        </div>
+      </div>
+      <div class="composicion"><canvas id="lienzo-texto" role="img" aria-label="El texto compuesto"></canvas></div>
+      <p class="nota-texto">Una letra, una celda: la de la cabeza del ídolo, 0,84 de ancho por alto. Solo caja baja. Lo que no está en la caja se ve como celda vacía. Sobre la piscina, las juntas de los azulejos de 150 mm cortan la letra: la piscina no la mide, la recibe.</p>
+    </div>
+
+    <div class="vista" id="vista-estados" role="tabpanel" aria-labelledby="t-estados" hidden>
+      <div class="barra">
+        <label>signo <select id="signo-estados"></select></label>
+        <span>mano <span id="mano" class="mono">1</span></span>
+        <button class="boton suave" id="otra-mano" type="button">Otra mano</button>
+        <span id="estados-estado" role="status"></span>
+      </div>
+      <div class="estados" id="estados"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="colofon">
+  <p>Para correr la simulación con estos parámetros, guarda la versión o baja <code>parametros.json</code> y corre <code>python3 tipografia/simulacion/simular.py --parametros parametros.json</code>. La gramática de esta página repite los quiebres de Python; el azar de los simuladores no: la misma receta, otra mano.</p>
+  <p>Del pie se toman medidas: la foto da la altura de x (ascendente 1,71 veces la x); el testigo de las formas es el pie impreso con una letra sustituta. De la obra, la forma: el punzón sobre el aluminio, la vasija abierta, la chapa sobre el cuerpo, la intemperie y la gravedad.</p>
+  <p>Contenida, en homenaje a <i>Contener una ruina: acciones para desenterrar una voz</i>, de Rebeca Paz Prada (Artefacto Tatuajes, La Paz, 22 de agosto de 2026). Hecho con asistencia de IA. 4 px por milímetro; un azulejo, 150 mm.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/clipper-lib@6.4.2/clipper.js"></script>
+<script src="datos.js"></script>
+<script src="gramatica.js"></script>
+<script src="simuladores.js"></script>
+<script src="app.js"></script>
+<!-- /contenido -->
+</body>
+</html>

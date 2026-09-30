@@ -2,7 +2,7 @@
 
 Uso (desde la raíz del repositorio, después de inventario.py):
     pip install numpy scipy opencv-python-headless pillow scikit-image shapely
-    python3 tipografia/simulacion/simular.py
+    python3 tipografia/simulacion/simular.py [--parametros parametros.json]
 
 Arma el testigo del pie y la gramática, y corre los simuladores del taller
 —calco, placa, cinta, frotado, agua y voz— sobre las 56 celdas y las 119 placas.
@@ -12,7 +12,9 @@ Escribe en tipografia/simulacion/salida/:
   fichas_simuladas.json (una ficha por placa, con los campos de la ficha de hallazgo),
   informe.md (lo que decidió la máquina, con sus números).
 
-Es una hipótesis hecha por código para confrontarla con la que se haga a mano.
+Con --parametros usa los ajustes de la gramática exportados por la aplicación
+(tipografia/aplicacion/). Es una hipótesis hecha por código para confrontarla con
+la que se haga a mano.
 Ninguna de estas formas entra en la caja ni en la fuente.
 Tarda unos minutos. La semilla es fija: da siempre el mismo resultado.
 """
@@ -25,8 +27,8 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 
-from comun import (CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS, a8, a_rgb, azar, fila_de_paneles,
-                   guardar, lamina, poliza, rotulo)
+from comun import (AJUSTES, CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS, a8, a_rgb, azar,
+                   fila_de_paneles, guardar, lamina, poliza, rotulo)
 from contener import foto_placa, repujar_placa, reverso, signo_final
 from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared
 from devolver import agua, agua_tocada_en_bucle, foto_agua, frotadas, voz_del_verso, voz_en_bucle
@@ -480,6 +482,9 @@ def informe(D, fichas, pol, legibles):
          "La máquina simula seis estados del taller: **calco, placa, cinta, frotado, agua y voz**. Antes arma el testigo del "
          "pie y la gramática, que da el cuerpo base de cada signo.",
          "",
+         *(["**Con parámetros ajustados en la aplicación** (`--parametros`): "
+            + "; ".join(f"{k} {coma(v, 3 if k == 'razon_x' else 2)}" for k, v in AJUSTES.items())
+            + ". El resto sale del pie y de la obra.", ""] if AJUSTES else []),
          "## Lo que la máquina tuvo que suponer",
          "",
          "- **El testigo de las formas.** El pie está en la foto de la lámina, pero la foto no alcanza para calcar: la altura "
@@ -710,4 +715,7 @@ def informe(D, fichas, pol, legibles):
 
 
 if __name__ == "__main__":
+    import sys
+    from comun import argumento_parametros
+    argumento_parametros(sys.argv)
     main()
