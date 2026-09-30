@@ -24,36 +24,38 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - **Cinco libros:** Frampton, Dean, Garrington, Scott y Le Guin.
 - **Respuesta al arbitraje.** El artículo incorpora la respuesta a las cinco objeciones del arbitraje simulado (`analisis/08_respuesta_al_arbitraje.md`).
 - **Recursos de Cárcamo Pino y lenguaje llano.** Adopta varios recursos de su escritura: el epígrafe (con un lema aymara en lugar del Saramago que él cita), una nota aclaratoria, los juegos de palabras, las analogías físicas (entre ellas, el esgrafiado para el método y la pirca de doble cara para la memoria) y la mirada sobre los gestos de la mano. No adopta su fórmula estructural ni sus latinismos (`analisis/09_recursos_de_carcamo_y_lenguaje_llano.md`; las analogías, en `analisis/11_analogias_fisicas.md`).
-- **Seis figuras.** Cada una se examina en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
+- **Ocho figuras.** Las seis primeras se examinan en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
   - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
   - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
+  - La 7 y la 8 son **diagramas** con trazo de boceto: la memoria del retorno (§7) y los tres montones, piedra, papel y máquina (conclusiones). También se declaran como hechos con asistencia de IA (`analisis/19_esquemas_a_mano_y_diagramas.md`).
 
 | Archivo | Contenido |
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (la piedra bezoar y el susto en §§6-7, y los diez recortes para que cupieran) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
-| `articulo/figuras/` | Las seis figuras y cómo sustituirlas por fotografías de los pasteles (`LEEME.md`) |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (las Figuras 7 y 8, la declaración de IA al día y los recortes para que cupieran) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
+| `articulo/figuras/` | Las ocho figuras (seis esquemas de encaje y dos diagramas) y cómo sustituir los esquemas por los escaneos de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
-| `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas SVG |
+| `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas y los diagramas SVG |
 | `articulo/plantilla_estudios_bolivianos.docx` | Plantilla de estilos que usa el generador |
 | `articulo/articulo_altiplano.md` y `.docx` | Versión 3, «Topografías de la carne y el barro en *Altiplano*»: alternativa sin figuras. Su referencia a Barnadas (1977) es errónea (`analisis/04_verificaciones_y_pendientes.md`, §4.7) |
 
 **Estado:**
 
-- **Extensión:** 49.472 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.485 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 148 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
   - confirmar el epígrafe;
   - hacer y escanear los pasteles: serán las figuras (las imágenes de GPT Image 2 son solo exploración; `analisis/17_estilo_y_prompts_gpt_image.md`);
+  - revisar los dos diagramas, rótulos y páginas, y decidir si entran (`analisis/19_esquemas_a_mano_y_diagramas.md`);
   - cotejar las citas con el impreso;
   - preparar una versión anonimizada si la revista la pide;
   - enviar (el plazo venció el 25 de septiembre).
@@ -81,9 +83,12 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/14_evaluacion_propuesta_otra_ia.md` | Evaluación de una propuesta hecha con otra IA: títulos con «manuaje» y «grafuaje» (no), «piedra, papel y máquina» (sí), cuatro metáforas verificadas (los pururaucas entran con Dean; la sopa de piedra y la casa sobre la roca, no) y el «corazón de piedra» de la novela (p. 80) |
 | `analisis/15_spedding_susto_al_susto.md` | La fuente del «corazón de piedra»: Alison Spedding, «Piedras en el camino», en *Susto al susto* (2025). Cita verificada en el escaneo (p. XV), correcciones al análisis de otra IA, lo que entró (§7) y lo que queda en reserva (las piedras *awicha* de los cimientos). El libro completo muestra que es un relato (véase 16) |
 | `analisis/16_susto_al_susto_libro_completo.md` | *Susto al susto* completo: la «piedra bezoar» de la novela (p. 66) es la *jayintilla* de Bertonio (p. 361), y el éxodo y el retorno se leen como un susto (§§6-7). También: el texto de Spedding es ficción, qué dice el colofón, los diez recortes, lo que queda en reserva de cada sección y lo que no se usa |
-| `analisis/17_estilo_y_prompts_gpt_image.md` | Tu estilo leído en nueve pasteles, la paleta matérica (el color por el material y sus propiedades físicas, con página de la novela) y los seis prompts para explorar las obras con GPT Image 2, con qué evitar, qué mirar y qué cambia en el artículo cuando entren los escaneos |
+| `analisis/17_estilo_y_prompts_gpt_image.md` | Tu estilo leído en nueve pasteles, la paleta matérica (el color por el material y sus propiedades físicas, con página de la novela) y los seis prompts para explorar las obras con GPT Image 2, con qué evitar, qué mirar y qué cambia en el artículo cuando entren los escaneos. Los prompts se ajustaron tras la evaluación de `18` |
+| `analisis/18_estilo_y_articulo_evaluacion.md` | ¿Tu estilo suma al artículo o es un pretexto? Lo que suma (la materia, las operaciones, la piedra con cuerpo, el vano), lo que resta (el ensueño sin tiempo, la escala incierta, el agua donde la novela no la pone), la prueba del plano (3) y la propuesta de usar tu estilo como la capa que se raspa |
+| `analisis/19_esquemas_a_mano_y_diagramas.md` | Tus cinco esquemas a mano leídos de cerca, dónde hace falta un diagrama y dónde no, las Figuras 7 y 8 (qué muestran, qué deciden, cómo entraron en el artículo), la herramienta de boceto, prompts para explorarlas con GPT Image 2 y qué cambia si las redibujas a mano |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie). La Figura 2 se corrigió el 30 de septiembre: el Signo ya no encaja en la pendiente |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts, y la máscara opcional de la Figura 5. Se regeneran con `generar_guias.py` |
+| `analisis/esquemas/diagramas/` | Los diagramas de las Figuras 7 y 8 (SVG con la letra incrustada) y su generador, `generar_diagramas.js`, con rough.js (MIT) y la letra Caveat (OFL) y sus licencias |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
 
@@ -93,5 +98,6 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 pip install pypandoc_binary python-docx pillow
 python3 articulo/generar_docx.py                                # artículo definitivo
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
+node analisis/esquemas/diagramas/generar_diagramas.js           # diagramas de las figuras 7 y 8
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```

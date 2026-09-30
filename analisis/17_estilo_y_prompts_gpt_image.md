@@ -16,7 +16,12 @@ El 30 de septiembre de 2026 pediste tres cosas:
   - hice seis guías de composición sin texto, en los tamaños de GPT Image 2;
   - agregué una máscara opcional para la Figura 5 (§17.2).
 - **La paleta matérica:** cada color se nombra por el material de la novela del que sale y por lo que hace físicamente (§17.3). Ningún color «significa» algo.
-- **Los seis prompts** están listos para copiar: un bloque de estilo común, un prompt por obra, una variante más onírica, qué evitar y qué mirar en el resultado (§§17.5-17.6).
+- **Los seis prompts** están listos para copiar: un bloque de estilo común, un prompt por obra, una variante, qué evitar y qué mirar en el resultado (§§17.5-17.6).
+- **Ajustados el mismo día** tras la evaluación de `18_estilo_y_articulo_evaluacion.md`:
+  - el bloque de estilo pide dos capas, la serena y el raspado que la abre;
+  - el ensueño queda solo en las Figuras 5 y 6;
+  - la medida del cuerpo entra en las Figuras 1 y 4;
+  - el agua queda solo donde la novela la pone.
 - **Si esas imágenes influyen en los pasteles, la declaración de IA tiene que decirlo.** Cuando entren los escaneos hay que cambiar los pies, dos frases del texto y esa declaración (§17.7).
 
 ## 17.1. Tu estilo, leído en nueve pasteles
@@ -70,6 +75,8 @@ Los prompts las traducen a tu idioma:
 - las personas, como masas sin rostro, postes o mojones.
 
 Así se respetan también los límites del artículo: no entrar en el alma de los comunarios, no dibujar el linchamiento, no sexualizar.
+
+**Qué de tu estilo suma al artículo y qué resta** está en `18_estilo_y_articulo_evaluacion.md`. Suman la materia, las operaciones, la piedra con cuerpo y el vano. Restan el ensueño sin tiempo, la escala incierta y el agua donde la novela no la pone.
 
 ## 17.2. Los esquemas
 
@@ -158,14 +165,17 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 3. **Qué escribir:** el bloque de estilo (§17.5) y, debajo, el prompt de la figura (§17.6).
 4. **El tamaño:** el de la guía.
 5. **Si copia el aspecto plano de la guía,** agrega: «No conserves los colores planos ni los bordes de la guía; solo la posición y el valor de las masas».
-6. **Cambia una sola cosa por vez:** la luz, la distancia o un material. Así puedes ver qué produce cada decisión.
-7. **Anota lo que aparece.**
+6. **Si copia el agua o la bruma de tus pasteles** donde la novela no las pone, agrega: «Sin agua ni niebla: el suelo es seco».
+7. **Cambia una sola cosa por vez:** la luz, la distancia o un material. Así puedes ver qué produce cada decisión.
+8. **Anota lo que aparece.**
    - Esas notas no son hallazgos del artículo: un hallazgo sale del pastel (`05b`, §5.5).
    - Pero sirven para decidir la composición antes de tomar el pastel.
 
 ## 17.5. El bloque de estilo (va primero en los seis)
 
-> Pastel al óleo sobre papel de grano medio, trabajado a mano: capas gruesas fundidas con el dedo, trazos cortos que siguen la forma, grano del papel visible y algunos raspados finos que dejan ver la capa de abajo. Una sola forma principal, casi abstracta, frontal y quieta, que parece a la vez piedra, hueso y carne; sus bordes aparecen y se pierden con la luz, sin línea de contorno. Pocos detalles, solo los necesarios para saber qué es. Luz difusa y lateral que hace brillar los cantos como hueso; aire con bruma. Colores de materiales reales: tierras de óxido de hierro (ocre, siena, sombra), negro de humo, blanco hueso mate, grises azulados; saturación baja; el contraste es de valor, no de color. Atmósfera de ensueño: silencio, quietud, escala incierta. Usa la imagen de composición adjunta solo como guía: respeta la posición, la proporción y el claro-oscuro de las masas, pero no copies sus bordes ni sus colores planos. Toma la textura, la luz y la manera de las imágenes de estilo adjuntas. Sin texto, sin letras ni números, sin aspecto digital ni fotográfico.
+Ya no pide ensueño ni escala incierta (`18`, §18.6). Pide las dos capas de §18.5: la serena, que es la mirada del narrador, y el raspado que la abre.
+
+> Pastel al óleo sobre papel de grano medio, trabajado a mano en dos capas. Primero, una capa serena: masas gruesas fundidas con el dedo, trazos cortos que siguen la forma, grano del papel visible, luz difusa y lateral que hace brillar los cantos como hueso. Después, raspados finos hechos con una punta abren esa capa y dejan ver la de abajo: por ahí aparecen los detalles que importan. Una sola forma principal, casi abstracta, frontal y quieta, que parece a la vez piedra, hueso y carne; sus bordes aparecen y se pierden con la luz, sin línea de contorno. Pocos detalles, solo los necesarios para saber qué es. Colores de materiales reales: tierras de óxido de hierro (ocre, siena, sombra), negro de humo, blanco hueso mate, grises azulados; saturación baja; el contraste es de valor, no de color. Sin idealizar: nada de postal ni de paisaje sublime. Usa la imagen de composición adjunta solo como guía: respeta la posición, la proporción y el claro-oscuro de las masas, pero no copies sus bordes ni sus colores planos. Toma la textura, la luz y la manera de las imágenes de estilo adjuntas. Sin texto, sin letras ni números, sin aspecto digital ni fotográfico.
 
 ## 17.6. Las seis obras
 
@@ -173,10 +183,10 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 **Guía:** `guia_fig1_craneo_nido.png` · 1536 × 1024 · estilo: pasteles nocturnos.
 
-> Corte transversal de una chujlla aymara del altiplano, una choza de piedra y adobe con techo de paja, vista de noche a la altura de una persona sentada junto al fuego. El contorno del corte tiene, sin exagerar, el perfil de un cráneo: la bóveda de paja como calota, la única puerta, en arco, como órbita, el fuego en el centro, donde estaría el pensamiento. Adentro todo es hollín: negro de humo espeso sobre siena, pegado a las paredes. La luz no se pinta, se saca raspando esa capa oscura: así aparecen, en líneas claras, las vigas atadas con paja, las hoces, el yugo y el arado colgados. Camastros bajos, de la altura de un adobe. Un brasero de boñiga: brasa roja anaranjada, sin llama alta, con humo. Sobre el techo, una cruz de palo con una figurita de barro cocido. A un lado, la ladera del cerro de arenisca rojiza de donde salieron las piedras de los muros. La chujlla parece a la vez casa, cabeza y nido, un artefacto de sueño apoyado en la llanura oscura. Nadie adentro: el cuerpo que la habita se adivina por las herramientas y el fuego.
+> Corte transversal de una chujlla aymara del altiplano, una choza de piedra y adobe con techo de paja, vista de noche a la altura de una persona sentada junto al fuego. El contorno del corte tiene, sin exagerar, el perfil de un cráneo: la bóveda de paja como calota, la única puerta, en arco, como órbita, el fuego en el centro, donde estaría el pensamiento. Adentro todo es hollín: negro de humo espeso sobre siena, pegado a las paredes. La luz no se pinta, se saca raspando esa capa oscura: así aparecen, en líneas claras, las vigas atadas con paja, las hoces, el yugo y el arado colgados. La chujlla se alza apenas dos metros del suelo y los camastros, la altura de un adobe: la escala es la de un cuerpo, no la de un monumento. Un brasero de boñiga: brasa roja anaranjada, sin llama alta, con humo. Sobre el techo, una cruz de palo con una figurita de barro cocido. A un lado, la ladera del cerro de arenisca rojiza de donde salieron las piedras de los muros. La chujlla parece a la vez casa, cabeza y nido, apoyada en la llanura oscura. Nadie adentro: el cuerpo que la habita se adivina por las herramientas y el fuego.
 
-- **Variante (ensueño):** La chujlla-cráneo sola sobre la llanura, como una reliquia, con una niebla baja que borra el suelo; el resplandor del brasero sale por la puerta en arco, y la cruz con la figurita de barro es un pequeño brillo en la cima.
-- **Evita:** personas, rostros, escenas de costumbres, postal folclórica, llamaradas, ventanas, texto.
+- **Variante (reliquia):** La chujlla-cráneo sola sobre la llanura seca, como una reliquia en pie, pero de dos metros de alto, a la medida de un cuerpo; el resplandor del brasero sale por la puerta en arco, y la cruz con la figurita de barro es un pequeño brillo en la cima.
+- **Evita:** personas, rostros, escenas de costumbres, postal folclórica, llamaradas, ventanas, niebla, texto.
 - **Qué mirar:**
   - ¿La chujlla se lee como la «madriguera» del narrador o como caja de herramientas y nido?
   - ¿El perfil de cráneo se impone o sale forzado?
@@ -187,8 +197,8 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 > Dos vistas del mismo cerro en una sola hoja vertical, como un dibujo de arquitecto. Arriba, el cerro cortado en sección: una masa de arenisca rojiza, pesada y carnosa, de pendiente irregular, más empinada a la izquierda, con terrazas hechas de capas gruesas de pastel, como piedras apiladas. En las terrazas, chozas pequeñas y oscuras; la más alta de todas, casi en la cumbre, está vacía, abandonada, apenas un contorno. Sobre esa masa, trazado con una punta, un signo escalonado perfecto y simétrico que no coincide con la pendiente: queda en el aire en un lado y se hunde en la roca en el otro. Abajo, la planta del mismo terreno: un tablero de parcelas un poco desigual, un poco contrahecho, sobre una capa gris de pizarra, rayado con punzón hasta que asoma la capa clara de abajo; pequeños mojones de piedra en los cruces y, en un borde, dos bloques oscuros enfrentados, la hacienda y la iglesia. Entre las dos vistas, líneas de proyección finas, rayadas. Luz de día, cenital, casi sin sombra. La sección parece un cuerpo; la planta, una piel escrita.
 
-- **Variante (ensueño):** El cerro como una sola piedra enorme, en pie sobre la llanura, con el signo escalonado grabado encima sin calzarle; a sus pies, la planta como una losa de pizarra rayada, tendida en el suelo.
-- **Evita:** una pirámide limpia, perspectiva aérea, personas, letras, números, mapas modernos.
+- **Variante (más materia):** Las mismas dos vistas, con más materia: la sección en empaste grueso, piedra sobre piedra, y el signo inciso encima sin calzarle; la planta, una losa de pizarra rayada con punzón, con el grano a la vista. Sigue siendo un dibujo de análisis, sin horizonte ni cielo.
+- **Evita:** una pirámide limpia, perspectiva aérea, paisaje, personas, letras, números, mapas modernos.
 - **Qué mirar:**
   - ¿La escalera social cabe en la pendiente o se rompe?
   - ¿Qué pasa cuando el mito (la sección) y el mapa (la planta) se hacen con la misma materia?
@@ -199,7 +209,7 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 > Paisaje apaisado partido en dos por la cresta de una cordillera, a las cinco de la tarde. A la izquierda, la puna: llanura seca de polvo gris y ocre pálido bajo un cielo violeta, horizonte recto; pastel seco apretado sobre papel de grano grueso, de modo que el blanco del grano asome como piedra. A la derecha, el yunga: dos paredes de verde húmedo que bajan y se cierran como una garganta, tragándose una bruma blanca que sube; ahí el pastel está disuelto, en capas transparentes que chorrean como cera derretida. En la cresta, donde una técnica se vuelve la otra, un hombre de pie, pequeño y sin rostro, como un poste clavado, con el poncho de lana sacudido por el viento como un gallardete; a su lado, una familia arrodillada, tres masas oscuras. Al fondo, cumbres nevadas afiladas como construcciones góticas, con sombras azules. Abajo, en el fondo del yunga, sobre el río, una cadena diminuta de monos cogidos de las manos. La luz rasante viene del lado de la puna.
 
-- **Variante (ensueño):** El hombre de la cresta como un monolito vertical de piedra y lana; a su lado, la garganta del yunga abierta como un vano orgánico que deja ver, muy lejos, la bruma.
+- **Variante (umbral):** El hombre de la cresta como un poste de piedra y lana, con el poncho sacudido por el viento; a su lado, la garganta del yunga abierta como un vano orgánico que deja ver, muy lejos, la bruma que sube.
 - **Evita:** la postal de los Yungas, la selva exuberante, montones de piedras en la cresta (la novela no los pone), rostros, texto.
 - **Qué mirar:**
   - ¿El paso de lo seco a lo húmedo se lee como otro paisaje o como un cambio de estado de la materia?
@@ -209,10 +219,10 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 **Guía:** `guia_fig4_castillete.png` · 1024 × 1536 · estilo: pasteles nocturnos.
 
-> Corte vertical de una mina de estaño, de noche, en tres partes. Arriba, contra la noche, la torre de acero del pique como un encaje de líneas claras rayadas en la cera; a su lado, un montón grande y pálido de roca estéril: una montaña de piedras hecha con un cerro deshecho; a la izquierda, el campamento en escalera, de casas grandes a cuchitriles de calamina gris; pocas luces pequeñas y duras de carburo. Debajo, la roca: pardo negruzco de casiterita, con destellos. En el centro, el pique, un vacío vertical que baja como un edificio al revés, con galerías a tres alturas; en la entrada, dos nichos en arco. En el pique, la jaula: siete cuerpos apretados, hechos solo con el dedo, masas de carne apagada por el polvo de estaño, sin rasgos, y encima una rejilla de líneas claras raspadas. Al fondo, la galería más baja, inundada: agua ácida de un amarillo ocre que sube, un montón informe de roca, barro y maderos astillados, y una viga quebrada.
+> Corte vertical de una mina de estaño, de noche, en tres partes. Arriba, contra la noche, la torre de acero del pique como un encaje de líneas claras rayadas en la cera; a su lado, un montón grande y pálido de roca estéril: una montaña de piedras hecha con un cerro deshecho; a la izquierda, el campamento en escalera, de casas grandes a cuchitriles de calamina gris; pocas luces pequeñas y duras de carburo. Debajo, la roca: pardo negruzco de casiterita, con destellos. En el centro, el pique, un vacío vertical que baja como un edificio al revés, con galerías a tres alturas, cada una del alto de un hombre; en la entrada, dos nichos en arco. En el pique, la jaula: siete cuerpos apretados, hechos solo con el dedo, masas de carne apagada por el polvo de estaño, sin rasgos, y encima una rejilla de líneas claras raspadas. Al fondo, la galería más baja, inundada: agua ácida de un amarillo ocre que sube por el cuerpo, de los tobillos a las rodillas y al ombligo; un montón informe de roca, barro y maderos astillados, y una viga quebrada.
 
-- **Variante (ensueño):** La torre y el montón de roca como dos monolitos en la noche, reflejados en un charco de agua amarilla; debajo, el pique como una grieta vertical por la que baja la luz.
-- **Evita:** sangre, disparos, cadáveres, rostros, cascos modernos, números, texto.
+- **Variante (medida del cuerpo):** Solo la galería más baja, de cerca y a la altura de una persona: el agua amarilla deja en la pared las marcas de lo que sube, de los tobillos a la cintura y al ombligo, como una regla; arriba, por el pique, la luz lejana del carburo.
+- **Evita:** sangre, disparos, cadáveres, rostros, cascos modernos, charcos que reflejan, números, texto.
 - **Qué mirar:**
   - ¿La mina se lee como lo contrario del ayllu o como su doble invertido?
   - ¿El montón de arriba se reconoce como la montaña de piedras que soñaban los comunarios?
@@ -221,7 +231,7 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 **Guía:** `guia_fig5_pelvis.png` · 1536 × 1024 · estilo: pasteles de día · máscara opcional: `guia_fig5_pelvis_mascara.png`.
 
-> Paisaje de sequía visto desde lo alto. El cielo es papel celeste desnudo, sin una sola pincelada; en él, una luna menguante delgada, con un borde apenas siena, del polvo seco del aire. Abajo, tierra agrietada de color tierra de sombra y gris plomizo mineral, con grietas raspadas hasta el papel. En el centro, la cuenca de las vertientes secas tiene la forma de una pelvis de vaca vista en escorzo: dos alas y una abertura central, en blanco hueso mate y calcáreo, como una losa de hueso que carga peso. Dentro de la abertura, el cauce seco, arenoso y blanquecino, con piedritas. Al fondo, a la izquierda, un cerro pequeño con un hilo de humo de ofrendas. Luz blanca de mediodía, dura, sin sombra que proteja. La pelvis es estructura, hueso que sostiene, no recipiente.
+> Paisaje de sequía visto desde lo alto. El cielo es papel celeste desnudo, sin una sola pincelada; en él, una luna menguante delgada, con un borde apenas siena, del polvo seco del aire. Abajo, tierra agrietada de color tierra de sombra y gris plomizo mineral, con grietas raspadas hasta el papel. En el centro, la cuenca de las vertientes secas tiene la forma de una pelvis de vaca vista en escorzo: dos alas y una abertura central, en blanco hueso mate y calcáreo, como una losa de hueso que carga peso. Dentro de la abertura, el cauce seco, arenoso y blanquecino, con piedritas. Al fondo, a la izquierda, un cerro pequeño con un hilo de humo de ofrendas. Luz blanca de mediodía, dura, sin sombra que proteja. Quietud de ensueño: nada se mueve. La pelvis es estructura, hueso que sostiene, no recipiente.
 
 - **Variante (ensueño):** La pelvis de hueso en pie, como una losa perforada sobre la tierra agrietada; por su abertura se ve, muy lejos, el cerro con el hilo de humo. Es tu motivo de la losa con el agujero, puesto al servicio de la figura.
 - **Evita:** cuerpos humanos (sobre todo femeninos), erotismo, vasijas, calaveras, sangre, texto.
@@ -231,9 +241,9 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 **Guía:** `guia_fig6_centinela.png` · 1024 × 1536 · estilo: pasteles nocturnos.
 
-> Nocturno vertical, con el horizonte bajo y un cielo enorme, azul casi negro, sin luna. En la llanura de polvo ocre, la casa más grande de un ayllu vacío, de adobe y paja. En el vano oscuro de su puerta, tres figuras de pie tratadas como postes o mojones: tres piedras claras y verticales, sin rostro ni gesto, pálidas como hueso. Un cayado de palo apoyado junto a ellas, como un cuarto apoyo. Una puerta suelta, entreabierta, golpeada por el viento. A lo lejos, a un lado, un campanario oscuro con dos buitres. Del suelo suben formas pálidas y transparentes, veladas con el dedo: los muertos que salen de la tierra a mirar el cielo. En el cielo, estrellas pequeñas; Marte, un punto de óxido rojizo; Sirio, un punto blanco azulado. Las figuras se leen por su silueta.
+> Nocturno vertical, con el horizonte bajo y un cielo enorme, azul casi negro, sin luna. En la llanura de polvo ocre, la casa más grande de un ayllu vacío, de adobe y paja. En el vano oscuro de su puerta, tres figuras de pie tratadas como postes o mojones: tres piedras claras y verticales, sin rostro ni gesto, pálidas como hueso. Un cayado de palo apoyado junto a ellas, como un cuarto apoyo. Una puerta suelta, entreabierta, golpeada por el viento. A lo lejos, a un lado, un campanario oscuro con dos buitres. Del suelo suben formas pálidas y transparentes, veladas con el dedo: los muertos que salen de la tierra a mirar el cielo. En el cielo, estrellas pequeñas; Marte, un punto de óxido rojizo; Sirio, un punto blanco azulado. Atmósfera de ensueño, quieta y silenciosa: es la noche en que los muertos salen a mirar. Las figuras se leen por su silueta.
 
-- **Variante (ensueño):** Los tres vigías como tres monolitos pequeños en el vano de una puerta enorme; la casa y la llanura se funden en la bruma, y el campanario, al fondo, es otra piedra que vigila.
+- **Variante (ensueño):** Los tres vigías como tres mojones pequeños, piedras con cuerpo, en el vano de una puerta enorme; la casa y la llanura se funden en la noche, y el campanario, al fondo, es otra piedra que vigila.
 - **Evita:** héroes, puños alzados, poses épicas, rostros, fantasmas de película, texto.
 - **Qué mirar:**
   - ¿Los vigías se leen como cuidado y permanencia o como ruina, los «cancerberos» del narrador?
@@ -241,7 +251,7 @@ La asociación poética queda liviana y sale del propio material, nunca de una t
 
 ## 17.7. Qué cambia en el artículo cuando entren los escaneos
 
-Hoy el artículo presenta los esquemas de encaje como figuras. Cuando los reemplaces por los escaneos de tus pasteles (`articulo/figuras/LEEME.md`):
+Hoy el artículo presenta los esquemas de encaje como Figuras 1 a 6. Las Figuras 7 y 8 son diagramas, no pasteles, y se quedan (`19_esquemas_a_mano_y_diagramas.md`). Cuando reemplaces los esquemas por los escaneos de tus pasteles (`articulo/figuras/LEEME.md`):
 
 1. **Pies de figura.** «Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA» pasa a «Pastel al óleo sobre papel, [medidas], 2026. Fuente: elaboración propia».
 2. **Dos frases del texto:**
@@ -249,7 +259,7 @@ Hoy el artículo presenta los esquemas de encaje como figuras. Cuando los reempl
    - §2: «Los esquemas de encaje que aquí se reproducen […] no descubren nada, pero obligan a decidir».
    - Con los pasteles, los planos (3) se reescriben con lo que mostró cada pieza (`05b`, §5.5).
 3. **La declaración de IA** (norma 8: declarar el alcance real):
-   - Sale «y la codificación vectorial de los esquemas de encaje de las figuras 1 a 6».
+   - Sale «la codificación vectorial de los esquemas de encaje (figuras 1-6) y»; queda «el diseño y trazado de los diagramas (figuras 7 y 8)».
    - Si las imágenes de GPT Image 2 influyeron en los pasteles, entra algo como: «y la generación de imágenes exploratorias, previas a los pasteles y no reproducidas». Entre las herramientas se agrega GPT Image 2 (OpenAI).
    - Las dos cosas miden casi lo mismo, así que la extensión no se mueve.
    - «El autor es autor exclusivo de los pasteles al óleo» sigue siendo cierto.
