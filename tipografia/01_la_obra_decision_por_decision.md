@@ -108,5 +108,5 @@ Los dos registros duran 17 y 19 segundos (720 × 898 px, 24 cuadros por segundo)
 ## 1.6. Lo que no se usa
 
 - **La hipótesis sobre los nombres del edificio y el Litoral.** Tu texto la dejó afuera a propósito, porque no está comprobada, y aquí también queda afuera.
-- **Las lecturas rituales (la *challa* invertida).** No se convierten en operaciones del proyecto: no se ritualiza nada. La coincidencia material que sí se usa es otra: la bandeja del hectógrafo bebe la tinta (`03_sistema_contenida.md`, §3.7).
+- **Las lecturas rituales (la *challa* invertida).** No se convierten en operaciones del proyecto: no se ritualiza nada. La coincidencia material que sí se usa es otra: toda cuenca de la letra se abre abajo, en un desagüe (`03c_gramatica.md`).
 - **Las fotos de la obra y los videos no se suben al repositorio.** Son imágenes de Rebeca y de su cuerpo. Quedan fuera hasta que ella lo autorice (`06_etica_fuentes_y_pendientes.md`).

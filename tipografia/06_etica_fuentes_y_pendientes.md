@@ -29,7 +29,7 @@ Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
 Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/` y las láminas de `laminas/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
 
-**Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie del libro no se puede calcar desde la foto. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
+**Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Sus formas salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie no se puede calcar desde la foto; de la foto se toma solo la altura de x. La foto no se sube al repositorio: solo las letras del pie, recortadas. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
 ## 6.4. Qué está verificado y qué no
 
@@ -48,7 +48,7 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 | La duración del bucle | Sin dato | Preguntarle a Rebeca (Acción 0) |
 | La tilde en «És lo más parecido» | Se ve en la imagen del poema | Decidir si es errata |
 | Quién hizo el dibujo de tu lámina con el poema | Sin confirmar | Confirmarlo si se reproduce |
-| La receta del hectógrafo y la compatibilidad del esténcil térmico con la gelatina | Receta de partida | Probarlas antes de la tirada (Acción 8) |
+| Cuántas frotadas aguanta una placa | Supuesto de la simulación: se aplasta entre un 5 y un 9 % del relieve por frotada | Frotar una placa de prueba hasta que no se lea (Acción 8) |
 | Citas de las dos tesis | Cotejadas con el texto de los `.docx` | Agregar páginas desde los PDF originales si se citan en público |
 | La frase de otro asistente sobre «nuestro envase convulso: el cuerpo» | Citada en tu texto | No se usa. Si se usa, pedir permiso y nombrar a su autor |
 
@@ -63,11 +63,11 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 ## 6.6. Pendientes, en orden
 
 - [ ] Acción 0: hablar con Rebeca y con CreaciónxAcuerpamiento; pedir los permisos del estudio y del edificio.
-- [ ] Identificar el libro de la lámina y fotografiar el pie con luz rasante.
+- [ ] Identificar el libro de la lámina y fotografiar el pie de cerca, con luz rasante, para que dé formas y no solo medidas.
 - [ ] Corregir `textos/pie_de_lamina.txt` y volver a correr `inventario.py` y `generar_esquemas.py`.
 - [ ] Medir la piscina (azulejo, tesela, junta, paredes) y regenerar la pauta.
 - [ ] Hacer los frotados (paño de pared de 8 × 7 y paño de piso).
 - [ ] Probar el repujado en hoja simple y doble; decidir.
-- [ ] Probar la receta del hectógrafo y los dos tipos de matriz.
+- [ ] Probar el frotado: qué papel, qué grafito y cuántas frotadas aguanta una placa.
 - [ ] Verificar los datos de Posnansky, el nombre y la ficha del «vaso».
 - [ ] Confrontar la propuesta de la mano con la de la máquina (`simulacion/informe.md`, «Cómo confrontar»).

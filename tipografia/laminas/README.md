@@ -22,10 +22,10 @@ Diecisiete láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sis
 | 08 | cuatro generadores, cincuenta y cinco signos | 2 · el sistema |
 | 09 | no hay regular | 2 · el sistema |
 | 10 | la propuesta de la máquina | 3 · el taller simulado |
-| 11 | piel y cinta | 3 · el taller simulado |
-| 12 | copia | 3 · el taller simulado |
-| 13 | agua y voz | 3 · el taller simulado |
-| 14 | la letra llega a la pared | 3 · el taller simulado |
+| 11 | placa, por las dos caras | 3 · el taller simulado |
+| 12 | cinta | 3 · el taller simulado |
+| 13 | frotado | 3 · el taller simulado |
+| 14 | agua y voz | 3 · el taller simulado |
 | 15 | una letra de punta a punta | 3 · el taller simulado |
 | 16 | lo que apareció sin buscarlo | 4 · lo que queda |
 | 17 | lo que sigue (y colofón) | 4 · lo que queda |
@@ -58,4 +58,4 @@ python3 tipografia/laminas/imagenes.py          # recortes y las pocas imágenes
 python3 tipografia/laminas/generar_laminas.py   # HTML → PNG y PDF; necesita Chromium (variable CHROME)
 ```
 
-`imagenes.py` repite con la misma semilla las placas que la portada y la lámina 12 muestran grandes: la palabra «contenida» en el agua y la «a» quieta, tocada y con voz.
+`imagenes.py` repite con la misma semilla las placas que la portada y la lámina 14 muestran grandes: la palabra «contenida» en el agua y la «a» quieta, tocada y con voz. También guarda el pie en la foto y el pie impreso con la letra sustituta, para la lámina 10.

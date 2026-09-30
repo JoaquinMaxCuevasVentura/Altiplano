@@ -4,7 +4,7 @@
 
 > **anatomía base → estados**
 
-Primero se define, en vectores, cómo se comporta la forma. Recién después esa forma pasa por *Placa*, *Piel*, *Copia*, *Agua* y *Azulejo*.
+Primero se define, en vectores, cómo se comporta la forma. Recién después esa forma pasa por *Calco*, *Placa*, *Cinta*, *Frotado*, *Agua* y *Voz*.
 
 ## 1. Qué se toma del pie, y qué no
 
@@ -18,7 +18,9 @@ El pie da **medidas**. No da formas.
 
 Todo lo demás lo deciden los parámetros de la §2, que salen de la obra.
 
-**El testigo sigue siendo el sustituto** (Liberation Serif) hasta que llegue el libro. El código mide el testigo, así que cambiarlo cambia las medidas, no las reglas.
+**El testigo de las formas sigue siendo el sustituto** (Liberation Serif), hasta que llegue el libro. El código mide el testigo, así que cambiarlo cambia las medidas, no las reglas.
+
+**De la foto del pie, la altura de x.** Una foto cercana de la lámina deja medir el pie real, pero no calcarlo (`07_posnansky.md`, §3). La máquina toma de ella una sola proporción: sus ascendentes miden 1,71 veces la altura de x, más que en el sustituto (1,52). La zona de x de cada testigo se achata hasta esa proporción, sin mover la base, la línea de afuera ni la de desagüe. En la placa, el borde baja de 62 a 55 mm sobre el fondo.
 
 ## 2. Los parámetros
 
@@ -143,9 +145,9 @@ La cinta que tapó ojos y boca (D12) tiene sus propias leyes. La simulación las
 
 **La cinta no hace gotas ni asientos.** Solo sigue los trazos. En la cinta, la letra pierde lo que la gravedad le había dado.
 
-**Dónde va en la cadena.** Al lado de *Piel*: en la obra, la cinta y las placas estuvieron sobre el cuerpo al mismo tiempo. La cadena quedaría así:
+**Dónde va en la cadena.** Después de la placa: en la obra, la cinta y las placas estuvieron sobre el cuerpo al mismo tiempo. Tapar es un gesto de *Contener* (Acción 6). La cadena queda así:
 
-> calco → placa → piel | cinta → copia → agua → voz → azulejo
+> calco → placa → cinta → frotado → agua → voz
 
 **Qué se usa de la obra:** el material, no el rostro de Rebeca. La cinta se pone sobre plástico negro, papel o la placa, nunca sobre una cara.
 
@@ -161,7 +163,7 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 | El asta cae en una línea de media tesela | Sale: la tesela ya no es unidad de medida |
 | La media caña de la piscina en la panza | El radio de la chapa: la curva mínima la pone el aluminio, no el zócalo |
 | El marco de la letra: el azulejo | **La celda de la cabeza del ídolo**, 0,84 de ancho por alto, como el `.notdef` |
-| Las juntas de la pared | Solo en el estado *Azulejo*, cuando la letra llega a la pared |
+| Las juntas de la pared | Solo en el estado *Azulejo*, cuando la letra llega a la pared (en pausa) |
 
 **Se quedan:**
 - el desagüe;

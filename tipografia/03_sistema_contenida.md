@@ -36,7 +36,7 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
 5. **Monoespaciada: una letra, una celda.**
    - Las celdas de la cabeza del ídolo y la máquina de escribir de tu poema son retículas de celdas iguales. La celda mide 0,84 de ancho por alto.
    - La letra se adapta a su contenedor, y no al revés: la «m» llena su celda y la «i» queda rodeada de piel.
-   - Antes la medida era el azulejo. Ya no: la piscina fue escenario y pantalla, no molde. La pared recibe la letra al final (estado *Azulejo*) y sus juntas la cortan.
+   - Antes la medida era el azulejo. Ya no: la piscina fue escenario y pantalla, no molde. Su pared da el frotado sobre el que se calca.
 6. **No hay Regular.**
    - La figura de la obra no tiene rostro distinguible: la cinta color piel le tapa los ojos y la boca.
    - La familia tampoco tiene una cara neutra. Cada estilo es un estado, y ninguno es la versión «normal» de los demás.
@@ -63,18 +63,18 @@ Cada decisión de la obra (numerada como en `01`) y su traducción. La tercera c
 | D3 | Placas sueltas, con piel entre ellas | Cada letra es una placa suelta: un tipo móvil. Entre palabras, un azulejo vacío: la piel | La composición es distribuir placas sobre un soporte, como en el cuerpo |
 | D4 | Puertas en el pecho y la espalda | La tapa de la caja tiene una sola puerta, calada del tamaño de una celda, sobre la celda 1 | *Portada* viene de *puerta*. Con la caja cerrada se ve solo la coma que sigue al nombre del ídolo, el primer signo hallado |
 | D5 | Iconografía interpretada, no copiada | Ningún signo del monolito entra como letra. Se toma su retícula (la caja) y su celda vacía (el `.notdef`) | Rebeca interpreta; *Contenida* toma solo el marco vacío |
-| D6 | Piscina de azulejo vacía, en un estudio de tatuajes | La piscina es el lugar donde la letra llega: la pared la recibe y sus juntas la cortan (estado *Azulejo*). Sus palabras nombran las líneas (fondo, borde, desagüe, afuera). El esténcil de tatuaje como matriz | Un contenedor vacío recibe a otro. El lugar donde los signos se ponen en la piel da la técnica de transferencia |
+| D6 | Piscina de azulejo vacía, en un estudio de tatuajes | La piscina es el lugar donde la letra se calca (sobre el frotado de su pared) y se compone. Sus palabras nombran las líneas (fondo, borde, desagüe, afuera). El violeta del esténcil de tatuaje es la tinta del proyecto | Un contenedor vacío recibe a otro. El lugar donde los signos se ponen en la piel da la técnica de transferencia |
 | D7 | Placas en el fondo, que se leen como peces | No se dibujan peces. Las letras sueltas en el fondo de la piscina ya se leen como peces | El signo «pez» de la Kochamama llega sin copiarlo |
 | D8 | Proyección a través de una bandeja con un dedo de agua | Estado *Agua* y *pliego de agua*: un impreso que solo se lee reflejado | La imagen solo llega pasando por el elemento que al lugar le falta |
 | D9 | La piscina es escenario, pantalla y tema | La pauta definitiva es un frotado de la pared. El espécimen final se proyecta sobre esa misma pared | La piscina escribe, sostiene y recibe la letra |
-| D10 | Bucle | Componer, registrar y distribuir: la caja es un ciclo. El hectógrafo se limpia solo y vuelve a empezar | «Termina y empieza» |
-| D11 | Moverse como la piedra: apenas | Estado *Piel*: las placas se visten el tiempo de un bucle y los pliegues no se corrigen | El cuerpo escribe sobre la letra |
-| D12 | Ojos y boca tapados: sin rostro | No hay Regular | Ninguna cara neutra |
+| D10 | Bucle | Componer, registrar y distribuir: la caja es un ciclo. Frotar hasta que la letra no se lea, y repujar otra | «Termina y empieza» |
+| D11 | Moverse como la piedra: apenas | El temblor de la mano que calca y repuja, y los tres planos del fuste (`03c`). El estado *Piel*, que vestía las placas el tiempo de un bucle, quedó en pausa | El cuerpo escribe sobre la letra |
+| D12 | Ojos y boca tapados: sin rostro | No hay Regular. Estado *Cinta*: la letra puesta con la cinta que tapó ojos y boca | Ninguna cara neutra |
 | D13 | De la boca sale una placa: un signo, no un sonido | El signo final `¶`, hecho con los dedos, en la última celda | «Un signo / hecho con las manos, / ninguna palabra» |
 | D14 | Canto que se oye y no se entiende | Estado *Voz*: tu voz mueve el agua y se registra lo que hace, no la grabación. Sin «¡ !»: la voz contenida no exclama | La voz aparece como deformación, no como palabra |
 | D15 | Tocar el agua: la imagen se deforma, con ecos | *Agua tocada*. En lo digital, tocar deforma el texto, que se recompone sin volver igual | «La misma diosa dos veces / y ninguna igual» |
-| D16 | El líquido en la boca, negro contra la plata, chorrea | Tinta hectográfica: casi negra en la primera copia, violeta después. La bandeja bebe la matriz | «La tierra se dio de beber a sí misma / y ningún contenedor aguanta lo que contiene» |
-| — | La cadena de desplazamientos: cada paso pierde materia y gana luz | La familia es esa cadena (§3.7). El peso se mide en copias | La familia tipográfica como linaje literal |
+| D16 | El líquido en la boca, negro contra la plata, chorrea | El desagüe y la gota de la gramática: toda cuenca se abre abajo, y solo gotea lo que mira abajo (`03c`) | «La tierra se dio de beber a sí misma / y ningún contenedor aguanta lo que contiene» |
+| — | La cadena de desplazamientos: cada paso pierde materia y gana luz | La familia es esa cadena (§3.7). El peso se mide en frotadas | La familia tipográfica como linaje literal |
 
 ## 3.4. De dónde salen las letras: el pie
 
@@ -159,11 +159,11 @@ Todo eso, y cualquier otro signo, se ve como el `.notdef`: la celda vacía de la
 > **Actualización.** La pauta era el azulejo: una letra por azulejo y la tesela como unidad. Se cambió por la celda de la cabeza del ídolo, y la anatomía pasó a una gramática paramétrica (`03c_gramatica.md`). Lo que sigue es la pauta vigente.
 
 - **Cuerpo:** una celda de 0,84 de ancho por alto, la proporción de las celdas de la cabeza en la lámina (la misma del `.notdef`). A confirmar en el impreso.
-- **Líneas:** las da el pie: **afuera** (ascendentes), **borde** (altura de x), **fondo** (base) y **desagüe** (descendentes). Los nombres son de vasija. No se redondean a ninguna retícula.
+- **Líneas:** las da el pie: **afuera** (ascendentes), **borde** (altura de x), **fondo** (base) y **desagüe** (descendentes). Los nombres son de vasija. No se redondean a ninguna retícula. El borde sale de la foto del pie: las ascendentes miden 1,71 veces la altura de x.
 - **Ancho:** todas las letras miden una celda. Nada se estira para llenar.
 - **Espacios:** entre palabras, una celda vacía: la piel.
-- **Placa:** la celda cabe en una placa cuadrada de 150 mm. En cuerpo pequeño (hectógrafo, fichas), la caja entera cabe en una hoja A4.
-- **La piscina, al final.** El frotado de la pared no es pauta: es el papel sobre el que se calca, y la pared, la superficie donde la letra llega y se corta.
+- **Placa:** la celda cabe en una placa cuadrada de 150 mm. En cuerpo pequeño (fichas), la caja entera cabe en una hoja A4.
+- **La piscina, como escenario.** El frotado de la pared no es pauta: es el papel sobre el que se calca.
 
 La plantilla de calco de `esquemas/` todavía dibuja el azulejo. Hay que regenerarla con la celda.
 
@@ -176,14 +176,15 @@ Plantilla: `esquemas/pauta_azulejo.svg`, a escala 1:1. Se regenera con las medid
 | Estilo | Acción (`04`) | Cómo se hace | Rima con |
 |---|---|---|---|
 | **Calco** | 3 | Calco sobre la pauta: continuo lo hallado, punteado lo reconstruido | El dibujo reconstructivo de Posnansky, hecho desde fotos viejas |
-| **Placa** | 4 | Repujado por el reverso, en espejo | Asperón → aluminio |
-| **Piel** | 6 | La placa, vestida el tiempo de un bucle y después aplanada con la mano | Las placas sobre el cuerpo; moverse como la piedra |
-| **Copia 01 … Copia *n*** | 8 | Hectógrafo: cada copia sale más clara que la anterior | La bandeja; cada paso pierde materia; el esténcil del estudio |
+| **Placa** | 4 | Repujado por el reverso, en espejo: por el reverso, un canal hundido; por el anverso, relieve | Asperón → aluminio |
+| **Cinta** | 6 | La letra puesta con masking sobre plástico negro: no curva, se pliega | La cinta sobre los ojos y la boca |
+| **Frotado 01 … Frotado *n*** | 8 | Papel y grafito sobre la placa: cada frotada aplasta un poco el relieve y sale más clara que la anterior | La pared frotada de la Acción 1; «otra manera de enterrar» |
 | **Agua** (quieta, tocada) | 9 | La placa en el fondo de una bandeja, reflejada hacia un azulejo | La proyección a través del agua; tocar el agua |
 | **Voz** | 10 | El agua movida por tu voz | La banda sonora que no se entiende |
-| **Azulejo** | 11 | La luz de la letra sobre la pared de la piscina, cortada por las juntas y en trapecio | La pared que recibe; las dos retículas superpuestas |
 
-**El peso se mide en copias.** No hay Light ni Bold. La serie del hectógrafo va de la *Copia 01*, la más cargada de tinta, a la última legible. Es la cadena de la obra hecha escala tipográfica: pierde materia y gana luz.
+**El peso se mide en frotadas.** No hay Light ni Bold. La serie va del *Frotado 01*, el más cargado de grafito, al último que se lee. Es la cadena de la obra hecha escala tipográfica: cada frotada se lleva un poco del relieve.
+
+**En pausa:** *Piel* (la placa vestida el tiempo de un bucle), *Copia* (el hectógrafo) y *Azulejo* (la luz sobre la pared de la piscina). Salieron de la cadena; sus acciones siguen escritas en `04`, por si se retoman.
 
 ## 3.8. La póliza
 
@@ -201,7 +202,8 @@ En la imprenta de tipos móviles, la póliza dice cuántas piezas de cada letra 
 | Color | Qué es | De dónde viene |
 |---|---|---|
 | Plata | La letra: el material | Las placas de Rebeca |
-| Casi negro → violeta | La tinta: la del hectógrafo y la del esténcil de tatuaje | El líquido que contra la plata se veía negro. Como él, esta tinta cambia de color según cuánto queda |
+| Violeta | La tinta: versos, testigos y lo reconstruido. La del esténcil de tatuaje | El estudio donde ocurrió la obra |
+| Gris grafito | El frotado | La pared frotada de la Acción 1 |
 | Verde | Solo luz, nunca tinta. Aparece en la proyección y en la pantalla, no en el papel | La luz del proyector |
 | Blanco | El azulejo y el papel | La piscina |
 | Piel | El blanco entre palabras cuando el soporte es un cuerpo | D3 |

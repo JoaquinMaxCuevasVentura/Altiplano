@@ -132,7 +132,7 @@ figcaption b { color: var(--tinta); font-weight: 700; margin-right: .4em; }
 .reglas em { display: block; font-family: "Courier Prime", monospace; font-style: normal; font-size: 18px; color: var(--violeta); margin-top: 2px; }
 
 /* lámina 9 */
-.estados { display: grid; grid-template-columns: repeat(8, 1fr); gap: 26px; border-top: 1.5px solid var(--tinta); padding-top: 18px; }
+.estados { display: grid; grid-template-columns: repeat(6, 1fr); gap: 34px; border-top: 1.5px solid var(--tinta); padding-top: 18px; }
 .estados b { display: block; font-weight: 300; font-size: 50px; line-height: 1; margin-bottom: 10px; }
 .estados span { display: block; font-family: "Courier Prime", monospace; font-size: 19px; line-height: 1.35; color: var(--gris); }
 
@@ -145,7 +145,7 @@ figcaption b { color: var(--tinta); font-weight: 700; margin-right: .4em; }
 /* lámina 14 */
 .rotulo-fila { font-family: "Courier Prime", monospace; font-size: 21px; color: var(--gris); margin: 0 0 10px; }
 .rotulo-fila b { font-family: "Newsreader", serif; font-weight: 300; font-size: 64px; color: var(--tinta); margin-right: 16px; vertical-align: -6px; }
-.linea { display: grid; grid-template-columns: 2fr 1.3fr 1fr 1fr 1fr .8fr 1.5fr .7fr; gap: 22px; margin: 16px 0 0; font-family: "Courier Prime", monospace; font-size: 18px; line-height: 1.35; hyphens: manual; }
+.linea { display: grid; grid-template-columns: 2.2fr 1.4fr 1.1fr 1fr 1fr 1.6fr; gap: 26px; margin: 16px 0 0; font-family: "Courier Prime", monospace; font-size: 18px; line-height: 1.35; hyphens: manual; }
 .linea dt { color: var(--violeta); }
 .linea dd { margin: 0; color: var(--tinta); }
 

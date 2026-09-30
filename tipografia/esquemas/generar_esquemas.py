@@ -12,7 +12,7 @@ Escribe en tipografia/esquemas/:
   pauta_azulejo.svg     la pauta de calco, un azulejo a escala 1:1 (A4)
   ficha_de_hallazgo.svg dos fichas por hoja (A4)
   cadena_de_estados.svg la familia como cadena de estados
-  montajes_con_agua.svg agua, voz, pliego de agua y hectógrafo
+  montajes_con_agua.svg agua, voz, pliego de agua y frotado
   *.png                 vistas de los esquemas
   plantillas_imprimibles.pdf  pauta, fichas y caja, para imprimir al 100 %
 
@@ -184,12 +184,10 @@ def ficha():
              ("Reconstrucción", "por analogía con ______________________"),
              ("Calco", "mano ______________ fecha ________"),
              ("Placa", "mano ______ fecha ______ intentos __ roturas __"),
-             ("Piel", "la vistió ______ cuánto ______ dónde ______"),
              ("Cinta", "tramos __ pliegues __   foto nº ______"),
-             ("Copia", "hectógrafo nº __ copias legibles __ última __"),
+             ("Frotado", "papel ______ frotadas legibles __ última __"),
              ("Agua", "[ ] quieta  [ ] tocada   foto nº ______"),
              ("Voz", "verso leído ____________   foto nº ______"),
-             ("Azulejo", "pared/muestra ______   foto nº ______"),
              ("Notas", "_______________________________________")]
     for k in range(2):
         oy = k * H / 2
@@ -218,12 +216,11 @@ ESTADOS = [
     ("Pie", "hallar y|medir", "el libro", "«le pusieron nombre»", "—", "las medidas del archivo"),
     ("Calco", "calcar la|gramática", "calco|lápiz", "«solo la opinión sobre ella»", "la tinta del libro", "el cuerpo base"),
     ("Placa", "repujar", "aluminio|punzón", "«un signo hecho con las manos»", "la línea", "relieve y reflejo"),
-    ("Piel", "vestir", "la placa|sobre el cuerpo", "«como se mueve la piedra»", "lo plano", "los pliegues del cuerpo"),
     ("Cinta", "tapar", "masking|hueso claro", "«a la boca la taparon»", "la curva y la gota", "el pliegue"),
-    ("Copia", "hectografiar", "gelatina|tinta", "«se dio de beber a sí misma»", "tinta en cada copia", "transparencia"),
+    ("Frotado", "frotar la|placa", "papel|grafito", "«todos los archivos funcionan así»", "relieve en cada frotada",
+     "la vuelta al papel"),
     ("Agua", "reflejar", "bandeja|un dedo de agua", "«tocas el agua»", "el papel", "temblor y luz"),
     ("Voz", "hacer vibrar", "parlante|bajo la bandeja", "«pocas veces vuelve hablado»", "la palabra", "la vibración"),
-    ("Azulejo", "llegar a|la pared", "la piscina", "«quedó el contenedor»", "la forma entera", "el lugar"),
     ("Digital", "si cierra", "escáner|software libre", "«termina y empieza»", "el cuerpo", "circulación"),
 ]
 
@@ -353,23 +350,25 @@ def montajes():
     o.append(f'<line x1="{px + 250}" y1="{py + 258}" x2="{px + 385}" y2="{py + 96}" stroke="{VERDE}" stroke-width="1.5" stroke-dasharray="4 3"/>')
     o.append(t(px + 30, py + 318, "el texto solo se lee en el agua; si alguien la toca, se deforma", 11, GRIS))
 
-    # D · Hectógrafo
+    # D · Frotado
     px, py = paneles[3]
-    o.append(t(px + 16, py + 28, "D · Hectógrafo", 16, peso="bold"))
-    o.append(f'<rect x="{px + 30}" y="{py + 70}" width="80" height="100" fill="#ffffff" stroke="{JUNTA}"/>')
-    o.append(f'<rect x="{px + 52}" y="{py + 96}" width="36" height="48" fill="none" stroke="{VIOLETA}" stroke-width="3"/>')
-    o.append(t(px + 70, py + 190, "matriz", 11, GRIS, "middle"))
-    o.append(f'<path d="M{px + 140},{py + 120} L{px + 150},{py + 150} L{px + 290},{py + 150} L{px + 300},{py + 120}" fill="#e9dcc0" stroke="{NEGRO}" stroke-width="2"/>')
-    o.append(t(px + 220, py + 190, "bandeja de gelatina", 11, GRIS, "middle"))
+    o.append(t(px + 16, py + 28, "D · Frotado", 16, peso="bold"))
+    o.append(f'<rect x="{px + 60}" y="{py + 150}" width="150" height="10" fill="{PLATA}" stroke="{PLATA_OSC}"/>')
+    o.append(f'<path d="M{px + 95},{py + 150} q8,-9 16,0 M{px + 140},{py + 150} q8,-9 16,0" fill="none" stroke="{PLATA_OSC}" stroke-width="2"/>')
+    o.append(f'<path d="M{px + 50},{py + 136} L{px + 220},{py + 136}" stroke="{JUNTA}" stroke-width="2"/>')
+    o.append(f'<path d="M{px + 80},{py + 110} l70,-50" stroke="{NEGRO}" stroke-width="10" stroke-linecap="round"/>')
+    for i in range(5):
+        o.append(f'<line x1="{px + 70 + i * 26}" y1="{py + 130}" x2="{px + 88 + i * 26}" y2="{py + 118}" stroke="{GRIS}" stroke-width="1.5"/>')
+    o.append(t(px + 135, py + 190, "papel sobre la placa; grafito", 11, GRIS, "middle"))
     for i in range(6):
-        x = px + 320 + (i % 3) * 66
-        y = py + 60 + (i // 3) * 92
-        op = max(0.06, 0.95 - i * 0.18)
-        o.append(f'<rect x="{x}" y="{y}" width="56" height="76" fill="#ffffff" stroke="{JUNTA}"/>')
-        o.append(f'<rect x="{x + 14}" y="{y + 16}" width="28" height="40" fill="none" stroke="{VIOLETA}" stroke-width="3" opacity="{op:.2f}"/>')
-        o.append(t(x + 28, y + 90 if i < 3 else y + 88, ["1", "5", "10", "20", "30", "…"][i], 10, GRIS, "middle"))
-    o.append(t(px + 30, py + 318, "cada copia pierde tinta; la bandeja bebe la matriz", 11, GRIS))
-    o.append(t(px + 30, py + 334, "y en uno o dos días queda limpia para empezar otra vez", 11, GRIS))
+        x = px + 300 + (i % 3) * 72
+        y = py + 60 + (i // 3) * 104
+        op = max(0.06, 0.9 - i * 0.16)
+        o.append(f'<rect x="{x}" y="{y}" width="60" height="78" fill="#ffffff" stroke="{JUNTA}"/>')
+        o.append(f'<rect x="{x + 15}" y="{y + 17}" width="30" height="42" fill="none" stroke="{GRIS}" stroke-width="3" opacity="{op:.2f}"/>')
+        o.append(t(x + 30, y + 94, ["1", "5", "10", "15", "20", "…"][i], 10, GRIS, "middle"))
+    o.append(t(px + 30, py + 318, "cada frotada aplasta un poco el relieve: se frota hasta que no se lee", 11, GRIS))
+    o.append(t(px + 30, py + 334, "el peso de una letra se mide en frotadas", 11, GRIS))
     o.append("</svg>")
     return "\n".join(o), W, H
 

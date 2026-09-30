@@ -1,0 +1,58 @@
+{
+ "fuente": "Foto cercana de la lámina: la cabeza de la Kochamama, 903 × 901 px. Centros de los rectángulos interiores (49), agrupados por columna y por fila.",
+ "columnas": 8,
+ "filas": 7,
+ "centros_x": [
+  91.1,
+  131.8,
+  174.5,
+  218.6,
+  264.6,
+  309.7,
+  353.9,
+  397.3
+ ],
+ "centros_y": [
+  150.5,
+  204.0,
+  255.7,
+  305.1,
+  354.5,
+  405.6,
+  455.3
+ ],
+ "paso_x": [
+  40.7,
+  42.7,
+  44.1,
+  46.0,
+  45.1,
+  44.2,
+  43.4
+ ],
+ "paso_y": [
+  53.5,
+  51.7,
+  49.4,
+  49.4,
+  51.1,
+  49.7
+ ],
+ "paso_y_mediana": 50.400000000000006,
+ "ancho_por_alto": [
+  0.81,
+  0.85,
+  0.87,
+  0.91,
+  0.89,
+  0.88,
+  0.86
+ ],
+ "promedio": 0.86,
+ "hueco": {
+  "ancho_por_alto": 0.5,
+  "ancho_sobre_paso": 0.41,
+  "alto_sobre_paso": 0.69
+ },
+ "nota": "Las columnas se angostan hacia los bordes: el dibujo curva la cabeza como un cilindro. La celda de la tipografía usa 0,84."
+}

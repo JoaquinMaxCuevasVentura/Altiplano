@@ -5,7 +5,7 @@ Uso (desde la raíz del repositorio, después de inventario.py):
     python3 tipografia/simulacion/simular.py
 
 Arma el testigo del pie y la gramática, y corre los simuladores del taller
-—calco, placa, frotado, cinta, agua y voz— sobre las 56 celdas y las 119 placas.
+—calco, placa, cinta, frotado, agua y voz— sobre las 56 celdas y las 119 placas.
 Escribe en tipografia/simulacion/salida/:
   láminas (JPG y PNG) por estado,
   agua.gif (la palabra «agua» en el agua tocada) y voz.gif (la palabra «voz» movida por una voz),
@@ -131,6 +131,21 @@ def main():
         fila_de_paneles([f for _, f in rotas], [f"«{s}» rota" for s, _ in rotas], SALIDA / "04b_placas_rotas.jpg", alto=260,
                         titulo="Placas que se rompieron: se guardan en la caja y se hace otra")
 
+    # ------------------------------------------------ cinta: la letra con la masking de ojos y boca
+    paso("cinta: la letra puesta con masking")
+    cintas = {}
+    for c in CELDAS:
+        if c["estado"] == "manos":
+            continue
+        img, tramos, pliegues = encintar(D["gramatica"][c["signo"]]["glifo"], V(D["parametros"], "cinta"),
+                                         azar("cinta", c["celda"]))
+        cintas[c["celda"]] = img
+        fichas[f"{c['celda']:02d}.01"]["cinta"] = {"tramos": tramos, "pliegues": pliegues}
+    lamina(cintas, "Cinta · simulación",
+           "La letra puesta con masking blanca, tirando a hueso, sobre el plástico negro de la plataforma. La cinta no\n"
+           "curva en su plano: va recta, se pliega o se superpone. No hace gotas ni asientos. La celda 56 es de los dedos.",
+           SALIDA / "07_cinta.jpg", fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.85, 0.82), junta=(0.12, 0.12, 0.14))
+
     # ------------------------------------------------ frotado: papel y grafito sobre la placa
     paso("frotado: frotar cada placa hasta que no se lea")
     frotados, legibles = {}, {}
@@ -150,21 +165,6 @@ def main():
            "Un papel sobre la placa, por el anverso, frotado con grafito: el mismo gesto con el que empezó todo (la pared).\n"
            "Se marca lo que sobresale. Primera frotada de cada placa; cada una aplasta un poco el relieve.",
            SALIDA / "08_frotado.jpg")
-
-    # ------------------------------------------------ cinta: la letra con la masking de ojos y boca
-    paso("cinta: la letra puesta con masking")
-    cintas = {}
-    for c in CELDAS:
-        if c["estado"] == "manos":
-            continue
-        img, tramos, pliegues = encintar(D["gramatica"][c["signo"]]["glifo"], V(D["parametros"], "cinta"),
-                                         azar("cinta", c["celda"]))
-        cintas[c["celda"]] = img
-        fichas[f"{c['celda']:02d}.01"]["cinta"] = {"tramos": tramos, "pliegues": pliegues}
-    lamina(cintas, "Cinta · simulación",
-           "La letra puesta con masking blanca, tirando a hueso, sobre el plástico negro de la plataforma. La cinta no\n"
-           "curva en su plano: va recta, se pliega o se superpone. No hace gotas ni asientos. La celda 56 es de los dedos.",
-           SALIDA / "07_cinta.jpg", fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.85, 0.82), junta=(0.12, 0.12, 0.14))
 
     # ------------------------------------------------ agua: la placa en la bandeja
     paso("agua: quieta y tocada")
@@ -212,9 +212,9 @@ def main():
         t = D["testigos"].get(s)
         primero = [cuadrado(1 - t["crudo"].astype(np.float32) * 0.9)] if t else [np.ones((T, T), np.float32)]
         paneles = primero + [imagen_cuerpo(D["gramatica"][s]["mascara"]), calcos[celda_], foto_r[celda_], foto_a[celda_],
-                             frotados[celda_], cintas[celda_], quietas[celda_], tocadas[celda_], voces[celda_]]
+                             cintas[celda_], frotados[celda_], quietas[celda_], tocadas[celda_], voces[celda_]]
         rot = (["pie (ampliado)"] if t else ["no está en el pie"]) + ["gramática", "calco", "placa, reverso", "placa",
-                                                                     "frotado", "cinta", "agua quieta", "agua tocada",
+                                                                     "cinta", "frotado", "agua quieta", "agua tocada",
                                                                      "voz"]
         fila_de_paneles(paneles, rot, SALIDA / f"12_cadena_{celda_:02d}.jpg", alto=260,
                         titulo=f"La cadena de una letra: «{s}» (celda {celda_}, {'hallada' if t else 'reconstruida'})")
@@ -477,7 +477,7 @@ def informe(D, fichas, pol, legibles):
          "",
          "La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.",
          "",
-         "La máquina simula seis estados del taller: **calco, placa, frotado, cinta, agua y voz**. Antes arma el testigo del "
+         "La máquina simula seis estados del taller: **calco, placa, cinta, frotado, agua y voz**. Antes arma el testigo del "
          "pie y la gramática, que da el cuerpo base de cada signo.",
          "",
          "## Lo que la máquina tuvo que suponer",
@@ -623,6 +623,14 @@ def informe(D, fichas, pol, legibles):
           "",
           "![Rotas](salida/04b_placas_rotas.jpg)",
           "",
+          "## Cinta",
+          "",
+          "![Cinta](salida/07_cinta.jpg)",
+          "",
+          "La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que "
+          f"tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta {tramos} tramos y {pliegues} "
+          "pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.",
+          "",
           "## Frotado",
           "",
           "![Frotado](salida/08_frotado.jpg)",
@@ -639,14 +647,6 @@ def informe(D, fichas, pol, legibles):
           "",
           (f"El signo final, una presión de pulgar, da {final} frotadas legibles: el domo es liso y el papel lo acompaña; "
            "solo marca el filo." if final == 0 else f"El signo final, una presión de pulgar, da {final} frotadas legibles."),
-          "",
-          "## Cinta",
-          "",
-          "![Cinta](salida/07_cinta.jpg)",
-          "",
-          "La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que "
-          f"tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta {tramos} tramos y {pliegues} "
-          "pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.",
           "",
           "## Agua",
           "",
@@ -691,7 +691,7 @@ def informe(D, fichas, pol, legibles):
           "Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compararlas placa por placa:",
           "",
           "- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas "
-          "carpetas de estado: `calco`, `placa`, `frotado`, `cinta`, `agua`, `voz`.",
+          "carpetas de estado: `calco`, `placa`, `cinta`, `frotado`, `agua`, `voz`.",
           "- **Fichas:** `tipografia/mano/fichas.json`, con los mismos campos que `salida/fichas_simuladas.json`.",
           "",
           "**Qué se compara:**",

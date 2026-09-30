@@ -31,12 +31,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -159,12 +159,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 9,
    "pliegues": 8
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -337,12 +337,12 @@
     "desagüe del ojo"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 9,
    "pliegues": 6
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -565,12 +565,12 @@
     "sifón"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 16,
    "pliegues": 12
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -644,12 +644,12 @@
     "tilde"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 6,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -697,12 +697,12 @@
     "hombro"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 5,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -924,12 +924,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 8,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -1103,12 +1103,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 9,
    "pliegues": 5
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -1356,12 +1356,12 @@
     "asiento"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 3,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -1409,12 +1409,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -1461,12 +1461,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 23
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 23
   },
   "agua": {
    "quieta": true,
@@ -1539,12 +1539,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 3,
    "pliegues": 1
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -1691,12 +1691,12 @@
     "corte"
    ]
   },
-  "frotado": {
-   "legibles": 20
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 20
   },
   "agua": {
    "quieta": true,
@@ -1794,12 +1794,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 23
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 23
   },
   "agua": {
    "quieta": true,
@@ -1897,12 +1897,12 @@
     "hombro"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 9,
    "pliegues": 6
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -2000,12 +2000,12 @@
     "corte"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -2128,12 +2128,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -2230,12 +2230,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 7,
    "pliegues": 6
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -2333,12 +2333,12 @@
     "cuenca abierta"
    ]
   },
-  "frotado": {
-   "legibles": 23
-  },
   "cinta": {
    "tramos": 5,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 23
   },
   "agua": {
    "quieta": true,
@@ -2460,12 +2460,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 19
-  },
   "cinta": {
    "tramos": 3,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 19
   },
   "agua": {
    "quieta": true,
@@ -2588,12 +2588,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -2641,12 +2641,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 20
-  },
   "cinta": {
    "tramos": 5,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 20
   },
   "agua": {
    "quieta": true,
@@ -2694,12 +2694,12 @@
     "tilde"
    ]
   },
-  "frotado": {
-   "legibles": 24
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 24
   },
   "agua": {
    "quieta": true,
@@ -2744,12 +2744,12 @@
    "alivios": 0,
    "partes": []
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -2797,12 +2797,12 @@
     "hombro"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 5,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -2877,12 +2877,12 @@
     "tilde"
    ]
   },
-  "frotado": {
-   "legibles": 21
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 5
+  },
+  "frotado": {
+   "legibles": 21
   },
   "agua": {
    "quieta": true,
@@ -2927,12 +2927,12 @@
    "alivios": 0,
    "partes": []
   },
-  "frotado": {
-   "legibles": 23
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 23
   },
   "agua": {
    "quieta": true,
@@ -2979,12 +2979,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 22
-  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 22
   },
   "agua": {
    "quieta": true,
@@ -3032,12 +3032,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 23
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 23
   },
   "agua": {
    "quieta": true,
@@ -3109,12 +3109,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 20
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 20
   },
   "agua": {
    "quieta": true,
@@ -3181,12 +3181,12 @@
     "tilde"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 9,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3227,12 +3227,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 9
-  },
   "cinta": {
    "tramos": 5,
    "pliegues": 4
+  },
+  "frotado": {
+   "legibles": 9
   },
   "agua": {
    "quieta": true,
@@ -3274,12 +3274,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 9
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 9
   },
   "agua": {
    "quieta": true,
@@ -3322,12 +3322,12 @@
     "tilde"
    ]
   },
-  "frotado": {
-   "legibles": 7
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 6
+  },
+  "frotado": {
+   "legibles": 7
   },
   "agua": {
    "quieta": true,
@@ -3369,12 +3369,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 8
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 8
   },
   "agua": {
    "quieta": true,
@@ -3417,12 +3417,12 @@
     "onda"
    ]
   },
-  "frotado": {
-   "legibles": 9
-  },
   "cinta": {
    "tramos": 8,
    "pliegues": 5
+  },
+  "frotado": {
+   "legibles": 9
   },
   "agua": {
    "quieta": true,
@@ -3463,12 +3463,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 6,
    "pliegues": 5
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -3509,12 +3509,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3557,12 +3557,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 7,
    "pliegues": 3
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3604,12 +3604,12 @@
     "desagüe"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 18,
    "pliegues": 15
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3652,12 +3652,12 @@
     "celda"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 12,
    "pliegues": 8
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -3700,12 +3700,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 9
-  },
   "cinta": {
    "tramos": 18,
    "pliegues": 15
+  },
+  "frotado": {
+   "legibles": 9
   },
   "agua": {
    "quieta": true,
@@ -3748,12 +3748,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 20,
    "pliegues": 17
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3795,12 +3795,12 @@
     "celda"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 13,
    "pliegues": 8
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -3842,12 +3842,12 @@
     "corte: mira arriba"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 20,
    "pliegues": 15
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3890,12 +3890,12 @@
     "gota"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 22,
    "pliegues": 18
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -3937,12 +3937,12 @@
     "celda"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 13,
    "pliegues": 10
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -3985,12 +3985,12 @@
     "sifón"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 26,
    "pliegues": 21
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -4033,12 +4033,12 @@
     "sin gota: la gravedad no se da vuelta"
    ]
   },
-  "frotado": {
-   "legibles": 10
-  },
   "cinta": {
    "tramos": 22,
    "pliegues": 18
+  },
+  "frotado": {
+   "legibles": 10
   },
   "agua": {
    "quieta": true,
@@ -4079,12 +4079,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 8
-  },
   "cinta": {
    "tramos": 2,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 8
   },
   "agua": {
    "quieta": true,
@@ -4126,12 +4126,12 @@
     "sin gota: la gravedad no se da vuelta"
    ]
   },
-  "frotado": {
-   "legibles": 9
-  },
   "cinta": {
    "tramos": 10,
    "pliegues": 7
+  },
+  "frotado": {
+   "legibles": 9
   },
   "agua": {
    "quieta": true,
@@ -4172,12 +4172,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -4218,12 +4218,12 @@
     "alivio"
    ]
   },
-  "frotado": {
-   "legibles": 8
-  },
   "cinta": {
    "tramos": 4,
    "pliegues": 2
+  },
+  "frotado": {
+   "legibles": 8
   },
   "agua": {
    "quieta": true,
@@ -4262,12 +4262,12 @@
    "alivios": 0,
    "partes": []
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 1,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,
@@ -4308,12 +4308,12 @@
     "punto"
    ]
   },
-  "frotado": {
-   "legibles": 11
-  },
   "cinta": {
    "tramos": 3,
    "pliegues": 0
+  },
+  "frotado": {
+   "legibles": 11
   },
   "agua": {
    "quieta": true,

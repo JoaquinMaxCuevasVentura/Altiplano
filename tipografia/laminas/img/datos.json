@@ -1,6 +1,20 @@
 {
- "canal": 36.1,
+ "canal": 35.5,
  "asc": 376.3,
- "xh": 248.3,
- "desc": 120.7
+ "xh": 219.3,
+ "desc": 120.7,
+ "xh_sustituto": 248.3,
+ "foto": {
+  "tinta": 1.0,
+  "sigma": 1.659,
+  "trazos": 57,
+  "error": 0.014,
+  "asta": 2.193,
+  "lado": 2.299,
+  "tope": 1.998,
+  "alto_x": 11.67,
+  "ascendente": 20.0,
+  "descendente": 5.0,
+  "xh": 10.33
+ }
 }

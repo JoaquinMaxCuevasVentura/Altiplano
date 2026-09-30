@@ -1,4 +1,4 @@
-"""Láminas de exposición de Contenida: dieciséis láminas 4:3.
+"""Láminas de exposición de Contenida: diecisiete láminas 4:3.
 
 Uso (desde la raíz del repositorio, después de simular.py):
     python3 tipografia/laminas/imagenes.py
@@ -7,7 +7,7 @@ Uso (desde la raíz del repositorio, después de simular.py):
 Escribe en tipografia/laminas/:
   html/     una página por lámina (y todas.html, para imprimir),
   png/      cada lámina a 2400 × 1800 px,
-  contenida_laminas.pdf   las dieciséis, una por página (4:3, 1800 × 1350 pt).
+  contenida_laminas.pdf   las diecisiete, una por página (4:3, 1800 × 1350 pt).
 
 La retícula de las láminas es de 16 × 12 módulos de 150 px, con uno de
 margen. Los números salen de las fichas de la simulación.
@@ -32,6 +32,7 @@ FICHAS = json.loads((SIM / "salida" / "fichas_simuladas.json").read_text(encodin
 DATOS = json.loads((AQUI / "img" / "datos.json").read_text(encoding="utf8"))
 CAJA = json.loads((TIPO / "esquemas" / "caja.json").read_text(encoding="utf8"))
 PIE = (TIPO / "textos" / "pie_de_lamina.txt").read_text(encoding="utf8").strip()
+RETICULA = json.loads((TIPO / "esquemas" / "celda_medida.json").read_text(encoding="utf8"))
 POEMA = (TIPO / "textos" / "poema.txt").read_text(encoding="utf8")
 
 CAPITULOS = {1: "la obra", 2: "el sistema", 3: "el taller simulado", 4: "lo que queda"}
@@ -59,17 +60,15 @@ def numeros():
     por = {e: [f for f in primeras if f["estado"] == e] for e in ("hallada", "reconstruida")}
     todas = list(FICHAS.values())
     n = {}
-    n["tirada"] = primeras[0]["copia"]["tirada"]
+    n["frotadas_max"] = max(f["frotado"]["legibles"] for f in primeras)
     for e, fs in por.items():
-        n[f"legible_{e}"] = media([f["copia"]["ultima_legible"] for f in fs])
+        n[f"frotadas_{e}"] = media([f["frotado"]["legibles"] for f in fs])
         n[f"contraste_{e}"] = media([f["agua"]["contraste_de_la_letra"] for f in fs])
         placas = [f for f in todas if f["estado"] == e]
         n[f"placas_{e}"] = len(placas)
         n[f"roturas_{e}"] = sum(f["placa_"]["roturas"] for f in placas)
     n["placas"] = len(todas)
     n["horas"] = sum(f["placa_"]["minutos"] for f in todas) / 60
-    juntas = [f["azulejo"]["juntas_que_la_cortan"] for f in primeras]
-    n["juntas_min"], n["juntas_max"], n["juntas_media"] = min(juntas), max(juntas), media(juntas)
     op = [f["pie"]["opinion_pct"] for f in por["hallada"]]
     n["opinion_min"], n["opinion_max"] = min(op), max(op)
     n["desagues"] = sum(f.get("gramatica", {}).get("desagues", 0) for f in primeras)
@@ -295,29 +294,64 @@ def l04():
     ]))
 
 
+def reticula_svg():
+    """La retícula de la cabeza, con las medidas de la foto: cada columna, del ancho que tiene."""
+    R = RETICULA
+    px, py = R["paso_x"], R["paso_y"]
+    anchos = [px[0]] + [(a + b) / 2 for a, b in zip(px, px[1:])] + [px[-1]]
+    altos = [py[0]] + [(a + b) / 2 for a, b in zip(py, py[1:])] + [py[-1]]
+    k = 560 / sum(anchos)
+    W, H = 600, sum(altos) * k + 110
+    o = [f'<svg viewBox="0 0 {W} {H:.0f}" width="100%" font-family="Courier Prime" font-size="15">']
+    y = 10
+    for fila, alto in enumerate(altos):
+        x = 20
+        for col, ancho in enumerate(anchos):
+            w, h = ancho * k, alto * k
+            g = 2.5
+            o.append(f'<path d="M{x + w / 2 - 4:.1f},{y + h - g:.1f} H{x + g:.1f} V{y + g:.1f} H{x + w - g:.1f} '
+                     f'V{y + h - g:.1f} H{x + w / 2 + 4:.1f}" fill="none" stroke="var(--tinta)" stroke-width="1.6"/>')
+            hw = R["hueco"]["ancho_sobre_paso"] * ancho * k
+            hh = R["hueco"]["alto_sobre_paso"] * alto * k
+            o.append(f'<rect x="{x + (w - hw) / 2:.1f}" y="{y + (h - hh) / 2:.1f}" width="{hw:.1f}" height="{hh:.1f}" '
+                     f'fill="none" stroke="var(--gris2)" stroke-width="1.2"/>')
+            x += w
+        y += alto * k
+    x = 20 + anchos[0] * k
+    for i, r in enumerate(R["ancho_por_alto"]):
+        cx = 20 + sum(anchos[:i + 1]) * k
+        color = "var(--violeta)" if r in (min(R["ancho_por_alto"]), max(R["ancho_por_alto"])) else "var(--gris)"
+        o.append(f'<line x1="{cx:.1f}" y1="{y + 6:.1f}" x2="{cx:.1f}" y2="{y + 18:.1f}" stroke="var(--gris2)" stroke-width="1"/>')
+        o.append(f'<text x="{cx:.1f}" y="{y + 38:.1f}" text-anchor="middle" fill="{color}">{coma(r, 2)}</text>')
+    o.append(f'<text x="20" y="{y + 72:.1f}" fill="var(--gris)">el paso de celda a celda, de ancho por alto</text>')
+    o.append("</svg>")
+    return "".join(o)
+
+
 def l05():
+    R = RETICULA
     texto = (
         "<h1>56 celdas</h1>"
         '<p class="bajada">La caja de tipos sale de la cabeza del ídolo.</p>'
         "<p>Sobre el rostro de la Kochamama hay una retícula de celdas iguales: un rectángulo dentro de otro, sin "
         "nada adentro. En la foto de la lámina se cuentan 8 columnas y 7 filas. Es la parte que el pie llama "
         "calendario, la que nadie ha leído.</p>"
+        f"<p>Medida en una foto cercana, la celda no es regular: mide {coma(min(R['ancho_por_alto']), 2)} de ancho por "
+        f"alto en los bordes y {coma(max(R['ancho_por_alto']), 2)} al centro. El dibujo curva la cabeza como un "
+        "cilindro. La celda de la tipografía, 0,84, cae dentro.</p>"
         "<p>Esa retícula es la caja. Cada signo ocupa una celda, en el orden en que aparece en el pie: primero la "
         "coma que sigue al nombre del ídolo. Después vienen los reconstruidos. En la última, el signo que se hace "
-        "con los dedos.</p>"
-        "<p>Lo que no cabe se ve como la celda vacía. No hay mayúsculas ni signos de exclamación: la voz contenida "
-        "no exclama.</p>"
-        "<p>La tapa tiene una sola puerta. Con la caja cerrada se ve la coma.</p>")
+        "con los dedos. Lo que no cabe se ve como la celda vacía. No hay mayúsculas ni signos de exclamación: la voz "
+        "contenida no exclama.</p>")
     return lamina(5, "".join([
         b(1, 1, 4, 10, texto),
         b(5, 1, 6, 10, fig("caja_8x7.png", "<b>fig. 5.1</b> La caja. Continuo, lo hallado; punteado, lo "
                                            "reconstruido. Abajo, la celda vacía y lo que no cabe.")),
-        b(11, 1, 4, 5, fig("05_caja_abierta.jpg", "<b>fig. 5.2</b> Abierta: en cada compartimento, las placas de su "
-                                                  "signo. Simulación.")),
-        b(11, 6, 2, 5, fig("05b_puerta.jpg", "<b>fig. 5.3</b> Cerrada: por la única puerta se ve la coma.")),
-        b(13, 6, 2, 5, fig("03b_notdef.jpg", "<b>fig. 5.4</b> La celda vacía, calcada. También tiene desagüe.")),
+        b(11, 1, 4, 6, "<figure>" + reticula_svg() + "<figcaption><b>fig. 5.2</b> La retícula de la cabeza, medida "
+                       "en la foto: cada columna, del ancho que tiene. Las del borde son más angostas.</figcaption></figure>"),
+        b(11, 7, 4, 4, fig("03b_notdef.jpg", "<b>fig. 5.3</b> La celda vacía, calcada. También tiene desagüe."),
+          estilo="align-self:end"),
     ]))
-
 
 
 def l06():
@@ -328,8 +362,8 @@ def l06():
         "escenario y pantalla, no molde. Ahora la letra vive en la celda de la cabeza del ídolo, un rectángulo dentro "
         "de otro, con la proporción que se mide en la lámina.</p>"
         "<p>Las cuatro líneas las da el pie. Sus nombres son de vasija: afuera, borde, fondo y desagüe.</p>"
-        "<p>La piscina queda al final. Su pared recibe la letra y sus juntas la cortan. El frotado de la pared es "
-        "el papel sobre el que se calca.</p>")
+        "<p>La altura de x, el borde, sale de la foto del pie: es más baja que la de la letra sustituta. La piscina "
+        "queda como escenario: el frotado de su pared es el papel sobre el que se calca.</p>")
     medidas = fichero([("celda", "0,84 de ancho por alto"), ("placa", "150 × 150 mm, hasta medir la pared"),
                        ("canal", f"{coma(NUM['canal'] / 4)} mm, sin contraste"), ("desagüe", "3 mm, el surco del punzón"),
                        ("afuera", f"{coma(NUM['asc'] / 4)} mm sobre el fondo"),
@@ -360,7 +394,8 @@ def l07():
                                                             "la l (el fuste), la n (el hombro) y la a, que los junta. "
                                                             "De izquierda a derecha: el testigo del pie con sus medidas, "
                                                             "las curvas maestras, el cuerpo en vectores y el calco. "
-                                                            "Simulación sobre un testigo sustituto.")),
+                                                            "Simulación: las formas, de un testigo sustituto; la "
+                                                            "altura de x, de la foto del pie.")),
     ]))
 
 
@@ -387,12 +422,10 @@ def l08():
 ESTADOS = [
     ("calco", "papel de calco sobre el frotado de la pared"),
     ("placa", "aluminio repujado por el reverso con un punzón"),
-    ("piel", "la placa puesta el tiempo de un bucle"),
     ("cinta", "la letra puesta con masking, que no curva"),
-    ("copia", "hectógrafo de gelatina, tinta violeta"),
+    ("frotado", "papel y grafito sobre la placa, hasta que no se lee"),
     ("agua", "la luz de la placa por una bandeja con agua"),
     ("voz", "el agua movida por una voz que lee el poema"),
-    ("azulejo", "la luz sobre la pared, calcada"),
 ]
 
 
@@ -403,8 +436,8 @@ def l09():
                       'estados por los que pasa la letra.</p>'),
         b(9, 1, 6, 3, "<p>La figura de la obra no tiene rostro: la cinta le tapa los ojos y la boca. La familia "
                       "tampoco tiene una cara neutra, una versión normal de la que las demás se aparten.</p>"
-                      "<p>Cada estado sale del anterior por una operación física. En el hectógrafo, el peso se mide "
-                      "en copias: la primera sale casi negra y la última que se lee, apenas violeta.</p>",
+                      "<p>Cada estado sale del anterior por una operación física. En el frotado, el peso se mide en "
+                      "frotadas: la primera sale oscura y la última que se lee, apenas gris.</p>",
           estilo="align-self:end"),
         b(1, 4, 14, 5, fig("cadena_de_estados.png", "<b>fig. 9.1</b> La cadena de estados, del pie a la fuente "
                                                     "digital, que vuelve a pasar por el agua.")),
@@ -413,81 +446,100 @@ def l09():
 
 
 def l10():
+    f = DATOS.get("foto", {})
     texto = (
         '<h1>la propuesta<br>de la máquina</h1>'
         '<p class="bajada">Antes de hacerlo a mano, el taller se simuló con código. Es una hipótesis para '
         'confrontarla con la mano.</p>'
-        "<p>La máquina no tiene el libro. En la foto que hay, la altura de x del pie mide unos 4 píxeles y no se puede "
-        "calcar. Por eso partió de una letra de imprenta parecida, la imprimió con tipos de plomo simulados, la "
-        "fotocopió tres veces y la amplió.</p>"
-        "<p>De cada signo eligió la aparición mejor conservada y la limpió. Lo que tuvo que decidir del borde, la "
-        f"opinión, fue de {coma(NUM['opinion_min'])} a {pct(NUM['opinion_max'])}. De ese testigo tomó solo "
-        "medidas: la forma la dio la gramática. Después calcó cada cuerpo con temblor y lo repujó por el reverso.</p>"
+        f"<p>El pie está en una foto de la lámina. Enderezado línea por línea, se lee y se mide: la altura de x mide "
+        f"{coma(f.get('alto_x', 11.7))} píxeles y la tinta se corrió. Pero no se calca: los ojos de la a y de la e "
+        "se cierran.</p>"
+        "<p>Por eso la máquina partió de una letra de imprenta parecida, la imprimió con tipos de plomo simulados, la "
+        "fotocopió tres veces y la amplió. De la foto tomó una sola medida: la altura de x, más baja que la de la "
+        "letra sustituta.</p>"
+        "<p>De cada signo eligió la aparición mejor conservada y la limpió; lo que tuvo que decidir del borde fue de "
+        f"{coma(NUM['opinion_min'])} a {pct(NUM['opinion_max'])}. La forma la dio la gramática. Después calcó cada "
+        "cuerpo, con temblor, sobre el frotado de la pared.</p>"
         "<p>Ninguna de estas formas entra en la caja.</p>"
-        + fichero([("semilla", "20260822, el día de la obra"), ("testigo", "Liberation Serif, en lugar del libro: solo sus medidas"),
-                   ("punzón", "1 mm, por el reverso"), ("luz", "rasante, desde la izquierda, a 15°")]))
-    rotas = NUM["roturas_hallada"] + NUM["roturas_reconstruida"]
-    cifras = (cifra(str(NUM["placas"]), "placas: 94 para el poema, 24 para los signos que no usa y el signo "
-                                        "final")
-              + cifra("55", "signos calcados; el 56 se hace con los dedos") + cifra(str(rotas), "intentos rotos"))
+        + fichero([("semilla", "20260822, el día de la obra"), ("formas", "Liberation Serif, con plomo simulado"),
+                   ("altura de x", "la de la foto del pie"), ("calco", "el cuerpo de la gramática, en vectores")]))
+    cifras = (cifra(str(NUM["placas"]), "placas: 94 para el poema, 24 para los signos que no usa y el signo final")
+              + cifra("55", "signos calcados; el 56 se hace con los dedos"))
     return lamina(10, "".join([
         b(1, 1, 5, 10, texto),
-        b(6, 1, 9, 5, '<div class="par">' + fig("03_calco_reticula.jpg", "<b>fig. 10.1</b> Calco. Continuo lo "
-                                                "hallado, punteado lo reconstruido.")
-          + fig("04_placa_reticula.jpg", "<b>fig. 10.2</b> Placa, fotografiada con luz rasante. La primera de cada "
-                                         "celda.") + "</div>"),
-        b(6, 6, 9, 2, fig("04b_placas_rotas.jpg", "<b>fig. 10.3</b> Placas que se rompieron. No se corrigen: se "
-                                                  "guardan en la caja y se hace otra.")),
-        b(6, 9, 6, 2, f'<div class="cifras">{cifras}</div>', estilo="align-self:end"),
-        b(12, 8, 3, 3, verso(["No se salvó la piedra,", "solo la opinión sobre ella."]), estilo="align-self:end"),
+        b(6, 1, 9, 2, fig("pie_foto.jpg", "<b>fig. 10.1</b> El pie en la foto de la lámina, enderezado: 336 letras "
+                                          "recortadas. Se lee y se mide; no se calca.")),
+        b(6, 3, 9, 2, fig("pie_sustituto.jpg", "<b>fig. 10.2</b> El testigo de las formas: el pie impreso con una letra "
+                                               "sustituta y tipos de plomo simulados.")),
+        b(6, 5, 5, 6, fig("03_calco_reticula.jpg", "<b>fig. 10.3</b> Calco. Continuo lo hallado, punteado lo "
+                                                   "reconstruido; la celda, en lápiz.")),
+        b(11, 5, 4, 6, f'<div class="cifras columna">{cifras}</div>'
+          + verso(["No se salvó la piedra,", "solo la opinión sobre ella."]), estilo="align-self:end"),
     ]))
-
 
 
 def l11():
     texto = (
-        "<h1>piel y cinta</h1>"
-        '<p class="bajada">En la obra, las placas y la cinta estuvieron sobre el cuerpo al mismo tiempo.</p>'
-        "<p>Cada placa se viste cinco minutos, lo que se supone que dura el bucle, y después se aplana con la palma. "
-        "Los pliegues no se corrigen: son lo que el cuerpo le escribió encima.</p>"
-        "<p>La cinta que tapó ojos y boca da otro estado. Es masking blanca, tirando a hueso claro, y se pone sobre "
-        "el plástico negro de la plataforma. No curva en su plano: va recta, y para girar se pliega o se superpone. "
-        "Donde hay dos capas pasa menos luz.</p>"
-        f"<p>Para los 55 signos hicieron falta {NUM['tramos']} tramos y {NUM['pliegues']} pliegues. La cinta no "
-        "hace gotas ni asientos: en ella, la letra pierde lo que le daba la gravedad.</p>")
+        "<h1>placa, por las dos caras</h1>"
+        '<p class="bajada">Papel de aluminio de cocina, cortado a tijera y repujado por el reverso.</p>'
+        "<p>El calco se da vuelta y se repasa por el reverso con un punzón de bola de 1 mm, sobre una base blanda. "
+        "Por el reverso, la letra queda al revés y hundida: una canaleta con dos lomas bajas, un canal que podría "
+        "contener agua. Por el anverso se lee, en relieve.</p>"
+        "<p>La hoja se corta a tijera: cada lado en dos o tres cortes, con un escalón donde la tijera se retoma. A "
+        "veces una esquina se va en diagonal. Donde la mano arranca y donde se detiene, el punzón hunde un poco "
+        "más.</p>"
+        f"<p>{NUM['placas']} placas y {coma(NUM['horas'])} horas de repujado simulado. Las que se rompen no se "
+        "corrigen: se guardan en la caja y se hace otra.</p>")
     return lamina(11, "".join([
-        b(1, 1, 4, 10, texto + verso(["A la boca la taparon, a las manos no,"])),
-        b(5, 1, 5, 10, fig("06_piel_reticula.jpg", "<b>fig. 11.1</b> Piel. Los pliegues siguen la parte del cuerpo: "
-                                                   "antebrazo, esternón, cadera, muslo, espalda, hombro. Simulación.")),
-        b(10, 1, 5, 10, fig("07_cinta_reticula.jpg", "<b>fig. 11.2</b> Cinta. La celda 56 es de los dedos. "
-                                                     "Simulación.")),
+        b(1, 1, 4, 10, texto + verso(["Moverse como se mueve la piedra,", "es decir, apenas, es decir, temblor,"])),
+        b(5, 1, 5, 5, fig("04_placa_reverso_reticula.jpg", "<b>fig. 11.1</b> Por el reverso: la letra al revés, "
+                                                           "hundida.")),
+        b(10, 1, 5, 5, fig("04_placa_reticula.jpg", "<b>fig. 11.2</b> Por el anverso: se lee, en relieve. Luz rasante "
+                                                    "desde la izquierda.")),
+        b(5, 6, 10, 4, fig("04b_placas_rotas.jpg", "<b>fig. 11.3</b> Placas que se rompieron. No se corrigen: se "
+                                                   "guardan en la caja y se hace otra."), estilo="align-self:center"),
     ]))
 
 
 def l12():
     texto = (
-        "<h1>copia</h1>"
-        '<p class="bajada">Las placas vestidas se copian hasta que la tinta se acaba.</p>'
-        "<p>Se entintan y pasan a la gelatina de un hectógrafo. Cada hoja que se apoya se lleva un poco de tinta. La "
-        "primera copia sale casi negra; las siguientes, violeta; al final, nada.</p>"
-        "<p>La gelatina bebe la tinta que le queda. A las 48 horas está limpia y se puede volver a empezar.</p>")
-    cifras = (cifra(str(NUM["tirada"]), "copias leídas")
-              + cifra(coma(NUM["legible_hallada"]), "última copia legible, en promedio: letras halladas")
-              + cifra(coma(NUM["legible_reconstruida"]), "reconstruidas", "violeta"))
+        "<h1>cinta</h1>"
+        '<p class="bajada">La cinta que tapó ojos y boca da otro estado.</p>'
+        "<p>Es masking blanca, tirando a hueso claro, y se pone sobre el plástico negro de la plataforma. No curva en "
+        "su plano: va recta, y para girar se pliega o se superpone. Donde hay dos capas pasa menos luz.</p>"
+        f"<p>Para los 55 signos hicieron falta {NUM['tramos']} tramos y {NUM['pliegues']} pliegues. La cinta no "
+        "hace gotas ni asientos: en ella, la letra pierde lo que le daba la gravedad.</p>"
+        "<p>Arrancada, deja en el plástico un residuo: la letra que estuvo.</p>")
     return lamina(12, "".join([
-        b(1, 1, 5, 6, texto + verso(["La tierra se dio de beber a sí misma",
-                                     "y ningún contenedor aguanta lo que contiene."])),
-        b(7, 1, 8, 5, f'<div class="cifras">{cifras}</div>', estilo="align-self:center"),
-        b(1, 7, 14, 4, fig("08_hectografo_copias.jpg", f"<b>fig. 12.1</b> Copias 1, 5, 10, 20 y {NUM['tirada']}. La "
-                                                       "caja entera en una hoja A4. Simulación."),
-          estilo="align-self:end"),
+        b(1, 1, 5, 10, texto + verso(["A la boca la taparon, a las manos no,"])),
+        b(6, 1, 9, 10, fig("07_cinta_reticula.jpg", "<b>fig. 12.1</b> Cinta. La celda 56 es de los dedos.")),
     ]))
 
 
 def l13():
+    texto = (
+        "<h1>frotado</h1>"
+        '<p class="bajada">Un papel sobre la placa, frotado con grafito: el gesto con el que empezó todo.</p>'
+        "<p>La primera acción del taller es frotar la pared de la piscina. Aquí se frota la placa, por el anverso. El "
+        "papel no entra en los valles finos: toca toda la hoja y se carga donde la placa sube.</p>"
+        "<p>Cada frotada aplasta un poco el relieve. Se frota hasta que la letra no se lee: el peso de una letra se "
+        "mide en frotadas.</p>"
+        "<p>El signo final, una presión de pulgar, no da frotada: el domo es liso y el papel lo acompaña.</p>")
+    cifras = (cifra(coma(NUM["frotadas_hallada"]), "frotadas que se leen, en promedio: letras halladas")
+              + cifra(coma(NUM["frotadas_reconstruida"]), "reconstruidas", "violeta"))
+    return lamina(13, "".join([
+        b(1, 1, 4, 10, texto + verso(["Todos los archivos funcionan así."])),
+        b(5, 1, 6, 6, fig("08_frotado_reticula.jpg", "<b>fig. 13.1</b> La primera frotada de cada placa.")),
+        b(11, 1, 4, 6, f'<div class="cifras columna">{cifras}</div>', estilo="align-self:center"),
+        b(5, 7, 10, 4, fig("08b_frotadas_de_la_a.jpg", "<b>fig. 13.2</b> La misma a, frotada una y otra vez: 1, 5, 10, "
+                                                       "20 y la última que se lee."), estilo="align-self:center"),
+    ]))
+
+
+def l14():
     a = ficha("a")
     voz = a["voz"]
-    return lamina(13, "".join([
+    return lamina(14, "".join([
         b(1, 1, 7, 3, '<h1>agua y voz</h1><p class="bajada">La letra llega a la pared pasando por el agua que a la '
                       'piscina le falta.</p>'),
         b(8, 1, 7, 3, "<p>La placa va al fondo de una bandeja con un dedo de agua. La luz rebota en el relieve y en "
@@ -497,36 +549,15 @@ def l13():
                       "poema y aparecen ondas de Faraday. La voz no se graba ni se codifica: solo deforma.</p>",
           estilo="align-self:end"),
         b(1, 4, 14, 5, '<div class="trio">'
-          + fig("a_quieta.jpg", "<b>fig. 13.1</b> La a en el agua quieta.")
-          + fig("a_tocada.jpg", "<b>fig. 13.2</b> Tocada en una esquina.")
-          + fig("a_voz.jpg", f"<b>fig. 13.3</b> Con voz: «{voz['verso'].rstrip(',.;')}», sílaba {voz['silaba']}, "
+          + fig("a_quieta.jpg", "<b>fig. 14.1</b> La a en el agua quieta.")
+          + fig("a_tocada.jpg", "<b>fig. 14.2</b> Tocada en una esquina.")
+          + fig("a_voz.jpg", f"<b>fig. 14.3</b> Con voz: «{voz['verso'].rstrip(',.;')}», sílaba {voz['silaba']}, "
                              f"{voz['hz']} Hz.") + "</div>"),
         b(1, 9, 5, 2, verso(["Tocas el agua y la diosa se deforma."])),
         b(6, 9, 5, 2, verso(["la misma diosa dos veces", "y ninguna igual."])),
         b(11, 9, 4, 2, '<p class="leyenda">La voz de la simulación es inventada: alturas entre 110 y 220 Hz, con el '
                        'ritmo silábico del poema.</p>'),
     ]), oscura=True)
-
-
-def l14():
-    texto = (
-        "<h1>la letra llega a la pared</h1>"
-        '<p class="bajada">Ampliada, la luz de cada letra cae sobre la pared de la piscina. Alguien calca lo que '
-        'queda.</p>'
-        "<p>Quien calca no puede seguir la letra por las juntas. Cada letra quedó cortada por entre "
-        f"{NUM['juntas_min']} y {NUM['juntas_max']} juntas; {coma(NUM['juntas_media'])} en promedio.</p>"
-        "<p>Abajo, cuatro versos compuestos con placas vestidas sobre la pared, una por azulejo, sujetas con cinta de "
-        "pintor. Cuando una letra se repite en un verso, es otra placa. Ninguna sale igual dos veces.</p>")
-    return lamina(14, "".join([
-        b(1, 1, 6, 5, texto),
-        b(1, 5, 6, 2, f'<div class="cifras">{cifra(coma(NUM["juntas_media"]), "juntas por letra, en promedio")}</div>',
-          estilo="align-self:end"),
-        b(8, 1, 7, 6, fig("11_azulejo_reticula.jpg", "<b>fig. 14.1</b> Azulejo: el calco de la luz en la pared, al "
-                                                     "revés y cortado por las juntas.")),
-        b(1, 8, 14, 3, fig("11b_estrofa_en_la_pared.jpg", "<b>fig. 14.2</b> «cada vuelta pasa por el agua / y el "
-                                                          "agua no repite, / la misma diosa dos veces / y ninguna "
-                                                          "igual.»"), estilo="align-self:end"),
-    ]))
 
 
 def fila_de_ficha(f):
@@ -540,12 +571,10 @@ def fila_de_ficha(f):
     pl = f["placa_"]
     partes.append(("placa", f"{coma(pl['minutos'])} min, {pl['recorrido_mm']} mm de surco, "
                             f"{pl['roturas']} {'rotura' if pl['roturas'] == 1 else 'roturas'}"))
-    partes.append(("piel", f"{f['piel']['parte']}, {f['piel']['pliegues']} pliegues"))
     partes.append(("cinta", f"{f['cinta']['tramos']} tramos, {f['cinta']['pliegues']} pliegues"))
-    partes.append(("copia", f"legible hasta la {f['copia']['ultima_legible']} de {f['copia']['tirada']}"))
+    partes.append(("frotado", f"se lee hasta la frotada {f['frotado']['legibles']}"))
     partes.append(("agua", f"contraste {coma(f['agua']['contraste_de_la_letra'], 2)}"))
     partes.append(("voz", f"«{f['voz']['verso'].rstrip(',.;')}», {f['voz']['hz']} Hz"))
-    partes.append(("pared", f"{f['azulejo']['juntas_que_la_cortan']} juntas"))
     return '<dl class="linea">' + "".join(f"<div><dt>{a}</dt><dd>{v}</dd></div>" for a, v in partes) + "</dl>"
 
 
@@ -570,24 +599,29 @@ def barra(rotulo, valor, maximo, texto, clase=""):
 
 def l16():
     n = NUM
+    tope_agua = 1.15 * max(n["contraste_hallada"], n["contraste_reconstruida"])
+    rot_h = 100 * n["roturas_hallada"] / n["placas_hallada"]
+    rot_r = 100 * n["roturas_reconstruida"] / n["placas_reconstruida"]
+    tope_rot = 1.15 * max(rot_h, rot_r, 1)
     bloques = [
         ("en el agua", "Contraste de la letra en el agua quieta.",
-         barra("halladas", n["contraste_hallada"], 2.5, coma(n["contraste_hallada"], 2))
-         + barra("reconstruidas", n["contraste_reconstruida"], 2.5, coma(n["contraste_reconstruida"], 2), "violeta"),
+         barra("halladas", n["contraste_hallada"], tope_agua, coma(n["contraste_hallada"], 2))
+         + barra("reconstruidas", n["contraste_reconstruida"], tope_agua, coma(n["contraste_reconstruida"], 2),
+                 "violeta"),
          "El punteado tiene menos relieve que el surco y desvía menos luz. En el agua, las hipótesis se ven menos."),
-        ("en el hectógrafo", f"Última copia legible, de {n['tirada']}.",
-         barra("halladas", n["legible_hallada"], n["tirada"], coma(n["legible_hallada"]))
-         + barra("reconstruidas", n["legible_reconstruida"], n["tirada"], coma(n["legible_reconstruida"]), "violeta"),
-         "Hechas a puntos, dejan menos tinta en la matriz. Se borran antes."),
+        ("en el frotado", "Frotadas que se leen, en promedio.",
+         barra("halladas", n["frotadas_hallada"], n["frotadas_max"], coma(n["frotadas_hallada"]))
+         + barra("reconstruidas", n["frotadas_reconstruida"], n["frotadas_max"], coma(n["frotadas_reconstruida"]),
+                 "violeta"),
+         "Hechas a puntos, tienen menos relieve que tome el grafito. Se borran antes."),
         ("en el taller", "Horas de repujado para las 119 placas.",
-         barra("simuladas", n["horas"], 100, coma(n["horas"]))
-         + barra("planeadas", 40, 100, "30 a 40", "gris"),
+         barra("simuladas", n["horas"], 1.15 * max(n["horas"], 40), coma(n["horas"]))
+         + barra("planeadas", 40, 1.15 * max(n["horas"], 40), "30 a 40", "gris"),
          "Contando las placas que se rompieron. El plan se quedó corto."),
         ("en el aluminio", "Intentos rotos, por cada cien placas.",
-         barra("halladas", 100 * n["roturas_hallada"] / n["placas_hallada"], 20,
-               f"{n['roturas_hallada']} en {n['placas_hallada']}")
-         + barra("reconstruidas", 100 * n["roturas_reconstruida"] / n["placas_reconstruida"], 20,
-                 f"{n['roturas_reconstruida']} en {n['placas_reconstruida']}", "violeta"),
+         barra("halladas", rot_h, tope_rot, f"{n['roturas_hallada']} en {n['placas_hallada']}")
+         + barra("reconstruidas", rot_r, tope_rot, f"{n['roturas_reconstruida']} en {n['placas_reconstruida']}",
+                 "violeta"),
          "La máquina supuso que el punteado se rompe más: 16\u00a0% por intento, contra 6\u00a0%. "
          + ("Salió así. Pero esto no apareció: se supuso." if n["roturas_reconstruida"] / n["placas_reconstruida"]
             > n["roturas_hallada"] / n["placas_hallada"] else
@@ -611,8 +645,8 @@ def l17():
         "<h1>lo que sigue</h1>"
         '<ol class="sigue">'
         "<li>Hablar con Rebeca y con CreaciónxAcuerpamiento. Sin su acuerdo, nada de esto se hace.</li>"
-        "<li>Encontrar el libro. Una pista: Posnansky 1945, vol. 2, figs. 100 a 102. Fotografiar el pie con luz "
-        "rasante y medir en él lo que hoy es a ojo.</li>"
+        "<li>Encontrar el libro. Una pista: Posnansky 1945, vol. 2, figs. 100 a 102. Fotografiar el pie de cerca, con "
+        "luz rasante, para que dé formas y no solo medidas.</li>"
         "<li>Medir la pared de la piscina y frotarla. No sacar nada; no dejar nada.</li>"
         "<li>Repujar a mano las 119 placas, con la gramática como pauta y la mano como juez.</li>"
         "<li>Poner la mano frente a la máquina, placa por placa y parámetro por parámetro.</li>"
@@ -626,9 +660,10 @@ def l17():
         "y de Osmond Tshuma, <i>Afrography: Scripting Futures Anchored in Culture &amp; Community</i> (RISD, "
         "2025). La iconografía, según Carolina Agüero, Mauricio Uribe y José Berenguer, «La iconografía Tiwanaku: "
         "el caso de la escultura lítica», <i>Textos Antropológicos</i> 14 (2), 2003.</p>"
-        "<p>Las letras de las imágenes son una simulación hecha con código, a partir de un testigo sustituto "
-        "(Liberation Serif), para confrontarla con la mano. No entran en la caja ni en la fuente. El código, los "
-        "esquemas y los textos se hicieron con asistencia de inteligencia artificial.</p>"
+        "<p>Las letras de las imágenes son una simulación hecha con código, para confrontarla con la mano: las "
+        "formas salen de un testigo sustituto (Liberation Serif); la altura de x, de la foto del pie. No entran en "
+        "la caja ni en la fuente. El código, los esquemas y los textos se hicieron con asistencia de inteligencia "
+        "artificial.</p>"
         "<p>Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), con licencia SIL OFL, "
         "sobre una retícula de 16 × 12 módulos.</p></div>")
     return lamina(17, "".join([
@@ -643,8 +678,8 @@ def l17():
 
 LAMINAS = [l01, l02, l03, l04, l05, l06, l07, l08, l09, l10, l11, l12, l13, l14, l15, l16, l17]
 NOMBRES = ["portada", "una_piscina_vacia", "lo_que_dice_la_lamina", "dos_tesis", "56_celdas", "la_celda",
-           "la_gramatica", "cincuenta_y_cinco_signos", "no_hay_regular", "la_propuesta_de_la_maquina", "piel_y_cinta",
-           "copia", "agua_y_voz", "la_pared", "de_punta_a_punta", "lo_que_aparecio", "lo_que_sigue"]
+           "la_gramatica", "cincuenta_y_cinco_signos", "no_hay_regular", "la_propuesta_de_la_maquina", "placa",
+           "cinta", "frotado", "agua_y_voz", "de_punta_a_punta", "lo_que_aparecio", "lo_que_sigue"]
 
 
 # ---------------------------------------------------------------- página y salida
@@ -677,6 +712,10 @@ def correr(args):
 def main():
     HTML.mkdir(exist_ok=True)
     PNG.mkdir(exist_ok=True)
+    vigentes = {f"{i:02d}_{n}" for i, n in enumerate(NOMBRES, 1)}
+    for viejo in list(HTML.glob("[0-9][0-9]_*.html")) + list(PNG.glob("[0-9][0-9]_*.png")):
+        if viejo.stem not in vigentes:
+            viejo.unlink()
     todas = []
     for i, (f, nombre) in enumerate(zip(LAMINAS, NOMBRES), 1):
         seccion = f()

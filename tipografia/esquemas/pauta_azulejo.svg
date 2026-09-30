@@ -3,14 +3,14 @@
 <text x="30.00" y="14.00" font-size="5.2" fill="#1f1f1f" text-anchor="start" font-weight="bold" >Contenida · pauta de calco</text>
 <text x="30.00" y="21.00" font-size="3.1" fill="#6d6d6d" text-anchor="start" font-weight="normal" >1 placa = 150 mm = 1 letra · la celda: 0,84 de ancho por alto · líneas: del pie (testigo sustituto)</text>
 <text x="30.00" y="26.50" font-size="3.1" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Imprimir al 100 %. Comprobar la barra de 100 mm.</text>
-<rect x="30.0" y="34" width="150" height="150" fill="#ffffff" stroke="#a4a39b" stroke-width="0.3"/>
+<rect x="30.0" y="34" width="150.0" height="150.0" fill="#ffffff" stroke="#a4a39b" stroke-width="0.3"/>
 <rect x="47.60" y="41.04" width="114.81" height="136.68" fill="none" stroke="#a4a39b" stroke-width="0.6"/>
 <line x1="30.0" y1="171.50" x2="180.0" y2="171.50" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
 <text x="182.00" y="172.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >desagüe</text>
 <line x1="30.0" y1="141.32" x2="180.0" y2="141.32" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
 <text x="182.00" y="142.42" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >fondo</text>
-<line x1="30.0" y1="79.25" x2="180.0" y2="79.25" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
-<text x="182.00" y="80.35" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >borde</text>
+<line x1="30.0" y1="86.50" x2="180.0" y2="86.50" stroke="#1f1f1f" stroke-width="0.5" stroke-dasharray="2 1.2"/>
+<text x="182.00" y="87.60" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >borde</text>
 <line x1="30.0" y1="47.25" x2="180.0" y2="47.25" stroke="#1f1f1f" stroke-width="0.3" stroke-dasharray="2 1.2"/>
 <text x="182.00" y="48.35" font-size="2.8" fill="#6d6d6d" text-anchor="start" font-weight="normal" >afuera</text>
 <text x="182.00" y="40.04" font-size="2.6" fill="#6d6d6d" text-anchor="start" font-weight="normal" >celda</text>

@@ -4,7 +4,7 @@ Generado por `simular.py`. Es una **hipótesis hecha por código**, para confron
 
 La semilla es fija (el 22 de agosto de 2026): el resultado es siempre el mismo. Cambiarla es cambiar de mano.
 
-La máquina simula seis estados del taller: **calco, placa, frotado, cinta, agua y voz**. Antes arma el testigo del pie y la gramática, que da el cuerpo base de cada signo.
+La máquina simula seis estados del taller: **calco, placa, cinta, frotado, agua y voz**. Antes arma el testigo del pie y la gramática, que da el cuerpo base de cada signo.
 
 ## Lo que la máquina tuvo que suponer
 
@@ -185,6 +185,12 @@ Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, c
 
 ![Rotas](salida/04b_placas_rotas.jpg)
 
+## Cinta
+
+![Cinta](salida/07_cinta.jpg)
+
+La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta 444 tramos y 303 pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.
+
 ## Frotado
 
 ![Frotado](salida/08_frotado.jpg)
@@ -198,12 +204,6 @@ Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acc
 **Las últimas:** «)» (23), «b» (23), «s» (24), «o» (24), «r» (24), «l» (24), «c» (24), «í» (24).
 
 El signo final, una presión de pulgar, da 0 frotadas legibles: el domo es liso y el papel lo acompaña; solo marca el filo.
-
-## Cinta
-
-![Cinta](salida/07_cinta.jpg)
-
-La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta 444 tramos y 303 pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.
 
 ## Agua
 
@@ -243,7 +243,7 @@ El poema se lee una vez en voz alta junto a la bandeja, mientras se fotografían
 
 Cuando exista tu propuesta, conviene guardarla con los mismos nombres para compararlas placa por placa:
 
-- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas carpetas de estado: `calco`, `placa`, `frotado`, `cinta`, `agua`, `voz`.
+- **Fotos:** `tipografia/mano/<estado>/<celda>_<variante>.jpg`, con dos dígitos (`mano/placa/08_01.jpg`) y estas carpetas de estado: `calco`, `placa`, `cinta`, `frotado`, `agua`, `voz`.
 - **Fichas:** `tipografia/mano/fichas.json`, con los mismos campos que `salida/fichas_simuladas.json`.
 
 **Qué se compara:**

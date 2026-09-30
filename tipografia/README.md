@@ -16,7 +16,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 3. **La caja tiene 56 celdas**, las de la retícula de la cabeza en la lámina. Lo que no cabe se ve como celda vacía: la celda de la lámina, calcada a mano.
 4. **Una letra, una celda.** La de la cabeza del ídolo, 0,84 de ancho por alto. Monoespaciada, solo caja baja: la letra de la mano, no la del monumento. La piscina no mide la letra: la recibe, y sus juntas la cortan.
 5. **Las letras son placas de papel de aluminio repujado**, el material de Rebeca. Sueltas, como tipos móviles: 119 placas, 94 de ellas para componer el poema verso a verso sin repetir placa.
-6. **No hay Regular.** Los estilos son estados de la letra: *Calco*, *Placa*, *Piel*, *Copia* (el peso se mide en copias de hectógrafo), *Agua*, *Voz* y *Azulejo*.
+6. **No hay Regular.** Los estilos son estados de la letra: *Calco*, *Placa*, *Cinta*, *Frotado* (el peso se mide en frotadas), *Agua* y *Voz*. *Piel*, *Copia* y *Azulejo* quedan en pausa.
 7. **Lo digital es un estado más.** Vuelve a pasar por el agua y vuelve a ser placa: «termina y empieza».
 
 ![La caja de 8 × 7](esquemas/caja_8x7.png)
@@ -30,7 +30,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `03_sistema_contenida.md` | **El sistema.** Nombre, nueve reglas, el cuadro de correspondencias (cada decisión de la obra y su traducción), el pie, la caja, la pauta, la familia, la póliza, el color, el signo final y el colofón |
 | `03b_anatomia.md` | **La anatomía.** Del pie, el esqueleto; de la obra, el cuerpo: canal, desagüe, bandeja, lluvia, gotas, puntos-tesela, tildes-gota, onda, asta en la retícula, líneas con nombres de la piscina y cifras en celdas |
 | `03c_gramatica.md` | **La gramática.** Anatomía base → estados. Parámetros que salen de la obra (canal, cuenca, hombro, facetas, asiento, intemperie, alivio, gota, sifón, punto de cinta), los cuatro generadores (o, l, n, a), cómo se arman con ellos los 55 signos y un estado nuevo, *Cinta*. Reemplaza a `03b` |
-| `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad |
+| `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad; y tres en pausa |
 | `05_migracion_digital.md` | Cuándo es coherente migrar, cómo digitalizar, la especificación de la fuente, el espécimen web y cómo cierra el ciclo |
 | `06_etica_fuentes_y_pendientes.md` | Consentimiento, créditos, lo verificado y lo que falta verificar, y los pendientes en orden |
 | `textos/pie_de_lamina.txt`, `textos/poema.txt` | Los dos textos fuente |
@@ -38,7 +38,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `inventario.py` | Recalcula el inventario desde los textos |
 | `esquemas/` | La caja, la pauta de calco 1:1, la ficha de hallazgo, la cadena de estados y los montajes con agua (SVG y PNG), y `plantillas_imprimibles.pdf` |
 | `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
-| `simulacion/informe.md` | **La propuesta de la máquina:** el pie, la gramática y cinco estados simulados con código (calco, placa, cinta, agua y voz), con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
+| `simulacion/informe.md` | **La propuesta de la máquina:** el pie, la gramática y seis estados simulados con código (calco, placa, cinta, frotado, agua y voz), con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `gramatica.py`, `contener.py`, `devolver.py`) |
 | `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |

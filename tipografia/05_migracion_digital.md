@@ -22,9 +22,9 @@
 | Estilo | Registro de origen | Captura |
 |---|---|---|
 | Calco | Los 56 calcos | Escáner, 600 ppp, en grises |
-| Placa y Piel | Las placas | Foto con la luz rasante fija de las Acciones 4 y 6, con regla en cuadro. Probar también el escáner plano, que ilumina desde un solo lado |
-| Copia 01 … *n* | Las copias del hectógrafo | Escáner, 600 ppp. La matriz tiene la disposición de la caja, así que cada copia se corta en 56 celdas siguiendo la retícula |
-| Agua, Voz, Azulejo | Las fotos de las Acciones 9 a 11 | Sin corregir la perspectiva: el trapecio se queda |
+| Placa y Cinta | Las placas, por las dos caras, y la cinta sobre el plástico | Foto con la luz rasante fija de las Acciones 4 y 6, con regla en cuadro. Probar también el escáner plano, que ilumina desde un solo lado |
+| Frotado 01 … *n* | Los frotados numerados | Escáner, 600 ppp. Cada frotado es de una placa: se escanea en orden, del primero al último que se lee |
+| Agua, Voz | Las fotos de las Acciones 9 y 10 | Sin corregir la perspectiva: el trapecio se queda |
 
 **Vectorización.**
 
@@ -46,7 +46,7 @@
 | `¶` | El signo final de la celda 56 | Se escribe con la tecla o el atajo del calderón |
 | Variantes | Cada placa de la póliza que pasó por ese estado es una variante: `a.01` … `a.09`, `e.01` … `e.08` | Cada «a» es una placa distinta |
 | Alternancia | `calt`: la variante cambia según el signo anterior, con la técnica habitual de las letras de apariencia manual. En el componedor web (§5.4) el ciclo es exacto por letra, como en la caja | En el archivo de fuente, la alternancia es aproximada, y se dice. El antecedente es *Beowolf* (LettError, 1990), que cambiaba sus contornos en cada impresión |
-| Estilos | Un archivo por estado: Calco, Placa, Piel, Copia 01 … *n*, Agua, Voz, Azulejo | No hay pesos interpolados: si falta la copia 17, no hay estilo 17 |
+| Estilos | Un archivo por estado: Calco, Placa, Cinta, Frotado 01 … *n*, Agua, Voz | No hay pesos interpolados: si falta el frotado 17, no hay estilo 17 |
 | Nombres | Familia tipográfica *Contenida* y subfamilia con el nombre del estado (campos 16 y 17 de la tabla `name`). El campo 2 dice *Regular* porque los sistemas lo exigen | Es el único lugar donde aparece esa palabra: un campo técnico que nadie lee |
 | Descripción | El colofón de manos completo (campo 10) | La procedencia viaja dentro del archivo |
 | Diseño | Todas las manos de la cadena (campo 9) | — |
@@ -74,7 +74,7 @@ Es la misma página que se proyecta en la presentación a través de la bandeja 
 
 - el espécimen digital, proyectado a través de una bandeja con un dedo de agua sobre la misma pared donde se proyectó el video de Rebeca;
 - el pliego de agua (esquema C), colgado sobre otra bandeja;
-- las copias del hectógrafo, repartidas al público en orden de llegada. Quien llega primero recibe la *Copia 01*; quien llega último, casi nada. El peso de cada copia depende de cuándo llegó quien la recibe.
+- los frotados, repartidos al público en orden de llegada. Quien llega primero recibe el *Frotado 01*; quien llega último, casi nada. El peso de cada frotado depende de cuándo llegó quien lo recibe.
 
 **La vuelta.** La fuente se imprime en la máquina de esténcil térmico del estudio y el esténcil sirve de calco para repujar placas nuevas. Esas placas llenan una segunda caja, cuyas fichas dicen «generación 2».
 
@@ -83,7 +83,7 @@ Lo digital no termina la cadena: le da la vuelta, como la mesa serif de Tshuma, 
 ## 5.6. Lo que no se hace
 
 - **No se publica un máster limpio:** ninguna versión redibujada «bien» de las letras.
-- **No se interpolan pesos.** Las copias intermedias no se inventan.
+- **No se interpolan pesos.** Los frotados intermedios no se inventan.
 - **No se generan letras** con inteligencia artificial ni por procedimiento. Las variantes son placas.
 - **No se agregan** mayúsculas, exclamaciones ni signos fuera de la caja.
 - **No se usa** el nombre del ídolo ni signos tiwanacotas.

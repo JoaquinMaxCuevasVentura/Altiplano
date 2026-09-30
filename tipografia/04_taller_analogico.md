@@ -11,8 +11,10 @@ Las acciones se documentan en tres cuadernos, como Tshuma documentó Isiko en tr
 | Cuaderno | Acciones | Qué pasa |
 |---|---|---|
 | **1 · Desenterrar** | 0 a 3 | Pedir, medir, hallar las letras y calcarlas |
-| **2 · Contener** | 4 a 7 | Repujar, llenar la caja, vestir y hacer el signo final |
-| **3 · Devolver** | 8 a 12 | Copiar, mojar, dar voz, llevar a la pared, componer y cerrar |
+| **2 · Contener** | 4 a 7 | Repujar, llenar la caja, encintar y hacer el signo final |
+| **3 · Devolver** | 8 a 12 | Frotar, mojar, dar voz, componer y cerrar |
+
+Tres acciones quedan **en pausa**, al final del documento: vestir, hectografiar y llevar la luz a la pared. Salieron de la cadena de estados; se retoman si hacen falta.
 
 Plantillas para imprimir al 100 %: `esquemas/plantillas_imprimibles.pdf` (pauta de calco, fichas y mapa de la caja).
 
@@ -147,12 +149,12 @@ Antes de repujar la primera letra:
 
 **Pasos:**
 
-1. **Cortar la placa** del tamaño de un azulejo, con las esquinas redondeadas como la placa de la foto.
+1. **Cortar la placa** a tijera, del tamaño de un azulejo. Cada lado sale en dos o tres cortes; las esquinas se cortan en diagonal o se redondean, porque el aluminio corta.
 2. **Poner el calco en espejo.** Darlo vuelta, porque el repujado se trabaja por el reverso, y pegarlo con cinta sobre el reverso de la placa, que va apoyada en la base blanda.
 3. **Repasar el contorno con el punzón.** El punzón se detiene 3 mm antes de cerrar cada contorno: es el desagüe.
    - Lo hallado, con un trazo continuo.
    - Lo reconstruido, a puntos: el punteado queda en relieve para siempre.
-4. **Retirar el calco y dar vuelta la placa.** Por el frente, la letra está al derecho y en relieve.
+4. **Retirar el calco y dar vuelta la placa.** Por el frente, la letra está al derecho y en relieve. Por el reverso queda al revés y hundida: un canal.
 5. **Rellenar solo si hace falta.** Si una letra pide más cuerpo, se sube desde el reverso con el lado redondo del punzón, y se anota.
 6. **El orden de trabajo:**
    - primero una placa por celda: 56;
@@ -161,7 +163,7 @@ Antes de repujar la primera letra:
 
 **Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas.
 
-**Registro:** en la ficha, *Placa*. Cada placa se fotografía con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
+**Registro:** en la ficha, *Placa*. Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
 
 ### Acción 5 · Llenar la caja
 
@@ -183,32 +185,27 @@ Antes de repujar la primera letra:
 3. **La tapa** lleva una sola puerta calada del tamaño de una celda, sobre la celda 1: con la caja cerrada se ve solo la coma.
 4. **Fuera de la caja**, pegado en la tapa por dentro, el `.notdef`: la celda de la lámina calcada a mano.
 
-### Acción 6 · Vestir
+### Acción 6 · Encintar
 
-> «Moverse como se mueve la piedra, / es decir, apenas, es decir, temblor, / es decir, un presente continuo.»
+> «A la boca la taparon, a las manos no,»
 
-**Rima con:** D3 (placas sobre el cuerpo) y D11 (moverse como la piedra).
+**Rima con:** D12 (la cinta sobre los ojos y la boca) y la plataforma de plástico negro del montaje (`01`).
 
 **Materiales:**
 
-- esparadrapo de papel (del que no irrita);
-- ropa lisa o piel, según quien vista;
+- cinta de enmascarar blanca, tirando a hueso claro, del ancho del canal de la gramática (unos 9 mm; si no se consigue, cinta de 18 mm cortada a lo largo);
+- plástico negro grueso, tenso sobre una tabla;
 - la lámpara de la Acción 4.
 
 **Pasos:**
 
-1. **Elegir qué se viste.** A 15 cm por letra, un cuerpo lleva una palabra o un verso corto: «voz», «ninguna igual».
-   - Para que el estilo *Piel* tenga todas sus letras, las 56 placas de la primera tanda se visten, en varias sesiones.
-   - Las demás placas de la póliza se visten si se puede: son variantes.
-2. **Quién viste** lo decide la persona, que da su acuerdo por escrito en el cuaderno. Puede ser quien hace el proyecto. Nunca el cuerpo de Rebeca, salvo que ella lo proponga.
-3. **Fijar las placas** con esparadrapo, dejando piel o tela a la vista entre ellas.
-   - Ninguna placa va sobre la cara, la boca o la nariz: la obra tapó ojos y boca, y el proyecto no repite ese gesto.
-   - Cuidado con los bordes del aluminio, que cortan.
-4. **Moverse apenas** durante lo que dura un bucle del video: el dato se le pide a Rebeca en la Acción 0. Si no se consigue, un tiempo elegido y anotado.
-5. **Retirar las placas y aplanarlas solo con la palma.** No se plancha ni se prensa: los pliegues son el registro.
-6. **Fotografiar** cada placa con la misma luz rasante de la Acción 4: tercer estilo, *Piel*.
+1. **Tender el plástico negro** sobre la tabla, como la plataforma de la obra.
+2. **Seguir el eje del trazo** con la cinta, a ojo, con el calco al lado como guía (las curvas maestras de `03c`).
+3. **La cinta no curva en su plano.** Va recta; para girar se pliega, y el pliegue sigue la bisectriz del giro, o se superpone otro tramo. Los extremos se cortan con la mano: quedan dentados.
+4. **Fotografiar** con la misma luz rasante: estilo *Cinta*.
+5. **Arrancar la cinta** y fotografiar lo que deja en el plástico: *Cinta arrancada*.
 
-**Registro:** en la ficha, *Piel*: quién, cuánto tiempo, dónde.
+**Registro:** en la ficha, *Cinta*: tramos, pliegues y número de foto.
 
 ### Acción 7 · El signo final
 
@@ -224,47 +221,35 @@ Antes de repujar la primera letra:
 
 ## Cuaderno 3 · Devolver
 
-### Acción 8 · Hectografiar
+### Acción 8 · Frotar
 
-> «La tierra se dio de beber a sí misma / y ningún contenedor aguanta lo que contiene.»
+> «A la ídolo la desenterraron, / le pusieron nombre, / otra manera de enterrar.»
 
 **Rima con:**
 
-- la bandeja baja de la proyección (D8);
-- el líquido que la boca no retiene (D16);
-- el estudio de tatuajes (D6): el esténcil de tatuaje es hectográfico;
+- la Acción 1: el mismo gesto con que se frotó la pared;
+- el dibujo de la lámina, hecho «según viejas fotografías»: cada copia se aleja un poco más de la piedra;
 - «cada paso pierde materia y gana luz».
 
-**El hectógrafo.** Es un duplicador de gelatina: una bandeja baja de gelatina con glicerina. La matriz, escrita con tinta de anilina, se apoya boca abajo y la gelatina absorbe la tinta. Después, cada hoja que se apoya se lleva un poco: salen decenas de copias, cada una más clara que la anterior. La tinta que queda se hunde en la gelatina, que a los uno o dos días está limpia otra vez. Se bebe la matriz y vuelve a empezar.
+**El frotado.** Un papel fino sobre la placa, por el anverso, y el grafito pasado de plano: se marca lo que sobresale. El aluminio es blando, así que cada frotada aplasta un poco el relieve y la siguiente sale más clara. Se sigue hasta que la letra no se lee. Es la escala de pesos de la familia: del *Frotado 01*, el más cargado, al último que se lee.
 
 **Materiales:**
 
-- una asadera o bandeja metálica baja, de unos 25 × 35 cm;
-- gelatina sin sabor y glicerina líquida (de farmacia);
-- guantes;
-- papel bond;
-- una matriz, de una de estas dos formas:
-  - **a) En el estudio:** una impresión en alto contraste de las fotos de las 56 placas en su estado *Piel*, dispuestas como la caja en cuerpo tesela (cabe en una A4), pasada por la máquina de esténcil térmico.
-  - **b) A mano:** la misma disposición calcada con lápiz tinta (lápiz copiativo) o lápiz hectográfico. No se moja con la lengua, como se hacía antes: la anilina es tóxica. Se moja con un pincel húmedo.
-
-**Receta de partida** (hay que probarla y anotar los cambios):
-
-1. Hidratar 2 sobres de gelatina sin sabor (unos 15 g) en media taza de agua fría.
-2. Disolver a fuego bajo, sin hervir, con una taza de glicerina.
-3. Verter en la bandeja hasta 1,5-2 cm de alto, reventar las burbujas y dejar cuajar 24 horas.
+- papel de seda o papel manteca, en hojas de 17 × 17 cm;
+- grafito en barra o crayón de cera negro, el de la Acción 1;
+- cinta de pintor;
+- una superficie dura y lisa: vidrio o terciado. No la base blanda del repujado, que hunde el relieve.
 
 **Pasos:**
 
-1. **Transferir la matriz.** Humedecer apenas la gelatina con una esponja, apoyar la matriz boca abajo 1-2 minutos y retirarla.
-2. **Sacar copias.** Apoyar una hoja, pasar la mano sin presionar de más y levantarla: copia 1. Seguir hasta que la caja no se lea más.
-3. **Numerar** cada copia a lápiz, en el reverso.
-4. **Dejar que la bandeja beba.** Sin lavarla, en uno o dos días la tinta se hunde y la gelatina queda lista.
+1. **Elegir la placa.** El frotado la gasta: se frota una placa aparte, repujada para eso, o la placa al final de todo, después del agua y de la voz.
+2. **Fijar el papel** sobre la placa con cinta de pintor en dos esquinas, sin tocar el aluminio con la cinta.
+3. **Frotar** con el grafito de plano, en una sola dirección y con la presión de la pared. Contar las pasadas.
+4. **Numerar** cada frotado a lápiz, en el reverso: celda, placa y número de frotada.
+5. **Seguir** con la misma placa hasta que la letra no se lea, y anotar la última que se lee.
+6. **Escanear** los frotados en orden.
 
-Si el esténcil térmico no transfiere bien a la gelatina, probar la matriz a mano: los dos caminos se prueban antes de la tirada.
-
-**Registro:** las copias numeradas son el estilo *Copia 01 … Copia n*. En cada ficha va el número de la última copia en que ese signo todavía se lee: algunos se borran antes que otros.
-
-**Seguridad:** guantes, ventilación, y la bandeja y los utensilios no vuelven a la cocina.
+**Registro:** los frotados numerados son el estilo *Frotado 01 … Frotado n*. En cada ficha, el número del último que se lee: algunos signos se borran antes que otros.
 
 ### Acción 9 · Pasar por el agua
 
@@ -312,7 +297,7 @@ Si el esténcil térmico no transfiere bien a la gelatina, probar la matriz a ma
 
 **La grabación no se publica ni entra en el espécimen.** Solo queda lo que la voz le hizo al agua: «no tiene lengua pero igual dice».
 
-### Acción 11 · Llegar a la pared y componer
+### Acción 11 · Componer
 
 > «Cada vuelta pasa por el agua / y el agua no repite, / la misma diosa dos veces / y ninguna igual.»
 
@@ -320,18 +305,15 @@ Si el esténcil térmico no transfiere bien a la gelatina, probar la matriz a ma
 
 En la piscina, con permiso:
 
-1. ***Azulejo*.** Al atardecer, montar la Acción 9 frente a la pared de la piscina. La letra cae sobre los azulejos verdaderos, en trapecio y cortada por las juntas.
-   - Fotografiarla.
-   - Después, calcar sobre el frotado lo que quedó: dónde la cortan las juntas y cuánto se abre el trapecio. Es el último estilo, *Azulejo*.
-2. **Componer.** Un verso por vez:
+1. **Componer.** Un verso por vez:
    - en el fondo, con las placas apoyadas sin nada que las pegue;
    - o en la pared, con cinta de pintor sobre el esmalte, nunca sobre la junta.
 
    Una placa por azulejo, un azulejo vacío entre palabras. Si la pared no alcanza (el verso más largo ocupa 44 azulejos, contando los espacios), el verso dobla la esquina.
-3. **Fotografiar** el verso compuesto.
-4. **Distribuir.** Devolver cada placa a su celda: en la imprenta, *distribuir* es devolver los tipos a la caja.
-5. **Siguiente verso.** Componer, registrar y distribuir: «termina y empieza».
-6. **Al irse**, no queda nada pegado ni nada se llevó.
+2. **Fotografiar** el verso compuesto.
+3. **Distribuir.** Devolver cada placa a su celda: en la imprenta, *distribuir* es devolver los tipos a la caja.
+4. **Siguiente verso.** Componer, registrar y distribuir: «termina y empieza».
+5. **Al irse**, no queda nada pegado ni nada se llevó.
 
 ### Acción 12 · Cerrar la caja
 
@@ -344,6 +326,85 @@ En la piscina, con permiso:
 
 ---
 
+## En pausa
+
+Estas tres acciones salieron de la cadena de estados: la simulación no las hace y sus estilos no están en la familia. Quedan escritas por si se retoman.
+
+### Vestir (antes, Acción 6)
+
+> «Moverse como se mueve la piedra, / es decir, apenas, es decir, temblor, / es decir, un presente continuo.»
+
+**Rima con:** D3 (placas sobre el cuerpo) y D11 (moverse como la piedra).
+
+**Materiales:**
+
+- esparadrapo de papel (del que no irrita);
+- ropa lisa o piel, según quien vista;
+- la lámpara de la Acción 4.
+
+**Pasos:**
+
+1. **Elegir qué se viste.** A 15 cm por letra, un cuerpo lleva una palabra o un verso corto: «voz», «ninguna igual».
+   - Para que el estilo *Piel* tenga todas sus letras, las 56 placas de la primera tanda se visten, en varias sesiones.
+   - Las demás placas de la póliza se visten si se puede: son variantes.
+2. **Quién viste** lo decide la persona, que da su acuerdo por escrito en el cuaderno. Puede ser quien hace el proyecto. Nunca el cuerpo de Rebeca, salvo que ella lo proponga.
+3. **Fijar las placas** con esparadrapo, dejando piel o tela a la vista entre ellas.
+   - Ninguna placa va sobre la cara, la boca o la nariz: la obra tapó ojos y boca, y el proyecto no repite ese gesto.
+   - Cuidado con los bordes del aluminio, que cortan.
+4. **Moverse apenas** durante lo que dura un bucle del video: el dato se le pide a Rebeca en la Acción 0. Si no se consigue, un tiempo elegido y anotado.
+5. **Retirar las placas y aplanarlas solo con la palma.** No se plancha ni se prensa: los pliegues son el registro.
+6. **Fotografiar** cada placa con la misma luz rasante de la Acción 4: era el estilo *Piel*.
+
+**Registro:** en la ficha, *Piel*: quién, cuánto tiempo, dónde.
+
+### Hectografiar (antes, Acción 8)
+
+> «La tierra se dio de beber a sí misma / y ningún contenedor aguanta lo que contiene.»
+
+**Rima con:**
+
+- la bandeja baja de la proyección (D8);
+- el líquido que la boca no retiene (D16);
+- el estudio de tatuajes (D6): el esténcil de tatuaje es hectográfico;
+- «cada paso pierde materia y gana luz».
+
+**El hectógrafo.** Es un duplicador de gelatina: una bandeja baja de gelatina con glicerina. La matriz, escrita con tinta de anilina, se apoya boca abajo y la gelatina absorbe la tinta. Después, cada hoja que se apoya se lleva un poco: salen decenas de copias, cada una más clara que la anterior. La tinta que queda se hunde en la gelatina, que a los uno o dos días está limpia otra vez. Se bebe la matriz y vuelve a empezar.
+
+**Materiales:**
+
+- una asadera o bandeja metálica baja, de unos 25 × 35 cm;
+- gelatina sin sabor y glicerina líquida (de farmacia);
+- guantes;
+- papel bond;
+- una matriz, de una de estas dos formas:
+  - **a) En el estudio:** una impresión en alto contraste de las fotos de las 56 placas, dispuestas como la caja en cuerpo tesela (cabe en una A4), pasada por la máquina de esténcil térmico.
+  - **b) A mano:** la misma disposición calcada con lápiz tinta (lápiz copiativo) o lápiz hectográfico. No se moja con la lengua, como se hacía antes: la anilina es tóxica. Se moja con un pincel húmedo.
+
+**Receta de partida** (hay que probarla y anotar los cambios):
+
+1. Hidratar 2 sobres de gelatina sin sabor (unos 15 g) en media taza de agua fría.
+2. Disolver a fuego bajo, sin hervir, con una taza de glicerina.
+3. Verter en la bandeja hasta 1,5-2 cm de alto, reventar las burbujas y dejar cuajar 24 horas.
+
+**Pasos:**
+
+1. **Transferir la matriz.** Humedecer apenas la gelatina con una esponja, apoyar la matriz boca abajo 1-2 minutos y retirarla.
+2. **Sacar copias.** Apoyar una hoja, pasar la mano sin presionar de más y levantarla: copia 1. Seguir hasta que la caja no se lea más.
+3. **Numerar** cada copia a lápiz, en el reverso.
+4. **Dejar que la bandeja beba.** Sin lavarla, en uno o dos días la tinta se hunde y la gelatina queda lista.
+
+Si el esténcil térmico no transfiere bien a la gelatina, probar la matriz a mano: los dos caminos se prueban antes de la tirada.
+
+**Registro:** las copias numeradas son el estilo *Copia 01 … Copia n*. En cada ficha va el número de la última copia en que ese signo todavía se lee: algunos se borran antes que otros.
+
+**Seguridad:** guantes, ventilación, y la bandeja y los utensilios no vuelven a la cocina.
+
+### Llevar la luz a la pared (antes, Acción 11, paso 1)
+
+Al atardecer, montar la Acción 9 frente a la pared de la piscina. La letra cae sobre los azulejos verdaderos, en trapecio y cortada por las juntas. Fotografiarla y, después, calcar sobre el frotado lo que quedó: dónde la cortan las juntas y cuánto se abre el trapecio. Era el estilo *Azulejo*.
+
+---
+
 ## Materiales, todo junto
 
 | Material | Para qué | Dónde |
@@ -351,14 +412,13 @@ En la piscina, con permiso:
 | Papel de aluminio de cocina (unos 3 m²) | Placas | Mercado o supermercado |
 | Punzón de bola o bolígrafo sin tinta | Repujado | Librería o bazar |
 | Fieltro o goma eva | Base del repujado | Librería |
-| Papel de calco, papel de seda o manteca, bond | Calcos, frotados y copias | Librería |
+| Papel de calco, papel de seda o manteca | Calcos y frotados | Librería |
 | Grafito en barra o crayón de cera | Frotados | Librería de arte |
-| Cinta de pintor y esparadrapo de papel | Fijar sin dejar marca | Ferretería y farmacia |
+| Cinta de pintor | Fijar sin dejar marca | Ferretería |
+| Cinta de enmascarar blanca, del ancho del canal, y plástico negro | Encintar | Ferretería |
 | Cartón gris o terciado, cola y cúter | La caja | Librería o barraca |
-| Gelatina sin sabor y glicerina | Hectógrafo | Supermercado y farmacia |
-| Lápiz tinta, lápiz hectográfico o esténcil térmico | Matriz | Librería antigua o el estudio |
-| Guantes | Tinta de anilina | Farmacia |
-| Bandejas bajas (dos) | Hectógrafo y agua | Bazar |
+| Una bandeja baja | Agua | Bazar |
+| Vidrio o terciado | Base dura para frotar | Vidriería o barraca |
 | Lámpara LED a pilas y celofán verde | Luz rasante y reflejo | Ferretería y librería |
 | Parlante a pilas y bolsa plástica | Voz | — |
 | Cinta métrica y regla metálica | Medir | Ferretería |
@@ -366,7 +426,6 @@ En la piscina, con permiso:
 ## Seguridad, todo junto
 
 - **Electricidad:** nada con enchufe sobre el agua ni al lado de la bandeja.
-- **Anilinas** (lápiz tinta, tinta hectográfica): guantes y ventilación. No se lleva nada a la boca. Los utensilios no vuelven a la cocina.
-- **Aluminio:** los bordes cortan. Redondear las esquinas y cuidar la piel al vestir.
-- **Cuerpo:** acuerdo escrito de quien viste. Nada sobre la cara, la boca ni la nariz.
+- **Aluminio:** los bordes cortan. Cortar o redondear las esquinas.
+- **Grafito:** frotar sobre papel, nunca sobre la piel.
 - **Piscina:** permiso escrito. No se despega, raspa, pinta ni pega nada fuera del esmalte, y no queda nada al irse.
