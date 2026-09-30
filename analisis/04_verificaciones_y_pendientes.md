@@ -115,7 +115,10 @@ Estado de cada dato:
 - **Qué no afirma.**
   - No dice si los pasteles están terminados, ni describe resultados de piezas que no se muestran.
   - Dice lo contrario del «hallazgo» que objetaba el árbitro: los esquemas «no descubren nada, pero obligan a decidir» (§2), y el cráneo de la Figura 1 es una decisión de ensamblaje.
-- **Si tienes fotografías de los pasteles**, puedes sustituir los esquemas: pasos en `articulo/figuras/LEEME.md`. En ese caso:
+- **Decisión del 30 de septiembre de 2026:** el artículo llevará los escaneos de tus pasteles, no los esquemas ni imágenes de IA.
+  - Las imágenes de GPT Image 2 son solo exploración (`17_estilo_y_prompts_gpt_image.md`).
+  - Si influyen en los pasteles, la declaración de IA tiene que decirlo (§17.7).
+- **Cuando tengas los escaneos**, sustituye los esquemas: pasos en `articulo/figuras/LEEME.md`. En ese caso:
   - escribe en el pie los datos reales de cada pieza (soporte, medidas, año);
   - revisa los planos (2) y (3) con lo que hizo cada pastel;
   - ajusta la declaración de IA.
@@ -170,7 +173,8 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [x] Autoría y nota 1 (80 palabras)
 - [x] Palabras clave: cinco en cada lengua
 - [ ] Declaración de IA revisada (§4.5)
-- [ ] Figuras decididas: esquemas o fotografías, con su pie (§4.4)
+- [x] Figuras decididas: los escaneos de los pasteles (§4.4)
+- [ ] Pasteles hechos, escaneados y con su pie; declaración de IA ajustada (§4.4; `17_estilo_y_prompts_gpt_image.md`, §17.7)
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
 - [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)

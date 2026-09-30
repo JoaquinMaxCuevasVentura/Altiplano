@@ -2,18 +2,21 @@
   <rect width="440" height="380" fill="#f6f2ea"/>
   <text x="14" y="22" font-size="13" font-weight="bold" fill="#2f2a26">Fig. 2 · Signo Escalonado frente al mapa — esquema</text>
   <text x="14" y="40" font-size="9" fill="#6b5f52">arriba: SECCIÓN del cerro (empaste, piedra a piedra) · abajo: PLANTA (incisión con punzón)</text>
-  <!-- sección escalonada -->
-  <path d="M40,190 L40,165 L90,165 L90,140 L140,140 L140,112 L190,112 L190,84 L250,84 L250,112 L300,112 L300,140 L350,140 L350,165 L400,165 L400,190 Z" fill="#b9826a"/>
-  <g fill="#8d5a45"><circle cx="70" cy="178" r="4"/><circle cx="120" cy="152" r="4"/><circle cx="165" cy="126" r="4"/><circle cx="220" cy="98" r="4"/><circle cx="330" cy="152" r="4"/><circle cx="375" cy="178" r="4"/></g>
-  <!-- chujllas por escalón -->
+  <!-- sección: el cerro real, asimétrico, con terrazas irregulares (pp. 6-8) -->
+  <path d="M40,190 L40,176 L70,176 L74,150 L104,150 L108,122 L136,122 L140,96 L168,96 L172,74 L192,72 L198,80 L214,96 L246,104 L252,126 L300,130 L306,152 L356,156 L362,174 L400,176 L400,190 Z" fill="#b9826a"/>
+  <g fill="#8d5a45"><circle cx="56" cy="184" r="4"/><circle cx="92" cy="164" r="4"/><circle cx="124" cy="138" r="3.5"/><circle cx="230" cy="118" r="4"/><circle cx="280" cy="146" r="4"/><circle cx="332" cy="170" r="4"/><circle cx="384" cy="184" r="3.5"/></g>
+  <!-- chujllas en las terrazas: los Villca arriba, pero la del peón aún más arriba -->
   <g fill="#3b3530">
-    <path d="M205,84 l0,-10 l8,-7 l8,7 l0,10 Z"/>
-    <path d="M100,140 l0,-8 l6,-6 l6,6 l0,8 Z"/><path d="M310,140 l0,-8 l6,-6 l6,6 l0,8 Z"/>
-    <path d="M50,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M65,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M360,165 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M378,165 l0,-7 l5,-5 l5,5 l0,7 Z"/>
+    <path d="M146,96 l0,-10 l8,-7 l8,7 l0,10 Z"/>
+    <path d="M82,150 l0,-8 l6,-6 l6,6 l0,8 Z"/><path d="M222,104 l0,-8 l6,-6 l6,6 l0,8 Z"/>
+    <path d="M46,176 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M58,176 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M318,156 l0,-7 l5,-5 l5,5 l0,7 Z"/><path d="M372,176 l0,-7 l5,-5 l5,5 l0,7 Z"/>
   </g>
-  <path d="M232,84 l0,-10 l8,-7 l8,7 l0,10 Z" fill="none" stroke="#b5542b" stroke-width="2"/>
+  <path d="M176,73 l0,-10 l8,-7 l8,7 l0,10 Z" fill="none" stroke="#b5542b" stroke-width="2"/>
+  <!-- el Signo Escalonado, simétrico, inciso sobre el cerro: no coincide con la pendiente -->
+  <path d="M40,190 L40,165 L90,165 L90,140 L140,140 L140,112 L190,112 L190,84 L250,84 L250,112 L300,112 L300,140 L350,140 L350,165 L400,165 L400,190" fill="none" stroke="#3b3530" stroke-width="2.6" stroke-linejoin="miter" opacity="0.35"/>
+  <path d="M40,190 L40,165 L90,165 L90,140 L140,140 L140,112 L190,112 L190,84 L250,84 L250,112 L300,112 L300,140 L350,140 L350,165 L400,165 L400,190" fill="none" stroke="#f6f2ea" stroke-width="1.1" stroke-linejoin="miter"/>
   <!-- líneas de proyección (diédrico) -->
-  <g stroke="#6b5f52" stroke-dasharray="3,3"><line x1="40" y1="190" x2="40" y2="250"/><line x1="140" y1="140" x2="140" y2="250"/><line x1="190" y1="112" x2="190" y2="250"/><line x1="250" y1="84" x2="250" y2="250"/><line x1="350" y1="140" x2="350" y2="250"/><line x1="400" y1="190" x2="400" y2="250"/></g>
+  <g stroke="#6b5f52" stroke-dasharray="3,3"><line x1="40" y1="190" x2="40" y2="250"/><line x1="140" y1="190" x2="140" y2="250"/><line x1="190" y1="190" x2="190" y2="250"/><line x1="250" y1="190" x2="250" y2="250"/><line x1="350" y1="190" x2="350" y2="250"/><line x1="400" y1="190" x2="400" y2="250"/></g>
   <text x="408" y="226" font-size="8" fill="#6b5f52" transform="rotate(-90 408 226)">proyección</text>
   <!-- planta: tablero contrahecho -->
   <g stroke="#3b3530" stroke-width="1.2" fill="none">
@@ -28,9 +31,10 @@
   <rect x="318" y="290" width="26" height="16" fill="#3b3530"/><rect x="356" y="288" width="16" height="20" fill="#3b3530"/><path d="M356,288 l8,-10 l8,10 Z" fill="#3b3530"/>
   <!-- rótulos encima de las líneas -->
   <g font-size="8.5" fill="#2f2a26" stroke="#f6f2ea" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
-    <text x="176" y="60">Villca (pp. 20-28)</text>
-    <text x="258" y="66" fill="#b5542b">chujlla abandonada</text><text x="258" y="76" fill="#b5542b">del peón Condori (p. 35)</text>
-    <text x="325" y="104">Huanca, Huallpa…</text>
+    <text x="92" y="64">Villca (pp. 20-28)</text>
+    <text x="204" y="52" fill="#b5542b">chujlla abandonada «cerro arriba»</text><text x="204" y="62" fill="#b5542b">del peón Condori (p. 35)</text>
+    <text x="256" y="96">Huanca, Huallpa…</text>
+    <text x="262" y="78" fill="#6b5f52">Signo Escalonado (p. 38), inciso:</text><text x="262" y="87" fill="#6b5f52">no encaja en la pendiente</text>
     <text x="30" y="206">Condori, Mamani, Quispe: «no tienen historia» (pp. 22-23)</text>
   </g>
   <g font-size="8.5" fill="#2f2a26" stroke="#f6f2ea" stroke-width="3" stroke-linejoin="round" paint-order="stroke">

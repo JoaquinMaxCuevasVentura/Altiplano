@@ -5,6 +5,11 @@
 > - **Numeración.** En el artículo definitivo las figuras siguen el orden de aparición. La Figura 4 de esta guía (Pelvis) es la **5** del artículo; la 5 (Centinela), la **6**; la 6 (Castillete), la **4**. Las Figuras 1 a 3 no cambian.
 > - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando se puede con fuentes andinas. No lo presenta como hallazgo, porque los esquemas «no descubren nada, pero obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
 > - **Fotografías.** Las §§5.5 y 5.6 están puestas al día con el artículo definitivo. Los mismos pasos, con el detalle de rutas y pies, están en `articulo/figuras/LEEME.md`.
+>
+> **Actualización del 30 de septiembre de 2026** (`17_estilo_y_prompts_gpt_image.md`):
+> - **Las paletas de las fichas se releen por material:** cada color se nombra por lo que es y hace (hollín, óxidos de hierro, hueso, casiterita, copajira), no por lo que «significa». El rojo de la luna es polvo; el de Marte, óxido; Sirio es blanco azulado (§17.3).
+> - **El esquema de la Figura 2 ya no es una pirámide simétrica:** el Signo se traza encima y no encaja en la pendiente, como pide esta guía.
+> - **Hay seis guías de composición sin texto** (`esquemas/guias/`) y prompts para explorar cada pastel con GPT Image 2 antes de dibujarlo.
 
 
 Las cuatro imágenes que acompañaron el encargo eran **referencias visuales**, no los dibujos del artículo (quedan en `analisis/referencias_visuales/`). Los seis pasteles están por hacer. Esta guía los deriva del texto de la novela con el mismo método del artículo, para que no partas de cero:

@@ -53,7 +53,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
   - confirmar el epígrafe;
-  - decidir si las figuras son los esquemas o las fotografías de los pasteles;
+  - hacer y escanear los pasteles: serán las figuras (las imágenes de GPT Image 2 son solo exploración; `analisis/17_estilo_y_prompts_gpt_image.md`);
   - cotejar las citas con el impreso;
   - preparar una versión anonimizada si la revista la pide;
   - enviar (el plazo venció el 25 de septiembre).
@@ -81,7 +81,9 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/14_evaluacion_propuesta_otra_ia.md` | Evaluación de una propuesta hecha con otra IA: títulos con «manuaje» y «grafuaje» (no), «piedra, papel y máquina» (sí), cuatro metáforas verificadas (los pururaucas entran con Dean; la sopa de piedra y la casa sobre la roca, no) y el «corazón de piedra» de la novela (p. 80) |
 | `analisis/15_spedding_susto_al_susto.md` | La fuente del «corazón de piedra»: Alison Spedding, «Piedras en el camino», en *Susto al susto* (2025). Cita verificada en el escaneo (p. XV), correcciones al análisis de otra IA, lo que entró (§7) y lo que queda en reserva (las piedras *awicha* de los cimientos). El libro completo muestra que es un relato (véase 16) |
 | `analisis/16_susto_al_susto_libro_completo.md` | *Susto al susto* completo: la «piedra bezoar» de la novela (p. 66) es la *jayintilla* de Bertonio (p. 361), y el éxodo y el retorno se leen como un susto (§§6-7). También: el texto de Spedding es ficción, qué dice el colofón, los diez recortes, lo que queda en reserva de cada sección y lo que no se usa |
-| `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie) |
+| `analisis/17_estilo_y_prompts_gpt_image.md` | Tu estilo leído en nueve pasteles, la paleta matérica (el color por el material y sus propiedades físicas, con página de la novela) y los seis prompts para explorar las obras con GPT Image 2, con qué evitar, qué mirar y qué cambia en el artículo cuando entren los escaneos |
+| `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie). La Figura 2 se corrigió el 30 de septiembre: el Signo ya no encaja en la pendiente |
+| `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts, y la máscara opcional de la Figura 5. Se regeneran con `generar_guias.py` |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
 

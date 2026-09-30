@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">
+<defs>
+  <filter id="aspero" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="5" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="seco" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="6" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="suave" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="blando" x="0" y="0" width="100%" height="100%"><feGaussianBlur stdDeviation="1.4"/></filter>
+  <filter id="bruma" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+  <filter id="halo" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="grano" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0.55 0"/>
+  </filter>
+</defs>
+<g filter="url(#blando)">
+<linearGradient id="papel2" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#efe6d6"/><stop offset="0.48" stop-color="#e3d7c2"/><stop offset="0.56" stop-color="#7a828b"/><stop offset="1" stop-color="#5d6670"/>
+</linearGradient>
+<rect width="1024" height="1536" fill="url(#papel2)"/>
+<path d="M70,690 L70,631 L143,631 L153,520 L226,520 L236,402 L305,402 L314,292 L383,292 L393,198 L441,190 L456,224 L495,292 L573,326 L588,419 L705,436 L720,529 L842,546 L857,622 L950,631 L950,690 Z" fill="#9a5a45" filter="url(#aspero)"/>
+<g fill="#7d4636" filter="url(#aspero)" opacity="0.8"><ellipse cx="150" cy="640" rx="22" ry="14"/><ellipse cx="260" cy="520" rx="18" ry="12"/><ellipse cx="560" cy="330" rx="20" ry="13"/><ellipse cx="620" cy="480" rx="24" ry="15"/><ellipse cx="780" cy="600" rx="20" ry="13"/><ellipse cx="900" cy="650" rx="18" ry="12"/></g>
+<path d="M327,292 L327,265 L349,246 L370,265 L370,292 Z" fill="#2b2420" filter="url(#seco)"/><path d="M169,520 L169,498 L187,482 L205,498 L205,520 Z" fill="#2b2420" filter="url(#seco)"/><path d="M511,326 L511,304 L529,288 L547,304 L547,326 Z" fill="#2b2420" filter="url(#seco)"/><path d="M82,631 L82,613 L97,600 L111,613 L111,631 Z" fill="#2b2420" filter="url(#seco)"/><path d="M112,631 L112,613 L126,600 L141,613 L141,631 Z" fill="#2b2420" filter="url(#seco)"/><path d="M745,546 L745,526 L762,512 L778,526 L778,546 Z" fill="#2b2420" filter="url(#seco)"/><path d="M879,631 L879,613 L894,600 L908,613 L908,631 Z" fill="#2b2420" filter="url(#seco)"/><path d="M404,194 L404,172 L422,156 L440,172 L440,194 Z" fill="#e3d7c2" stroke="#8a4b2f" stroke-width="6" filter="url(#seco)"/>
+<path d="M70,690 L70,584 L192,584 L192,478 L314,478 L314,359 L437,359 L437,241 L583,241 L583,359 L705,359 L705,478 L828,478 L828,584 L950,584 L950,690" fill="none" stroke="#f3ead8" stroke-width="5" stroke-linejoin="miter" filter="url(#seco)" opacity="0.9"/>
+<g stroke="#d8cfc0" stroke-width="2.5" opacity="0.7" filter="url(#seco)"><line x1="70" y1="690" x2="70" y2="880" /><line x1="314" y1="690" x2="314" y2="880" /><line x1="437" y1="690" x2="437" y2="880" /><line x1="583" y1="690" x2="583" y2="880" /><line x1="828" y1="690" x2="828" y2="880" /><line x1="950" y1="690" x2="950" y2="880" /></g>
+<path d="M70,880 L950,880 L940,1430 L80,1420 Z" fill="#555e68" filter="url(#aspero)"/>
+<g stroke="#d9d2c4" stroke-width="5" fill="none" filter="url(#seco)">
+  <path d="M70,880 L950,880 L940,1430 L80,1420 Z"/>
+  <path d="M215,880 L205,1422 M375,880 L388,1424 M535,880 L525,1426 M705,880 L717,1428 M825,880 L815,1429"/>
+  <path d="M72,1040 Q470,1010 948,1062 M76,1230 Q500,1265 944,1215"/>
+</g>
+<g fill="#9a5a45" filter="url(#seco)"><path d="M205,880 l12,-24 l12,24 Z"/><path d="M523,880 l12,-24 l12,24 Z"/><path d="M705,1428 l12,-24 l12,24 Z"/><path d="M380,1230 l10,-20 l10,20 Z"/></g>
+<g stroke="#e9e0cf" stroke-width="6" stroke-linecap="round"><line x1="455" y1="1100" x2="455" y2="1150"/><line x1="433" y1="1125" x2="477" y2="1125"/></g>
+<rect x="760" y="1270" width="80" height="50" fill="#2b2420" filter="url(#seco)"/>
+<path d="M870,1330 L870,1270 L895,1236 L920,1270 L920,1330 Z" fill="#2b2420" filter="url(#seco)"/>
+</g>
+<rect width="1024" height="1536" filter="url(#grano)" style="mix-blend-mode:multiply" opacity="0.35"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024">
+<defs>
+  <filter id="aspero" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="seco" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="4" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="suave" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="blando" x="0" y="0" width="100%" height="100%"><feGaussianBlur stdDeviation="1.4"/></filter>
+  <filter id="bruma" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+  <filter id="halo" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="grano" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0.55 0"/>
+  </filter>
+</defs>
+<g filter="url(#blando)">
+<linearGradient id="cielo1" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#121624"/><stop offset="0.7" stop-color="#2a2a36"/><stop offset="1" stop-color="#46404a"/>
+</linearGradient>
+<radialGradient id="fogon" cx="0.40" cy="0.92" r="0.75">
+  <stop offset="0" stop-color="#8a4424"/><stop offset="0.25" stop-color="#3a2a22"/><stop offset="1" stop-color="#211c19"/>
+</radialGradient>
+<rect width="1536" height="1024" fill="url(#cielo1)"/>
+<rect y="790" width="1536" height="234" fill="#2f2822"/>
+<path d="M1060,790 L1536,400 L1536,790 Z" fill="#9a5a45" filter="url(#aspero)" opacity="0.85"/>
+<g fill="#6e4636" filter="url(#aspero)"><ellipse cx="1250" cy="700" rx="26" ry="18"/><ellipse cx="1340" cy="610" rx="20" ry="15"/><ellipse cx="1430" cy="540" rx="30" ry="20"/><ellipse cx="1380" cy="730" rx="18" ry="13"/></g>
+<path d="M478,790 L478,640 C470,600 455,560 470,500 C495,400 580,300 690,285 C820,268 960,300 1050,390 C1110,450 1128,540 1100,620 C1085,665 1080,720 1075,790 Z" fill="url(#fogon)" stroke="#7d7468" stroke-width="44" stroke-linejoin="round" filter="url(#aspero)"/>
+<path d="M458,790 L458,650 C452,610 446,575 458,540 L525,540 L525,790 Z" fill="#6b5a45" filter="url(#aspero)"/>
+<path d="M1040,560 C1080,600 1090,660 1085,790 L1030,790 L1030,560 Z" fill="#6b5a45" filter="url(#aspero)"/>
+<path d="M462,790 L462,690 C462,628 524,618 532,676 L532,790 Z" fill="#23232e" filter="url(#seco)"/>
+<path d="M468,686 C474,640 516,636 526,680" fill="none" stroke="#8a8272" stroke-width="5" opacity="0.6"/>
+<g stroke="#d9c9a6" stroke-width="7" fill="none" stroke-linecap="round" filter="url(#seco)">
+  <line x1="530" y1="520" x2="1030" y2="520"/>
+  <path d="M600,520 L600,548 M582,548 Q603,586 628,552"/>
+  <path d="M690,520 L690,660"/>
+  <path d="M820,520 L820,544 M780,544 L862,544 M790,544 L790,570 M852,544 L852,570"/>
+  <path d="M930,520 L930,552 M914,552 Q932,584 950,552"/>
+</g>
+<rect x="545" y="758" width="130" height="32" fill="#6d5f50" filter="url(#seco)"/>
+<rect x="900" y="758" width="125" height="32" fill="#6d5f50" filter="url(#seco)"/>
+<ellipse cx="985" cy="735" rx="26" ry="15" fill="#b9a37e" filter="url(#seco)"/>
+<ellipse cx="765" cy="772" rx="70" ry="40" fill="#b5542b" filter="url(#halo)" opacity="0.8"/>
+<path d="M735,790 Q765,748 795,790 Z" fill="#b5542b"/>
+<path d="M752,790 Q765,770 778,790 Z" fill="#e08a3a"/>
+<g stroke="#211c19" stroke-width="9" stroke-linecap="round"><line x1="700" y1="175" x2="700" y2="262"/><line x1="672" y1="202" x2="728" y2="202"/></g>
+<ellipse cx="700" cy="226" rx="11" ry="8" fill="#9b5a3a"/>
+</g>
+<rect width="1536" height="1024" filter="url(#grano)" style="mix-blend-mode:multiply" opacity="0.35"/>
+</svg>
