@@ -154,7 +154,8 @@ Antes de repujar la primera letra:
 3. **Repasar el contorno con el punzón.** El punzón se detiene 3 mm antes de cerrar cada contorno: es el desagüe.
    - Lo hallado, con un trazo continuo.
    - Lo reconstruido, a puntos: el punteado queda en relieve para siempre.
-4. **Retirar el calco y dar vuelta la placa.** Por el frente, la letra está al derecho y en relieve. Por el reverso queda al revés y hundida: un canal.
+   - **Con las dos manos.** La mano del punzón hunde el canal por el reverso. La otra, debajo de la base, toca el frente a ciegas cada tanto y lee el relieve que va saliendo. Es la «doble información» de Cárcamo: tocar por fuera y mirar por dentro (`09`).
+4. **Retirar el calco y dar vuelta la placa.** Por el frente, la letra está al derecho y en relieve. Por el reverso queda al revés y hundida: un canal. La placa no es dibujo ni bulto: es un 2,5D.
 5. **Rellenar solo si hace falta.** Si una letra pide más cuerpo, se sube desde el reverso con el lado redondo del punzón, y se anota.
 6. **El orden de trabajo:**
    - primero una placa por celda: 56;
@@ -163,7 +164,7 @@ Antes de repujar la primera letra:
 
 **Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas.
 
-**Registro:** en la ficha, *Placa*. Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
+**Registro:** en la ficha, *Placa*, con quién repujó y con qué mano (la derecha, la izquierda o las dos). Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
 
 ### Acción 5 · Llenar la caja
 
@@ -173,16 +174,16 @@ Antes de repujar la primera letra:
 
 **Materiales:**
 
-- cartón gris grueso o terciado fino;
+- terciado fino, porque la caja de tipos de imprenta era un mueble de madera; si no, cartón gris grueso;
 - cola;
 - cúter;
 - la lámina de la caja (`esquemas/caja_8x7.svg`).
 
 **Pasos:**
 
-1. **Armar una bandeja de 8 × 7 compartimentos** de un azulejo de lado, con paredes bajas.
+1. **Armar una bandeja de 8 × 7 compartimentos** de un azulejo de lado, con paredes bajas. Cada celda deja unos milímetros de juego: la placa no se pega ni se aprieta, respira (Johnson: «pensar como el agua»).
 2. **Cada placa va a su celda**, con su ficha, según el orden de `textos/inventario.md`.
-3. **La tapa** lleva una sola puerta calada del tamaño de una celda, sobre la celda 1: con la caja cerrada se ve solo la coma.
+3. **La tapa** lleva una sola puerta calada del tamaño de una celda, sobre la celda 1: con la caja cerrada se ve solo la coma. La puerta abre con una bisagra de cinta de papel: adentro y afuera, dos caras de un mismo pliegue.
 4. **Fuera de la caja**, pegado en la tapa por dentro, el `.notdef`: la celda de la lámina calcada a mano.
 
 ### Acción 6 · Encintar
@@ -213,7 +214,7 @@ Antes de repujar la primera letra:
 
 **Rima con:** D13 (la placa que sale de la boca).
 
-1. **Se le propone a Rebeca** que haga el signo final: una placa trabajada solo con los dedos, sin punzón. La forma la decide quien la hace.
+1. **Se le propone a Rebeca** que haga el signo final: una placa trabajada solo con los dedos, sin punzón. La forma la decide quien la hace. Es manuaje sin herramienta y sin palabra: «las manos no tienen lengua» (`09`).
 2. **Si ella no quiere**, lo hace quien compone, y así se anota.
 3. **Va a la celda 56.** Es el único signo de la caja que no se halló ni se reconstruyó.
 
@@ -295,7 +296,7 @@ Antes de repujar la primera letra:
 2. **Reproducir tu lectura.** El agua vibra y la letra reflejada se deshace en ondas.
 3. **Fotografiar** y anotar qué verso sonaba en cada foto: *Voz*.
 
-**La grabación no se publica ni entra en el espécimen.** Solo queda lo que la voz le hizo al agua: «no tiene lengua pero igual dice».
+**La grabación no se publica ni entra en el espécimen.** Solo queda lo que la voz le hizo al agua: «no tiene lengua pero igual dice». Es la única acción del proyecto que hace la boca; todas las demás las hacen las manos (`09`).
 
 ### Acción 11 · Componer
 
@@ -416,7 +417,7 @@ Al atardecer, montar la Acción 9 frente a la pared de la piscina. La letra cae 
 | Grafito en barra o crayón de cera | Frotados | Librería de arte |
 | Cinta de pintor | Fijar sin dejar marca | Ferretería |
 | Cinta de enmascarar blanca, del ancho del canal, y plástico negro | Encintar | Ferretería |
-| Cartón gris o terciado, cola y cúter | La caja | Librería o barraca |
+| Terciado fino (o cartón gris), cola, cúter y cinta de papel para la bisagra | La caja | Barraca o librería |
 | Una bandeja baja | Agua | Bazar |
 | Vidrio o terciado | Base dura para frotar | Vidriería o barraca |
 | Lámpara LED a pilas y celofán verde | Luz rasante y reflejo | Ferretería y librería |

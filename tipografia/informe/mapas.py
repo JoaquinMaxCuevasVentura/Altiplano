@@ -390,6 +390,15 @@ FUENTES_T = {
         "elementos, motivos, figuras: partes y signos", "dobles opuestos: la {¿} no es la {?} al revés",
         "el Personaje Frontal en pecho y espalda (D4)", "cabezas de pez de perfil (D7)"],
         no=["interpretar la iconografía", "traducir el «calendario»"]),
+    "Manuaje": dict(autor="Cárcamo Pino, 2021-2025", toma=[
+        "las manos no tienen lengua: la letra es manuaje", "dos manos, una boca: la caja y el verso",
+        "tocar por fuera, mirar por dentro: el repujado", "el modo se inventa al hacer",
+        "reescribir cruzado: el pie del espécimen"],
+        no=["el imbunche", "la cognición como prueba", "oralitura para lo andino"]),
+    "Forest and Philosophy": dict(autor="Johnson, 2007", toma=[
+        "el tacto también es estética", "los anillos: la serie de frotados",
+        "pensar como el agua: placas sueltas", "la bisagra de la tapa", "tres veces dado, nunca vendido"],
+        no=["la letra de madera", "el taller sin nombres"]),
     "Contener una ruina": dict(autor="Rebeca Paz Prada, 2026", toma=[
         "partir del registro: el pie de la lámina", "el aluminio, la cinta, el agua, la voz",
         "la piscina vacía: escenario y pantalla"],
@@ -446,6 +455,30 @@ def piedra(H, cx, cy, ancho=170):
              (cx - w / 2 + w * c1 - 2, cy + h * 0.35), (cx - w / 2 + w * c1 - 2, cy)], TINTA, 0.8)
 
 
+def lapiz(H, cx, cy, largo=170, ancho=16, rot=-18.0):
+    """Un lápiz: el agarre de tres dedos que escribe y dibuja; la madera y el grafito."""
+    c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    g = lambda x, y: (cx + x * c - y * s, cy + x * s + y * c)   # noqa: E731
+    L, w = largo / 2, ancho / 2
+    cuerpo_ = [g(-L, -w), g(L - 34, -w), g(L - 34, w), g(-L, w), g(-L, -w)]
+    H.trazo(cuerpo_, TINTA, 0.9)
+    H.trazo([g(-L, 0), g(L - 34, 0)], TINTA, 0.5, 0.8)
+    H.trazo([g(L - 34, -w), g(L, 0), g(L - 34, w)], TINTA, 0.8)
+    punta = [g(L - 12, -w * 0.33), g(L, 0), g(L - 12, w * 0.33)]
+    H.add("objetos", f'<path d="M{" L".join(f"{x:.1f},{y:.1f}" for x, y in punta)}Z" fill="{GRAFITO}"/>')
+    return g(L, 0)
+
+
+def tronco(H, cx, cy, r=62):
+    """El corte de un tronco: sus anillos cuentan la vida del árbol. Abiertos abajo, como toda órbita del mapa."""
+    for k in range(1, 9):
+        rr = r * k / 8
+        H.orbita(cx, cy - (8 - k) * 1.2, rr * 1.04, rr * 0.92, -6, hueco=14, color=GRAFITO if k < 8 else TINTA,
+                 ancho=0.5 if k < 8 else 1.0, pasadas=1, opac=0.9)
+    H.punto(cx, cy - 9, 2.0, TINTA)
+    H.trazo([(cx + 4, cy - 12), (cx + 18, cy - 30), (cx + 26, cy - 52)], TINTA, 0.8, temblor=0.6)
+
+
 def haz_de_fuente(H, etiquetas, x, y0, paso, lado, destino, nudo, color=TINTA, tam=15.5, inter_haz=4.2):
     """Una lista a mano; de la punta de cada renglón sale una hebra, y las hebras hacen un haz hacia el centro."""
     n = len(etiquetas)
@@ -476,7 +509,7 @@ def no_se_toma(H, etiquetas, origen, puntas, tam=14.5):
 
 
 def mapa_2():
-    H = Hoja(1600, 1200, 22)
+    H = Hoja(1600, 1420, 22)
     definir(H, "o¿?")
     F = FUENTES_T
     centro = (806, 640)
@@ -486,9 +519,9 @@ def mapa_2():
         H.orbita(centro[0], centro[1], rx, ry, rot, color=c, ancho=w, sentido=0.62)
     aguada_signo(H, "o", centro[0], centro[1] + 6, 0.5, VIOLETA, 0.7)
     H.aguada(H.gota(centro[0] - 2, centro[1] + 128, 7), VIOLETA, 0.8, desplaza=2, capas=1)
-    H.mano(centro[0] + 26, centro[1] + 196, "Contenida", 34, TINTA, rot=-2)
-    H.mano(centro[0] + 30, centro[1] + 222, "lo que entra en la vasija no se queda:", 15, GRAFITO)
-    H.mano(centro[0] + 30, centro[1] + 242, "se abre abajo, en su desagüe", 15, GRAFITO)
+    H.mano(centro[0] + 70, centro[1] + 196, "Contenida", 34, TINTA, rot=-2)
+    H.mano(centro[0] + 74, centro[1] + 222, "lo que entra en la vasija no se queda:", 15, GRAFITO)
+    H.mano(centro[0] + 74, centro[1] + 242, "se abre abajo, en su desagüe", 15, GRAFITO)
     llegada = centro
 
     # EthnoGraphemes: arriba a la izquierda
@@ -544,10 +577,28 @@ def mapa_2():
                   (1110, 850))
     no_se_toma(H, F["La iconografía Tiwanaku"]["no"], (1360, 734), [(1300, 628, "end"), (1316, 654, "end")])
 
-    H.leyenda(60, 1124, "mapa 2 · teoría y fuentes", [])
-    H.leyenda(420, 1110, "", [("cruz", "una fuente: un centro externo"), ("continuo", "una hebra: lo que se toma")])
-    H.leyenda(780, 1110, "", [("violeta", "lo que viene de la obra"), ("corte", "una línea cortada: lo que no se toma")])
-    H.firma(1550, 1150, 2, TOTAL, "teoría y fuentes")
+    # Manuaje (Cárcamo): abajo a la izquierda
+    lapiz(H, 560, 1196, 170, 16, -18)
+    H.orbita(560, 1196, 118, 34, -18, color=TINTA, ancho=0.6, sentido=0.3)
+    H.cruz(470, 1104)
+    H.mano(484, 1110, "Manuaje", 26, TINTA, rot=-2)
+    H.mano(486, 1134, F["Manuaje"]["autor"], 15, GRAFITO)
+    haz_de_fuente(H, F["Manuaje"]["toma"], 60, 1118, 24, 1, (llegada[0] - 70, llegada[1] + 96), (470, 1010))
+    no_se_toma(H, F["Manuaje"]["no"], (636, 1236), [(690, 1262, "start"), (700, 1288, "start"), (690, 1314, "start")])
+
+    # Forest and Philosophy (Johnson): abajo a la derecha
+    tronco(H, 1040, 1190, 62)
+    H.cruz(970, 1124)
+    H.mano(956, 1130, "Forest and Philosophy", 24, TINTA, "end", rot=-2)
+    H.mano(954, 1154, F["Forest and Philosophy"]["autor"], 15, GRAFITO, "end")
+    haz_de_fuente(H, F["Forest and Philosophy"]["toma"], 1540, 1164, 24, -1, (llegada[0] + 70, llegada[1] + 96),
+                  (1180, 1010))
+    no_se_toma(H, F["Forest and Philosophy"]["no"], (1060, 1252), [(1104, 1292, "start"), (1114, 1318, "start")])
+
+    H.leyenda(60, 1360, "mapa 2 · teoría y fuentes", [])
+    H.leyenda(420, 1346, "", [("cruz", "una fuente: un centro externo"), ("continuo", "una hebra: lo que se toma")])
+    H.leyenda(780, 1346, "", [("violeta", "lo que viene de la obra"), ("corte", "una línea cortada: lo que no se toma")])
+    H.firma(1550, 1372, 2, TOTAL, "teoría y fuentes")
     return H
 
 

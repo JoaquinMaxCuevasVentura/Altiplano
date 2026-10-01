@@ -223,4 +223,8 @@ En la imprenta de tipos móviles, la póliza dice cuántas piezas de cada letra 
 
 > contenida. letras halladas en el pie de una lámina que reproduce el dibujo de arthur posnansky del ídolo llamado kochamama [libro, autor, año y página: por identificar]. piedra tallada en tiwanaku por manos sin nombre registrado; movida de lugar por manos sin nombre registrado; excavada en 1903 por [por verificar]; fotografiada por [sin nombre registrado]; dibujada por arthur posnansky; reproducida por [autor del libro]. llevada al aluminio por rebeca paz prada con creaciónxacuerpamiento en «contener una ruina: acciones para desenterrar una voz» (artefacto tatuajes, la paz, 22 de agosto de 2026). calcada, repujada, vestida, copiada, mojada y dicha por [manos]. 30 signos hallados, 25 reconstruidos, 1 hecho con las manos. ¶
 
+**El pie del espécimen.** Debajo de la foto de la caja abierta va un pie escrito por reescritura cruzada del pie de la lámina (`09`, §9.4). Confiesa lo mismo que el original: que la letra es reconstruida, que viene de fotos y que su origen es supuesto.
+
+> la letra contenida, según las manos que la calcaron, presentada en amplio detalle reconstructivo, según viejas fotografías de un pie (hoy la placa está muy frotada y casi no se ven esos detalles). su alfabeto, todavía no bien leído, es distinto del de la lámina y muestra signos mucho más nuevos. suponemos que originariamente se encontraba en una piscina vacía, en el lugar en donde luego se puso el agua.
+
 El colofón necesita cifras, dos puntos y comillas angulares. Por eso esos signos están en la caja aunque el poema no los use.
