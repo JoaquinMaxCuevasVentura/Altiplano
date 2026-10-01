@@ -10,9 +10,11 @@
  *
  * Escribe en esta carpeta fig7_memoria_retorno.svg y fig8_tres_montones.svg,
  * que `python3 articulo/generar_figuras.py` pasa a figura_7.png y
- * figura_8.png. También escribe en ../guias/ las mismas notaciones sin texto,
- * como guías para GPT Image 2; `python3 analisis/esquemas/guias/generar_guias.py`
- * las pasa a PNG.
+ * figura_8.png. También escribe en ../guias/, en los tamaños de GPT Image 2,
+ * las mismas notaciones sin texto (guia_*) y con texto (entrada_*), para
+ * explorarlas o mejorarlas con ese modelo (analisis/21 y analisis/22);
+ * `python3 analisis/esquemas/guias/generar_guias.py` las pasa a PNG y hace las
+ * máscaras.
  *
  * La letra es Nothing You Could Do (SIL Open Font License, fuentes/),
  * incrustada en cada SVG. Las semillas son fijas: el mismo código da siempre
@@ -107,12 +109,15 @@ const FILTROS = `
     </filter>`;
 
 class Hoja {
-  constructor(ancho, alto, semilla, etiqueta, guia) {
+  // modo: 'figura' (la del artículo), 'guia' (sin texto) o 'entrada' (con texto);
+  // las dos últimas, en los tamaños de GPT Image 2.
+  constructor(ancho, alto, semilla, etiqueta, modo) {
     this.ancho = ancho;
     this.alto = alto;
     this.rnd = azar(semilla);
     this.etiqueta = etiqueta;
-    this.guia = !!guia;
+    this.sinTexto = modo === 'guia';
+    this.gpt = modo === 'guia' || modo === 'entrada';
     this.capas = [];
   }
 
@@ -181,7 +186,7 @@ class Hoja {
   }
 
   texto(x, y, cadena, o) {
-    if (this.guia) return;  // las guías no llevan texto: el modelo lo copiaría
+    if (this.sinTexto) return;  // las guías no llevan texto: el modelo lo copiaría
     o = o || {};
     const t = o.t || 12.5, il = o.il || t * 1.18;
     const giro = o.giro ? ` transform="rotate(${o.giro} ${f(x)} ${f(y)})"` : '';
@@ -253,11 +258,11 @@ class Hoja {
   }
 
   svg(titulo) {
-    const fuente = this.guia ? '' :
+    const fuente = this.sinTexto ? '' :
       `<style>@font-face{font-family:'Mano';src:url(data:font/ttf;base64,${FUENTE}) format('truetype');}</style>`;
-    // Las guías salen en los tamaños de GPT Image 2: 1536 x 1024 o, si son verticales, 1024 x 1536.
+    // Guías y entradas salen en los tamaños de GPT Image 2: 1536 x 1024 o, si son verticales, 1024 x 1536.
     let caja = [0, 0, this.ancho, this.alto], tam = '';
-    if (this.guia) {
+    if (this.gpt) {
       const [PW, PH] = this.alto > this.ancho ? [1024, 1536] : [1536, 1024];
       let W = this.ancho, H = this.alto;
       if (W / H > PW / PH) H = (W * PH) / PW; else W = (H * PW) / PH;
@@ -281,12 +286,12 @@ class Hoja {
 /* La línea de la mirada es también la del tiempo: lo cercano es el    */
 /* hambre; lo lejano, lo pasado antiguo.                               */
 /* ------------------------------------------------------------------ */
-function figura7(guia) {
+function figura7(modo) {
   const h = new Hoja(700, 450, 7203,
     'Notación de la memoria del retorno: desde la atalaya, la mirada, que es también la línea del tiempo, pasa por encima ' +
     'de la muralla y del foso y llega al horizonte dorado de lo pasado antiguo. La muralla es una banda de tierra siena: ' +
     'sus caras son los apellidos que vuelven y su relleno, la legión sin tierra. En el foso de alquitrán, raspados, los muertos del hambre.',
-    guia);
+    modo);
   const ojo = [98, 122], suelo = 336;
 
   // Construcción: proyecciones verticales desde la línea del tiempo.
@@ -406,12 +411,12 @@ function figura7(guia) {
 /* «altura del cerro» (p. 9) al «informe montón» (p. 154). El eje se   */
 /* corta entre las pp. 40 y 80, donde no hay montones.                 */
 /* ------------------------------------------------------------------ */
-function figura8(guia) {
+function figura8(modo) {
   const h = new Hoja(560, 790, 8203,
     'Notación vertical: el eje es la novela leída de la página 9 a la 154. Tres montones bajan por él, unidos por una espiral: ' +
     'la montaña de piedras del ayllu, el montón de papeles de la aldea y el desmonte de la mina. La montaña que debía ' +
     'sobrepasar la altura del cerro termina en el montón que sepulta a Juan Condori.',
-    guia);
+    modo);
   const X = 280;
   const y = p => (p <= 40 ? 120 + 4.2 * p : 318 + 5 * (p - 80));
 
@@ -567,9 +572,11 @@ function figura8(guia) {
 }
 
 for (const [nombre, hacer] of [['fig7_memoria_retorno.svg', figura7], ['fig8_tres_montones.svg', figura8]]) {
-  fs.writeFileSync(path.join(DIR, nombre), hacer(false), 'utf8');
+  fs.writeFileSync(path.join(DIR, nombre), hacer('figura'), 'utf8');
   console.log('escrito', nombre);
-  const guia = path.join(DIR, '..', 'guias', 'guia_' + nombre);
-  fs.writeFileSync(guia, hacer(true), 'utf8');
-  console.log('escrito', path.relative(DIR, guia));
+  for (const modo of ['guia', 'entrada']) {
+    const destino = path.join(DIR, '..', 'guias', `${modo}_${nombre}`);
+    fs.writeFileSync(destino, hacer(modo), 'utf8');
+    console.log('escrito', path.relative(DIR, destino));
+  }
 }

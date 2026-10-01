@@ -14,10 +14,15 @@ pastel. Los colores salen de la paleta matérica de
 analisis/17_estilo_y_prompts_gpt_image.md. Para cambiar una guía, edita su
 función y vuelve a correr el script; o abre el SVG en un editor vectorial.
 
-Además pasa a PNG las dos guías de los diagramas de las figuras 7 y 8
-(guia_fig7_memoria_retorno.svg, apaisada, y guia_fig8_tres_montones.svg,
-vertical), que escribe `node analisis/esquemas/diagramas/generar_diagramas.js`;
-sus prompts están en analisis/21_diagramas_como_notaciones.md.
+Además pasa a PNG las notaciones de las figuras 7 y 8 que escribe
+`node analisis/esquemas/diagramas/generar_diagramas.js`, en los tamaños de
+GPT Image 2 (la 7 apaisada, la 8 vertical):
+- guia_fig*.png, sin texto, para explorarlas (analisis/21, §21.8);
+- entrada_fig*.png, con texto, para mejorarlas (analisis/22), con sus máscaras:
+  mascara_fig*_rotulos.png conserva solo los rótulos y deja editar todo lo
+  demás; mascara_fig*_<zona>.png deja editar solo esa zona. En las máscaras,
+  lo transparente se edita y lo opaco se conserva. zonas_fig*.png muestra
+  dónde está cada zona, para quien pinte la selección a mano en ChatGPT.
 
 Necesita Chromium (ruta en la variable CHROME).
 """
@@ -322,8 +327,67 @@ def fig6():
 
 GUIAS = [(1, "craneo_nido", fig1, 3), (2, "signo_mapa", fig2, 5), (3, "apacheta", fig3, 7),
          (4, "castillete", fig4, 11), (5, "pelvis", fig5, 13), (6, "centinela", fig6, 17)]
-# Guías de los diagramas: el SVG lo escribe generar_diagramas.js; aquí solo se pasa a PNG.
-DIAGRAMAS = ["guia_fig7_memoria_retorno", "guia_fig8_tres_montones"]
+# Guías y entradas de los diagramas: el SVG lo escribe generar_diagramas.js; aquí se pasa a PNG.
+DIAGRAMAS = ["guia_fig7_memoria_retorno", "guia_fig8_tres_montones",
+             "entrada_fig7_memoria_retorno", "entrada_fig8_tres_montones"]
+
+
+def _rect(x0, y0, x1, y1):
+    return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+
+
+# Zonas que se pueden repintar, en las coordenadas del dibujo (las del SVG de cada figura).
+ZONAS = {
+    "fig7": {
+        "muralla": [[(248, 340), (258, 198), (266, 193), (300, 193), (310, 198), (323, 340)]],
+        "foso": [_rect(330, 333, 566, 400)],
+        "horizonte": [_rect(540, 113, 680, 128)],
+        "atalaya": [[(70, 112), (116, 112), (116, 127), (104, 127), (104, 145), (126, 145), (126, 340), (70, 340)]],
+    },
+    "fig8": {
+        "montones": [_rect(166, 134, 394, 192), _rect(214, 245, 242, 272), _rect(180, 410, 380, 460),
+                     _rect(142, 564, 246, 600), _rect(238, 684, 322, 718)],
+        "castillete": [_rect(260, 536, 300, 600), _rect(300, 538, 530, 552), _rect(266, 600, 300, 660)],
+    },
+}
+COLORES = {"muralla": (176, 98, 58), "foso": (120, 70, 160), "horizonte": (200, 160, 60), "atalaya": (60, 110, 160),
+           "montones": (176, 98, 58), "castillete": (60, 110, 160)}
+
+
+def mascaras(fig, nombre):
+    """Máscaras de edición (lo transparente se edita) y mapa de zonas para entrada_<nombre>.png."""
+    from PIL import ImageChops, ImageDraw, ImageFilter, ImageFont
+    entrada = Image.open(DIR / f"entrada_{nombre}.png").convert("RGB")
+    guia = Image.open(DIR / f"guia_{nombre}.png").convert("RGB")
+    svg = (DIR / f"entrada_{nombre}.svg").read_text(encoding="utf8")
+    x0, y0, w, h = (float(v) for v in re.search(r'viewBox="([^"]+)"', svg).group(1).split())
+    s = entrada.width / w
+    a_px = lambda p: ((p[0] - x0) * s, (p[1] - y0) * s)
+    # Rótulos: lo que cambia entre la entrada y la guía es el texto; se ensancha un poco y se conserva.
+    texto = ImageChops.difference(entrada, guia).convert("L").point(lambda v: 255 if v > 24 else 0)
+    texto = texto.filter(ImageFilter.MaxFilter(11))
+    m = Image.new("RGBA", entrada.size, (0, 0, 0, 0))
+    m.putalpha(texto)
+    m.save(DIR / f"mascara_{fig}_rotulos.png")
+    mapa = entrada.copy().convert("RGBA")
+    capa = Image.new("RGBA", entrada.size, (0, 0, 0, 0))
+    dib = ImageDraw.Draw(capa)
+    fuente = ImageFont.load_default(size=26)
+    for zona, poligonos in ZONAS[fig].items():
+        # Se edita dentro de la zona; fuera de ella, y sobre cualquier rótulo, se conserva.
+        zona_a = Image.new("L", entrada.size, 255)
+        d = ImageDraw.Draw(zona_a)
+        for poli in poligonos:
+            d.polygon([a_px(p) for p in poli], fill=0)
+            dib.polygon([a_px(p) for p in poli], fill=COLORES[zona] + (70,), outline=COLORES[zona] + (255,), width=3)
+        m = Image.new("RGBA", entrada.size, (0, 0, 0, 0))
+        m.putalpha(ImageChops.lighter(zona_a, texto))
+        m.save(DIR / f"mascara_{fig}_{zona}.png")
+        xs, ys = zip(*[a_px(p) for p in poligonos[0]])
+        dib.text((min(xs) + 5, min(ys) + 4), zona.upper(), fill=COLORES[zona] + (255,), font=fuente,
+                 stroke_width=3, stroke_fill=(255, 255, 255, 255))
+    Image.alpha_composite(mapa, capa).convert("RGB").save(DIR / f"zonas_{fig}.png")
+    print(f"mascara_{fig}_rotulos.png, mascara_{fig}_<zona>.png y zonas_{fig}.png")
 
 
 def a_png(texto, w, h, png, tmp):
@@ -357,6 +421,9 @@ def main():
             w, h = (int(v) for v in re.search(r'<svg[^>]*width="(\d+)" height="(\d+)"', texto).groups())
             a_png(texto, w, h, DIR / f"{nombre}.png", tmp)
             print(origen.name, "->", f"{nombre}.png ({w} x {h})")
+    for fig, nombre in [("fig7", "fig7_memoria_retorno"), ("fig8", "fig8_tres_montones")]:
+        if (DIR / f"entrada_{nombre}.png").exists() and (DIR / f"guia_{nombre}.png").exists():
+            mascaras(fig, nombre)
     mascara_fig5()
 
 

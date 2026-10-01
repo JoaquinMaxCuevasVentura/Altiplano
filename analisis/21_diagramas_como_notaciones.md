@@ -174,6 +174,8 @@ El manuaje de verdad empieza cuando las redibujes tú (§21.9), y entonces cambi
 
 ## 21.8. Explorar con GPT Image 2 desde las notaciones
 
+Para **mejorar** las notaciones (meterlas en GPT Image 2 con sus rótulos, enteras o por zonas, con máscaras), los prompts están en `22_prompts_para_mejorar_las_notaciones.md`. Lo que sigue sirve para **explorar** su composición desde las guías sin texto.
+
 Las guías se regeneraron desde las notaciones nuevas, sin texto:
 
 - `esquemas/guias/guia_fig7_memoria_retorno.png`, de 1536 × 1024;
