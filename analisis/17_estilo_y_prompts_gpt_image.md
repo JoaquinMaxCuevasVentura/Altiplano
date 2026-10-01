@@ -259,7 +259,7 @@ Hoy el artículo presenta los esquemas de encaje como Figuras 1 a 6. Las Figuras
    - §2: «Los esquemas de encaje que aquí se reproducen […] no descubren nada, pero obligan a decidir».
    - Con los pasteles, los planos (3) se reescriben con lo que mostró cada pieza (`05b`, §5.5).
 3. **La declaración de IA** (norma 8: declarar el alcance real):
-   - Sale «la codificación vectorial de los esquemas de encaje (figuras 1-6) y»; queda «el diseño y trazado de los diagramas (figuras 7 y 8)».
+   - Sale «de los esquemas de encaje (figuras 1-6) y»; queda «y el diseño y trazado de los diagramas (figuras 7 y 8)». (Desde el 1 de octubre los esquemas también son notaciones diseñadas con IA: `23_esquemas_de_encaje_como_notaciones.md`.)
    - Si las imágenes de GPT Image 2 influyeron en los pasteles, entra algo como: «y la generación de imágenes exploratorias, previas a los pasteles y no reproducidas». Entre las herramientas se agrega GPT Image 2 (OpenAI).
    - Las dos cosas miden casi lo mismo, así que la extensión no se mueve.
    - «El autor es autor exclusivo de los pasteles al óleo» sigue siendo cierto.

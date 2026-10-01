@@ -1,5 +1,7 @@
 # 21. Los diagramas como notaciones
 
+> **Actualización (1 de octubre de 2026).** El mismo lenguaje se extendió a los seis esquemas de encaje (Figuras 1 a 6): `23_esquemas_de_encaje_como_notaciones.md`.
+
 El 1 de octubre de 2026 dijiste que los diagramas de las Figuras 7 y 8 estaban «muy cuadrados», poco orgánicos y poco coherentes con los conceptos, la retórica y la poética del proyecto. Pediste rehacerlos a partir de cinco referencias de diagramas teóricos y abstractos, porque así serían «un gran aporte al manuaje del artículo».
 
 Cuatro de las cinco imágenes son las que ya habías enviado: la 22 es la 19, la 23 es la 17, la 25 es la 21 y la 26 es la 20. La 24 es nueva.

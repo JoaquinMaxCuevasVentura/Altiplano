@@ -25,7 +25,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 - **Respuesta al arbitraje.** El artículo incorpora la respuesta a las cinco objeciones del arbitraje simulado (`analisis/08_respuesta_al_arbitraje.md`).
 - **Recursos de Cárcamo Pino y lenguaje llano.** Adopta varios recursos de su escritura: el epígrafe (con un lema aymara en lugar del Saramago que él cita), una nota aclaratoria, los juegos de palabras, las analogías físicas (entre ellas, el esgrafiado para el método y la pirca de doble cara para la memoria) y la mirada sobre los gestos de la mano. No adopta su fórmula estructural ni sus latinismos (`analisis/09_recursos_de_carcamo_y_lenguaje_llano.md`; las analogías, en `analisis/11_analogias_fisicas.md`).
 - **Ocho figuras.** Las seis primeras se examinan en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
-  - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
+  - Las figuras son los **esquemas de encaje** de cada pastel, trazados desde el 1 de octubre como notaciones, en el mismo lenguaje de los diagramas (`analisis/23_esquemas_de_encaje_como_notaciones.md`). Se elaboraron con asistencia de IA y así lo declaran el pie y la declaración de IA.
   - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
   - La 7 y la 8 son **diagramas** trazados como notaciones (línea fina, órbitas, materia y escritura pegada a la línea): la memoria del retorno (§7) y los tres montones, piedra, papel y máquina, sobre un eje vertical con las páginas de la novela (conclusiones). También se declaran como hechos con asistencia de IA (`analisis/19_esquemas_a_mano_y_diagramas.md`).
 
@@ -33,16 +33,16 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la última revisión (las Figuras 7 y 8, la declaración de IA al día y los recortes para que cupieran) marcados respecto de la versión anterior, para revisarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de las dos últimas revisiones (las Figuras 7 y 8, los recortes para que cupieran, la declaración de IA al día y «en cuclillas» en la Figura 1) marcados respecto de la versión anterior a los diagramas, para revisarlos uno por uno en Word |
 | `articulo/figuras/` | Las ocho figuras (seis esquemas de encaje y dos diagramas) y cómo sustituir los esquemas por los escaneos de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
-| `articulo/generar_figuras.py` | Regenera las figuras a partir de los esquemas y los diagramas SVG |
+| `articulo/generar_figuras.py` | Regenera las ocho figuras a partir de las notaciones SVG (o solo las que se le indiquen) |
 | `articulo/plantilla_estudios_bolivianos.docx` | Plantilla de estilos que usa el generador |
 | `articulo/articulo_altiplano.md` y `.docx` | Versión 3, «Topografías de la carne y el barro en *Altiplano*»: alternativa sin figuras. Su referencia a Barnadas (1977) es errónea (`analisis/04_verificaciones_y_pendientes.md`, §4.7) |
 
 **Estado:**
 
-- **Extensión:** 49.485 caracteres con espacios, bibliografía y notas incluidas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.464 caracteres con espacios, bibliografía y notas incluidas; el Word tiene 26 páginas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
@@ -89,9 +89,11 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/20_prompts_diagramas_estilo_referencias.md` | Prompts para llevar los diagramas al estilo de tus cinco referencias con GPT Image 2: el lenguaje de las referencias rasgo por rasgo, los materiales por lo que son (tierra siena, alquitrán, pan de oro, papel, grafito, hoja de plata), dos guías sin texto, dos variantes por figura, correcciones cortas y qué mirar |
 | `analisis/21_diagramas_como_notaciones.md` | Por qué los diagramas estaban «cuadrados», las cinco referencias releídas como diagramas teóricos (la nueva, la 24, anota los fragmentos de una fuente en órbita), las Figuras 7 y 8 rehechas como notaciones (la mirada que es también el tiempo; el eje de páginas de la 9 a la 154), su relación con el manuaje, prompts para explorarlas y materiales para redibujarlas a mano |
 | `analisis/22_prompts_para_mejorar_las_notaciones.md` | Prompts para meter las Figuras 7 y 8 en GPT Image 2 y mejorarlas, solo para explorar: las entradas con rótulos en los tamaños del modelo, tres maneras (toda la hoja, todo menos los rótulos, zona por zona, con máscaras), un bloque de mejora, cuatro variantes para pensar, qué mirar y la declaración de IA |
-| `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie). La Figura 2 se corrigió el 30 de septiembre: el Signo ya no encaja en la pendiente |
+| `analisis/23_esquemas_de_encaje_como_notaciones.md` | Las Figuras 1 a 6 rehechas como notaciones, en el lenguaje de las 7 y 8: el aparato común (las cuatro funciones del Cuadro 1 como signos, el asterisco para lo que decide el dibujo, las mayúsculas para lo que hace la mano), qué afirma y qué decide cada figura, las 74 citas comprobadas, los tres datos de los esquemas anteriores que no pasaron y qué cambió en el artículo |
+| `analisis/24_otro_epigrafe.md` | Otro epígrafe para el artículo final: por qué el lema del Taller de Historia Oral Andina sigue siendo el más coherente con el dossier, tres alternativas verificadas (Bertonio, los montones de la p. 220; el capataz de la mina, p. 142; Le Guin, p. 6), qué cambia en §7 y cómo cuadra la extensión |
+| `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |
-| `analisis/esquemas/diagramas/` | Los diagramas de las Figuras 7 y 8, trazados como notaciones (SVG con la letra incrustada), y su generador, `generar_diagramas.js`, con la letra Nothing You Could Do (OFL) y su licencia |
+| `analisis/esquemas/diagramas/` | Las ocho figuras del artículo trazadas como notaciones (SVG con la letra incrustada): los esquemas de encaje de las Figuras 1 a 6 y los diagramas de las 7 y 8. Su generador, `generar_diagramas.js`, y la letra Nothing You Could Do (OFL) con su licencia |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
 
@@ -101,6 +103,6 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 pip install pypandoc_binary python-docx pillow
 python3 articulo/generar_docx.py                                # artículo definitivo
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
-node analisis/esquemas/diagramas/generar_diagramas.js           # diagramas de las figuras 7 y 8
+node analisis/esquemas/diagramas/generar_diagramas.js           # notaciones de las figuras 1 a 8
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
 ```

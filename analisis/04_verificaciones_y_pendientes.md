@@ -20,8 +20,13 @@
     - diez recortes compensan la extensión;
     - la bibliografía pasa a 26 entradas.
   - Entran dos diagramas: la memoria del retorno (Figura 7, §7) y los tres montones (Figura 8, conclusiones). El 1 de octubre se rehicieron como notaciones orgánicas, y la Figura 8 pasó a ser vertical, con las páginas de la novela como eje (`21_diagramas_como_notaciones.md`). La declaración de IA se pone al día y cinco recortes compensan la extensión (`19_esquemas_a_mano_y_diagramas.md`).
+  - El mismo día, los seis esquemas de encaje se rehicieron como notaciones, en el lenguaje de las Figuras 7 y 8 (`23_esquemas_de_encaje_como_notaciones.md`):
+    - las verticales (2, 4 y 6) pasan a 16 cm de alto;
+    - la declaración de IA dice «el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8)»;
+    - en la Figura 1, la persona del corte está «en cuclillas», como en la novela (p. 32).
+  - Hay tres epígrafes alternativos, verificados, por si quieres cambiar el actual (`24_otro_epigrafe.md`).
 
-- **Extensión.** 49.485 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión.** 49.464 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 9 y 10 palabras.
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -33,7 +38,7 @@
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
 - **Figuras.** Ocho, numeradas por orden de aparición.
-  - Las seis primeras son los esquemas de encaje de los pasteles: Castillete = 4, Pelvis = 5, Centinela = 6.
+  - Las seis primeras son los esquemas de encaje de los pasteles, trazados como notaciones (`23_esquemas_de_encaje_como_notaciones.md`): Castillete = 4, Pelvis = 5, Centinela = 6.
   - La 7 y la 8 son diagramas trazados como notaciones (`19_esquemas_a_mano_y_diagramas.md`; `21_diagramas_como_notaciones.md`).
   - Todas se hicieron con asistencia de IA y así lo declaran (§4.4).
 
@@ -49,7 +54,7 @@
    - el nuevo final de la Figura 1: el narrador ve a los comunarios «como estatuas» (`12_taller_cine_experimental.md`);
    - el subtítulo y las dos metáforas nuevas (`14_evaluacion_propuesta_otra_ia.md`);
    - el *qalachuyma* de §7 (`15_spedding_susto_al_susto.md`).
-2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
+2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`24_otro_epigrafe.md`; antes, `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
 3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
 4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
 5. **Cotejar las citas con el impreso:**
@@ -71,7 +76,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** casi no tiene margen (quedan 15 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** casi no tiene margen (quedan 36 caracteres). Cualquier añadido obliga a acortar otra cosa.
 
 ## 4.3. Verificación de fuentes
 
@@ -115,7 +120,7 @@ Estado de cada dato:
   - (2) la operación del pastel;
   - (3) el contraste: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando es posible con fuentes andinas.
 
-  Las figuras reproducen el **esquema de encaje** de cada pastel. El pie lo dice («Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA»), y la declaración de IA lo precisa: la codificación vectorial de esos esquemas se hizo con IA.
+  Las figuras reproducen el **esquema de encaje** de cada pastel. El pie lo dice («Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA»), y la declaración de IA lo precisa: el diseño y trazado de esos esquemas se hizo con IA, como notaciones (`23_esquemas_de_encaje_como_notaciones.md`).
 - **Qué no afirma.**
   - No dice si los pasteles están terminados, ni describe resultados de piezas que no se muestran.
   - Dice lo contrario del «hallazgo» que objetaba el árbitro: los esquemas «no descubren nada, pero obligan a decidir» (§2), y el cráneo de la Figura 1 es una decisión de ensamblaje.
@@ -133,15 +138,15 @@ Estado de cada dato:
 
 ## 4.5. Declaración de uso de IA (punto 8 de las normas)
 
-Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacción, con cuatro ajustes para que describa con exactitud lo que se hizo:
+Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacción, con cinco ajustes para que describa con exactitud lo que se hizo:
 
 > a) *Herramientas*: Claude (Anthropic) y ChatGPT (OpenAI), asistentes de IA generativa.
 >
-> b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, y la codificación vectorial de los esquemas de encaje (figuras 1-6) y el diseño y trazado de los diagramas (figuras 7 y 8).
+> b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, y el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8).
 >
 > c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
 
-**Los cuatro ajustes respecto de tu borrador:**
+**Los cinco ajustes respecto de tu borrador:**
 
 1. **El alcance incluye la redacción de borradores**, la transcripción y paginación de las fuentes y el cotejo de citas, porque así se preparó el texto.
    - Tu propia depuración ya describía el uso de ChatGPT en la revisión conceptual, la organización y el apoyo a la redacción, no como simple corrección.
@@ -150,10 +155,11 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 3. **Autoría de las imágenes.** Dice «autor exclusivo de los pasteles al óleo», sin «dibujos», porque las figuras publicadas son esquemas hechos con asistencia de IA.
    - Tu frase «verificó las citas contra las fuentes primarias» solo debe volver si haces el cotejo con el impreso (§4.1, paso 4).
 4. **Los diagramas** (30 de septiembre). El alcance incluye «el diseño y trazado de los diagramas (figuras 7 y 8)», porque la IA los propuso y los trazó. Tú decides si entran.
+5. **Los esquemas como notaciones** (1 de octubre). Antes decía «la codificación vectorial de los esquemas de encaje». Ahora el programa también los diseñó y trazó, así que dice «el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8)» (`23`, §23.10).
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.485 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 15 caracteres de margen.
+- **Ahora:** 49.464 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 36 caracteres de margen.
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -186,8 +192,9 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Pasteles hechos, escaneados y con su pie; declaración de IA ajustada (§4.4; `17_estilo_y_prompts_gpt_image.md`, §17.7)
 - [ ] Citas cotejadas con el impreso (`06_fichero_de_pasajes.md`; §4.3)
 - [ ] Datos B y C revisados (§4.3)
-- [ ] Epígrafe confirmado (`09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2)
+- [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
-- [x] `.docx` regenerado: 49.485 caracteres; resúmenes de 99 y 90 palabras
+- [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
+- [x] `.docx` regenerado: 49.464 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)
