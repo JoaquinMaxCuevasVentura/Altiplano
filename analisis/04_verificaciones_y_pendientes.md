@@ -19,7 +19,7 @@
     - el *qalachuyma* se presenta como parte de «un relato de Spedding», porque el libro dice que su texto es ficción;
     - diez recortes compensan la extensión;
     - la bibliografía pasa a 26 entradas.
-  - Entran dos diagramas con trazo de boceto: la memoria del retorno (Figura 7, §7) y los tres montones (Figura 8, conclusiones). La declaración de IA se pone al día y cinco recortes compensan la extensión (`19_esquemas_a_mano_y_diagramas.md`).
+  - Entran dos diagramas: la memoria del retorno (Figura 7, §7) y los tres montones (Figura 8, conclusiones). El 1 de octubre se rehicieron como notaciones orgánicas, y la Figura 8 pasó a ser vertical, con las páginas de la novela como eje (`21_diagramas_como_notaciones.md`). La declaración de IA se pone al día y cinco recortes compensan la extensión (`19_esquemas_a_mano_y_diagramas.md`).
 
 - **Extensión.** 49.485 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 9 y 10 palabras.
@@ -34,7 +34,7 @@
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
 - **Figuras.** Ocho, numeradas por orden de aparición.
   - Las seis primeras son los esquemas de encaje de los pasteles: Castillete = 4, Pelvis = 5, Centinela = 6.
-  - La 7 y la 8 son diagramas con trazo de boceto (`19_esquemas_a_mano_y_diagramas.md`).
+  - La 7 y la 8 son diagramas trazados como notaciones (`19_esquemas_a_mano_y_diagramas.md`; `21_diagramas_como_notaciones.md`).
   - Todas se hicieron con asistencia de IA y así lo declaran (§4.4).
 
 ## 4.1. Qué te toca hacer, en orden

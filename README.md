@@ -27,7 +27,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 - **Ocho figuras.** Las seis primeras se examinan en tres planos: texto, operación y *contraste*. Van con el Cuadro 1 completo.
   - Las figuras son los **esquemas de encaje** de cada pastel, elaborados con asistencia de IA y declarados así en el pie y en la declaración de IA.
   - Se numeran por orden de aparición: Castillete = 4, Pelvis = 5, Centinela = 6.
-  - La 7 y la 8 son **diagramas** con trazo de boceto: la memoria del retorno (§7) y los tres montones, piedra, papel y máquina (conclusiones). También se declaran como hechos con asistencia de IA (`analisis/19_esquemas_a_mano_y_diagramas.md`).
+  - La 7 y la 8 son **diagramas** trazados como notaciones (línea fina, órbitas, materia y escritura pegada a la línea): la memoria del retorno (§7) y los tres montones, piedra, papel y máquina, sobre un eje vertical con las páginas de la novela (conclusiones). También se declaran como hechos con asistencia de IA (`analisis/19_esquemas_a_mano_y_diagramas.md`).
 
 | Archivo | Contenido |
 |---|---|
@@ -87,9 +87,10 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/18_estilo_y_articulo_evaluacion.md` | ¿Tu estilo suma al artículo o es un pretexto? Lo que suma (la materia, las operaciones, la piedra con cuerpo, el vano), lo que resta (el ensueño sin tiempo, la escala incierta, el agua donde la novela no la pone), la prueba del plano (3) y la propuesta de usar tu estilo como la capa que se raspa |
 | `analisis/19_esquemas_a_mano_y_diagramas.md` | Tus cinco esquemas a mano leídos de cerca, dónde hace falta un diagrama y dónde no, las Figuras 7 y 8 (qué muestran, qué deciden, cómo entraron en el artículo), la herramienta de boceto y qué cambia si las redibujas a mano (los prompts para explorarlas están en `20`) |
 | `analisis/20_prompts_diagramas_estilo_referencias.md` | Prompts para llevar los diagramas al estilo de tus cinco referencias con GPT Image 2: el lenguaje de las referencias rasgo por rasgo, los materiales por lo que son (tierra siena, alquitrán, pan de oro, papel, grafito, hoja de plata), dos guías sin texto, dos variantes por figura, correcciones cortas y qué mirar |
+| `analisis/21_diagramas_como_notaciones.md` | Por qué los diagramas estaban «cuadrados», las cinco referencias releídas como diagramas teóricos (la nueva, la 24, anota los fragmentos de una fuente en órbita), las Figuras 7 y 8 rehechas como notaciones (la mirada que es también el tiempo; el eje de páginas de la 9 a la 154), su relación con el manuaje, prompts para explorarlas y materiales para redibujarlas a mano |
 | `analisis/esquemas/fig1…fig6` | Esquemas de encaje de los seis pasteles (fuente de `articulo/figuras/`; la numeración de los archivos es la de la serie). La Figura 2 se corrigió el 30 de septiembre: el Signo ya no encaja en la pendiente |
-| `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8) para los prompts de `20`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |
-| `analisis/esquemas/diagramas/` | Los diagramas de las Figuras 7 y 8 (SVG con la letra incrustada) y su generador, `generar_diagramas.js`, con rough.js (MIT) y la letra Caveat (OFL) y sus licencias |
+| `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |
+| `analisis/esquemas/diagramas/` | Los diagramas de las Figuras 7 y 8, trazados como notaciones (SVG con la letra incrustada), y su generador, `generar_diagramas.js`, con la letra Nothing You Could Do (OFL) y su licencia |
 | `analisis/esquemas/escena1…escena3` | Inventarios de las tres escenas de la versión 3 |
 | `analisis/referencias_visuales/` | Las cuatro imágenes de referencia de la primera ronda. **No son las figuras del artículo** |
 

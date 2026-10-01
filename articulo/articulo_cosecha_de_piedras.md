@@ -198,7 +198,7 @@ Ursula K. Le Guin opuso dos formas de contar: la del arma y la del recipiente. �
 La lectura permite sostener cuatro hallazgos. Primero: el montón de piedras es la arquitectura mínima de la novela, masa sin edificio, y la cosecha de estaño que promete el capataz (Botelho Gosálvez, 1982 [1945]: 142) es la captura de ese gesto por la máquina (Figura 8). Segundo: el Signo Escalonado vuelve a escalonar a la gente en el ayllu, la aldea, el cocal y el campamento, y el retorno lo rehace sin su último escalón. Tercero: el despojo funciona con una cadena de personas, instituciones y soportes (expediente, papel sellado, radio urbano, infolio, huella dactilar) que vuelven legibles la tierra y los cuerpos. La oposición entre la mano y el papel es el discurso de la aldea, y la novela la confirma al callar lo que los aymaras hicieron con la escritura: títulos coloniales, tinterillos aliados, escuelas propias. Cuarto: el narrador, que convierte a los comunarios en piedra fuera de la historia y culmina su desigualdad de género en la muchacha sin nombre, vuelve paisaje una posesión que la novela, a sus espaldas, deja escrita en la piedra: mojones, pircas, linderos, un apellido.
 
 ::: {custom-style="Figura"}
-![](figuras/figura_8.png){width=14cm}
+![](figuras/figura_8.png){height=17cm}
 :::
 
 ::: {custom-style="Pie de figura"}

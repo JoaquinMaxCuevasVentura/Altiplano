@@ -1,6 +1,6 @@
 # Figuras del artículo
 
-El artículo definitivo (`../articulo_cosecha_de_piedras.md`) lleva ocho figuras. Las seis primeras son los **esquemas de encaje** de los seis pasteles: fijan las coordenadas que da el texto (con su página) y las decisiones del dibujo (punto de vista, escala, operación de cada zona). Se elaboraron con asistencia de IA y así lo dicen el pie de cada figura y la declaración de IA. Las dos últimas son **diagramas** con trazo de boceto (véase abajo).
+El artículo definitivo (`../articulo_cosecha_de_piedras.md`) lleva ocho figuras. Las seis primeras son los **esquemas de encaje** de los seis pasteles: fijan las coordenadas que da el texto (con su página) y las decisiones del dibujo (punto de vista, escala, operación de cada zona). Se elaboraron con asistencia de IA y así lo dicen el pie de cada figura y la declaración de IA. Las dos últimas son **diagramas** trazados como notaciones (véase abajo).
 
 La numeración sigue el orden de aparición en el artículo, que no coincide con la de la serie original:
 
@@ -24,6 +24,7 @@ Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis
 ## Los diagramas (Figuras 7 y 8)
 
 - **No son pasteles.** Resumen dos mecanismos que el lector tendría que armar leyendo: la memoria del retorno como muralla, foso y atalaya (§7) y el mismo gesto de amontonar en piedra, papel y máquina (conclusiones).
+- **Son notaciones**, en el lenguaje de las referencias del autor: línea fina, órbitas, materia y escritura pegada a la línea (`analisis/21_diagramas_como_notaciones.md`). La Figura 8 es vertical y va a 17 cm de alto: su eje son las páginas de la novela.
 - **Se quedan** cuando los esquemas de las Figuras 1 a 6 se sustituyan por los escaneos.
 - **Pie:** «Diagrama. Fuente: elaboración propia con asistencia de IA». Los números entre paréntesis, dentro de cada figura, son páginas de la novela.
 - **Si los redibujas a mano,** cambian el pie y la declaración de IA (`analisis/19_esquemas_a_mano_y_diagramas.md`, §19.9).

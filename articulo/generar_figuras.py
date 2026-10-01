@@ -33,7 +33,7 @@ SCALE_DIAGRAMA = 3
 # Esquema de origen -> número de figura en el artículo.
 MAPA = [("fig1_craneo_nido.svg", 1), ("fig2_signo_mapa.svg", 2), ("fig3_apacheta.svg", 3),
         ("fig6_castillete.svg", 4), ("fig4_pelvis.svg", 5), ("fig5_centinela.svg", 6)]
-# Diagramas con trazo de boceto: se usan tal cual, con su letra incrustada.
+# Diagramas (notaciones, analisis/21): se usan tal cual, con su letra incrustada.
 DIAGRAMAS = [("fig7_memoria_retorno.svg", 7), ("fig8_tres_montones.svg", 8)]
 
 

@@ -15,14 +15,15 @@ analisis/17_estilo_y_prompts_gpt_image.md. Para cambiar una guía, edita su
 función y vuelve a correr el script; o abre el SVG en un editor vectorial.
 
 Además pasa a PNG las dos guías de los diagramas de las figuras 7 y 8
-(guia_fig7_memoria_retorno.svg y guia_fig8_tres_montones.svg), que escribe
-`node analisis/esquemas/diagramas/generar_diagramas.js`; sus prompts están en
-analisis/20_prompts_diagramas_estilo_referencias.md.
+(guia_fig7_memoria_retorno.svg, apaisada, y guia_fig8_tres_montones.svg,
+vertical), que escribe `node analisis/esquemas/diagramas/generar_diagramas.js`;
+sus prompts están en analisis/21_diagramas_como_notaciones.md.
 
 Necesita Chromium (ruta en la variable CHROME).
 """
 
 import os
+import re
 import subprocess
 import tempfile
 from pathlib import Path
@@ -352,8 +353,10 @@ def main():
             if not origen.exists():
                 print(f"falta {origen.name}: corre antes generar_diagramas.js")
                 continue
-            a_png(origen.read_text(encoding="utf8"), 1536, 1024, DIR / f"{nombre}.png", tmp)
-            print(origen.name, "->", f"{nombre}.png (1536 x 1024)")
+            texto = origen.read_text(encoding="utf8")
+            w, h = (int(v) for v in re.search(r'<svg[^>]*width="(\d+)" height="(\d+)"', texto).groups())
+            a_png(texto, w, h, DIR / f"{nombre}.png", tmp)
+            print(origen.name, "->", f"{nombre}.png ({w} x {h})")
     mascara_fig5()
 
 

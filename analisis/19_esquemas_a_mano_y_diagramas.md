@@ -1,5 +1,7 @@
 # 19. Tus esquemas a mano y dos diagramas para el artículo
 
+> **Actualización (1 de octubre de 2026).** Las Figuras 7 y 8 se rehicieron como notaciones orgánicas, con una gramática distinta: campo en vez de casillero, órbitas, materia y escritura pegada a la línea (`21_diagramas_como_notaciones.md`). Este documento sigue valiendo para el criterio de dónde hace falta un diagrama (§19.3) y para lo que cada figura afirma (§§19.4-19.5). La herramienta (§19.2) y el dibujo cambiaron: el generador ya no usa rough.js ni Caveat.
+
 El 30 de septiembre de 2026 enviaste cinco esquemas dibujados a mano y pediste tres cosas:
 
 - analizarlos en detalle;

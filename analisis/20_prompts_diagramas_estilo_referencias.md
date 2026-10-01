@@ -1,5 +1,7 @@
 # 20. Prompts para llevar los diagramas al estilo de tus referencias
 
+> **Actualización (1 de octubre de 2026).** Las Figuras 7 y 8 se rehicieron como notaciones (`21_diagramas_como_notaciones.md`), y las guías se regeneraron desde ellas: la de la Figura 8 ahora es vertical (1024 × 1536). Siguen valiendo el bloque de estilo (§20.6), los materiales (§20.3), las correcciones (§20.9), qué mirar (§20.10) y los cuidados (§20.11). Para la composición, usa los prompts de `21`, §21.8, en lugar de los de §§20.7-20.8, que describen la versión anterior.
+
 El 30 de septiembre de 2026 pediste prompts para que, a partir de los diagramas, GPT Image 2 llegue de verdad al estilo de tus cinco imágenes de referencia (17 a 21). Reemplazan los de `19`, §19.8.
 
 **En corto:**
