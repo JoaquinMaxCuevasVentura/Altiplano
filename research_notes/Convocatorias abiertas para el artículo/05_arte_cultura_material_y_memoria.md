@@ -1,0 +1,45 @@
+# Convocatorias abiertas (al 4 de octubre de 2026) en investigación artística, teoría del arte, cultura visual y material, antropología del espacio y del paisaje, geografía cultural y estudios de memoria, para «La cosecha de piedras: piedra, papel y máquina en *Altiplano*»
+
+> ESTADO: borrador intermedio (guardado progresivo, ronda 1 de búsquedas). Fecha de corte: 4 de octubre de 2026. Lo cerrado antes del 4 de octubre de 2026 (incluido lo que cerró entre el 1 y el 3 de octubre) se marca «vencida».
+
+> AVISO DE MÉTODO: el proxy de salida del entorno bloqueó (403 en CONNECT / «EGRESS_BLOCKED») todos los sitios oficiales de revistas y todos los índices (Dialnet, Latindex, DOAJ, MIAR, Redalyc, SciELO, FECYT, SJR, ERIH PLUS, MJL), con curl y con WebFetch. No se intentó ningún rodeo (ni cachés, ni espejos, ni servicios de terceros). Solo funcionó el buscador (WebSearch), que devuelve títulos, URL y un resumen generado a partir de los extractos indexados. Cada dato lleva la URL oficial que mostró el buscador, pero la página no pudo abrirse: todo dato marcado [extracto] debe confirmarse en la web oficial antes de enviar.
+
+## 1. ¿Qué revistas tienen convocatorias abiertas que encajan con el artículo?
+
+### Takeaway
+(Ronda 1.) Con envío continuo abierto según extractos: Aisthesis (PUC Chile; abril-diciembre), Ensayos. Historia y teoría del arte (UNAL), Calle 14 (U. Distrital), Maguaré (UNAL), Cuadernos de Antropología Social (UBA). Con plazo temático vigente: Tabula Rasa n.º 62 (20-10-2026, tema Fanon: ajuste bajo), Revista de Geografía Norte Grande (artículo completo 27-11-2026, pero resúmenes cerraron 31-07-2026), Revista de Estudios Sociales (ventana 1-28 feb. 2027, tema por confirmar), Memoria y Sociedad (15-01-2027, por confirmar). Vencidas: ASRI 2026, Cuadernos de Música… (22-07-2026), Antípoda (15-05-2026), H-ART tema abierto (30-05-2026), RCA tema libre (julio 2026), Tabula Rasa n.º 61 (30-06-2026), JAR (30-09-2026), CAS dossier (10-11-2025).
+
+### Cited Findings
+- Aisthesis: «convocatoria permanente» entre abril y diciembre para sus dos números anuales; plataforma reabierta el 16-04-2026; artículos inéditos en español de 6.000 a 12.000 palabras [extracto] — [Instituto de Estética UC](https://estetica.uc.cl/noticias/621-convocatoria-permanente-revista-aisthesis); [Envíos](https://revistaaisthesis.uc.cl/index.php/RAIT/about/submissions)
+- Ensayos. Historia y teoría del arte (IIE, Facultad de Artes, UNAL): recepción permanente por la plataforma; semestral, acceso abierto sin APC, doble ciego; especial relevancia al arte colombiano y latinoamericano [extracto] — [Revistas UNAL](https://revistas.unal.edu.co/index.php/ensayo/)
+- Calle 14: convocatoria permanente abierta, dos cortes al año; tema abierto a problemas del campo del arte e investigación-creación; sin cobros [extracto] — [Calle 14](https://revistas.udistrital.edu.co/index.php/c14); [Envíos](https://revistas.udistrital.edu.co/index.php/c14/about/submissions)
+- Maguaré: recibe artículos originales de temas diversos de forma permanente; vol. 40, n.º 2 (2026) «(Auto)etnografías de la vida académica» [extracto] — [Maguaré](https://revistas.unal.edu.co/index.php/maguare)
+- Cuadernos de Antropología Social (UBA): convocatoria abierta todo el año; artículos en español o portugués; dossier «Intersecciones entre antropología y psicología» cerró el 10-11-2025 (vencida) [extracto] — [Convocatorias vigentes](https://revistascientificas.filo.uba.ar/index.php/CAS/Convocatorias); [Envíos](https://revistascientificas.filo.uba.ar/index.php/cas/about/submissions)
+- Tabula Rasa n.º 62 (abril-junio 2027) «Frantz Fanon y la decolonialidad combativa global», plazo 20-10-2026; n.º 61 plazo 30-06-2026 (vencida); n.º 63 (julio-septiembre 2027) sin datos [extracto] — [n.º 62](https://www.revistatabularasa.org/convocatorias/tabula-rasa-n62-abril-junio-2027/); [n.º 61](https://www.revistatabularasa.org/convocatorias/tabula-rasa-no-61-enero-marzo-2027/); [n.º 63](https://www.revistatabularasa.org/convocatorias/tabula-rasa-numero-63-julio-septiembre-2027/)
+- Revista de Geografía Norte Grande, dossier «Espacios de la transición: minerales críticos, gobernanza y nuevas espacialidades»: resúmenes hasta 31-07-2026, preaceptación 14-08-2026, artículo completo 27-11-2026, n.º 98 (septiembre 2027); español o portugués [extracto] — [RGNG](https://revistanortegrande.uc.cl/)
+- Revista de Estudios Sociales: convocatoria con editoras invitadas Höhl, Lehmann, Alonso, Montedonico y Roa García; envíos del 1 al 28 de febrero de 2027; inglés, español o portugués; tema no confirmado [extracto] — [Convocatorias RES](https://revistas.uniandes.edu.co/index.php/res/callforpapers)
+- Memoria y Sociedad: plazo 15-01-2027 vinculado a convocatoria de propuestas de dossier para el vol. 55, n.º 1 (enero-junio 2028); acepta artículos para otras secciones todo el año [extracto, ambiguo] — búsqueda sin URL oficial directa (ver Gaps)
+- Vencidas: ASRI monográfico 2026 (31-05-2026) — [ASRI](https://revistaasri.com/announcement/view/119); Cuadernos de Música, Artes Visuales y Artes Escénicas «Indisciplinas feministas en Abya Yala» (22-07-2026) — [Avisos](https://revistas.javeriana.edu.co/index.php/cma/announcement); Antípoda «arqueometría latinoamericana» (15-04 a 15-05-2026) — [Antípoda](https://revistas.uniandes.edu.co/index.php/antipoda/callforpapers); H-ART tema abierto (30-04 a 30-05-2026) — [H-ART](https://revistas.uniandes.edu.co/index.php/hart/callforpapers); RCA tema libre (1 a 31-07-2026) — [RCA](https://revistas.icanh.gov.co/index.php/rca/convocatorias); JAR (30-09-2026) — [JAR](https://jar-online.net/en/submissions)
+
+### Inferences
+- (Pendiente de ronda 2.)
+
+### Gaps
+- (Pendiente de ronda 2.) ARIS, REAPI, Res Mobilis, CAUG, BRAC, Laboratorio de Arte, RASO, Disparidades, Cuadernos Geográficos, BAGE, Sonda, Artes La Revista, Clepsidra, Aletheia, JMC: sin convocatoria con fecha localizada aún.
+
+<!-- BLOQUE PROVISIONAL RONDAS 2-3 (se integrará en la versión final) -->
+### Hallazgos provisionales, rondas 2-3 [todos de extracto de buscador; páginas oficiales bloqueadas]
+- Arte e Investigación (Facultad de Artes, UNLP): recepción permanente; a mediados de marzo y de julio se recopila lo recibido para evaluar; n.º 29 publicado en julio de 2026; español e inglés; autores argentinos y extranjeros — https://papelcosido.fba.unlp.edu.ar/ojs/index.php/aei/convocatoria ; https://papelcosido.fba.unlp.edu.ar/ojs/index.php/aei
+- Aisthesis: indexada en Scopus, SciELO, Latindex, Clase, HAPI, MLA, Gale, Dialnet, DOAJ, ERIH PLUS; imágenes ≥300 dpi con pie; 6.000-12.000 palabras; evaluación 12-15 meses — https://scielo.conicyt.cl/revistas/aisthesis/eaboutj.htm ; https://revistaaisthesis.uc.cl/index.php/RAIT/Normas_para_autores
+- Cuadernos de Arte (UGR): recepción permanente; anual (diciembre); índice del número se cierra el 30 de septiembre; español e inglés; hasta 3 autores; máx. 4 ilustraciones; 300 dpi; evaluación por orden de llegada — https://revistaseug.ugr.es/index.php/caug/about/submissions ; https://revistaseug.ugr.es/index.php/caug/about
+- Cuadernos de Antropología Social (UBA): máx. 10.000 palabras con notas, agradecimientos y bibliografía; palabras clave en es/en/pt — https://revistascientificas.filo.uba.ar/index.php/cas/about/submissions
+- Ensayos (UNAL): idiomas es/pt/en/fr/de; resumen máx. 250 palabras; 4-6 palabras clave; plantilla Word — https://revistas.unal.edu.co/index.php/ensayo/information/authors ; https://revistas.unal.edu.co/index.php/ensayo/about
+- Maguaré: (normas posiblemente antiguas, extracto de páginas de 2011) máx. 30 páginas sin bibliografía ni gráficos; resumen máx. 128 palabras es/en; filiación institucional en primera página — https://revistas.unal.edu.co/index.php/maguare/issue/view/2786
+- Caiana (CAIA, Argentina): dossier #29 «Artes e industrias: experimentación, procesos y materialidad en la producción (siglos XVI-XX)»; dossier #30 «El arte abstracto en plural» (plazo 15 de noviembre, año no explícito) — https://caiana.caiana.com.ar/ ; https://caia.org.ar/
+- AusArt (UPV/EHU): números en enero y julio; envíos en los plazos de cada convocatoria (3-4 meses antes); doble ciego — https://ojs.ehu.eus/index.php/ausart/about
+- Accesos (UCM) + Arte e Investigación (UNLP) + Ñawi (ESPOL, Ecuador): convocatoria cruzada, sin fecha localizada — https://www.accesos.info/
+- Artnodes n.º 41 (feb. 2027): plazo 1-07-2026 (vencida) — https://raco.cat/index.php/Artnodes/about/call-for-papers
+- HUB (i2ADS, Oporto): portugués o inglés (no español) → excluida — https://i2ads.up.pt/hub/about.html
+- RES: tema confirmado «Perspectivas sociales y políticas de la transición energética», envíos 1-28 feb. 2027 — https://revistas.uniandes.edu.co/index.php/res/callforpapers
+- Antípoda: recepción 1-30 nov. 2026, «Saberes indígenas en la ciencia, la academia y las universidades en América Latina» (por verificar) — https://revistas.uniandes.edu.co/index.php/antipoda/callforpapers
+- F-ILIA n.º 11 «(Neo)Extractivismos y la investigación en artes»: Universidad de las Artes (Ecuador) → fuera de alcance (Ecuador) — https://ilia.uartes.edu.ec/category/encuentro-ilia/convocatorias/
