@@ -1,6 +1,6 @@
 # 10. Are.na: un atlas que la mano cura y la máquina lee
 
-Es una propuesta y todavía no hay conexión: el entorno donde trabaja la máquina bloquea `api.are.na` (§10.4).
+Es una propuesta y todavía no hay conexión: el entorno donde trabaja la máquina bloquea `api.are.na` hasta que se haga lo de §10.4.
 
 ## 10.1. Por qué rima
 
@@ -43,10 +43,41 @@ Siguen la estructura del proyecto, no una nueva.
 
 ## 10.4. Para conectarlo
 
-1. **Abrir la red.** En la configuración del entorno (el menú del entorno en la barra del título de la sesión, después *Edit*), en *Network access*, agregar `api.are.na` a los dominios permitidos, sin destildar los gestores de paquetes.
-2. **Crear un token de solo lectura.** Se hace en Are.na, en `are.na/settings/oauth`, en la sección de tokens de acceso personal.
-3. **Guardar el token en el entorno.** Va en la misma configuración, como secreto de red o como variable de entorno llamada `ARENA_TOKEN`. Una sesión nueva lo toma. **El token nunca se pega en el chat ni se sube al repositorio.**
-4. **Escribir el lector.** Con eso, la máquina escribe y prueba un lector mínimo (`herramientas/arena.py`) contra la API v3, con la documentación a la vista.
+**1 · El token, en Are.na.**
+
+1. Entrar a are.na con tu cuenta e ir a `are.na/settings/oauth`.
+2. Crear un token de acceso personal llamado «contenida (lectura)».
+3. **No pedir el permiso de escritura (*write*).** Sin él, el token es de solo lectura: puede ver todo lo que tu cuenta ve, pero no crear, cambiar ni borrar nada.
+4. Copiarlo una sola vez y no guardarlo en ningún archivo del proyecto.
+
+**2 · El secreto, en el entorno de la nube** (planes Pro y Max).
+
+1. Entrar a `claude.ai/code`.
+2. En la fila de arriba del cuadro de mensaje, tocar el botón con el ícono de nube y el nombre del entorno. Elegir **Cloud**, pasar el puntero sobre el entorno de este proyecto y tocar el ícono de engranaje.
+3. En el diálogo **Edit environment**, ir a la sección **Network secrets** y tocar **Add secret**:
+   - **Credential type:** dejar **Bearer**;
+   - **Name:** `Are.na (lectura)`;
+   - **Allowed websites:** `api.are.na`;
+   - **Custom headers:** dejar la fila que trae, con **Name** `Authorization` y **Prefix** `Bearer`, y pegar el token en **Value**.
+4. Tocar **Connect**. El secreto queda guardado y no se puede volver a ver.
+
+Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido a `api.are.na`, y ese dominio queda habilitado aunque la red no lo liste.
+
+**3 · La documentación de Are.na** (opcional, para escribir el lector con la referencia a la vista).
+
+1. En el mismo diálogo, cambiar **Network access** a **Custom**.
+2. En **Allowed domains** escribir `www.are.na`.
+3. Dejar marcada **Also include default list of common package managers**.
+4. Tocar **Save changes**. Las sesiones abiertas toman el cambio en un minuto.
+
+**Si la sección Network secrets no aparece** (planes Team o Enterprise):
+
+1. Poner **Network access** en **Custom**, con `api.are.na` y `www.are.na` en **Allowed domains**.
+2. En **Environment variables** agregar una línea: `ARENA_TOKEN=` y el token.
+3. Tener en cuenta que quien use ese entorno puede leer esa variable. Por eso el token tiene que ser de solo lectura.
+4. Una sesión nueva lee la variable.
+
+**4 · El lector.** Con eso, la máquina escribe y prueba `herramientas/arena.py` contra la API v3. Si hay variable `ARENA_TOKEN`, la usa; si no, confía en el secreto del proxy.
 
 ## 10.5. Lo que se corrige de la propuesta recibida
 
