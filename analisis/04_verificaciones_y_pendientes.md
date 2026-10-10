@@ -31,8 +31,14 @@
     - en §7, la propiedad como control, «el poder legal y la oportunidad física de modificar y reparar» (1977: 395), que la novela separa entre papeles y manos.
     - En §8, Alexander entra en la lista de las miradas ajenas al mundo narrado.
     - Nueve recortes pequeños compensan la extensión, y la bibliografía pasa a 27 entradas.
+  - El mismo día dejó de valer el límite de *Estudios Bolivianos*: el artículo ya no irá allí. Entraron dos libros sobre la collage, Fuão (2011) y Monteys y Fuertes (2001), y los textos listos de Alexander (`26_fuao_y_monteys_collage.md`):
+    - el ensamblaje del método recibe una teoría: la de la collage (§2);
+    - la chujlla se lee como casa por agregación, con el fuego al centro, y el corte de la Figura 1 se justifica también como recurso de arquitecto (§3);
+    - el radio urbano es un corte, la huella un índice, la lista de la mina un montaje (§4 y §5);
+    - el retorno es la cola que reúne lo disperso, y la memoria, la cola que cierra el foso (§7);
+    - la bibliografía pasa a 30 entradas.
 
-- **Extensión.** 49.969 caracteres con espacios, con bibliografía y notas. El rango que pedía *Estudios Bolivianos* 43 era de 47.500 a 49.500, y su límite, 50.000. Con el plazo de esa convocatoria vencido, manda el límite de la revista que elijas.
+- **Extensión.** 58.689 caracteres con espacios, con bibliografía y notas; unas 9.840 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (`26`, §26.8).
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -82,7 +88,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** 49.969 caracteres. Depende del límite de la revista que elijas (§4.6).
+- **La extensión:** 58.689 caracteres. Depende del límite de la revista que elijas (§4.6).
 
 ## 4.3. Verificación de fuentes
 
@@ -119,6 +125,8 @@ Estado de cada dato:
 | 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII y OCR del libro completo) | Es un relato, como dice el propio libro (p. 19), y el artículo lo aclara. El colofón da la dirección editorial (Eloísa Paz y alfonso borragán). Falta confirmar en el impreso el año, el ISBN y las páginas de la sección (`16_susto_al_susto_libro_completo.md`) |
 | 24 | Rodríguez y Rodríguez (2025: 55) y la *jayintilla* de Bertonio (2011 [1612]: 361) | A (OCR del libro, comprobado en la imagen de las pp. 54-55; transcripción de Bertonio) | Confirmar en el impreso la última página del capítulo (61) |
 | 25 | Alexander *et al.* (1977: xliii, 395) | A (OCR del libro) | Traducción propia del inglés. Páginas reconstruidas con las marcas al pie y las cabezas de página (`25_alexander_lenguaje_de_patrones.md`, §25.1 y §25.8). Si consigues la edición castellana (Gustavo Gili), citarla |
+| 26 | Fuão (2011: 8, 14, 16, 28, 33-36, 43, 48, 52, 53, 65, 80, 81, 88, 91, 97, 102) | A (Word del libro, paginado al convertirlo a PDF; cada página trae su número impreso) | Traducción propia del portugués; originales en `26_fuao_y_monteys_collage.md`, §26.7 |
+| 27 | Monteys y Fuertes (2001: 12, 14, 26, 30, 42, 56, 58, 104, 112, 128, 132, 146, 148) y Bachelard (1983 [1957]: 45) citado en la p. 42 | A (escaneo de baja resolución; cada cita leída en la imagen de su página) | Faltan las pp. 62-63 en el escaneo. Confirmar en el impreso si se cita algo de ellas |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -166,7 +174,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.969 caracteres, con la nota de autor, las declaraciones y el epígrafe. El título nuevo añadió 85 y Alexander, 420 más, ya descontados nueve recortes pequeños (`25`, §25.5). Queda 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*: cualquier añadido pide un recorte igual. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
+- **Ahora:** 58.689 caracteres, con la nota de autor, las declaraciones y el epígrafe. Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -202,6 +210,7 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
-- [x] `.docx` regenerado con el título nuevo y Alexander: 49.969 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado con el título nuevo, Alexander, Fuão y Monteys y Fuertes: 58.689 caracteres, 29 páginas; resúmenes de 99 y 90 palabras
+- [ ] Elegir revista y, si hace falta, preparar la versión recortada (`26`, §26.8)
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)

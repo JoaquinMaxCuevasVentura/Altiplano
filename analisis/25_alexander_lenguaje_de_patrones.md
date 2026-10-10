@@ -275,6 +275,8 @@ No lo uses hasta leer el patrón completo en el impreso.
 
 ## 25.6. Textos listos para usar si hay más espacio
 
+**Actualización del 10 de octubre.** Como el artículo ya no va a *Estudios Bolivianos* y no hay límite de extensión, los textos 1, 2, 3, 5, 6 y 7 entraron en el artículo junto con Fuão y Monteys y Fuertes (`26_fuao_y_monteys_collage.md`). El texto 4, el del umbral, sigue fuera porque su página no se pudo fijar.
+
 Las cifras son el aumento aproximado de extensión. Las citas están verificadas como en §25.8.
 
 1. **El gradiente (sección 3, tras «los cuartos son las chujllas»), +250:**
