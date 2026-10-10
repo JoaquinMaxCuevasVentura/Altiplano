@@ -91,6 +91,14 @@ Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido 
 - **No cosecha.** Las condiciones de uso de la API prohíben rastrear, descargar contenido en forma sistemática o recolectar datos en bloque. Coincide con lo que ya decidió el proyecto: no se descargan canales ajenos.
 - **Los límites, por minuto:** 30 pedidos sin token, 120 con cuenta gratuita, 300 con *Premium* y 600 con *Supporter*. Un token de solo lectura que intenta escribir recibe `403`.
 - **Para probar la conexión:** `/v3/ping` responde sin token, y `/v3/me` solo responde con un token válido (sin él, devuelve `401`).
+- **Los errores** llegan en JSON (`error`, `code` y `details.message`). El lector los traduce en vez de seguir de largo:
+  - 400: parámetros inválidos;
+  - 401: falta el token o no sirve;
+  - 403: el token no tiene permiso;
+  - 404: no existe, o es privado y el token no lo ve;
+  - 408: la API tardó demasiado;
+  - 422: el pedido no se pudo procesar;
+  - 429: se pasó el límite, y espera hasta `X-RateLimit-Reset`.
 
 ## 10.5. Lo que se corrige de la propuesta recibida
 
