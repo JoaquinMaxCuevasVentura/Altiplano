@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 tipografia/informe/.titulos.json
+
+# generado por tipografia/digital/poliza.py
+tipografia/digital/poliza.fea

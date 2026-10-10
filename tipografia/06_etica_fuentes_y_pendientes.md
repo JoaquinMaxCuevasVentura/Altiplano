@@ -16,7 +16,7 @@
   - Cada mano de la cadena, con su nombre o con «sin nombre registrado».
 - **El cuerpo.** Acuerdo escrito de quien vista las placas. El cuerpo de Rebeca no se usa salvo que ella lo proponga.
 - **La piscina.** Permiso escrito del estudio y del edificio. No se saca ni se deja nada.
-- **El dinero.** Nada se vende sin acuerdo. Si alguna vez hay ingresos, el reparto se acuerda antes (`05`, §5.6).
+- **El dinero.** Nada se vende sin acuerdo. Si alguna vez hay ingresos, el reparto se acuerda antes (`05`, §5.7).
 
 ## 6.2. Lo que no está en el repositorio
 

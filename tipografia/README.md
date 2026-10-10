@@ -44,6 +44,8 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `09_las_manos_no_tienen_lengua.md` | Lo que se toma de Cárcamo (el *manuaje*: las manos no tienen lengua) y de Johnson (la segunda vida de los árboles), y lo que cambia en el taller |
+| `10_arena.md` | **Propuesta** de un atlas en Are.na: la mano cura, la máquina lee. Canales privados, qué falta para conectarlo y qué se corrige de la propuesta recibida |
+| `digital/poliza.py` | La póliza en OpenType: reparte las placas para que ninguna se repita dentro de un verso; la prueba con HarfBuzz |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
 | `aplicacion/` | **La gramática en el navegador:** la ficha de parámetros, la caja, el signo con sus partes, el texto compuesto y los seis estados. Exporta `parametros.json` para `simular.py --parametros` |

@@ -45,13 +45,13 @@
 | `.notdef` | La celda de la lámina, calcada a mano y escaneada | El único préstamo directo del monolito es un marco vacío |
 | `¶` | El signo final de la celda 56 | Se escribe con la tecla o el atajo del calderón |
 | Variantes | Cada placa de la póliza que pasó por ese estado es una variante: `a.01` … `a.09`, `e.01` … `e.08` | Cada «a» es una placa distinta |
-| Alternancia | `calt`: la variante cambia según el signo anterior, con la técnica habitual de las letras de apariencia manual. En el componedor web (§5.4) el ciclo es exacto por letra, como en la caja | En el archivo de fuente, la alternancia es aproximada, y se dice. El antecedente es *Beowolf* (LettError, 1990), que cambiaba sus contornos en cada impresión |
+| Alternancia | `calt`, escrito por `digital/poliza.py`: a cada signo le toca la primera placa que no aparezca antes en el verso. La regla mira 43 signos atrás, lo que mide el verso más largo del poema. Probada con HarfBuzz en los 42 versos: ninguna placa se repite. Ocupa unos 180 KB de la fuente | Es exacta para cualquier verso de hasta 44 signos. En líneas más largas, una placa puede volver más allá de esa distancia, y se dice. Si un texto pide más placas de las que hay, las que sobran toman la última: la caja se acabó. El antecedente es *Beowolf* (LettError, 1990), que cambiaba sus contornos en cada impresión |
 | Estilos | Un archivo por estado: Calco, Placa, Cinta, Frotado 01 … *n*, Agua, Voz | No hay pesos interpolados: si falta el frotado 17, no hay estilo 17 |
 | Nombres | Familia tipográfica *Contenida* y subfamilia con el nombre del estado (campos 16 y 17 de la tabla `name`). El campo 2 dice *Regular* porque los sistemas lo exigen | Es el único lugar donde aparece esa palabra: un campo técnico que nadie lee |
 | Descripción | El colofón de manos completo (campo 10) | La procedencia viaja dentro del archivo |
 | Diseño | Todas las manos de la cadena (campo 9) | — |
 | Fichas | `contenida_fichas.json`, junto a la fuente, y una nota de procedencia en cada glifo | — |
-| Licencia | A acordar con Rebeca (§5.6) | — |
+| Licencia | A acordar con Rebeca (§5.7) | — |
 
 ## 5.4. El espécimen digital
 
@@ -80,7 +80,33 @@ Es la misma página que se proyecta en la presentación a través de la bandeja 
 
 Lo digital no termina la cadena: le da la vuelta, como la mesa serif de Tshuma, que va del objeto al signo y del signo al objeto. «Termina y empieza, / termina y empieza.»
 
-## 5.6. Lo que no se hace
+## 5.6. Herramientas y pruebas que se suman
+
+Se recibió una propuesta de otra IA para el ecosistema digital. Esto es lo que se toma, para cuando lo digital cierre:
+
+- **Formato abierto y compiladores libres.** Además de FontForge:
+  - las fuentes de trabajo en UFO, con `ufoLib2`;
+  - la compilación con `fontmake`;
+  - las reglas con `fontTools.feaLib`;
+  - las pruebas con `uharfbuzz`, como la de la póliza.
+- **La procedencia dentro del archivo.** Ya estaba prevista en la tabla `name` (campos 9 y 10). Se escribe con un script, desde el colofón de `03` (§3.11), en caja baja y sin agregarle nada.
+- **Un laboratorio de discrepancias**, con placas reales, no simuladas. Cuando haya placas escaneadas, se mide:
+  - **dónde se rompe el aluminio**, frente a lo que supone la gramática (`radio_chapa`, `alivio`);
+  - **el quiebre de los fustes a lo largo de las sesiones**, frente al 1,6° fijo de la gramática: la mano que se cansa;
+  - **cuántas frotadas resiste el ¶ hecho con los dedos.** La simulación dice 0, porque supone «una presión de pulgar genérico: la máquina no tiene dedos».
+
+  Lo que se mida va a `simulacion/informe.md`, como confrontación. No corrige ninguna placa.
+
+**Lo que no se toma de esa propuesta:**
+
+- **Ejes variables.** No se usan ni los de frotado, agua o cinta (inventarían estados intermedios que ninguna mano hizo) ni uno «mano ↔ máquina», que metería formas de la máquina en la fuente.
+- **Variantes fabricadas** («temblor», «desgaste leve»): cada variante es una placa.
+- **Cuatro variantes por letra.** La póliza pide hasta 9.
+- **Una «licencia comunitaria»** sin definir: la licencia se acuerda con Rebeca.
+- **Una simulación de aguas someras** para la voz: la máquina ya tiene su versión de las ondas de Faraday, y se decidió quedarse con seis simuladores.
+- **Reordenar el repositorio.**
+
+## 5.7. Lo que no se hace
 
 - **No se publica un máster limpio:** ninguna versión redibujada «bien» de las letras.
 - **No se interpolan pesos.** Los frotados intermedios no se inventan.
