@@ -1,6 +1,10 @@
 # 10. Are.na: un atlas que la mano cura y la máquina lee
 
-**Conectado el 10.10.2026** por el conector MCP de Are.na (§10.4, camino A), con la cuenta `joaquin-cuevas` (plan gratuito, 120 pedidos por minuto). Todavía no tiene canales.
+**Conectado el 10.10.2026** por el conector MCP de Are.na (§10.4, camino A), con la cuenta `joaquin-cuevas` (plan gratuito, 120 pedidos por minuto).
+
+**Ese día la máquina creó el plano: los ocho canales de §10.3, vacíos y privados,** con los siete conectados dentro de `contenida`. Los bloques los pone la mano. Es el mismo reparto que el resto del proyecto: la máquina dibuja los planos (`esquemas/`) y la mano hace las letras.
+
+**La autorización del conector incluye escritura**, no solo lectura. La regla no cambia: la máquina no escribe en Are.na sin que se lo pidas y lo confirmes. Para volver a solo lectura, revocar el permiso en *Developers → Authorized Apps* y volver a autorizar eligiendo lectura, si la pantalla lo ofrece.
 
 ## 10.1. Por qué rima
 
@@ -26,16 +30,16 @@ Es la misma regla de la simulación: la máquina confronta, no forma.
 
 Siguen la estructura del proyecto, no una nueva.
 
-| Canal | Qué guarda | Visibilidad |
+| Canal (dirección en Are.na) | Qué guarda | Visibilidad |
 |---|---|---|
-| `contenida` | La matriz: conecta los demás | Privado |
-| `contenida · desenterrar` | Acciones 0 a 3: el pie, el frotado de la pared, los calcos | Privado |
-| `contenida · contener` | Acciones 4 a 7: placas, caja, cinta, signo final | Privado |
-| `contenida · devolver` | Acciones 8 a 12: frotados, agua, voz, composición | Privado |
-| `contenida · la caja` | 56 bloques, uno por celda, en orden: la caja de 8 × 7 | Privado |
-| `contenida · la máquina` | Lo que propone la simulación y la aplicación, rotulado como tal | Privado |
-| `contenida · fuentes` | Citas breves con autor y página; materiales, herramientas, procedimientos | Privado |
-| `contenida · la obra` | Solo lo que Rebeca autorice, por escrito | **Siempre privado** |
+| `contenida` (`are.na/joaquin-cuevas/contenida`) | La matriz: conecta los demás | Privado |
+| `contenida · desenterrar` (`contenida-desenterrar`) | Acciones 0 a 3: el pie, el frotado de la pared, los calcos | Privado |
+| `contenida · contener` (`contenida-contener`) | Acciones 4 a 7: placas, caja, cinta, signo final | Privado |
+| `contenida · devolver` (`contenida-devolver`) | Acciones 8 a 12: frotados, agua, voz, composición | Privado |
+| `contenida · la caja` (`contenida-la-caja`) | 56 bloques, uno por celda, en orden: la caja de 8 × 7 | Privado |
+| `contenida · la máquina` (`contenida-la-maquina`) | Lo que propone la simulación y la aplicación, rotulado como tal | Privado |
+| `contenida · fuentes` (`contenida-fuentes`) | Citas breves con autor y página; materiales, herramientas, procedimientos | Privado |
+| `contenida · la obra` (`contenida-la-obra`) | Solo lo que Rebeca autorice, por escrito | **Siempre privado** |
 
 **Cómo se titula cada bloque.** Con la acción y la placa, por ejemplo «A4 · Repujar · a.03». En la descripción va la ficha.
 
