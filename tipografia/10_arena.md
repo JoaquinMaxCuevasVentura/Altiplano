@@ -2,7 +2,9 @@
 
 **Conectado el 10.10.2026** por el conector MCP de Are.na (§10.4, camino A), con la cuenta `joaquin-cuevas` (plan gratuito, 120 pedidos por minuto).
 
-**Ese día la máquina creó el plano: los ocho canales de §10.3, vacíos y privados,** con los siete conectados dentro de `contenida`. Los bloques los pone la mano. Es el mismo reparto que el resto del proyecto: la máquina dibuja los planos (`esquemas/`) y la mano hace las letras.
+**Ese día la máquina creó el plano: los ocho canales de §10.3, vacíos y privados,** con los siete conectados dentro de `contenida`. Es el mismo reparto que el resto del proyecto: la máquina dibuja los planos (`esquemas/`) y la mano hace las letras.
+
+**El mismo día, a tu pedido, la máquina hizo una primera curaduría** con material de afuera: libros e imágenes de dominio público, bloques y canales de otras personas en Are.na, y proyectos parecidos. Sumó tres canales de alrededor (*la ruina*, *otras letras* y *vecinas*). El detalle está en §10.6. Las placas, los frotados y todo lo que sale del taller siguen siendo cosa de la mano; `la caja` y `la obra` quedaron vacías.
 
 **La autorización del conector incluye escritura**, no solo lectura. La regla no cambia: la máquina no escribe en Are.na sin que se lo pidas y lo confirmes. Para volver a solo lectura, revocar el permiso en *Developers → Authorized Apps* y volver a autorizar eligiendo lectura, si la pantalla lo ofrece.
 
@@ -19,7 +21,7 @@ Are.na no ordena por algoritmo. Guarda **bloques** sueltos en **canales**, y un 
 
 Es la misma regla de la simulación: la máquina confronta, no forma.
 
-- **La mano cura.** Tú agregas los bloques en Are.na, a mano.
+- **La mano cura.** Tú agregas los bloques en Are.na, a mano. La excepción es la primera curaduría de material externo (§10.6), que la máquina hizo a tu pedido.
 - **La máquina lee**, con un token de solo lectura. Hace tres cosas:
   - coteja cada bloque con los documentos: citas con página, nombres, fechas;
   - propone con qué verso o decisión rima;
@@ -40,6 +42,14 @@ Siguen la estructura del proyecto, no una nueva.
 | `contenida · la máquina` (`contenida-la-maquina`) | Lo que propone la simulación y la aplicación, rotulado como tal | Privado |
 | `contenida · fuentes` (`contenida-fuentes`) | Citas breves con autor y página; materiales, herramientas, procedimientos | Privado |
 | `contenida · la obra` (`contenida-la-obra`) | Solo lo que Rebeca autorice, por escrito | **Siempre privado** |
+
+**Los canales de alrededor**, sumados el 10.10.2026, también privados y conectados dentro de `contenida`:
+
+| Canal (dirección en Are.na) | Qué guarda |
+|---|---|
+| `contenida · la ruina` (`contenida-la-ruina`) | Cómo se registró Tiwanaku: grabados, fotos y láminas de dominio público o con licencia libre. Se mira, no se calca |
+| `contenida · otras letras` (`contenida-otras-letras`) | Tipografías con motivos tiwanacotas, andinos o «étnicos», y letras para lenguas originarias. Referencia visual y de contraste |
+| `contenida · vecinas` (`contenida-vecinas`) | Proyectos parecidos: letras de piedras, calcos y cajas; escrituras sin palabras; voces hechas visibles |
 
 **Cómo se titula cada bloque.** Con la acción y la placa, por ejemplo «A4 · Repujar · a.03». En la descripción va la ficha.
 
@@ -131,6 +141,50 @@ Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido 
 - **«El Desaguadero no tiene agua»** es lo que dice Posnansky en 1945 (p. 40), no un dato de hoy.
 - **El dato del signo final es correcto:** la simulación da 0 frotadas legibles para el ¶. Pero la explicación del «domo del pulgar» es de esa IA. Lo que dice la ficha es más simple: «una presión de pulgar genérico: la máquina no tiene dedos».
 - **No se buscan relieves de piedra para coleccionar motivos** (la búsqueda «latin american stone relief»). Es el exotismo que el proyecto rechaza: de las fuentes se toman materiales, herramientas y procedimientos.
-- **No se descargan imágenes de canales ajenos** («epigrafía andina», frotados arqueológicos) para usarlas como referencia de forma. Tienen dueño, y copiarlas es tomar motivos.
+  - **Lo que decidiste después (10.10.2026):** los motivos tiwanacotas y las tipografías «étnicas» entran como **referencia visual**, en canales aparte (`la ruina` y `otras letras`). Cada bloque dice de dónde viene, quién lo registró y qué no se toma. Ningún motivo pasa a las letras ni a la caja.
+- **No se descargan imágenes de canales ajenos** («epigrafía andina», frotados arqueológicos) para usarlas como referencia de forma. Tienen dueño, y copiarlas es tomar motivos. Lo que se hace en Are.na es *conectarlas*: el bloque sigue siendo de quien lo subió.
 - **No se suben los PDF** de las tesis, de Posnansky ni de los artículos, **ni el borrador inédito de Cárcamo**. Solo citas breves con su página.
 - **Las fotos y videos del cuerpo de Rebeca** no entran en ningún canal sin su permiso escrito. Tampoco en uno privado, porque Are.na es un tercero.
+
+## 10.6. La primera curaduría (10.10.2026)
+
+Hecha por la máquina, a tu pedido, con el conector: «otros libros, imágenes de dominio público, información de otros canales en Are.na», y después motivos tiwanacotas, tipografías étnicas y proyectos parecidos, como referencia visual.
+
+**Cómo se usó Are.na**
+
+- **Buscar sin buscador.** La búsqueda de Are.na es de pago (*Premium*) y respondió `403`; también la creación en lote. Se encontró de dos maneras:
+  - siguiendo las conexiones de un bloque hasta los canales donde está;
+  - probando direcciones de canal (`asemic-writing`, `concrete-poetry`, `graphic-notation`…).
+- **Conectar, no copiar.** Los bloques y canales de otras personas se *conectaron*: siguen siendo de quien los subió, y nada se descargó.
+- **Dominio público, con la ficha a la vista.** Las imágenes de Wikimedia Commons se subieron con `Special:FilePath/…`, y cada bloque guarda como fuente la página del archivo, donde están el autor y la licencia.
+- **Enlaces, no PDF.** Los libros y artículos entran como enlace a su página (Heidelberg, e-rara, Internet Archive, Gutenberg, DOI), nunca como PDF subido.
+- **Cada bloque tiene su ficha:** autor, fecha, licencia, con qué acción o verso rima y qué no se toma. Si algo no se leyó entero, lo dice («Pendiente»).
+- **Sin ráfagas.** Unas setenta escrituras en diez minutos, una por una, muy por debajo del límite de 120 por minuto.
+
+**Lo que quedó en cada canal** (44 bloques nuevos y 9 conexiones a material ajeno):
+
+| Canal | Bloques nuevos | Conectado de otras personas |
+|---|---|---|
+| `contenida` | «Cómo se lee este atlas»: los canales y las tres reglas | — |
+| `desenterrar` | Frotado de una estela yurchen de 1224 (dominio público); los estampados (*squeezes*) de la epigrafía; el frotado de piedra; cómo hacer un frotado de latón (*Kinfolk*); Catich | *Frottage* (Britannica), de *lowest-subscription tier* |
+| `contener` | La caja de tipos y la póliza; repujado y cincelado; Cellini, *Tratados*, 1568/1898 (Gutenberg); Richard Drew y la cinta de enmascarar, 1925 | Canal *stencils* (lsy liu); autorretrato de Borges ciego (Michelle Parrott), por el repujado a ciegas |
+| `devolver` | Watts Hughes, *Figuras de voz*, 1891 (dominio público); Chladni, 1787 (e-rara); Faraday y las ondas del agua, 1831 | Tonoscopio casero (Konrad Rauscher); canal *Graphic Notation* (Gemma Copeland) |
+| `la máquina` | LettError, *Beowolf*, 1989-1990; Knuth, *Metafont*, y la objeción de Hofstadter | Simulador de Chladni (Estelle Rougerie); clase de Rune Madsen sobre tipografía generativa (Adam Zeiner) |
+| `fuentes` | Salazar y Cárcamo 2021 y Cárcamo 2025b (DOI, acceso abierto); Cárcamo 2025a, Johnson 2007, y Agüero, Uribe y Berenguer 2003 con Posnansky 1945 (fichas de texto); Villanueva Criales 2024 | — |
+| `la ruina` | Squier 1877; Wiener 1880 (grabado y libro); Stübel y Uhle 1892; la puerta vista de atrás, 1903-1904; Posnansky 1912, fig. 11; el monolito Bennett; detalle de la Puerta del Sol; monolito Ponce; Villanueva Criales 2024 | — |
+| `otras letras` | Amuki y su *Tiwanacu*; *Tinkuy Patterns*; Fontikon; *Lithos*; *Neuland*; las fuentes «wonton»; *Reclaiming Peruvian Typography* (ATypI 2023); Juan Casco y el *Silabario Amazónico*; la tesis jama-coaque (Cuenca); *Kigelia* | — |
+| `vecinas` | Xu Bing, *Libro del cielo*; Mirtha Dermisache; Cecilia Vicuña, *Quipu desaparecido*; Catich; *Ablanda* (UCB) | Canales *Asemic Writing* (Michelle Parrott) y *Concrete Poetry* (Pierre Marteau). También se conectaron aquí *Beowolf*, *Neuland* y Watts Hughes, sin copiarlos |
+| `la caja` y `la obra` | Vacías: la caja la llena la mano; la obra, solo con permiso de Rebeca | — |
+
+**Lo que falló:** las páginas de la Universidad de Cuenca y de la UCB no respondieron al servidor de Are.na. Se rehicieron como bloques de texto con el enlace adentro. Los dos bloques fallidos se desconectaron; quedan sueltos en la cuenta y se pueden borrar desde la web.
+
+**Lo que no se encontró:** una dirección pública de Cárcamo 2025a, y las tesis *EthnoGraphemes* y *Afrography*.
+
+**Pendientes para la mano:**
+
+1. Leer y anotar con página lo marcado como «Pendiente»: Villanueva Criales, Catich, *Ablanda*, la guía de *Kinfolk* y las charlas de ATypI y de Juan Casco.
+2. Probar en el taller dos procedimientos que salieron de aquí:
+   - el **estampado** (papel de algodón mojado, cepillado contra la placa), que podría ser un estado entre *Frotada* y *Mojada*;
+   - la **bandeja sobre un parlante**, para la voz.
+3. Buscar en una biblioteca Posnansky 1945, vol. 2, figs. 100 a 102a.
+4. Llenar `la caja` con las placas, una por celda.
