@@ -43,6 +43,23 @@ Siguen la estructura del proyecto, no una nueva.
 
 ## 10.4. Para conectarlo
 
+### Camino A, recomendado: el conector MCP de Are.na
+
+Are.na ofrece un servidor MCP propio, alojado en `https://mcp.are.na/mcp` (*Developers → Resources → Are.na MCP Server*). Se conecta como conector de Claude y se autoriza con la cuenta de Are.na (OAuth).
+
+- No hay token que copiar ni secreto que guardar.
+- No hace falta abrir la red del entorno: el tráfico de los conectores pasa por los servidores de Anthropic.
+
+1. Entrar a `claude.ai/customize/connectors` (en el teléfono, desde Chrome).
+2. Tocar **Add custom connector** y escribir:
+   - **Name:** `Are.na`;
+   - **Remote MCP server URL:** `https://mcp.are.na/mcp`.
+3. Dejar vacíos los campos de *OAuth Client ID* y *Secret*: el servidor se registra solo. Tocar **Add**.
+4. **Autorizar con la cuenta de Are.na.** Leer qué permiso pide la pantalla: si deja elegir, solo **lectura** (*read*). La API, si no se le pide otra cosa, da lectura. Con lectura, cualquier intento de escribir recibe `403`.
+5. **Abrir una sesión nueva:** los conectores se leen cuando la sesión empieza.
+
+### Camino B: token de lectura y secreto de red
+
 **1 · El token, en Are.na.**
 
 1. En are.na, con tu cuenta: **Developers → Personal Access Tokens** («Create and manage one-off access tokens»). Desde el teléfono, la dirección `are.na/settings/oauth` dio «Page not found»; se llega desde el menú de *Developers*.
@@ -102,7 +119,7 @@ Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido 
 
 ## 10.5. Lo que se corrige de la propuesta recibida
 
-- **Los paquetes MCP que nombra no existen.** `arena-mcp` (PyPI) y `@modelcontextprotocol/server-arena` (npm) responden 404. Are.na sí anuncia un servidor MCP propio, en *Developers → Resources*: queda por revisar cómo se conecta y qué permisos pide.
+- **Los paquetes MCP que nombra no existen.** `arena-mcp` (PyPI) y `@modelcontextprotocol/server-arena` (npm) responden 404. El servidor de Are.na es otro: `@aredotna/mcp`, alojado en `https://mcp.are.na/mcp` (camino A).
 - **La API v2 está obsoleta.** La vigente es la v3, en `api.are.na`.
 - **«Closed» no es privado.** Un canal *closed* lo ve todo el mundo; solo restringe quién agrega. Si se lo crea con esa idea, se publica lo que se quería guardar. Además, un canal visible dentro de un grupo hace visible el perfil del grupo. Todo empieza privado.
 - **La cinta no es negra.** Es masking blanca, tirando a hueso, sobre plástico negro.
