@@ -216,3 +216,52 @@ Es decir: **en el origen del término hay un idioma inventado**. Ese es el puent
 | Cárcamo Pino | «el imaginario de los tres cerditos»: 2025a, p. 8. «inventado in situ por los personajes»: 2025b, p. 241. «con la mano de Shakespeare, no con la boca»: p. 242. «monopolio de la escritura y el lenguaje»: p. 259 |
 | Cadenas de *ibid.* | Sin roturas: el *ibid.* de la p. 38 pasó a forma completa |
 | Hosts bloqueados por la red del entorno | en.wikipedia.org, genius.com, stereogum.com, spin.com, azlyrics.com, shorefire.com, coppellstudentmedia.com |
+
+## 27.10. Revisión final del artículo
+
+Pediste revisar todo lo acumulado en la conversación para dejar la versión final. Se releyó el artículo entero y se repasaron los textos que habían quedado fuera solo por el límite de *Estudios Bolivianos* (documentos 08, 14, 25 y 26). Estos son los cambios.
+
+**De lectura:**
+
+- **§2.** El pasaje de McLeod y The Voidz pasa a un párrafo propio, después del de Monteys y Fuertes. Insertado donde estaba, dejaba sin referente a «ese saber».
+- **§2.** La ordenanza que McLeod y The Voidz ayudan a leer es «del doctor Mendoza», no «del Alcalde»: el cargo se presenta recién en §4.
+- **§3.** «Pyramid of Bones» cierra con «Arriba, el blasón; abajo, los que lo sostienen», en lugar de repetir las tres palabras recién citadas. Recoge el apoyo del Cuadro 1: los peones que sostienen a los Villca (p. 21).
+- **§7.** Los dos párrafos largos se dividen: en la yunta («En Umacachi, la ordenanza se llevó los bueyes…») y en la pirca («Una pirca de doble cara…»).
+- **§8.** El primer límite suma «los tres cerditos» y «The Voidz» a las maneras de ver ajenas al mundo narrado. Los cruces de cultura popular también son miradas de fuera.
+
+**Textos que estaban en reserva y entran (todos cotejados con el original):**
+
+| Texto | Dónde | Fuente |
+|---|---|---|
+| Para los incas, volverse piedra no era morir: «la petrificación señalaba la suspensión, pero no el fin, de la vida» | §2, tras la *wank'a* | Dean, 2010: 5 («Petrifaction signaled the suspension of, but not an end to, life») |
+| Las piedras incas como «memorias materializadas»: «recordar una versión del pasado exige olvidar o reprimir otra versión de ese mismo pasado» | §7, tras «recordar es construir, y olvidar también» | Dean, 2010: 39 («Remembering one version of the past requires the forgetting or repressing of another version of that same past») |
+| Nota: el artículo está hecho de recortes; las comillas son «la mejor evidencia del recorte», «una sutura de cuatro puntos» | Nota 4, en §2 | Fuão, 2011: 39 (`26`, §26.6, texto 1) |
+| El voyeurismo: separar al observador del objeto «mediante un distanciamiento de la mirada y el ocultamiento del propio cuerpo» | §6, tras la tribuna del linchamiento | Fuão, 2011: 24 (`26`, §26.6, texto 4) |
+
+**Coherencia formal:**
+
+- **Años.** Pallasmaa se cita como 2014 [2011] y Hall como 1973 [1966], igual que en la bibliografía.
+- **Figura 5.** Su primera cita de la novela pasa a forma completa (p. 66), porque ahora la precede Fuão.
+- ***Ibid.* sobrantes.** En §7, «(ibid.: 155)» pasa a «(ibid.)», por ser la misma página, y la segunda cita de Alexander pasa a «(ibid.: xiii)».
+- **Bibliografía.** The Voidz va después de Spedding.
+
+**Qué sigue en reserva, y por qué:**
+
+- **Dean, los *puruawqa* (p. 39).** Duplicaría la cita de la p. 5.
+- **Fuão, petrificación de Sedlmayr (p. 17).** Dean ya hace ese trabajo con fuente andina.
+- **Fuão, perspectiva y colonias (p. 21).** Repite la función de Scott.
+- **Seguí, la sección como «búsqueda de un interior» (p. 97).** La Figura 1 ya tiene tres apoyos.
+- **Barnadas y Coy (1977: 11).** Su OCR es dudoso.
+- **El bloqueo con piedras de Spedding (p. XVI).** Es un relato, no un dato.
+- **Venturi y Alexander 158.** Ver §27.8.
+
+**Comprobaciones finales:**
+
+| Comprobación | Resultado |
+|---|---|
+| Citas de la novela | 153, sin problemas |
+| Originales de Fuão | 35, todos en su página |
+| Cadenas de *ibid.* | Todas remiten a la obra correcta |
+| Bibliografía | 31 obras citadas y 31 entradas; ninguna sobra ni falta |
+| Word | 61.107 caracteres con espacios, unas 10.200 palabras, 29 páginas; resumen de 99 palabras y abstract de 90 |
+| Word con cambios | 25 cambios marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba) |

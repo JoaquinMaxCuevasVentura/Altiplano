@@ -37,8 +37,13 @@
     - el radio urbano es un corte, la huella un índice, la lista de la mina un montaje (§4 y §5);
     - el retorno es la cola que reúne lo disperso, y la memoria, la cola que cierra el foso (§7);
     - la bibliografía pasa a 30 entradas.
+  - Por último, el 10 de octubre, la auditoría de las propuestas de otra IA y la revisión final (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`):
+    - entran dos cruces con la cultura popular, al modo de los tres cerditos de Cárcamo Pino: el Alcalde, «alias “el lobo”» (p. 86), que no sopla ninguna casa, sino que firma (§4), y los títulos, no los versos, de dos canciones de The Voidz: «All Wordz Are Made Up», con el antecedente de *manuaje* en Randall McLeod (§2), y «Pyramid of Bones» (§3);
+    - entran la «segunda incisión» de Fuão (nota del pastel), su voyeur (§6) y su nota sobre las comillas (§2), y dos frases de Dean: la petrificación andina no es muerte (§2) y recordar exige olvidar (§7);
+    - se dividen párrafos largos, se unifican los años de Pallasmaa y Hall y la bibliografía pasa a 31 entradas;
+    - el título se mantiene: «cosecha de piedras» es una frase de la novela (p. 9).
 
-- **Extensión.** 58.689 caracteres con espacios, con bibliografía y notas; unas 9.840 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (`26`, §26.8).
+- **Extensión.** 61.107 caracteres con espacios, con bibliografía y notas; unas 10.200 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (`26`, §26.8).
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -46,7 +51,7 @@
   - Investigación «en desarrollo» (final de la sección 1).
   - Conflicto de intereses y declaración de IA, en las declaraciones finales (§4.5).
   - **No quedan marcadores ⟦…⟧.**
-- **Citas de la novela.** Las 147 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
+- **Citas de la novela.** Las 153 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
 - **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias, también las dos de Alexander.
 - **Figuras.** Ocho, numeradas por orden de aparición.
@@ -65,7 +70,8 @@
    - las dos analogías nuevas: el esgrafiado (§1) y la pirca de doble cara (§7) (`11_analogias_fisicas.md`);
    - el nuevo final de la Figura 1: el narrador ve a los comunarios «como estatuas» (`12_taller_cine_experimental.md`);
    - el subtítulo y las dos metáforas nuevas (`14_evaluacion_propuesta_otra_ia.md`);
-   - el *qalachuyma* de §7 (`15_spedding_susto_al_susto.md`).
+   - el *qalachuyma* de §7 (`15_spedding_susto_al_susto.md`);
+   - los cruces de cultura popular: «el lobo», los tres cerditos y las dos canciones de The Voidz (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`).
 2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`24_otro_epigrafe.md`; antes, `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
 3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
 4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
@@ -73,9 +79,9 @@
    - las de la novela, empezando por las pp. 88-107 y por los pasajes nuevos de la versión llana (`06_fichero_de_pasajes.md`; `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.3);
    - las de las fuentes escaneadas: Barnadas, p. 84; Zavaleta, p. 21; Cornejo Polar, si usas la 1.ª edición.
 6. **Revisar los datos marcados B y C** (§4.3).
-7. **Regenerar el Word** con `python3 articulo/generar_docx.py` si cambias algo, y comprobar que la extensión siga entre 47.500 y 49.500 (§4.6).
+7. **Regenerar el Word** con `python3 articulo/generar_docx.py` si cambias algo, y comprobar la extensión que pida la revista elegida (§4.6).
 8. **Preparar una versión anonimizada** si la revista la pide para el arbitraje a doble ciego: sin nombre, sin nota 1 y con «El autor» neutralizado en las declaraciones.
-9. **Enviar** a ieb.fhce@umsa.bo (modelo de correo en `01_convocatoria_estudios_bolivianos_43.md`, §1.6). **El plazo venció el 25 de septiembre de 2026**: si aún no enviaste, conviene escribir a la revista antes de mandar el archivo.
+9. **Elegir revista y enviar** (`reports/Convocatorias abiertas para el artículo.md`; `26`, §26.8). El artículo ya no irá a *Estudios Bolivianos*. Adapta el formato a las normas de la revista elegida: el Word sale de la plantilla de *Estudios Bolivianos*, y la frase «Se trata de una investigación en desarrollo» respondía a una norma de esa revista.
 
 ## 4.2. Datos de autoría del artículo
 
@@ -88,7 +94,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** 58.689 caracteres. Depende del límite de la revista que elijas (§4.6).
+- **La extensión:** 61.107 caracteres. Depende del límite de la revista que elijas (§4.6).
 
 ## 4.3. Verificación de fuentes
 
@@ -100,15 +106,15 @@ Estado de cada dato:
 
 | # | Dato | Estado | Acción |
 |---|---|---|---|
-| 1 | 147 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
-| 2 | Cárcamo Pino (2025a: 10, 12; 2025b: 244, 259) | A | — |
+| 1 | 153 citas de *Altiplano* y los datos parafraseados | A (transcripción) | Cotejar con el impreso, sobre todo las pp. 88-107 |
+| 2 | Cárcamo Pino (2025a: 8, 10, 12; 2025b: 241-242, 244, 259) | A | — |
 | 3 | Definición de manuaje, Cárcamo Pino (2019: 1412) | B, vía 2025b: 244 | — |
 | 4 | Editorial de Cárcamo Pino (2019) | C | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018. Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Confirmar cuál prefieres |
 | 5 | Vázquez Ramos *et al.* (2023: 3, 4) y la cita de Hall que recogen | A / B | Traducción propia del portugués |
 | 6 | Lundberg (2019: 3, 21) | A | — |
 | 7 | Martin (2014: 85): Bacon, en su lectura de Deleuze | A* / B | Paginación de Martin reconstruida y validada; cotejar dos o tres páginas con el impreso si puedes |
 | 8 | Scott (2020 [1998]: 3) | A (texto) con páginas del índice analítico | Cotejar la página con el impreso |
-| 9 | Dean (2010: 44, 68, 202 n. 86) | A | Páginas reconstruidas con los encabezados del archivo y comprobadas con el índice |
+| 9 | Dean (2010: 5, 39, 44, 202 n. 86) | A | Páginas reconstruidas con los encabezados del archivo y comprobadas con el índice |
 | 10 | Frampton (1995: 5) | A (escaneo de la introducción) | Confirmar en la portada el editor (John Cava) y la ciudad de la bibliografía |
 | 11 | Garrington (2013: 16) | A | Paginación comprobada con el índice |
 | 12 | Le Guin (2021 [1986]: 8, 10, 11) | A (PDF de la traducción de Nedev y Pérez de Lama) | Completar la URL exacta en es.theanarchistlibrary.org |
@@ -125,8 +131,9 @@ Estado de cada dato:
 | 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII y OCR del libro completo) | Es un relato, como dice el propio libro (p. 19), y el artículo lo aclara. El colofón da la dirección editorial (Eloísa Paz y alfonso borragán). Falta confirmar en el impreso el año, el ISBN y las páginas de la sección (`16_susto_al_susto_libro_completo.md`) |
 | 24 | Rodríguez y Rodríguez (2025: 55) y la *jayintilla* de Bertonio (2011 [1612]: 361) | A (OCR del libro, comprobado en la imagen de las pp. 54-55; transcripción de Bertonio) | Confirmar en el impreso la última página del capítulo (61) |
 | 25 | Alexander *et al.* (1977: xliii, 395) | A (OCR del libro) | Traducción propia del inglés. Páginas reconstruidas con las marcas al pie y las cabezas de página (`25_alexander_lenguaje_de_patrones.md`, §25.1 y §25.8). Si consigues la edición castellana (Gustavo Gili), citarla |
-| 26 | Fuão (2011: 8, 14, 16, 28, 33-36, 43, 48, 52, 53, 65, 80, 81, 88, 91, 97, 102) | A (Word del libro, paginado al convertirlo a PDF; cada página trae su número impreso) | Traducción propia del portugués; originales en `26_fuao_y_monteys_collage.md`, §26.7 |
+| 26 | Fuão (2011: 8, 14, 16, 24, 28, 29, 33-36, 39, 43, 48, 52, 53, 65, 80, 81, 88, 91, 97, 102) | A (Word del libro, paginado al convertirlo a PDF; cada página trae su número impreso) | Traducción propia del portugués; originales en `26_fuao_y_monteys_collage.md`, §26.7 |
 | 27 | Monteys y Fuertes (2001: 12, 14, 26, 30, 42, 56, 58, 104, 112, 128, 132, 146, 148) y Bachelard (1983 [1957]: 45) citado en la p. 42 | A (escaneo de baja resolución; cada cita leída en la imagen de su página) | Faltan las pp. 62-63 en el escaneo. Confirmar en el impreso si se cita algo de ellas |
+| 28 | The Voidz (2018), *Virtue*: «Pyramid of Bones» (pista 3) y «All Wordz Are Made Up» (pista 7), Cult Records y RCA Records | C (álbum, pistas, sello y fecha confirmados con extractos del buscador; las páginas oficiales estaban bloqueadas) | Confirmar en el disco o en un servicio de *streaming*. No se cita ningún verso: los que propuso la otra IA no pudieron verificarse (`27`, §27.4) |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -174,12 +181,8 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 58.689 caracteres, con la nota de autor, las declaraciones y el epígrafe. Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
-- **Si añades algo** (una adscripción en la nota, una frase en la declaración):
-  - resume en el texto un pasaje de trama que no lleve cita;
-  - o retira una de las referencias en reserva.
-
-  El marco teórico, el Cuadro 1 y la bibliografía deben quedar completos.
+- **Ahora:** 61.107 caracteres, con la nota de autor, las declaraciones y el epígrafe. La auditoría y la revisión final del 10 de octubre añadieron unos 2.400 (`27`, §27.10). Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
+- **Si la revista elegida pide menos**, los candidatos a recortar son los cruces que más se alejan de la novela (Alexander en §3, la casa difusa de §5, las canciones) y los pasajes de trama que no llevan cita. El marco teórico, el Cuadro 1 y la bibliografía deben quedar completos.
 - **Comprobación:** `python3 articulo/generar_docx.py` informa la extensión exacta.
 
 ## 4.7. Antecedentes críticos
@@ -210,7 +213,7 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
-- [x] `.docx` regenerado con el título nuevo, Alexander, Fuão y Monteys y Fuertes: 58.689 caracteres, 29 páginas; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado con la revisión final: 61.107 caracteres, 29 páginas; resúmenes de 99 y 90 palabras; bibliografía de 31 entradas
 - [ ] Elegir revista y, si hace falta, preparar la versión recortada (`26`, §26.8)
 - [ ] Versión anonimizada, si la piden
-- [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)
+- [ ] Formato adaptado a la revista elegida y envío

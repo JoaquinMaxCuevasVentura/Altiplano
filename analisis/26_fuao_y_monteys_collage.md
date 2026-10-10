@@ -297,6 +297,8 @@ Cada punto dice qué entró en el artículo. Todas las citas están verificadas 
    > El voyeurismo, escribe Fuão, consiste en separar al observador del objeto «mediante un distanciamiento de la mirada y el ocultamiento del propio cuerpo» (Fuão, 2011: 24).
 5. **El umbral de Alexander.** Es el texto 4 de `25`, §25.6. Sigue pendiente porque su página (622 o 623) no se pudo fijar.
 
+**Actualización del 10 de octubre (revisión final).** Los textos 1 (las comillas, como nota en §2) y 4 (el voyeur, en §6) entraron al artículo; los demás siguen fuera (`27`, §27.10).
+
 ## 26.7. Citas verificadas
 
 ### Fuão (2011): original portugués y traducción
