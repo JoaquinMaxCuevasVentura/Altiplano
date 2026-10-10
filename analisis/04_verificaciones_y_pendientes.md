@@ -26,8 +26,13 @@
     - en la Figura 1, la persona del corte está «en cuclillas», como en la novela (p. 32).
   - Hay tres epígrafes alternativos, verificados, por si quieres cambiar el actual (`24_otro_epigrafe.md`).
   - El 10 de octubre cambió el título: «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez». El inglés pasa a «Harvest of Stones: The Ayllu, the State and the Mine. Drawing Raúl Botelho Gosálvez's *Altiplano*». En §1, «La aldea la reescribe con papeles» pasa a «En la aldea, el Estado la reescribe con papeles», para que el texto nombre los tres términos del título.
+  - El mismo 10 de octubre entró *A Pattern Language* (Alexander, Ishikawa y Silverstein, 1977), en dos lugares (`25_alexander_lenguaje_de_patrones.md`):
+    - en §3, la casa de los Huanca son «tres chujllas [...] que rodean al patio» (p. 30), y la habitación única es, para Alexander, una casa comprimida (1977: xliii);
+    - en §7, la propiedad como control, «el poder legal y la oportunidad física de modificar y reparar» (1977: 395), que la novela separa entre papeles y manos.
+    - En §8, Alexander entra en la lista de las miradas ajenas al mundo narrado.
+    - Nueve recortes pequeños compensan la extensión, y la bibliografía pasa a 27 entradas.
 
-- **Extensión.** 49.549 caracteres con espacios, con bibliografía y notas. El rango que pedía *Estudios Bolivianos* 43 era de 47.500 a 49.500, y su límite, 50.000. Con el plazo de esa convocatoria vencido, manda el límite de la revista que elijas.
+- **Extensión.** 49.969 caracteres con espacios, con bibliografía y notas. El rango que pedía *Estudios Bolivianos* 43 era de 47.500 a 49.500, y su límite, 50.000. Con el plazo de esa convocatoria vencido, manda el límite de la revista que elijas.
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -37,7 +42,7 @@
   - **No quedan marcadores ⟦…⟧.**
 - **Citas de la novela.** Las 147 se comprobaron contra la transcripción: existen literalmente y están en la página indicada. También las del Cuadro 1. Los datos parafraseados se revisaron a mano.
 - **Cadenas de «ibid.».** Todas remiten a la obra correcta.
-- **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias.
+- **Citas de las demás fuentes.** Se cotejaron con el texto de cada una, con su página (§4.3). Las de Duviols, Ingold y las fuentes en inglés y portugués son traducciones propias, también las dos de Alexander.
 - **Figuras.** Ocho, numeradas por orden de aparición.
   - Las seis primeras son los esquemas de encaje de los pasteles, trazados como notaciones (`23_esquemas_de_encaje_como_notaciones.md`): Castillete = 4, Pelvis = 5, Centinela = 6.
   - La 7 y la 8 son diagramas trazados como notaciones (`19_esquemas_a_mano_y_diagramas.md`; `21_diagramas_como_notaciones.md`).
@@ -77,7 +82,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** 49.549 caracteres. Depende del límite de la revista que elijas (§4.6).
+- **La extensión:** 49.969 caracteres. Depende del límite de la revista que elijas (§4.6).
 
 ## 4.3. Verificación de fuentes
 
@@ -113,6 +118,7 @@ Estado de cada dato:
 | 22 | Pallasmaa (2014: 53, 158, 159) y la frase de Bachelard (1978 [1942]: 7-8) que cita en la p. 53 | A / B | Páginas reconstruidas con los encabezados y comprobadas con el índice de nombres (`10_pallasmaa_y_dos_tesis.md`, §10.1). La frase de Bachelard se cita «cit. en» |
 | 23 | Spedding (2025: XV), «Piedras en el camino», en *Susto al susto* | A (escaneo de las pp. XIV-XXIII y OCR del libro completo) | Es un relato, como dice el propio libro (p. 19), y el artículo lo aclara. El colofón da la dirección editorial (Eloísa Paz y alfonso borragán). Falta confirmar en el impreso el año, el ISBN y las páginas de la sección (`16_susto_al_susto_libro_completo.md`) |
 | 24 | Rodríguez y Rodríguez (2025: 55) y la *jayintilla* de Bertonio (2011 [1612]: 361) | A (OCR del libro, comprobado en la imagen de las pp. 54-55; transcripción de Bertonio) | Confirmar en el impreso la última página del capítulo (61) |
+| 25 | Alexander *et al.* (1977: xliii, 395) | A (OCR del libro) | Traducción propia del inglés. Páginas reconstruidas con las marcas al pie y las cabezas de página (`25_alexander_lenguaje_de_patrones.md`, §25.1 y §25.8). Si consigues la edición castellana (Gustavo Gili), citarla |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -160,7 +166,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.549 caracteres, con la nota de autor, las declaraciones y el epígrafe. El título nuevo añadió 85: el texto queda 49 caracteres por encima del rango que pedía *Estudios Bolivianos* 43, aunque bajo su límite de 50.000. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
+- **Ahora:** 49.969 caracteres, con la nota de autor, las declaraciones y el epígrafe. El título nuevo añadió 85 y Alexander, 420 más, ya descontados nueve recortes pequeños (`25`, §25.5). Queda 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*: cualquier añadido pide un recorte igual. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -196,6 +202,6 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
-- [x] `.docx` regenerado con el título nuevo: 49.549 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado con el título nuevo y Alexander: 49.969 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)
