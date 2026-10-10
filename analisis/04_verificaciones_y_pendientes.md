@@ -1,6 +1,6 @@
 # 4. Pendientes y verificaciones antes del envío
 
-**Estado del artículo definitivo:** «La cosecha de piedras: piedra, papel y máquina en *Altiplano*», de Joaquin Max Cuevas Ventura.
+**Estado del artículo definitivo:** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura (título del 10 de octubre de 2026; antes, «La cosecha de piedras: piedra, papel y máquina en *Altiplano*»).
 
 - **Qué es.** La versión 2 completa, con los cinco libros (`07_cinco_libros.md`). Incorpora la respuesta a las cinco objeciones del arbitraje simulado, con diez fuentes nuevas (`08_respuesta_al_arbitraje.md`). Desde el 26 de septiembre de 2026 está reescrita en lenguaje llano, con recursos tomados de la escritura de Cárcamo Pino (`09_recursos_de_carcamo_y_lenguaje_llano.md`).
 - **Qué cambió en la última revisión:**
@@ -25,9 +25,10 @@
     - la declaración de IA dice «el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8)»;
     - en la Figura 1, la persona del corte está «en cuclillas», como en la novela (p. 32).
   - Hay tres epígrafes alternativos, verificados, por si quieres cambiar el actual (`24_otro_epigrafe.md`).
+  - El 10 de octubre cambió el título: «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez». El inglés pasa a «Harvest of Stones: The Ayllu, the State and the Mine. Drawing Raúl Botelho Gosálvez's *Altiplano*». En §1, «La aldea la reescribe con papeles» pasa a «En la aldea, el Estado la reescribe con papeles», para que el texto nombre los tres términos del título.
 
-- **Extensión.** 49.464 caracteres con espacios, con bibliografía y notas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
-- **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 9 y 10 palabras.
+- **Extensión.** 49.549 caracteres con espacios, con bibliografía y notas. El rango que pedía *Estudios Bolivianos* 43 era de 47.500 a 49.500, y su límite, 50.000. Con el plazo de esa convocatoria vencido, manda el límite de la revista que elijas.
+- **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
   - Nombre y nota 1 completos (80 palabras; límite, 100).
@@ -76,7 +77,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** casi no tiene margen (quedan 36 caracteres). Cualquier añadido obliga a acortar otra cosa.
+- **La extensión:** 49.549 caracteres. Depende del límite de la revista que elijas (§4.6).
 
 ## 4.3. Verificación de fuentes
 
@@ -159,7 +160,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 49.464 caracteres, con la nota de autor, las declaraciones y el epígrafe. Quedan 36 caracteres de margen.
+- **Ahora:** 49.549 caracteres, con la nota de autor, las declaraciones y el epígrafe. El título nuevo añadió 85: el texto queda 49 caracteres por encima del rango que pedía *Estudios Bolivianos* 43, aunque bajo su límite de 50.000. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
 - **Si añades algo** (una adscripción en la nota, una frase en la declaración):
   - resume en el texto un pasaje de trama que no lleve cita;
   - o retira una de las referencias en reserva.
@@ -195,6 +196,6 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
-- [x] `.docx` regenerado: 49.464 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
+- [x] `.docx` regenerado con el título nuevo: 49.549 caracteres, 26 páginas; resúmenes de 99 y 90 palabras
 - [ ] Versión anonimizada, si la piden
 - [ ] Correo a ieb.fhce@umsa.bo (el plazo venció el 25 de septiembre de 2026)

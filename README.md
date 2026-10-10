@@ -4,8 +4,8 @@ Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativa
 
 ## Artículo definitivo
 
-**«La cosecha de piedras: piedra, papel y máquina en *Altiplano*»**
-*The Harvest of Stones: Stone, Paper and Machine in* Altiplano
+**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**
+*Harvest of Stones: The Ayllu, the State and the Mine. Drawing Raúl Botelho Gosálvez's* Altiplano
 Joaquin Max Cuevas Ventura
 
 Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la arquitectura y el dibujo, siguiendo sus piedras. Está escrito en lenguaje llano y abre con un epígrafe aymara: el lema del Taller de Historia Oral Andina, tomado de Silvia Rivera Cusicanqui.
@@ -42,7 +42,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 49.464 caracteres con espacios, bibliografía y notas incluidas; el Word tiene 26 páginas. El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
+- **Extensión:** 49.549 caracteres con espacios, bibliografía y notas incluidas; el Word tiene 26 páginas. El título nuevo (10 de octubre) la subió 85 caracteres: queda por encima del rango que pedía *Estudios Bolivianos* 43 (47.500 a 49.500), pero bajo los 50.000. Cada revista nueva fija su propio límite (`reports/`). El rango pedido es de 47.500 a 49.500; el límite de la revista, 50.000.
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
