@@ -110,7 +110,7 @@ Las correcciones ortográficas que la otra IA pedía (Raúl, el Estado, Gosálve
 |---|---|---|
 | «Don't cry, don't worry, child / We'll be fine» | «Pyramid of Bones» | Sin verificar |
 | «We are born on a pyramid of bones» | «Pyramid of Bones» | Sin verificar |
-| «Lies are simple, truth is complex» | «Pyramid of Bones» | **Mal atribuido.** Un sitio de letras lo da en «Permanent High School» (pista 4 de *Virtue*), y con otra forma: «Lies are simple, truth complex» |
+| «Lies are simple, truth is complex» | «Pyramid of Bones» | **Corregido en §27.11.** Un extracto del buscador lo situaba en «Permanent High School», y aquí lo di por mal atribuido. En la letra que aportaste está en «Pyramid of Bones»: la otra IA acertó |
 | «Look where we are / Don't ever stop to think where we came from» | «Pyramid of Bones» | Sin fuente |
 | «You are the machine…», «Civilization is a progress in loneliness», «You're paying for the air…» | «Father Electricity» | Sin fuente |
 | «All words are made up / To keep you in your place» | «All Wordz Are Made Up» | Sin verificar. Ninguna fuente encontrada lo confirma |
@@ -118,7 +118,7 @@ Las correcciones ortográficas que la otra IA pedía (Raúl, el Estado, Gosálve
 | «Body on my mind / Body on my head» | «All Wordz Are Made Up» | Sin verificar |
 | «Put money in my hand…», «Mine all day / Look inside my skull» | «Human Sadness» | Sin verificar |
 
-**Consecuencia:** ningún verso entra al artículo; solo los títulos.
+**Consecuencia (antes de tener las letras):** ningún verso entraba al artículo; solo los títulos. Con las letras que aportaste después entraron dos pasajes (§27.11).
 
 **Si quieres citar un verso:**
 
@@ -177,7 +177,7 @@ Es decir: **en el origen del término hay un idioma inventado**. Ese es el puent
 
 **Dato de la obra, por verificar.** En la escena 1 del acto IV, los soldados se fingen extranjeros y hablan una jerigonza inventada para tenderle una trampa a Parolles. El dato no viene de Cárcamo Pino. Si se usa, hay que comprobarlo en una edición de la obra.
 
-**El cruce al modo de Cárcamo Pino también estaba en la novela.** Cárcamo Pino lee la madera con «el imaginario de los tres cerditos» (2025a: 8). Y la novela presenta al doctor Margarito Mendoza como «alias "el lobo"» (p. 86). En el cuento el lobo sopla; en Umacachi, firma.
+**El apodo del Alcalde.** La novela presenta al doctor Margarito Mendoza como «alias "el lobo"» (p. 86). Primero lo crucé con los tres cerditos de Cárcamo Pino (2025a: 8). Pero el cuento era solo un ejemplo de cómo él cita lo popular, no algo que quisieras citar, así que salió (§27.11). Queda el apodo, que es un dato de la novela.
 
 ## 27.7. Lo que entró al artículo
 
@@ -187,9 +187,9 @@ Es decir: **en el origen del término hay un idioma inventado**. Ese es el puent
    - La idea de que inventar no es mentir, sino hacer.
    - Hechas fueron la ordenanza, la genealogía de los Villca y los títulos coloniales con que litigaron las comunidades (Rivera Cusicanqui, 2010 [1984]: 99).
    - Lo que importa es quién logra que sus palabras valgan como ley.
-2. **§3, en la «memoria [que] tiene pisos».** «Pyramid of Bones» (The Voidz, 2018): «Arriba, el blasón; abajo, el hambre, la persecución y la muerte». La cita siguiente de la novela pasa a forma completa (p. 38).
+2. **§3, en la «memoria [que] tiene pisos».** «Pyramid of Bones» (The Voidz, 2018): «Arriba, el blasón; abajo, los que lo sostienen» (texto final, §27.10). La cita siguiente de la novela pasa a forma completa (p. 38).
 3. **§4, el apodo.** «el doctor Margarito Mendoza, alias «el lobo»» (p. 86).
-4. **§4, tras la firma de la ordenanza.** Los tres cerditos de Cárcamo Pino (2025a: 8) y la frase «En Umacachi el cuento es otro: el lobo no sopla ninguna casa, firma».
+4. **§4, tras la firma de la ordenanza.** «La firma es la del lobo». Al principio iban aquí los tres cerditos de Cárcamo Pino; salieron por indicación tuya (§27.11).
 5. **Nota del pastel.** El esgrafiado como «la segunda incisión» de Fuão (2011: 29): «La novela es el primer corte; el dibujo, el segundo».
 6. **Bibliografía.** The Voidz (2018), *Virtue* [álbum], pistas 3 y 7.
 
@@ -197,8 +197,8 @@ Es decir: **en el origen del término hay un idioma inventado**. Ese es el puent
 
 **Las canciones que quedan fuera:**
 
-- **Los versos:** sin verificar (27.4).
-- **«Father Electricity» y «Human Sadness»:** sus títulos no tienen ancla en la novela, y dos canciones bastan. Cárcamo Pino usa un cuento por texto.
+- **Los versos:** sin verificar hasta que aportaste las letras (§27.4; el cotejo, en §27.11).
+- **«Father Electricity» y «Human Sadness»:** sus títulos no tienen ancla en la novela. Con las letras, «Father Electricity» entró por un pasaje y «Human Sadness» siguió fuera (§27.11).
 - **Epígrafes de canción en §3, §4 o §7:** el artículo ya tiene epígrafe. Uno por sección lo recargaría.
 
 **Textos disponibles, verificados, por si se quieren:**
@@ -213,7 +213,7 @@ Es decir: **en el origen del término hay un idioma inventado**. Ese es el puent
 |---|---|
 | Citas de la novela | 153 (152 + «el lobo»), 0 problemas |
 | Originales de Fuão | 32, todos en su página (dos nuevos de la p. 29) |
-| Cárcamo Pino | «el imaginario de los tres cerditos»: 2025a, p. 8. «inventado in situ por los personajes»: 2025b, p. 241. «con la mano de Shakespeare, no con la boca»: p. 242. «monopolio de la escritura y el lenguaje»: p. 259 |
+| Cárcamo Pino | «el imaginario de los tres cerditos»: 2025a, p. 8 (ya no se cita). «inventado in situ por los personajes»: 2025b, p. 241. «con la mano de Shakespeare, no con la boca»: p. 242. «monopolio de la escritura y el lenguaje»: p. 259 |
 | Cadenas de *ibid.* | Sin roturas: el *ibid.* de la p. 38 pasó a forma completa |
 | Hosts bloqueados por la red del entorno | en.wikipedia.org, genius.com, stereogum.com, spin.com, azlyrics.com, shorefire.com, coppellstudentmedia.com |
 
@@ -227,7 +227,7 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 - **§2.** La ordenanza que McLeod y The Voidz ayudan a leer es «del doctor Mendoza», no «del Alcalde»: el cargo se presenta recién en §4.
 - **§3.** «Pyramid of Bones» cierra con «Arriba, el blasón; abajo, los que lo sostienen», en lugar de repetir las tres palabras recién citadas. Recoge el apoyo del Cuadro 1: los peones que sostienen a los Villca (p. 21).
 - **§7.** Los dos párrafos largos se dividen: en la yunta («En Umacachi, la ordenanza se llevó los bueyes…») y en la pirca («Una pirca de doble cara…»).
-- **§8.** El primer límite suma «los tres cerditos» y «The Voidz» a las maneras de ver ajenas al mundo narrado. Los cruces de cultura popular también son miradas de fuera.
+- **§8.** El primer límite suma «The Voidz» a las maneras de ver ajenas al mundo narrado (al principio, también «los tres cerditos», que salieron después). Los cruces de cultura popular también son miradas de fuera.
 
 **Textos que estaban en reserva y entran (todos cotejados con el original):**
 
@@ -265,3 +265,93 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 | Bibliografía | 31 obras citadas y 31 entradas; ninguna sobra ni falta |
 | Word | 61.107 caracteres con espacios, unas 10.200 palabras, 29 páginas; resumen de 99 palabras y abstract de 90 |
 | Word con cambios | 25 cambios marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba) |
+
+## 27.11. Las letras que aportaste
+
+**De dónde salen.** Las cuatro letras las pegaste tú. No pude cotejarlas con la letra oficial: las páginas de letras siguen bloqueadas y el buscador no las reproduce.
+
+- **«Pyramid of Bones».** Dos reseñas confirman partes de la letra. Stereogum cita el verso del «11th Dimension» y lo sitúa en la primera estrofa. Spin señala en el estribillo la advertencia contra las mentiras del hombre blanco. Las dos cosas están en tu letra.
+- **«Father Electricity».** No encontré ninguna confirmación externa.
+- **En general.** Las transcripciones de las letras de Casablancas varían de un sitio a otro, porque su voz suele ir distorsionada.
+
+**Las letras completas no se guardan en el repositorio.** Aquí solo se citan los versos que se discuten.
+
+**Los versos de la otra IA, contra tu letra:**
+
+| Verso que atribuía la otra IA | Canción | En tu letra |
+|---|---|---|
+| «Don't cry, don't worry, child / We'll be fine» | «Pyramid of Bones» | No está |
+| «We are born on a pyramid of bones» | «Pyramid of Bones» | No está. La frase del título no aparece en la letra |
+| «Lies are simple, truth is complex» | «Pyramid of Bones» | **Está**, dos veces (la segunda, invertida). Mi veredicto de «mal atribuido» (§27.4) era erróneo, o el verso está también en «Permanent High School» |
+| «Look where we are / Don't ever stop to think where we came from» | «Pyramid of Bones» | No está |
+| «You are the machine…», «Civilization is a progress in loneliness», «You're paying for the air…» | «Father Electricity» | No están |
+| «All words are made up / To keep you in your place» | «All Wordz Are Made Up» | No está. La frase del título tampoco aparece |
+| «Wait, don't get excited, it's a trap» | «All Wordz Are Made Up» | No está |
+| «Body on my mind / Body on my head» | «All Wordz Are Made Up» | No está |
+| «Put money in my hand / And I will do the things you want me to» | «Human Sadness» | **Está** |
+| «Mine all day / Look inside my skull» | «Human Sadness» | No está así. Parece una mezcla de «Mine, all mine, wait your turn» y «The moon's a skull» |
+
+**Resultado:** de trece versos, dos eran correctos. Los otros once eran inventados o estaban deformados.
+
+**Lo que esto confirma:**
+
+- **Los títulos de *Virtue* no están en sus letras.** Ninguna de las dos letras contiene la frase de su título.
+- **«All Wordz Are Made Up» no habla del lenguaje.** El título es lo único que sirve al argumento, y así lo usa el artículo: «lleva la idea al extremo en el título».
+- **«Pyramid of Bones» sí trata de la desigualdad** («They play the game by different rules / Insisting it's all equal»). Eso respalda leer su título como una jerarquía.
+
+**Lo que entró (dos pasajes):**
+
+| Pasaje | Dónde | Por qué |
+|---|---|---|
+| «They play the game by different rules / Insisting it's all equal» («Pyramid of Bones»; The Voidz, 2018) | §4, tras «a los mestizos "no les alcanzaba la Ordenanza"» (p. 102) | La ordenanza habla de «todos los animales» del radio urbano (p. 96), pero solo se aplica a los indios. Retoma además el juego de §1, donde el papel gana «por regla» |
+| «I do not want to see the whole mess / I wish I could live in retrospect» («Father Electricity»; Julian Casablancas+The Voidz, 2014) | §7, tras «lo esconden en un foso» | Junta los dos gestos de la memoria del retorno: no mirar el hambre reciente (pp. 156-157) y quedarse con «lo pasado antiguo, lo bueno y lo alegre de las cosechas» (p. 156). El artículo lo cierra contra el lema del epígrafe: los comunarios miran atrás, «pero no para caminar, como pide el lema, sino para saltar el foso» |
+
+**Forma de cita:**
+
+- **El verso** va en inglés, entre comillas, seguido de su traducción, como los títulos de las canciones.
+- **La referencia** usa el nombre con que firmó cada disco: *Tyranny* salió como Julian Casablancas+The Voidz, y *Virtue* como The Voidz.
+- **La bibliografía** pasa a 32 entradas.
+
+**Lo que no entró, y por qué:**
+
+| Pasaje | Posible lugar | Por qué no |
+|---|---|---|
+| «As you're coming down, down the well / You drop 500 tons of hell» («Father Electricity») | §5, la jaula que baja al plano 450 | Tiene ancla: la novela llama a la mina «aquél infierno de lodo y rocas» (p. 151). Pero la §5 ya es la más cargada, y repetiría la canción de §7. Queda disponible |
+| «Put money in my hand / And I will do the things you want me to» y «money will always trump justice» («Human Sadness») | §4, el tinterillo | Refuerza la caricatura del tinterillo venal, justo la que el artículo matiza con Rivera Cusicanqui: los abogados de pueblo también asesoraron a las comunidades. El segundo verso es, además, parte de una condicional («If not money will always trump justice») |
+| «Learn the words that they teach you without you realizing it» («Human Sadness») | §2, la advertencia de Hall | Encaja con el narrador que usa, sin darse cuenta, las palabras de la sociología urbana. Pero §2 ya tiene «All Wordz Are Made Up». Es la alternativa si prefieres un verso en lugar de un título |
+| «Don't you ever listen to the white man's lies» («Pyramid of Bones») | §4 u §8 | Traslada un marco racial estadounidense y contradice el matiz del artículo. El despojo no tiene un solo villano («cinco gendarmes indios», p. 101), y la primera estaca la clava una mano aymara (p. 20) |
+| «Lies are simple, truth is complex» («Pyramid of Bones») | §1, Cornejo Polar | Es demasiado general: repetiría lo que ya dice la crítica, sin mostrar un mecanismo |
+| «Beyond all ideas of right and wrong, there is a field» («Human Sadness») | §6, el linchamiento | Es un verso de Rumi en la versión inglesa de Coleman Barks («Out beyond ideas of wrongdoing and rightdoing, there is a field»). Citarlo como de The Voidz sería atribuírselo mal |
+| «What's your name?» y «No one will care about this in ten years» («All Wordz Are Made Up») | §7, los sin nombre y el olvido | La canción trata de otra cosa: sería decoración |
+| «Mine, all mine, wait your turn» («Human Sadness») | Título u §8 | El juego entre *mine* (mío) y *mine* (mina) solo funciona en inglés, y habría que explicarlo |
+
+**Antes de enviar:**
+
+- Coteja los dos pasajes con la letra oficial: el librillo del disco o un servicio de *streaming* con letras con licencia.
+- Si alguna palabra cambia, corrígela en el artículo.
+- Si la revista pregunta, la cita es de la grabación y la transcripción es tuya.
+
+**Cuántas veces aparece la banda.** Ahora son cuatro:
+
+- el título de «All Wordz Are Made Up» (§2);
+- el título de «Pyramid of Bones» (§3);
+- un pasaje de «Pyramid of Bones» (§4);
+- un pasaje de «Father Electricity» (§7).
+
+Si un evaluador lo encuentra excesivo, lo más prescindible es el título de «Pyramid of Bones» en §3, porque el pasaje de §4 ya trae la canción.
+
+**Los tres cerditos salen.** Eran un ejemplo de cómo Cárcamo Pino cruza su texto con la cultura popular, no algo que quisieras citar.
+
+- **Qué se quitó:** la frase de §4 y la mención en el primer límite de §8.
+- **Qué queda:** el apodo «el lobo», que es un dato de la novela (p. 86), con una frase que no alude al cuento: «La firma es la del lobo».
+- **Cárcamo Pino (2025a)** sigue citado por los agarres de la mano (p. 10) y por la caja de herramientas (p. 12).
+
+**Comprobaciones:**
+
+| Comprobación | Resultado |
+|---|---|
+| Citas de la novela | 153, sin problemas |
+| Cadenas de *ibid.* | Todas correctas |
+| Bibliografía | 32 entradas |
+| Word | 61.625 caracteres, unas 10.300 palabras, 29 páginas |
+| Word con cambios | 30 cambios marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba) |
