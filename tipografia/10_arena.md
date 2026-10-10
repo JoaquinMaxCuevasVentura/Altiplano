@@ -45,7 +45,7 @@ Siguen la estructura del proyecto, no una nueva.
 
 **1 · El token, en Are.na.**
 
-1. Entrar a are.na con tu cuenta e ir a `are.na/settings/oauth`.
+1. Entrar a are.na con tu cuenta, desde una computadora, e ir a la sección de tokens de acceso personal. La documentación de Are.na la ubica en `are.na/settings/oauth`, pero en el teléfono esa dirección dio «Page not found» (10.10.2026). Si pasa eso, buscarla desde el menú de tu perfil, en *Settings*, o seguir el enlace de la página de documentación `www.are.na/developers/personal-access-tokens`.
 2. Crear un token de acceso personal llamado «contenida (lectura)».
 3. **No pedir el permiso de escritura (*write*).** Sin él, el token es de solo lectura: puede ver todo lo que tu cuenta ve, pero no crear, cambiar ni borrar nada.
 4. Copiarlo una sola vez y no guardarlo en ningún archivo del proyecto.
