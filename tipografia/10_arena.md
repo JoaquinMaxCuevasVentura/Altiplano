@@ -1,6 +1,6 @@
 # 10. Are.na: un atlas que la mano cura y la máquina lee
 
-Es una propuesta y todavía no hay conexión: el entorno donde trabaja la máquina bloquea `api.are.na` hasta que se haga lo de §10.4.
+**Conectado el 10.10.2026** por el conector MCP de Are.na (§10.4, camino A), con la cuenta `joaquin-cuevas` (plan gratuito, 120 pedidos por minuto). Todavía no tiene canales.
 
 ## 10.1. Por qué rima
 
