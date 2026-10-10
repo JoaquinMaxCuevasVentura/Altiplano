@@ -60,6 +60,15 @@
 3. **El cruce con *Contenida*.** ¿Se conecta algo de «contenida · la ruina» (Tiwanaku) con el signo escalonado de la Figura 2? Por defecto, no.
 4. **La fecha de muerte de Botelho Gosálvez:** 2002, como decía tu borrador, o 2004, como registra el análisis 03.
 
+**Decidido el 10 de octubre:**
+
+1. Se corre en esta sesión, verificando con el buscador.
+2. Habrá un canal privado para los escaneos y los procesos de los pasteles.
+3. *Contenida* no se conecta: son proyectos distintos.
+4. La fecha se verificó con el buscador: Botelho Gosálvez nació en La Paz el 11 de abril de 1917 y murió allí el 9 de mayo de 2004, según la [ficha de autoridad de la BnF](https://catalogue.bnf.fr/ark:/12148/cb12175725j). Coinciden [Biografías y Vidas](https://www.biografiasyvidas.com/biografia/b/botelho_gosalvez.htm) y la Wikipedia en inglés (1917-2004). El 2002 de tu borrador era un error.
+
+El prompt de abajo ya incluye estas decisiones.
+
 ## 28.3. El prompt revisado
 
 Copia desde la línea siguiente hasta el final del bloque.
@@ -157,7 +166,8 @@ Son las 32 obras citadas:
 ### 0 · Antes de empezar
 
 1. **Confirma la cuenta** con `getCurrentUser`: es joaquin-cuevas, en el plan gratuito.
-2. **Lista mis canales** con `getUserContents`. Los once de «contenida» son otro proyecto: no los modifiques, no conectes nada a ellos ni desde ellos y no comentes en ellos. Si ya existe un canal «altiplano», dímelo antes de crear otro.
+2. **Lista mis canales** con `getUserContents`. Los once de «contenida» son otro proyecto: no los modifiques, no conectes nada a ellos ni desde ellos y no comentes en ellos. Son proyectos distintos, aunque los dos toquen Tiwanaku. Si ya existe un canal «altiplano», dímelo antes de crear otro.
+3. **Trabajas en un entorno que no abre páginas web.** Verifica con el buscador y con lo que devuelve Are.na al crear cada bloque.
 
 ### 1 · Primero propones, después escribes
 
@@ -175,9 +185,10 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
    - `altiplano · crítica`: estudios sobre la novela y su autor, crítica del indigenismo, voces aymaras (§1, §8).
    - `altiplano · vecinas`: las novelas del concurso de 1940, otras indigenistas andinas y las otras novelas de Botelho (§1).
    - `altiplano · cruces`: la cultura popular que cruza el artículo, por ahora The Voidz, solo con enlaces oficiales (§2-§4, §7).
+   - `altiplano · pasteles`: mis escaneos y mis procesos (figuras 1-8). Solo obra mía; lo hecho con asistencia de IA, rotulado. Se crea vacío, con su regla: lo lleno yo.
 3. No propongas un canal de «paisaje». El artículo critica al narrador porque «vuelve paisaje una posesión» (§8). Las imágenes entran por lo que muestran del trabajo y de la posesión, en el canal de su material.
 4. Dime, en una tabla, qué irá en cada canal, con qué sección y figura rima, y qué huecos de la lista anterior cubre.
-5. Pregúntame si quiero un canal privado para mis pasteles (escaneos y proceso). No lo crees sin mi respuesta.
+5. El canal de pasteles ya está decidido. Pregúntame solo si subes ya las ocho figuras del artículo (esquemas de encaje y diagramas), rotuladas «hecho con asistencia de IA».
 
 ### 2 · Los canales
 
@@ -194,7 +205,7 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
 - **Dominio público:** Wikimedia Commons, Internet Archive, HathiTrust, Biblioteca Digital Hispánica, Library of Congress, la John Carter Brown Library (impresos coloniales) y archivos y bibliotecas bolivianos con catálogo en línea (el Archivo y Biblioteca Nacionales de Bolivia, la Biblioteca Virtual de la UMSA).
 - **Estudios:** SciELO Bolivia, Redalyc, DOAJ, Persée, repositorios universitarios (UMSA, CIDES), DOI.
 - **Are.na:**
-  - El buscador (`search`) puede dar `403` en el plan gratuito.
+  - El buscador (`search`) da `403`: pide una suscripción Premium.
   - No uses `searchAndConnect`: conecta resultados sin revisarlos.
   - Encuentra material de otras personas de dos maneras: siguiendo las conexiones de un bloque hasta los canales donde está (`getBlockConnections` con `EXCLUDE_OWN`), o probando direcciones de canal (por ejemplo `indigenismo`, `andes`, `bolivia`, `latin-american-literature`).
   - Para mirar un canal ajeno o grande, usa `channelDigest`.
@@ -210,7 +221,7 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
   - Usa `https://commons.wikimedia.org/wiki/Special:FilePath/NOMBRE_DEL_ARCHIVO` como valor.
   - Pon la página del archivo en `original_source_url` (y su título en `original_source_title`), porque ahí están el autor y la licencia.
   - Escribe `alt_text` en cada imagen: qué se ve, en una frase factual.
-- **Libros y artículos:** enlace a su página de catálogo o a su DOI, **nunca al PDF**, porque Are.na lo subiría como adjunto. No subas archivos (`presignUpload`).
+- **Libros y artículos:** enlace a su página de catálogo o a su DOI, **nunca al PDF**, porque Are.na lo subiría como adjunto. No subas archivos (`presignUpload`). Si solo existe el PDF, haz un bloque de texto con la referencia y la dirección escrita, marcado «solo PDF».
 - **Material de otras personas en Are.na:** se *conecta*, no se copia ni se descarga. No comentes en bloques ajenos.
 - **Título:** «§n · Autor · obra · año». Si el bloque sirve a varias secciones, usa la principal.
 - **Ficha en la descripción:**
@@ -230,7 +241,7 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
   - Cada cita, copiada de una fuente abierta y con página.
   - De la novela, usa solo citas que ya están en mi artículo, con su página de la edición de 1982.
 - **Derechos.**
-  - La novela no es de dominio público: su autor murió en el siglo XXI. Antes de escribir el año de su muerte en una ficha, verifícalo: tengo 2004 en mis notas, y mi borrador decía 2002.
+  - La novela no es de dominio público: Botelho Gosálvez nació en La Paz el 11 de abril de 1917 y murió allí el 9 de mayo de 2004, según la ficha de autoridad de la Biblioteca Nacional de Francia.
   - No subas su texto ni escaneos: solo citas breves con página.
   - Las portadas, enlazadas a un catálogo. No se suben escaneos.
   - De las canciones, solo enlaces a páginas oficiales. No subas letras.
@@ -266,3 +277,56 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
   - las fuentes principales, con enlace;
   - lo que tengo que leer o decidir yo.
 ````
+
+## 28.4. Fase 0 y propuesta de canales (fase 1)
+
+**Fase 0 (solo lecturas, 10 de octubre):**
+
+- **La cuenta.** Es joaquin-cuevas, del plan gratuito, con once canales privados de *Contenida*. No hay ninguno de *Altiplano*.
+- **El buscador de Are.na** da `403`: «This endpoint requires a Premium subscription».
+- **Canales de otras personas probados:**
+
+| Canal | Dueño | Qué tiene | Propuesta |
+|---|---|---|---|
+| `indigenismo` | Another Person | 18 bloques sobre pueblos indígenas en general (IA, vivienda en EE. UU.); no es el indigenismo literario andino | No se conecta |
+| `andes` | miela salgado | 13 bloques: pensamiento andino, tiempo kichwa, Dolores Cacuango (casi todo de Ecuador) | Leer «El pensamiento andino y la construcción de países plurinacionales y sociedades interculturales» y decidir si se conecta ese bloque |
+| `aymara` | A LUBOYERA | Un bloque | Mirarlo antes de decidir |
+| `vernacular-architecture` | Émile Foucher | Arquitectura de Montreal | No se conecta |
+| `bolivia` | (privado) | Sin acceso | — |
+| `latin-american-literature`, `collage-theory` | — | No existen | — |
+
+**Propuesta de canales.** No se creó nada; espera tu confirmación.
+
+| Canal | Regla | Rima con | Primeros bloques propuestos (estado) |
+|---|---|---|---|
+| `altiplano` (matriz) | Conecta todo; aquí no van hallazgos sueltos | Todo el artículo | Tres bloques de texto: «Cómo se lee este atlas»; «Ya citado» (las 32 obras, con DOI cuando lo hay, como Duviols, 10.3406/hom.1979.367954); «El artículo» (título, tesis e índice) |
+| `altiplano · la novela y su autor` | Ediciones, catálogos y datos de vida con fuente. De la novela, solo citas que ya están en el artículo | §1 | La ficha de autoridad de la BnF (verificada con el buscador). El concurso de 1940-1941, de Farrar & Rinehart y la Unión Panamericana: una nota de *La República* (2024) y un artículo de *Atenea* (verificados con el buscador). Los registros de catálogo de las ediciones de 1945 («Novela india», Ayacucho), 1967, 1982 y 1987: pendientes, porque solo apareció un PDF, que no se enlaza. *Altiplano sediento*, título que da una biografía en línea: pendiente, puede ser un error |
+| `altiplano · piedra` | Cosas hechas con piedra: quién las hizo, cuándo, dónde. Nada de paisaje | §1, §3, §7; figuras 1-3 y 8 | Dos fotos de apachetas del ESO (Max Alexander). Son de Atacama, en Chile, no de Bolivia, y la ficha lo dice; la licencia está por confirmar. El *Arte de la lengua aymara* de Bertonio (1612), escaneado por la John Carter Brown Library, en Internet Archive. La página del *Vocabulario* en Estudios Indianos (pendiente). Pircas, mojones y chujllas en Commons (por buscar) |
+| `altiplano · papel` | Documentos, leyes, títulos y escuelas: la escritura y sus usos aymaras | §2, §4 | El libro del THOA *El indio Santos Marka T'ula* (1984) y su reedición. «Los papeles de Santos Marka T'ula» (*Correo del Sur*, 2019): los caciques apoderados y los títulos coloniales. La muestra de fotos de Warisata de Carlos Salazar Mostajo (MUSEF, 2015; *Correo del Sur*). Estudios sobre la escuela-ayllu (se buscan sus páginas, no el PDF) |
+| `altiplano · máquina` | El trabajo y sus máquinas; las personas, con nombre si se sabe | §5; figuras 3 y 4 | Una foto de la FSA/OWI de una mina de Patiño (Library of Congress, LC-USE6-D-000116): probable dominio público, pendiente de abrir. La masacre de Catavi de 1942 (artículo en *The Americas*). Aserraderos y cocales de los Yungas (por buscar) |
+| `altiplano · cuerpo y memoria` | Ninguna imagen de violencia; la memoria como práctica, no como adorno | §6, §7; figuras 5-7 | El THOA y la historia oral: Oyarzo Varela (2022) sobre el THOA y Rivera Cusicanqui (1983-1984), y el artículo de *Latin American Research Review* sobre el THOA. Sequías del altiplano (por buscar) |
+| `altiplano · dibujo` | Método y técnica; obras con derechos, solo enlazadas | §2, §8; figura 8 | Un *capriccio* de Canaletto en Commons (dominio público; por elegir). Los dibujos de Gordon Cullen para Lubetkin (enlace). El esgrafiado en pastel al óleo (por buscar) |
+| `altiplano · crítica` | Estudios sobre la novela y su autor, crítica del indigenismo, voces aymaras | §1, §8 | La tesis de Jacqueline M. O'Sullivan, *Humanitarianism in the works of Raúl Botelho Gosálvez* (Universidad de Texas en El Paso, 1951; verificada con el buscador). Pistas pendientes: Barnadas (c. 1977), Salazar de la Torre (CIDES) y Arriarán (2021) |
+| `altiplano · vecinas` | Novelas que comparten tiempo, tema o concurso; catálogo, no PDF | §1 | *El mundo es ancho y ajeno* (Alegría, 1941), ganadora del concurso. *Metal del diablo* (Céspedes; La Paz, La Calle, 1946; registro de catálogo de la Universidad Nacional de Quilmes). *Raza de bronce* (Arguedas, 1919). *Borrachera verde* (1937) y *Coca* (1941), de Botelho |
+| `altiplano · cruces` | Solo enlaces oficiales; ninguna letra | §2-§4, §7 | *Virtue* (2018) y *Tyranny* (2014), en páginas oficiales. La letra oficial de «Pyramid of Bones» y «Father Electricity», para cotejar (pendiente) |
+| `altiplano · pasteles` | Solo obra tuya: escaneos con soporte, medidas y año; lo hecho con IA, rotulado | Figuras 1-8 | Vacío al principio, con su regla. Pregunta pendiente: ¿se suben ya las ocho figuras del artículo, rotuladas «hecho con asistencia de IA»? |
+
+**Primera pasada:** unos 45 a 55 bloques, ocho por canal como máximo.
+
+**Fuentes de la búsqueda:**
+
+- [Ficha de autoridad de la BnF](https://catalogue.bnf.fr/ark:/12148/cb12175725j)
+- [Biografías y Vidas, Botelho Gosálvez](https://www.biografiasyvidas.com/biografia/b/botelho_gosalvez.htm)
+- [O'Sullivan (1951), UTEP](https://scholarworks.utep.edu/dissertations/AAIEP00079)
+- [*La República*, 2024, sobre Ciro Alegría y el concurso](https://larepublica.pe/cultural/2024/12/19/la-vuelta-al-mundo-de-ciro-alegria-1643576)
+- [*Metal del diablo*, catálogo de la UNQ](https://biblio.unq.edu.ar/qfind/Record/23565/Details)
+- [*Correo del Sur*, 2015, la muestra de Warisata](https://correodelsur.com/cultura/20151011/muestra-retrata-a-warisata-como-modelo-educativo.html)
+- [*Correo del Sur*, 2019, los papeles de Santos Marka T'ula](https://correodelsur.com/ecos/20190310/los-papeles-de-santos-marka-tula.html)
+- [Oyarzo Varela, sobre el THOA y Rivera Cusicanqui](https://revistaschilenas.uchile.cl/handle/2250/218382?show=full)
+- [LARR, sobre el THOA](https://www.cambridge.org/core/journals/latin-american-research-review/article/forging-an-indigenous-counterpublic-sphere-the-taller-de-historia-oral-andina-in-bolivia/32DA0D9C777C089215D42BD3D9CAEE15)
+- [Bertonio, *Arte de la lengua aymara* (1612), Internet Archive](https://archive.org/details/artedelalenguaay00bert/page/n1/mode/2up)
+- [Estudios Indianos, *Vocabulario*](https://estudiosindianos.up.edu.pe/biblioteca-indiana/vocabulario-de-la-lengua-aymara-primera-y-segunda-parte/)
+- [Duviols (1979), registro con DOI](https://isidore.science/document/10.3406/hom.1979.367954)
+- [ESO, apachetas (Max Alexander)](https://www.eso.org/public/images/max_a037008s/)
+- [La masacre de Catavi, *The Americas*](https://resolve.cambridge.org/core/journals/americas/article/impact-of-the-catavi-mine-massacre-of-1942-on-bolivian-politics-and-public-opinion/39EFC298FB7F31B036DF40540FFE9058)
+- [Foto de la FSA/OWI (pista)](https://mheescape.mheducation.com/?p=849)
