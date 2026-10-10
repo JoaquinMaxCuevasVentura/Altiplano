@@ -81,6 +81,14 @@ Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido 
 
 **4 · El lector.** Con eso, la máquina escribe y prueba `herramientas/arena.py` contra la API v3. Si hay variable `ARENA_TOKEN`, la usa; si no, confía en el secreto del proxy.
 
+**Las reglas del lector**, tomadas de las buenas prácticas de la API v3 (Are.na, *Developers → API Documentation*):
+
+- **Pagina, no enumera.** Usa `page` y `per`: por defecto 24 por página, máximo 100. Lee una página y pide la siguiente solo si hace falta (`meta.has_more_pages`). Nunca recorre un canal entero al arrancar.
+- **Primero el resumen, después el detalle.** Lee la primera página de un canal y abre un bloque solo cuando se lo pide.
+- **Guarda lo que ya leyó.** Cada respuesta trae `ETag`. Al volver a pedir algo, lo manda como `If-None-Match`: si no cambió, la API responde `304` sin cuerpo. Igual cuenta para el límite.
+- **Respeta el límite.** Mira `X-RateLimit-Limit` y `X-RateLimit-Reset`. Ante un `429` espera hasta el reinicio, con espera creciente, y deja de 200 a 500 ms entre pedidos.
+- **No escribe en ráfagas.** No crea ni conecta bloques en serie: escribir es cosa de la mano.
+
 ## 10.5. Lo que se corrige de la propuesta recibida
 
 - **Los paquetes MCP que nombra no existen.** `arena-mcp` (PyPI) y `@modelcontextprotocol/server-arena` (npm) responden 404. Are.na sí anuncia un servidor MCP propio, en *Developers → Resources*: queda por revisar cómo se conecta y qué permisos pide.
