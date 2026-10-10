@@ -88,6 +88,9 @@ Con el secreto, la máquina nunca ve el token: el proxy lo agrega a cada pedido 
 - **Guarda lo que ya leyó.** Cada respuesta trae `ETag`. Al volver a pedir algo, lo manda como `If-None-Match`: si no cambió, la API responde `304` sin cuerpo. Igual cuenta para el límite.
 - **Respeta el límite.** Mira `X-RateLimit-Limit` y `X-RateLimit-Reset`. Ante un `429` espera hasta el reinicio, con espera creciente, y deja de 200 a 500 ms entre pedidos.
 - **No escribe en ráfagas.** No crea ni conecta bloques en serie: escribir es cosa de la mano.
+- **No cosecha.** Las condiciones de uso de la API prohíben rastrear, descargar contenido en forma sistemática o recolectar datos en bloque. Coincide con lo que ya decidió el proyecto: no se descargan canales ajenos.
+- **Los límites, por minuto:** 30 pedidos sin token, 120 con cuenta gratuita, 300 con *Premium* y 600 con *Supporter*. Un token de solo lectura que intenta escribir recibe `403`.
+- **Para probar la conexión:** `/v3/ping` responde sin token, y `/v3/me` solo responde con un token válido (sin él, devuelve `401`).
 
 ## 10.5. Lo que se corrige de la propuesta recibida
 
