@@ -1,15 +1,13 @@
 # 5b. Guía para realizar los seis pasteles
 
-> **Nota para el artículo definitivo (actualizada el 26/9/2026).** Esta guía se escribió para la versión 2, cuando los pasteles estaban por hacer, y se recupera del historial como protocolo de referencia y modelo de registro de cada pieza. Tres cambios:
+> **Estado (11 de octubre de 2026).** La guía está al día con el artículo final, «Cosecha de piedras: el ayllu, el Estado y la mina».
 >
-> - **Numeración.** En el artículo definitivo las figuras siguen el orden de aparición. La Figura 4 de esta guía (Pelvis) es la **5** del artículo; la 5 (Centinela), la **6**; la 6 (Castillete), la **4**. Las Figuras 1 a 3 no cambian.
-> - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice, cotejado cuando se puede con fuentes andinas. No lo presenta como hallazgo, porque los esquemas «no descubren nada, pero obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
-> - **Fotografías.** Las §§5.5 y 5.6 están puestas al día con el artículo definitivo. Los mismos pasos, con el detalle de rutas y pies, están en `articulo/figuras/LEEME.md`.
->
-> **Actualización del 30 de septiembre de 2026** (`17_estilo_y_prompts_gpt_image.md`):
-> - **Las paletas de las fichas se releen por material:** cada color se nombra por lo que es y hace (hollín, óxidos de hierro, hueso, casiterita, copajira), no por lo que «significa». El rojo de la luna es polvo; el de Marte, óxido; Sirio es blanco azulado (§17.3).
-> - **El esquema de la Figura 2 ya no es una pirámide simétrica:** el Signo se traza encima y no encaja en la pendiente, como pide esta guía.
-> - **Hay seis guías de composición sin texto** (`esquemas/guias/`) y prompts para explorar cada pastel con GPT Image 2 antes de dibujarlo.
+> - **Numeración.** Las fichas siguen ahora la del artículo, por orden de aparición: 4, el Castillete; 5, la Pelvis; 6, el Centinela. Los esquemas anteriores (`esquemas/fig1…fig6.svg`) conservan la numeración de la serie original, en la que la Pelvis era la 4, el Centinela la 5 y el Castillete la 6.
+> - **Imágenes.** Cada ficha muestra la figura que publica el artículo: el esquema de encaje trazado como notación desde el 1 de octubre (`23_esquemas_de_encaje_como_notaciones.md`). También remite al esquema anterior y a la guía sin texto para explorar con GPT Image 2 (`17_estilo_y_prompts_gpt_image.md`). Esas exploraciones no se publican: las figuras finales serán los escaneos de tus pasteles.
+> - **Método.** El ciclo de §5.3 suma lo que el artículo final toma de Fuão y de Monteys y Fuertes: el «intervalo» antes de pegar, la «referencia explícita» de cada analogía y la anotación, junto al trazo, de lo que hace la mano.
+> - **Plano (3).** El artículo lo llama *Contraste*: lo que el esquema obliga a decidir y el texto deja abierto o contradice. No lo presenta como hallazgo, porque los esquemas «no descubren nada, pero obligan a decidir». Cuando un pastel esté terminado, ese plano se reescribe con lo que hizo el pastel (§5.5).
+> - **Paletas** (desde el 30 de septiembre). Cada color se nombra por lo que es y hace (hollín, óxidos de hierro, hueso, casiterita, copajira), no por lo que «significa» (`17`, §17.3).
+> - **Citas.** Las de la novela se cotejaron otra vez con la transcripción el 11 de octubre. Se corrigieron dos: los «sueños paganos» están en la p. 31, y «madriguera» no es palabra del narrador.
 
 
 Las cuatro imágenes que acompañaron el encargo eran **referencias visuales**, no los dibujos del artículo (quedan en `analisis/referencias_visuales/`). Los seis pasteles están por hacer. Esta guía los deriva del texto de la novela con el mismo método del artículo, para que no partas de cero:
@@ -24,10 +22,10 @@ Nada de esto es un modelo que haya que copiar. Con Pareyson, el dibujo «inventa
 | Qué | Recomendación | Para qué |
 |---|---|---|
 | Pastel al óleo | Una gama blanda (tipo Sennelier) para empastes y fundidos, más una media o de estudiante (Neopastel, Pentel, Mungyo) para capas de fondo | Los blandos cubren y se esgrafían bien; los duros dan línea |
-| Soporte | Papel de acuarela de 300 g/m², grano fino o medio, o cartón gris con gesso. **Para la Figura 4, papel celeste o gris azulado** | El papel de acuarela resiste el solvente. El gesso da diente para muchas capas |
+| Soporte | Papel de acuarela de 300 g/m², grano fino o medio, o cartón gris con gesso. **Para la Figura 5 (la Pelvis), papel celeste o gris azulado** | El papel de acuarela resiste el solvente. El gesso da diente para muchas capas |
 | Formato | A3 (29,7 × 42 cm) si tienes tiempo; A4 si vas con prisa. Mantén el mismo formato en toda la serie | Una escala común hace legible la serie |
-| Solvente | Aguarrás sin olor (tipo Gamsol), pincel plano y bastoncillos de algodón. Alternativa: aceite de bebé | Veladuras (Figs. 3, 5, 6) |
-| Herramientas de extracción | Cúter o bisturí, espátula de paleta, clavo o punzón, mondadientes, aguja de tejer | Esgrafiado e incisión (Figs. 1, 2, 4, 6) |
+| Solvente | Aguarrás sin olor (tipo Gamsol), pincel plano y bastoncillos de algodón. Alternativa: aceite de bebé | Veladuras (Figs. 3, 4, 6) |
+| Herramientas de extracción | Cúter o bisturí, espátula de paleta, clavo o punzón, mondadientes, aguja de tejer | Esgrafiado e incisión (Figs. 1, 2, 4, 5) |
 | Piedras reales | Tres o cuatro piedras planas con textura y papel fino para frotado | Frotado de las piedras del cerro (Figs. 1, 2) |
 | Otros | Cinta de papel para enmarcar el borde, trapo, papel cristal (*glassine*) para proteger, cuaderno de bocetos y lápiz o carbonilla | Bordes limpios, protección, miniaturas previas |
 
@@ -39,12 +37,12 @@ El artículo sostiene que leer con la mano es **repetir operaciones**, no ilustr
 
 | Técnica | Cómo se hace | Operación de la novela que repite | Figuras |
 |---|---|---|---|
-| **Empaste** | Capas gruesas con presión, sin fundir, piedra a piedra | Amontonar: la cosecha de piedras (p. 9), las pircas | 1, 2, 6 |
-| **Esgrafiado** | Capa clara debajo y oscura encima; raspar con punta o cúter para que aparezca la clara | Despejar, extraer: sacar la luz de la masa como se saca la piedra de la tierra | 1, 6 |
-| **Incisión** | Trazar líneas finas con un punzón sobre la cera | Escribir: la manugrafía del catastro, el mojón, la estaca | 2, 6 |
-| **Fundido con el dedo** | Mezclar y arrastrar con la yema. Sin línea previa | El «manchón» de las rodillas (p. 60) y de la sangre (p. 154); manuaje «en sentido fuerte», de baja escrituralidad | 3, 5, 6 |
-| **Veladura con solvente** | Pintar sobre el pastel con pincel mojado en aguarrás; se disuelve y chorrea | Derretirse, deshilarse: el cuerpo de Paulo «como muñeco de cera» (p. 123); el agua de la mina | 3, 6 |
-| **Reserva** | Dejar el papel desnudo, sin tocar | La sequía como ausencia: «Ni una pincelada enturbió el papel celeste» (p. 57) | 4 |
+| **Empaste** | Capas gruesas con presión, sin fundir, piedra a piedra | Amontonar: la cosecha de piedras (p. 9), las pircas | 1, 2, 4 |
+| **Esgrafiado** | Capa clara debajo y oscura encima; raspar con punta o cúter para que aparezca la clara | Despejar, extraer: sacar la luz de la masa como se saca la piedra de la tierra | 1, 4 |
+| **Incisión** | Trazar líneas finas con un punzón sobre la cera | Escribir: la manugrafía del catastro, el mojón, la estaca | 2, 4 |
+| **Fundido con el dedo** | Mezclar y arrastrar con la yema. Sin línea previa | El «manchón» de las rodillas (p. 60) y de la sangre (p. 154); manuaje «en sentido fuerte», de baja escrituralidad | 3, 4, 6 |
+| **Veladura con solvente** | Pintar sobre el pastel con pincel mojado en aguarrás; se disuelve y chorrea | Derretirse, deshilarse: el cuerpo de Paulo «como muñeco de cera» (p. 123); el agua de la mina | 3, 4 |
+| **Reserva** | Dejar el papel desnudo, sin tocar | La sequía como ausencia: «Ni una pincelada enturbió el papel celeste» (p. 57) | 5 |
 | **Frotado** | Papel fino sobre una piedra real; frotar con el pastel de canto; recortar y pegar, o frotar directamente sobre el soporte si es delgado | Hacer muros con las piedras del cerro-padre (p. 8): la textura la pone la piedra, no la mano que imita | 1, 2 |
 
 ## 5.3. Ciclo de trabajo por figura
@@ -53,15 +51,17 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
 
 1. **Relectura (10 min).** Lee los pasajes de la ficha (§5.4) y subraya materiales, colores, luz y medidas.
 2. **Disección (15 min).** Haz tres o cuatro miniaturas de 5 × 7 cm con lápiz o carbonilla, cada una sobre una relación: dónde están el apoyo, el vano, la masa y el límite. Lundberg las hace como «bocetos rápidos y dibujos analíticos».
-3. **Ensamblaje (15 min).** Haz una miniatura de composición que junte los elementos de la ficha: el *capriccio*. Parte del esquema de encaje si te sirve, o descártalo.
+3. **Ensamblaje (15 min).** Haz una miniatura de composición que junte los elementos de la ficha: el *capriccio*. Parte del esquema de encaje si te sirve, o descártalo. Antes de fijar nada, prueba las piezas unas junto a otras: Fuão sitúa las decisiones en el «intervalo» entre recortar y pegar, «antes de que la cola las fije» (Fuão, 2011: 8, 52). Y cada analogía (el cráneo, la pelvis, el edificio al revés) necesita «una referencia explícita» en el texto (ibid.: 53).
 4. **Inmersión (1 a 3 h).** Haz el pastel definitivo. Empieza por la capa de fondo y guarda para el final los puntos de luz y las incisiones.
-5. **Registro (10 min).** Fotografía cada etapa con el móvil y anota en el cuaderno qué decidiste, qué no salió como esperabas y qué descubriste. De esas notas sale el plano (3) del artículo.
+5. **Registro (10 min).** Fotografía cada etapa con el móvil y anota en el cuaderno qué decidiste, qué no salió como esperabas y qué descubriste. Anota también, junto al trazo, lo que hizo la mano: raspar, empastar, disolver. El artículo toma esa costumbre de los dibujos de Gordon Cullen para Lubetkin, que incluían «personas haciendo cosas» (Monteys y Fuertes, 2001: 128, 132). De esas notas sale el plano (3) del artículo.
 
 ## 5.4. Las seis fichas
 
-### Figura 1. *Cráneo/nido*: sección de la chujlla
+### Figura 1. *Cráneo/nido*: sección de la chujlla de los Huanca
 
-![Esquema de encaje de la Figura 1](esquemas/fig1_craneo_nido.svg)
+![Figura 1 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_1.png)
+
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig1_craneo_nido.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig1_craneo_nido.png`.
 
 - **Pasajes.**
   - p. 8: el cerro «padre», con cuyas piedras «han hecho los cimientos y paredes de las chujllas».
@@ -89,12 +89,14 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
   4. Los muros, en empaste o con frotado de piedras reales.
   5. El humo, con el dedo.
   6. El fuego, al final, en empaste puro.
-- **Qué observar.** ¿Desde dentro, la chujlla sigue pareciendo la «madriguera» del narrador o aparece como caja de herramientas y lugar de ensueño? ¿El perfil de cráneo se impone o sale forzado?
-- **Qué evitar.** Dibujar «los sueños paganos» o los «revolcones» que el narrador proyecta. El artículo dice que el dibujo **no** entra en el secreto de los comunarios (p. 65).
+- **Qué observar.** ¿Desde dentro, la chujlla sigue pareciendo una de las «verrugas en la piel sarmentosa del altiplano» que ve el narrador desde fuera (p. 10), o aparece como caja de herramientas y lugar de ensueño? ¿El perfil de cráneo se impone o sale forzado?
+- **Qué evitar.** Dibujar los «hondos sueños paganos y revolcones amorosos» que el narrador proyecta en los camastros (p. 31). El artículo dice que el dibujo **no** entra en el secreto de los comunarios (p. 65).
 
-### Figura 2. *Signo Escalonado frente al mapa*
+### Figura 2. *Signo Escalonado frente al mapa*: el cerro de Jatun-Kolla en sección y en planta
 
-![Esquema de encaje de la Figura 2](esquemas/fig2_signo_mapa.svg)
+![Figura 2 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_2.png)
+
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig2_signo_mapa.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig2_signo_mapa.png`.
 
 - **Pasajes.**
   - p. 6: las chujllas de las familias antiguas «han trepado en los riscos del cerro»; la «rojiza peñería»; la «llanura amarillosa, parda»; los «kollis verdinegros».
@@ -129,9 +131,11 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
 - **Qué observar.** ¿La escalera social cabe en la pendiente o se rompe? ¿Qué pasa en la hoja cuando mito (la sección) y mapa (la planta) se hacen con el mismo pastel y la misma mano?
 - **Qué evitar.** Una pirámide limpia y simétrica que confirme el diagrama de clases del narrador. La hipótesis es que no encaja.
 
-### Figura 3. *Umbral de la apacheta*
+### Figura 3. *Umbral de la apacheta*: la ceja de la cordillera y la fauce del yunga
 
-![Esquema de encaje de la Figura 3](esquemas/fig3_apacheta.svg)
+![Figura 3 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_3.png)
+
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig3_apacheta.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig3_apacheta.png`.
 
 - **Pasajes.**
   - p. 33: la bendición: «que en las apachetas no les detenga el Supaya».
@@ -167,76 +171,11 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
 - **Qué observar.** ¿El paso de lo seco a lo húmedo se lee como otro paisaje o como un cambio de estado de la materia? ¿El puente de monos pesa en la composición o queda como anécdota?
 - **Qué evitar.** El paisaje de postal de los Yungas. El narrador lo ve con «histeria de bosques vírgenes» (p. 108), y el dibujo no tiene por qué heredar ese exotismo.
 
-### Figura 4. *Pelvis telúrica / Pachamama sorda*
+### Figura 4. *El castillete y la caída al plano 450*
 
-![Esquema de encaje de la Figura 4](esquemas/fig4_pelvis.svg)
+![Figura 4 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_4.png)
 
-- **Pasajes.**
-  - p. 56: las sementeras «se agrietan como paredes envejecidas».
-  - p. 57: «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo»; el crepúsculo como «dantesco brasero».
-  - p. 58: las vertientes secas, «un arenoso y blanquecino cauce, tachonado de pedrisca»; las ofrendas quemadas en el cerro; «La tierra está vieja, y como toda vieja, es sorda».
-  - p. 63: la luna «hinchada como una nube de fuego blanco».
-  - p. 64: las vacas famélicas, con «las nalgas abiertas a la manera de una luna menguante».
-  - p. 66: «La Pacha Mama, sorda, vieja, extenuada».
-  - p. 72: la luna menguante «tenía sangre».
-- **Disección.**
-  - Apoyo: la cadera ósea, la estructura que carga.
-  - Vano: la abertura pélvica, que es el cauce seco.
-  - Masa: la tierra agrietada.
-  - Límite: el cielo sin trazo.
-- **Ensamblaje.** La cuenca de las vertientes secas vista desde arriba o en escorzo, dibujada como una pelvis de ganado, con dos alas y una abertura central. En el cielo, una luna menguante que repite la curva de la cadera. Al fondo, el cerro pequeño con un hilo de humo de las ofrendas.
-- **Formato.** Apaisado.
-- **Paleta.**
-  - Cielo: **no se toca**. Es el papel celeste o gris azulado, que literaliza la metáfora de la p. 57.
-  - Tierra: sombra, siena y «plomizo y mineral» (p. 66).
-  - Hueso: blanco roto y marfil.
-  - Un solo acento rojo en la luna o en el borde del cielo («tenía sangre», p. 72).
-- **Luz.** Mediodía blanco o luna llena de «fuego blanco». Luz dura y sin sombra que proteja.
-- **Secuencia técnica.**
-  1. Enmascara el cielo con cinta y no lo toques.
-  2. Tierra de sombra en capas.
-  3. La pelvis en blanco hueso, en empaste.
-  4. Las grietas por **raspado** hasta que aparezca el papel.
-  5. La luna, como la pelvis, por reserva o con muy poco material.
-- **Qué observar.** ¿La pelvis se lee como estructura que carga (tectónica) o vuelve a leerse como sexo (el tropo del narrador)? Si pasa lo segundo, anótalo: también es un hallazgo.
-- **Qué evitar.** Cualquier cuerpo femenino. La operación consiste justamente en desplazar la metáfora sexual hacia la estructura.
-
-### Figura 5. *El centinela de la resistencia*
-
-![Esquema de encaje de la Figura 5](esquemas/fig5_centinela.svg)
-
-- **Pasajes.**
-  - pp. 23-24: el bastón de keñua de Pedro Villca; la vara de Jilakata.
-  - p. 72: el cerro como «Achachila»; Sirio y Marte «semejantes a coágulos de aquella sangre estelar».
-  - p. 73: Paulo sube al estrado de adobes con la vara.
-  - p. 75: Braulio Choquehuanca y su cayado; los «tres vigilantes al cuidado del ayllu».
-  - p. 79: el ayllu vacío, con puertas zarandeadas y polvo en los rincones; los tres vigías en la chujlla de los Villca, «celadores y enfermeros de un solar histérico, infecundo y trágico»; los buitres en el campanario, «aquella atalaya»; el sol «como una ascua».
-  - p. 80: los muertos que «en las noches salían de la tierra para mirar el cielo»; «cancerberos», «muertos en vida».
-- **Disección.**
-  - Apoyo: los cuerpos-poste y el cayado.
-  - Vano: la puerta de la chujlla vacía.
-  - Masa: la casa de los Villca.
-  - Límite: la mirada sobre la inmensidad.
-- **Ensamblaje.** Un nocturno con tres figuras verticales en el vano de la casa más grande del ayllu vacío, tratadas como postes o mojones (apoyos, no héroes). A un lado, un cayado apoyado. Al fondo, el campanario con los buitres, una contravigía. Del suelo suben formas pálidas: los muertos que salen a mirar el cielo. Horizonte bajo, cielo enorme.
-- **Formato.** Vertical.
-- **Paleta.**
-  - Azul noche y negro.
-  - Ocre polvo para el suelo.
-  - Dos estrellas rojas (Sirio y Marte).
-  - Blancos veladísimos para los muertos.
-- **Luz.** Nocturna, sin luna o con muy poca. Las figuras se leen por silueta.
-- **Secuencia técnica.**
-  1. Cielo en capas de azul y negro fundidas con el dedo.
-  2. La casa y el suelo en empaste pardo.
-  3. Las tres figuras como trazos verticales gruesos y firmes.
-  4. Los muertos con **el dedo apenas cargado de blanco**, en veladura. El solvente también sirve.
-  5. Las estrellas, al final, en punto de empaste.
-- **Qué observar.** ¿Los vigías se leen como resistencia (cuidado, permanencia) o como ruina (los «cancerberos» del narrador)? ¿Hacia dónde miran? El final de la novela tiene una «atalaya de la esperanza» que se niega a mirar hacia abajo (p. 157).
-- **Qué evitar.** El heroísmo: nada de puños alzados ni de poses épicas. El discurso de Braulio, de hecho, fracasa.
-
-### Figura 6. *El castillete y la caída al plano 450*
-
-![Esquema de encaje de la Figura 6](esquemas/fig6_castillete.svg)
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig6_castillete.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig4_castillete.png`.
 
 - **Pasajes.**
   - p. 134: el cerro «jorobado»; «el encaje de acero de la torre de un andarivel»; las luces «semejante a un prendedor de topacios y rubíes»; la máquina «de tres pesados y anchos martillos».
@@ -272,19 +211,90 @@ Es el ciclo de Lundberg adaptado. Para cada figura, en este orden:
 - **Qué observar.** ¿La mina se lee como lo contrario del ayllu o como su doble invertido? ¿El desmonte en lo alto se reconoce como la montaña de piedras del principio?
 - **Qué evitar.** Dibujar el disparo o el cadáver. La violencia está en la estructura: la jaula, el agua, la viga.
 
+### Figura 5. *Pelvis telúrica / Pachamama sorda*
+
+![Figura 5 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_5.png)
+
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig4_pelvis.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig5_pelvis.png`.
+
+- **Pasajes.**
+  - p. 56: las sementeras «se agrietan como paredes envejecidas».
+  - p. 57: «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo»; el crepúsculo como «dantesco brasero».
+  - p. 58: las vertientes secas, «un arenoso y blanquecino cauce, tachonado de pedrisca»; las ofrendas quemadas en el cerro; «La tierra está vieja, y como toda vieja, es sorda».
+  - p. 63: la luna «hinchada como una nube de fuego blanco».
+  - p. 64: las vacas famélicas, con «las nalgas abiertas a la manera de una luna menguante».
+  - p. 66: «La Pacha Mama, sorda, vieja, extenuada».
+  - p. 72: la luna menguante «tenía sangre».
+- **Disección.**
+  - Apoyo: la cadera ósea, la estructura que carga.
+  - Vano: la abertura pélvica, que es el cauce seco.
+  - Masa: la tierra agrietada.
+  - Límite: el cielo sin trazo.
+- **Ensamblaje.** La cuenca de las vertientes secas vista desde arriba o en escorzo, dibujada como una pelvis de ganado, con dos alas y una abertura central. En el cielo, una luna menguante que repite la curva de la cadera. Al fondo, el cerro pequeño con un hilo de humo de las ofrendas.
+- **Formato.** Apaisado.
+- **Paleta.**
+  - Cielo: **no se toca**. Es el papel celeste o gris azulado, que literaliza la metáfora de la p. 57.
+  - Tierra: sombra, siena y «plomizo y mineral» (p. 66).
+  - Hueso: blanco roto y marfil.
+  - Un solo acento rojo en la luna o en el borde del cielo («tenía sangre», p. 72).
+- **Luz.** Mediodía blanco o luna llena de «fuego blanco». Luz dura y sin sombra que proteja.
+- **Secuencia técnica.**
+  1. Enmascara el cielo con cinta y no lo toques.
+  2. Tierra de sombra en capas.
+  3. La pelvis en blanco hueso, en empaste.
+  4. Las grietas por **raspado** hasta que aparezca el papel.
+  5. La luna, como la pelvis, por reserva o con muy poco material.
+- **Qué observar.** ¿La pelvis se lee como estructura que carga (tectónica) o vuelve a leerse como sexo (el tropo del narrador)? Si pasa lo segundo, anótalo: también es un hallazgo.
+- **Qué evitar.** Cualquier cuerpo femenino. La operación consiste justamente en desplazar la metáfora sexual hacia la estructura.
+
+### Figura 6. *El centinela de la resistencia*: los tres vigías del ayllu vacío
+
+![Figura 6 del artículo: esquema de encaje trazado como notación](../articulo/figuras/figura_6.png)
+
+- **Otras guías.** El esquema anterior, con la numeración de la serie original: `esquemas/fig5_centinela.svg`. La guía sin texto para explorar con GPT Image 2: `esquemas/guias/guia_fig6_centinela.png`.
+
+- **Pasajes.**
+  - pp. 23-24: el bastón de keñua de Pedro Villca; la vara de Jilakata.
+  - p. 72: el cerro como «Achachila»; Sirio y Marte «semejantes a coágulos de aquella sangre estelar».
+  - p. 73: Paulo sube al estrado de adobes con la vara.
+  - p. 75: Braulio Choquehuanca y su cayado; los «tres vigilantes al cuidado del ayllu».
+  - p. 79: el ayllu vacío, con puertas zarandeadas y polvo en los rincones; los tres vigías en la chujlla de los Villca, «celadores y enfermeros de un solar histérico, infecundo y trágico»; los buitres en el campanario, «aquella atalaya»; el sol «como una ascua».
+  - p. 80: los muertos que «en las noches salían de la tierra para mirar el cielo»; «cancerberos», «muertos en vida».
+- **Disección.**
+  - Apoyo: los cuerpos-poste y el cayado.
+  - Vano: la puerta de la chujlla vacía.
+  - Masa: la casa de los Villca.
+  - Límite: la mirada sobre la inmensidad.
+- **Ensamblaje.** Un nocturno con tres figuras verticales en el vano de la casa más grande del ayllu vacío, tratadas como postes o mojones (apoyos, no héroes). A un lado, un cayado apoyado. Al fondo, el campanario con los buitres, una contravigía. Del suelo suben formas pálidas: los muertos que salen a mirar el cielo. Horizonte bajo, cielo enorme.
+- **Formato.** Vertical.
+- **Paleta.**
+  - Azul noche y negro.
+  - Ocre polvo para el suelo.
+  - Dos estrellas rojas (Sirio y Marte).
+  - Blancos veladísimos para los muertos.
+- **Luz.** Nocturna, sin luna o con muy poca. Las figuras se leen por silueta.
+- **Secuencia técnica.**
+  1. Cielo en capas de azul y negro fundidas con el dedo.
+  2. La casa y el suelo en empaste pardo.
+  3. Las tres figuras como trazos verticales gruesos y firmes.
+  4. Los muertos con **el dedo apenas cargado de blanco**, en veladura. El solvente también sirve.
+  5. Las estrellas, al final, en punto de empaste.
+- **Qué observar.** ¿Los vigías se leen como resistencia (cuidado, permanencia) o como ruina (los «cancerberos» del narrador)? ¿Hacia dónde miran? El final de la novela tiene una «atalaya de la esperanza» que se niega a mirar hacia abajo (p. 157).
+- **Qué evitar.** El heroísmo: nada de puños alzados ni de poses épicas. El discurso de Braulio, de hecho, fracasa.
+
 ## 5.5. Del contraste al hallazgo: cómo reescribir el plano (3)
 
 Cuando termines cada pastel, reescribe en el artículo el plano «(3) *Contraste*» de esa figura con lo que el dibujo mostró, no con lo que se esperaba. Solo eso puede llamarse hallazgo: el artículo advierte que las decisiones del esquema «no cuentan como hallazgos». Una plantilla posible:
 
 > (3) *Contraste*. Al [operación: esgrafiar las vigas, disolver el yunga, incidir el catastro...], apareció [lo que viste], que el texto [no dice / dice de otro modo / contradice en la p. X]. La lectura [se confirma / se matiza / no se sostiene]: [consecuencia para la lectura de la novela].
 
-Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py` y comprueba que la extensión siga entre 47.500 y 49.500 caracteres; hoy el margen es de 28, así que lo que añadas tendrás que recortarlo en otra parte.
+Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé, y un desmentido honesto vale más en el arbitraje que una confirmación forzada. Si ya no queda ningún esquema, reescribe también las frases que hablan de ellos (secciones 1 y 2 y conclusiones) y la declaración de IA, como indica `articulo/figuras/LEEME.md`. Después vuelve a pasar `python3 articulo/generar_docx.py`. Ya no hay un límite fijo: el artículo tiene hoy 61.625 caracteres, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`). Si la revista elegida pide menos, lo que añadas tendrá que salir de otra parte.
 
 ## 5.6. Fotografiar e insertar las figuras
 
 1. **Captura.** Escanea a 300 ppp como mínimo o fotografía con luz de día difusa, sin flash, con el móvil paralelo a la hoja. Si puedes, pon al lado una carta de color o un papel blanco para corregir el balance.
 2. **Edición.** Recorta al borde del dibujo, corrige la perspectiva y exporta en JPG de alta calidad, de 2.000 a 3.000 px de lado mayor.
-3. **Archivo.** Guarda las imágenes como `articulo/figuras/figura_1.jpg` … `figura_6.jpg`, con la numeración del artículo (véase la nota inicial: el Castillete es la 4; la Pelvis, la 5; el Centinela, la 6).
+3. **Archivo.** Guarda las imágenes como `articulo/figuras/figura_1.jpg` … `figura_6.jpg`, con la numeración del artículo, que es la de esta guía (el Castillete es la 4; la Pelvis, la 5; el Centinela, la 6).
 4. **Inserción.** En `articulo/articulo_cosecha_de_piedras.md`, dentro de cada bloque `::: {custom-style="Figura"}`, cambia `figuras/figura_N.png` por `figuras/figura_N.jpg` y conserva el ancho. Para las figuras verticales usa `{height=18cm}`.
 5. **Pie.** Sustituye «Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA.» por el soporte, las medidas y el año, por ejemplo: «Pastel al óleo sobre papel, 29,7 × 42 cm, 2026. Fuente: elaboración propia.»
 6. **Regenerar.** Ejecuta `python3 articulo/generar_docx.py`.
@@ -292,5 +302,5 @@ Si un pastel desmiente la lectura, **no lo escondas**. La formatividad lo prevé
 ## 5.7. Si el tiempo apremia
 
 - **Serie exprés (un día).** Seis pasteles A4 de unos 60 a 75 minutos cada uno, con 20 minutos previos de miniaturas por figura. Unas 8 horas en total. Es una escala coherente con Lundberg, que dibujaba de 30 a 60 minutos por imagen.
-- **Prioridad.** Si no llegan las seis, las que más sostienen el argumento son la 2 (el signo frente al mapa), la 6 (la mina como doble del ayllu) y la 1 (la chujlla). Con cuatro figuras habría que ajustar el esquema del artículo y el Cuadro 1.
-- **Plazo.** La convocatoria cerró el 25 de septiembre de 2026. El artículo se presenta como investigación en desarrollo, con los esquemas de encaje como figuras. Si la revista acepta el envío, pregunta si podrás sustituirlos por las fotografías de los pasteles antes de la maquetación. La decisión es tuya y de la revista.
+- **Prioridad.** Si no llegan las seis, las que más sostienen el argumento son la 2 (el signo frente al mapa), la 4 (la mina como doble del ayllu) y la 1 (la chujlla). Con cuatro figuras habría que ajustar el esquema del artículo y el Cuadro 1.
+- **Plazo.** El artículo ya no va a *Estudios Bolivianos*: la revista se elige entre las candidatas del informe de convocatorias, y la primera es *Atenea*. Se presenta como investigación en desarrollo, con los esquemas de encaje como figuras. Si la revista acepta el envío, pregunta si podrás sustituirlos por las fotografías de los pasteles antes de la maquetación. La decisión es tuya y de la revista.

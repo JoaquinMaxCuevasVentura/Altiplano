@@ -1,6 +1,24 @@
-# Altiplano: artículo para *Estudios Bolivianos* N.º 43 (2026)
+# Altiplano: «Cosecha de piedras», un artículo sobre la novela de Raúl Botelho Gosálvez
 
-Artículo, análisis de fuentes y protocolo gráfico para el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» (IEB, FHCE, UMSA). **Plazo de envío: 25 de septiembre de 2026 (vencido), a ieb.fhce@umsa.bo.**
+Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» de *Estudios Bolivianos* N.º 43 (IEB, FHCE, UMSA), cuyo plazo venció el 25 de septiembre de 2026. **Ahora busca revista:** la primera candidata es *Atenea* (`reports/Convocatorias abiertas para el artículo.md`).
+
+## Entregables (al 11 de octubre de 2026)
+
+| Entregable | Dónde | Estado |
+|---|---|---|
+| **El artículo** | `articulo/articulo_cosecha_de_piedras.md` | Versión final del 10 de octubre: 61.625 caracteres, 10.273 palabras, 29 páginas en Word; 153 citas de la novela verificadas; 32 entradas de bibliografía |
+| **El artículo en Word** | `articulo/articulo_cosecha_de_piedras.docx` | Coincide con el texto fuente: se regeneró el 11 de octubre y salió idéntico |
+| **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 30 cambios de la revisión final respecto de la versión con Fuão y Monteys y Fuertes |
+| **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre. El LEEME se puso al día el 11 |
+| **La guía de los seis pasteles** | `analisis/05b_guia_seis_pasteles.md` | Al día el 11 de octubre: numeración del artículo, figuras vigentes, método final y dos citas corregidas |
+| **El fichero de pasajes** | `analisis/06_fichero_de_pasajes.md` | Regenerado el 11 de octubre: las 153 citas y las dos en bloque, por página, para cotejarlas con el impreso |
+| **Las verificaciones y pendientes** | `analisis/04_verificaciones_y_pendientes.md` | Al día el 11 de octubre, con la lista final de envío |
+| **El informe de convocatorias** | `reports/Convocatorias abiertas para el artículo.md` | Del 10 de octubre. Los veredictos de extensión se recalcularon el 11 con la versión final: *Atenea* pide unas 1.800 palabras menos, y *Aisthesis* admite el texto entero |
+| **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; registro en `analisis/29_atlas_arena.md` | Hecho el 10 y el 11 de octubre: 38 bloques; el canal de pasteles espera tus escaneos |
+| **Los generadores** | `articulo/generar_docx.py` y `articulo/generar_figuras.py` | Funcionan. El del Word informa desde el 11 de octubre también las palabras |
+| *La versión 3 (alternativa)* | `articulo/articulo_altiplano.md` y `.docx` | Archivada desde el 25 de septiembre; no se actualiza |
+
+Los análisis `01` a `29` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en los entregables de arriba.
 
 ## Artículo definitivo
 
@@ -42,23 +60,25 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 61.625 caracteres con espacios, bibliografía y notas incluidas; unas 10.300 palabras; el Word tiene 29 páginas. Ya no va a *Estudios Bolivianos* y no hay límite fijo: cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual, en `analisis/26_fuao_y_monteys_collage.md`, §26.8).
+- **Extensión:** 61.625 caracteres con espacios, bibliografía y notas incluidas; unas 10.300 palabras; el Word tiene 29 páginas. Ya no va a *Estudios Bolivianos* y no hay límite fijo: cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 147 se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas.
+- **Citas de la novela:** las 153 entre comillas y las dos en bloque se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas. El fichero `analisis/06_fichero_de_pasajes.md` las ordena por página para el cotejo con el impreso.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
   - confirmar el epígrafe;
   - hacer y escanear los pasteles: serán las figuras (las imágenes de GPT Image 2 son solo exploración; `analisis/17_estilo_y_prompts_gpt_image.md`);
   - revisar los dos diagramas, rótulos y páginas, y decidir si entran (`analisis/19_esquemas_a_mano_y_diagramas.md`);
-  - cotejar las citas con el impreso;
+  - cotejar las citas con el impreso (`analisis/06_fichero_de_pasajes.md`);
+  - cotejar los dos pasajes de The Voidz con la letra oficial;
+  - elegir revista y adaptar el formato y la extensión (para *Atenea*, unas 1.800 palabras menos);
   - preparar una versión anonimizada si la revista la pide;
-  - enviar (el plazo venció el 25 de septiembre).
+  - enviar.
 
   Véase `analisis/04_verificaciones_y_pendientes.md`.
 
@@ -70,9 +90,9 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/02_codigo_genetico_carcamo_pino.md` | El «código genético» de Cárcamo Pino: conceptos, métodos, estilo y recetario de emulación |
 | `analisis/03_marco_cruzado.md` | Lundberg, Martin, Vázquez Ramos *et al.* y la novela (primera ronda) |
 | `analisis/04_verificaciones_y_pendientes.md` | Qué hacer y verificar antes de enviar |
-| `analisis/05_guia_de_dibujo.md` | Guía de la exploración gráfica en tres escenas (versión 3) |
-| `analisis/05b_guia_seis_pasteles.md` | **Guía de los seis pasteles** del artículo definitivo: composición, paleta, técnica y registro de cada pieza |
-| `analisis/06_fichero_de_pasajes.md` | Las citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador |
+| `analisis/05_guia_de_dibujo.md` | Guía de la exploración gráfica en tres escenas (versión 3; la reemplaza `05b`) |
+| `analisis/05b_guia_seis_pasteles.md` | **Guía de los seis pasteles** del artículo definitivo: composición, paleta, técnica y registro de cada pieza. Al día el 11 de octubre, con la numeración del artículo (Castillete = 4, Pelvis = 5, Centinela = 6) |
+| `analisis/06_fichero_de_pasajes.md` | Las citas de la novela ordenadas por página (para cotejar con el impreso), erratas de la transcripción, cautelas de lectura y tropos del narrador. Regenerado el 11 de octubre con las 153 citas del artículo final y las dos en bloque |
 | `analisis/07_cinco_libros.md` | Análisis de Scott, Dean, Frampton, Garrington y Le Guin: pasajes con página, función y límite de cada uno, y dónde entra cada uno en el artículo definitivo |
 | `analisis/08_respuesta_al_arbitraje.md` | **Respuesta al arbitraje**: las cinco objeciones, las diez fuentes de los dos bloques (Bertonio, Duviols, Barnadas, Rivera Cusicanqui, Zavaleta; Cornejo Polar, Barnadas y Coy, Ingold, Seguí), pasajes con página, qué entró en el artículo definitivo, qué se quitó y qué quedó en reserva |
 | `analisis/09_recursos_de_carcamo_y_lenguaje_llano.md` | Qué recursos de Cárcamo Pino entraron, cuáles no y por qué; el epígrafe y las opciones descartadas; criterios de la versión en lenguaje llano; autores que salieron |
@@ -96,7 +116,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/27_auditoria_otra_ia_collage_titulos_y_the_voidz.md` | Auditoría de las propuestas de otra IA: qué se sostiene del análisis de *Casa collage* y Fuão (páginas corridas, citas cosidas, errores sobre la novela), por qué conviene mantener el título, qué se pudo verificar de The Voidz (álbumes y pistas sí; de trece versos que propuso la otra IA, solo dos están en las letras), qué pasajes de las letras entraron y por qué, qué dice de verdad Cárcamo Pino, lo que entró y la revisión final del artículo |
 | `analisis/28_prompt_atlas_arena.md` | Prompt revisado para armar un atlas privado en Are.na: los datos reales del proyecto, las 32 obras que ya están citadas, los huecos por prioridad (crítica sobre la novela, vecinas del concurso de 1940, Warisata, facsímiles, datos de catálogo), canales por material del argumento (piedra, papel, máquina) y sin canal de «paisaje», reglas del conector, de verificación y de representación, y lo que hay que decidir antes de usarlo. No se creó nada en Are.na |
 | `analisis/29_atlas_arena.md` | Registro del atlas de Are.na, hecho el 10 y el 11 de octubre: once canales privados (la matriz, nueve por material o tema y uno vacío para los escaneos de los pasteles) y 38 bloques con su ficha; los identificadores de cada canal y bloque; qué herramientas fallaron (el buscador de Are.na pide Premium, un TIFF de Commons, la ficha de la BnF) y cómo se resolvió; los canales ajenos revisados (no se conectó nada); qué huecos cubre cada hallazgo; lo que tienes que mirar o decidir; y cinco propuestas para el artículo, ninguna aplicada (la primera, mencionar el concurso de 1940 en §1) |
-| `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
+| `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
 | `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |
 | `analisis/esquemas/diagramas/` | Las ocho figuras del artículo trazadas como notaciones (SVG con la letra incrustada): los esquemas de encaje de las Figuras 1 a 6 y los diagramas de las 7 y 8. Su generador, `generar_diagramas.js`, y la letra Nothing You Could Do (OFL) con su licencia |

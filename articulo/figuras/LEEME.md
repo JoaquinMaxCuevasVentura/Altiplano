@@ -19,7 +19,7 @@ Las ocho se editan en `analisis/esquemas/diagramas/generar_diagramas.js`. Para r
 
 El 30 de septiembre de 2026 se corrigió el esquema de la Figura 2: el Signo Escalonado se traza encima del cerro y no encaja en la pendiente, como dice el texto. La notación del 1 de octubre lo conserva.
 
-Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis/esquemas/guias/`. Los prompts están en `analisis/17_estilo_y_prompts_gpt_image.md`. Para los diagramas hay dos guías más, con sus prompts en `analisis/21_diagramas_como_notaciones.md`, §21.8, y entradas con rótulos y máscaras para mejorarlos, con los prompts de `analisis/22_prompts_para_mejorar_las_notaciones.md`. Nada de eso se publica. Esas imágenes no se publican: las figuras finales serán los escaneos de los pasteles.
+Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis/esquemas/guias/`. Los prompts están en `analisis/17_estilo_y_prompts_gpt_image.md`. Para los diagramas hay dos guías más, con sus prompts en `analisis/21_diagramas_como_notaciones.md`, §21.8, y entradas con rótulos y máscaras para mejorarlos, con los prompts de `analisis/22_prompts_para_mejorar_las_notaciones.md`. Nada de eso se publica: las figuras finales serán los escaneos de los pasteles. La guía para hacerlos, con esta misma numeración, está en `analisis/05b_guia_seis_pasteles.md`.
 
 ## Los diagramas (Figuras 7 y 8)
 
@@ -40,4 +40,4 @@ Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis
      - en a), agrega GPT Image 2 (OpenAI).
    - Mide casi lo mismo que lo que sale (`analisis/17_estilo_y_prompts_gpt_image.md`, §17.7).
 5. No vuelvas a correr `generar_figuras.py` sobre un número que ya sea fotografía.
-6. Regenera el Word (`python3 articulo/generar_docx.py`) y comprueba que la extensión siga entre 47.500 y 49.500 caracteres. Hoy el margen es de 36 caracteres: lo que añadas tendrás que recortarlo en otra parte.
+6. Regenera el Word (`python3 articulo/generar_docx.py`) y mira la extensión que informa. Ya no hay un límite fijo: hoy son 61.625 caracteres y 10.273 palabras, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`).

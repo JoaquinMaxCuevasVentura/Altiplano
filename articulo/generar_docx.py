@@ -1,4 +1,5 @@
-"""Genera el .docx del artículo con las normas de Estudios Bolivianos.
+"""Genera el .docx del artículo con las normas de Estudios Bolivianos, la revista
+para la que se escribió. Hasta elegir revista, es la versión de trabajo.
 
 Normas aplicadas: tamaño carta, márgenes de 2,5 cm, Times New Roman 12,
 interlineado 1,5 (notas al pie en 10 pt, interlineado sencillo).
@@ -10,8 +11,9 @@ Uso (desde la raíz del repositorio):
 Sin argumento lee articulo/articulo_cosecha_de_piedras.md (versión definitiva)
 y escribe el .docx del mismo nombre; con un argumento convierte ese archivo
 (por ejemplo, articulo/articulo_altiplano.md, la versión 3). Al final informa
-la extensión en caracteres con espacios (la revista admite 20.000-50.000,
-bibliografía incluida) y las palabras de cada resumen (máximo 100).
+la extensión en caracteres con espacios y en palabras, con bibliografía y notas
+(cada revista pone su límite: véase reports/Convocatorias abiertas para el
+artículo.md), y las palabras de cada resumen.
 
 Las figuras van en bloques ::: {custom-style="Figura"} con la imagen, por
 ejemplo ![](figuras/figura_1.png){width=14cm}, seguidos de su pie en un
@@ -159,6 +161,8 @@ def report():
     body = "\n".join(parts)
     total = len(body.replace("\n", " ")) + len(" ".join(notes))
     print(f"Caracteres con espacios (texto + tablas + notas): {total:,}".replace(",", "."))
+    palabras = len(body.split()) + len(" ".join(notes).split())
+    print(f"Palabras (texto + tablas + notas): {palabras:,}".replace(",", "."))
     md = MD.read_text(encoding="utf8")
     for label in ("Resumen", "Abstract"):
         m = re.search(rf"\*\*{label}\*\*\s*\n\s*\n(.+?)\n", md, re.S)

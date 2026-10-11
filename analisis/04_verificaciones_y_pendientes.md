@@ -44,7 +44,7 @@
     - se dividen párrafos largos, se unifican los años de Pallasmaa y Hall y la bibliografía pasa a 32 entradas;
     - el título se mantiene: «cosecha de piedras» es una frase de la novela (p. 9).
 
-- **Extensión.** 61.625 caracteres con espacios, con bibliografía y notas; unas 10.300 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (`26`, §26.8).
+- **Extensión.** 61.625 caracteres con espacios, con bibliografía y notas; unas 10.300 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (§4.6 y el informe de convocatorias, recalculado el 11 de octubre).
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -82,7 +82,7 @@
 6. **Revisar los datos marcados B y C** (§4.3).
 7. **Regenerar el Word** con `python3 articulo/generar_docx.py` si cambias algo, y comprobar la extensión que pida la revista elegida (§4.6).
 8. **Preparar una versión anonimizada** si la revista la pide para el arbitraje a doble ciego: sin nombre, sin nota 1 y con «El autor» neutralizado en las declaraciones.
-9. **Elegir revista y enviar** (`reports/Convocatorias abiertas para el artículo.md`; `26`, §26.8). El artículo ya no irá a *Estudios Bolivianos*. Adapta el formato a las normas de la revista elegida: el Word sale de la plantilla de *Estudios Bolivianos*, y la frase «Se trata de una investigación en desarrollo» respondía a una norma de esa revista.
+9. **Elegir revista y enviar** (`reports/Convocatorias abiertas para el artículo.md`, con los recortes recalculados el 11 de octubre; §4.6). El artículo ya no irá a *Estudios Bolivianos*. Adapta el formato a las normas de la revista elegida: el Word sale de la plantilla de *Estudios Bolivianos*, y la frase «Se trata de una investigación en desarrollo» respondía a una norma de esa revista.
 
 ## 4.2. Datos de autoría del artículo
 
@@ -183,7 +183,12 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 ## 4.6. Extensión
 
 - **Ahora:** 61.625 caracteres, con la nota de autor, las declaraciones y el epígrafe. La auditoría, la revisión final y los dos pasajes de las letras, el 10 de octubre, añadieron unos 2.900 (`27`, §27.10 y §27.11). Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
-- **Si la revista elegida pide menos**, los candidatos a recortar son los cruces que más se alejan de la novela (Alexander en §3, la casa difusa de §5, las canciones) y los pasajes de trama que no llevan cita. El marco teórico, el Cuadro 1 y la bibliografía deben quedar completos.
+- **Lo que piden las candidatas** (recalculado el 11 de octubre en el informe de convocatorias, «Cuánto hay que cortar»). En el Word son unas 10.300 palabras y 29 páginas:
+  - sin cortes: *Aisthesis* (12.000 palabras), *Riva-Agüero* (16.000), *A Contracorriente* (12.000), *Revista de Literatura* (11.000), *Yachay* e *Iberoamericana* (70.000 caracteres), entre otras;
+  - *Kipus* (9.500): unas 800 palabras menos;
+  - *Literatura y Lingüística* y *Estudios Filológicos* (9.000): unas 1.300 menos;
+  - *Atenea* (8.500 con resumen y referencias): unas 1.800 menos, cerca de un 17 %.
+- **Si la revista elegida pide menos**, la palanca principal son los pies de figura analíticos y el Cuadro 1 (unas 1.850 palabras): se pueden acortar o pasar parte de su análisis al texto. Después vienen los cruces que más se alejan de la novela (Alexander en §3, la casa difusa de §5, las canciones) y los pasajes de trama que no llevan cita. El marco teórico y la bibliografía deben quedar completos.
 - **Comprobación:** `python3 articulo/generar_docx.py` informa la extensión exacta.
 
 ## 4.7. Antecedentes críticos
@@ -220,6 +225,7 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
 - [x] `.docx` regenerado con la revisión final y los dos pasajes de The Voidz: 61.625 caracteres, 29 páginas; resúmenes de 99 y 90 palabras; bibliografía de 32 entradas
 - [ ] Los dos pasajes de The Voidz cotejados con la letra oficial (`27`, §27.11)
-- [ ] Elegir revista y, si hace falta, preparar la versión recortada (`26`, §26.8)
+- [x] Entregables al día con la versión final (11 de octubre): fichero de pasajes, guía de los pasteles, LEEME de las figuras, informe de convocatorias y atlas de Are.na
+- [ ] Elegir revista y, si hace falta, preparar la versión recortada (§4.6; para *Atenea*, unas 1.800 palabras menos)
 - [ ] Versión anonimizada, si la piden
 - [ ] Formato adaptado a la revista elegida y envío
