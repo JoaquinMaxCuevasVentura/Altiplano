@@ -136,6 +136,10 @@ def convert():
         section.page_height = Inches(11)
         for side in ("left_margin", "right_margin", "top_margin", "bottom_margin"):
             setattr(section, side, Cm(2.5))
+        # Word exige estos tres atributos de los márgenes; pandoc no los escribe.
+        section.header_distance = Cm(1.25)
+        section.footer_distance = Cm(1.25)
+        section.gutter = Cm(0)
     # Tablas en 10 pt con interlineado sencillo para que quepan en la caja.
     for table in doc.tables:
         for row in table.rows:

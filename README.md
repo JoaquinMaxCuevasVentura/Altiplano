@@ -4,21 +4,22 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 
 ## Entregables (al 11 de octubre de 2026)
 
-| Entregable | Dónde | Estado |
+**Los archivos finales están en `entregables/`**, con su `LEEME.md`: el artículo en Word y en PDF, y cinco documentos en Markdown y en Word para enviarlo. Son versiones limpias, sin el historial de trabajo.
+
+| Entregable | Archivo final | Estado |
 |---|---|---|
-| **El artículo** | `articulo/articulo_cosecha_de_piedras.md` | Versión final del 10 de octubre, con la cita de «Pyramid of Bones» cotejada el 11 con el librillo japonés de *Virtue*: 61.705 caracteres, 10.286 palabras, 29 páginas en Word; 153 citas de la novela verificadas; 32 entradas de bibliografía |
-| **El artículo en Word** | `articulo/articulo_cosecha_de_piedras.docx` | Coincide con el texto fuente; regenerado el 11 de octubre, después del cotejo de la letra |
+| **El artículo** | `entregables/01_articulo_cosecha_de_piedras.docx` y `.pdf` (fuente: `articulo/articulo_cosecha_de_piedras.md`) | Versión final del 10 de octubre, con la cita de «Pyramid of Bones» cotejada el 11 con el librillo japonés de *Virtue*: 61.705 caracteres, 10.286 palabras, 29 páginas en Word; 153 citas de la novela verificadas; 32 entradas de bibliografía |
+| **La lista de envío** | `entregables/02_lista_de_envio` | Lo hecho y lo que falta, en orden: epígrafe, declaración de IA, pasteles, cotejo, datos por confirmar, revista, versión anónima y envío. Sale de `analisis/04_verificaciones_y_pendientes.md` |
+| **La guía de los seis pasteles** | `entregables/03_guia_de_los_seis_pasteles` | Versión final de `analisis/05b_guia_seis_pasteles.md`, con sus citas de la novela comprobadas otra vez |
+| **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 153 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
+| **Las revistas candidatas** | `entregables/05_revistas_candidatas` | Resumen final de `reports/Convocatorias abiertas para el artículo.md`: diez revistas, recortes, barreras y qué hacer antes de enviar |
+| **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; resumen en `entregables/06_atlas_de_arena`; registro en `analisis/29_atlas_arena.md` | 38 bloques; el canal de pasteles espera tus escaneos |
+| **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre |
 | **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 30 cambios de la revisión final respecto de la versión con Fuão y Monteys y Fuertes; rehecho el 11 de octubre con la cita cotejada |
-| **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre. El LEEME se puso al día el 11 |
-| **La guía de los seis pasteles** | `analisis/05b_guia_seis_pasteles.md` | Al día el 11 de octubre: numeración del artículo, figuras vigentes, método final y dos citas corregidas |
-| **El fichero de pasajes** | `analisis/06_fichero_de_pasajes.md` | Regenerado el 11 de octubre: las 153 citas y las dos en bloque, por página, para cotejarlas con el impreso |
-| **Las verificaciones y pendientes** | `analisis/04_verificaciones_y_pendientes.md` | Al día el 11 de octubre, con la lista final de envío |
-| **El informe de convocatorias** | `reports/Convocatorias abiertas para el artículo.md` | Del 10 de octubre. Los veredictos de extensión se recalcularon el 11 con la versión final: *Atenea* pide unas 1.800 palabras menos, y *Aisthesis* admite el texto entero |
-| **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; registro en `analisis/29_atlas_arena.md` | Hecho el 10 y el 11 de octubre: 38 bloques; el canal de pasteles espera tus escaneos |
-| **Los generadores** | `articulo/generar_docx.py` y `articulo/generar_figuras.py` | Funcionan. El del Word informa desde el 11 de octubre también las palabras |
+| **Los generadores** | `articulo/generar_docx.py`, `articulo/generar_figuras.py` y `entregables/generar_entregables.py` | Funcionan. Los Word que hacen pasan la validación de esquema |
 | *La versión 3 (alternativa)* | `articulo/articulo_altiplano.md` y `.docx` | Archivada desde el 25 de septiembre; no se actualiza |
 
-Los análisis `01` a `29` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en los entregables de arriba.
+Los análisis `01` a `29` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
 
 ## Artículo definitivo
 
@@ -80,7 +81,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - preparar una versión anonimizada si la revista la pide;
   - enviar.
 
-  Véase `analisis/04_verificaciones_y_pendientes.md`.
+  Véase `entregables/02_lista_de_envio.md`.
 
 ## Análisis y protocolo
 
@@ -131,4 +132,5 @@ python3 articulo/generar_docx.py                                # artículo defi
 python3 articulo/generar_docx.py articulo/articulo_altiplano.md  # versión 3
 node analisis/esquemas/diagramas/generar_diagramas.js           # notaciones de las figuras 1 a 8
 python3 articulo/generar_figuras.py                             # necesita Chromium (variable CHROME)
+python3 entregables/generar_entregables.py                      # archivos finales: copia el artículo, hace su PDF y los Word
 ```

@@ -1,5 +1,7 @@
 # 4. Pendientes y verificaciones antes del envío
 
+> **Versión final para usar (11 de octubre de 2026):** `entregables/02_lista_de_envio.md`, también en Word. Este archivo queda como registro de trabajo.
+
 **Estado del artículo definitivo:** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura (título del 10 de octubre de 2026; antes, «La cosecha de piedras: piedra, papel y máquina en *Altiplano*»).
 
 - **Qué es.** La versión 2 completa, con los cinco libros (`07_cinco_libros.md`). Incorpora la respuesta a las cinco objeciones del arbitraje simulado, con diez fuentes nuevas (`08_respuesta_al_arbitraje.md`). Desde el 26 de septiembre de 2026 está reescrita en lenguaje llano, con recursos tomados de la escritura de Cárcamo Pino (`09_recursos_de_carcamo_y_lenguaje_llano.md`).

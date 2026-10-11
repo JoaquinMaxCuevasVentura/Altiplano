@@ -1,5 +1,7 @@
 # 6. Fichero de pasajes de *Altiplano*
 
+> **Versión final para usar (11 de octubre de 2026):** `entregables/04_fichero_de_pasajes.md`, también en Word. Este archivo queda como registro de trabajo.
+
 Este fichero reúne los pasajes del artículo final, «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», en su versión del 10 de octubre de 2026 (61.625 caracteres). Sirve para cotejar cada cita con el libro impreso y para preparar o documentar los pasteles. La tabla de §6.4 y las erratas de §6.2 se pusieron al día el 11 de octubre. Las citas de la versión 3 («Topografías de la carne y el barro en *Altiplano*») están en el historial de git (commit 6dac69a).
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.

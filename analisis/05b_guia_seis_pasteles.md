@@ -1,5 +1,7 @@
 # 5b. Guía para realizar los seis pasteles
 
+> **Versión final para usar (11 de octubre de 2026):** `entregables/03_guia_de_los_seis_pasteles.md`, también en Word. Este archivo queda como registro de trabajo.
+
 > **Estado (11 de octubre de 2026).** La guía está al día con el artículo final, «Cosecha de piedras: el ayllu, el Estado y la mina».
 >
 > - **Numeración.** Las fichas siguen ahora la del artículo, por orden de aparición: 4, el Castillete; 5, la Pelvis; 6, el Centinela. Los esquemas anteriores (`esquemas/fig1…fig6.svg`) conservan la numeración de la serie original, en la que la Pelvis era la 4, el Centinela la 5 y el Castillete la 6.
