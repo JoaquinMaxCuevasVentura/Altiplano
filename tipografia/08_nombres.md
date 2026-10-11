@@ -37,7 +37,7 @@ Las otras candidatas sirven mejor para otra cosa:
 
 ## 8.3. Los estilos: participios, como en el colofón
 
-El colofón ya los nombra: «calcada, repujada, vestida, copiada, mojada y dicha por [manos]». La propuesta es usar esos participios como nombres de estilo, en lugar de los sustantivos de hoy (*Calco*, *Placa*, *Cinta*…).
+El colofón ya los nombra: «calcada, repujada, tapada, frotada, mojada y dicha por [manos]» (`03`, §3.11). La propuesta es usar esos participios como nombres de estilo, en lugar de los sustantivos de hoy (*Calco*, *Placa*, *Cinta*…).
 
 **Por qué.** Un participio pide a alguien que haga la acción: cada nombre de estilo dice que una mano le hizo algo a la letra, y el colofón dice qué mano fue. Es «desenterrar la mano del que la escribió» aplicado a los nombres. Además, concuerda con la familia: *Contenida Calcada* se lee como una frase.
 

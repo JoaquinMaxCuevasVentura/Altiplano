@@ -36,10 +36,10 @@
 
 | Parámetro | Valor | Por qué |
 |---|---|---|
-| Unidades por eme | 200 por tesela: 1200 si el azulejo mide 6 teselas | El eme es el azulejo; la unidad, la tesela |
-| Avance | Azulejo + junta, en la proporción medida (1224 con azulejo de 150 mm y junta de 3 mm) | Monoespaciada: la junta es el espacio entre letras |
-| Alto de línea | Igual al avance | Las filas de azulejos se apilan con su junta |
-| Métricas verticales | Las de la pauta corregida (`03`, §3.6) | Las decide el pie, no una norma |
+| Unidades por eme | 1000: el eme es el alto de la celda (136,7 mm en la placa de 150 mm) | La unidad es la celda de la cabeza del ídolo, ya no el azulejo (`03`, §3.6) |
+| Avance | 840: el ancho de la celda, 0,84 de su alto | Monoespaciada: una letra, una celda. Entre palabras, una celda vacía |
+| Alto de línea | 1000: ascendente 734 y descendente −266, sin interlínea | Las celdas se apilan como las filas de la retícula |
+| Métricas verticales | Las cuatro líneas de la gramática: afuera 688, borde 401, fondo 0 y desagüe −221 | Las decide el pie, no una norma. Se recalculan si cambia la gramática (`simulacion/salida/gramatica/gramatica.json`) |
 | Glifos | Los 56 de la caja, más `.notdef` | El juego cabe en la retícula |
 | Mapa de caracteres | Las mayúsculas se escriben con los glifos de caja baja. «¡ !», el guion, las comillas inglesas y el apóstrofo quedan sin glifo | Lo que no cabe se ve como celda vacía |
 | `.notdef` | La celda de la lámina, calcada a mano y escaneada | El único préstamo directo del monolito es un marco vacío |
@@ -58,7 +58,7 @@
 Una página web: la versión digital de la bandeja, no un catálogo.
 
 - **Oscura.** El texto es luz verde, que en este proyecto solo existe como luz. Debajo, apenas visible, está el frotado de la pared: la retícula real, con sus grietas.
-- **El texto es el poema en bucle**, línea por línea, en filas de azulejo. Se usa el ciclo exacto de la póliza: dentro de un verso ninguna letra se repite igual.
+- **El texto es el poema en bucle**, línea por línea, en filas de celdas. Si va sobre la foto de la piscina, las juntas de los azulejos cortan la letra. Se usa el ciclo exacto de la póliza: dentro de un verso ninguna letra se repite igual.
 - **El bloque de texto llega en trapecio**, más ancho arriba, como la proyección.
 - **Tocar deforma.** Al tocar o pasar el puntero, entran ondas concéntricas desde ese punto (un filtro de desplazamiento) y se apagan en unos segundos.
   - Cuando el texto se recompone, el ciclo de variantes avanzó: vuelve, pero no igual.

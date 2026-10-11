@@ -1,13 +1,13 @@
 # El informe de decisiones
 
-`contenida_informe_de_decisiones.docx` (y su PDF) reúne las decisiones del proyecto, al modo de las dos tesis de referencia: la obra, el marco, el sistema, la gramática, los estados, el taller, la propuesta de la máquina, la retórica y la poética, lo digital y la ética. Lleva seis mapas esquemáticos que conectan conceptos, teoría, retórica y poética en cada etapa del proyecto.
+`contenida_informe_de_decisiones.docx` (y su PDF) reúne las decisiones del proyecto, al modo de las dos tesis de referencia: la obra, el marco, el sistema, la gramática, los estados, el taller, la propuesta de la máquina, la retórica y la poética, lo digital, el atlas en Are.na y la ética. Lleva seis mapas esquemáticos que conectan conceptos, teoría, retórica y poética en cada etapa del proyecto.
 
 ## Los mapas
 
 | Mapa | Qué conecta | Cómo se dibuja |
 |---|---|---|
 | 1 · El proyecto entero | Las cinco etapas, de la obra a lo digital, con su concepto, su figura, su verso y sus fuentes | Un eje que baja por las cuatro líneas de la letra (afuera, borde, fondo, desagüe); cada etapa es un objeto en su órbita; la vuelta punteada vuelve a la caja |
-| 2 · Teoría y fuentes | Las dos tesis, Posnansky, Agüero, Uribe y Berenguer y la obra: lo que se toma y lo que no | Cada fuente es un objeto en órbita (una vasija rajada, un taburete, una losa con su canal, la ¿ y la ?, una placa en su charco); lo que se toma llega en haces a la o; lo que no, se corta |
+| 2 · Teoría y fuentes | Las dos tesis, Posnansky, Agüero, Uribe y Berenguer, la obra, Cárcamo y Johnson: lo que se toma y lo que no | Cada fuente es un objeto en órbita (una vasija rajada, un taburete, una losa con su canal, la ¿ y la ?, una placa en su charco, un lápiz, los anillos de un tronco); lo que se toma llega en haces a la o; lo que no, se corta |
 | 3 · La obra, decisión por decisión | Las dieciséis decisiones de la obra y su traducción en la letra | La cadena de desplazamientos es un río de aguada que pierde materia (grafito, plata, violeta, lila); de cada eslabón sale una hebra hacia su decisión |
 | 4 · Del pie a los 55 signos | Las medidas del pie, la forma de la obra, los parámetros, las partes, los generadores y la caja | El pie a máquina con sus medidas a mano; las cuatro vasijas en órbita, con sus parámetros escritos sobre las órbitas; los signos bajan en bandadas a la caja |
 | 5 · La cadena de estados | Pie, calco, placa, cinta, frotado, agua y voz; las frotadas de cada celda | La piscina en perspectiva es la sala; un embudo baja del pie al charco pasando por la placa, que es la matriz |

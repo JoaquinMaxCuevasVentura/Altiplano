@@ -25,13 +25,24 @@
 
 Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
+**Tampoco están en Are.na.** El atlas (`10`) es privado, pero Are.na es un tercero: allí no hay fotos ni videos de la obra, ni del cuerpo de Rebeca, ni la lámina, ni PDF de tesis o artículos. Hay material externo con su licencia, fichas y citas breves con página.
+
 ## 6.3. Asistencia de inteligencia artificial
 
-Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/` y las láminas de `laminas/` se hicieron con asistencia de inteligencia artificial. Es la misma práctica de declaración del artículo de este repositorio.
+Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/`, la aplicación, la póliza en OpenType (`digital/poliza.py`), las láminas, el informe y sus mapas se hicieron con asistencia de inteligencia artificial. También la primera curaduría del atlas en Are.na, que la máquina hizo a tu pedido (`10`, §10.6). Es la misma práctica de declaración del artículo de este repositorio.
 
 **Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Sus formas salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie no se puede calcar desde la foto; de la foto se toma solo la altura de x. La foto no se sube al repositorio: solo las letras del pie, recortadas. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
-## 6.4. Qué está verificado y qué no
+## 6.4. Las referencias visuales
+
+El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» como **referencia visual**. Viven en canales aparte del atlas (`la ruina` y `otras letras`), con estas reglas:
+
+- **Se mira, no se calca.** Ningún motivo pasa a las letras, a la caja ni a la fuente.
+- **Cada bloque dice de dónde viene:** quién lo registró, cuándo, con qué medio y con qué licencia.
+- **Lo ajeno se conecta, no se descarga.**
+- **Las tipografías con motivos sirven de contraste:** muestran lo que ya existe para no repetirlo, y se describen sin descalificar a quien las hizo.
+
+## 6.5. Qué está verificado y qué no
 
 | Afirmación | Estado | Cómo verificar |
 |---|---|---|
@@ -40,7 +51,8 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 | El libro de la lámina | Sin identificar. Pistas: es un desplegable, el pie habla de Posnansky en tercera persona y la página de enfrente cita a Ponce Sanginés | Autor, título, año, página |
 | El dibujo de Posnansky | Agüero, Uribe y Berenguer (2003, fig. 12) lo citan: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a | Cotejar esas figuras con la lámina de Rebeca |
 | Registro de Posnansky: hallado al sur del Akapana, asperón colorado, excavado en 1903, cuerpo cubierto por el signo «pez» | Según tu texto. Agüero, Uribe y Berenguer (2003) registran cabezas de pez de perfil en los personajes de la Kochamama, y un Personaje Frontal en el pecho y otro en la espalda | Buscar la lámina o la figura en *Tihuanacu, la cuna del hombre americano* (Posnansky, 1945-1957) |
-| Quién excavó en 1903 | Sin dato | En 1903 trabajó en Tiwanaku una misión francesa (Créqui-Montfort); hay que confirmar si esta pieza fue suya |
+| Quién excavó en 1903 | Sin dato | En 1903 trabajó en Tiwanaku una misión francesa (Créqui-Montfort); hay que confirmar si esta pieza fue suya. Hay fotos de esas primeras excavaciones (Weltmuseum Wien, VF_13246; en el atlas, `la ruina`) |
+| Cómo dibujaba Posnansky | Su guía de 1912 está digitalizada (copia de Harvard; la fig. 11, en Wikimedia Commons) | Compararla con la lámina de la Kochamama (1945) |
 | El nombre «Kochamama» y su sentido (madre del agua) | Según tu texto | Quién la nombró y cuándo. *Qucha* es quechua y *quta*, aymara: revisar Bertonio (ya citado en el artículo) y un diccionario quechua |
 | El monolito se llama «vaso» en su ficha | Según tu texto | ¿Qué ficha? ¿De qué museo o catálogo? |
 | Dónde está hoy el monolito | Sin dato | — |
@@ -54,13 +66,13 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 
 **Fuente publicada:** Agüero Piwonka, Carolina; Mauricio Uribe Rodríguez y José Berenguer Rodríguez (2003). «La iconografía Tiwanaku: el caso de la escultura lítica». *Textos Antropológicos* 14 (2): 47-82. El PDF no se sube al repositorio: se cita.
 
-## 6.5. Lo que el proyecto no afirma
+## 6.6. Lo que el proyecto no afirma
 
 - **No interpreta la iconografía de Tiwanaku** ni el «calendario» de la Kochamama.
 - **Los números del sistema son convenios, no lecturas.** Las 56 celdas, las 7 filas y los 30 hallazgos cuentan contenedores y letras. Ninguno se presenta como clave de nada.
 - **No es una tipografía «andina».** Es una tipografía latina de caja baja, hecha con las operaciones de una obra que ocurrió en La Paz.
 
-## 6.6. Pendientes, en orden
+## 6.7. Pendientes, en orden
 
 - [ ] Acción 0: hablar con Rebeca y con CreaciónxAcuerpamiento; pedir los permisos del estudio y del edificio.
 - [ ] Identificar el libro de la lámina y fotografiar el pie de cerca, con luz rasante, para que dé formas y no solo medidas.
@@ -71,3 +83,6 @@ Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esq
 - [ ] Probar el frotado: qué papel, qué grafito y cuántas frotadas aguanta una placa.
 - [ ] Verificar los datos de Posnansky, el nombre y la ficha del «vaso».
 - [ ] Confrontar la propuesta de la mano con la de la máquina (`simulacion/informe.md`, «Cómo confrontar»).
+- [ ] Probar el repujado a dos manos (Acción 4) y el estampado con papel mojado (variante de la Acción 8).
+- [ ] Decidir con Rebeca los nombres de los estilos (`08`).
+- [ ] Leer y anotar con página los bloques del atlas marcados «Pendiente» (`10`, §10.6), empezando por Villanueva Criales (2024).

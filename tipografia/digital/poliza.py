@@ -35,6 +35,9 @@ POEMA = TIPO / "textos" / "poema.txt"
 CAJA = TIPO / "esquemas" / "caja.json"
 SALIDA = AQUI / "poliza.fea"
 
+# Las métricas de la celda (`05`, §5.3): el eme es el alto de la celda; el avance, 0,84 de él.
+EME, AVANCE, ASCENDENTE, DESCENDENTE = 1000, 840, 734, -266
+
 
 def nombre(signo):
     """El nombre de glifo de un signo (lista de Adobe), o uniXXXX."""
@@ -89,7 +92,7 @@ def fea(p, ventana):
 
 
 def fuente_de_prueba(p, texto_fea, destino):
-    """Una fuente de cajas: cada glifo es la misma celda vacía. Solo sirve para probar la regla."""
+    """Una fuente de celdas vacías, con las métricas de la celda. Solo sirve para probar la regla."""
     from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
     from fontTools.fontBuilder import FontBuilder
     from fontTools.pens.ttGlyphPen import TTGlyphPen
@@ -97,7 +100,7 @@ def fuente_de_prueba(p, texto_fea, destino):
     glifos = [".notdef", "space"]
     for s, n in p.items():
         glifos += [nombre(s)] + [f"{nombre(s)}.{k:02d}" for k in range(1, n + 1)]
-    fb = FontBuilder(1224, isTTF=True)
+    fb = FontBuilder(EME, isTTF=True)
     fb.setupGlyphOrder(glifos)
     cmap = {32: "space"}
     for s in p:
@@ -106,14 +109,17 @@ def fuente_de_prueba(p, texto_fea, destino):
             cmap[ord(s.upper())] = nombre(s)          # las mayúsculas se escriben con la caja baja
     fb.setupCharacterMap(cmap)
     pen = TTGlyphPen(None)
-    for x0, y0, x1, y1 in ((112, 0, 1112, 1000), (212, 100, 1012, 900)):
+    margen = 40                                         # la celda, un poco adentro de su avance
+    for x0, y0, x1, y1 in ((margen, DESCENDENTE, AVANCE - margen, ASCENDENTE),
+                           (2 * margen, DESCENDENTE + margen, AVANCE - 2 * margen, ASCENDENTE - margen)):
         pen.moveTo((x0, y0)), pen.lineTo((x0, y1)), pen.lineTo((x1, y1)), pen.lineTo((x1, y0)), pen.closePath()
     caja = pen.glyph()
     fb.setupGlyf({g: caja for g in glifos})
-    fb.setupHorizontalMetrics({g: (1224, 112) for g in glifos})
-    fb.setupHorizontalHeader(ascent=1000, descent=-224)
+    fb.setupHorizontalMetrics({g: (AVANCE, margen) for g in glifos})
+    fb.setupHorizontalHeader(ascent=ASCENDENTE, descent=DESCENDENTE)
     fb.setupNameTable({"familyName": "Poliza Prueba", "styleName": "Regular"})
-    fb.setupOS2()
+    fb.setupOS2(sTypoAscender=ASCENDENTE, sTypoDescender=DESCENDENTE, sTypoLineGap=0,
+                usWinAscent=ASCENDENTE, usWinDescent=-DESCENDENTE)
     fb.setupPost()
     addOpenTypeFeaturesFromString(fb.font, texto_fea)
     fb.font.save(destino)

@@ -45,3 +45,15 @@ Tampoco se usan sus lecturas de los signos como significados (cap. IX a XI). Lo 
 Lo demás que la foto mide (descendentes más cortas, trazo más grueso) queda escrito en `simulacion/informe.md`, en *Lo que dice la foto*, para confrontarlo con la mano.
 
 **Qué se guarda en el repositorio:** letras sueltas, no la foto.
+
+## 4. Otros registros, en el atlas
+
+El canal `contenida · la ruina` (`10`, §10.6) junta registros de dominio público de la misma ruina, por otras manos y en otros años. Sirven para ver cómo se dibujó y se fotografió la piedra, no para sacar motivos:
+
+- E. G. Squier, grabado de la puerta, 1877;
+- Charles Wiener, *Pérou et Bolivie*, 1880 (el libro entero, en Internet Archive);
+- Alphons Stübel y Max Uhle, *Die Ruinenstaette von Tiahuanaco*, 1892 (facsímil de la Universidad de Heidelberg);
+- fotos de las primeras excavaciones, 1903-1904 (Weltmuseum Wien);
+- **Posnansky mismo, en 1912:** la figura 11 de su guía de los monumentos de Tihuanacu. Es el mismo autor treinta y tres años antes de la lámina de la Kochamama, y sirve para comparar cómo dibuja.
+
+Para el método de análisis, el atlas suma a Villanueva Criales (2024), que lee los monolitos Bennett y Ponce por componentes de diseño en tres niveles, como Agüero, Uribe y Berenguer (2003). Está pendiente leerlo entero.

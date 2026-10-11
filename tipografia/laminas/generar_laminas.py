@@ -420,24 +420,26 @@ def l08():
 
 
 ESTADOS = [
-    ("calco", "papel de calco sobre el frotado de la pared"),
-    ("placa", "aluminio repujado por el reverso con un punzón"),
-    ("cinta", "la letra puesta con masking, que no curva"),
-    ("frotado", "papel y grafito sobre la placa, hasta que no se lee"),
-    ("agua", "la luz de la placa por una bandeja con agua"),
-    ("voz", "el agua movida por una voz que lee el poema"),
+    ("calco", "papel de calco sobre el frotado de la pared", "calcada"),
+    ("placa", "aluminio repujado por el reverso con un punzón", "repujada"),
+    ("cinta", "la letra puesta con masking, que no curva", "tapada"),
+    ("frotado", "papel y grafito sobre la placa, hasta que no se lee", "frotada 01 … apenas"),
+    ("agua", "la luz de la placa por una bandeja con agua", "mojada · tocada"),
+    ("voz", "el agua movida por una voz que lee el poema", "dicha"),
 ]
 
 
 def l09():
-    estados = "".join(f"<div><b>{n}</b><span>{d}</span></div>" for n, d in ESTADOS)
+    estados = "".join(f'<div><b>{n}</b><span>{d}</span><span class="propuesta">→ {p}</span></div>' for n, d, p in ESTADOS)
     return lamina(9, "".join([
         b(1, 1, 7, 3, '<h1>no hay regular</h1><p class="bajada">Los estilos de la familia no son pesos. Son los '
                       'estados por los que pasa la letra.</p>'),
         b(9, 1, 6, 3, "<p>La figura de la obra no tiene rostro: la cinta le tapa los ojos y la boca. La familia "
                       "tampoco tiene una cara neutra, una versión normal de la que las demás se aparten.</p>"
                       "<p>Cada estado sale del anterior por una operación física. En el frotado, el peso se mide en "
-                      "frotadas: la primera sale oscura y la última que se lee, apenas gris.</p>",
+                      "frotadas: la primera sale oscura y la última que se lee, apenas gris.</p>"
+                      "<p>Para nombrarlos se propone el participio del colofón, debajo de cada estado: una mano le "
+                      "hizo algo a la letra. Se decide con Rebeca.</p>",
           estilo="align-self:end"),
         b(1, 4, 14, 5, fig("cadena_de_estados.png", "<b>fig. 9.1</b> La cadena de estados, del pie a la fuente "
                                                     "digital, que vuelve a pasar por el agua.")),
@@ -648,9 +650,12 @@ def l17():
         "<li>Encontrar el libro. Una pista: Posnansky 1945, vol. 2, figs. 100 a 102. Fotografiar el pie de cerca, con "
         "luz rasante, para que dé formas y no solo medidas.</li>"
         "<li>Medir la pared de la piscina y frotarla. No sacar nada; no dejar nada.</li>"
-        "<li>Repujar a mano las 119 placas, con la gramática como pauta y la mano como juez.</li>"
+        "<li>Repujar a mano las 119 placas, con las dos manos: una hunde por el reverso, la otra lee a ciegas.</li>"
         "<li>Poner la mano frente a la máquina, placa por placa y parámetro por parámetro.</li>"
-        "<li>Recién entonces, lo digital: un molde para repujar placas nuevas, no un archivo que se guarda.</li></ol>")
+        "<li>Mirar alrededor sin calcar: el atlas privado en Are.na, con registros de la ruina, letras de contraste "
+        "y proyectos vecinos.</li>"
+        "<li>Recién entonces, lo digital: un molde para repujar placas nuevas, no un archivo que se guarda. La "
+        "póliza ya está escrita: ninguna placa se repite dentro de un verso.</li></ol>")
     colofon = (
         '<div class="colofon"><p><b>contenida</b> · acciones para componer una voz</p>'
         "<p>Homenaje a <i>Contener una ruina: acciones para desenterrar una voz</i>, de Rebeca Paz Prada, con "
@@ -659,10 +664,11 @@ def l17():
         "<p>Con métodos de Vaishnavi Mahendran, <i>EthnoGraphemes: Scripts as Vessels for Culture</i> (RISD, 2020), "
         "y de Osmond Tshuma, <i>Afrography: Scripting Futures Anchored in Culture &amp; Community</i> (RISD, "
         "2025). La iconografía, según Carolina Agüero, Mauricio Uribe y José Berenguer, «La iconografía Tiwanaku: "
-        "el caso de la escultura lítica», <i>Textos Antropológicos</i> 14 (2), 2003.</p>"
+        "el caso de la escultura lítica», <i>Textos Antropológicos</i> 14 (2), 2003. El manuaje, según Mauricio "
+        "Cárcamo Pino; la madera, según Galen A. Johnson.</p>"
         "<p>Las letras de las imágenes son una simulación hecha con código, para confrontarla con la mano: las "
         "formas salen de un testigo sustituto (Liberation Serif); la altura de x, de la foto del pie. No entran en "
-        "la caja ni en la fuente. El código, los esquemas y los textos se hicieron con asistencia de inteligencia "
+        "la caja ni en la fuente. El código, los esquemas, los textos y la curaduría del atlas se hicieron con asistencia de inteligencia "
         "artificial.</p>"
         "<p>Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), con licencia SIL OFL, "
         "sobre una retícula de 16 × 12 módulos.</p></div>")

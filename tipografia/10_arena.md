@@ -176,6 +176,8 @@ Hecha por la máquina, a tu pedido, con el conector: «otros libros, imágenes d
 | `vecinas` | Xu Bing, *Libro del cielo*; Mirtha Dermisache; Cecilia Vicuña, *Quipu desaparecido*; Catich; *Ablanda* (UCB) | Canales *Asemic Writing* (Michelle Parrott) y *Concrete Poetry* (Pierre Marteau). También se conectaron aquí *Beowolf*, *Neuland* y Watts Hughes, sin copiarlos |
 | `la caja` y `la obra` | Vacías: la caja la llena la mano; la obra, solo con permiso de Rebeca | — |
 
+**El 11.10.2026**, al actualizar los entregables, se sumó un bloque de texto en `la máquina`: la propuesta de la máquina en siete datos, sin imágenes.
+
 **Lo que falló:** las páginas de la Universidad de Cuenca y de la UCB no respondieron al servidor de Are.na. Se rehicieron como bloques de texto con el enlace adentro. Los dos bloques fallidos se desconectaron; quedan sueltos en la cuenta y se pueden borrar desde la web.
 
 **Lo que no se encontró:** una dirección pública de Cárcamo 2025a, y las tesis *EthnoGraphemes* y *Afrography*.
@@ -183,8 +185,6 @@ Hecha por la máquina, a tu pedido, con el conector: «otros libros, imágenes d
 **Pendientes para la mano:**
 
 1. Leer y anotar con página lo marcado como «Pendiente»: Villanueva Criales, Catich, *Ablanda*, la guía de *Kinfolk* y las charlas de ATypI y de Juan Casco.
-2. Probar en el taller dos procedimientos que salieron de aquí:
-   - el **estampado** (papel de algodón mojado, cepillado contra la placa), que podría ser un estado entre *Frotada* y *Mojada*;
-   - la **bandeja sobre un parlante**, para la voz.
+2. Probar en el taller el **estampado** (papel de algodón mojado, cepillado contra la placa), que podría ser un estado entre *Frotada* y *Mojada*. Ya está escrito como variante de la Acción 8 (`04`). La bandeja sobre el parlante ya era la Acción 10; Chladni, Faraday y Watts Hughes le dan antecedentes.
 3. Buscar en una biblioteca Posnansky 1945, vol. 2, figs. 100 a 102a.
 4. Llenar `la caja` con las placas, una por celda.

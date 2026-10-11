@@ -165,9 +165,7 @@ Todo eso, y cualquier otro signo, se ve como el `.notdef`: la celda vacía de la
 - **Placa:** la celda cabe en una placa cuadrada de 150 mm. En cuerpo pequeño (fichas), la caja entera cabe en una hoja A4.
 - **La piscina, como escenario.** El frotado de la pared no es pauta: es el papel sobre el que se calca.
 
-La plantilla de calco de `esquemas/` todavía dibuja el azulejo. Hay que regenerarla con la celda.
-
-Plantilla: `esquemas/pauta_azulejo.svg`, a escala 1:1. Se regenera con las medidas reales (`esquemas/generar_esquemas.py --azulejo … --teselas … --junta …`).
+**Plantilla:** `esquemas/pauta_azulejo.svg`, a escala 1:1. Ya dibuja la celda de 0,84 dentro de la placa de 150 mm, con las cuatro líneas que da la gramática; el nombre del archivo quedó de cuando la pauta era el azulejo. Si cambia el lado de la placa, se regenera con `esquemas/generar_esquemas.py --azulejo …`.
 
 ## 3.7. La familia: estados, no pesos
 
@@ -193,7 +191,7 @@ En la imprenta de tipos móviles, la póliza dice cuántas piezas de cada letra 
 - **94 placas** alcanzan para componer cualquier verso sin repetir placa: 9 «a», 8 «e», 8 «n», 6 «o», 6 «s»… (tabla en `textos/inventario.md`).
 - **119 placas** hacen la caja completa: las 94 del poema, más una por cada uno de los 24 signos que el poema no usa, más el signo final.
 
-**Una consecuencia.** Dentro de un verso ninguna letra se repite igual: cada «a» es una placa distinta, hecha en otro momento por la misma mano. «La misma diosa dos veces / y ninguna igual.» La versión digital hereda esta regla (`05`, §5.3).
+**Una consecuencia.** Dentro de un verso ninguna letra se repite igual: cada «a» es una placa distinta, hecha en otro momento por la misma mano. «La misma diosa dos veces / y ninguna igual.» La versión digital hereda esta regla, y ya está escrita y probada: `digital/poliza.py` la pasa a OpenType y la prueba con HarfBuzz en los 42 versos (`05`, §5.3).
 
 **El material.** Con placas de 15 cm, las 119 suman unos 2,7 m² de papel de aluminio en hoja simple: un rollo doméstico de 30 cm × 10 m, más una reserva para roturas.
 
@@ -221,7 +219,9 @@ En la imprenta de tipos móviles, la póliza dice cuántas piezas de cada letra 
 
 «Desenterrar una voz / es desenterrar la mano del que la escribió.» El colofón nombra cada mano de la cadena. Donde no hay nombre, lo dice. Borrador, compuesto en la propia *Contenida*, en caja baja:
 
-> contenida. letras halladas en el pie de una lámina que reproduce el dibujo de arthur posnansky del ídolo llamado kochamama [libro, autor, año y página: por identificar]. piedra tallada en tiwanaku por manos sin nombre registrado; movida de lugar por manos sin nombre registrado; excavada en 1903 por [por verificar]; fotografiada por [sin nombre registrado]; dibujada por arthur posnansky; reproducida por [autor del libro]. llevada al aluminio por rebeca paz prada con creaciónxacuerpamiento en «contener una ruina: acciones para desenterrar una voz» (artefacto tatuajes, la paz, 22 de agosto de 2026). calcada, repujada, vestida, copiada, mojada y dicha por [manos]. 30 signos hallados, 25 reconstruidos, 1 hecho con las manos. ¶
+> contenida. letras halladas en el pie de una lámina que reproduce el dibujo de arthur posnansky del ídolo llamado kochamama [libro, autor, año y página: por identificar]. piedra tallada en tiwanaku por manos sin nombre registrado; movida de lugar por manos sin nombre registrado; excavada en 1903 por [por verificar]; fotografiada por [sin nombre registrado]; dibujada por arthur posnansky; reproducida por [autor del libro]. llevada al aluminio por rebeca paz prada con creaciónxacuerpamiento en «contener una ruina: acciones para desenterrar una voz» (artefacto tatuajes, la paz, 22 de agosto de 2026). calcada, repujada, tapada, frotada, mojada y dicha por [manos]. 30 signos hallados, 25 reconstruidos, 1 hecho con las manos. ¶
+
+Los participios siguen la cadena vigente, uno por estado: *Calco*, *Placa*, *Cinta*, *Frotado*, *Agua* y *Voz*. *Vestida* y *copiada* salieron cuando *Piel* y *Copia* quedaron en pausa; vuelven si se retoman.
 
 **El pie del espécimen.** Debajo de la foto de la caja abierta va un pie escrito por reescritura cruzada del pie de la lámina (`09`, §9.4). Confiesa lo mismo que el original: que la letra es reconstruida, que viene de fotos y que su origen es supuesto.
 

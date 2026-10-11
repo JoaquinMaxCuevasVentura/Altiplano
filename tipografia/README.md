@@ -41,7 +41,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `simulacion/informe.md` | **La propuesta de la máquina:** el pie, la gramática y seis estados simulados con código (calco, placa, cinta, frotado, agua y voz), con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `gramatica.py`, `contener.py`, `devolver.py`) |
 | `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
-| `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), y el testigo: lo que se probó y lo que quedó |
+| `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), el testigo (lo que se probó y lo que quedó) y otros registros de la ruina que están en el atlas |
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `09_las_manos_no_tienen_lengua.md` | Lo que se toma de Cárcamo (el *manuaje*: las manos no tienen lengua) y de Johnson (la segunda vida de los árboles), y lo que cambia en el taller |
 | `10_arena.md` | El atlas en Are.na: la mano cura, la máquina lee. Cómo se conectó, los once canales privados, la primera curaduría de material externo (dominio público, canales ajenos conectados, referencias visuales) y qué se corrige de la propuesta recibida |
@@ -57,7 +57,9 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - la propuesta de la máquina (`simulacion/`): el taller simulado, para confrontarla con la propuesta de la mano;
   - la gramática en el navegador (`aplicacion/`), para discutir cada parámetro;
   - el informe de decisiones, con sus mapas (`informe/`);
-  - las láminas para exponerlo (`laminas/`).
+  - las láminas para exponerlo (`laminas/`);
+  - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`);
+  - el atlas en Are.na: once canales privados, con una primera curaduría de material externo (`10_arena.md`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
 - **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
 
@@ -74,6 +76,7 @@ python3 tipografia/esquemas/generar_esquemas.py \
 python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (un minuto y medio);
                                                     #   con --parametros parametros.json, los ajustes de la aplicación
 python3 tipografia/aplicacion/exportar.py           # los datos del pie para la aplicación
+python3 tipografia/digital/poliza.py --probar       # la póliza en OpenType, probada verso por verso (uharfbuzz)
 python3 tipografia/informe/mapas.py                 # los mapas del informe
 python3 tipografia/informe/armar.py                 # el informe de decisiones (.docx y PDF; necesita node y docx)
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición

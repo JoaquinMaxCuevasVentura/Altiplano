@@ -135,6 +135,7 @@ figcaption b { color: var(--tinta); font-weight: 700; margin-right: .4em; }
 .estados { display: grid; grid-template-columns: repeat(6, 1fr); gap: 34px; border-top: 1.5px solid var(--tinta); padding-top: 18px; }
 .estados b { display: block; font-weight: 300; font-size: 50px; line-height: 1; margin-bottom: 10px; }
 .estados span { display: block; font-family: "Courier Prime", monospace; font-size: 19px; line-height: 1.35; color: var(--gris); }
+.estados .propuesta { margin-top: 10px; color: var(--tinta); }
 
 /* lámina 10 */
 .par { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
