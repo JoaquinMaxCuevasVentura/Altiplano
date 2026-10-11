@@ -4,6 +4,8 @@
 
 **De dónde sale.** Es tu borrador de prompt, ajustado a lo que el proyecto ya tiene. No se creó nada en Are.na: tu prompt pide confirmar antes, y la revisión se hizo solo con lecturas.
 
+**Estado (11 de octubre).** Aprobaste la propuesta de canales («1. Yes 2. Empty for my scans»), y el atlas ya está hecho: once canales privados y 38 bloques. El de pasteles quedó vacío para tus escaneos. Qué se creó, qué falló y qué falta está en `29_atlas_arena.md`.
+
 ## 28.1. Qué cambié y por qué
 
 **Datos del proyecto:**
@@ -130,7 +132,7 @@ Son las 32 obras citadas:
 ### Lo que todavía no tengo (por prioridad)
 
 1. **Crítica sobre *Altiplano* y su autor.** El artículo se apoya en Cornejo Polar, que trata el indigenismo en general. Busca estudios, reseñas de 1945-1946 y tesis. Pistas sin verificar:
-   - un estudio de Josep M. Barnadas sobre *Altiplano* (c. 1977) que figura en catálogos pero no se encontró;
+   - la serie «Esquemas metodológicos de aproximación a la narrativa boliviana» (Los Amigos del Libro), cuyo tomo de introducción firman Barnadas y Coy (1977): según su contratapa, el estudio dedicado a Botelho es sobre *Coca*, y el folleto sobre *Altiplano* que citaba una versión anterior no consta (`04`, §4.7). No lo busques como estudio de *Altiplano*;
    - un texto de Salazar de la Torre (CIDES) sobre Warisata y la novela;
    - Samuel Arriarán (2021), pp. 29-31.
 2. **Las vecinas del concurso de 1940.** Según la nota «Al lector» de la edición de 1982 (p. 4), la novela se escribió para el concurso de la Unión Panamericana y Farrar & Rinehart, que ganó *El mundo es ancho y ajeno*, de Ciro Alegría (1941). El jurado boliviano eligió *Metal del diablo*, de Augusto Céspedes, una novela sobre el estaño. Busca también otras indigenistas andinas (por ejemplo *Raza de bronce*, de Alcides Arguedas, 1919) y las otras novelas de Botelho (*Borrachera verde*, *Coca*).
@@ -295,7 +297,7 @@ No escribas nada en Are.na hasta que yo confirme. Antes:
 | `bolivia` | (privado) | Sin acceso | — |
 | `latin-american-literature`, `collage-theory` | — | No existen | — |
 
-**Propuesta de canales.** No se creó nada; espera tu confirmación.
+**Propuesta de canales.** Cuando se escribió, no se había creado nada. La aprobaste el 10 de octubre y el atlas se construyó así, con los cambios que explica `29` (por ejemplo, la página de The Voidz en Qobuz en lugar de las páginas oficiales, que no se pudieron comprobar).
 
 | Canal | Regla | Rima con | Primeros bloques propuestos (estado) |
 |---|---|---|---|

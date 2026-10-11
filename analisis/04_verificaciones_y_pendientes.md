@@ -193,6 +193,10 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
   - El tomo que enviaste (Barnadas y Coy, *Realidad sociohistórica y expresión literaria en Bolivia*, 1977) incluye *Altiplano* en su corpus (p. 36), pero no la analiza.
   - Su contratapa enumera los ocho estudios publicados, y el de Botelho es sobre *Coca*. El folleto «Raúl Botelho Gosálvez: Altiplano» no consta.
 - **Arriarán (2021: 29-31).** Sigue sin verificar. Si lees esas páginas, un párrafo breve cabría solo acortando otra cosa (§4.6). Si no las verificas, no lo añadas.
+- **Pistas nuevas del atlas de Are.na.** Están en `29` (§29.5 y §29.7):
+  - la tesis de Jacqueline M. O'Sullivan, *Humanitarianism in the works of Raúl Botelho Gosálvez* (Universidad de Texas en El Paso, 1951), sin leer;
+  - el estudio de Rodolfo A. Borello sobre *Raza de bronce* (1985), sin leer;
+  - la nota «Al lector» sobre el concurso de 1940 (Botelho Gosálvez, 1982 [1945]: 4), que el artículo todavía no usa.
 
 ## 4.8. Limitación del entorno de trabajo
 
