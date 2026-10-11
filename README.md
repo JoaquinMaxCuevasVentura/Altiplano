@@ -2,6 +2,8 @@
 
 Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «Narrativas, lenguajes y representaciones: memoria y ficción a través de las Humanidades» de *Estudios Bolivianos* N.º 43 (IEB, FHCE, UMSA), cuyo plazo venció el 25 de septiembre de 2026. **Ahora busca revista:** la primera candidata es *Atenea* (`reports/Convocatorias abiertas para el artículo.md`).
 
+**Si trabajas con un asistente de IA (Codex u otro):** sus instrucciones están en `AGENTS.md`.
+
 ## Entregables (al 11 de octubre de 2026)
 
 **Los archivos finales están en `entregables/`**, con su `LEEME.md`: el artículo en Word y en PDF, y cinco documentos en Markdown y en Word para enviarlo. Son versiones limpias, sin el historial de trabajo.
