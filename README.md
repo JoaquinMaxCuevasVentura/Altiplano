@@ -6,9 +6,9 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 
 | Entregable | Dónde | Estado |
 |---|---|---|
-| **El artículo** | `articulo/articulo_cosecha_de_piedras.md` | Versión final del 10 de octubre: 61.625 caracteres, 10.273 palabras, 29 páginas en Word; 153 citas de la novela verificadas; 32 entradas de bibliografía |
-| **El artículo en Word** | `articulo/articulo_cosecha_de_piedras.docx` | Coincide con el texto fuente: se regeneró el 11 de octubre y salió idéntico |
-| **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 30 cambios de la revisión final respecto de la versión con Fuão y Monteys y Fuertes |
+| **El artículo** | `articulo/articulo_cosecha_de_piedras.md` | Versión final del 10 de octubre, con la cita de «Pyramid of Bones» cotejada el 11 con el librillo japonés de *Virtue*: 61.705 caracteres, 10.286 palabras, 29 páginas en Word; 153 citas de la novela verificadas; 32 entradas de bibliografía |
+| **El artículo en Word** | `articulo/articulo_cosecha_de_piedras.docx` | Coincide con el texto fuente; regenerado el 11 de octubre, después del cotejo de la letra |
+| **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 30 cambios de la revisión final respecto de la versión con Fuão y Monteys y Fuertes; rehecho el 11 de octubre con la cita cotejada |
 | **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre. El LEEME se puso al día el 11 |
 | **La guía de los seis pasteles** | `analisis/05b_guia_seis_pasteles.md` | Al día el 11 de octubre: numeración del artículo, figuras vigentes, método final y dos citas corregidas |
 | **El fichero de pasajes** | `analisis/06_fichero_de_pasajes.md` | Regenerado el 11 de octubre: las 153 citas y las dos en bloque, por página, para cotejarlas con el impreso |
@@ -51,7 +51,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la auditoría y la revisión final del 10 de octubre (The Voidz, «el lobo», McLeod, Dean, Fuão, las letras) marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba), para aceptarlos o rechazarlos uno por uno en Word |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la auditoría y la revisión final del 10 de octubre (The Voidz, «el lobo», McLeod, Dean, Fuão, las letras) marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba), para aceptarlos o rechazarlos uno por uno en Word. Rehecho el 11 de octubre con la cita de «Pyramid of Bones» en la forma del librillo |
 | `articulo/figuras/` | Las ocho figuras (seis esquemas de encaje y dos diagramas) y cómo sustituir los esquemas por los escaneos de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las ocho figuras a partir de las notaciones SVG (o solo las que se le indiquen) |
@@ -60,7 +60,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 61.625 caracteres con espacios, bibliografía y notas incluidas; unas 10.300 palabras; el Word tiene 29 páginas. Ya no va a *Estudios Bolivianos* y no hay límite fijo: cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
+- **Extensión:** 61.705 caracteres con espacios, bibliografía y notas incluidas; unas 10.300 palabras; el Word tiene 29 páginas. Ya no va a *Estudios Bolivianos* y no hay límite fijo: cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
 - **Resúmenes:** resumen de 99 palabras y abstract de 90.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
@@ -75,7 +75,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - hacer y escanear los pasteles: serán las figuras (las imágenes de GPT Image 2 son solo exploración; `analisis/17_estilo_y_prompts_gpt_image.md`);
   - revisar los dos diagramas, rótulos y páginas, y decidir si entran (`analisis/19_esquemas_a_mano_y_diagramas.md`);
   - cotejar las citas con el impreso (`analisis/06_fichero_de_pasajes.md`);
-  - cotejar los dos pasajes de The Voidz con la letra oficial;
+  - cotejar el pasaje de «Father Electricity» con la letra oficial de *Tyranny* (el de «Pyramid of Bones» ya se cotejó con el librillo japonés de *Virtue*);
   - elegir revista y adaptar el formato y la extensión (para *Atenea*, unas 1.800 palabras menos);
   - preparar una versión anonimizada si la revista la pide;
   - enviar.
@@ -113,7 +113,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/24_otro_epigrafe.md` | Otro epígrafe para el artículo final: por qué el lema del Taller de Historia Oral Andina sigue siendo el más coherente con el dossier, tres alternativas verificadas (Bertonio, los montones de la p. 220; el capataz de la mina, p. 142; Le Guin, p. 6), qué cambia en §7 y cómo cuadra la extensión |
 | `analisis/25_alexander_lenguaje_de_patrones.md` | *A Pattern Language* (Alexander, Ishikawa y Silverstein, 1977) frente al artículo: dónde lo fortalece (la chujlla como casa comprimida, las tres chujllas alrededor del patio, la comida y el fuego, la propiedad como control y reparación, el umbral, las cosas de la vida), dónde hay que discutirlo (el arquetipo, el papeleo por tamaño, la estaca y el papel), cómo ir más allá (los patrones del ayllu desde Bertonio y la novela; un grado de apoyo para cada figura), qué cambió en el artículo, siete textos listos, patrones por verificar en el impreso y las citas con su original inglés |
 | `analisis/26_fuao_y_monteys_collage.md` | Fuão, *A collage como trajetória amorosa* (2011), y Monteys y Fuertes, *Casa collage* (2001), frente al artículo: cómo se paginaron, lo que comparten (operaciones de la mano y casa como gente y objetos), dónde fortalecen cada sección, dónde discutirlos, cómo ir más allá (una columna de enseres en el Cuadro 1, un diagrama de la casa dispersa, una notación de «modo de empleo»), textos listos y las citas con su original |
-| `analisis/27_auditoria_otra_ia_collage_titulos_y_the_voidz.md` | Auditoría de las propuestas de otra IA: qué se sostiene del análisis de *Casa collage* y Fuão (páginas corridas, citas cosidas, errores sobre la novela), por qué conviene mantener el título, qué se pudo verificar de The Voidz (álbumes y pistas sí; de trece versos que propuso la otra IA, solo dos están en las letras), qué pasajes de las letras entraron y por qué, qué dice de verdad Cárcamo Pino, lo que entró y la revisión final del artículo |
+| `analisis/27_auditoria_otra_ia_collage_titulos_y_the_voidz.md` | Auditoría de las propuestas de otra IA: qué se sostiene del análisis de *Casa collage* y Fuão (páginas corridas, citas cosidas, errores sobre la novela), por qué conviene mantener el título, qué se pudo verificar de The Voidz (álbumes y pistas sí; de trece versos que propuso la otra IA, solo dos están en las letras), qué pasajes de las letras entraron y por qué, qué dice de verdad Cárcamo Pino, lo que entró y la revisión final del artículo. Desde el 11 de octubre, el cotejo con el librillo japonés de *Virtue* (§27.12): la letra es oficial, y el pasaje de «Pyramid of Bones» cambia de corte de verso, no de palabras |
 | `analisis/28_prompt_atlas_arena.md` | Prompt revisado para armar un atlas privado en Are.na: los datos reales del proyecto, las 32 obras que ya están citadas, los huecos por prioridad (crítica sobre la novela, vecinas del concurso de 1940, Warisata, facsímiles, datos de catálogo), canales por material del argumento (piedra, papel, máquina) y sin canal de «paisaje», reglas del conector, de verificación y de representación, y lo que hay que decidir antes de usarlo. No se creó nada en Are.na |
 | `analisis/29_atlas_arena.md` | Registro del atlas de Are.na, hecho el 10 y el 11 de octubre: once canales privados (la matriz, nueve por material o tema y uno vacío para los escaneos de los pasteles) y 38 bloques con su ficha; los identificadores de cada canal y bloque; qué herramientas fallaron (el buscador de Are.na pide Premium, un TIFF de Commons, la ficha de la BnF) y cómo se resolvió; los canales ajenos revisados (no se conectó nada); qué huecos cubre cada hallazgo; lo que tienes que mirar o decidir; y cinco propuestas para el artículo, ninguna aplicada (la primera, mencionar el concurso de 1940 en §1) |
 | `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |

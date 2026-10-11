@@ -158,8 +158,8 @@ El enlace funciona igual, pero conviene mirarlas.
 
 | ID | Tipo | Bloque | Nota |
 |---|---|---|---|
-| 51250211 | Enlace | The Voidz en Qobuz | Servicio con licencia. La web oficial (thevoidz.com) no se pudo comprobar. El enlace de Deezer que tenía apuntado no entró: no se pudo saber de quién era la página |
-| 51250213 | Texto | Pasajes de The Voidz pendientes de cotejo | Sin letras: solo dónde están |
+| 51250211 | Enlace | The Voidz en Qobuz | Servicio con licencia. La web oficial (thevoidz.com) no se pudo comprobar. El enlace de Deezer que tenía apuntado no entró: no se pudo saber de quién era la página. El 11 de octubre su pendiente quedó solo en *Tyranny*: el librillo de *Virtue* ya está en manos del autor (`27`, §27.12) |
+| 51250213 | Texto | Pasajes de The Voidz pendientes de cotejo | Sin letras: solo dónde están. El 11 de octubre pasó a llamarse «Pasajes de The Voidz: uno cotejado, otro pendiente», con lo que dio el cotejo (`27`, §27.12) |
 
 ### `pasteles`
 
@@ -190,7 +190,7 @@ Está vacío: es para tus escaneos y tus procesos. Su regla pide soporte, medida
 | 5. Facsímiles coloniales | El *Arte* de Bertonio (Internet Archive) y la ficha del *Vocabulario* (Estudios Indianos) | Un facsímil del *Vocabulario*. Según el catálogo Zenon, la edición de 1956 tuvo una reimpresión de CERES en 1984 |
 | Dibujo y método | Canaletto, la guía de RIBA, el mural de Cullen y Kolář | El esgrafiado en pastel al óleo: no se buscó en esta pasada |
 | Cuerpo y memoria | Tres textos sobre el THOA | Las sequías del altiplano: no se buscó en esta pasada |
-| Cruces | Qobuz y los pasajes por cotejar | La letra oficial |
+| Cruces | Qobuz y los pasajes por cotejar | La letra oficial. La de *Virtue* llegó el 11 de octubre con el librillo japonés; falta la de *Tyranny* |
 
 ## 29.6. Lo que tienes que mirar o decidir
 
@@ -205,7 +205,7 @@ Está vacío: es para tus escaneos y tus procesos. Su regla pide soporte, medida
    - Arriarán (2021: 29-31);
    - el juicio de *El mundo es ancho y ajeno*.
 6. **Las licencias** de las imágenes de Commons (Squier, Catavi, Viscachani, Canaletto y Nordenskiöld) y de la foto del ESO.
-7. **Los dos pasajes de The Voidz**, que hay que cotejar con la letra oficial (`27`, §27.11).
+7. **Los dos pasajes de The Voidz**, que hay que cotejar con la letra oficial (`27`, §27.11). Actualización del 11 de octubre: el de «Pyramid of Bones» ya está cotejado con el librillo japonés de *Virtue* (`27`, §27.12); queda el de «Father Electricity».
 8. **Tus pasteles**, que van al canal `pasteles`, con soporte, medidas y año.
 
 ## 29.7. Propuestas para el artículo

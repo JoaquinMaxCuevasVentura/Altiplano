@@ -37,14 +37,15 @@
     - el radio urbano es un corte, la huella un índice, la lista de la mina un montaje (§4 y §5);
     - el retorno es la cola que reúne lo disperso, y la memoria, la cola que cierra el foso (§7);
     - la bibliografía pasa a 30 entradas.
-  - Por último, el 10 de octubre, la auditoría de las propuestas de otra IA y la revisión final (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`):
+  - Al final del 10 de octubre, la auditoría de las propuestas de otra IA y la revisión final (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`):
     - entran cruces con la cultura popular, como los que hace Cárcamo Pino en su escritura, pero con los tuyos: los títulos de dos canciones de The Voidz, «All Wordz Are Made Up», con el antecedente de *manuaje* en Randall McLeod (§2), y «Pyramid of Bones» (§3); y, con las letras que aportaste, dos pasajes: «They play the game by different rules / Insisting it's all equal» para la ordenanza (§4) y «I do not want to see the whole mess / I wish I could live in retrospect», de «Father Electricity», para la memoria del retorno (§7);
     - la novela da además el apodo del Alcalde, «alias “el lobo”» (p. 86): «La firma es la del lobo» (§4). Los tres cerditos, que eran solo un ejemplo del método de Cárcamo Pino, no se citan;
     - entran la «segunda incisión» de Fuão (nota del pastel), su voyeur (§6) y su nota sobre las comillas (§2), y dos frases de Dean: la petrificación andina no es muerte (§2) y recordar exige olvidar (§7);
     - se dividen párrafos largos, se unifican los años de Pallasmaa y Hall y la bibliografía pasa a 32 entradas;
     - el título se mantiene: «cosecha de piedras» es una frase de la novela (p. 9).
+  - El 11 de octubre, el cotejo con el librillo de la edición japonesa de *Virtue*, que trae la letra oficial (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`, §27.12). Las palabras del pasaje de «Pyramid of Bones» no cambian; cambian el corte de verso, que va después de *insisting*, una coma y las mayúsculas. La bibliografía dice ahora de dónde sale la letra.
 
-- **Extensión.** 61.625 caracteres con espacios, con bibliografía y notas; unas 10.300 palabras; 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (§4.6 y el informe de convocatorias, recalculado el 11 de octubre).
+- **Extensión.** 61.705 caracteres con espacios, con bibliografía y notas; unas 10.300 palabras (10.286); 29 páginas. Ya no se piensa en *Estudios Bolivianos*: manda el límite de la revista que elijas (§4.6 y el informe de convocatorias, recalculado el 11 de octubre).
 - **Resúmenes y títulos.** Resumen de 99 palabras y abstract de 90 (límite: 100). Títulos de 16 palabras en español y 15 en inglés: si la revista recomienda 12 como máximo, como *Estudios Bolivianos*, una variante corta sería «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*».
 - **Palabras clave.** Cinco en cada lengua (norma 4d): Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación.
 - **Autoría.**
@@ -72,7 +73,7 @@
    - el nuevo final de la Figura 1: el narrador ve a los comunarios «como estatuas» (`12_taller_cine_experimental.md`);
    - el subtítulo y las dos metáforas nuevas (`14_evaluacion_propuesta_otra_ia.md`);
    - el *qalachuyma* de §7 (`15_spedding_susto_al_susto.md`);
-   - los cruces de cultura popular: «el lobo» y las tres canciones de The Voidz, dos por su título y dos pasajes de las letras que aportaste (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`, §27.11).
+   - los cruces de cultura popular: «el lobo» y las tres canciones de The Voidz, dos por su título y dos pasajes de las letras que aportaste; el de «Pyramid of Bones», ya cotejado con el librillo japonés de *Virtue* (`27_auditoria_otra_ia_collage_titulos_y_the_voidz.md`, §27.11 y §27.12).
 2. **Confirmar el epígrafe** o cambiarlo por una de las alternativas verificadas (`24_otro_epigrafe.md`; antes, `09_recursos_de_carcamo_y_lenguaje_llano.md`, §9.2).
 3. **Revisar la declaración de IA** (§4.5). Si reescribes el texto con tus palabras antes de enviarlo, puedes decirlo en el rol.
 4. **Decidir las figuras** (§4.4): esquemas de encaje, como ahora, o fotografías de los pasteles (`articulo/figuras/LEEME.md`).
@@ -95,7 +96,7 @@
 
 - **Qué pide la norma 4b:** formación, grado, adscripción, publicaciones, correo, ciudad y país.
 - **Qué no trae la nota:** ni adscripción institucional ni publicaciones, porque el CV no registra publicaciones ni una adscripción académica. Si tienes alguna, cabe: la nota admite 20 palabras más.
-- **La extensión:** 61.625 caracteres. Depende del límite de la revista que elijas (§4.6).
+- **La extensión:** 61.705 caracteres. Depende del límite de la revista que elijas (§4.6).
 
 ## 4.3. Verificación de fuentes
 
@@ -134,7 +135,7 @@ Estado de cada dato:
 | 25 | Alexander *et al.* (1977: xliii, 395) | A (OCR del libro) | Traducción propia del inglés. Páginas reconstruidas con las marcas al pie y las cabezas de página (`25_alexander_lenguaje_de_patrones.md`, §25.1 y §25.8). Si consigues la edición castellana (Gustavo Gili), citarla |
 | 26 | Fuão (2011: 8, 14, 16, 24, 28, 29, 33-36, 39, 43, 48, 52, 53, 65, 80, 81, 88, 91, 97, 102) | A (Word del libro, paginado al convertirlo a PDF; cada página trae su número impreso) | Traducción propia del portugués; originales en `26_fuao_y_monteys_collage.md`, §26.7 |
 | 27 | Monteys y Fuertes (2001: 12, 14, 26, 30, 42, 56, 58, 104, 112, 128, 132, 146, 148) y Bachelard (1983 [1957]: 45) citado en la p. 42 | A (escaneo de baja resolución; cada cita leída en la imagen de su página) | Faltan las pp. 62-63 en el escaneo. Confirmar en el impreso si se cita algo de ellas |
-| 28 | The Voidz (2018), *Virtue*: «Pyramid of Bones» (pista 3) y «All Wordz Are Made Up» (pista 7), Cult Records y RCA Records; Julian Casablancas+The Voidz (2014), *Tyranny*: «Father Electricity» (pista 6), Cult Records | C (álbumes, pistas, sellos y fechas confirmados con extractos del buscador; las páginas oficiales estaban bloqueadas). Los dos pasajes citados salen de la letra que aportaste | Cotejar los dos pasajes con la letra oficial (librillo o *streaming* con letras con licencia). Los versos que propuso la otra IA, salvo dos, no están en las letras (`27`, §27.11) |
+| 28 | The Voidz (2018), *Virtue*: «Pyramid of Bones» (pista 3) y «All Wordz Are Made Up» (pista 7), Cult Records y RCA Records; Julian Casablancas+The Voidz (2014), *Tyranny*: «Father Electricity» (pista 6), Cult Records | A para *Virtue*: pistas, títulos y la letra de «Pyramid of Bones», leídos en las fotos del librillo de la edición japonesa (Sony Music Labels, SICP 5689), que da las letras como provistas por el artista. C para *Tyranny*: álbum, pista, sello y fecha confirmados con extractos del buscador; el pasaje citado sale de la letra que aportaste | Cotejar el pasaje de «Father Electricity» con la letra oficial (librillo o *streaming* con letras con licencia). El de «Pyramid of Bones» ya sigue al librillo (`27`, §27.12). Los versos que propuso la otra IA, salvo dos, no están en las letras (`27`, §27.11) |
 
 ## 4.4. Las figuras: qué dice el artículo y qué no
 
@@ -182,7 +183,7 @@ Es obligatoria, y su omisión implica el rechazo. El artículo trae tu redacció
 
 ## 4.6. Extensión
 
-- **Ahora:** 61.625 caracteres, con la nota de autor, las declaraciones y el epígrafe. La auditoría, la revisión final y los dos pasajes de las letras, el 10 de octubre, añadieron unos 2.900 (`27`, §27.10 y §27.11). Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
+- **Ahora:** 61.705 caracteres, con la nota de autor, las declaraciones y el epígrafe. El cotejo de «Pyramid of Bones», el 11 de octubre, añadió 80: la línea de la bibliografía que dice de dónde sale la letra (`27`, §27.12). La auditoría, la revisión final y los dos pasajes de las letras, el 10 de octubre, añadieron unos 2.900 (`27`, §27.10 y §27.11). Fuão, Monteys y Fuertes y los textos listos de Alexander añadieron unos 8.700 caracteres el 10 de octubre, cuando dejó de valer el límite de 50.000. Antes de eso, el título nuevo había añadido 85 y Alexander 420, ya descontados nueve recortes pequeños (`25`, §25.5), y el texto quedaba 31 caracteres bajo el límite de 50.000 de *Estudios Bolivianos*. Cada revista nueva tendrá su propio límite (`reports/Convocatorias abiertas para el artículo.md`).
 - **Lo que piden las candidatas** (recalculado el 11 de octubre en el informe de convocatorias, «Cuánto hay que cortar»). En el Word son unas 10.300 palabras y 29 páginas:
   - sin cortes: *Aisthesis* (12.000 palabras), *Riva-Agüero* (16.000), *A Contracorriente* (12.000), *Revista de Literatura* (11.000), *Yachay* e *Iberoamericana* (70.000 caracteres), entre otras;
   - *Kipus* (9.500): unas 800 palabras menos;
@@ -223,8 +224,9 @@ Para ampliar el acceso en futuras sesiones, abre el menú del entorno de la nube
 - [ ] Epígrafe confirmado o cambiado (`24_otro_epigrafe.md`)
 - [ ] Diagramas revisados: rótulos, páginas y si entran (Figuras 7 y 8; `19_esquemas_a_mano_y_diagramas.md`)
 - [ ] Notaciones de las Figuras 1 a 6 revisadas: rótulos y decisiones marcadas con asterisco (`23_esquemas_de_encaje_como_notaciones.md`)
-- [x] `.docx` regenerado con la revisión final y los dos pasajes de The Voidz: 61.625 caracteres, 29 páginas; resúmenes de 99 y 90 palabras; bibliografía de 32 entradas
-- [ ] Los dos pasajes de The Voidz cotejados con la letra oficial (`27`, §27.11)
+- [x] `.docx` regenerado con la revisión final, los dos pasajes de The Voidz y la cita de «Pyramid of Bones» cotejada: 61.705 caracteres, 29 páginas; resúmenes de 99 y 90 palabras; bibliografía de 32 entradas
+- [x] «Pyramid of Bones» cotejado con la letra oficial, en el librillo japonés de *Virtue* (`27`, §27.12)
+- [ ] «Father Electricity» cotejado con la letra oficial de *Tyranny* (`27`, §27.11 y §27.12)
 - [x] Entregables al día con la versión final (11 de octubre): fichero de pasajes, guía de los pasteles, LEEME de las figuras, informe de convocatorias y atlas de Are.na
 - [ ] Elegir revista y, si hace falta, preparar la versión recortada (§4.6; para *Atenea*, unas 1.800 palabras menos)
 - [ ] Versión anonimizada, si la piden

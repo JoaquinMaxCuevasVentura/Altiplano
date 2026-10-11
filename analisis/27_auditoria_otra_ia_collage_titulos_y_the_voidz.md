@@ -15,7 +15,7 @@
 - Alexander: OCR con marcas de página.
 - Cárcamo Pino: los dos artículos de 2025 en texto paginado.
 
-**Las canciones** se verificaron en internet con el buscador. La política de red de este entorno bloquea Wikipedia, Genius, Stereogum, Spin, AZLyrics, Shore Fire y la revista escolar que reseñó «All Wordz Are Made Up», así que no se pudo abrir ninguna página completa. El buscador confirma álbumes, pistas y fechas, pero no reproduce letras. **Ninguna letra pudo cotejarse con un texto completo.**
+**Las canciones** se verificaron en internet con el buscador. La política de red de este entorno bloquea Wikipedia, Genius, Stereogum, Spin, AZLyrics, Shore Fire y la revista escolar que reseñó «All Wordz Are Made Up», así que no se pudo abrir ninguna página completa. El buscador confirma álbumes, pistas y fechas, pero no reproduce letras. **Ninguna letra pudo cotejarse con un texto completo.** El 11 de octubre llegaron las fotos del librillo japonés de *Virtue*, y con ellas se cotejaron «Pyramid of Bones» y «All Wordz Are Made Up» (§27.12).
 
 **Resultado.**
 
@@ -89,7 +89,7 @@ Las correcciones ortográficas que la otra IA pedía (Raúl, el Estado, Gosálve
   - Para Spin, el estribillo advierte contra creer ciertas mentiras.
 - **«All Wordz Are Made Up».**
   - Es un tema bailable, con cencerro, autotune y ecos de *highlife* y afrobeat.
-  - **Ninguna fuente encontrada explica el título.** Leerlo como una crítica del lenguaje es una interpretación nuestra, no un dato.
+  - **Ninguna fuente encontrada explica el título.** Leerlo como una crítica del lenguaje es una interpretación nuestra, no un dato. (11 de octubre: el comentario del librillo japonés da una lectura, la de las *fake news*; véase §27.12.)
 
 **Fuentes de la búsqueda:**
 
@@ -110,7 +110,7 @@ Las correcciones ortográficas que la otra IA pedía (Raúl, el Estado, Gosálve
 |---|---|---|
 | «Don't cry, don't worry, child / We'll be fine» | «Pyramid of Bones» | Sin verificar |
 | «We are born on a pyramid of bones» | «Pyramid of Bones» | Sin verificar |
-| «Lies are simple, truth is complex» | «Pyramid of Bones» | **Corregido en §27.11.** Un extracto del buscador lo situaba en «Permanent High School», y aquí lo di por mal atribuido. En la letra que aportaste está en «Pyramid of Bones»: la otra IA acertó |
+| «Lies are simple, truth is complex» | «Pyramid of Bones» | **Corregido en §27.11.** Un extracto del buscador lo situaba en «Permanent High School», y aquí lo di por mal atribuido. En la letra que aportaste está en «Pyramid of Bones»: la otra IA acertó. El librillo japonés lo confirma, y confirma también el extracto: «Permanent High School» trae «lies are simple truth complex» (§27.12) |
 | «Look where we are / Don't ever stop to think where we came from» | «Pyramid of Bones» | Sin fuente |
 | «You are the machine…», «Civilization is a progress in loneliness», «You're paying for the air…» | «Father Electricity» | Sin fuente |
 | «All words are made up / To keep you in your place» | «All Wordz Are Made Up» | Sin verificar. Ninguna fuente encontrada lo confirma |
@@ -270,6 +270,8 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 
 **De dónde salen.** Las cuatro letras las pegaste tú. No pude cotejarlas con la letra oficial: las páginas de letras siguen bloqueadas y el buscador no las reproduce.
 
+**Actualización del 11 de octubre:** las dos letras de *Virtue* ya están cotejadas con el librillo de la edición japonesa, que trae la letra oficial (§27.12). «Pyramid of Bones» coincide salvo el corte de los dos últimos versos; «All Wordz Are Made Up» difiere bastante. Las dos de *Tyranny* siguen sin cotejar.
+
 - **«Pyramid of Bones».** Dos reseñas confirman partes de la letra. Stereogum cita el verso del «11th Dimension» y lo sitúa en la primera estrofa. Spin señala en el estribillo la advertencia contra las mentiras del hombre blanco. Las dos cosas están en tu letra.
 - **«Father Electricity».** No encontré ninguna confirmación externa.
 - **En general.** Las transcripciones de las letras de Casablancas varían de un sitio a otro, porque su voz suele ir distorsionada.
@@ -295,15 +297,15 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 
 **Lo que esto confirma:**
 
-- **Los títulos de *Virtue* no están en sus letras.** Ninguna de las dos letras contiene la frase de su título.
+- **Los títulos de *Virtue* no están en sus letras.** Ninguna de las dos letras contiene la frase de su título. Una variante de «All Wordz Are Made Up» sí está en otra pista del disco, «Aliennation» (§27.12).
 - **«All Wordz Are Made Up» no habla del lenguaje.** El título es lo único que sirve al argumento, y así lo usa el artículo: «lleva la idea al extremo en el título».
-- **«Pyramid of Bones» sí trata de la desigualdad** («They play the game by different rules / Insisting it's all equal»). Eso respalda leer su título como una jerarquía.
+- **«Pyramid of Bones» sí trata de la desigualdad** («They play the game by different rules / Insisting it's all equal»). Eso respalda leer su título como una jerarquía. (En el librillo, desde el 11 de octubre la forma del artículo: «they play the game by different rules, insisting / it's all equal»; §27.12.)
 
 **Lo que entró (dos pasajes):**
 
 | Pasaje | Dónde | Por qué |
 |---|---|---|
-| «They play the game by different rules / Insisting it's all equal» («Pyramid of Bones»; The Voidz, 2018) | §4, tras «a los mestizos "no les alcanzaba la Ordenanza"» (p. 102) | La ordenanza habla de «todos los animales» del radio urbano (p. 96), pero solo se aplica a los indios. Retoma además el juego de §1, donde el papel gana «por regla» |
+| «They play the game by different rules / Insisting it's all equal» («Pyramid of Bones»; The Voidz, 2018). Desde el 11 de octubre, en la forma del librillo: «they play the game by different rules, insisting / it's all equal» (§27.12) | §4, tras «a los mestizos "no les alcanzaba la Ordenanza"» (p. 102) | La ordenanza habla de «todos los animales» del radio urbano (p. 96), pero solo se aplica a los indios. Retoma además el juego de §1, donde el papel gana «por regla» |
 | «I do not want to see the whole mess / I wish I could live in retrospect» («Father Electricity»; Julian Casablancas+The Voidz, 2014) | §7, tras «lo esconden en un foso» | Junta los dos gestos de la memoria del retorno: no mirar el hambre reciente (pp. 156-157) y quedarse con «lo pasado antiguo, lo bueno y lo alegre de las cosechas» (p. 156). El artículo lo cierra contra el lema del epígrafe: los comunarios miran atrás, «pero no para caminar, como pide el lema, sino para saltar el foso» |
 
 **Forma de cita:**
@@ -322,7 +324,7 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 | «Don't you ever listen to the white man's lies» («Pyramid of Bones») | §4 u §8 | Traslada un marco racial estadounidense y contradice el matiz del artículo. El despojo no tiene un solo villano («cinco gendarmes indios», p. 101), y la primera estaca la clava una mano aymara (p. 20) |
 | «Lies are simple, truth is complex» («Pyramid of Bones») | §1, Cornejo Polar | Es demasiado general: repetiría lo que ya dice la crítica, sin mostrar un mecanismo |
 | «Beyond all ideas of right and wrong, there is a field» («Human Sadness») | §6, el linchamiento | Es un verso de Rumi en la versión inglesa de Coleman Barks («Out beyond ideas of wrongdoing and rightdoing, there is a field»). Citarlo como de The Voidz sería atribuírselo mal |
-| «What's your name?» y «No one will care about this in ten years» («All Wordz Are Made Up») | §7, los sin nombre y el olvido | La canción trata de otra cosa: sería decoración |
+| «What's your name?» y «No one will care about this in ten years» («All Wordz Are Made Up»). En el librillo: «what's your name?» y «no one will care about this in 10 years» (§27.12) | §7, los sin nombre y el olvido | La canción trata de otra cosa: sería decoración |
 | «Mine, all mine, wait your turn» («Human Sadness») | Título u §8 | El juego entre *mine* (mío) y *mine* (mina) solo funciona en inglés, y habría que explicarlo |
 
 **Antes de enviar:**
@@ -330,6 +332,8 @@ Pediste revisar todo lo acumulado en la conversación para dejar la versión fin
 - Coteja los dos pasajes con la letra oficial: el librillo del disco o un servicio de *streaming* con letras con licencia.
 - Si alguna palabra cambia, corrígela en el artículo.
 - Si la revista pregunta, la cita es de la grabación y la transcripción es tuya.
+
+**Actualización del 11 de octubre:** «Pyramid of Bones» ya está cotejado con el librillo japonés de *Virtue*, y su cita sigue la letra oficial (§27.12). Queda «Father Electricity», que es de *Tyranny*: mientras no se coteje, vale lo de arriba para esa cita.
 
 **Cuántas veces aparece la banda.** Ahora son cuatro:
 
@@ -355,3 +359,91 @@ Si un evaluador lo encuentra excesivo, lo más prescindible es el título de «P
 | Bibliografía | 32 entradas |
 | Word | 61.625 caracteres, unas 10.300 palabras, 29 páginas |
 | Word con cambios | 30 cambios marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba) |
+
+## 27.12. Cotejo con el librillo japonés de *Virtue*
+
+**Fecha:** 11 de octubre.
+
+**Qué llegó.** Doce fotos de la edición japonesa de *Virtue* (Sony Music Labels, SICP 5689, 25 de abril de 2018):
+
+- la faja (*obi*), que anuncia «歌詞・対訳付»: letras y traducción incluidas;
+- la lista de pistas, que confirma «Pyramid of Bones» como pista 3 y «All Wordz Are Made Up» como pista 7;
+- el comentario de Mariko Sakamoto (坂本麻里子), fechado en marzo de 2018;
+- las letras en inglés de las dieciséis pistas, con su traducción al japonés (対訳: 矢岸礼子, Lively Up);
+- la contraportada, con los músicos.
+
+Las fotos no se suben al repositorio y las letras no se copian completas: aquí solo van los versos que se discuten.
+
+**Qué son esas letras.** Al pie de la última, el librillo dice: «※歌詞はアーティスト側から提供されたものになりますが、一部歌唱と異なる場合がございます。また、対訳は英語歌詞に沿って掲載しております。». Es decir: las letras las dio el artista, aunque en algunos pasajes pueden no coincidir con lo cantado, y la traducción sigue la letra en inglés. No son una transcripción de oído (聞き取り): es la letra oficial.
+
+**El pasaje de §4.**
+
+| Versión | Forma |
+|---|---|
+| Artículo hasta hoy (tu letra) | «They play the game by different rules / Insisting it's all equal» |
+| Librillo (son las dos últimas líneas de la canción) | «...they play the game by different rules, insisting / it's all equal» |
+| Artículo desde hoy | «they play the game by different rules, insisting / it's all equal» |
+
+- **Las palabras coinciden.** Cambian tres cosas:
+  - el corte de verso, que va después de *insisting* y no de *rules*;
+  - la coma después de *rules*;
+  - las mayúsculas: el librillo escribe toda la letra en minúsculas.
+- **El corte no parece de la maqueta.** Un salto automático habría bajado solo lo que no cabía, y *it's all* cabía: en la misma página hay líneas más largas. La traducción japonesa también parte el pasaje en dos. Como es la fuente que se cita, el artículo sigue su corte.
+- **Los puntos suspensivos** con que abre la línea se omiten en el borde de la cita, como cualquier signo inicial.
+- **La traducción del artículo no cambia:** «juegan con otras reglas e insisten en que todo es igual».
+- **La bibliografía dice ahora de dónde sale la letra:** «Letra según el librillo de la edición japonesa (Sony Music Labels, SICP 5689)».
+- **Las minúsculas son las del librillo.** Si prefieres «They», la norma APA permite cambiar la primera letra de una cita para ajustarla a la frase; el resto tiene que quedar como en el librillo.
+
+**El pasaje de §7 sigue pendiente.** «Father Electricity» es de *Tyranny* (2014), y este librillo no la trae.
+
+- Por ahora, las dos citas de la banda tienen formas distintas: la de §7 viene de tu letra, con mayúscula al comienzo de cada verso.
+- Cuando la cotejes con la letra oficial de *Tyranny*, dale la forma que traiga esa fuente.
+
+**Las afirmaciones de §27.11, contra el librillo:**
+
+| Afirmación | En el librillo |
+|---|---|
+| «Lies are simple, truth is complex» está dos veces en «Pyramid of Bones», la segunda invertida | **Sí:** «lies are simple, truth is complex,» en la primera estrofa y «truth is complex, / lies are simple» en la tercera. «Permanent High School» trae además «lies are simple truth complex», sin *is*: el extracto del buscador también tenía razón. El comentario de Sakamoto lo dice: la frase se repite en las pistas 3 y 4 |
+| La frase del título no aparece en «Pyramid of Bones» | **Confirmado:** ni *pyramid* ni *bones* están en la letra |
+| La frase del título no aparece en «All Wordz Are Made Up» | **Confirmado.** Pero una variante está en la pista 5, «Aliennation» (así, con doble ene): «all wordz are made - before i was born» |
+| «Don't you ever listen to the white man's lies» está en «Pyramid of Bones» | **Sí,** dos veces, y otras dos «don't you ever listen to his lies...» |
+| Los otros seis versos que la otra IA atribuía a esas dos canciones no están | **Confirmado:** no aparece ninguno |
+
+**Tu letra, contra el librillo:**
+
+- **«Pyramid of Bones»** coincide palabra por palabra, salvo en tres puntos:
+  - el corte de las dos últimas líneas (arriba);
+  - «words», que en el librillo es «wordz» («no shapes in my wordz»);
+  - «through», que es «thru».
+
+  Además, el librillo va en minúsculas, con más puntuación y con las estrofas separadas.
+- **«All Wordz Are Made Up»** difiere bastante; parece transcrita de oído. Tres ejemplos:
+  - «Mail-drop at Wall Street / Stretched up to my ears / (Then grew)» es, en el librillo, «melodic morphine, straight shot to my ears / lego»;
+  - «Holding you to those standards, they're just too high» es «holding you to a standard that's just to high» (así, con *to*);
+  - «Hiding in my will» es «hiding in my way».
+
+  El artículo solo usa el título de esta canción, así que no le afecta. Los dos versos de esta canción que figuran en «Lo que no entró» (§27.11) se leen así en el librillo: «no one will care about this in 10 years» y «what's you're name?» (así; al final, «what's your name?»).
+
+**Una lectura publicada del título.** En §27.3 escribí que ninguna fuente explicaba «All Wordz Are Made Up». El comentario de Sakamoto da una. Comenta una entrevista de Casablancas en *Vulture* y dice que la frase de las pistas 3 y 4 («真実は複雑で／嘘はどれも単純», la verdad es compleja, las mentiras son todas simples) y los títulos de las pistas 5 y 7 «recuerdan la expresión *fake news*, que tanto se ve desde Trump» (traducción mía).
+
+- El artículo lee el título al revés: «Inventar no es mentir, es hacer» (§2). No hace falta cambiarlo: la frase ya responde a la lectura de la mentira.
+- Si un evaluador la saca, el comentario se cita como Sakamoto (2018), en el librillo de la edición japonesa, sin paginar.
+
+**Un hallazgo que no entra.** La variante de «Aliennation», «all wordz are made - before i was born», dice que las palabras ya estaban hechas antes de uno. Es lo contrario del *manuaje*, que se inventa en el momento (§2). Podría dialogar con esa sección, pero el artículo tiene que acortarse: queda solo anotada.
+
+**Lo que cambió en el repositorio:**
+
+- el artículo, el Word y el Word con cambios: la cita de §4 y la entrada de *Virtue* en la bibliografía;
+- la extensión: 61.705 caracteres y 10.286 palabras (80 caracteres y 13 palabras más, por la línea de la bibliografía);
+- `04`, fila 28 de §4.3: «Pyramid of Bones» pasa a A y «Father Electricity» sigue en C;
+- el atlas de Are.na: los bloques 51250213 y 51250211 (`29`, §29.3).
+
+**Comprobaciones:**
+
+| Comprobación | Resultado |
+|---|---|
+| Citas de la novela | 153, sin problemas |
+| Citas de las demás fuentes | Igual que antes: la única coincidencia aproximada, la de Cornejo Polar (p. 180), ya estaba y se debe al OCR |
+| Bibliografía | 32 entradas |
+| Word | 61.705 caracteres, 10.286 palabras, 29 páginas; resúmenes de 99 y 90 palabras |
+| Word con cambios | 30 cambios marcados respecto de la versión con Fuão y Monteys y Fuertes (commit 45624ba), ya con la forma nueva de la cita |
