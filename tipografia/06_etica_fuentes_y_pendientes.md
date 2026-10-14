@@ -29,7 +29,7 @@ Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
 ## 6.3. Asistencia de inteligencia artificial
 
-Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/`, la aplicación, la póliza en OpenType (`digital/poliza.py`), las láminas, el informe y sus mapas se hicieron con asistencia de inteligencia artificial. También la primera curaduría del atlas en Are.na, que la máquina hizo a tu pedido (`10`, §10.6). Es la misma práctica de declaración del artículo de este repositorio.
+Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/`, la aplicación, la póliza en OpenType (`digital/poliza.py`), las láminas, el informe y sus mapas se hicieron con asistencia de inteligencia artificial. También las dos curadurías del atlas en Are.na, que la máquina hizo a tu pedido (`10`, §10.6 y §10.7). Es la misma práctica de declaración del artículo de este repositorio.
 
 **Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Sus formas salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie no se puede calcar desde la foto; de la foto se toma solo la altura de x. La foto no se sube al repositorio: solo las letras del pie, recortadas. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
@@ -86,3 +86,4 @@ El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» 
 - [ ] Probar el repujado a dos manos (Acción 4) y el estampado con papel mojado (variante de la Acción 8).
 - [ ] Decidir con Rebeca los nombres de los estilos (`08`).
 - [ ] Leer y anotar con página los bloques del atlas marcados «Pendiente» (`10`, §10.6), empezando por Villanueva Criales (2024).
+- [ ] Mirar los doce bloques del Public Domain Image Archive, que la máquina no pudo ver, y corregir sus fichas (`10`, §10.7).

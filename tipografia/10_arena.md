@@ -4,7 +4,7 @@
 
 **Ese día la máquina creó el plano: los ocho canales de §10.3, vacíos y privados,** con los siete conectados dentro de `contenida`. Es el mismo reparto que el resto del proyecto: la máquina dibuja los planos (`esquemas/`) y la mano hace las letras.
 
-**El mismo día, a tu pedido, la máquina hizo una primera curaduría** con material de afuera: libros e imágenes de dominio público, bloques y canales de otras personas en Are.na, y proyectos parecidos. Sumó tres canales de alrededor (*la ruina*, *otras letras* y *vecinas*). El detalle está en §10.6. Las placas, los frotados y todo lo que sale del taller siguen siendo cosa de la mano; `la caja` y `la obra` quedaron vacías.
+**El mismo día, a tu pedido, la máquina hizo una primera curaduría** con material de afuera: libros e imágenes de dominio público, bloques y canales de otras personas en Are.na, y proyectos parecidos. Sumó tres canales de alrededor (*la ruina*, *otras letras* y *vecinas*). El detalle está en §10.6. **El 14.10.2026, también a tu pedido, hizo una segunda** en el Public Domain Image Archive (§10.7). Las placas, los frotados y todo lo que sale del taller siguen siendo cosa de la mano; `la caja` y `la obra` quedaron vacías.
 
 **La autorización del conector incluye escritura**, no solo lectura. La regla no cambia: la máquina no escribe en Are.na sin que se lo pidas y lo confirmes. Para volver a solo lectura, revocar el permiso en *Developers → Authorized Apps* y volver a autorizar eligiendo lectura, si la pantalla lo ofrece.
 
@@ -21,7 +21,7 @@ Are.na no ordena por algoritmo. Guarda **bloques** sueltos en **canales**, y un 
 
 Es la misma regla de la simulación: la máquina confronta, no forma.
 
-- **La mano cura.** Tú agregas los bloques en Are.na, a mano. La excepción es la primera curaduría de material externo (§10.6), que la máquina hizo a tu pedido.
+- **La mano cura.** Tú agregas los bloques en Are.na, a mano. Las excepciones son las dos curadurías de material externo (§10.6 y §10.7), que la máquina hizo a tu pedido.
 - **La máquina lee**, con un token de solo lectura. Hace tres cosas:
   - coteja cada bloque con los documentos: citas con página, nombres, fechas;
   - propone con qué verso o decisión rima;
@@ -188,3 +188,44 @@ Hecha por la máquina, a tu pedido, con el conector: «otros libros, imágenes d
 2. Probar en el taller el **estampado** (papel de algodón mojado, cepillado contra la placa), que podría ser un estado entre *Frotada* y *Mojada*. Ya está escrito como variante de la Acción 8 (`04`). La bandeja sobre el parlante ya era la Acción 10; Chladni, Faraday y Watts Hughes le dan antecedentes.
 3. Buscar en una biblioteca Posnansky 1945, vol. 2, figs. 100 a 102a.
 4. Llenar `la caja` con las placas, una por celda.
+
+## 10.7. La segunda curaduría: Public Domain Image Archive (14.10.2026)
+
+Hecha por la máquina, a tu pedido: buscar material en el [Public Domain Image Archive](https://pdimagearchive.org/infinite-view/), el archivo de imágenes de dominio público de The Public Domain Review.
+
+**Cómo se hizo**
+
+- **El archivo no abre desde el entorno de la máquina.** La red lo bloquea, y también bloquea las capturas que guarda Are.na. Se buscó dentro del dominio con un buscador web: unas cuarenta búsquedas por tema (manos, voz, gotas, sonido, alfabetos, tipos, ruinas).
+- **Are.na sí lo lee.** Cada imagen entró como bloque de enlace a su página en el archivo. El servidor de Are.na guarda una captura de esa página, con la imagen, y la página conserva autor, libro y año. Nada se descargó.
+- **Todo es dominio público**, según el archivo.
+- **La misma ficha que en §10.6.** La máquina no vio ninguna imagen: cada ficha sale del título y la descripción del archivo, y termina con un «Pendiente» que pide mirarla y corregir lo que no coincida.
+
+**Lo que quedó en cada canal** (12 bloques nuevos):
+
+| Canal | Bloque | Rima con |
+|---|---|---|
+| `contener` | Bulwer, *Chirologia*, 1644 (dos láminas) | el manuaje (`09`); las Acciones 4 y 7 |
+| | Anianus, la mano para contar el calendario, 1492 | la mano como retícula, cada falange una celda |
+| | *La mano como espejo de la salvación*, 1466 | la mano que contiene escritura |
+| | Wm. H. Page, tipos de madera cromáticos, 1874 | los estados como capas; la caja |
+| `devolver` | Chladni, una lámina de las figuras, 1787 | la Acción 9 y el signo final |
+| | Worthington, *The Splash of a Drop*, 1895 (dos secuencias) | la gota (D16); la serie de frotados |
+| | Feuillet, *Choregraphie*, 1701 | el cuerpo de la obra; la Acción 11 |
+| | Balcomb, el fonógrafo de Edison, 1878 | la Acción 4: la voz que hunde una hoja de metal; la Acción 10 |
+| `vecinas` | Publicius, el alfabeto de objetos, 1482 | la letra como objeto, dada vuelta |
+| | Silvestre, *Alphabet-album*, 1843 | alfabetos sacados de un archivo; lo que no se hace |
+
+**Lo que se dejó afuera, a propósito:**
+
+- una máscara de Paracas: es andina, pero no de Tiwanaku, y mezclarla confunde la referencia;
+- los blemios de una crónica de prodigios de 1557: la imaginería de las «razas monstruosas»;
+- la «muchacha turca» de Desprez: una figura orientalista de vestuario;
+- el *Bourbonnoise Alphabet* (1789), de la colección «The Human Alphabet»: letras hechas con el cuerpo desnudo de una mujer. Es la vecina opuesta, porque *Contenida* no hace letras con un cuerpo. Entra en `vecinas` solo si decides usarla como contraste.
+
+**Lo que no se encontró:** *Visible Speech* de Bell, el fonautógrafo, Tiwanaku y Bolivia, la imprenta de la *Encyclopédie*, el braille, el armonógrafo, los frotados, Tory y Moxon.
+
+**Pendientes para la mano:**
+
+1. Mirar los doce bloques, corregir lo que no coincida y quitar el «Pendiente» de cada ficha mirada.
+2. Decidir si el *Bourbonnoise Alphabet* entra como contraste.
+3. Recorrer el archivo con tus ojos: la vista infinita y las etiquetas (*vases*, *shapes*…), que la máquina no pudo abrir.

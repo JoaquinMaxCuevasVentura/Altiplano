@@ -44,7 +44,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), el testigo (lo que se probó y lo que quedó) y otros registros de la ruina que están en el atlas |
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `09_las_manos_no_tienen_lengua.md` | Lo que se toma de Cárcamo (el *manuaje*: las manos no tienen lengua) y de Johnson (la segunda vida de los árboles), y lo que cambia en el taller |
-| `10_arena.md` | El atlas en Are.na: la mano cura, la máquina lee. Cómo se conectó, los once canales privados, la primera curaduría de material externo (dominio público, canales ajenos conectados, referencias visuales) y qué se corrige de la propuesta recibida |
+| `10_arena.md` | El atlas en Are.na: la mano cura, la máquina lee. Cómo se conectó, los once canales privados, dos curadurías de material externo (dominio público, canales ajenos conectados, referencias visuales; la segunda, en el Public Domain Image Archive) y qué se corrige de la propuesta recibida |
 | `digital/poliza.py` | La póliza en OpenType: reparte las placas para que ninguna se repita dentro de un verso; la prueba con HarfBuzz |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
@@ -59,7 +59,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - el informe de decisiones, con sus mapas (`informe/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`);
-  - el atlas en Are.na: once canales privados, con una primera curaduría de material externo (`10_arena.md`).
+  - el atlas en Are.na: once canales privados, con dos curadurías de material externo (`10_arena.md`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
 - **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
 
