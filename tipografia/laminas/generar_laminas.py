@@ -652,7 +652,7 @@ def l17():
         "<li>Medir la pared de la piscina y frotarla. No sacar nada; no dejar nada.</li>"
         "<li>Repujar a mano las 119 placas, con las dos manos: una hunde por el reverso, la otra lee a ciegas.</li>"
         "<li>Poner la mano frente a la máquina, placa por placa y parámetro por parámetro.</li>"
-        "<li>Mirar alrededor sin calcar: el atlas privado en Are.na, con registros de la ruina, letras de contraste "
+        "<li>Mirar alrededor sin calcar: registros de la ruina, letras de contraste "
         "y proyectos vecinos.</li>"
         "<li>Recién entonces, lo digital: un molde para repujar placas nuevas, no un archivo que se guarda. La "
         "póliza ya está escrita: ninguna placa se repite dentro de un verso.</li></ol>")
@@ -668,7 +668,7 @@ def l17():
         "Cárcamo Pino; la madera, según Galen A. Johnson.</p>"
         "<p>Las letras de las imágenes son una simulación hecha con código, para confrontarla con la mano: las "
         "formas salen de un testigo sustituto (Liberation Serif); la altura de x, de la foto del pie. No entran en "
-        "la caja ni en la fuente. El código, los esquemas, los textos y la curaduría del atlas se hicieron con asistencia de inteligencia "
+        "la caja ni en la fuente. El código, los esquemas, los textos y parte de la búsqueda de referencias se hicieron con asistencia de inteligencia "
         "artificial.</p>"
         "<p>Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), con licencia SIL OFL, "
         "sobre una retícula de 16 × 12 módulos.</p></div>")

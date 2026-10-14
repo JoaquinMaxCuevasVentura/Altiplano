@@ -252,7 +252,7 @@ Antes de repujar la primera letra:
 
 **Registro:** los frotados numerados son el estilo *Frotado 01 … Frotado n*. En cada ficha, el número del último que se lee: algunos signos se borran antes que otros.
 
-**Variante a probar: el estampado.** Es el *squeeze* de la epigrafía (`10`, §10.6): un papel mojado que se golpea con un cepillo contra la inscripción y se deja secar en su lugar. Al despegarlo, guarda el relieve en negativo, sin tinta.
+**Variante a probar: el estampado.** Es el *squeeze* de la epigrafía: un papel mojado que se golpea con un cepillo contra la inscripción y se deja secar en su lugar. Al despegarlo, guarda el relieve en negativo, sin tinta.
 
 1. Mojar una hoja de papel de algodón y apoyarla sobre una placa de prueba, por el anverso.
 2. Golpearla con un cepillo de cerdas suaves, de a poco, hasta que el papel tome el relieve.
@@ -293,7 +293,7 @@ Es un registro hecho con agua y sin grafito, a medio camino entre *Frotada* y *M
 
 **Rima con:** D14 (el canto que se oye y no se entiende) y la tipografía sonora de Mahendran.
 
-**Antecedentes** (atlas, `contenida · devolver`): las figuras de arena de Chladni (1787), las ondas que Faraday vio en el agua que vibra (1831) y las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo. Se toma el procedimiento, no sus figuras.
+**Antecedentes:** las figuras de arena de Chladni (1787), las ondas que Faraday vio en el agua que vibra (1831) y las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo. Se toma el procedimiento, no sus figuras.
 
 **Materiales** (esquema B):
 

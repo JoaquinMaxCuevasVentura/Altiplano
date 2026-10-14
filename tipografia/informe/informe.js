@@ -234,7 +234,7 @@ function contenido() {
     P("*Contenida* toma de esa lámina el pie, no la imagen. Sus letras salen del texto que acompaña al dibujo. Cada decisión de la obra se traduce en una decisión tipográfica. El aluminio reemplaza al asperón. La caja sale de la retícula de 8 × 7 celdas de la cabeza del ídolo. Lo hallado y lo reconstruido se distinguen siempre. En lugar de pesos, la familia tiene estados de la letra (calco, placa, cinta, frotado, agua y voz), y el peso se mide en frotadas."),
     P("Este informe ordena esas decisiones: de dónde salen, qué teoría las sostiene, qué figuras retóricas las organizan y qué versos del poema las acompañan. Seis mapas esquemáticos conectan conceptos, teoría, retórica y poética en cada etapa del proyecto: la obra, desenterrar, contener, devolver y lo digital."),
     P("El informe incluye también la propuesta de la máquina: una simulación del taller y una aplicación para intervenir la gramática paramétrica de las letras. Las dos están hechas para confrontarlas con el trabajo de la mano, y ninguna de sus formas entra en la caja ni en la fuente."),
-    P("Lo acompaña un atlas privado en Are.na, con lo que está alrededor del proyecto: registros de la ruina, tipografías con motivos andinos que sirven de contraste y proyectos parecidos. Allí todo se mira y nada se calca (§11)."),
+    P("Al final junta lo que está alrededor del proyecto: registros de la ruina, tipografías con motivos andinos que sirven de contraste y proyectos parecidos. Todo se mira y nada se calca (§11)."),
     H1("Índice"),
     ...indice(),
   );
@@ -267,7 +267,7 @@ function contenido() {
     P("**Primero analógico. Después, digital, solo si cierra.** El proyecto se hace con acciones, como la obra. Las acciones se documentan en tres cuadernos con verbos de la obra: *Desenterrar* (acciones 0 a 3), *Contener* (4 a 7) y *Devolver* (8 a 12). Cada acción lleva el verso del poema que le corresponde, la decisión de la obra con la que rima, los materiales, los pasos y lo que queda registrado."),
     P("Las referencias de método son dos tesis de maestría en Diseño Gráfico de la Rhode Island School of Design. Una es *EthnoGraphemes: Scripts as Vessels for Culture*, de Vaishnavi Mahendran (2020). La otra es *Afrography: Scripting Futures Anchored in Culture & Community*, de Osmond Tshuma (2025). De ellas se toman métodos, no su misión (§2)."),
     P("**La máquina, para confrontar.** Una simulación hecha con código propone su versión de cada acción. Una aplicación deja intervenir la gramática de las letras en el navegador. Las dos sirven para discutir con la mano; ninguna forma que producen entra en la caja (§8)."),
-    P("**El atlas, para mirar alrededor.** Un atlas en Are.na junta libros e imágenes de dominio público, estudios y proyectos de otras personas. Cada bloque dice de dónde viene, con qué acción rima y qué no se toma (§11)."),
+    P("**Mirar alrededor, sin calcar.** Libros e imágenes de dominio público, estudios y proyectos de otras personas acompañan el taller. Cada uno dice de dónde viene, con qué acción rima y qué no se toma (§11)."),
     H2("1.5. Cómo leer los mapas"),
     P("Los mapas se dibujan a mano, aunque sea con código. Toman su modo de dibujar de tres clases de referencias: notaciones hechas a mano, con acuarela, órbitas, ejes y haces de líneas anotados; una sala en perspectiva con un embudo y bandadas de signos; y un cuaderno de pictogramas entre dos palabras. El sentido de cada gesto viene de *Contenida*:"),
     vineta("**la línea tiembla apenas**, como la mano que calca («es decir, apenas, es decir, temblor»);"),
@@ -598,23 +598,11 @@ function contenido() {
     P("La fuente se imprime en la máquina de esténcil térmico del estudio, y el esténcil sirve de calco para repujar placas nuevas. Esas placas llenan una segunda caja, cuyas fichas dicen «generación 2». Lo digital no termina la cadena: le da la vuelta."),
   );
 
-  // ---------------------------------------------------------------- 11. ética
+  // ---------------------------------------------------------------- 11. lo que está alrededor
   add(
-    H1("11. El atlas: lo que está alrededor"),
-    P("El atlas vive en Are.na, una plataforma que guarda bloques sueltos en canales. Un mismo bloque puede estar en varios canales sin copiarse: se *conecta*. Es la lógica de la caja: las placas son sueltas, componer es distribuir, y una placa no se duplica. Los canales son privados y el reparto es el del proyecto: la mano cura, la máquina lee. La primera curaduría de material externo la hizo la máquina a pedido, el 10 de octubre de 2026, con 44 bloques y 9 conexiones a material de otras personas (`tipografia/10_arena.md`)."),
-    H2("11.1. Los once canales"),
-    tabla(["Canal", "Qué guarda"], [
-      ["contenida", "La matriz: conecta los demás y dice cómo leer el atlas"],
-      ["desenterrar · contener · devolver", "Las acciones 0 a 12, con material externo: frotados de estelas, el *squeeze*, la caja de tipos, el repujado, Chladni, Faraday, Watts Hughes"],
-      ["la caja", "Vacía: 56 bloques, uno por celda, que pone la mano"],
-      ["la máquina", "Lo que proponen la simulación y otras máquinas: *Beowolf*, *Metafont*"],
-      ["fuentes", "Citas breves con autor y página, y los artículos de acceso abierto"],
-      ["la obra", "Vacía: solo lo que Rebeca autorice por escrito"],
-      ["la ruina", "Cómo se registró Tiwanaku, en grabados, fotos y libros de dominio público"],
-      ["otras letras", "Tipografías con motivos tiwanacotas, andinos o «étnicos», como contraste"],
-      ["vecinas", "Proyectos parecidos"],
-    ], [3000, ANCHO - 3000], { mono: [0] }),
-    H2("11.2. Vecinas"),
+    H1("11. Lo que está alrededor"),
+    P("Alrededor de *Contenida* hay proyectos parecidos, letras que sirven de contraste y otros registros de la misma ruina. Se miran para saber qué ya existe y en qué se separa este proyecto; ninguno se calca."),
+    H2("11.1. Vecinas"),
     tabla(["Proyecto", "En qué se parece", "En qué se separa"], [
       ["Xu Bing, *Tianshu* (*Libro del cielo*), 1987-1991", "Unos 4.000 caracteres inventados, tallados uno por uno en tipos de madera: una caja de signos que nadie sabe leer", "Xu Bing inventa signos; *Contenida* recompone el alfabeto latino desde un pie"],
       ["Mirtha Dermisache, escrituras desde 1967", "Una escritura que tiene forma de escritura y no dice palabras: «No tiene lengua pero igual dice»", "Ella inventa el gesto; *Contenida* registra un gesto ajeno"],
@@ -624,11 +612,11 @@ function contenido() {
       ["Cecilia Vicuña, *Quipu desaparecido*, 2018", "Una poeta que escribe con las manos y con un material, sobre una memoria reprimida", "El quipu no se toma como motivo ni como forma"],
       ["*Ablanda*, UCB, 2021", "Va de un documento antiguo a una fuente digital, en Bolivia", "El *revival* busca una letra regular; aquí se guarda la diferencia"],
     ], [2800, 3500, ANCHO - 6300]),
-    H2("11.3. Otras letras: el contraste"),
+    H2("11.2. Otras letras: el contraste"),
     P("Las tipografías con motivos tiwanacotas o andinos entran como referencia visual y de contraste: muestran lo que ya existe, para no repetirlo. Se describen sin descalificar a quien las hizo. Están, entre otras, una fuente decorativa llamada *Tiwanacu*, cuyos temas, según el catálogo de Luc Devroye, son de Nazca; patrones arqueológicos vendidos con un nombre quechua; *Lithos* y *Neuland*, dos letras que terminaron usándose como estereotipo «étnico», y las fuentes «wonton». Como modelo opuesto están las letras hechas para escribir lenguas, como *Kigelia* (Jamra y Patel) o el *Silabario Amazónico* (Juan Casco)."),
     P("**Lo que enseñan:** el nombre de un lugar no es una marca, y el uso que otros le den a una letra también es parte del homenaje. Por eso el pie del espécimen y el colofón dicen de dónde viene la letra y qué no es, y el uso comercial necesita el acuerdo con Rebeca."),
-    H2("11.4. La ruina: registros, no motivos"),
-    P("El canal de la ruina junta cómo se registró Tiwanaku: el grabado de Squier (1877), el libro de Wiener (1880), Stübel y Uhle (1892), las fotos de las primeras excavaciones (1903-1904) y la guía de Posnansky de 1912, del mismo autor que la lámina. Interesa la cadena de registros, que es la de la obra: piedra, grabado, foto, lámina. «No se salvó la piedra, / solo la opinión sobre ella.»"),
+    H2("11.3. La ruina: registros, no motivos"),
+    P("Tiwanaku se registró así: el grabado de Squier (1877), el libro de Wiener (1880), Stübel y Uhle (1892), las fotos de las primeras excavaciones (1903-1904) y la guía de Posnansky de 1912, del mismo autor que la lámina. Interesa la cadena de registros, que es la de la obra: piedra, grabado, foto, lámina. «No se salvó la piedra, / solo la opinión sobre ella.»"),
   );
 
   // ---------------------------------------------------------------- 12. ética
@@ -639,11 +627,11 @@ function contenido() {
     vineta("**Créditos.** Rebeca Paz Prada y CreaciónxAcuerpamiento van en el colofón, en la forma que ellas elijan; Artefacto Tatuajes, como sede; cada mano de la cadena, con su nombre o con «sin nombre registrado»."),
     vineta("**El cuerpo** de Rebeca no se usa salvo que ella lo proponga. **La piscina** se usa con permiso escrito, y no se saca ni se deja nada."),
     H2("12.2. Lo que no está en el repositorio"),
-    P("Las fotos de la obra y los dos videos, la foto de la lámina, el dibujo de la lámina con el poema, el libro de Posnansky y el artículo de Agüero, Uribe y Berenguer. Lo que el proyecto usa de ellos está descrito, y del pie solo se guardan letras sueltas, recortadas. Tampoco están en Are.na: el atlas es privado, pero Are.na es un tercero."),
+    P("Las fotos de la obra y los dos videos, la foto de la lámina, el dibujo de la lámina con el poema, el libro de Posnansky y el artículo de Agüero, Uribe y Berenguer. Lo que el proyecto usa de ellos está descrito, y del pie solo se guardan letras sueltas, recortadas."),
     H2("12.3. Asistencia de inteligencia artificial"),
-    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También la primera curaduría del atlas, hecha a pedido. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
+    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
     H2("12.4. Las referencias visuales"),
-    P("Los motivos tiwanacotas y las tipografías «étnicas» entran como referencia visual, en canales aparte del atlas. Se miran, no se calcan: ningún motivo pasa a las letras, a la caja ni a la fuente. Cada bloque dice quién hizo el registro, cuándo, con qué medio y con qué licencia, y lo ajeno se conecta, no se descarga."),
+    P("Los motivos tiwanacotas y las tipografías «étnicas» entran como referencia visual, anotados aparte de las letras (§11). Se miran, no se calcan: ningún motivo pasa a las letras, a la caja ni a la fuente. Cada referencia dice quién hizo el registro, cuándo, con qué medio y con qué licencia, y lo ajeno se cita, no se descarga."),
     H2("12.5. Lo que el proyecto no afirma"),
     P("No interpreta la iconografía de Tiwanaku ni el «calendario» de la Kochamama. Los números del sistema son convenios, no lecturas: las 56 celdas y los 30 hallazgos cuentan contenedores y letras. No es una tipografía «andina»: es una tipografía latina de caja baja, hecha con las operaciones de una obra que ocurrió en La Paz."),
     H2("12.6. Pendientes"),
@@ -654,7 +642,7 @@ function contenido() {
     numerada("Probar el repujado a dos manos, el frotado y el estampado: qué papel, qué grafito y cuántas frotadas aguanta una placa.", "pendientes"),
     numerada("Verificar los datos de Posnansky, el nombre del ídolo y la ficha del «vaso».", "pendientes"),
     numerada("Decidir con Rebeca los nombres de los estilos (`08`).", "pendientes"),
-    numerada("Leer y anotar con página los bloques del atlas marcados «Pendiente», empezando por Villanueva Criales (2024).", "pendientes"),
+    numerada("Leer entero Villanueva Criales (2024) y anotar con página lo que se use.", "pendientes"),
     numerada("Confrontar la propuesta de la mano con la de la máquina, placa por placa.", "pendientes"),
   );
 
@@ -677,9 +665,9 @@ function contenido() {
     P("Tshuma, Osmond (2025). *Afrography: Scripting Futures Anchored in Culture & Community*. Tesis de maestría en Diseño Gráfico, Rhode Island School of Design."),
     P("Villanueva Criales, Juan (2024). «Drunken Mountains: Analysis of the Bennett and Ponce Monoliths of Tiwanaku (AD 500–1100) from a Multispecies Perspective». *Latin American Antiquity*. DOI 10.1017/laq.2023.72."),
     P("Watts Hughes, Margaret (1891). «Visible Sound: Voice-Figures». *The Century Magazine* 42."),
-    P("El libro que reproduce la lámina «según Posnansky»: sin identificar. Las demás obras del atlas, con su ficha, están en `tipografia/10_arena.md`."),
+    P("El libro que reproduce la lámina «según Posnansky»: sin identificar."),
     H2("Documentos del proyecto"),
-    P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y el atlas), `simulacion/informe.md` (la propuesta de la máquina), `aplicacion/` (la gramática en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
+    P("`tipografia/01` a `09` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres y las manos), `simulacion/informe.md` (la propuesta de la máquina), `aplicacion/` (la gramática en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
     H1("Colofón"),
     P("Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), las dos con licencia SIL Open Font License e incrustadas en este archivo. Los mapas se dibujan con código (`tipografia/informe/mano.py` y `mapas.py`) y el documento se arma con `tipografia/informe/informe.js`."),
     P("La letra de mano de los mapas es una fuente, La Belle Aurore (Kimberly Geswein, SIL Open Font License), no una mano. Las líneas tiemblan por cálculo. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide."),

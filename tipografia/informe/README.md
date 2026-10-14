@@ -1,6 +1,6 @@
 # El informe de decisiones
 
-`contenida_informe_de_decisiones.docx` (y su PDF) reúne las decisiones del proyecto, al modo de las dos tesis de referencia: la obra, el marco, el sistema, la gramática, los estados, el taller, la propuesta de la máquina, la retórica y la poética, lo digital, el atlas en Are.na y la ética. Lleva seis mapas esquemáticos que conectan conceptos, teoría, retórica y poética en cada etapa del proyecto.
+`contenida_informe_de_decisiones.docx` (y su PDF) reúne las decisiones del proyecto, al modo de las dos tesis de referencia: la obra, el marco, el sistema, la gramática, los estados, el taller, la propuesta de la máquina, la retórica y la poética, lo digital, lo que está alrededor y la ética. Lleva seis mapas esquemáticos que conectan conceptos, teoría, retórica y poética en cada etapa del proyecto.
 
 ## Los mapas
 
