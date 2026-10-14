@@ -140,6 +140,8 @@ Antes de repujar la primera letra:
 
 **Rima con:** D2 (asperón → aluminio) y D3 (placas sueltas).
 
+**Antecedentes** (`10`): el fonógrafo de Edison (1877), donde la voz movía una membrana y la membrana una aguja que hundía una hoja de estaño. Es una lámina de metal fino hundida desde un lado, como esta placa: allá la hunde la voz; aquí, la mano. Y la *Chirologia* de John Bulwer (1644), un libro entero sobre los gestos de la mano como lenguaje. Se toma la idea, no las formas.
+
 **Materiales:**
 
 - papel de aluminio de cocina, el mismo material de Rebeca, en hoja simple; si se rompe demasiado, doble;
@@ -267,6 +269,8 @@ Es un registro hecho con agua y sin grafito, a medio camino entre *Frotada* y *M
 
 **Rima con:** D8 (la proyección a través de la bandeja) y D15 (tocar el agua).
 
+**Antecedente** (`10`): las fotos instantáneas de A. M. Worthington en *The Splash of a Drop* (1895), la misma caída cuadro por cuadro. Por eso el paso 4 pide fotos seguidas, no una sola.
+
 **Materiales** (esquema A en `esquemas/montajes_con_agua.svg`):
 
 - una bandeja un poco más grande que una placa;
@@ -293,7 +297,7 @@ Es un registro hecho con agua y sin grafito, a medio camino entre *Frotada* y *M
 
 **Rima con:** D14 (el canto que se oye y no se entiende) y la tipografía sonora de Mahendran.
 
-**Antecedentes:** las figuras de arena de Chladni (1787), las ondas que Faraday vio en el agua que vibra (1831) y las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo. Se toma el procedimiento, no sus figuras.
+**Antecedentes:** las figuras de arena de Chladni (1787), las ondas que Faraday vio en el agua que vibra (1831) y las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo. Y el fonógrafo de Edison (1877), donde la voz hundía una hoja de estaño: la voz también repuja, como la mano en la Acción 4 (`10`). Se toma el procedimiento, no sus figuras ni la máquina.
 
 **Materiales** (esquema B):
 
@@ -314,6 +318,8 @@ Es un registro hecho con agua y sin grafito, a medio camino entre *Frotada* y *M
 > «Cada vuelta pasa por el agua / y el agua no repite, / la misma diosa dos veces / y ninguna igual.»
 
 **Rima con:** D9 (la piscina es escenario, pantalla y tema), D7 (placas en el fondo) y D10 (el bucle).
+
+**Antecedente** (`10`): la *Choregraphie* de Raoul-Auger Feuillet (1701), que escribe en la página el recorrido de quien baila. Componer es también trazar un recorrido, no solo una línea de texto.
 
 En la piscina, con permiso:
 

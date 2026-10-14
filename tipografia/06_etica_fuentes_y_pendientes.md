@@ -27,13 +27,13 @@ Si Rebeca lo autoriza, se puede agregar una carpeta `referencias/`.
 
 ## 6.3. Asistencia de inteligencia artificial
 
-Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/`, la aplicación, la póliza en OpenType (`digital/poliza.py`), las láminas, el informe y sus mapas se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias: antecedentes del taller (`04`), registros de la ruina (`07`) y referencias visuales (§6.4). Es la misma práctica de declaración del artículo de este repositorio.
+Los textos de esta carpeta, el recuento de `inventario.py`, los esquemas de `esquemas/`, el código de `simulacion/`, la aplicación, la póliza en OpenType (`digital/poliza.py`), las láminas, el informe y sus mapas se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias: antecedentes del taller (`04`), registros de la ruina (`07`), referencias visuales (§6.4) y las imágenes de dominio público (`10`), que la máquina buscó sin poder verlas. Es la misma práctica de declaración del artículo de este repositorio.
 
 **Las formas de letra que genera `simulacion/` son la propuesta de la máquina.** Están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente. Sus formas salen de un testigo sustituto, Liberation Serif (licencia SIL OFL), porque el pie no se puede calcar desde la foto; de la foto se toma solo la altura de x. La foto no se sube al repositorio: solo las letras del pie, recortadas. Los esquemas son planos (caja, pauta, ficha, cadena, montajes), y las letras de la caja quedan para la mano. Si el proyecto se muestra o se publica, esto va en el colofón.
 
 ## 6.4. Las referencias visuales
 
-El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» como **referencia visual**. Se anotan aparte de las letras (`07`, §4, y el informe, §11), con estas reglas:
+El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» como **referencia visual**. Se anotan aparte de las letras (`07`, §4, `10` y el informe, §11), con estas reglas:
 
 - **Se mira, no se calca.** Ningún motivo pasa a las letras, a la caja ni a la fuente.
 - **Cada referencia dice de dónde viene:** quién la registró, cuándo, con qué medio y con qué licencia.
@@ -84,3 +84,4 @@ El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» 
 - [ ] Probar el repujado a dos manos (Acción 4) y el estampado con papel mojado (variante de la Acción 8).
 - [ ] Decidir con Rebeca los nombres de los estilos (`08`).
 - [ ] Leer entero Villanueva Criales (2024) y anotar con página lo que se use (`07`, §4).
+- [ ] Mirar las imágenes de dominio público, que la máquina no pudo ver, y corregir sus fichas (`10`, §10.9).
