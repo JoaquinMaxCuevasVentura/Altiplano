@@ -140,7 +140,14 @@ Antes de repujar la primera letra:
 
 **Rima con:** D2 (asperón → aluminio) y D3 (placas sueltas).
 
-**Antecedentes** (`10`): el fonógrafo de Edison (1877), donde la voz movía una membrana y la membrana una aguja que hundía una hoja de estaño. Es una lámina de metal fino hundida desde un lado, como esta placa: allá la hunde la voz; aquí, la mano. Y la *Chirologia* de John Bulwer (1644), un libro entero sobre los gestos de la mano como lenguaje. Se toma la idea, no las formas.
+**Antecedentes** (`10`):
+
+- **El primer libro en relieve para ciegos**, de Valentin Haüy (1786). Las letras se fundían al revés y se apretaban contra el reverso de un papel grueso; por el frente salían en relieve y se leían con los dedos. Es esta acción: por el reverso, en espejo, con una mano que lee a ciegas. Lo imprimieron sus alumnos ciegos.
+- **El fonógrafo de Edison** (1877): la voz movía una membrana, y la membrana una aguja que hundía una hoja de estaño. Allá la hunde la voz; aquí, la mano.
+- **La impresión natural** de Auer y Bradbury (1852-1855): un helecho apretado contra una plancha de plomo deja su huella en el metal blando.
+- **La *Chirologia* de John Bulwer** (1644), un libro entero sobre los gestos de la mano como lenguaje.
+
+Se toma el procedimiento, no las formas.
 
 **Materiales:**
 
@@ -297,7 +304,14 @@ Es un registro hecho con agua y sin grafito, a medio camino entre *Frotada* y *M
 
 **Rima con:** D14 (el canto que se oye y no se entiende) y la tipografía sonora de Mahendran.
 
-**Antecedentes:** las figuras de arena de Chladni (1787), las ondas que Faraday vio en el agua que vibra (1831) y las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo. Y el fonógrafo de Edison (1877), donde la voz hundía una hoja de estaño: la voz también repuja, como la mano en la Acción 4 (`10`). Se toma el procedimiento, no sus figuras ni la máquina.
+**Antecedentes** (`10`):
+
+- las figuras de arena de Chladni (1787) y las ondas que Faraday vio en el agua que vibra (1831);
+- las figuras de voz de Margaret Watts Hughes (1891), que cantaba sobre una membrana con agua o polvo; en sus figuras de impresión, la membrana entintada pasaba sobre un vidrio mientras cantaba;
+- el fonógrafo de Edison (1877), donde la voz hundía una hoja de estaño: la voz también repuja, como la mano en la Acción 4;
+- el fonautógrafo de Scott de Martinville (1857-1860), que escribía la voz sobre papel ahumado y no podía devolverla. Se oyó por primera vez en 2008. Es el verso de esta acción: lo que vuelve, vuelve escrito.
+
+Se toma el procedimiento, no sus figuras ni la máquina.
 
 **Materiales** (esquema B):
 

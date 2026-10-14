@@ -84,4 +84,4 @@ El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» 
 - [ ] Probar el repujado a dos manos (Acción 4) y el estampado con papel mojado (variante de la Acción 8).
 - [ ] Decidir con Rebeca los nombres de los estilos (`08`).
 - [ ] Leer entero Villanueva Criales (2024) y anotar con página lo que se use (`07`, §4).
-- [ ] Mirar las imágenes de dominio público, que la máquina no pudo ver, y corregir sus fichas (`10`, §10.9).
+- [ ] Mirar las imágenes y los libros de dominio público, que la máquina no pudo ver, y corregir sus fichas (`10`, §10.11).

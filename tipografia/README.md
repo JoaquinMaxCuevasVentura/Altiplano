@@ -44,7 +44,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), el testigo (lo que se probó y lo que quedó) y otros registros de la ruina, de dominio público |
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `09_las_manos_no_tienen_lengua.md` | Lo que se toma de Cárcamo (el *manuaje*: las manos no tienen lengua) y de Johnson (la segunda vida de los árboles), y lo que cambia en el taller |
-| `10_imagenes_de_dominio_publico.md` | Doce imágenes del Public Domain Image Archive, con su ficha: el fonógrafo de Edison (la voz que repuja), las manos de Bulwer, las gotas de Worthington, la danza escrita de Feuillet y dos alfabetos vecinos. Para mirar, no para calcar |
+| `10_imagenes_de_dominio_publico.md` | Imágenes y libros de dominio público, con su ficha y su enlace: el primer libro en relieve para ciegos (Haüy, 1786), el fonógrafo y el fonautógrafo (la voz que repuja y la voz escrita), las manos de Bulwer y Bonet, las gotas de Worthington, alfabetos vecinos y dónde seguir buscando. Para mirar, no para calcar |
 | `digital/poliza.py` | La póliza en OpenType: reparte las placas para que ninguna se repita dentro de un verso; la prueba con HarfBuzz |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
