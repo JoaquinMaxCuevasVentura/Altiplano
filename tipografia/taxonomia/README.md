@@ -1,6 +1,6 @@
 # La taxonomía de las referencias
 
-Nueve láminas A3 que ordenan las referencias de dominio público de `../10_imagenes_de_dominio_publico.md` por el **mecanismo** que activan, no por su estilo.
+Diez láminas A3 que ordenan las referencias de dominio público de `../10_imagenes_de_dominio_publico.md` por el **mecanismo** que activan, no por su estilo.
 
 El método viene de un reel de Jason Murray (Modern Art Direction), «A Taxonomy of Visuals». Clasifica las imágenes en cuatro niveles: operación, dominio, técnica y ejecución.
 
@@ -9,10 +9,10 @@ El método viene de un reel de Jason Murray (Modern Art Direction), «A Taxonomy
 **No son la letra.**
 
 - Ninguna forma de las referencias pasa a la caja ni a la fuente (`../06_etica_fuentes_y_pendientes.md`, §6.4).
-- Ninguna imagen se reproduce. Cada técnica se dibuja como un mecanismo, en corte, en planta o en serie.
+- Cada técnica se dibuja como un mecanismo, en corte, en planta o en serie. Las imágenes van solo en el atlas (R-09), si son de dominio público.
 - La máquina buscó las imágenes y no las vio. Por eso cada ficha va a puntos, en violeta, hasta que la mires.
 
-**Descarga:** [`contenida_taxonomia.pdf`](contenida_taxonomia.pdf), nueve páginas A3 apaisadas. Sus enlaces a los archivos funcionan.
+**Descarga:** [`contenida_taxonomia.pdf`](contenida_taxonomia.pdf), diez páginas A3 apaisadas. Sus enlaces a los archivos funcionan.
 
 ## Qué sirve del método y qué no
 
@@ -64,6 +64,7 @@ Nada del dibujo sale del reel. Cada decisión gráfica tiene su porqué en el pr
 | [R-06](png/R-06_inferir.png) | **Inferir** (elipsis y metáfora): hacer visible lo que suena, leer sin tocar, el gesto como signo, sustitución de forma, metáfora material y prosopopeya, que no se hace. Nueve fichas |
 | [R-07](png/R-07_encargos.png) | **Del encargo a la referencia:** seis columnas que bajan de un verso, o de una decisión de la obra, hasta lo que cae en *Contenida*. Una columna vacía, para la mano, y cuatro encargos que ningún archivo contestó todavía |
 | [R-08](png/R-08_afuera.png) | **Lo que queda afuera:** lo que se dejó a propósito, lo que se buscó y no apareció (cada cosa en su celda vacía), dónde seguir buscando, los pendientes y cómo entra una referencia nueva |
+| [R-09](png/R-09_atlas.png) | **El atlas de las referencias:** las obras con su imagen, al modo del cuadro de materiales de Kengo Kuma. Arriba, los siete dominios; en el medio, cada obra en su celda, de la más antigua a la más nueva; abajo, la cadena del taller. Cada celda se vacía por su desagüe, y su línea cae en la acción donde se toma |
 
 ## Lo que mostró
 
@@ -71,6 +72,24 @@ Nada del dibujo sale del reel. Cada decisión gráfica tiene su porqué en el pr
 - **Lo que falta se junta en la voz y en el calco.** De nueve búsquedas sin resultado, tres caerían en la Acción 10 y tres en la Acción 3.
 - **Las referencias se juntan en los planos, en la caja, en el repujado y en la voz.** Cinco caen en lo que no se hace: son vecinas opuestas, y se citan para no repetirlas.
 - **Una sola cae en el reparto:** Bell, la máquina que lee una huella sin tocarla.
+
+## Las imágenes del atlas
+
+R-09 lleva la imagen de cada referencia, **solo si es de dominio público**, con su archivo enlazado en su celda. Van en tinta sobre papel, como el resto de las láminas: el color es material (`03`, §3.9).
+
+- **Se bajan** con `descargar_imagenes.py`. Abre la página de cada referencia (`IMAGENES`, en `taxonomia.py`), toma la imagen que la página declara como suya y la guarda en `imagenes/<clave>.jpg`. En `imagenes/fuentes.json` anota la página, la imagen, la licencia y la fecha.
+- **También se pueden poner a mano,** con el nombre de su clave: `imagenes/hauy.jpg`, `imagenes/chladni.png`…
+- **`imagenes/` no entra en el repositorio** (`06`, §6.4). La lámina mete cada imagen, reducida a su celda, en su SVG y su PDF.
+- **No se bajan las fotos de hoy:** la del disco de Bell (Smithsonian), las del libro de Haüy (Perkins, el museo de la APH) y la de Bonet (The Paris Review). Haüy y Bonet se toman de la Wellcome Collection.
+- **Por revisar:** las licencias de Moon y de la impresión natural (Wikimedia Commons), de Scott (el escaneo de First Sounds) y de Hoefnagel (la página es de la tienda de The Public Domain Review). La celda lo dice.
+
+El 17.10.2026 no se pudo bajar ninguna: la red del entorno donde se hizo bloqueaba los archivos. Cada celda vacía dice *imagen sin bajar* y el nombre del archivo que espera.
+
+```bash
+pip install pillow
+python3 tipografia/taxonomia/descargar_imagenes.py      # [--solo hauy] [--rehacer]
+python3 tipografia/taxonomia/generar_taxonomia.py
+```
 
 ## Visto y no visto
 
@@ -86,9 +105,11 @@ Nada del dibujo sale del reel. Cada decisión gráfica tiene su porqué en el pr
 | `taxonomia.py` | Los datos, separados del dibujo para corregirlos sin tocar el código: el método del reel y su reforma, las 41 técnicas del reel, las 17 de *Contenida*, las 25 referencias con su procedencia, los encargos y lo que queda afuera |
 | `por_que.py` | El porqué de cada lámina: la columna de la derecha |
 | `generar_taxonomia.py` | Arma las láminas. Usa la hoja de los planos (`../planos/dibujo.py`): el marco, el cajetín, las líneas, los rombos y la columna |
-| `svg/` | Las nueve láminas en SVG, en milímetros |
+| `descargar_imagenes.py` | Baja las imágenes de dominio público del atlas a `imagenes/`, con su licencia |
+| `imagenes/` | Las imágenes del atlas. No entra en el repositorio |
+| `svg/` | Las diez láminas en SVG, en milímetros |
 | `png/` | Vistas previas, a 110 ppp |
-| `contenida_taxonomia.pdf` | Las nueve, una por página, en A3, con los enlaces |
+| `contenida_taxonomia.pdf` | Las diez, una por página, en A3, con los enlaces |
 
 Para rehacerlas (unos diez segundos):
 

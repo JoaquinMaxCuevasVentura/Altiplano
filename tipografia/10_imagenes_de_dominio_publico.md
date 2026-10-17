@@ -7,11 +7,11 @@ Lo que se encontró el 14.10.2026 en dos búsquedas:
   - las colecciones y los ensayos de [The Public Domain Review](https://publicdomainreview.org/), entre ellos [«The Human Alphabet»](https://publicdomainreview.org/collection/the-human-alphabet) e [«Inventing the Recording»](https://publicdomainreview.org/essay/inventing-the-recording/);
   - la Wellcome Collection, First Sounds, el Smithsonian y los archivos de libros para ciegos.
 
-**Son referencias para mirar.** Ninguna forma pasa a las letras, a la caja ni a la fuente. Las imágenes y los libros no se descargan ni se suben al repositorio: queda el enlace a su página. Las imágenes y los libros antiguos son de dominio público, según cada archivo. Los ensayos de The Public Domain Review son textos de hoy: se citan, no se copian.
+**Son referencias para mirar.** Ninguna forma pasa a las letras, a la caja ni a la fuente. Las imágenes y los libros no se suben al repositorio: queda el enlace a su página. Las de dominio público se pueden bajar para el atlas de la taxonomía (R-09, §10.12), a una carpeta que no se sube. Las imágenes y los libros antiguos son de dominio público, según cada archivo. Los ensayos de The Public Domain Review son textos de hoy: se citan, no se copian.
 
 **Las buscó la máquina, a tu pedido, y no las vio.** Ninguno de estos archivos abre desde su entorno. Se encontraron con un buscador, y cada ficha sale de lo que dicen el título, la descripción del archivo o las fuentes que lo comentan. Hay que mirarlas y corregir lo que no coincida (§10.11).
 
-**Están ordenadas por su mecanismo** en nueve láminas A3, con un método tomado con cuidado de un reel de Jason Murray (§10.12 y `taxonomia/`).
+**Están ordenadas por su mecanismo** en diez láminas A3, con un método tomado con cuidado de un reel de Jason Murray (§10.12 y `taxonomia/`).
 
 ## 10.1. Repujar por el reverso: Acción 4
 
@@ -185,7 +185,7 @@ Lo que se encontró el 14.10.2026 en dos búsquedas:
 
 ## 10.12. La taxonomía: las referencias por su mecanismo
 
-Las referencias de este documento están ordenadas en nueve láminas A3, en `taxonomia/` ([PDF](taxonomia/contenida_taxonomia.pdf)).
+Las referencias de este documento están ordenadas en diez láminas A3, en `taxonomia/` ([PDF](taxonomia/contenida_taxonomia.pdf)). La última, R-09, es un atlas con la imagen de cada una, al modo del cuadro de materiales de Kengo Kuma. Las imágenes se bajan con `taxonomia/descargar_imagenes.py`, solo las de dominio público.
 
 **El método** viene de un reel de Jason Murray, «A Taxonomy of Visuals» (Modern Art Direction, 2026). Ordena las imágenes por el mecanismo que activan, no por su estilo, en cuatro niveles: operación, dominio, técnica y ejecución. No se encontró una página que lo explique. Murray tiene un podcast, [*Modern Art Direction*](https://podcastrepublic.net/podcast/1788684591), y un directorio de herramientas, [*Art Director Toolbox*](https://toolbox.super.site/articles).
 

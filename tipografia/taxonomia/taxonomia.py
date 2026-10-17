@@ -478,6 +478,69 @@ REFERENCIAS = {
         no_toma="Hacer letras con cuerpos: la obra ya pone el cuerpo, y el de Rebeca no se usa.", rima=""),
 }
 
+# ---------------------------------------------------------------- las imágenes del atlas (R-09)
+# De qué página se baja la imagen de cada referencia, y con qué licencia. Solo las de dominio público:
+# las fotos de hoy (el Smithsonian, Perkins, el museo de la APH, The Paris Review) quedan como enlace,
+# y Haüy y Bonet se toman de la Wellcome Collection. Se bajan con descargar_imagenes.py a imagenes/,
+# que no entra en el repositorio (06, §6.4).
+DP_PDIA = "dominio público, según el Public Domain Image Archive"
+DP_PDR = "dominio público, según The Public Domain Review"
+
+IMAGENES = {
+    "hauy": dict(pagina="https://wellcomecollection.org/works/fwj4w4rp",
+                 licencia="marca de dominio público, Wellcome Collection"),
+    "moon": dict(pagina="https://en.wikipedia.org/wiki/Moon_type", licencia="revisar en Wikimedia Commons"),
+    "fonografo": dict(pagina="https://pdimagearchive.org/images/b8be5944-796f-44dc-80bf-163a58743449/",
+                      licencia=DP_PDIA),
+    "impresion": dict(pagina="https://en.wikipedia.org/wiki/The_Ferns_of_Great_Britain_and_Ireland",
+                      licencia="dominio público por su fecha; revisar en Wikimedia Commons"),
+    "scott": dict(pagina="https://www.firstsounds.org/sounds/earlier-playback.php",
+                  licencia="revisar: escaneo de First Sounds de un trazo de 1860"),
+    "bell": dict(pagina="https://insider.si.edu/2013/04/hear-my-voice-smithsonian-identifies-130-year-old-"
+                        "recording-as-alexander-graham-bells-voice/",
+                 licencia="foto del Smithsonian de 2013: no es de dominio público", descarga=False),
+    "watts": dict(pagina="https://publicdomainreview.org/essay/picturing-a-voice-margaret-watts-hughes-and-the-"
+                         "eidophone/", licencia=DP_PDR),
+    "chladni": dict(pagina="https://pdimagearchive.org/images/d3a940a7-aac0-49e7-9af4-23b2356be7b5/",
+                    licencia=DP_PDIA),
+    "kempelen": dict(pagina="https://publicdomainreview.org/essay/early-androids-and-artificial-speech",
+                     licencia=DP_PDR),
+    "moreda": dict(pagina="https://publicdomainreview.org/essay/inventing-the-recording/", licencia=DP_PDR),
+    "bulwer": dict(pagina="https://pdimagearchive.org/images/4ad90c06-f3dc-40f0-bd62-a8953db26439/",
+                   licencia=DP_PDIA),
+    "bonet": dict(pagina="https://wellcomecollection.org/works/sx9e24hu",
+                  licencia="marca de dominio público, Wellcome Collection"),
+    "anianus": dict(pagina="https://pdimagearchive.org/images/137949be-a852-417d-b318-c94e0117ab40/",
+                    licencia=DP_PDIA),
+    "mano1466": dict(pagina="https://pdimagearchive.org/images/2502c9fe-691e-47ec-8cd9-38b6e1c35e76/",
+                     licencia=DP_PDIA),
+    "cooperrider": dict(pagina="https://publicdomainreview.org/essay/handy-mnemonics", licencia=DP_PDR),
+    "worthington": dict(pagina="https://pdimagearchive.org/images/fe3fc9b0-6acd-486b-a72a-4aeef1441c04/",
+                        licencia=DP_PDIA),
+    "feuillet": dict(pagina="https://pdimagearchive.org/images/d4b9020a-cb94-444f-a612-7bd487eac204/",
+                     licencia=DP_PDIA),
+    "page": dict(pagina="https://pdimagearchive.org/images/62ae7660-5aed-41cc-a421-11d9ead9553a/",
+                 licencia=DP_PDIA),
+    "hoefnagel": dict(pagina="https://publicdomainreview.org/product/guide-for-constructing-the-letters-k-and-l/",
+                      licencia="revisar: es la página de la tienda de The Public Domain Review"),
+    "publicius": dict(pagina="https://pdimagearchive.org/images/8f60966e-039b-4395-ba0f-2e66398fbbf5/",
+                      licencia=DP_PDIA),
+    "organica": dict(pagina="https://publicdomainreview.org/collection/an-alphabet-of-organic-type-ca-1650/",
+                     licencia="CC0, Rijksmuseum"),
+    "silvestre": dict(pagina="https://pdimagearchive.org/images/4113be3d-a919-4880-acef-723a9f424979/",
+                      licencia=DP_PDIA),
+    "fry": dict(pagina="https://publicdomainreview.org/collection/pantographia", licencia=DP_PDR),
+    "puntuacion": dict(pagina="https://publicdomainreview.org/collection/punctuation-personified", licencia=DP_PDR),
+    "humano": dict(pagina="https://publicdomainreview.org/collection/the-human-alphabet", licencia=DP_PDR),
+}
+
+# lo que se usaría de cada archivo y no se baja: son fotos de hoy
+SOLO_ENLACE = [
+    ("Smithsonian", "la foto del disco de Bell (2013)"),
+    ("Perkins y el museo de la APH", "las fotos del libro de Haüy: se baja el de la Wellcome Collection"),
+    ("The Paris Review", "la imagen de Bonet: se baja la de la Wellcome Collection"),
+]
+
 # el orden de las referencias: por técnica principal
 ORDEN = sorted(REFERENCIAS, key=lambda k: (REFERENCIAS[k]["tec"][0], REFERENCIAS[k]["anio"], k))
 

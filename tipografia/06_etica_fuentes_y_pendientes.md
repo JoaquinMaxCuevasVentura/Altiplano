@@ -37,7 +37,7 @@ El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» 
 
 - **Se mira, no se calca.** Ningún motivo pasa a las letras, a la caja ni a la fuente.
 - **Cada referencia dice de dónde viene:** quién la registró, cuándo, con qué medio y con qué licencia.
-- **Lo ajeno se cita, no se descarga ni se sube.**
+- **Lo ajeno se cita y no se sube.** Desde el 17.10.2026, las imágenes de dominio público de `10` se pueden bajar para el atlas de la taxonomía (`taxonomia/`, R-09), cada una con su licencia, a una carpeta que no entra en el repositorio. Las fotos de hoy no se bajan.
 - **Las tipografías con motivos sirven de contraste:** muestran lo que ya existe para no repetirlo, y se describen sin descalificar a quien las hizo.
 
 ## 6.5. Qué está verificado y qué no

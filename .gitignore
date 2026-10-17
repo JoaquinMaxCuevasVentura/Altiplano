@@ -4,3 +4,6 @@ tipografia/informe/.titulos.json
 
 # generado por tipografia/digital/poliza.py
 tipografia/digital/poliza.fea
+
+# las imágenes del atlas (taxonomia/descargar_imagenes.py): no entran en el repositorio (06, §6.4)
+tipografia/taxonomia/imagenes/

@@ -49,7 +49,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
 | `planos/` | **Los planos de la anatomía base:** once láminas A3, como un plano de arquitectura (cotas, ejes, niveles, cortes, detalles, cajetín), con el porqué de cada decisión de anatomía tipográfica: concepto, retórica y poética. En SVG, PDF y DXF. Es la concepción formal: la mano calca desde el pie |
-| `taxonomia/` | **Las referencias, por su mecanismo:** nueve láminas A3 que ordenan las imágenes de dominio público de `10` con un método tomado con cuidado de un reel de Jason Murray (operación, dominio, técnica, referencia y dónde cae en el taller). Cada técnica se dibuja como un mecanismo, nunca como la imagen; cada ficha va a puntos hasta que la mires. En SVG, PNG y PDF con enlaces |
+| `taxonomia/` | **Las referencias, por su mecanismo:** diez láminas A3 que ordenan las imágenes de dominio público de `10` con un método tomado con cuidado de un reel de Jason Murray (operación, dominio, técnica, referencia y dónde cae en el taller). Cada técnica se dibuja como un mecanismo, nunca como la imagen; cada ficha va a puntos hasta que la mires. En SVG, PNG y PDF con enlaces |
 | `aplicacion/` | **Las decisiones de la letra:** una sola pantalla con el plano del signo, nueve decisiones de anatomía con su porqué y la caja. Exporta `parametros.json` para `gramatica.py --parametros` |
 
 ## Estado

@@ -19,7 +19,9 @@ Necesita Chromium (o Chrome) para el PDF.
 """
 
 import argparse
+import base64
 import html
+import io
 import math
 import os
 import re
@@ -46,6 +48,9 @@ SERIE = "las referencias · una taxonomía tomada con cuidado"
 PIE = (("DIBUJÓ", "la máquina, desde las fichas de 10, sin ver las imágenes"),
        ("MIRA", "la mano: cada imagen en su archivo (10, §10.11)"),
        ("NOTA", "se dibuja el mecanismo, no la imagen: nada pasa a la letra"))
+PIE_ATLAS = (("DIBUJÓ", "la máquina, desde las fichas de 10; las imágenes, de su archivo"),
+             ("MIRA", "la mano: cada imagen en su archivo (10, §10.11)"),
+             ("NOTA", "de dominio público: se miran, no se calcan; nada pasa a la letra"))
 
 LAMINAS = [
     ("R-00", "Índice y convenciones", "cómo se leen estas láminas", "indice"),
@@ -57,6 +62,7 @@ LAMINAS = [
     ("R-06", "Inferir", "cuarta operación · técnicas 12 a 17", "inferir"),
     ("R-07", "Del encargo a la referencia", "el camino al revés: del verso al archivo", "encargos"),
     ("R-08", "Lo que queda afuera", "lo dejado, lo no encontrado y lo pendiente", "afuera"),
+    ("R-09", "El atlas de las referencias", "las obras, de su dominio a la acción donde caen", "atlas"),
 ]
 LAMINA_DE_OP = {"diferenciar": "R-03", "agrupar": "R-04", "secuenciar": "R-05", "inferir": "R-06"}
 
@@ -1669,6 +1675,237 @@ def r08(h):
               "calco son los que más esperan: ahí conviene seguir buscando, y en la cinta, que no tiene ninguna.")])
 
 
+# ---------------------------------------------------------------- R-09: el atlas
+
+DOMINIOS_ATLAS = ["materia", "estructura", "sentido", "mano", "tiempo", "huella", "procedencia"]
+CARPETA_IMAGENES = AQUI / "imagenes"
+ARCHIVO_DE = {"pdimagearchive.org": "Public Domain Image Archive", "publicdomainreview.org": "The Public Domain Review",
+              "wellcomecollection.org": "Wellcome Collection", "en.wikipedia.org": "Wikipedia y Wikimedia Commons",
+              "www.firstsounds.org": "First Sounds", "insider.si.edu": "Smithsonian"}
+
+
+def anio(k):
+    m = re.search(r"\d{4}", T.REFERENCIAS[k]["anio"])
+    return int(m.group(0)) if m else 0
+
+
+def archivo_imagen(k):
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        ruta = CARPETA_IMAGENES / f"{k}.{ext}"
+        if ruta.exists():
+            return ruta
+    return None
+
+
+def en_tinta(ruta, ancho_mm, alto_mm, ppp=300):
+    """La imagen, en tinta sobre papel, como el resto de las láminas (el color es material: 03, §3.9), reducida a
+    su celda y metida en el SVG: la lámina no depende de la carpeta imagenes/, que no se sube."""
+    from PIL import Image, ImageOps
+    im = Image.open(ruta).convert("L")
+    im.thumbnail((int(ancho_mm / 25.4 * ppp), int(alto_mm / 25.4 * ppp)))
+    im = ImageOps.colorize(ImageOps.autocontrast(im, cutoff=1), black=TINTA, white=PAPEL)
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=84)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
+def celda_atlas(h, k, x, y, w, alto):
+    """Una referencia en su celda: arriba su técnica, su nombre y su archivo; abajo, su imagen. Se abre abajo."""
+    R, I = T.REFERENCIAS[k], T.IMAGENES[k]
+    pad = 1.2
+    t = T.TECNICA[R["tec"][0]]
+    marca_tecnica(h, x + pad + 1.75, y + pad + 2.3, t["n"], 4.2, no=t["estado"] == "no")
+    xt = x + pad + 4.9
+    lineas = cortar(R["corto"], x + w - pad - xt, 2.2, SERIF, 400)[:2]
+    yy = renglones(h, xt, y + pad + 2.5, lineas, 2.2, SERIF, 400, inter=1.12)
+    archivo = ARCHIVO_DE.get(I["pagina"].split("/")[2], I["pagina"].split("/")[2])
+    ya = max(yy, y + pad + 5.2) + 0.2
+    enlace(h, I["pagina"], lambda: h.texto(xt, ya, archivo, 1.4, color=GRIS))
+    subrayado(h, xt, ya, MEDIR.ancho(archivo, 1.4, MONO), GRIS)
+    # la imagen
+    ix0, iy0 = x + pad, ya + 1.6
+    iw, ih = w - 2 * pad, y + alto - pad - iy0
+    ruta = archivo_imagen(k)
+    if ruta:
+        datos = en_tinta(ruta, iw, ih)
+        h.add("cuerpo", f'<image x="{f(ix0)}" y="{f(iy0)}" width="{f(iw)}" height="{f(ih)}" '
+                        f'preserveAspectRatio="xMidYMax meet" href="data:image/jpeg;base64,{datos}"/>')
+        if "revisar" in I["licencia"]:
+            h.texto(x + w / 2, y + alto - pad - 0.8, "licencia por revisar", 1.3, "middle", color=VIOLETA, fondo=True)
+    elif not I.get("descarga", True):
+        renglones(h, x + w / 2, iy0 + ih / 2 - 1.0, ["solo enlace:"] + cortar("es una foto de hoy, no de dominio "
+                                                                          "público", iw - 2, 1.4),
+                  1.4, ancla="middle", color=GRIS, inter=1.3)
+    else:
+        h.texto(x + w / 2, iy0 + ih / 2, "imagen sin bajar", 1.5, "middle", color=VIOLETA)
+        h.texto(x + w / 2, iy0 + ih / 2 + 2.4, f"imagenes/{k}.jpg", 1.3, "middle", color=GRIS)
+    if R["mirada"]:
+        celda_abierta(h, x, y, x + w, y + alto, "celda", capa="textos", w=0.3)
+    else:
+        celda_abierta(h, x, y, x + w, y + alto, "contorno_r", capa="textos", w=0.35)
+
+
+def r09(h):
+    XA, XB = X0 + 3, 402.0
+    h.texto(XA, Y0 + 10, "el atlas de las referencias", 9.0, familia=SERIF, peso=300)
+    h.texto(XA, Y0 + 16.2, "arriba, el dominio; en el medio, cada obra en su celda, de la más antigua a la más nueva; "
+                           "abajo, la acción del taller donde cae. Cada celda se vacía por su desagüe.", 2.2,
+            color=GRIS)
+    # las columnas: un dominio cada una
+    refs = {d: sorted((k for k in T.REFERENCIAS if T.TECNICA[T.REFERENCIAS[k]["tec"][0]]["dom"] == d),
+                      key=lambda k: (anio(k), k)) for d in DOMINIOS_ATLAS}
+    ncol = {d: 2 if len(refs[d]) > 3 else 1 for d in DOMINIOS_ATLAS}
+    gap_dom, gap_in = 7.0, 4.6
+    cw = (XB - XA - gap_dom * (len(DOMINIOS_ATLAS) - 1) - gap_in * sum(n - 1 for n in ncol.values())) / \
+        sum(ncol.values())
+    alto, paso = 32.0, 40.0
+    yh, yg = Y0 + 22, Y0 + 38
+    columnas = []          # (x0, x1) de cada columna de celdas, de izquierda a derecha
+    celdas = {}            # clave → (x, y, columna, ¿es la última de su columna?)
+    x = XA
+    for d in DOMINIOS_ATLAS:
+        D = T.DOMINIOS[d]
+        ancho = ncol[d] * cw + (ncol[d] - 1) * gap_in
+        murray = "se suma: el reel no lo trae" if D["murray"] == "—" else D["murray"].lower()
+        h.texto(x, yh + 3.0, murray, 1.75, color=VIOLETA if D["estado"] == "suma" else GRIS)
+        h.texto(x, yh + 8.6, D["nombre"], 3.6, familia=SERIF, peso=400)
+        simbolo(h, x + ancho - 5.0, yh + 2.4, D["estado"], 5.0)
+        h.linea((x, yh + 11.2), (x + ancho, yh + 11.2), "cota", "textos")
+        for xx in (x, x + ancho):
+            h.linea((xx, yh + 10.0), (xx, yh + 12.4), "cota", "textos")
+        primera = len(columnas)
+        for j in range(ncol[d]):
+            columnas.append((x + j * (cw + gap_in), x + j * (cw + gap_in) + cw))
+        for i, k in enumerate(refs[d]):
+            fila, col = divmod(i, ncol[d])
+            celdas[k] = (columnas[primera + col][0], yg + fila * paso, primera + col)
+        x += ancho + gap_dom
+    fondo_de = {}
+    for cx, cy, c in celdas.values():
+        fondo_de[c] = max(fondo_de.get(c, cy), cy)
+    celdas = {k: (cx, cy, c, cy == fondo_de[c]) for k, (cx, cy, c) in celdas.items()}
+    yfin = yg + 2 * paso + alto + 2.2           # donde terminan las celdas y empieza la bajada
+    # las bocas: la cadena del taller
+    n = len(T.COLUMNAS)
+    yn = 208.0
+    xs = [XA + 4 + i * (XB - XA - 8) / (n - 1) for i in range(n)]
+    cuenta = cuenta_columnas()
+    # las líneas: de cada celda, por su desagüe, a cada acción donde cae
+    canales = {}           # canal (entre columnas) → líneas que bajan por él
+    lineas = []
+    for k, (cx, cy, c, ultima) in celdas.items():
+        destinos = [i for i, (col, *_r) in enumerate(T.COLUMNAS) if col in T.columnas_de(k)]
+        for j, i in enumerate(destinos):
+            L = dict(k=k, salida=(cx + cw / 2 + (j - (len(destinos) - 1) / 2) * 0.7, cy + alto), boca=i,
+                     no=T.COLUMNAS[i][0] == "no", y=cy, recta=ultima, orden=j)
+            if not ultima:
+                lado = -1 if xs[i] < cx + cw / 2 else 1
+                L["canal"] = (c, lado)
+                canales.setdefault((c, lado), []).append(L)
+            lineas.append(L)
+
+    def x_canal(c, lado):
+        x0, x1 = columnas[c]
+        if lado < 0:
+            return (columnas[c - 1][1] + x0) / 2 if c else x0 - 2.0
+        return (x1 + columnas[c + 1][0]) / 2 if c + 1 < len(columnas) else x1 + 2.0
+
+    # en cada canal, las que entran desde más abajo van más cerca de su celda: así no se cruzan
+    por_canal = {}
+    for (c, lado), Ls in canales.items():
+        g = x_canal(c, lado)
+        por_canal.setdefault(round(g, 2), []).extend((lado, L) for L in Ls)
+    for g, items in por_canal.items():
+        desde_izq = sorted((L for lado, L in items if lado > 0), key=lambda L: (-L["y"], L["orden"]))
+        desde_der = sorted((L for lado, L in items if lado < 0), key=lambda L: (L["y"], -L["orden"]))
+        orden = desde_izq + desde_der
+        for m, L in enumerate(orden):
+            L["gx"] = g + (m - (len(orden) - 1) / 2) * 0.6
+    for L in lineas:
+        sx, sy = L["salida"]
+        ox, oy = xs[L["boca"]], yn - 2.6
+        if L["recta"]:
+            pts = [(sx, sy), (sx, yfin)]
+            x0_, y0_ = sx, yfin
+        else:
+            yv = sy + 2.4 + L["orden"] * 0.6
+            pts = [(sx, sy), (sx, yv), (L["gx"], yv), (L["gx"], yfin)]
+            x0_, y0_ = L["gx"], yfin
+        dy = oy - y0_
+        curva = [(x0_ + (ox - x0_) * (3 * u * u - 2 * u ** 3), y0_ + dy * u) for u in np.linspace(0, 1, 40)]
+        extra = dict(color=GRIS, w=0.17)
+        if L["no"]:
+            extra.update(color=GRIS2, dash="1.4 0.5 0.3 0.5")
+        h.poli(pts + curva[1:], "contorno", "aux", **extra)
+        if L["no"]:
+            h.linea((ox - 1.2, oy), (ox + 1.2, oy), "cota", "aux", w=0.35, color=GRIS2)
+        else:
+            h.punto((ox, oy), 0.42, GRIS, "aux")
+    # las celdas, encima de las líneas
+    for k, (cx, cy, c, ultima) in celdas.items():
+        celda_atlas(h, k, cx, cy, cw, alto)
+    # la cadena del taller
+    for i, (col, nombre, cuad) in enumerate(T.COLUMNAS):
+        xx = xs[i]
+        if cuenta[col]:
+            h.circulo((xx, yn), 2.5, "filete", "textos", relleno=PAPEL)
+            h.texto(xx, yn + 0.8, str(cuenta[col]), 2.2, "middle", peso=700)
+        else:
+            notdef(h, xx - 2.1, yn - 2.6, 4.2, 5.2, capa="textos", w=0.25)
+        h.texto(xx, yn + 6.0, col, 1.95, "middle", peso=700)
+        for j, ln in enumerate(cortar(nombre, 19, 1.7)):
+            h.texto(xx, yn + 8.4 + j * 2.1, ln, 1.7, "middle", color=GRIS)
+    for cuad, nombre in T.CUADERNOS.items():
+        idx = [i for i, c in enumerate(T.COLUMNAS) if c[2] == cuad]
+        a, b = xs[idx[0]] - 6, xs[idx[-1]] + 6
+        h.linea((a, yn + 13.6), (b, yn + 13.6), "cota", "textos")
+        for xx in (a, b):
+            h.linea((xx, yn + 12.4), (xx, yn + 13.6), "cota", "textos")
+        h.texto((a + b) / 2, yn + 16.4, f"cuaderno {cuad} · {nombre}", 1.8, "middle", color=GRIS)
+    # cómo se lee y las imágenes
+    yl = 238.0
+    titulo_seccion(h, XA, yl, "Cómo se lee", 108)
+    yy = yl + 6.2
+    muestras = [("celda", "en línea continua: ya la miraste en su archivo"),
+                ("contorno_r", "a puntos y en violeta: nadie la miró todavía"),
+                ("toma", "cae en esa acción del taller: se toma"),
+                ("no", "cae en lo que no se hace (06, §6.4)"),
+                ("notdef", "una acción sin ninguna referencia"),
+                ("tecnica", "la técnica de la obra (R-00)")]
+    for tipo, txt in muestras:
+        if tipo in ("celda", "contorno_r"):
+            celda_abierta(h, XA + 3, yy - 3.4, XA + 9.5, yy + 0.9, tipo, capa="textos", w=0.3)
+        elif tipo == "toma":
+            hilo(h, (XA + 1, yy - 1.2), (XA + 11, yy - 1.2), True, color=GRIS, capa="textos", w=0.17)
+        elif tipo == "no":
+            hilo(h, (XA + 1, yy - 1.2), (XA + 11, yy - 1.2), False, "rotura", GRIS, "textos", w=0.17)
+        elif tipo == "notdef":
+            notdef(h, XA + 4.2, yy - 3.6, 3.8, 4.6, capa="textos", w=0.25)
+        else:
+            marca_tecnica(h, XA + 6.2, yy - 1.3, 5, 4.2)
+        h.texto(XA + 15, yy, txt, 2.05)
+        yy += 6.6
+    xi = XA + 118
+    titulo_seccion(h, xi, yl, "Las imágenes", 278 - xi)
+    faltan = [k for k in T.REFERENCIAS if T.IMAGENES[k].get("descarga", True) and not archivo_imagen(k)]
+    textos = ["**Solo de dominio público,** cada una con su archivo, enlazado en su celda. Van en tinta sobre papel, "
+              "como el resto de las láminas: el color es material (03, §3.9). Las fotos de hoy quedan como enlace: "
+              + "; ".join(f"{a}, {q}" for a, q in T.SOLO_ENLACE) + "."]
+    if faltan:
+        textos.append(f"**Faltan {len(faltan)} imágenes.** Cada celda vacía espera la suya: las baja "
+                      "descargar_imagenes.py desde su página, o se ponen a mano en imagenes/, con el nombre de su "
+                      "clave. Esa carpeta no entra en el repositorio (06, §6.4).")
+    yy = yl + 5.6
+    for t in textos:
+        yy = h.parrafo(xi, yy, 278 - xi, t, 2.3, inter=1.32) + 1.0
+    for v in ("Una piscina vacía,", "donde una vez aprendí a flotar,", "ahora aprendo a mirar."):
+        h.texto(xi + 3, yy + 1.6, v, 2.5, familia=SERIF, cursiva=True, peso=400)
+        yy += 3.3
+    if yy > Y1:
+        print(f"  ! R-09: el texto se pasa {yy - Y1:.1f} mm")
+    print(f"    R-09: {len(celdas)} celdas, {len(lineas)} líneas; faltan {len(faltan)} imágenes")
+
+
 # ---------------------------------------------------------------- salida
 
 def chrome():
@@ -1703,7 +1940,7 @@ def svg_preciso(h, fuentes):
 
 
 FUNCIONES = {"R-00": r00, "R-01": r01, "R-02": r02, "R-03": r03, "R-04": r04, "R-05": r05, "R-06": r06,
-             "R-07": r07, "R-08": r08}
+             "R-07": r07, "R-08": r08, "R-09": r09}
 
 
 def main():
@@ -1717,7 +1954,8 @@ def main():
     for i, (cod, tit, sub, nombre) in enumerate(LAMINAS):
         if args.solo and cod != args.solo:
             continue
-        h = Hoja(cod, tit, sub, "sin escala", i + 1, len(LAMINAS), serie=SERIE, pie=PIE, unidades="—")
+        h = Hoja(cod, tit, sub, "sin escala", i + 1, len(LAMINAS), serie=SERIE,
+                 pie=PIE_ATLAS if cod == "R-09" else PIE, unidades="—", columna=cod != "R-09")
         FUNCIONES[cod](h)
         h.marco()
         (SVG / f"{cod}_{nombre}.svg").write_text(svg_preciso(h, "../../laminas/fuentes"), encoding="utf8")

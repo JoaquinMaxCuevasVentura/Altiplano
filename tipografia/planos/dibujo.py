@@ -140,10 +140,11 @@ class Hoja:
            ("NOTA", "regla de la forma, no pauta de calco: no entra en la caja"))
 
     def __init__(self, codigo, titulo, subtitulo, escala, n, total, fecha="17.10.2026", serie=None, pie=None,
-                 unidades="mm · (UPM)"):
+                 unidades="mm · (UPM)", columna=True):
         self.codigo, self.titulo, self.subtitulo, self.escala = codigo, titulo, subtitulo, escala
         self.n, self.total, self.fecha = n, total, fecha
         self.serie, self.pie, self.unidades = serie or self.SERIE, pie or self.PIE, unidades
+        self.con_columna = columna      # sin columna, el dibujo usa todo el ancho (el atlas de la taxonomía)
         self.capas = {c: [] for c in self.CAPAS}
         self.defs = []
         self._clip = 0
@@ -388,7 +389,8 @@ class Hoja:
                      ((0, ALTO / 2), (x0, ALTO / 2)), ((x1, ALTO / 2), (ANCHO, ALTO / 2))):
             self.linea(p, q, "filete", "marco", w=0.5)
         # la columna del «por qué»
-        self.linea((CAJETIN[0], y0), (CAJETIN[0], y1), "filete", "marco", w=0.5)
+        if self.con_columna:
+            self.linea((CAJETIN[0], y0), (CAJETIN[0], y1), "filete", "marco", w=0.5)
         self.cajetin()
 
     def cajetin(self):

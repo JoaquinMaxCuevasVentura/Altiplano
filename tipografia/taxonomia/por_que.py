@@ -23,9 +23,10 @@ TEXTOS = {
                       "desde lo que dice su archivo.",
                       "No se salvó la piedra,\nsolo la opinión sobre ella.")),
         ("decision", (2, "El mecanismo, no la imagen",
-                      "**La decisión.** Ninguna lámina reproduce una imagen. Cada técnica se dibuja como un "
-                      "detalle de plano: en corte, en planta o en serie. **Por qué.** Se toma el procedimiento, "
-                      "no las formas (04; 06, §6.4). Lo ajeno se cita: queda el enlace.", None)),
+                      "**La decisión.** Cada técnica se dibuja como un detalle de plano: en corte, en planta o "
+                      "en serie. Las imágenes van solo en el atlas (R-09): de dominio público, en tinta y con su "
+                      "archivo. **Por qué.** Se toma el procedimiento, no las formas (04; 06, §6.4). Lo ajeno se "
+                      "cita: queda el enlace.", None)),
         ("decision", (3, "Ninguna caja cierra",
                       "**La decisión.** Las cajas de la taxonomía y las fichas se abren abajo, y lo que no cabe "
                       "tiene su celda vacía. **Por qué.** Todo contorno cerrado tiene desagüe (03b, regla 2). "
