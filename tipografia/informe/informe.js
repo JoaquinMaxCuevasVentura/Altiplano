@@ -213,6 +213,11 @@ function contenido() {
     if (m.apaisado) { cerrar(false); secciones.push({ apaisado: true, hijos: m.hijos }); }
     else add(salto(), ...m.hijos);
   };
+  const apaisada = (ruta, pie) => {
+    if (!fs.existsSync(ruta)) return;
+    cerrar(false);
+    secciones.push({ apaisado: true, hijos: figura(ruta, pie, A4_H - 2 * MARGEN, A4_W - 2 * MARGEN - 900) });
+  };
 
   // ---------------------------------------------------------------- portada
   add(
@@ -660,7 +665,27 @@ function contenido() {
       ["Vecinas: Publicius, 1482; Silvestre, 1843; Fry, *Pantographia*, 1799; el tipo Moon, 1845; Hoefnagel, hacia 1595; Bierpfaff y Falck, hacia 1650; *Punctuation Personified*, 1824", "Alfabetos de objetos, de archivo, de todas las lenguas, para los dedos, construidos, blandos y de signos. Cada uno, con en qué se separa"],
       ["«The Human Alphabet», alfabetos hechos con cuerpos, 1534-1789", "La vecina opuesta: *Contenida* no hace letras con un cuerpo"],
     ], [4200, ANCHO - 4200]),
+    H2("11.5. La taxonomía: las referencias por su mecanismo"),
+    P("Las referencias de §11.4 están ordenadas en nueve láminas A3, en `tipografia/taxonomia/`. El método viene de un reel de Jason Murray, «A Taxonomy of Visuals» (Modern Art Direction, 2026): ordenar las imágenes por el mecanismo que activan, no por su estilo, en cuatro niveles (operación, dominio, técnica y ejecución). Se tomó con cuidado: del reel, la manera de ordenar; la manera de mostrar sale de las reglas de *Contenida*."),
+    tabla(["", "Del reel", "En *Contenida*"], [
+      ["Se toma", "Clasificar por el mecanismo; las cuatro operaciones (diferenciar, agrupar, secuenciar, inferir); ir del encargo a la referencia; un cuadro de muchos a muchos; la crítica a juntar imágenes por gusto", "Ya era una regla: se toma el procedimiento, no las formas. El encargo es la obra (D1 … D16) y el poema"],
+      ["Cambia", "Los seis dominios; las campañas como ejecución; la taxonomía de Linneo como imagen", "Siete dominios: materia y tacto, estructura, espacio y tiempo, la mano, sentido, procedencia y huella. Obras de dominio público, con su procedencia. Se clasifican procedimientos, nunca personas ni culturas"],
+      ["Se deja", "Destacar; el color, la luz y el foco como recursos; las herramientas (Obsidian, Notion); las campañas", "El color es material (§3.9), y la obra se mueve «apenas»"],
+      ["No se hace", "El rostro, la mirada y el cuerpo; citar un estilo o un motivo", "La obra tapa ojos y boca (D12); el cuerpo de Rebeca no se usa; ningún motivo pasa a las letras"],
+      ["Se suma", "—", "La huella; en cada ficha, la procedencia, lo que no se toma y si ya se miró; un quinto nivel, dónde cae cada referencia; una figura retórica por operación; la celda vacía"],
+    ], [1500, 3900, ANCHO - 5400]),
+    P("**De las 41 técnicas del reel**, 15 se toman, 6 cambian, 13 se dejan y 7 no se hacen. Las 21 que sirven ya trabajaban en *Contenida*: cada una tiene su plano, su acción o su regla. **El reel no trae formas: trae un orden para las referencias.**"),
+    P("**Cómo se ve.** No se imita la presentación del reel. Las cuatro operaciones llevan la marca de capítulo de las láminas, cuatro celdas con desagüe; cada técnica va en su celda y se dibuja como un detalle de plano (corte, planta o serie), nunca como la imagen de la referencia. Lo que la máquina no vio va a puntos y en violeta, como lo reconstruido. Lo que se toma termina en punto y lo que no, en corte, como en el mapa 2. Ninguna caja de la taxonomía cierra: lo que se deja cae por el desagüe, bajo el fondo, y lo que no se encontró ocupa una celda vacía."),
+    tabla(["Operación", "Técnicas y referencias"], [
+      ["1 · Diferenciar · antítesis", "1 textura contra plano (Haüy, Moon); 2 huella en metal blando (el fonógrafo); 3 contraste semántico (las vecinas: Fry, Silvestre); 4 quién lo hizo (Moreda)"],
+      ["2 · Agrupar · sinécdoque", "5 región común (Anianus, la mano de 1466, Cooperrider); 6 composición por partes (Page, Hoefnagel); 7 cuerpos que forman letra: no se hace (The Human Alphabet)"],
+      ["3 · Secuenciar · gradación y ciclo", "8 síntesis temporal (Worthington); 9 recorrido de lectura (Feuillet); 10 cadena de soportes (Auer y Bradbury); 11 la voz como línea (Scott)"],
+      ["4 · Inferir · elipsis y metáfora", "12 hacer visible lo que suena (Chladni, Watts Hughes); 13 leer sin tocar (Bell); 14 el gesto como signo (Bonet, Bulwer); 15 sustitución de forma (Publicius); 16 metáfora material (Bierpfaff y Falck); 17 prosopopeya: no se hace (Kempelen, *Punctuation Personified*)"],
+    ], [3000, ANCHO - 3000]),
+    P("**Lo que mostró el cuadro** (lámina R-02): las referencias se juntan en los planos, en la caja, en el repujado y en la voz. La cinta (Acción 6) no tiene ninguna: la oclusión se toma del reel, pero ningún archivo trajo una. Y de lo que se buscó sin éxito, casi todo caería en la voz o en el calco: ahí conviene seguir buscando."),
   );
+  apaisada(path.join(TIPO, "taxonomia", "png", "R-01_metodo.png"), "Lámina R-01: el método del reel, reformado. Arriba, sus niveles en corte; abajo, sus 41 técnicas por dominio, como cajas que se abren abajo: adentro, lo que se queda; bajo el fondo, lo que cae. A puntos, lo que se suma. Dibujo de la máquina, sin ver las imágenes.");
+  apaisada(path.join(TIPO, "taxonomia", "png", "R-02_cuadro.png"), "Lámina R-02: el cuadro de las referencias. Cada fila, una referencia, con su técnica, su archivo y la casilla de visto; cada columna, dónde cae: los planos, las trece acciones del taller, la cadena, el reparto y lo que no se hace. Las celdas vacías marcan lo que falta.");
 
   // ---------------------------------------------------------------- 12. ética
   add(
@@ -672,7 +697,7 @@ function contenido() {
     H2("12.2. Lo que no está en el repositorio"),
     P("Las fotos de la obra y los dos videos, la foto de la lámina, el dibujo de la lámina con el poema, el libro de Posnansky y el artículo de Agüero, Uribe y Berenguer. Lo que el proyecto usa de ellos está descrito, y del pie solo se guardan letras sueltas, recortadas."),
     H2("12.3. Asistencia de inteligencia artificial"),
-    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, los planos de la anatomía base, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
+    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, los planos de la anatomía base, las láminas de la taxonomía, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias: la máquina buscó las imágenes de dominio público sin poder verlas, y armó sus fichas desde lo que dicen los archivos. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
     H2("12.4. Las referencias visuales"),
     P("Los motivos tiwanacotas y las tipografías «étnicas» entran como referencia visual, anotados aparte de las letras (§11). Se miran, no se calcan: ningún motivo pasa a las letras, a la caja ni a la fuente. Cada referencia dice quién hizo el registro, cuándo, con qué medio y con qué licencia, y lo ajeno se cita, no se descarga."),
     H2("12.5. Lo que el proyecto no afirma"),
@@ -710,6 +735,7 @@ function contenido() {
     P("Kempelen, Wolfgang von (1791). *Mechanismus der menschlichen Sprache nebst der Beschreibung seiner sprechenden Maschine*. Viena."),
     P("LettError (Erik van Blokland y Just van Rossum) (1990). *Beowolf*. Fuente tipográfica."),
     P("Mahendran, Vaishnavi (2020). *EthnoGraphemes: Scripts as Vessels for Culture*. Tesis de maestría en Diseño Gráfico, Rhode Island School of Design."),
+    P("Murray, Jason (2026). «A Taxonomy of Visuals». Reel de Instagram, Modern Art Direction (1 min 42 s). No se encontró una página del método."),
     P("Moore, Thomas (1855). *The Ferns of Great Britain and Ireland*. Edición de John Lindley; láminas de impresión natural de Henry Bradbury. Londres: Bradbury and Evans."),
     P("Moreda Rodríguez, Eva (2021). *Inventing the Recording: The Phonograph and National Culture in Spain, 1877-1914*. Nueva York: Oxford University Press."),
     P("Page, Wm. H. & Co. (1874). *Specimens of Chromatic Wood Type, Borders, Etc.*"),
@@ -727,7 +753,7 @@ function contenido() {
     P("Worthington, A. M. (1895). *The Splash of a Drop*. Londres."),
     P("El libro que reproduce la lámina «según Posnansky»: sin identificar."),
     H2("Documentos del proyecto"),
-    P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y las imágenes de dominio público), `simulacion/informe.md` (la propuesta de la máquina), `planos/` (los planos de la anatomía base, en SVG, PDF y DXF), `aplicacion/` (las decisiones de la letra, en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
+    P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y las imágenes de dominio público), `simulacion/informe.md` (la propuesta de la máquina), `planos/` (los planos de la anatomía base, en SVG, PDF y DXF), `taxonomia/` (las referencias por su mecanismo, nueve láminas A3), `aplicacion/` (las decisiones de la letra, en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
     H1("Colofón"),
     P("Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), las dos con licencia SIL Open Font License e incrustadas en este archivo. Los mapas se dibujan con código (`tipografia/informe/mano.py`, `materia.py` y `mapas.py`), tomando como modelo las versiones mejoradas de Joaquin Max Cuevas Ventura, y el documento se arma con `tipografia/informe/informe.js`."),
     P("La letra de mano de los mapas es una fuente, La Belle Aurore (Kimberly Geswein, SIL Open Font License), no una mano. Las líneas tiemblan por cálculo; el aluminio, el grafito y el agua son filtros, no fotos. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide."),

@@ -44,5 +44,6 @@ python3 tipografia/informe/armar.py     # el .docx; con LibreOffice (Writer), ta
 | `paginas.json` | Las páginas del índice, de la última vez que se armó con LibreOffice |
 | `img/aplicacion.png` | Captura de la aplicación (`../aplicacion/`), para el capítulo 8 |
 | `../planos/png/P-03_o_cuenca.png` | Un plano de la anatomía base, para el §5.5 (lo rehace `../planos/generar_planos.py`) |
+| `../taxonomia/png/R-01_metodo.png`, `R-02_cuadro.png` | Dos láminas de la taxonomía, para el §11.5, en páginas apaisadas (las rehace `../taxonomia/generar_taxonomia.py`) |
 
 Hecho con asistencia de IA.

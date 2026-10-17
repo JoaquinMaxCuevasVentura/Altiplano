@@ -11,6 +11,8 @@ Lo que se encontró el 14.10.2026 en dos búsquedas:
 
 **Las buscó la máquina, a tu pedido, y no las vio.** Ninguno de estos archivos abre desde su entorno. Se encontraron con un buscador, y cada ficha sale de lo que dicen el título, la descripción del archivo o las fuentes que lo comentan. Hay que mirarlas y corregir lo que no coincida (§10.11).
 
+**Están ordenadas por su mecanismo** en nueve láminas A3, con un método tomado con cuidado de un reel de Jason Murray (§10.12 y `taxonomia/`).
+
 ## 10.1. Repujar por el reverso: Acción 4
 
 **Valentin Haüy, *Essai sur l'éducation des aveugles*, París, 1786.** El primer libro impreso en relieve para personas ciegas. Está en la [Wellcome Collection](https://wellcomecollection.org/works/fwj4w4rp), de dominio público, y su texto en [Project Gutenberg](https://gutenberg.org/ebooks/26609). Lo comentan la [Perkins School for the Blind](https://www.perkins.org/first-embossed-book-for-the-blind/) y el [museo de la American Printing House](https://aphmuseum.org/record/essai-sur-leducation-des-aveugles-embossed-roman-letters/).
@@ -178,3 +180,45 @@ Lo que se encontró el 14.10.2026 en dos búsquedas:
 3. Escuchar el fonautograma de 1860 en First Sounds y decidir si se cita en el espécimen, junto al verso de la Acción 10.
 4. Decidir si el *Bourbonnoise Alphabet* entra como contraste.
 5. Recorrer estos archivos con tus ojos, empezando por la vista infinita del Public Domain Image Archive y las etiquetas de The Public Domain Review.
+6. Buscar una referencia para la cinta (Acción 6). La oclusión, la cinta de D12, se toma del método de §10.12, pero ningún archivo trajo una.
+7. Cuando mires cada referencia, marca su casilla en las láminas de la taxonomía y cambia su `mirada` en `taxonomia/taxonomia.py` (§10.12).
+
+## 10.12. La taxonomía: las referencias por su mecanismo
+
+Las referencias de este documento están ordenadas en nueve láminas A3, en `taxonomia/` ([PDF](taxonomia/contenida_taxonomia.pdf)).
+
+**El método** viene de un reel de Jason Murray, «A Taxonomy of Visuals» (Modern Art Direction, 2026). Ordena las imágenes por el mecanismo que activan, no por su estilo, en cuatro niveles: operación, dominio, técnica y ejecución. No se encontró una página que lo explique. Murray tiene un podcast, [*Modern Art Direction*](https://podcastrepublic.net/podcast/1788684591), y un directorio de herramientas, [*Art Director Toolbox*](https://toolbox.super.site/articles).
+
+**Se tomó con cuidado.** Del reel se toma la manera de ordenar; la manera de mostrar sale de las reglas de *Contenida*.
+
+- **Se toma** clasificar por el mecanismo, que ya era una regla del proyecto. También las cuatro operaciones, el camino del encargo a la referencia y un cuadro de muchos a muchos.
+- **Cambian:**
+  - los dominios: son siete y no seis, con la huella;
+  - la ejecución: no son campañas sino estas obras, cada una con su procedencia;
+  - la taxonomía de Linneo como imagen: se clasifican procedimientos, nunca personas ni culturas.
+- **Se deja** lo que sirve para destacar: el color, la luz y el foco como recursos, y las herramientas del reel.
+- **No se hace** nada con el rostro, la mirada o el cuerpo, ni se cita un estilo o un motivo.
+- **Se suma** la huella como dominio. Cada ficha suma su procedencia, lo que no se toma y si ya se miró. Hay un quinto nivel, dónde cae cada referencia en el taller, y una figura retórica por operación.
+
+**De las 41 técnicas del reel,** 15 se toman, 6 cambian, 13 se dejan y 7 no se hacen. Las 21 que sirven ya trabajaban en *Contenida*: el reel no trae formas, trae un orden.
+
+| Operación | Técnicas y referencias |
+|---|---|
+| **1 · Diferenciar** (antítesis) | 1 textura contra plano (Haüy, Moon); 2 huella en metal blando (el fonógrafo); 3 contraste semántico (las vecinas); 4 quién lo hizo (Moreda) |
+| **2 · Agrupar** (sinécdoque) | 5 región común (Anianus, la mano de 1466, Cooperrider); 6 composición por partes (Page, Hoefnagel); 7 cuerpos que forman letra: no se hace (*The Human Alphabet*) |
+| **3 · Secuenciar** (gradación y ciclo) | 8 síntesis temporal (Worthington); 9 recorrido de lectura (Feuillet); 10 cadena de soportes (Auer y Bradbury); 11 la voz como línea (Scott) |
+| **4 · Inferir** (elipsis y metáfora) | 12 hacer visible lo que suena (Chladni, Watts Hughes); 13 leer sin tocar (Bell); 14 el gesto como signo (Bonet, Bulwer); 15 sustitución de forma (Publicius); 16 metáfora material (Bierpfaff y Falck); 17 prosopopeya: no se hace (Kempelen, *Punctuation Personified*) |
+
+**Lo que mostró el cuadro** (lámina R-02):
+
+- La cinta (Acción 6) no tiene ninguna referencia.
+- De lo que se buscó y no apareció (§10.9), tres cosas caerían en la voz (Acción 10) y tres en el calco (Acción 3).
+- Hay cuatro encargos de la obra que ninguna referencia contesta todavía (lámina R-07): D12, D10, D11 y D3.
+
+**Cómo entra una referencia nueva** (lámina R-08):
+
+1. Mírala en su archivo.
+2. Di qué mecanismo activa: operación, dominio y técnica.
+3. Escribe qué se toma y qué no.
+4. Di dónde cae: si no cae en ninguna parte, no entra.
+5. Di de dónde viene: quién, cuándo, con qué medio y con qué licencia.

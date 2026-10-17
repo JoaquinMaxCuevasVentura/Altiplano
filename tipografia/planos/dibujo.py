@@ -134,9 +134,16 @@ def _palabras(texto):
 class Hoja:
     CAPAS = ("papel", "fondo", "aux", "cuerpo", "ejes", "cotas", "textos", "marco")
 
-    def __init__(self, codigo, titulo, subtitulo, escala, n, total, fecha="17.10.2026"):
+    SERIE = "la anatomía base · planos de la gramática"
+    PIE = (("DIBUJÓ", "la gramática (simulacion/gramatica.py): propuesta de la máquina"),
+           ("CALCA", "la mano, desde el pie de la lámina (04, acciones 3 y 4)"),
+           ("NOTA", "regla de la forma, no pauta de calco: no entra en la caja"))
+
+    def __init__(self, codigo, titulo, subtitulo, escala, n, total, fecha="17.10.2026", serie=None, pie=None,
+                 unidades="mm · (UPM)"):
         self.codigo, self.titulo, self.subtitulo, self.escala = codigo, titulo, subtitulo, escala
         self.n, self.total, self.fecha = n, total, fecha
+        self.serie, self.pie, self.unidades = serie or self.SERIE, pie or self.PIE, unidades
         self.capas = {c: [] for c in self.CAPAS}
         self.defs = []
         self._clip = 0
@@ -399,24 +406,21 @@ class Hoja:
             self.linea((x, filas[1]), (x, filas[2]), "filete", c)
         T = self.texto
         T(x0 + 2.5, y0 + 5.6, "CONTENIDA", 4.4, peso=700, espaciado=0.6, capa=c)
-        T(x0 + 2.5, y0 + 9.8, "la anatomía base · planos de la gramática", 2.3, capa=c, color=GRIS)
+        T(x0 + 2.5, y0 + 9.8, self.serie, 2.3, capa=c, color=GRIS)
         T(xc + 13, y0 + 10.2, self.codigo, 7.0, "middle", peso=700, capa=c)
         T(x0 + 2.5, y0 + 19.6, self.titulo, 5.0, familia=SERIF, peso=400, capa=c)
         T(x0 + 2.5, y0 + 24.6, self.subtitulo, 2.3, capa=c, color=GRIS)
         T(xc + 13, y0 + 16.0, "HOJA", 1.8, "middle", capa=c, color=GRIS, espaciado=0.2)
         T(xc + 13, y0 + 22.8, f"{self.n} / {self.total}", 3.6, "middle", capa=c)
-        campos = [("ESCALA", self.escala), ("UNIDADES", "mm · (UPM)"), ("FECHA", self.fecha),
+        campos = [("ESCALA", self.escala), ("UNIDADES", self.unidades), ("FECHA", self.fecha),
                   ("FORMATO", "A3 · 420 × 297")]
         xs = [x0] + cols
         for (k, v), x in zip(campos, xs):
             T(x + 1.6, filas[1] + 3.2, k, 1.7, capa=c, color=GRIS, espaciado=0.2)
             T(x + 1.6, filas[1] + 8.4, v, 2.5, capa=c)
-        T(x0 + 1.6, filas[2] + 3.4, "DIBUJÓ", 1.7, capa=c, color=GRIS, espaciado=0.2)
-        T(x0 + 16, filas[2] + 3.4, "la gramática (simulacion/gramatica.py): propuesta de la máquina", 2.1, capa=c)
-        T(x0 + 1.6, filas[2] + 7.6, "CALCA", 1.7, capa=c, color=GRIS, espaciado=0.2)
-        T(x0 + 16, filas[2] + 7.6, "la mano, desde el pie de la lámina (04, acciones 3 y 4)", 2.1, capa=c)
-        T(x0 + 1.6, filas[2] + 11.8, "NOTA", 1.7, capa=c, color=GRIS, espaciado=0.2)
-        T(x0 + 16, filas[2] + 11.8, "regla de la forma, no pauta de calco: no entra en la caja", 2.1, capa=c)
+        for i, (k, v) in enumerate(self.pie):
+            T(x0 + 1.6, filas[2] + 3.4 + i * 4.2, k, 1.7, capa=c, color=GRIS, espaciado=0.2)
+            T(x0 + 16, filas[2] + 3.4 + i * 4.2, v, 2.1, capa=c)
 
     # -- la referencia: el número de una decisión, en un rombo (como las notas clave de un plano)
     def rombo(self, c, n, r=2.5, capa="cotas"):
