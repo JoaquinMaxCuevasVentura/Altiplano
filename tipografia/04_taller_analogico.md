@@ -109,7 +109,7 @@ Antes de repujar la primera letra:
 
 **Rima con:** el dibujo reconstructivo de Posnansky, hecho desde fotos viejas.
 
-**La anatomía.** Del pie se calca el esqueleto; el cuerpo de la letra lo dicta la obra. Las reglas y el orden en que se aplican están en `03b_anatomia.md` («Cómo lo hace la mano»): gastar los remates, rehacer la mitad baja de los ojos como bandeja, colgar las gotas, cambiar puntos y tildes, correr la letra hasta la retícula, enmarcar las cifras y abrir el desagüe.
+**La anatomía.** Del pie se calca el esqueleto; el cuerpo de la letra lo dicta la obra. Las reglas y el orden en que se aplican están en `03b_anatomia.md` («Cómo lo hace la mano»): gastar los remates, rehacer la mitad baja de los ojos como bandeja, colgar las gotas, cambiar puntos y tildes, correr la letra hasta la retícula, enmarcar las cifras y abrir el desagüe. Las medidas de cada regla y su porqué están dibujadas en `planos/` (once láminas A3, con un apartado «Para la mano» en cada una). Los planos son la regla, no la pauta: no se calca de ellos.
 
 **Materiales:**
 

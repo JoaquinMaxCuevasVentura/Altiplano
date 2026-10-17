@@ -266,7 +266,7 @@ function contenido() {
     H2("1.4. Método"),
     P("**Primero analógico. Después, digital, solo si cierra.** El proyecto se hace con acciones, como la obra. Las acciones se documentan en tres cuadernos con verbos de la obra: *Desenterrar* (acciones 0 a 3), *Contener* (4 a 7) y *Devolver* (8 a 12). Cada acción lleva el verso del poema que le corresponde, la decisión de la obra con la que rima, los materiales, los pasos y lo que queda registrado."),
     P("Las referencias de método son dos tesis de maestría en Diseño Gráfico de la Rhode Island School of Design. Una es *EthnoGraphemes: Scripts as Vessels for Culture*, de Vaishnavi Mahendran (2020). La otra es *Afrography: Scripting Futures Anchored in Culture & Community*, de Osmond Tshuma (2025). De ellas se toman métodos, no su misión (§2)."),
-    P("**La máquina, para confrontar.** Una simulación hecha con código propone su versión de cada acción. Una aplicación deja intervenir la gramática de las letras en el navegador. Las dos sirven para discutir con la mano; ninguna forma que producen entra en la caja (§8)."),
+    P("**La máquina, para confrontar.** Una simulación hecha con código propone su versión de cada acción. Unos planos dibujan la anatomía de la letra con la precisión de un plano de arquitectura y dicen el porqué de cada decisión (§5.5). Una aplicación deja discutir esas decisiones en el navegador. Todo sirve para discutir con la mano; ninguna forma que produce entra en la caja (§8)."),
     P("**Mirar alrededor, sin calcar.** Libros e imágenes de dominio público, estudios y proyectos de otras personas acompañan el taller. Cada uno dice de dónde viene, con qué acción rima y qué no se toma (§11)."),
     H2("1.5. Cómo leer los mapas"),
     P("Los mapas se dibujan a mano, aunque sea con código. Se rehicieron el 17 de octubre de 2026 tomando como modelo las versiones mejoradas de Joaquin Max Cuevas Ventura: cada estado se dibuja con su material, las notas van a máquina y un hilo de tinta une las etapas. El sentido de cada gesto viene de *Contenida*:"),
@@ -449,7 +449,7 @@ function contenido() {
       ["desague", "3 mm", "La abertura en el fondo de cada cuenca", "«Ningún contenedor aguanta lo que contiene» (D16)"],
       ["hombro", "3", "La tensión de los arcos altos (superelipse)", "La chapa curvada sobre un hombro (D3)"],
       ["hombro_caida", "0,40", "Dónde el arco se vuelve vertical", "El testigo de la n, a ojo"],
-      ["facetas, quiebre", "3 planos, 1,6°", "Cada fuste en tres planos, apenas quebrados", "«Moverse como se mueve la piedra, es decir, apenas» (D11)"],
+      ["facetas, quiebre", "3 planos, 1,6°", "Cada fuste en tres planos, que se apartan 1,6° del eje", "«Moverse como se mueve la piedra, es decir, apenas» (D11)"],
       ["asiento", "2 y 0,9 canales", "El pie del fuste se ensancha hacia el fondo", "El peso se asienta en la tierra"],
       ["intemperie", "0,12 canal", "El radio con que se gastan las esquinas", "«Hoy está muy erosionado» (el pie)"],
       ["alivio", "0,28 canal", "El rebaje en cada rincón agudo", "Que el aluminio no se desgarre (D2)"],
@@ -465,6 +465,26 @@ function contenido() {
     H2("5.4. De cuatro a cincuenta y cinco"),
     P("Lo que falta se arma por analogía, dejando dicho de qué letras sale cada parte: é y ó con la tilde de á, í y ú; la ñ, de la n con la onda; la w, de dos v; la z, con dos alivios en sus rincones. **Los dobles opuestos varían**, como en la litoescultura de Tiwanaku: la ¿ no es la ? dada vuelta, ni el 9 el 6, porque la gravedad no se da vuelta. La gota cae siempre hacia abajo y el terminal que mira arriba termina en un corte. Cada cifra vive en su celda, un rectángulo dentro de otro, con desagüe."),
     ...figura(path.join(SALIDA, "21_gramatica_caja.png"), "Los 55 cuerpos base en la caja de 8 × 7: en tinta lo hallado, en violeta lo reconstruido. La celda 56 se hace con los dedos. Propuesta de la máquina.", ANCHO),
+    H2("5.5. Los planos de la anatomía base"),
+    P("La gramática se dibujó también como un plano de arquitectura (`planos/`): once láminas A3, con cotas en milímetros de la placa y en unidades de la fuente, ejes, niveles (el fondo es el ±0), cortes del repujado, detalles y cajetín. En lugar del norte, cada lámina lleva la gravedad."),
+    P("**El porqué va al lado de la forma.** Cada decisión de anatomía tipográfica lleva un número en el dibujo, en el lugar de la letra donde ocurre, y su razón en la columna de la derecha, en tres niveles: el concepto (las decisiones de la obra), la figura retórica y el verso con que rima. Son 24 decisiones:"),
+    tabla(["Parte de la letra", "Decisión", "Lámina"], [
+      ["Cuerpo y ancho", "La celda de la cabeza, 0,84 : 1; monoespaciada", "P-01"],
+      ["Líneas y altura de x", "Fondo, borde, afuera y desagüe; las ascendentes miden 1,71 veces la x", "P-01"],
+      ["Contraste y curvas", "Ninguno: un canal de 8,9 mm; radio mínimo de 0,6 canal", "P-02"],
+      ["Remates y contornos", "Ningún remate: un corte gastado; todo contorno se abre en un desagüe de 3 mm", "P-02"],
+      ["Ojo y panza", "Arriba, el ojo del pie; abajo, una vasija de fondo plano", "P-03"],
+      ["Sobrepaso y eje", "Arriba sí, abajo no; eje vertical, sin pluma", "P-03"],
+      ["Asta y pie", "Un fuste en tres planos; un asiento cóncavo, sin serifa", "P-04"],
+      ["Hombro", "Superelipse de exponente 3, con arranque tangente", "P-05"],
+      ["Terminales", "Gota si mira abajo; corte si mira arriba", "P-06"],
+      ["Punto, tilde, virgulilla", "Un cuadrado de cinta, una gota, una onda", "P-08"],
+      ["Enlace y rincones", "Un sifón; un alivio en cada rincón agudo", "P-08"],
+      ["Cifras y dobles opuestos", "Elzevirianas, en su celda; ? ¿, 6 9 y « » varían", "P-08 · P-09"],
+      ["Mayúsculas", "Ninguna: solo caja baja", "P-10"],
+    ], [2300, ANCHO - 3700, 1400], { mono: [2], violeta: [], cursiva: [] }),
+    P("**Medir también es discutir.** Al acotar sobre el cuerpo, los planos encontraron que la gota de la a deja 2,2 mm libres sobre su cuenca, y no los 3,5 que pide la regla: la regla mide desde la gota sin estirar. Queda anotado; la placa dirá si alcanza. Los planos son la regla de la forma, no la pauta: la letra de la caja la calca la mano desde el pie.", { spacing: { before: 160 } }),
+    ...figura(path.join(TIPO, "planos", "png", "P-03_o_cuenca.png"), "Plano P-03: la o, la cuenca, a 1:1 sobre A3, con sus cotas, la pared, el desagüe y cómo se construye. A la derecha, el porqué de cada decisión. Propuesta de la máquina.", ANCHO),
   );
   mapa(4);
 
@@ -544,16 +564,15 @@ function contenido() {
     vineta("**La intemperie borra las celdas de las cifras.** En la aplicación, si la intemperie pasa de 0,175 canales se come el trazo de la celda, que mide 0,35 canal."),
     H2("8.3. Lo que la máquina no sabe"),
     P("Qué letra tiene el pie en su tamaño real. Cómo tiembla una mano que se cansa y duda. Cómo se rompe de verdad el aluminio. Cuánto se lleva el grafito. Cómo se despega la cinta. El agua de la simulación rebota una sola vez, y la voz no es la tuya."),
-    H2("8.4. La gramática en el navegador"),
-    P("La aplicación (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python, y deja mover la altura de x y los 20 parámetros. Cada uno lleva su valor en milímetros y canales, qué controla y de dónde sale. Tiene cuatro vistas:"),
-    vineta("**Caja:** los 55 cuerpos, en tinta y violeta, que se vuelven a armar al mover un parámetro."),
-    vineta("**Signo:** un signo con sus partes: testigo, cuerpo, ejes, nodos, alivios, gotas y asientos."),
-    vineta("**Texto:** un verso compuesto celda por celda, que puede ir sobre la piscina: las juntas de los azulejos cortan la letra."),
-    vineta("**Estados:** los seis simuladores sobre un signo, con el frotado hasta que la letra no se lee y el agua tocada."),
-    P("Los ajustes vuelven a Python como `parametros.json` (`simular.py --parametros`). Con los mismos ajustes, los 55 cuerpos de la página y los de Python coinciden hasta el píxel del borde, porque la página repite el azar de las recetas. Las versiones guardadas en la página las puede leer Claude para correr la simulación con ellas."),
+    H2("8.4. Las decisiones de la letra, en el navegador"),
+    P("La aplicación (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. Se simplificó: mientras menos compleja, más sentido tiene con el proyecto. Quedó una sola pantalla:"),
+    vineta("**El plano del signo elegido:** la celda con sus líneas y sus niveles en unidades de la fuente, el cuerpo, los ejes, los nodos, los alivios y las partes, con sus medidas en milímetros y en UPM."),
+    vineta("**Nueve decisiones** que la mano puede discutir: la altura de x, el canal, el fondo plano y la pared de la panza, la tensión del hombro y dónde arranca, el quiebre del asta, la intemperie y la gota. Cada una lleva su porqué y el número de su plano. Lo que fija el material no se mueve, y se dice por qué."),
+    vineta("**La caja,** para elegir el signo."),
+    P("Se sacaron los seis simuladores de los estados: los estados los hace la mano. Los ajustes vuelven a Python como `parametros.json` (`gramatica.py --parametros`). Con los mismos ajustes, los contornos de los 55 signos de la página y los de Python coinciden: la diferencia es de 0,16 % del área en la mediana, porque la página repite el azar de las recetas."),
   );
   const app = path.join(AQUI, "img", "aplicacion.png");
-  if (fs.existsSync(app)) add(...figura(app, "La aplicación: la ficha de parámetros y la caja de 8 × 7. Propuesta de la máquina.", ANCHO));
+  if (fs.existsSync(app)) add(...figura(app, "La aplicación: el plano del signo, las nueve decisiones con su porqué y la caja de 8 × 7. Propuesta de la máquina.", ANCHO));
 
   // ---------------------------------------------------------------- 9. retórica y poética
   add(
@@ -653,7 +672,7 @@ function contenido() {
     H2("12.2. Lo que no está en el repositorio"),
     P("Las fotos de la obra y los dos videos, la foto de la lámina, el dibujo de la lámina con el poema, el libro de Posnansky y el artículo de Agüero, Uribe y Berenguer. Lo que el proyecto usa de ellos está descrito, y del pie solo se guardan letras sueltas, recortadas."),
     H2("12.3. Asistencia de inteligencia artificial"),
-    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
+    P("Los textos, los esquemas, la simulación, las láminas, la aplicación, los planos de la anatomía base, la póliza en OpenType y este informe se hicieron con asistencia de inteligencia artificial. También parte de la búsqueda de referencias. Las formas de letra que genera la simulación son la propuesta de la máquina: están hechas para confrontarlas con las de la mano y no entran en la caja ni en la fuente."),
     H2("12.4. Las referencias visuales"),
     P("Los motivos tiwanacotas y las tipografías «étnicas» entran como referencia visual, anotados aparte de las letras (§11). Se miran, no se calcan: ningún motivo pasa a las letras, a la caja ni a la fuente. Cada referencia dice quién hizo el registro, cuándo, con qué medio y con qué licencia, y lo ajeno se cita, no se descarga."),
     H2("12.5. Lo que el proyecto no afirma"),
@@ -708,7 +727,7 @@ function contenido() {
     P("Worthington, A. M. (1895). *The Splash of a Drop*. Londres."),
     P("El libro que reproduce la lámina «según Posnansky»: sin identificar."),
     H2("Documentos del proyecto"),
-    P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y las imágenes de dominio público), `simulacion/informe.md` (la propuesta de la máquina), `aplicacion/` (la gramática en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
+    P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y las imágenes de dominio público), `simulacion/informe.md` (la propuesta de la máquina), `planos/` (los planos de la anatomía base, en SVG, PDF y DXF), `aplicacion/` (las decisiones de la letra, en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
     H1("Colofón"),
     P("Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), las dos con licencia SIL Open Font License e incrustadas en este archivo. Los mapas se dibujan con código (`tipografia/informe/mano.py`, `materia.py` y `mapas.py`), tomando como modelo las versiones mejoradas de Joaquin Max Cuevas Ventura, y el documento se arma con `tipografia/informe/informe.js`."),
     P("La letra de mano de los mapas es una fuente, La Belle Aurore (Kimberly Geswein, SIL Open Font License), no una mano. Las líneas tiemblan por cálculo; el aluminio, el grafito y el agua son filtros, no fotos. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide."),

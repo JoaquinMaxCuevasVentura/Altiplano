@@ -101,7 +101,7 @@ def parametros(e):
         "hombro_caida": (0.40, "", "Dónde el arco se vuelve vertical, del borde al fondo.",
                          "Del testigo de la n, a ojo: falta medirlo en el libro"),
         "facetas": (3, "", "Planos de cada fuste.", "La placa cambia de plano al apoyarse en el cuerpo (D3, D11)"),
-        "quiebre": (1.6, "°", "Ángulo entre plano y plano: apenas.", "«Moverse como se mueve la piedra, es decir, "
+        "quiebre": (1.6, "°", "Cuánto se aparta cada plano del eje: apenas.", "«Moverse como se mueve la piedra, es decir, "
                     "apenas» (D11)"),
         "asiento_ancho": (round(2.0 * c, 1), "px", "Ancho del pie de cada fuste sobre el fondo.",
                           "El peso se asienta en la tierra; la piedra en pie"),

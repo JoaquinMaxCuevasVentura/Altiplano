@@ -35,7 +35,7 @@ Cada parámetro tiene un valor, controla una sola cosa y viene de una decisión 
 | `desague` | 3 mm | La abertura en el fondo de cada cuenca: el surco del punzón con sus lomas | «Ningún contenedor aguanta lo que contiene» (D16) |
 | `hombro` | 3 | El exponente de la superelipse de los arcos altos (2 sería una elipse): el arco se tensa | La chapa curvada sobre un hombro o una clavícula (D3) |
 | `hombro_caida` | 0,40 | Dónde el arco se vuelve vertical, del borde al fondo | El testigo de la n, a ojo. Falta medirlo en el libro |
-| `facetas`, `quiebre` | 3 planos, 1,6° | Cada fuste tiene tres planos, con un quiebre apenas visible | La placa cambia de plano al apoyarse en el cuerpo (D3). «Apenas» (D11) |
+| `facetas`, `quiebre` | 3 planos, 1,6° | Cada fuste tiene tres planos; cada uno se aparta 1,6° del eje, apenas visible | La placa cambia de plano al apoyarse en el cuerpo (D3). «Apenas» (D11) |
 | `asiento_ancho`, `asiento_alto` | 2 y 0,9 canales | El pie de cada fuste se ensancha hacia el fondo en una curva cóncava | El peso se asienta en la tierra |
 | `intemperie` | 0,12 canal | El radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |
 | `alivio` | 0,28 canal | El rebaje en cada encuentro interior en ángulo | Para que el aluminio no se desgarre (D2) |
@@ -83,7 +83,7 @@ Cada generador es una lista de **trazos**: ejes (poligonales densas) que se engr
 
 **a: todo junto.** Es la suma de los otros tres.
 1. Del pie: el asta, el ojo y el extremo del gancho.
-2. **El gancho** es un hombro que baja por el fuste hasta el asiento. Del otro lado termina a los 125° y suelta la gota.
+2. **El gancho** es un hombro que baja por el fuste hasta el asiento. Del otro lado termina a los 105° y suelta la gota.
 3. **La cuenca** tiene arriba el ojo del pie. Abajo, pared abombada y fondo plano. Se abre en el punto más bajo del ojo, y el fondo sigue hasta el fuste.
 
 Así la o, la l y la n dan las piezas de las demás letras: la cuenca, el fuste y el hombro. La a prueba que se pueden combinar.
@@ -176,19 +176,26 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 
 1. **Medir en el libro** lo que hoy es a ojo: `hombro_caida`, el grueso y el fino, y la proporción de la celda. El artículo de Agüero, Uribe y Berenguer da la pista: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a.
 2. **Regenerar la pauta de calco** de `esquemas/` con la celda en lugar del azulejo.
-3. **Confrontar con la mano:** la mano puede discutir cada parámetro en la aplicación (§8). Lo que cambia viaja en `parametros.json`, y todo el juego se rehace.
+3. **Confrontar con la mano:** la mano puede discutir cada decisión en la aplicación (§8). Lo que cambia viaja en `parametros.json`, y todo el juego se rehace.
+4. **La gota de la a.** La regla pide 0,4 canal entre la gota y la cuenca, pero lo mide desde la gota sin estirar: estirada 1,15 por su peso, quedan 2,2 mm en lugar de 3,5. Lo encontraron los planos (`planos/`, P-06). Si la placa muestra que no alcanza, se corrige la receta `r_a` y se rehace todo.
 
-## 8. La gramática en el navegador
+## 8. Los planos y la página de las decisiones
 
-La aplicación (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. El pie se achata a la altura de x pedida y se mide. De ahí salen el esqueleto, los parámetros, el taller y las 55 recetas, y el cuerpo en vectores.
+**Los planos** (`planos/`) dibujan esta gramática como un plano de arquitectura: once láminas A3, con cotas en milímetros de la placa y en unidades de la fuente, ejes, niveles, cortes del repujado y detalles. Cada decisión de anatomía tipográfica (contraste, ojo, apertura, terminales, remates, hombro, sobrepaso…) lleva un número en el dibujo y su porqué en la columna: concepto, retórica y poética. Son la concepción formal; la letra de la caja la calca la mano desde el pie.
 
-- **Qué se puede mover:** la altura de x (ascendente sobre x: 1,52 en el sustituto, 1,71 en la foto) y los 20 parámetros de §2. Cada uno lleva su valor, qué controla y de dónde sale.
-- **Qué se ve:**
-  - la caja;
-  - un signo con sus partes;
-  - un texto compuesto celda por celda, que puede ir sobre la piscina;
-  - los seis estados de un signo.
-- **Cómo vuelve a Python:** como `parametros.json`, con solo los ajustes. Se usa con `gramatica.py --parametros` y `simular.py --parametros`. Con los mismos ajustes, los 55 cuerpos coinciden con los de Python hasta el píxel del borde: la página repite el azar de las recetas.
+**La página** (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. Se simplificó: una sola pantalla con el plano del signo elegido, la caja y **nueve decisiones** que la mano puede discutir:
+
+- la altura de x;
+- el canal (el contraste: ninguno);
+- el fondo plano y la pared de la panza;
+- la tensión del hombro y dónde arranca;
+- el quiebre del asta;
+- la intemperie (los remates);
+- la gota.
+
+Lo que fija el material (el radio de la chapa, el desagüe del punzón, el alivio, el asiento, el gancho a 105°, el sifón, la cinta) no se mueve: se dice por qué. Los simuladores de los estados se sacaron; los estados los hace la mano.
+
+- **Cómo vuelve a Python:** como `parametros.json`, con solo los ajustes. Se usa con `gramatica.py --parametros` y `simular.py --parametros`. Con los mismos ajustes, los contornos de los 55 signos coinciden con los de Python: la página repite el azar de las recetas, y la diferencia entre los dos contornos es de 0,16 % del área en la mediana.
 
 **Lo que aparece al mover:**
 

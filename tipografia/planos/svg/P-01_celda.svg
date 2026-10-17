@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 297" width="420mm" height="297mm">
+<title>Contenida · P-01 · La celda y las cuatro líneas</title>
+<defs><style>@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-500-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-700-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-italic.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}</style><pattern id="metal" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#e2e0d9"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#a9a69d" stroke-width="0.16"/></pattern><pattern id="metal_r" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#ebe6ef"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#b9a9c9" stroke-width="0.16"/></pattern><pattern id="blanda" patternUnits="userSpaceOnUse" width="2.2" height="2.2"><rect width="2.2" height="2.2" fill="#f6f4ee"/><circle cx="0.55" cy="0.55" r="0.22" fill="#9a968d"/><circle cx="1.65" cy="1.65" r="0.22" fill="#9a968d"/></pattern></defs>
+<rect width="420" height="297" fill="#f6f4ee"/>
+
+<rect x="76" y="30" width="150" height="150" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="93.596" y="37.037" width="114.807" height="136.675" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="76" y1="43.25" x2="226" y2="43.25" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="76" y1="82.5" x2="226" y2="82.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="76" y1="137.324" x2="226" y2="137.324" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="76" y1="167.5" x2="226" y2="167.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="34" y="220" width="50" height="50" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="39.865" y="222.346" width="38.269" height="45.558" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34" y1="224.417" x2="84" y2="224.417" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34" y1="237.5" x2="84" y2="237.5" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34" y1="255.775" x2="84" y2="255.775" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34" y1="265.833" x2="84" y2="265.833" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="96" y="220" width="50" height="50" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="101.865" y="222.346" width="38.269" height="45.558" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="96" y1="224.417" x2="146" y2="224.417" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="96" y1="237.5" x2="146" y2="237.5" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="96" y1="255.775" x2="146" y2="255.775" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="96" y1="265.833" x2="146" y2="265.833" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="158" y="220" width="50" height="50" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="163.865" y="222.346" width="38.269" height="45.558" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="158" y1="224.417" x2="208" y2="224.417" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="158" y1="237.5" x2="208" y2="237.5" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="158" y1="255.775" x2="208" y2="255.775" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="158" y1="265.833" x2="208" y2="265.833" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="220" y="220" width="50" height="50" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="225.865" y="222.346" width="38.269" height="45.558" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="220" y1="224.417" x2="270" y2="224.417" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="220" y1="237.5" x2="270" y2="237.5" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="220" y1="255.775" x2="270" y2="255.775" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="220" y1="265.833" x2="270" y2="265.833" fill="none" stroke="#6d6a63" stroke-width="0.18" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+
+<path d="M53.662,252.812 L53.483,252.506 L53.278,252.036 L53.081,251.437 L52.915,250.793 L52.778,250.126 L52.659,249.366 L52.561,248.516 L52.502,247.736 L52.458,246.249 L52.477,245.769 L52.52,245.364 L52.602,244.892 L52.737,244.37 L52.892,243.914 L53.108,243.416 L53.361,242.941 L53.62,242.534 L53.943,242.104 L54.305,241.699 L54.653,241.365 L55.068,241.024 L55.463,240.749 L55.932,240.474 L56.417,240.241 L56.866,240.067 L57.381,239.912 L57.912,239.8 L58.389,239.737 L58.927,239.709 L59.407,239.721 L59.947,239.778 L60.61,239.91 L61.129,240.065 L61.759,240.32 L62.243,240.571 L62.761,240.9 L63.242,241.273 L63.733,241.739 L64.137,242.205 L64.489,242.697 L64.801,243.233 L65.054,243.782 L65.262,244.365 L65.397,244.891 L65.504,245.558 L65.54,246.103 L65.535,246.864 L65.499,247.727 L65.424,248.663 L65.31,249.587 L65.166,250.416 L64.999,251.146 L64.792,251.837 L64.573,252.389 L64.362,252.778 L64.326,252.817 L59.917,252.817 L59.749,252.859 L59.62,252.976 L59.561,253.14 L59.559,255.417 L59.587,255.553 L59.641,255.643 L59.718,255.714 L59.813,255.759 L59.917,255.775 L64.609,255.775 L64.882,255.757 L65.118,255.716 L65.392,255.632 L65.794,255.44 L66.216,255.129 L66.611,254.709 L66.832,254.403 L67.068,254.01 L67.292,253.557 L67.486,253.088 L67.653,252.608 L67.815,252.066 L68.099,250.828 L68.318,249.408 L68.452,247.909 L68.5,246.313 L68.486,245.75 L68.447,245.257 L68.382,244.77 L68.293,244.291 L68.088,243.491 L67.763,242.59 L67.562,242.142 L67.338,241.704 L67.09,241.277 L66.822,240.866 L66.325,240.206 L66.003,239.835 L65.66,239.479 L64.947,238.845 L64.284,238.357 L63.87,238.095 L63.435,237.85 L62.997,237.632 L62.545,237.438 L61.642,237.126 L60.839,236.93 L60.356,236.847 L59.867,236.79 L58.915,236.751 L58.089,236.794 L57.602,236.853 L57.116,236.939 L56.194,237.175 L55.416,237.453 L54.967,237.65 L54.524,237.872 L54.096,238.116 L53.682,238.381 L52.918,238.956 L52.307,239.512 L51.969,239.866 L51.646,240.242 L51.19,240.847 L50.807,241.447 L50.448,242.121 L50.167,242.761 L49.911,243.498 L49.75,244.096 L49.616,244.78 L49.527,245.559 L49.5,246.331 L49.534,247.653 L49.617,248.798 L49.764,250.023 L49.937,251.012 L50.163,251.988 L50.415,252.812 L50.698,253.537 L50.897,253.946 L51.127,254.343 L51.392,254.714 L51.627,254.98 L51.921,255.244 L52.225,255.452 L52.531,255.602 L52.83,255.702 L53.14,255.76 L53.388,255.774 L58.117,255.775 L58.222,255.759 L58.317,255.714 L58.433,255.585 L58.476,255.417 L58.474,253.14 L58.416,252.976 L58.287,252.859 L58.117,252.817 Z" fill="url(#metal)" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<path d="M53.662,252.812 L53.483,252.506 L53.278,252.036 L53.081,251.437 L52.915,250.793 L52.778,250.126 L52.659,249.366 L52.561,248.516 L52.502,247.736 L52.458,246.249 L52.477,245.769 L52.52,245.364 L52.602,244.892 L52.737,244.37 L52.892,243.914 L53.108,243.416 L53.361,242.941 L53.62,242.534 L53.943,242.104 L54.305,241.699 L54.653,241.365 L55.068,241.024 L55.463,240.749 L55.932,240.474 L56.417,240.241 L56.866,240.067 L57.381,239.912 L57.912,239.8 L58.389,239.737 L58.927,239.709 L59.407,239.721 L59.947,239.778 L60.61,239.91 L61.129,240.065 L61.759,240.32 L62.243,240.571 L62.761,240.9 L63.242,241.273 L63.733,241.739 L64.137,242.205 L64.489,242.697 L64.801,243.233 L65.054,243.782 L65.262,244.365 L65.397,244.891 L65.504,245.558 L65.54,246.103 L65.535,246.864 L65.499,247.727 L65.424,248.663 L65.31,249.587 L65.166,250.416 L64.999,251.146 L64.792,251.837 L64.573,252.389 L64.362,252.778 L64.326,252.817 L59.917,252.817 L59.749,252.859 L59.62,252.976 L59.561,253.14 L59.559,255.417 L59.587,255.553 L59.641,255.643 L59.718,255.714 L59.813,255.759 L59.917,255.775 L64.609,255.775 L64.882,255.757 L65.118,255.716 L65.392,255.632 L65.794,255.44 L66.216,255.129 L66.611,254.709 L66.832,254.403 L67.068,254.01 L67.292,253.557 L67.486,253.088 L67.653,252.608 L67.815,252.066 L68.099,250.828 L68.318,249.408 L68.452,247.909 L68.5,246.313 L68.486,245.75 L68.447,245.257 L68.382,244.77 L68.293,244.291 L68.088,243.491 L67.763,242.59 L67.562,242.142 L67.338,241.704 L67.09,241.277 L66.822,240.866 L66.325,240.206 L66.003,239.835 L65.66,239.479 L64.947,238.845 L64.284,238.357 L63.87,238.095 L63.435,237.85 L62.997,237.632 L62.545,237.438 L61.642,237.126 L60.839,236.93 L60.356,236.847 L59.867,236.79 L58.915,236.751 L58.089,236.794 L57.602,236.853 L57.116,236.939 L56.194,237.175 L55.416,237.453 L54.967,237.65 L54.524,237.872 L54.096,238.116 L53.682,238.381 L52.918,238.956 L52.307,239.512 L51.969,239.866 L51.646,240.242 L51.19,240.847 L50.807,241.447 L50.448,242.121 L50.167,242.761 L49.911,243.498 L49.75,244.096 L49.616,244.78 L49.527,245.559 L49.5,246.331 L49.534,247.653 L49.617,248.798 L49.764,250.023 L49.937,251.012 L50.163,251.988 L50.415,252.812 L50.698,253.537 L50.897,253.946 L51.127,254.343 L51.392,254.714 L51.627,254.98 L51.921,255.244 L52.225,255.452 L52.531,255.602 L52.83,255.702 L53.14,255.76 L53.388,255.774 L58.117,255.775 L58.222,255.759 L58.317,255.714 L58.433,255.585 L58.476,255.417 L58.474,253.14 L58.416,252.976 L58.287,252.859 L58.117,252.817 Z" fill="none" stroke="#1d1c1a" stroke-width="0.275" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M119.089,255.21 L119.027,255.374 L119.03,255.481 L119.064,255.582 L119.182,255.713 L119.347,255.772 L122.653,255.772 L122.788,255.732 L122.873,255.667 L122.936,255.582 L122.975,255.445 L122.958,255.305 L122.733,254.862 L122.608,254.456 L122.525,253.968 L122.484,253.417 L122.479,243.74 L122.746,234.113 L122.488,224.9 L122.47,224.797 L122.401,224.675 L122.29,224.59 L122.155,224.553 L119.845,224.618 L119.743,224.646 L119.629,224.727 L119.555,224.845 L119.532,224.947 L119.787,234.155 L119.522,243.678 L119.521,253.118 L119.5,253.709 L119.474,253.976 L119.394,254.445 L119.267,254.862 Z" fill="url(#metal)" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<path d="M119.089,255.21 L119.027,255.374 L119.03,255.481 L119.064,255.582 L119.182,255.713 L119.347,255.772 L122.653,255.772 L122.788,255.732 L122.873,255.667 L122.936,255.582 L122.975,255.445 L122.958,255.305 L122.733,254.862 L122.608,254.456 L122.525,253.968 L122.484,253.417 L122.479,243.74 L122.746,234.113 L122.488,224.9 L122.47,224.797 L122.401,224.675 L122.29,224.59 L122.155,224.553 L119.845,224.618 L119.743,224.646 L119.629,224.727 L119.555,224.845 L119.532,224.947 L119.787,234.155 L119.522,243.678 L119.521,253.118 L119.5,253.709 L119.474,253.976 L119.394,254.445 L119.267,254.862 Z" fill="none" stroke="#1d1c1a" stroke-width="0.275" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M174.393,246.269 L174.404,246.372 L174.464,246.497 L174.537,246.57 L174.639,246.623 L174.648,246.949 L174.386,256.35 L174.387,265.51 L174.412,265.613 L174.491,265.728 L174.575,265.791 L174.708,265.832 L177.02,265.832 L177.154,265.791 L177.238,265.728 L177.317,265.613 L177.343,265.475 L177.343,256.412 L177.362,255.775 L181.817,255.773 L181.919,255.748 L182.035,255.67 L182.113,255.553 L182.138,255.452 L182.138,253.14 L182.08,252.976 L181.951,252.859 L181.782,252.817 L177.444,252.816 L177.607,246.981 L177.553,244.975 L177.74,244.367 L177.976,243.801 L178.227,243.322 L178.556,242.817 L178.762,242.548 L179.067,242.198 L179.605,241.697 L179.916,241.459 L180.247,241.241 L180.89,240.906 L181.248,240.762 L181.622,240.645 L182.326,240.502 L182.773,240.463 L183.097,240.459 L183.807,240.522 L184.507,240.683 L184.934,240.831 L185.233,240.962 L185.866,241.311 L186.452,241.744 L186.936,242.202 L187.241,242.551 L187.446,242.82 L187.705,243.209 L187.873,243.501 L188.056,243.868 L188.213,244.242 L188.458,245.017 L188.607,245.825 L188.657,246.647 L188.629,247.822 L188.53,249.149 L188.35,250.449 L188.111,251.544 L187.969,252.02 L187.832,252.396 L187.628,252.816 L183.582,252.817 L183.445,252.844 L183.355,252.898 L183.266,253.006 L183.225,253.14 L183.225,255.452 L183.251,255.553 L183.328,255.67 L183.413,255.733 L183.512,255.767 L187.97,255.775 L188.312,255.749 L188.742,255.637 L188.97,255.536 L189.205,255.397 L189.563,255.109 L189.885,254.751 L190.111,254.428 L190.307,254.086 L190.494,253.695 L190.681,253.227 L190.861,252.687 L190.993,252.213 L191.14,251.592 L191.263,250.96 L191.375,250.251 L191.471,249.464 L191.583,247.966 L191.613,246.441 L191.589,245.943 L191.53,245.363 L191.438,244.796 L191.326,244.292 L191.168,243.735 L190.968,243.165 L190.742,242.631 L190.472,242.09 L190.22,241.653 L189.854,241.102 L189.532,240.678 L189.098,240.183 L188.738,239.821 L188.351,239.476 L187.893,239.117 L187.453,238.815 L186.952,238.518 L186.486,238.282 L185.859,238.018 L185.347,237.846 L184.764,237.694 L184.17,237.585 L183.579,237.521 L182.96,237.501 L182.425,237.521 L181.753,237.597 L181.223,237.697 L180.631,237.852 L179.994,238.074 L179.495,238.29 L178.894,238.604 L178.381,238.924 L177.947,239.237 L177.406,239.688 L177.35,237.782 L177.306,237.649 L177.214,237.543 L177.089,237.481 L176.985,237.468 L174.744,237.532 L174.608,237.562 L174.519,237.619 L174.433,237.729 L174.397,237.864 L174.585,244.671 L174.456,245.474 Z" fill="url(#metal)" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<path d="M174.393,246.269 L174.404,246.372 L174.464,246.497 L174.537,246.57 L174.639,246.623 L174.648,246.949 L174.386,256.35 L174.387,265.51 L174.412,265.613 L174.491,265.728 L174.575,265.791 L174.708,265.832 L177.02,265.832 L177.154,265.791 L177.238,265.728 L177.317,265.613 L177.343,265.475 L177.343,256.412 L177.362,255.775 L181.817,255.773 L181.919,255.748 L182.035,255.67 L182.113,255.553 L182.138,255.452 L182.138,253.14 L182.08,252.976 L181.951,252.859 L181.782,252.817 L177.444,252.816 L177.607,246.981 L177.553,244.975 L177.74,244.367 L177.976,243.801 L178.227,243.322 L178.556,242.817 L178.762,242.548 L179.067,242.198 L179.605,241.697 L179.916,241.459 L180.247,241.241 L180.89,240.906 L181.248,240.762 L181.622,240.645 L182.326,240.502 L182.773,240.463 L183.097,240.459 L183.807,240.522 L184.507,240.683 L184.934,240.831 L185.233,240.962 L185.866,241.311 L186.452,241.744 L186.936,242.202 L187.241,242.551 L187.446,242.82 L187.705,243.209 L187.873,243.501 L188.056,243.868 L188.213,244.242 L188.458,245.017 L188.607,245.825 L188.657,246.647 L188.629,247.822 L188.53,249.149 L188.35,250.449 L188.111,251.544 L187.969,252.02 L187.832,252.396 L187.628,252.816 L183.582,252.817 L183.445,252.844 L183.355,252.898 L183.266,253.006 L183.225,253.14 L183.225,255.452 L183.251,255.553 L183.328,255.67 L183.413,255.733 L183.512,255.767 L187.97,255.775 L188.312,255.749 L188.742,255.637 L188.97,255.536 L189.205,255.397 L189.563,255.109 L189.885,254.751 L190.111,254.428 L190.307,254.086 L190.494,253.695 L190.681,253.227 L190.861,252.687 L190.993,252.213 L191.14,251.592 L191.263,250.96 L191.375,250.251 L191.471,249.464 L191.583,247.966 L191.613,246.441 L191.589,245.943 L191.53,245.363 L191.438,244.796 L191.326,244.292 L191.168,243.735 L190.968,243.165 L190.742,242.631 L190.472,242.09 L190.22,241.653 L189.854,241.102 L189.532,240.678 L189.098,240.183 L188.738,239.821 L188.351,239.476 L187.893,239.117 L187.453,238.815 L186.952,238.518 L186.486,238.282 L185.859,238.018 L185.347,237.846 L184.764,237.694 L184.17,237.585 L183.579,237.521 L182.96,237.501 L182.425,237.521 L181.753,237.597 L181.223,237.697 L180.631,237.852 L179.994,238.074 L179.495,238.29 L178.894,238.604 L178.381,238.924 L177.947,239.237 L177.406,239.688 L177.35,237.782 L177.306,237.649 L177.214,237.543 L177.089,237.481 L176.985,237.468 L174.744,237.532 L174.608,237.562 L174.519,237.619 L174.433,237.729 L174.397,237.864 L174.585,244.671 L174.456,245.474 Z" fill="none" stroke="#1d1c1a" stroke-width="0.275" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="151" y1="24" x2="151" y2="186" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M59.559,254.296 L64.697,254.29 L64.86,254.253 L65.012,254.185 L65.215,254.041 L65.392,253.863 L65.545,253.667 L65.723,253.385 L65.878,253.09 L66.046,252.709 L66.191,252.318 L66.342,251.842 L66.471,251.358 L66.582,250.871 L66.678,250.381 L66.772,249.805 L66.85,249.227 L66.912,248.647 L66.965,247.983 L66.997,247.4 L67.017,246.733 L67.018,246.067 L66.975,245.402 L66.919,244.988 L66.843,244.579 L66.745,244.174 L66.627,243.775 L66.394,243.15 L66.223,242.77 L66.032,242.4 L65.823,242.039 L65.595,241.691 L65.194,241.158 L64.922,240.843 L64.632,240.543 L64.329,240.258 L64.011,239.989 L63.473,239.595 L63.122,239.371 L62.759,239.166 L62.387,238.98 L62.004,238.814 L61.377,238.59 L60.976,238.477 L60.569,238.384 L60.159,238.313 L59.745,238.264 L59.08,238.23 L58.663,238.237 L58.248,238.265 L57.834,238.314 L57.587,238.355 L57.179,238.439 L56.776,238.544 L56.379,238.67 L56.067,238.787 L55.759,238.915 L55.382,239.093 L55.016,239.291 L54.66,239.507 L54.315,239.742 L54.049,239.942 L53.792,240.154 L53.482,240.433 L53.188,240.727 L52.908,241.037 L52.646,241.36 L52.448,241.628 L52.263,241.905 L52.046,242.261 L51.847,242.627 L51.669,243.004 L51.51,243.389 L51.398,243.702 L51.298,244.021 L51.192,244.424 L51.108,244.832 L51.044,245.243 L51.002,245.658 L50.984,245.991 L50.98,246.491 L50.994,247.157 L51.025,247.823 L51.073,248.488 L51.132,249.068 L51.204,249.648 L51.294,250.223 L51.402,250.797 L51.531,251.366 L51.66,251.848 L51.784,252.247 L51.926,252.638 L52.089,253.022 L52.239,253.319 L52.412,253.604 L52.613,253.869 L52.791,254.045 L52.923,254.146 L53.069,254.226 L53.148,254.256 L53.309,254.292 L58.476,254.296" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M121,224.583 L121.267,234.15 L121,243.717 L121,253.283" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M175.864,237.5 L176.128,246.944 L175.864,256.389 L175.864,265.833" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M175.864,246.637 L175.886,246.054 L175.947,245.475 L176.033,244.983 L176.172,244.416 L176.35,243.86 L176.569,243.32 L176.749,242.944 L177.034,242.435 L177.357,241.95 L177.717,241.49 L177.994,241.18 L178.412,240.773 L178.86,240.4 L179.268,240.111 L179.695,239.851 L180.215,239.587 L180.678,239.397 L181.233,239.218 L181.801,239.088 L182.296,239.017 L182.711,238.985 L183.294,238.986 L183.875,239.037 L184.368,239.122 L184.773,239.219 L185.327,239.398 L185.866,239.624 L186.31,239.853 L186.667,240.067 L187.144,240.403 L187.593,240.776 L188.009,241.183 L188.393,241.623 L188.646,241.954 L188.834,242.229 L188.968,242.44 L189.176,242.802 L189.433,243.325 L189.652,243.865 L189.783,244.261 L189.852,244.501 L189.933,244.824 L190.014,245.233 L190.093,245.811 L190.133,246.476 L190.123,247.476 L190.072,248.475 L189.983,249.471 L189.861,250.379 L189.694,251.28 L189.601,251.687 L189.494,252.089 L189.29,252.723 L189.168,253.033 L189.028,253.337 L188.867,253.627 L188.725,253.833 L188.561,254.022 L188.435,254.131 L188.295,254.22 L188.139,254.278 L187.973,254.296 L183.223,254.296" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M182.14,254.296 L175.89,254.296" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="173.713" x2="67.4" y2="173.713" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="167.5" x2="67.4" y2="167.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69" y1="175.213" x2="69" y2="166" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69.919" y1="174.632" x2="68.081" y2="172.793" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="69.919" y1="168.419" x2="68.081" y2="166.581" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="68.1" y="170.606" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 68.1 170.606)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">6,2</text>
+<line x1="74.8" y1="167.5" x2="67.4" y2="167.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="137.324" x2="67.4" y2="137.324" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69" y1="169" x2="69" y2="135.824" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69.919" y1="168.419" x2="68.081" y2="166.581" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="69.919" y1="138.243" x2="68.081" y2="136.405" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="68.1" y="152.412" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 68.1 152.412)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">30,2</text>
+<line x1="74.8" y1="137.324" x2="67.4" y2="137.324" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="82.5" x2="67.4" y2="82.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69" y1="138.824" x2="69" y2="81" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69.919" y1="138.243" x2="68.081" y2="136.405" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="69.919" y1="83.419" x2="68.081" y2="81.581" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="68.1" y="109.912" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 68.1 109.912)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">54,8</text>
+<line x1="74.8" y1="82.5" x2="67.4" y2="82.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="43.25" x2="67.4" y2="43.25" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69" y1="84" x2="69" y2="41.75" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69.919" y1="83.419" x2="68.081" y2="81.581" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="69.919" y1="44.169" x2="68.081" y2="42.331" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="68.1" y="62.875" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 68.1 62.875)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">39,2</text>
+<line x1="74.8" y1="43.25" x2="67.4" y2="43.25" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="37.037" x2="67.4" y2="37.037" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69" y1="44.75" x2="69" y2="35.537" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="69.919" y1="44.169" x2="68.081" y2="42.331" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="69.919" y1="37.957" x2="68.081" y2="36.118" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="68.1" y="40.144" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 68.1 40.144)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">6,2</text>
+<line x1="74.8" y1="173.713" x2="59.4" y2="173.713" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="37.037" x2="59.4" y2="37.037" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="61" y1="175.213" x2="61" y2="35.537" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="61.919" y1="174.632" x2="60.081" y2="172.793" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="61.919" y1="37.957" x2="60.081" y2="36.118" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="60.1" y="105.375" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 60.1 105.375)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.736" stroke-linejoin="round">celda 136,7 (1000)</text>
+<line x1="74.8" y1="180" x2="51.4" y2="180" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.8" y1="30" x2="51.4" y2="30" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="53" y1="181.5" x2="53" y2="28.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="53.919" y1="180.919" x2="52.081" y2="179.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="53.919" y1="30.919" x2="52.081" y2="29.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="52.1" y="105" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="middle" transform="rotate(-90 52.1 105)" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.736" stroke-linejoin="round">placa 150</text>
+<line x1="226" y1="37.037" x2="229" y2="37.037" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="37.037" x2="247" y2="37.037" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,37.037 L230.5,34.537 L233.5,34.537 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,37.037 L232,34.537 L233.5,34.537 Z" fill="#1d1c1a"/>
+<line x1="226" y1="43.25" x2="229" y2="43.25" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="43.25" x2="247" y2="43.25" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,43.25 L230.5,40.75 L233.5,40.75 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,43.25 L232,40.75 L233.5,40.75 Z" fill="#1d1c1a"/>
+<line x1="226" y1="82.5" x2="229" y2="82.5" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="82.5" x2="247" y2="82.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,82.5 L230.5,80 L233.5,80 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,82.5 L232,80 L233.5,80 Z" fill="#1d1c1a"/>
+<line x1="226" y1="137.324" x2="229" y2="137.324" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="137.324" x2="247" y2="137.324" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,137.324 L230.5,134.824 L233.5,134.824 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,137.324 L232,134.824 L233.5,134.824 Z" fill="#1d1c1a"/>
+<line x1="226" y1="167.5" x2="229" y2="167.5" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="167.5" x2="247" y2="167.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,167.5 L230.5,165 L233.5,165 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,167.5 L232,165 L233.5,165 Z" fill="#1d1c1a"/>
+<line x1="226" y1="173.713" x2="229" y2="173.713" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="230" y1="173.713" x2="247" y2="173.713" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M232,173.713 L230.5,171.213 L233.5,171.213 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M232,173.713 L232,171.213 L233.5,171.213 Z" fill="#1d1c1a"/>
+<line x1="76" y1="174.912" x2="76" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="93.596" y1="174.912" x2="93.596" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.5" y1="187" x2="95.096" y2="187" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="75.081" y1="187.919" x2="76.919" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="92.677" y1="187.919" x2="94.516" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="84.798" y="186.1" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">17,6</text>
+<line x1="93.596" y1="174.912" x2="93.596" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="208.404" y1="174.912" x2="208.404" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="92.096" y1="187" x2="209.904" y2="187" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="92.677" y1="187.919" x2="94.516" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="207.484" y1="187.919" x2="209.323" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="151" y="186.1" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">114,8 (840) · avance</text>
+<line x1="208.404" y1="174.912" x2="208.404" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="226" y1="174.912" x2="226" y2="188.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="206.904" y1="187" x2="227.5" y2="187" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="207.484" y1="187.919" x2="209.323" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="225.081" y1="187.919" x2="226.919" y2="186.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="217.202" y="186.1" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.704" stroke-linejoin="round">17,6</text>
+<line x1="76" y1="181.2" x2="76" y2="196.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="226" y1="181.2" x2="226" y2="196.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="74.5" y1="195" x2="227.5" y2="195" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="75.081" y1="195.919" x2="76.919" y2="194.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<line x1="225.081" y1="195.919" x2="226.919" y2="194.081" stroke="#1d1c1a" stroke-width="0.4"/>
+<text x="151" y="194.1" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="middle" paint-order="stroke" stroke="#f6f4ee" stroke-width="0.736" stroke-linejoin="round">placa 150</text>
+<circle cx="176" cy="37.037" r="0.45" fill="#4a2470"/>
+<line x1="176" y1="37.037" x2="182.692" y2="26.131" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M184,21.5 L186.5,24 L184,26.5 L181.5,24 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="184" y="24.85" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">1</text>
+<circle cx="208.404" cy="169.713" r="0.45" fill="#4a2470"/>
+<line x1="208.404" y1="169.713" x2="215.323" y2="165.099" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M217.404,161.213 L219.904,163.713 L217.404,166.213 L214.904,163.713 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="217.404" y="164.562" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">2</text>
+<circle cx="116" cy="137.324" r="0.45" fill="#4a2470"/>
+<line x1="116" y1="137.324" x2="122.339" y2="144.456" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M124,143.824 L126.5,146.324 L124,148.824 L121.5,146.324 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="124" y="147.174" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">3</text>
+<circle cx="136" cy="82.5" r="0.45" fill="#4a2470"/>
+<line x1="136" y1="82.5" x2="142.339" y2="89.631" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M144,89 L146.5,91.5 L144,94 L141.5,91.5 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="144" y="92.35" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">4</text>
+<circle cx="245" cy="248.75" r="0.45" fill="#4a2470"/>
+<line x1="245" y1="248.75" x2="252.232" y2="255.982" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M254,255.25 L256.5,257.75 L254,260.25 L251.5,257.75 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="254" y="258.6" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">2</text>
+<circle cx="32" cy="22" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27.8" y1="22" x2="36.2" y2="22" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="32" y="21" font-family="Courier Prime" font-size="3" font-weight="700" fill="#1d1c1a" text-anchor="middle">1</text>
+<text x="32" y="25" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">P-01</text>
+<text x="38.7" y="21.4" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">LA CELDA EN LA PLACA</text>
+<line x1="38.7" y1="22.8" x2="77.677" y2="22.8" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="38.7" y="26.2" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">1:1</text>
+<text x="77.6" y="42.25" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">afuera</text>
+<text x="77.6" y="81.5" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">borde</text>
+<text x="77.6" y="136.324" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">fondo</text>
+<text x="77.6" y="166.5" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">desagüe</text>
+<text x="95.096" y="40.637" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">celda 0,84 : 1</text>
+<text x="151" y="22.5" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="middle">eje de la celda</text>
+<text x="233" y="28" font-family="Courier Prime" font-size="2" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">NIVELES (UPM)</text>
+<text x="234.6" y="36.237" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">+734</text>
+<text x="248" y="36.237" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">cabeza de la celda</text>
+<text x="234.6" y="42.45" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">+688</text>
+<text x="248" y="42.45" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">afuera</text>
+<text x="234.6" y="81.7" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">+401</text>
+<text x="248" y="81.7" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">borde</text>
+<text x="234.6" y="136.524" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">±0</text>
+<text x="248" y="136.524" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">fondo</text>
+<text x="234.6" y="166.7" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">−221</text>
+<text x="248" y="166.7" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">desagüe</text>
+<text x="234.6" y="172.912" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">−266</text>
+<text x="248" y="172.912" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">pie de la celda</text>
+<text x="233" y="102" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">ascendente / x</text>
+<text x="233" y="105.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">94,1 / 54,8 ≈ 1,71</text>
+<text x="233" y="108.4" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="start">(de la foto del pie)</text>
+<circle cx="265" cy="66" r="5" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="265" y1="59.5" x2="265" y2="68.6" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M265,72.2 L266.5,68.6 L263.5,68.6 Z" fill="#1d1c1a"/>
+<text x="265" y="58.4" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="middle">g</text>
+<text x="265" y="75.6" font-family="Courier Prime" font-size="1.9" font-weight="400" letter-spacing="0.25" fill="#1d1c1a" text-anchor="middle">GRAVEDAD</text>
+<rect x="76" y="202" width="10" height="1.4" fill="#1d1c1a" stroke="#1d1c1a" stroke-width="0.18"/>
+<rect x="86" y="202" width="10" height="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.18"/>
+<rect x="96" y="202" width="10" height="1.4" fill="#1d1c1a" stroke="#1d1c1a" stroke-width="0.18"/>
+<rect x="106" y="202" width="10" height="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.18"/>
+<rect x="116" y="202" width="10" height="1.4" fill="#1d1c1a" stroke="#1d1c1a" stroke-width="0.18"/>
+<text x="76" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">0</text>
+<text x="86" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">10</text>
+<text x="96" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">20</text>
+<text x="106" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">30</text>
+<text x="116" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">40</text>
+<text x="126" y="206" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">50</text>
+<text x="129" y="203.4" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="start">mm</text>
+<circle cx="32" cy="213" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27.8" y1="213" x2="36.2" y2="213" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="32" y="212" font-family="Courier Prime" font-size="3" font-weight="700" fill="#1d1c1a" text-anchor="middle">2</text>
+<text x="32" y="216" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">P-01</text>
+<text x="38.7" y="212.4" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">TRES SIGNOS Y LA CELDA VACÍA</text>
+<line x1="38.7" y1="213.8" x2="93.267" y2="213.8" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="38.7" y="217.2" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">1:3</text>
+<text x="34" y="274.5" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">o · altura de x</text>
+<text x="96" y="274.5" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">l · ascendente</text>
+<text x="158" y="274.5" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">p · descendente</text>
+<text x="245" y="247.5" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#6d6a63" text-anchor="middle">la piel</text>
+<text x="220" y="274.5" font-family="Newsreader" font-size="2.4" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">la celda vacía</text>
+<text x="289" y="18.2" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">QUÉ SE DIBUJA</text>
+<line x1="289" y1="19.3" x2="405" y2="19.3" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="289" y="25.1" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">La celda de la cabeza de la ídolo dentro de la placa de 150 mm, con las cuatro líneas que da el pie.</tspan></text>
+<text x="289" y="28.895" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">Abajo, a 1:3, tres signos en su celda y la celda vacía.</tspan></text>
+<text x="289" y="35.09" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">DECISIONES</text>
+<line x1="289" y1="36.19" x2="405" y2="36.19" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M291.5,39.49 L294,41.99 L291.5,44.49 L289,41.99 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="42.84" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">1</text>
+<text x="295.6" y="42.79" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">EL CUERPO: LA CELDA DE LA CABEZA</text>
+<text x="295.6" y="47.59" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> El cuerpo del tipo es una celda de 0,84 de ancho por alto: 114,8 × 136,7 mm, 840</tspan></text>
+<text x="295.6" y="51.385" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">× 1000 UPM. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> Es la proporción de las celdas de la cabeza en la lámina: se parte del</tspan></text>
+<text x="295.6" y="55.18" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">registro y no de la piedra (D1). Es el único préstamo directo del monolito, y entra vacío: también</tspan></text>
+<text x="295.6" y="58.975" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">es el .notdef, lo que la fuente muestra cuando no tiene la letra. </tspan><tspan font-weight="300" font-style="italic">Retórica:</tspan><tspan font-weight="300"> metonimia; la celda de la</tspan></text>
+<text x="295.6" y="62.77" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">cabeza está por la ídolo entera.</tspan></text>
+<text x="299" y="67.765" font-family="Newsreader" font-size="2.86" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">Quedó el contenedor</text>
+<text x="299" y="71.483" font-family="Newsreader" font-size="2.86" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">de lo que ya no está.</text>
+<path d="M291.5,75.101 L294,77.601 L291.5,80.101 L289,77.601 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="78.451" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">2</text>
+<text x="295.6" y="78.401" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">EL ANCHO: MONOESPACIADA</text>
+<text x="295.6" y="83.201" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> Todas las letras miden una celda y nada se estira para llenar. Entre palabras queda</tspan></text>
+<text x="295.6" y="86.996" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">una celda vacía. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> Las celdas de la cabeza y la máquina de escribir del poema son retículas</tspan></text>
+<text x="295.6" y="90.791" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">de celdas iguales. La letra se adapta a su contenedor, y no al revés: la m llena su celda y la i queda</tspan></text>
+<text x="295.6" y="94.586" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">rodeada de piel, la que se ve entre placa y placa sobre el cuerpo (D3).</tspan></text>
+<path d="M291.5,98.881 L294,101.381 L291.5,103.881 L289,101.381 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="102.231" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">3</text>
+<text x="295.6" y="102.181" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">LAS LÍNEAS: NOMBRES DE VASIJA</text>
+<text x="295.6" y="106.981" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> La base se llama fondo (±0); la altura de x, borde (+401); las ascendentes llegan</tspan></text>
+<text x="295.6" y="110.776" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">afuera (+688); las descendentes caen al desagüe (−221). </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> En la obra todo es un</tspan></text>
+<text x="295.6" y="114.571" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">continente, y la letra también se mide como un vaso. Son además las partes de la piscina, con el</tspan></text>
+<text x="295.6" y="118.366" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">público adentro y afuera (D6, D9). </tspan><tspan font-weight="300" font-style="italic">Retórica:</tspan><tspan font-weight="300"> metáfora; la letra es un vaso.</tspan></text>
+<path d="M291.5,122.661 L294,125.161 L291.5,127.661 L289,125.161 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="126.011" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">4</text>
+<text x="295.6" y="125.961" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">LA ALTURA DE X: 1,71</text>
+<text x="295.6" y="130.761" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> Las ascendentes miden 1,71 veces la altura de x: una x baja, con ascendentes largas</tspan></text>
+<text x="295.6" y="134.556" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">y descendentes cortas. Ninguna altura se redondea a una retícula. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> Es la única</tspan></text>
+<text x="295.6" y="138.351" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">proporción que se toma de la foto del pie real (07, §3); el testigo sustituto daba 1,52. Las alturas</tspan></text>
+<text x="295.6" y="142.146" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">las da el registro, no una norma.</tspan></text>
+<text x="289" y="149.841" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">PARA LA MANO</text>
+<line x1="289" y1="150.941" x2="405" y2="150.941" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="289" y="156.741" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">La pauta a 1:1 está en esquemas/pauta_azulejo.svg. Se calca con el fondo de la pauta sobre la base del</tspan></text>
+<text x="289" y="160.536" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">pie ampliado (Acción 3). Si algo se sale de la celda, se deja salir y se anota.</tspan></text>
+<rect x="20" y="10" width="390" height="277" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="52.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">1</text>
+<text x="52.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">1</text>
+<line x1="85" y1="10" x2="85" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="85" y1="287" x2="85" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="117.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">2</text>
+<text x="117.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">2</text>
+<line x1="150" y1="10" x2="150" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="150" y1="287" x2="150" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="182.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">3</text>
+<text x="182.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">3</text>
+<line x1="215" y1="10" x2="215" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="215" y1="287" x2="215" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="247.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">4</text>
+<text x="247.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">4</text>
+<line x1="280" y1="10" x2="280" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="280" y1="287" x2="280" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="312.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">5</text>
+<text x="312.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">5</text>
+<line x1="345" y1="10" x2="345" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="345" y1="287" x2="345" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="377.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">6</text>
+<text x="377.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">6</text>
+<text x="15.5" y="38.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">A</text>
+<text x="414.5" y="38.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">A</text>
+<line x1="20" y1="65" x2="17" y2="65" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="65" x2="413" y2="65" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="93.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">B</text>
+<text x="414.5" y="93.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">B</text>
+<line x1="20" y1="120" x2="17" y2="120" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="120" x2="413" y2="120" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="148.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">C</text>
+<text x="414.5" y="148.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">C</text>
+<line x1="20" y1="175" x2="17" y2="175" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="175" x2="413" y2="175" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="203.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">D</text>
+<text x="414.5" y="203.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">D</text>
+<line x1="20" y1="230" x2="17" y2="230" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="230" x2="413" y2="230" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="258.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">E</text>
+<text x="414.5" y="258.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">E</text>
+<line x1="20" y1="285" x2="17" y2="285" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="285" x2="413" y2="285" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="313.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">F</text>
+<text x="414.5" y="313.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">F</text>
+<line x1="210" y1="0" x2="210" y2="10" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="210" y1="287" x2="210" y2="297" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="0" y1="148.5" x2="20" y2="148.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="148.5" x2="420" y2="148.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="10" x2="284" y2="287" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="284" y="234" width="126" height="53" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.5"/>
+<line x1="284" y1="246" x2="410" y2="246" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="261" x2="410" y2="261" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="272" x2="410" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="384" y1="234" x2="384" y2="261" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="314" y1="261" x2="314" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="348" y1="261" x2="348" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="380" y1="261" x2="380" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="286.5" y="239.6" font-family="Courier Prime" font-size="4.4" font-weight="700" letter-spacing="0.6" fill="#1d1c1a" text-anchor="start">CONTENIDA</text>
+<text x="286.5" y="243.8" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">la anatomía base · planos de la gramática</text>
+<text x="397" y="244.2" font-family="Courier Prime" font-size="7" font-weight="700" fill="#1d1c1a" text-anchor="middle">P-01</text>
+<text x="286.5" y="253.6" font-family="Newsreader" font-size="5" font-weight="400" fill="#1d1c1a" text-anchor="start">La celda y las cuatro líneas</text>
+<text x="286.5" y="258.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">la unidad de la letra: la celda de la cabeza</text>
+<text x="397" y="250" font-family="Courier Prime" font-size="1.8" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="middle">HOJA</text>
+<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">2 / 11</text>
+<text x="285.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">ESCALA</text>
+<text x="285.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">1:1 · 1:3</text>
+<text x="315.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">UNIDADES</text>
+<text x="315.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">mm · (UPM)</text>
+<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA</text>
+<text x="349.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">17.10.2026</text>
+<text x="381.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FORMATO</text>
+<text x="381.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">A3 · 420 × 297</text>
+<text x="285.6" y="275.4" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">DIBUJÓ</text>
+<text x="300" y="275.4" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">la gramática (simulacion/gramatica.py): propuesta de la máquina</text>
+<text x="285.6" y="279.6" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">CALCA</text>
+<text x="300" y="279.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">la mano, desde el pie de la lámina (04, acciones 3 y 4)</text>
+<text x="285.6" y="283.8" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">NOTA</text>
+<text x="300" y="283.8" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">regla de la forma, no pauta de calco: no entra en la caja</text>
+</svg>

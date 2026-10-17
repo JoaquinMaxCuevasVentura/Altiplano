@@ -91,7 +91,7 @@ La anatomía base se construye antes de los estados, en vectores (`03c_gramatica
 | `hombro` | 3,0  | Exponente de la superelipse de los arcos altos (2 sería una elipse). | La chapa curvada a la fuerza sobre un hombro o una clavícula (D3) |
 | `hombro_caida` | 0,4  | Dónde el arco se vuelve vertical, del borde al fondo. | Del testigo de la n, a ojo: falta medirlo en el libro |
 | `facetas` | 3  | Planos de cada fuste. | La placa cambia de plano al apoyarse en el cuerpo (D3, D11) |
-| `quiebre` | 1,6 ° | Ángulo entre plano y plano: apenas. | «Moverse como se mueve la piedra, es decir, apenas» (D11) |
+| `quiebre` | 1,6 ° | Cuánto se aparta cada plano del eje: apenas. | «Moverse como se mueve la piedra, es decir, apenas» (D11) |
 | `asiento_ancho` | 71,0 px | Ancho del pie de cada fuste sobre el fondo. | El peso se asienta en la tierra; la piedra en pie |
 | `asiento_alto` | 31,9 px | Altura de la curva cóncava con que el fuste se ensancha. | Ídem |
 | `intemperie` | 4,3 px | Radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte. | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |

@@ -84,6 +84,7 @@ Lo digital no termina la cadena: le da la vuelta, como la mesa serif de Tshuma, 
 
 Se recibió una propuesta de otra IA para el ecosistema digital. Esto es lo que se toma, para cuando lo digital cierre:
 
+- **Un editor libre para revisar los contornos:** [Fontra](https://github.com/fontra/fontra), en el navegador, abre UFO. Sirve para mirar los contornos vectorizados de los calcos, no para dibujar letras.
 - **Formato abierto y compiladores libres.** Además de FontForge:
   - las fuentes de trabajo en UFO, con `ufoLib2`;
   - la compilación con `fontmake`;

@@ -48,14 +48,16 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `digital/poliza.py` | La póliza en OpenType: reparte las placas para que ninguna se repita dentro de un verso; la prueba con HarfBuzz |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
-| `aplicacion/` | **La gramática en el navegador:** la ficha de parámetros, la caja, el signo con sus partes, el texto compuesto y los seis estados. Exporta `parametros.json` para `simular.py --parametros` |
+| `planos/` | **Los planos de la anatomía base:** once láminas A3, como un plano de arquitectura (cotas, ejes, niveles, cortes, detalles, cajetín), con el porqué de cada decisión de anatomía tipográfica: concepto, retórica y poética. En SVG, PDF y DXF. Es la concepción formal: la mano calca desde el pie |
+| `aplicacion/` | **Las decisiones de la letra:** una sola pantalla con el plano del signo, nueve decisiones de anatomía con su porqué y la caja. Exporta `parametros.json` para `gramatica.py --parametros` |
 
 ## Estado
 
 - **Hecho:**
   - el plan completo del proyecto y las plantillas para empezar el taller;
   - la propuesta de la máquina (`simulacion/`): el taller simulado, para confrontarla con la propuesta de la mano;
-  - la gramática en el navegador (`aplicacion/`), para discutir cada parámetro;
+  - los planos de la anatomía base (`planos/`): la concepción formal, con el porqué de cada decisión;
+  - la página de las decisiones (`aplicacion/`), para discutirlas;
   - el informe de decisiones, con sus mapas (`informe/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`).

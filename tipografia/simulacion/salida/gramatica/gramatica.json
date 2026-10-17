@@ -248,7 +248,7 @@
   "quiebre": {
    "valor": 1.6,
    "unidad": "°",
-   "que": "Ángulo entre plano y plano: apenas.",
+   "que": "Cuánto se aparta cada plano del eje: apenas.",
    "de_donde": "«Moverse como se mueve la piedra, es decir, apenas» (D11)"
   },
   "asiento_ancho": {

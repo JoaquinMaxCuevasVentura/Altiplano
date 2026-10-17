@@ -43,5 +43,6 @@ python3 tipografia/informe/armar.py     # el .docx; con LibreOffice (Writer), ta
 | `armar.py` | Arma el .docx, lo pasa a PDF, busca la página de cada título y vuelve a armarlo con el índice paginado |
 | `paginas.json` | Las páginas del índice, de la última vez que se armó con LibreOffice |
 | `img/aplicacion.png` | Captura de la aplicación (`../aplicacion/`), para el capítulo 8 |
+| `../planos/png/P-03_o_cuenca.png` | Un plano de la anatomía base, para el §5.5 (lo rehace `../planos/generar_planos.py`) |
 
 Hecho con asistencia de IA.
