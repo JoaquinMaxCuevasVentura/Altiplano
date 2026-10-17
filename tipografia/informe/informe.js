@@ -159,12 +159,12 @@ function piePagina() {
 
 // ------------------------------------------------------------------ los mapas
 const MAPA = {
-  1: ["mapa_1_el_proyecto_entero.png", "El proyecto entero. Un eje baja por las cuatro líneas de la letra (afuera, borde, fondo y desagüe). Las cinco etapas giran sobre él, cada una en su órbita abierta abajo: la piscina vacía, el pie con su calco, la placa y la caja, la frotada y el charco, y lo digital, todavía punteado. De los márgenes llegan las fuentes; la vuelta punteada devuelve lo digital a la caja."],
-  2: ["mapa_2_teoria_y_fuentes.png", "Teoría y fuentes. Cada fuente es un objeto en su órbita: una vasija rajada (*EthnoGraphemes*), un taburete (*Afrography*), una losa con su canal (Posnansky), la ¿ y la ? que no son espejo (Agüero, Uribe y Berenguer), una placa en su charco (la obra), un lápiz (el manuaje de Cárcamo) y los anillos de un tronco (Johnson). Lo que se toma llega en haces a la o, que se abre abajo; lo que no se toma sale hacia afuera y se corta."],
-  3: ["mapa_3_la_obra_decision_por_decision.png", "La obra, decisión por decisión. La cadena de desplazamientos es un río de aguada que pierde materia de arriba abajo: grafito (la piedra, la foto, el dibujo), plata (el aluminio), violeta (el cuerpo, el video) y lila (el agua). De cada eslabón sale una hebra hacia la decisión que nace allí; en gris, lo que hizo la obra; en tinta, lo que hace la letra."],
-  4: ["mapa_4_del_pie_a_los_55.png", "Del pie a los 55 signos. Arriba, el pie a máquina y sus medidas a mano. En el medio, las cuatro vasijas (o, l, n, a), cada una en sus órbitas, con sus parámetros escritos sobre ellas; desde los márgenes, la obra empuja la forma. Abajo, los signos bajan en bandadas, como peces, hasta la caja de 8 × 7."],
-  5: ["mapa_5_la_cadena_de_estados.png", "La cadena de estados. La piscina vacía es la sala. Un embudo baja del pie al charco, sobre el desagüe, pasando por la placa, que es la matriz de todo lo que sigue: calco, placa, cinta, frotado (22 frotadas frente a 10), agua y voz. La vuelta punteada es lo digital: el esténcil vuelve a ser placa. Del borde cuelgan las frotadas legibles de cada celda en la simulación."],
-  6: ["mapa_6_retorica_y_poetica.png", "Retórica y poética. Un cuaderno entre tres verbos: el poema entero, a máquina, adentro del agua; en violeta, los versos que operan. Alrededor, un dibujo por figura, en el orden de sus versos, con lo que cada una hace en la letra."],
+  1: ["mapa_1_el_proyecto_entero.png", "El proyecto entero. De arriba abajo, cinco etapas unidas por un hilo de tinta: la piscina vacía (la obra); el pie y su calco (desenterrar); las vasijas o, l y n, la placa de aluminio y la caja (contener); el frotado y el agua (devolver); y lo digital, todavía punteado. La línea punteada devuelve lo digital a la caja."],
+  2: ["mapa_2_teoria_y_fuentes.png", "Teoría y fuentes. Cada fuente es un objeto: una vasija rajada (*EthnoGraphemes*), un taburete (*Afrography*), una losa con su desagüe (Posnansky), la ¿ y la ? que no son espejo (Agüero, Uribe y Berenguer), una placa sobre el agua (la obra), un lápiz (el manuaje de Cárcamo) y los anillos de un tronco (Johnson). Lo que se toma llega en hebras a la o, que se abre abajo; lo que no se toma se corta con un tope."],
+  3: ["mapa_3_la_obra_decision_por_decision.png", "La obra, decisión por decisión. La cadena de desplazamientos es un río hecho de sus materiales, de arriba abajo: piedra borrada, fotografía vieja, dibujo reconstructivo, escaneo, aluminio, cuerpo, video, charco y pared de azulejo. De cada tramo sale una línea hacia la decisión que nace allí: en tinta, lo que hizo la obra; en violeta, lo que hace la letra; al lado, su dibujo."],
+  4: ["mapa_4_del_pie_a_los_55.png", "Del pie a los 55 signos. Arriba, el pie a máquina y la medida de x. En el medio, las cuatro vasijas (o, l, n, a) en aguada, con sus cotas; a mano, la fuerza de la obra que da cada forma. Debajo de cada una, su familia: tinta lo hallado, violeta lo reconstruido. Abajo, la caja de 8 × 7."],
+  5: ["mapa_5_la_cadena_de_estados.png", "La cadena de estados. Del pie bajan, unidos por un hilo de tinta, el calco, la placa de aluminio con la letra en relieve, la cinta, el frotado (la primera frotada y una de las últimas que se leen) y, en la piscina, el agua y la voz. La línea punteada es lo digital: el esténcil vuelve a ser placa."],
+  6: ["mapa_6_retorica_y_poetica.png", "Retórica y poética. El poema entero, a máquina, en una columna de agua que gotea; en violeta, los versos que operan. A cada lado, la figura junto a su verso, con su dibujo y lo que hace en la letra. En los márgenes, los tres verbos: enterrar, contener, desenterrar."],
 };
 
 function paginaMapa(n) {
@@ -269,14 +269,15 @@ function contenido() {
     P("**La máquina, para confrontar.** Una simulación hecha con código propone su versión de cada acción. Una aplicación deja intervenir la gramática de las letras en el navegador. Las dos sirven para discutir con la mano; ninguna forma que producen entra en la caja (§8)."),
     P("**Mirar alrededor, sin calcar.** Libros e imágenes de dominio público, estudios y proyectos de otras personas acompañan el taller. Cada uno dice de dónde viene, con qué acción rima y qué no se toma (§11)."),
     H2("1.5. Cómo leer los mapas"),
-    P("Los mapas se dibujan a mano, aunque sea con código. Toman su modo de dibujar de tres clases de referencias: notaciones hechas a mano, con acuarela, órbitas, ejes y haces de líneas anotados; una sala en perspectiva con un embudo y bandadas de signos; y un cuaderno de pictogramas entre dos palabras. El sentido de cada gesto viene de *Contenida*:"),
+    P("Los mapas se dibujan a mano, aunque sea con código. Se rehicieron el 17 de octubre de 2026 tomando como modelo las versiones mejoradas de Joaquin Max Cuevas Ventura: cada estado se dibuja con su material, las notas van a máquina y un hilo de tinta une las etapas. El sentido de cada gesto viene de *Contenida*:"),
+    vineta("**cada material se dibuja como material**: el aluminio se arruga y la letra sube en relieve de contorno, como la deja el punzón; el grafito raya; la cinta se corta en tiras; el calco se transparenta; el agua ondula. No son fotos: son filtros y trazos calculados;"),
+    vineta("**un hilo de tinta violeta** une las etapas y gotea donde la obra gotea;"),
     vineta("**la línea tiembla apenas**, como la mano que calca («es decir, apenas, es decir, temblor»);"),
-    vineta("**toda órbita se abre en su punto más bajo**, como toda cuenca en su desagüe. Cada etapa, cada fuente y cada vasija gira en la suya;"),
     vineta("**lo continuo es lo hallado; lo punteado**, lo reconstruido o lo que todavía no es, como en el calco;"),
     vineta("**cada color es un material**: violeta, la tinta del esténcil; lila, el agua; grafito, el frotado; plata, el aluminio; hueso, la cinta; y la tinta, lo hallado. El verde, que en el proyecto es solo luz, no aparece;"),
-    vineta("**a máquina va lo que ya estaba escrito** (el pie, el poema, los datos); **a mano, lo que se hace con eso**;"),
+    vineta("**a máquina va lo que ya estaba escrito y lo que hay que saber** (el pie, el poema, los datos, las notas); **a mano, los títulos**;"),
     vineta("**× marca un centro externo**, una fuente de la que se toma algo; una línea que se corta con un tope es lo que no se toma."),
-    P("No hay marcos, ni cajas, ni tablas. Cada mapa lleva su leyenda a mano, en una esquina, y su firma. La letra de mano es una fuente, no una mano (Colofón)."),
+    P("Las letras que aparecen en los mapas vienen de la gramática: son la propuesta de la máquina. La letra de mano es una fuente, no una mano (Colofón)."),
   );
   mapa(1);
 
@@ -709,8 +710,8 @@ function contenido() {
     H2("Documentos del proyecto"),
     P("`tipografia/01` a `10` (la obra, las tesis, el sistema, la gramática, el taller, la migración, la ética, Posnansky, los nombres, las manos y las imágenes de dominio público), `simulacion/informe.md` (la propuesta de la máquina), `aplicacion/` (la gramática en el navegador) y `digital/poliza.py` (la póliza en OpenType)."),
     H1("Colofón"),
-    P("Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), las dos con licencia SIL Open Font License e incrustadas en este archivo. Los mapas se dibujan con código (`tipografia/informe/mano.py` y `mapas.py`) y el documento se arma con `tipografia/informe/informe.js`."),
-    P("La letra de mano de los mapas es una fuente, La Belle Aurore (Kimberly Geswein, SIL Open Font License), no una mano. Las líneas tiemblan por cálculo. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide."),
+    P("Compuesto en Newsreader (Production Type) y Courier Prime (Alan Dague-Greene), las dos con licencia SIL Open Font License e incrustadas en este archivo. Los mapas se dibujan con código (`tipografia/informe/mano.py`, `materia.py` y `mapas.py`), tomando como modelo las versiones mejoradas de Joaquin Max Cuevas Ventura, y el documento se arma con `tipografia/informe/informe.js`."),
+    P("La letra de mano de los mapas es una fuente, La Belle Aurore (Kimberly Geswein, SIL Open Font License), no una mano. Las líneas tiemblan por cálculo; el aluminio, el grafito y el agua son filtros, no fotos. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide."),
     P("Documento de trabajo, hecho con asistencia de inteligencia artificial. Las formas de letra que muestran sus figuras vienen de la simulación: son la propuesta de la máquina y no entran en la caja ni en la fuente."),
     verso("«Termina y empieza, / termina y empieza.» ¶", { antes: 400 }),
   );

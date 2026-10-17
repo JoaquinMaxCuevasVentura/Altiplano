@@ -6,22 +6,23 @@
 
 | Mapa | Qué conecta | Cómo se dibuja |
 |---|---|---|
-| 1 · El proyecto entero | Las cinco etapas, de la obra a lo digital, con su concepto, su figura, su verso y sus fuentes | Un eje que baja por las cuatro líneas de la letra (afuera, borde, fondo, desagüe); cada etapa es un objeto en su órbita; la vuelta punteada vuelve a la caja |
-| 2 · Teoría y fuentes | Las dos tesis, Posnansky, Agüero, Uribe y Berenguer, la obra, Cárcamo y Johnson: lo que se toma y lo que no | Cada fuente es un objeto en órbita (una vasija rajada, un taburete, una losa con su canal, la ¿ y la ?, una placa en su charco, un lápiz, los anillos de un tronco); lo que se toma llega en haces a la o; lo que no, se corta |
-| 3 · La obra, decisión por decisión | Las dieciséis decisiones de la obra y su traducción en la letra | La cadena de desplazamientos es un río de aguada que pierde materia (grafito, plata, violeta, lila); de cada eslabón sale una hebra hacia su decisión |
-| 4 · Del pie a los 55 signos | Las medidas del pie, la forma de la obra, los parámetros, las partes, los generadores y la caja | El pie a máquina con sus medidas a mano; las cuatro vasijas en órbita, con sus parámetros escritos sobre las órbitas; los signos bajan en bandadas a la caja |
-| 5 · La cadena de estados | Pie, calco, placa, cinta, frotado, agua y voz; las frotadas de cada celda | La piscina en perspectiva es la sala; un embudo baja del pie al charco pasando por la placa, que es la matriz |
-| 6 · Retórica y poética | El poema, sus trece figuras y lo que cada una hace en la letra | Un cuaderno: el poema entero adentro del agua; alrededor, un dibujo por figura, unido a su verso por una línea |
+| 1 · El proyecto entero | Las cinco etapas, de la obra a lo digital, con su concepto, su verso y sus fuentes | De arriba abajo, unidas por un hilo de tinta: la piscina, el pie y su calco, las vasijas con la placa y la caja, el frotado y el agua, y lo digital punteado, que vuelve a la caja |
+| 2 · Teoría y fuentes | Las dos tesis, Posnansky, Agüero, Uribe y Berenguer, la obra, Cárcamo y Johnson: lo que se toma y lo que no | Cada fuente es un objeto (una vasija rajada, un taburete, una losa con su desagüe, la ¿ y la ?, una placa sobre el agua, un lápiz, los anillos de un tronco); lo que se toma llega en hebras a la o; lo que no, se corta con un tope |
+| 3 · La obra, decisión por decisión | Las dieciséis decisiones de la obra y su traducción en la letra | La cadena de desplazamientos es un río hecho de sus materiales (piedra, foto, dibujo, escaneo, aluminio, cuerpo, video, charco, azulejo); de cada tramo sale una línea hacia su decisión, que lleva su dibujo |
+| 4 · Del pie a los 55 signos | Las medidas del pie, la forma de la obra, los parámetros, los generadores, sus familias y la caja | El pie a máquina; las cuatro vasijas en aguada con sus cotas, medidas sobre los cuerpos de la gramática; debajo de cada una, su familia; abajo, la caja |
+| 5 · La cadena de estados | Pie, calco, placa, cinta, frotado, agua y voz | Cada estado con su material, unidos por un hilo de tinta que baja hasta la piscina; la vuelta punteada devuelve el esténcil a la placa |
+| 6 · Retórica y poética | El poema, sus trece figuras y lo que cada una hace en la letra | El poema entero en una columna de agua que gotea; a cada lado, la figura junto a su verso, con su dibujo |
 
-Toman de sus referencias (notaciones dibujadas a mano, con acuarela, órbitas, ejes y haces; una sala en perspectiva con un embudo y bandadas de signos; un cuaderno de pictogramas) el modo de dibujar, y de *Contenida* el sentido de cada gesto (`mano.py`):
+Se rehicieron el 17.10.2026 tomando como modelo las versiones mejoradas que trajo Joaquin. De ellas se toma el modo de dibujar; de *Contenida*, el sentido de cada gesto (`mano.py`, `materia.py`):
 
+- cada material se dibuja como material: el aluminio se arruga y la letra sube en relieve de contorno, como la deja el punzón; el grafito raya; la cinta se corta en tiras; el calco se transparenta; el agua ondula. No son fotos: son filtros de SVG (ruido, luz rasante, desplazamiento) y trazos calculados;
+- un hilo de tinta violeta une las etapas y gotea donde la obra gotea;
 - la línea tiembla apenas, como la mano que calca;
-- toda órbita se abre en su punto más bajo, como toda cuenca en su desagüe;
 - lo continuo es lo hallado y lo punteado, lo reconstruido o lo que todavía no es;
 - cada color es un material: violeta, la tinta del esténcil; lila, el agua; grafito, el frotado; plata, el aluminio; hueso, la cinta; la tinta, lo hallado. El verde es solo luz y no se dibuja;
-- a máquina (Courier Prime) va lo que ya estaba escrito: el pie, el poema, los datos. A mano va lo que se hace con eso.
+- a máquina (Courier Prime) va lo que ya estaba escrito y lo que hay que saber: el pie, el poema, los datos, las notas. A mano van los títulos.
 
-No hay marcos, cajas ni tablas: cada mapa lleva su leyenda a mano y su firma. **La letra de mano es una fuente** (La Belle Aurore, de Kimberly Geswein, SIL OFL; en `../laminas/fuentes/`), no una mano. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide.
+**La letra de mano es una fuente** (La Belle Aurore, de Kimberly Geswein, SIL OFL; en `../laminas/fuentes/`), no una mano. Los mapas se pueden repasar a mano sobre una impresión: sería la versión que el proyecto pide.
 
 ## Rehacerlo
 
@@ -35,6 +36,7 @@ python3 tipografia/informe/armar.py     # el .docx; con LibreOffice (Writer), ta
 | Archivo | Qué es |
 |---|---|
 | `mano.py` | El repertorio de trazos: línea temblada, órbitas abiertas abajo, aguadas (filtros SVG), rayados de grafito, notas sobre las líneas, leyenda y firma |
+| `materia.py` | Los materiales: aluminio con luz rasante y la letra en relieve, frotado de grafito, cinta, calco, papel rasgado, agua con ondas y reflejo, el hilo de tinta y los rótulos |
 | `mapas.py` | Dibuja los seis mapas con los datos del proyecto (la caja, las fichas simuladas, los cuerpos de la gramática, el poema) |
 | `informe.js` | Arma el .docx con docx (npm): el texto, las tablas, las figuras y los mapas |
 | `fuentes_docx.py` | Convierte Newsreader y Courier Prime (SIL OFL) a TTF, una familia por cara, para incrustarlas |
