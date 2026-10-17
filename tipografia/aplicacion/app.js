@@ -281,13 +281,36 @@
 
   // ------------------------------------------------------------------ las salidas
   function nota(texto) { const n = $("#nota"); n.textContent = texto; clearTimeout(n._t); n._t = setTimeout(() => { n.textContent = ""; }, 6000); }
-  function bajar(nombre, tipo, texto) {
+  /* Fuera de claude.ai, la descarga es un enlace. Dentro del visor los enlaces de descarga no hacen nada:
+   * se usa la capacidad «downloads», y si no está, el texto se copia y queda a la vista para guardarlo a mano. */
+  const enVisor = !!(window.claude && typeof window.claude.use === "function");
+  let descargas = null;
+  if (enVisor) window.claude.use("downloads").then((d) => { descargas = d; }, () => {});
+  function aMano(nombre, texto) {
+    $("#salida").hidden = false;
+    const t = $("#salida-texto");
+    t.value = texto;
+    t.focus();
+    t.select();
+    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(() => nota(`${nombre}: copiado.`), () => {});
+  }
+  async function bajar(nombre, tipo, texto) {
+    if (descargas) {
+      try { await descargas.save({ filename: nombre, data: texto }); nota(`${nombre}: guardado.`); }
+      catch (e) {
+        if (e && e.code === "declined") nota("Descarga cancelada.");
+        else aMano(nombre, texto);
+      }
+      return false;
+    }
+    if (enVisor) { aMano(nombre, texto); return false; }
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([texto], { type: tipo }));
     a.download = nombre;
     document.body.appendChild(a);
     a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    return true;
   }
   $("#a-obra").addEventListener("click", () => { estado = {}; pedir(true); nota("Volvió a la propuesta de la obra."); });
   $("#a-json").addEventListener("click", () => {
@@ -300,14 +323,16 @@
       ajustes: Object.fromEntries(Object.entries(aj).map(([k, v]) => [k, +(+v).toFixed(4)])),
       valores,
     }, null, 1);
-    bajar("parametros.json", "application/json", texto + "\n");
-    nota(Object.keys(aj).length ? "parametros.json: solo van los ajustes." : "Sin ajustes: es la propuesta de la obra.");
+    bajar("parametros.json", "application/json", texto + "\n").then((hecho) => {
+      if (hecho) nota(Object.keys(aj).length ? "parametros.json: solo van los ajustes." : "Sin ajustes: es la propuesta de la obra.");
+    });
   });
   $("#a-svg").addEventListener("click", () => {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -30 830 700" width="207.5mm" height="175mm">` +
       `<title>Contenida · ${esc(seleccion)} · plano</title>${svgPlano(todo.signos[seleccion])}</svg>\n`;
-    bajar(`contenida_plano_${seleccion.codePointAt(0).toString(16)}.svg`, "image/svg+xml", svg);
-    nota("El plano, a escala: 4 px del lienzo son 1 mm de la placa.");
+    bajar(`contenida_plano_${seleccion.codePointAt(0).toString(16)}.svg`, "image/svg+xml", svg).then((hecho) => {
+      if (hecho) nota("El plano, a escala: 4 px del lienzo son 1 mm de la placa.");
+    });
   });
 
   // ------------------------------------------------------------------ arrancar

@@ -38,6 +38,7 @@ La aplicación de septiembre tenía cuatro vistas, seis simuladores, veinte par�
 
 ## Cómo se abre
 
+- **En línea:** el artefacto de Claude [«Gramática de Contenida»](https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL), privado (se comparte desde su menú). Es la misma página; ahí las fuentes vienen de Google Fonts, Clipper de jsDelivr, y las descargas pasan por el visor, que pide confirmación.
 - **Sin servidor:** abre `index.html` en el navegador. Las fuentes las toma de `../laminas/fuentes/`; si el navegador no las carga desde el disco, usa las del sistema, y la página funciona igual.
 - **Con servidor,** desde `tipografia/`:
 

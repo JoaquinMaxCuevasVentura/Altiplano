@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Contenida · las decisiones de la letra</title>
+<title>Gramática de Contenida</title>
 <style>
 /* Una sola mesa: a la izquierda, el plano del signo; a la derecha, las nueve decisiones; abajo, la caja.
    Los colores y las letras son los de los planos (tipografia/planos/): papel, tinta, violeta para lo reconstruido. */
@@ -29,7 +29,8 @@
 * { box-sizing: border-box; }
 html, body { background: var(--papel); color: var(--tinta); }
 body {
-  margin: 0; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
+  margin: 0; padding-block: 0 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   font-family: var(--serif); font-size: 17px; line-height: 1.45; font-weight: 300;
 }
 button, input { font: inherit; color: inherit; }
@@ -81,6 +82,9 @@ details.fijas dd { margin: 0; }
 .boton { font-family: var(--mono); font-size: 13px; padding: 6px 10px; border: 1px solid var(--tinta); background: var(--papel); cursor: pointer; }
 .boton:hover { background: var(--tinta); color: var(--papel); }
 .nota { font-family: var(--mono); font-size: 12px; color: var(--gris); padding: 0 16px 14px; margin: 0; min-height: 1.4em; }
+.salida { padding: 0 16px 16px; display: grid; gap: 6px; }
+.salida p { margin: 0; font-size: 14px; }
+.salida textarea { width: 100%; min-height: 140px; font-family: var(--mono); font-size: 12px; border: 1px solid var(--filete); background: var(--papel); color: var(--tinta); padding: 8px; resize: vertical; }
 
 /* la caja */
 .caja { margin-top: 18px; }
@@ -127,7 +131,11 @@ footer p { margin: 4px 0; max-width: 90ch; }
       <button class="boton" id="a-json" type="button">parametros.json</button>
       <button class="boton" id="a-svg" type="button">El plano en SVG</button>
     </div>
-    <p class="nota" id="nota"></p>
+    <p class="nota" id="nota" role="status"></p>
+    <div class="salida" id="salida" hidden>
+      <p>Aquí no se puede descargar: copia el texto y guárdalo con ese nombre.</p>
+      <textarea id="salida-texto" readonly spellcheck="false" aria-label="El archivo, como texto"></textarea>
+    </div>
   </aside>
 </main>
 <footer>
