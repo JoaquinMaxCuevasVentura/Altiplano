@@ -310,9 +310,15 @@
 <line x1="129.733" y1="207.029" x2="156.356" y2="207.029" fill="none" stroke="#1d1c1a" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="156.356" y="206.579" font-family="Courier Prime" font-size="1.85" font-weight="400" fill="#6d6a63" text-anchor="start"> · dominio público, según el</text>
 <text x="129.733" y="208.984" font-family="Courier Prime" font-size="1.85" font-weight="400" fill="#6d6a63" text-anchor="start">archivo</text>
-<text x="113.233" y="212.139" font-family="Courier Prime" font-size="1.75" font-weight="400" fill="#6d6a63" text-anchor="start">visto</text>
-<rect x="129.733" y="209.839" width="2.6" height="2.6" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="133.933" y="212.139" font-family="Courier Prime" font-size="1.75" font-weight="400" fill="#6d6a63" text-anchor="start">por ______________________  el __.__.____</text>
+<text x="129.733" y="211.389" font-family="Courier Prime" font-size="1.7" font-weight="400" fill="#6d6a63" text-anchor="start">y:</text>
+<a href="https://www.getty.edu/art/collection/object/105TPX" target="_blank">
+<text x="132.791" y="211.389" font-family="Courier Prime" font-size="1.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Getty Museum</text>
+</a>
+<line x1="132.791" y1="211.839" x2="145.023" y2="211.839" fill="none" stroke="#6d6a63" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="145.023" y="211.389" font-family="Courier Prime" font-size="1.7" font-weight="400" fill="#1d1c1a" text-anchor="start"></text>
+<text x="113.233" y="214.349" font-family="Courier Prime" font-size="1.75" font-weight="400" fill="#6d6a63" text-anchor="start">visto</text>
+<rect x="129.733" y="212.049" width="2.6" height="2.6" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="133.933" y="214.349" font-family="Courier Prime" font-size="1.75" font-weight="400" fill="#6d6a63" text-anchor="start">por ______________________  el __.__.____</text>
 <rect x="198.367" y="179.684" width="4.469" height="5.4" fill="#f6f4ee"/>
 <path d="M200.322,185.084 H198.367 V179.684 H202.836 V185.084 H200.88" fill="none" stroke="#1d1c1a" stroke-width="0.27" stroke-dasharray="1.08 0.432 0.216 0.432" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="200.601" y="183.356" font-family="Courier Prime" font-size="2.7" font-weight="700" fill="#1d1c1a" text-anchor="middle">7</text>

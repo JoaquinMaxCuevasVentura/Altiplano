@@ -426,7 +426,7 @@ REFERENCIAS = {
         medio="lámina de un libro de modelos de caligrafía", licencia="dominio público, según el archivo",
         tec=[6, 3], destinos=["gramatica"], mirada=False,
         archivo=(PDR, "https://publicdomainreview.org/product/guide-for-constructing-the-letters-k-and-l/"),
-        otros=[],
+        otros=[("Getty Museum", "https://www.getty.edu/art/collection/object/105TPX")],      # Ms. 20, fol. 144v
         toma="Cada letra dibujada con su construcción geométrica, como en los planos.",
         no_toma="Los motivos que rodean cada letra.", rima=""),
     "publicius": dict(
@@ -482,20 +482,29 @@ REFERENCIAS = {
 # De qué página se baja la imagen de cada referencia, y con qué licencia. Solo las de dominio público:
 # las fotos de hoy (el Smithsonian, Perkins, el museo de la APH, The Paris Review) quedan como enlace,
 # y Haüy y Bonet se toman de la Wellcome Collection. Se bajan con descargar_imagenes.py a imagenes/,
-# que no entra en el repositorio (06, §6.4).
+# que no entra en el repositorio (06, §6.4). De Wikimedia se baja la miniatura de 960 px, por
+# thumb.wikimedia.org: upload.wikimedia.org contestó 429 (demasiados pedidos).
 DP_PDIA = "dominio público, según el Public Domain Image Archive"
 DP_PDR = "dominio público, según The Public Domain Review"
 
 IMAGENES = {
-    "hauy": dict(pagina="https://wellcomecollection.org/works/fwj4w4rp",
-                 licencia="marca de dominio público, Wellcome Collection"),
-    "moon": dict(pagina="https://en.wikipedia.org/wiki/Moon_type", licencia="revisar en Wikimedia Commons"),
+    "hauy": dict(pagina="https://wellcomecollection.org/works/fwj4w4rp", pagina_libro=14,
+                 licencia="marca de dominio público, Wellcome Collection"),       # el capítulo I, con sus letras
+    "moon": dict(pagina="https://commons.wikimedia.org/wiki/File:Moon-type-chart.jpg",
+                 imagen="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Moon-type-chart.jpg/"
+                        "960px-Moon-type-chart.jpg",
+                 licencia="dominio público, según Wikimedia Commons (Moon, Light for the Blind, 1877)"),
     "fonografo": dict(pagina="https://pdimagearchive.org/images/b8be5944-796f-44dc-80bf-163a58743449/",
                       licencia=DP_PDIA),
-    "impresion": dict(pagina="https://en.wikipedia.org/wiki/The_Ferns_of_Great_Britain_and_Ireland",
-                      licencia="dominio público por su fecha; revisar en Wikimedia Commons"),
-    "scott": dict(pagina="https://www.firstsounds.org/sounds/earlier-playback.php",
-                  licencia="revisar: escaneo de First Sounds de un trazo de 1860"),
+    "impresion": dict(pagina="https://commons.wikimedia.org/wiki/File:Polypodium_vulgare_Moore1.png",
+                      imagen="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Polypodium_vulgare_Moore1.png/"
+                             "960px-Polypodium_vulgare_Moore1.png",
+                      licencia="dominio público, según Wikimedia Commons (Moore y Bradbury, 1857)"),
+    "scott": dict(pagina="https://commons.wikimedia.org/wiki/File:Phonautogram_-_Scott_1859.jpg",
+                  imagen="https://upload.wikimedia.org/wikipedia/commons/e/e5/Phonautogram_-_Scott_1859.jpg",
+                  girar=90,         # la tira es vertical: girada, la voz avanza de izquierda a derecha
+                  licencia="dominio público en EE. UU., según Wikimedia Commons (patente de Scott, 1859, en el INPI); "
+                           "revisar: el escaneo es de First Sounds, que publica sus facsímiles con CC BY-ND"),
     "bell": dict(pagina="https://insider.si.edu/2013/04/hear-my-voice-smithsonian-identifies-130-year-old-"
                         "recording-as-alexander-graham-bells-voice/",
                  licencia="foto del Smithsonian de 2013: no es de dominio público", descarga=False),
@@ -508,8 +517,8 @@ IMAGENES = {
     "moreda": dict(pagina="https://publicdomainreview.org/essay/inventing-the-recording/", licencia=DP_PDR),
     "bulwer": dict(pagina="https://pdimagearchive.org/images/4ad90c06-f3dc-40f0-bd62-a8953db26439/",
                    licencia=DP_PDIA),
-    "bonet": dict(pagina="https://wellcomecollection.org/works/sx9e24hu",
-                  licencia="marca de dominio público, Wellcome Collection"),
+    "bonet": dict(pagina="https://wellcomecollection.org/works/sx9e24hu", pagina_libro=162,
+                  licencia="marca de dominio público, Wellcome Collection"),      # el «Abecedario demostrativo»
     "anianus": dict(pagina="https://pdimagearchive.org/images/137949be-a852-417d-b318-c94e0117ab40/",
                     licencia=DP_PDIA),
     "mano1466": dict(pagina="https://pdimagearchive.org/images/2502c9fe-691e-47ec-8cd9-38b6e1c35e76/",
@@ -521,8 +530,10 @@ IMAGENES = {
                      licencia=DP_PDIA),
     "page": dict(pagina="https://pdimagearchive.org/images/62ae7660-5aed-41cc-a421-11d9ead9553a/",
                  licencia=DP_PDIA),
-    "hoefnagel": dict(pagina="https://publicdomainreview.org/product/guide-for-constructing-the-letters-k-and-l/",
-                      licencia="revisar: es la página de la tienda de The Public Domain Review"),
+    "hoefnagel": dict(pagina="https://www.getty.edu/art/collection/object/105TPX",      # Ms. 20, fol. 144v
+                      imagen="https://media.getty.edu/iiif/image/e2497fe5-d2be-402c-826b-ffe768822c51/full/"
+                             "!1600,1600/0/default.jpg",
+                      licencia="dominio público, según el Getty Museum (Open Content)"),
     "publicius": dict(pagina="https://pdimagearchive.org/images/8f60966e-039b-4395-ba0f-2e66398fbbf5/",
                       licencia=DP_PDIA),
     "organica": dict(pagina="https://publicdomainreview.org/collection/an-alphabet-of-organic-type-ca-1650/",

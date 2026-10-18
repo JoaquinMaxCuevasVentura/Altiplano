@@ -20,8 +20,10 @@ Necesita Chromium (o Chrome) para el PDF.
 
 import argparse
 import base64
+import datetime
 import html
 import io
+import json
 import math
 import os
 import re
@@ -51,6 +53,7 @@ PIE = (("DIBUJÓ", "la máquina, desde las fichas de 10, sin ver las imágenes")
 PIE_ATLAS = (("DIBUJÓ", "la máquina, desde las fichas de 10; las imágenes, de su archivo"),
              ("MIRA", "la mano: cada imagen en su archivo (10, §10.11)"),
              ("NOTA", "de dominio público: se miran, no se calcan; nada pasa a la letra"))
+FECHA = {"R-09": "18.10.2026"}          # el atlas se rehizo con sus imágenes
 
 LAMINAS = [
     ("R-00", "Índice y convenciones", "cómo se leen estas láminas", "indice"),
@@ -1681,6 +1684,7 @@ DOMINIOS_ATLAS = ["materia", "estructura", "sentido", "mano", "tiempo", "huella"
 CARPETA_IMAGENES = AQUI / "imagenes"
 ARCHIVO_DE = {"pdimagearchive.org": "Public Domain Image Archive", "publicdomainreview.org": "The Public Domain Review",
               "wellcomecollection.org": "Wellcome Collection", "en.wikipedia.org": "Wikipedia y Wikimedia Commons",
+              "commons.wikimedia.org": "Wikimedia Commons", "www.getty.edu": "Getty Museum",
               "www.firstsounds.org": "First Sounds", "insider.si.edu": "Smithsonian"}
 
 
@@ -1697,16 +1701,19 @@ def archivo_imagen(k):
     return None
 
 
-def en_tinta(ruta, ancho_mm, alto_mm, ppp=300):
+def en_tinta(ruta, ancho_mm, alto_mm, ppp=300, girar=0):
     """La imagen, en tinta sobre papel, como el resto de las láminas (el color es material: 03, §3.9), reducida a
-    su celda y metida en el SVG: la lámina no depende de la carpeta imagenes/, que no se sube."""
+    su celda y metida en el SVG: la lámina no depende de la carpeta imagenes/, que no se sube. Devuelve también
+    su proporción (alto / ancho)."""
     from PIL import Image, ImageOps
     im = Image.open(ruta).convert("L")
+    if girar:
+        im = im.rotate(-girar, expand=True)        # en el sentido del reloj
     im.thumbnail((int(ancho_mm / 25.4 * ppp), int(alto_mm / 25.4 * ppp)))
     im = ImageOps.colorize(ImageOps.autocontrast(im, cutoff=1), black=TINTA, white=PAPEL)
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=84)
-    return base64.b64encode(buf.getvalue()).decode("ascii")
+    return base64.b64encode(buf.getvalue()).decode("ascii"), im.height / im.width
 
 
 def celda_atlas(h, k, x, y, w, alto):
@@ -1727,11 +1734,14 @@ def celda_atlas(h, k, x, y, w, alto):
     iw, ih = w - 2 * pad, y + alto - pad - iy0
     ruta = archivo_imagen(k)
     if ruta:
-        datos = en_tinta(ruta, iw, ih)
+        datos, proporcion = en_tinta(ruta, iw, ih, girar=I.get("girar", 0))
         h.add("cuerpo", f'<image x="{f(ix0)}" y="{f(iy0)}" width="{f(iw)}" height="{f(ih)}" '
                         f'preserveAspectRatio="xMidYMax meet" href="data:image/jpeg;base64,{datos}"/>')
         if "revisar" in I["licencia"]:
-            h.texto(x + w / 2, y + alto - pad - 0.8, "licencia por revisar", 1.3, "middle", color=VIOLETA, fondo=True)
+            # sobre la imagen, si queda lugar; si no, en su pie
+            arriba = y + alto - pad - min(ih, iw * proporcion)
+            yr = arriba - 0.9 if arriba - iy0 > 3.0 else y + alto - pad - 0.8
+            h.texto(x + w / 2, yr, "licencia por revisar", 1.3, "middle", color=VIOLETA, fondo=True)
     elif not I.get("descarga", True):
         renglones(h, x + w / 2, iy0 + ih / 2 - 1.0, ["solo enlace:"] + cortar("es una foto de hoy, no de dominio "
                                                                           "público", iw - 2, 1.4),
@@ -1895,6 +1905,22 @@ def r09(h):
         textos.append(f"**Faltan {len(faltan)} imágenes.** Cada celda vacía espera la suya: las baja "
                       "descargar_imagenes.py desde su página, o se ponen a mano en imagenes/, con el nombre de su "
                       "clave. Esa carpeta no entra en el repositorio (06, §6.4).")
+    else:
+        registro = CARPETA_IMAGENES / "fuentes.json"
+        fechas = sorted({v["fecha"] for v in json.loads(registro.read_text(encoding="utf8")).values()}) \
+            if registro.exists() else []
+        cuando = ""
+        if fechas:
+            a, b = (datetime.date.fromisoformat(x) for x in (fechas[0], fechas[-1]))
+            cuando = f" el {b:%d.%m.%Y}" if a == b else f" entre el {a.day} y el {b:%d.%m.%Y}"
+        textos.append(f"**Se bajaron{cuando},** con descargar_imagenes.py, cada una desde su archivo; "
+                      "imagenes/fuentes.json anota de dónde salió y con qué licencia. Esa carpeta no entra en el "
+                      "repositorio (06, §6.4): la lámina las lleva reducidas a su celda.")
+    for k in T.REFERENCIAS:
+        lic = T.IMAGENES[k]["licencia"]
+        if "revisar:" in lic and archivo_imagen(k):
+            textos.append(f"**Por revisar,** la licencia de {T.REFERENCIAS[k]['corto'].split(',')[0]}: "
+                          f"{lic.split('revisar:', 1)[1].strip()}.")
     yy = yl + 5.6
     for t in textos:
         yy = h.parrafo(xi, yy, 278 - xi, t, 2.3, inter=1.32) + 1.0
@@ -1954,7 +1980,7 @@ def main():
     for i, (cod, tit, sub, nombre) in enumerate(LAMINAS):
         if args.solo and cod != args.solo:
             continue
-        h = Hoja(cod, tit, sub, "sin escala", i + 1, len(LAMINAS), serie=SERIE,
+        h = Hoja(cod, tit, sub, "sin escala", i + 1, len(LAMINAS), serie=SERIE, fecha=FECHA.get(cod, "17.10.2026"),
                  pie=PIE_ATLAS if cod == "R-09" else PIE, unidades="—", columna=cod != "R-09")
         FUNCIONES[cod](h)
         h.marco()

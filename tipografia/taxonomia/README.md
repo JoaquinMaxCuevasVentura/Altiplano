@@ -10,7 +10,7 @@ El método viene de un reel de Jason Murray (Modern Art Direction), «A Taxonomy
 
 - Ninguna forma de las referencias pasa a la caja ni a la fuente (`../06_etica_fuentes_y_pendientes.md`, §6.4).
 - Cada técnica se dibuja como un mecanismo, en corte, en planta o en serie. Las imágenes van solo en el atlas (R-09), si son de dominio público.
-- La máquina buscó las imágenes y no las vio. Por eso cada ficha va a puntos, en violeta, hasta que la mires.
+- La máquina armó las fichas sin ver las imágenes. Para el atlas bajó las de dominio público y comprobó que fueran las obras, pero eso no es mirarlas: cada ficha va a puntos, en violeta, hasta que la mires.
 
 **Descarga:** [`contenida_taxonomia.pdf`](contenida_taxonomia.pdf), diez páginas A3 apaisadas. Sus enlaces a los archivos funcionan.
 
@@ -77,13 +77,26 @@ Nada del dibujo sale del reel. Cada decisión gráfica tiene su porqué en el pr
 
 R-09 lleva la imagen de cada referencia, **solo si es de dominio público**, con su archivo enlazado en su celda. Van en tinta sobre papel, como el resto de las láminas: el color es material (`03`, §3.9).
 
-- **Se bajan** con `descargar_imagenes.py`. Abre la página de cada referencia (`IMAGENES`, en `taxonomia.py`), toma la imagen que la página declara como suya y la guarda en `imagenes/<clave>.jpg`. En `imagenes/fuentes.json` anota la página, la imagen, la licencia y la fecha.
+- **Se bajan** con `descargar_imagenes.py`. Abre la página de cada referencia (`IMAGENES`, en `taxonomia.py`) y baja su imagen: la dirección que trae la ficha, la página del libro en la Wellcome Collection o la imagen que la página declara como suya. La guarda en `imagenes/<clave>.jpg`. En `imagenes/fuentes.json` anota la página, la imagen, la licencia y la fecha.
 - **También se pueden poner a mano,** con el nombre de su clave: `imagenes/hauy.jpg`, `imagenes/chladni.png`…
 - **`imagenes/` no entra en el repositorio** (`06`, §6.4). La lámina mete cada imagen, reducida a su celda, en su SVG y su PDF.
 - **No se bajan las fotos de hoy:** la del disco de Bell (Smithsonian), las del libro de Haüy (Perkins, el museo de la APH) y la de Bonet (The Paris Review). Haüy y Bonet se toman de la Wellcome Collection.
-- **Por revisar:** las licencias de Moon y de la impresión natural (Wikimedia Commons), de Scott (el escaneo de First Sounds) y de Hoefnagel (la página es de la tienda de The Public Domain Review). La celda lo dice.
+- **Por revisar:** la licencia de Scott. Wikimedia Commons da por de dominio público en EE. UU. la tira de su patente de 1859, pero el escaneo es de First Sounds, que publica sus facsímiles con CC BY-ND. La celda lo dice.
 
-El 17.10.2026 no se pudo bajar ninguna: la red del entorno donde se hizo bloqueaba los archivos. Cada celda vacía dice *imagen sin bajar* y el nombre del archivo que espera.
+**El 17 y el 18.10.2026 se bajaron veinticuatro,** cada una de su archivo. Solo la de Bell queda como enlace.
+
+| Archivo | Imágenes |
+|---|---|
+| Public Domain Image Archive | 10: Balcomb, Chladni, Bulwer, Anianus, la mano de 1466, Worthington, Feuillet, Page, Publicius y Silvestre |
+| The Public Domain Review | 8: Watts Hughes, Kempelen, Moreda, Cooperrider, Fry, *Punctuation Personified*, *The Human Alphabet* y Bierpfaff y Falck (CC0, del Rijksmuseum) |
+| Wellcome Collection | 2: Haüy (el capítulo I, con sus letras) y Bonet (el *Abecedario demostrativo*) |
+| Wikimedia Commons | 3: Moon (su alfabeto, 1877), la impresión natural (un helecho de Moore y Bradbury, 1857) y Scott (la tira de su patente de 1859) |
+| Getty Museum | 1: Hoefnagel (Ms. 20, fol. 144v) |
+
+- **De Wikimedia se baja la miniatura de 960 px,** por `thumb.wikimedia.org`: `upload.wikimedia.org` contestó 429 (demasiados pedidos).
+- **Hoefnagel se baja del Getty,** que guarda el libro y lo da por de dominio público. La página de The Public Domain Review es la de su tienda.
+- **La tira de Scott es vertical:** en la lámina va girada, para que la voz avance de izquierda a derecha, como se lee.
+- Si falta una, su celda dice *imagen sin bajar* y el nombre del archivo que espera.
 
 ```bash
 pip install pillow
@@ -125,4 +138,4 @@ Con `--solo R-03` se rehace una lámina. El PDF necesita Chromium o Chrome.
 - **Jason Murray, «A Taxonomy of Visuals»,** un reel de Instagram de Modern Art Direction (2026, 1 min 42 s). Se trabajó con el reel y con tu descripción del método. No se encontró una página que lo explique.
 - **Para seguir buscando:** su podcast, [*Modern Art Direction*](https://podcastrepublic.net/podcast/1788684591), y su directorio de herramientas, [*Art Director Toolbox*](https://toolbox.super.site/articles).
 
-Hecho con asistencia de IA. La máquina buscó las referencias sin poder verlas, armó las fichas desde lo que dicen los archivos y dibujó las láminas.
+Hecho con asistencia de IA. La máquina buscó las referencias sin poder verlas, armó las fichas desde lo que dicen los archivos y dibujó las láminas. Para el atlas bajó las imágenes de dominio público y comprobó que fueran las obras.
