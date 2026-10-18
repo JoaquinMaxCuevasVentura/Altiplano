@@ -9,7 +9,9 @@ tinta que falta, mellas), fotografiado con luz rasante y ampliado en tres
 generaciones de fotocopia; para cada signo se elige el testigo mejor conservado.
 De la foto se toma una proporción: la altura de x, más baja que la del sustituto.
 Acción 3: la escala que decide el pie, y el calco: el contorno del cuerpo de la
-gramática, con temblor de mano, abierto en su punto más bajo.
+gramática, abierto en su punto más bajo y recorrido por una mano (pulso.py): en tramos,
+que se montan o dejan un hueco, más despacio en las curvas, con dudas y temblor. La
+pauta, con regla y en lápiz muy suave.
 """
 
 import json
@@ -19,8 +21,9 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from comun import (AJUSTES, AZULEJO_MM, BASE, CELDAS, FUENTE_TESTIGO, JUNTA_MM, T, TES, azar, caja_tinta,
+from comun import (AJUSTES, AZULEJO_MM, BASE, CELDAS, FUENTE_TESTIGO, JUNTA_MM, PX_MM, T, TES, azar, caja_tinta,
                    componentes, lineas_pie, ruido, ruido_1d)
+from pulso import Mano, cansancio, frotada, rayas, trazar
 
 PX_IMPRENTA = 40      # px/mm del papel impreso simulado
 PX_FOTO = 12          # px/mm de la foto con luz rasante
@@ -79,16 +82,14 @@ def pared(filas, columnas, px, rng):
                 mancha=mancha.astype(np.float32), px=px, junta=j, filas=filas, columnas=columnas)
 
 
-def frotado(p, rng):
-    """Grafito frotado sobre papel: se marca lo que sobresale; juntas y grietas quedan blancas."""
+def frotado(p, rng, mano=None):
+    """Grafito frotado sobre papel: se marca lo que sobresale; juntas y grietas quedan blancas. Lo frota
+    una mano: en diagonal, por parches (lo que alcanza el brazo), cada pasada con su presión, y más
+    suave a medida que se cansa (pulso.frotada)."""
     H, W = p["relieve"].shape
     grano = ruido((H, W), 0.7, rng)
-    trazo = rng.standard_normal((H, W)).astype(np.float32)
-    k = np.zeros((25, 25), np.float32)
-    np.fill_diagonal(k, 1)
-    trazo = cv2.filter2D(trazo, -1, k / k.sum())
-    trazo /= trazo.std() + 1e-9
-    presion = 0.85 + 0.12 * ruido((H, W), p["px"] * 0.6, rng)
+    presion, angulo, _ = frotada((H, W), p["px"] / AZULEJO_MM, mano or Mano(), rng)
+    trazo = rayas((H, W), angulo, rng)
     contacto = np.clip(p["relieve"], 0, 1) ** 1.5
     oscuro = 0.74 * contacto * np.clip(presion + 0.1 * trazo + 0.07 * grano, 0, 1.1)
     papel = 0.96 + 0.015 * grano
@@ -362,30 +363,32 @@ def punto_de_desague(q):
     return (q[0] + q[-1]) / 2
 
 
-def temblar(p, rng, amplitud=1.3, desague=True):
-    """Un contorno cerrado recorrido por una mano que tiembla un poco. Con desagüe, queda
-    abierto en su punto más bajo; sin él, se devuelve cerrado (el último punto repite el primero)."""
-    p = np.asarray(p, np.float32)
-    seg = np.linalg.norm(np.diff(np.vstack([p, p[:1]]), axis=0), axis=1)
-    s = np.concatenate([[0], np.cumsum(seg)])
-    n = max(12, int(s[-1] / 3))
-    t = np.linspace(0, s[-1], n, endpoint=False)
-    pc = np.vstack([p, p[:1]])
-    q = np.stack([np.interp(t, s, pc[:, 0]), np.interp(t, s, pc[:, 1])], 1)
-    k = 3
-    q = np.stack([np.convolve(np.r_[q[-k:, i], q[:, i], q[:k, i]], np.ones(2 * k + 1) / (2 * k + 1), "valid") for i in (0, 1)], 1)
-    tang = np.roll(q, -1, 0) - np.roll(q, 1, 0)
-    norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
-    norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
-    temblor = amplitud * ruido_1d(n, 14, rng) + 0.35 * ruido_1d(n, 2, rng)
-    q = q + norm * temblor[:, None]
-    return abrir_desague(q) if desague else np.vstack([q, q[:1]])
+def recorrer(q, rng, mano=None, desague=True):
+    """Un contorno cerrado (px) recorrido por la mano que calca (pulso.trazar). Con desagüe, se abre en
+    su punto más bajo y la mano va de un lado del desagüe al otro, empezando por cualquiera de los dos;
+    sin él, vuelve a donde empezó. Devuelve la línea: el contorno abierto que se quiso calcar (ideal),
+    los tramos que dejó la mano (xy y s en px, presión, tiempo) y el resumen de la mano."""
+    q = np.asarray(q, np.float64)
+    camino = abrir_desague(q) if desague else np.vstack([q, q[:1]])
+    if rng.random() < 0.5:
+        camino = camino[::-1]
+    tramos, resumen = trazar(camino / PX_MM, mano or Mano("calcar"), rng)
+    for tr in tramos:
+        tr["xy"], tr["s"] = tr["xy"] * PX_MM, tr["s"] * PX_MM
+    return dict(ideal=camino, tramos=tramos, resumen=resumen)
 
 
-def contornos_temblorosos(m, rng, amplitud=1.3, desague=True):
-    """Los contornos de una máscara, calcados con temblor (para lo que solo existe en píxeles)."""
+def _suavizar(c, k=3):
+    """Un contorno de píxeles, sin la escalera: la mano sigue la forma, no los píxeles."""
+    c = np.asarray(c, np.float64)
+    return np.stack([np.convolve(np.r_[c[-k:, i], c[:, i], c[:k, i]], np.ones(2 * k + 1) / (2 * k + 1), "valid")
+                     for i in (0, 1)], 1)
+
+
+def contornos_temblorosos(m, rng, mano=None, desague=True):
+    """Los contornos de una máscara, calcados a mano (para lo que solo existe en píxeles)."""
     cont, _ = cv2.findContours(m.astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
-    return [temblar(c[:, 0, :], rng, amplitud, desague) for c in cont if len(c) >= 16]
+    return [recorrer(_suavizar(c[:, 0, :]), rng, mano, desague) for c in cont if len(c) >= 16]
 
 
 def anillos(geo):
@@ -398,60 +401,97 @@ def anillos(geo):
     return [q for q in out if len(q) >= 4 and np.ptp(q[:, 0]) + np.ptp(q[:, 1]) > 8]
 
 
-def calcar(geo, rng, amplitud=1.3):
-    """El calco de un cuerpo de la gramática: su contorno, en vectores, con el temblor de la mano."""
-    return [temblar(q, rng, amplitud) for q in anillos(geo)]
+def calcar(geo, rng, mano=None):
+    """El calco de un cuerpo de la gramática: cada contorno, en vectores, recorrido por la mano."""
+    return [recorrer(q, rng, mano) for q in anillos(geo)]
 
 
-def dibujar_trazos(forma, trazos, punteado, rng, grosor=2, raya=16, hueco=10):
-    """Dibuja las líneas tal como vienen: abiertas en el desagüe o cerradas."""
-    capa = np.zeros(forma, np.float32)
-    for q in trazos:
-        cerr = q
-        if not punteado:
-            cv2.polylines(capa, [np.round(cerr * 4).astype(np.int32)], False, 1.0, grosor, cv2.LINE_AA, shift=2)
+def tramos_de(lineas):
+    """Los tramos de unas líneas, uno detrás de otro (un tramo suelto pasa tal cual; una polilínea suelta
+    es un tramo de presión pareja)."""
+    for linea in lineas:
+        if isinstance(linea, dict):
+            yield from (linea["tramos"] if "tramos" in linea else [linea])
+        else:
+            yield dict(xy=np.asarray(linea, np.float64), p=np.full(len(linea), 0.6))
+
+
+def dibujar_trazos(forma, lineas, punteado, rng, grosor=2, raya=16, hueco=10):
+    """Dibuja las líneas tramo por tramo, como quedaron en el papel: el grafito marca más donde la mano
+    apretó y se afina donde entra y sale; donde dos tramos se montan, oscurece. Punteadas, las rayas
+    empiezan de nuevo en cada tramo."""
+    papel = np.ones(forma, np.float32)
+    for tr in tramos_de(lineas):
+        q = np.asarray(tr["xy"], np.float64)
+        if len(q) < 2:
             continue
-        seg = np.linalg.norm(np.diff(cerr, axis=0), axis=1)
-        s = np.concatenate([[0], np.cumsum(seg)])
-        fase = rng.uniform(0, raya + hueco)
-        dentro = ((s + fase) % (raya + hueco)) < raya
-        i = 0
-        while i < len(cerr) - 1:
-            if dentro[i]:
-                j = i
-                while j < len(cerr) - 1 and dentro[j]:
-                    j += 1
-                cv2.polylines(capa, [np.round(cerr[i:j + 1] * 4).astype(np.int32)], False, 1.0, grosor, cv2.LINE_AA, shift=2)
-                i = j
-            i += 1
+        marca = 1 - np.exp(-np.asarray(tr["p"], np.float64) / 0.18)      # el grafito que deja cada presión
+        if punteado:
+            s = np.concatenate([[0], np.cumsum(np.linalg.norm(np.diff(q, axis=0), axis=1))])
+            dentro = ((s + rng.uniform(0, raya + hueco)) % (raya + hueco)) < raya
+        else:
+            dentro = np.ones(len(q), bool)
+        uno = np.zeros(forma, np.float32)
+        pts = np.round(q * 4).astype(np.int32)
+        for i in np.nonzero(dentro[:-1] & dentro[1:])[0]:
+            cv2.line(uno, tuple(pts[i]), tuple(pts[i + 1]), float(marca[i]), grosor, cv2.LINE_AA, shift=2)
+        papel *= 1 - np.clip(uno, 0, 1)
     grafito = 0.6 + 0.4 * np.clip(0.5 + 0.35 * ruido(forma, 1.2, rng), 0, 1)
-    return np.clip(capa, 0, 1) * grafito
+    return (1 - papel) * grafito
 
 
-def calco(geo, reconstruida, fondo_frotado, pauta, rng):
+def regla(a, b, rng, minutos=0.0):
+    """Una línea de la pauta, con regla: recta, pero la regla no queda justo donde debía, la mano entra y
+    sale de a poco, aprieta distinto a lo largo y se pasa (o no llega) en las puntas. En px."""
+    a, b = np.asarray(a, np.float64), np.asarray(b, np.float64)
+    u = (b - a) / (np.linalg.norm(b - a) + 1e-9)
+    n = np.array([-u[1], u[0]])
+    giro = np.radians(rng.normal(0, 0.15))
+    u = np.array([u[0] * np.cos(giro) - u[1] * np.sin(giro), u[0] * np.sin(giro) + u[1] * np.cos(giro)])
+    corrida = rng.normal(0, 0.15) * PX_MM * n
+    a = a + corrida - u * rng.uniform(-0.5, 1.5) * PX_MM
+    b = b + corrida + u * rng.uniform(-0.5, 1.5) * PX_MM
+    L = np.linalg.norm(b - a)
+    t = np.linspace(0, 1, max(8, int(L / 2)))
+    s = t * L / PX_MM
+    p = 0.35 * (1 - 0.15 * cansancio(minutos)) * np.clip(np.minimum(s / 3, (s[-1] - s) / 2), 0, 1) ** 0.7
+    p = p * (1 + 0.08 * np.interp(t, np.linspace(0, 1, 12), rng.standard_normal(12)))
+    return dict(xy=a + (b - a) * t[:, None], p=np.clip(p, 0, None))
+
+
+def calco(geo, reconstruida, fondo_frotado, pauta, rng, mano=None):
     """El calco en papel de calco puesto sobre el frotado de la pared: línea continua lo
-    hallado, punteada lo reconstruido. Se calca el cuerpo de la gramática, en vectores. La
-    pauta es la celda de la letra, con sus líneas de fondo y de borde, en lápiz muy suave:
-    una letra, una celda."""
-    trazos = calcar(geo, rng)
-    linea = dibujar_trazos((T, T), trazos, reconstruida, rng)
+    hallado, punteada lo reconstruido. Se calca el cuerpo de la gramática, en vectores, a
+    mano (pulso.py). La pauta es la celda de la letra, con sus líneas de fondo y de borde,
+    con regla y en lápiz muy suave: una letra, una celda. Devuelve la imagen y las líneas."""
+    lineas = calcar(geo, rng, mano)
+    linea = dibujar_trazos((T, T), lineas, reconstruida, rng)
     img = 1 - 0.22 * (1 - fondo_frotado)
     img = img * (0.985 + 0.015 * ruido((T, T), 30, rng))          # el papel de calco no es parejo
-    x0, y0, x1, y1 = (int(round(v)) for v in pauta["celda"])
-    for y in (y0, y1):
-        img[y, x0:x1:7] *= 0.8
-    for x in (x0, x1):
-        img[y0:y1:7, x] *= 0.8
-    for y in (pauta["fondo"], pauta["borde"]):
-        img[int(round(y)), x0:x1:9] *= 0.82
+    x0, y0, x1, y1 = pauta["celda"]
+    minutos = mano.minutos if mano else 0.0
+    rayas_ = [regla((x0, y0), (x1, y0), rng, minutos), regla((x1, y0), (x1, y1), rng, minutos),
+              regla((x1, y1), (x0, y1), rng, minutos), regla((x0, y1), (x0, y0), rng, minutos)]
+    rayas_ += [regla((x0, y), (x1, y), rng, minutos) for y in (pauta["fondo"], pauta["borde"])]
+    img = img * (1 - 0.4 * _lapiz(rayas_, rng))
     img = img * (1 - 0.82 * linea)
-    return np.clip(img, 0, 1), trazos
+    return np.clip(img, 0, 1), lineas
+
+
+def _lapiz(tramos, rng):
+    """Líneas de lápiz muy suave: el grano del papel las corta."""
+    capa = np.zeros((T, T), np.float32)
+    for tr in tramos:
+        pts = np.round(tr["xy"] * 4).astype(np.int32)
+        for i in range(len(pts) - 1):
+            cv2.line(capa, tuple(pts[i]), tuple(pts[i + 1]), float(tr["p"][i]), 1, cv2.LINE_AA, shift=2)
+    return capa * np.clip(0.55 + 0.6 * ruido((T, T), 0.8, rng), 0, 1)
 
 
 def celda_notdef(rng):
     """La celda de la lámina, calcada a mano: un rectángulo dentro de otro (proporciones medidas en la foto).
 
-    También tiene desagüe: ni la celda vacía retiene.
+    También tiene desagüe: ni la celda vacía retiene. La mano levanta en las esquinas.
     """
     alto = 0.62 * T
     ancho = 0.84 * alto
@@ -459,15 +499,11 @@ def celda_notdef(rng):
     fuera = np.array([[x0, y0], [x0 + ancho, y0], [x0 + ancho, y0 + alto], [x0, y0 + alto]])
     ix, iy = 0.18 * ancho, 0.13 * alto
     dentro = np.array([[x0 + ix, y0 + iy], [x0 + ancho - ix, y0 + iy], [x0 + ancho - ix, y0 + alto - iy], [x0 + ix, y0 + alto - iy]])
-    trazos = []
+    lineas = []
     for r in (fuera, dentro):
         q = np.vstack([r, r[:1]])
-        pts = np.concatenate([np.linspace(q[i], q[i + 1], 60, endpoint=False) for i in range(4)])
-        tang = np.roll(pts, -1, 0) - np.roll(pts, 1, 0)
-        norm = np.stack([-tang[:, 1], tang[:, 0]], 1)
-        norm /= np.linalg.norm(norm, axis=1, keepdims=True) + 1e-9
-        trazos.append(abrir_desague(pts + norm * (1.3 * ruido_1d(len(pts), 14, rng))[:, None]))
-    return trazos
+        lineas.append(recorrer(np.concatenate([np.linspace(q[i], q[i + 1], 60, endpoint=False) for i in range(4)]), rng))
+    return lineas
 
 
 def desenterrar():

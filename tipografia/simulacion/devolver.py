@@ -4,63 +4,59 @@ El frotado: un papel sobre la placa, por el anverso, frotado con grafito, el mis
 gesto con el que empezó todo (la pared). El papel toca toda la hoja, pero se carga
 donde la placa sube por encima de su entorno. Cada frotada aplasta un poco el
 relieve: se frota hasta que la letra no se lee. El peso de una letra se mide en
-frotadas.
+frotadas. Frota una mano (pulso.frotada): en diagonal, cada pasada con su presión, y
+cada vez más suave a medida que se cansa.
 
 La placa en el fondo de una bandeja con un dedo de agua. La luz de una lámpara
 rebota en la placa y cae en unos azulejos: cada punto de la placa desvía la luz
 según su inclinación y la del agua (un mapa de cáusticas). La superficie del agua
 devuelve además un reflejo débil (el eco) y la lámpara misma (el punto fijo). La
 luz llega al revés y en trapecio, y verde por el celofán. El agua está quieta, o
-la toca un dedo en una esquina y la letra tiembla con las ondas.
+la toca un dedo en una esquina y la letra tiembla con las ondas. El dedo nunca toca
+en el mismo punto ni con la misma fuerza, y a veces toca dos veces (pulso.toque).
 
 La voz: el agua vibra con el ritmo silábico del verso, leído en voz alta junto a
 la bandeja. Son ondas de Faraday: la longitud de onda sale de la altura de la voz.
+La lectura no es un metrónomo (pulso.lectura): la foto cae en un instante cualquiera,
+a veces en el silencio después de una coma, cuando el agua todavía se mueve.
 """
 
 import cv2
 import numpy as np
 
-from comun import TRAPECIO, azar, ruido, silabas
+from comun import PX_MM, TRAPECIO, azar, ruido
 from desenterrar import pared
+from pulso import Mano, frotada, instante, lectura, oir, rayas, toque
 
 VERDE = np.array([0.30, 1.0, 0.58])
 
 
 # ---------------------------------------------------------------- acción 8: el frotado
 
-def _trazos_de_grafito(rng, forma, n=3):
-    """Unas pocas texturas de trazos diagonales: la mano va y viene."""
-    k = np.zeros((25, 25), np.float32)
-    np.fill_diagonal(k, 1)
-    salida = []
-    for _ in range(n):
-        t = cv2.filter2D(rng.standard_normal(forma).astype(np.float32), -1, k / k.sum())
-        salida.append(t / (t.std() + 1e-9))
-    return salida
-
-
-def frotar(altura, mascara, rng, trazo, grano):
+def frotar(altura, mascara, rng, trazo, grano, presion):
     """Una frotada: el papel no entra en los valles finos (se apoya a unos 2 mm); toca toda la hoja
-    y se carga donde la placa sube por encima de su entorno, y en el filo del corte."""
-    forma = altura.shape
+    y se carga donde la placa sube por encima de su entorno, y en el filo del corte. La presión es la
+    de la mano (pulso.frotada); el trazo, la textura fina del grafito en la dirección de las pasadas."""
     h = np.where(mascara, altura, altura[mascara].min() - 0.3)
     envolvente = cv2.GaussianBlur(h, (0, 0), 7)
     contacto = 0.16 + 0.84 * np.clip((h - envolvente) / 0.9, 0, 1) ** 1.2
-    presion = 0.85 + 0.12 * ruido(forma, 150, rng)
     oscuro = 0.8 * contacto * np.clip(presion + 0.14 * trazo + 0.08 * grano, 0, 1.1)
     return np.clip((0.965 + 0.012 * grano) * (1 - oscuro), 0, 1)
 
 
-def frotadas(placa, rng, maximo=45, guardar=(1, 5, 10, 20)):
+def frotadas(placa, rng, maximo=45, guardar=(1, 5, 10, 20), minuto=0.0, lado="derecha"):
     """Frotadas sucesivas de una misma placa, hasta que la letra no se lee.
 
     Cada frotada aplasta entre un 5 y un 9 % del relieve del surco, y un poco las arrugas
     de la hoja. La letra se lee mientras el grafito sobre el surco se aparta del de su
-    alrededor más de tres veces lo que varía ese alrededor. Devuelve las frotadas pedidas
-    (y la última legible) y cuántas se leyeron.
+    alrededor más de tres veces lo que varía ese alrededor. La mano frota cada vez con otra
+    presión y, con los minutos, más suave: minuto es el de la sesión en que empieza la placa.
+    Devuelve las frotadas pedidas (y la última legible), cuántas se leyeron y cuántos minutos
+    llevó (cada frotada: poner el papel, frotar y sacarlo).
     """
     forma = placa["altura"].shape
-    trazos = _trazos_de_grafito(rng, forma)
+    _, angulo, _ = frotada(forma, PX_MM, Mano(lado=lado, minutos=minuto), rng)
+    trazos = [rayas(forma, angulo, rng) for _ in range(3)]
     grano = ruido(forma, 0.7, rng)
     relieve = placa["relieve"].astype(np.float32).copy()
     base = placa["altura"] - relieve
@@ -68,9 +64,11 @@ def frotadas(placa, rng, maximo=45, guardar=(1, 5, 10, 20)):
     lejos = ~(cv2.dilate(letra.astype(np.uint8), np.ones((21, 21), np.uint8)) > 0)
     adentro = cv2.distanceTransform(placa["mascara"].astype(np.uint8), cv2.DIST_L2, 5) > 12
     alrededor = lejos & adentro                         # la hoja lejos de la letra y del filo del corte
-    imagenes, legibles, ultima = {}, 0, None
+    imagenes, legibles, ultima, minutos = {}, 0, None, 0.0
     for n in range(1, maximo + 1):
-        img = frotar(base + relieve, placa["mascara"], rng, np.roll(trazos[n % 3], 37 * n, axis=1), grano)
+        presion, _, segundos = frotada(forma, PX_MM, Mano(lado=lado, minutos=minuto + minutos), rng)
+        minutos += (segundos + rng.uniform(15, 30)) / 60
+        img = frotar(base + relieve, placa["mascara"], rng, np.roll(trazos[n % 3], 37 * n, axis=1), grano, presion)
         d = cv2.GaussianBlur(1 - img, (0, 0), 1.5)       # el ojo junta los granos del grafito
         se_lee = d[letra].mean() - d[alrededor].mean() > 3 * d[alrededor].std()
         if n in guardar:
@@ -82,7 +80,7 @@ def frotadas(placa, rng, maximo=45, guardar=(1, 5, 10, 20)):
         base = base * 0.98
     if ultima is not None:
         imagenes[legibles] = ultima
-    return imagenes, legibles
+    return imagenes, legibles, minutos
 
 
 # ---------------------------------------------------------------- acciones 9 y 10: agua y voz
@@ -91,13 +89,23 @@ def superficie_quieta(forma, rng):
     return 1.0 * ruido(forma, 60, rng)
 
 
-def superficie_tocada(forma, fase, rng, punto=(0.08, 0.92), amplitud=2.2, onda=46, caida=420):
+def _anillos(forma, fase, punto, amplitud, onda, caida):
     H, W = forma
     y, x = np.mgrid[0:H, 0:W].astype(np.float32)
     r = np.hypot(x - punto[0] * W, y - punto[1] * H)
     frente = 1 / (1 + np.exp((r - fase * onda - 60) / 25))   # la onda todavía no llegó más lejos
-    return superficie_quieta(forma, rng) + amplitud * np.sin(2 * np.pi * r / onda - fase * 2 * np.pi) \
-        * np.exp(-r / caida) * (r / (r + 25)) * frente
+    return amplitud * np.sin(2 * np.pi * r / onda - fase * 2 * np.pi) * np.exp(-r / caida) * (r / (r + 25)) * frente
+
+
+def superficie_tocada(forma, fase, rng, dedo=None, onda=46, caida=420):
+    """El agua tocada por un dedo en una esquina (pulso.toque: dónde, con cuánta fuerza y si tocó dos veces)."""
+    dedo = dedo or dict(punto=(0.08, 0.92), amplitud=2.2)
+    z = superficie_quieta(forma, rng) + _anillos(forma, fase, dedo["punto"], dedo["amplitud"], onda, caida)
+    otro = dedo.get("segundo")
+    if otro and fase > otro["retraso"]:
+        punto = (dedo["punto"][0] + otro["corrimiento"][0], dedo["punto"][1] + otro["corrimiento"][1])
+        z = z + _anillos(forma, fase - otro["retraso"], punto, dedo["amplitud"] * otro["amplitud"], onda, caida)
+    return z
 
 
 def onda_de_faraday(forma, hz, volumen, rng, momento=0.0):
@@ -123,13 +131,21 @@ def onda_de_faraday(forma, hz, volumen, rng, momento=0.0):
     return 0.6 * volumen * va_y_vuelve * parches * w / m + superficie_quieta(forma, rng), lam_mm
 
 
-def voz_del_verso(verso, rng):
-    """Una sílaba del verso, con una altura y un volumen inventados (no es tu voz)."""
-    s = silabas(verso)
-    i = int(rng.integers(len(s)))
-    hz = float(np.interp(i, [0, max(len(s) - 1, 1)], [rng.uniform(170, 220), rng.uniform(110, 140)]))
-    volumen = float(np.clip(rng.normal(0.65, 0.2), 0.15, 1.0))
-    return hz, volumen, i + 1, len(s)
+def voz_del_verso(verso, rng, sostenida=False):
+    """El verso leído en voz alta junto a la bandeja (pulso.lectura) y la foto en un instante cualquiera
+    de la lectura: la sílaba que sonaba, con su altura y su volumen, que tiemblan (jitter y shimmer); o
+    el silencio que la sigue, con el agua todavía moviéndose. Sostenida, la foto cae dentro de una
+    sílaba. Alturas y volúmenes inventados: no es tu voz. Devuelve la altura, el volumen, la sílaba
+    (desde 1), cuántas tiene el verso y si era silencio."""
+    lec = lectura(verso, rng)
+    if sostenida:
+        k = rng.choice(len(lec["duracion"]), p=lec["duracion"] / lec["duracion"].sum())
+        t = lec["inicio"][k] + rng.uniform(0, lec["duracion"][k])
+    else:
+        t = rng.uniform(0, lec["total"])
+    i, queda, silencio = instante(lec, t)
+    hz, volumen = oir(lec["hz"][i], lec["volumen"][i], rng)
+    return hz, volumen * queda, i + 1, len(lec["hz"]), silencio
 
 
 def reflejo(altura, mascara, agua, k_placa=26, k_agua=55):
@@ -191,15 +207,15 @@ def muestra_de_azulejos(W, H, rng):
     return cv2.resize(alb.astype(np.float32), (W, H), interpolation=cv2.INTER_AREA)
 
 
-def agua(placa, rng, fase=None, voz=None, momento=0.0):
-    """Una placa por el agua: quieta, tocada por un dedo (fase de la onda) o movida por una
-    voz (hz, volumen). Devuelve la luz y lo que pasó en la superficie."""
+def agua(placa, rng, fase=None, voz=None, momento=0.0, dedo=None):
+    """Una placa por el agua: quieta, tocada por un dedo (fase de la onda; el dedo, de pulso.toque) o
+    movida por una voz (hz, volumen). Devuelve la luz y lo que pasó en la superficie."""
     forma = placa["altura"].shape
     info = {}
     if voz is not None:
         superficie, info["lambda_mm"] = onda_de_faraday(forma, voz[0], voz[1], rng, momento)
     elif fase is not None:
-        superficie = superficie_tocada(forma, fase, rng)
+        superficie = superficie_tocada(forma, fase, rng, dedo)
     else:
         superficie = superficie_quieta(forma, rng)
     info["superficie"] = superficie
@@ -216,24 +232,30 @@ def foto_agua(luz, rng, ancho=700, alto=560, reflectancia=None):
 def agua_tocada_en_bucle(placas, clave, cuadros=16, ancho=720, alto=300):
     """Varias placas en fila en la misma bandeja, tocada: una vuelta de la onda, cuadro por cuadro.
 
-    La bandeja, los azulejos y el grano de la foto son los mismos en todos los cuadros;
-    solo avanza la onda.
+    La bandeja, los azulejos, el grano de la foto y el toque del dedo son los mismos en todos
+    los cuadros; solo avanza la onda.
     """
     vs = {"altura": np.hstack([p["altura"] for p in placas]), "mascara": np.hstack([p["mascara"] for p in placas])}
     reflectancia = muestra_de_azulejos(ancho, alto, azar("bandeja", clave))
+    dedo = toque(azar("dedo", clave))
     salida = []
     for i in range(cuadros):
-        luz, _ = agua(vs, azar("onda", clave), fase=i / cuadros * 4)
+        luz, _ = agua(vs, azar("onda", clave), fase=i / cuadros * 4, dedo=dedo)
         salida.append(foto_agua(luz, azar("grano", clave), ancho=ancho, alto=alto, reflectancia=reflectancia))
     return salida
 
 
 def voz_en_bucle(placas, hz, volumen, clave, cuadros=12, ancho=720, alto=300):
-    """Varias placas en fila en la misma bandeja, movida por una voz: la onda quieta que va y vuelve."""
+    """Varias placas en fila en la misma bandeja, movida por una voz: la onda quieta que va y vuelve.
+    La voz que se sostiene no se sostiene pareja: su volumen respira un poco (y vuelve, para que el
+    bucle cierre)."""
     vs = {"altura": np.hstack([p["altura"] for p in placas]), "mascara": np.hstack([p["mascara"] for p in placas])}
     reflectancia = muestra_de_azulejos(ancho, alto, azar("bandeja", clave))
+    r = azar("respira", clave)
+    f1, f2 = r.uniform(0, 2 * np.pi), r.uniform(0, 2 * np.pi)
     salida = []
     for i in range(cuadros):
-        luz, _ = agua(vs, azar("voz", clave), voz=(hz, volumen), momento=i / cuadros)
+        respira = 1 + 0.06 * np.sin(2 * np.pi * i / cuadros + f1) + 0.03 * np.sin(4 * np.pi * i / cuadros + f2)
+        luz, _ = agua(vs, azar("voz", clave), voz=(hz, volumen * respira), momento=i / cuadros)
         salida.append(foto_agua(luz, azar("grano", clave), ancho=ancho, alto=alto, reflectancia=reflectancia))
     return salida

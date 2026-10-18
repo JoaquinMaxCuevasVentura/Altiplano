@@ -461,7 +461,8 @@ def l10():
         "letra sustituta.</p>"
         "<p>De cada signo eligió la aparición mejor conservada y la limpió; lo que tuvo que decidir del borde fue de "
         f"{coma(NUM['opinion_min'])} a {pct(NUM['opinion_max'])}. La forma la dio la gramática. Después calcó cada "
-        "cuerpo, con temblor, sobre el frotado de la pared.</p>"
+        "cuerpo a mano, sobre el frotado de la pared: en tramos, con dudas, con el pulso de una persona y no el de "
+        "una máquina. Es sutil: se ve de cerca.</p>"
         "<p>Ninguna de estas formas entra en la caja.</p>"
         + fichero([("semilla", "20260822, el día de la obra"), ("formas", "Liberation Serif, con plomo simulado"),
                    ("altura de x", "la de la foto del pie"), ("calco", "el cuerpo de la gramática, en vectores")]))
@@ -474,7 +475,7 @@ def l10():
         b(6, 3, 9, 2, fig("pie_sustituto.jpg", "<b>fig. 10.2</b> El testigo de las formas: el pie impreso con una letra "
                                                "sustituta y tipos de plomo simulados.")),
         b(6, 5, 5, 6, fig("03_calco_reticula.jpg", "<b>fig. 10.3</b> Calco. Continuo lo hallado, punteado lo "
-                                                   "reconstruido; la celda, en lápiz.")),
+                                                   "reconstruido; la celda, con regla y en lápiz.")),
         b(11, 5, 4, 6, f'<div class="cifras columna">{cifras}</div>'
           + verso(["No se salvó la piedra,", "solo la opinión sobre ella."]), estilo="align-self:end"),
     ]))
@@ -488,7 +489,8 @@ def l11():
         "Por el reverso, la letra queda al revés y hundida: una canaleta con dos lomas bajas, un canal que podría "
         "contener agua. Por el anverso se lee, en relieve.</p>"
         "<p>La hoja se corta a tijera: cada lado en dos o tres cortes, con un escalón donde la tijera se retoma. A "
-        "veces una esquina se va en diagonal. Donde la mano arranca y donde se detiene, el punzón hunde un poco "
+        "veces una esquina se va en diagonal. El punzón sigue la línea del calco con el pulso de una mano: levanta, "
+        "duda, va más despacio en las curvas y se cansa con la sesión. Donde arranca, duda o termina, hunde un poco "
         "más.</p>"
         f"<p>{NUM['placas']} placas y {coma(NUM['horas'])} horas de repujado simulado. Las que se rompen no se "
         "corrigen: se guardan en la caja y se hace otra.</p>")
@@ -526,7 +528,9 @@ def l13():
         "papel no entra en los valles finos: toca toda la hoja y se carga donde la placa sube.</p>"
         "<p>Cada frotada aplasta un poco el relieve. Se frota hasta que la letra no se lee: el peso de una letra se "
         "mide en frotadas.</p>"
-        "<p>El signo final, una presión de pulgar, no da frotada: el domo es liso y el papel lo acompaña.</p>")
+        + ("<p>El signo final, las presiones de un pulgar, no da frotada: el domo es liso y el papel lo acompaña.</p>"
+           if FICHAS["56.01"]["frotado"]["legibles"] == 0 else
+           f"<p>El signo final, las presiones de un pulgar, da {FICHAS['56.01']['frotado']['legibles']} frotadas.</p>"))
     cifras = (cifra(coma(NUM["frotadas_hallada"]), "frotadas que se leen, en promedio: letras halladas")
               + cifra(coma(NUM["frotadas_reconstruida"]), "reconstruidas", "violeta"))
     return lamina(13, "".join([
@@ -553,8 +557,9 @@ def l14():
         b(1, 4, 14, 5, '<div class="trio">'
           + fig("a_quieta.jpg", "<b>fig. 14.1</b> La a en el agua quieta.")
           + fig("a_tocada.jpg", "<b>fig. 14.2</b> Tocada en una esquina.")
-          + fig("a_voz.jpg", f"<b>fig. 14.3</b> Con voz: «{voz['verso'].rstrip(',.;')}», sílaba {voz['silaba']}, "
-                             f"{voz['hz']} Hz.") + "</div>"),
+          + fig("a_voz.jpg", f"<b>fig. 14.3</b> Con voz: «{voz['verso'].rstrip(',.;')}», "
+                             + ("el silencio después de la sílaba " if voz.get("silencio") else "sílaba ")
+                             + f"{voz['silaba']}, {voz['hz']} Hz.") + "</div>"),
         b(1, 9, 5, 2, verso(["Tocas el agua y la diosa se deforma."])),
         b(6, 9, 5, 2, verso(["la misma diosa dos veces", "y ninguna igual."])),
         b(11, 9, 4, 2, '<p class="leyenda">La voz de la simulación es inventada: alturas entre 110 y 220 Hz, con el '
@@ -619,7 +624,10 @@ def l16():
         ("en el taller", "Horas de repujado para las 119 placas.",
          barra("simuladas", n["horas"], 1.15 * max(n["horas"], 40), coma(n["horas"]))
          + barra("planeadas", 40, 1.15 * max(n["horas"], 40), "30 a 40", "gris"),
-         "Contando las placas que se rompieron. El plan se quedó corto."),
+         "Contando las placas que se rompieron. "
+         + ("El plan se quedó corto." if n["horas"] > 40 else
+            "El tiempo sale de la mano, que no cuenta fotografiar ni anotar la ficha." if n["horas"] < 30 else
+            "Cae dentro del plan.")),
         ("en el aluminio", "Intentos rotos, por cada cien placas.",
          barra("halladas", rot_h, tope_rot, f"{n['roturas_hallada']} en {n['placas_hallada']}")
          + barra("reconstruidas", rot_r, tope_rot, f"{n['roturas_reconstruida']} en {n['placas_reconstruida']}",
@@ -677,8 +685,8 @@ def l17():
         b(8, 1, 7, 6, colofon),
         b(1, 6, 10, 5, verso(["A la boca la taparon, a las manos no,", "No tiene lengua pero igual dice."],
                              de="últimos versos del poema"), clase="final", estilo="align-self:end"),
-        b(11, 6, 4, 5, fig("celda_56.jpg", "<b>fig. 17.1</b> Celda 56, el signo final: una presión de pulgar. La "
-                                           "máquina no tiene dedos; simuló uno."), estilo="align-self:end"),
+        b(11, 6, 4, 5, fig("celda_56.jpg", "<b>fig. 17.1</b> Celda 56, el signo final: las presiones de un pulgar. "
+                                           "La máquina no tiene dedos; simuló uno."), estilo="align-self:end"),
     ]))
 
 

@@ -17,7 +17,7 @@
 
   const HERRAMIENTAS = {
     repasar: "El punzón hunde un surco; por la otra cara sale el relieve. Los surcos se funden. Lo hallado, con un trazo continuo.",
-    puntear: "Lo reconstruido, a puntos, cada 2,25 mm. El punteado queda en relieve para siempre, y perfora más.",
+    puntear: "Lo reconstruido, a puntos, cada 2,25 mm, más o menos, como los pondría una mano. El punteado queda en relieve para siempre, y perfora más.",
     rellenar: "El lado redondo sube la letra de a poco, si pide más cuerpo. Se anota.",
     alisar: "La yema alisa las arrugas y suaviza lo chico. El surco queda.",
   };
@@ -204,7 +204,17 @@
 
   // ------------------------------------------------------------------ la mano
   const marco = $("#marco"), caja = $("#lienzo"), guia = $("#guia");
-  let dibujando = false, ultimo = null, velocidad = 0, inicio = null, recorrido = 0, t0 = 0, puntero = null;
+  let dibujando = false, ultimo = null, velocidad = 0, inicio = null, recorrido = 0, t0 = 0, puntero = null, quietoT = 0;
+
+  /* La pantalla no es el aluminio: si la mano se queda quieta apretando, el punzón descansa y hunde un poco
+   * más (una vez por cada parada). El resto del pulso es el tuyo. */
+  function esperarQuieta() {
+    clearTimeout(quietoT);
+    quietoT = setTimeout(() => {
+      if (!dibujando || !ultimo || a.herramienta !== "repasar") return;
+      pedir(placa.agregar(ultimo.q[0], ultimo.q[1], ultimo.p, performance.now() - t0, true));
+    }, 350);
+  }
 
   function aPlaca(ev) {
     const r = caja.getBoundingClientRect();
@@ -251,7 +261,8 @@
     placa.empezar({ herramienta: a.herramienta, cara: a.cara, punzon: a.punzon, base: a.base, fuerza: a.fuerza, temblor: a.temblor,
       radio: a.radio, puntos: [] });
     pedir(placa.agregar(q[0], q[1], p, 0));
-    ultimo = { q, t: ev.timeStamp };
+    ultimo = { q, p, t: ev.timeStamp };
+    esperarQuieta();
     pintarGuia();
   });
   caja.addEventListener("pointermove", (ev) => {
@@ -264,13 +275,15 @@
       const p = presion(e, q, e.timeStamp);
       if (ultimo) recorrido += Math.hypot(q[0] - ultimo.q[0], q[1] - ultimo.q[1]);
       pedir(placa.agregar(q[0], q[1], p, e.timeStamp - t0));
-      ultimo = { q, t: e.timeStamp };
+      ultimo = { q, p, t: e.timeStamp };
+      esperarQuieta();
     }
     pintarGuia();
   });
   function soltar() {
     if (!dibujando) return;
     dibujando = false;
+    clearTimeout(quietoT);
     const r = placa.terminar();
     if (r && r.sucio) pedir(r.sucio);
     if (r && r.cerrado) aviso("Ese contorno se cerró: le falta el desagüe. El punzón se detiene 3 mm antes de cerrar (03b, regla 2).");

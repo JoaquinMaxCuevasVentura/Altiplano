@@ -28,6 +28,9 @@
   const GRILLA = Math.round(LADO / CELDA);
   const DESAGUE = 3;             // mm: el punzón se detiene antes de cerrar cada contorno (03b, regla 2)
   const TENACIDAD = 4.4;         // escala de Weibull del esfuerzo que rompe una celda (supuesto)
+  /* El tiempo de la mano simulada (simulacion/pulso.py), con sus levantadas, dudas y lecturas del anverso: mm
+   * por minuto de surco y de punteado, y minutos para cortar la hoja y pegar el calco, y para retirarlo. */
+  const MANO = { surco: 230, punteado: 136, preparar: 4, retirar: 1 };
 
   /* La base decide cuánto se hunde el aluminio con presión 1 (hondo, mm), cuánto se abre el surco (abre),
    * cuánto sube a los lados el aluminio que se corre (lomas) y hasta dónde se hunde sin romperse (limite, mm).
@@ -337,7 +340,8 @@
       this.trazos.forEach((t, n) => { this.empezar(t, n); this.terminar(true); });
     }
 
-    /** Empieza un trazo. t: { herramienta, cara, punzon, base, fuerza, temblor, radio, puntos: [[x, y, presión, ms], …] } */
+    /** Empieza un trazo. t: { herramienta, cara, punzon, base, fuerza, temblor, radio, puntos: [[x, y, presión, ms], …] }.
+     *  Un punto con un quinto valor (1) es la mano quieta, apretando: el punzón descansa y hunde un poco más. */
     empezar(t, n = this.trazos.length) {
       if (this.actual) this.terminar();
       t.puntos = t.puntos || [];
@@ -355,10 +359,13 @@
       return this._consumir();
     }
 
-    /** Un punto más del trazo en curso (mm de la placa vista por el anverso). Devuelve el rectángulo que cambió. */
-    agregar(x, y, p = 0.8, ms = 0) {
+    /** Un punto más del trazo en curso (mm de la placa vista por el anverso). Quieto: la mano se detuvo ahí,
+     *  apretando. Devuelve el rectángulo que cambió. */
+    agregar(x, y, p = 0.8, ms = 0, quieto = false) {
       if (!this.actual) return null;
-      this.actual.t.puntos.push([Math.round(x * 1000) / 1000, Math.round(y * 1000) / 1000, Math.round(p * 1000) / 1000, Math.round(ms)]);
+      const q = [Math.round(x * 1000) / 1000, Math.round(y * 1000) / 1000, Math.round(p * 1000) / 1000, Math.round(ms)];
+      if (quieto) q.push(1);
+      this.actual.t.puntos.push(q);
       return this._consumir();
     }
 
@@ -367,7 +374,10 @@
       if (!this.actual) return null;
       const { t, e, n } = this.actual, N = this.N;
       const sucio = vacio();
-      if (t.herramienta === "repasar" && e.prev) this._descanso(e.prev, e.recorrido, sucio);
+      if (t.herramienta === "repasar" && e.prev) {
+        this._sellar(e.prev, e.recorrido, sucio);                                   // lo que quedaba hasta el último punto
+        this._descanso(e.prev, e.recorrido, sucio);
+      }
       if (sucio.x1 >= 0) this._componer(sucio);
       if (e.x1 >= 0) {
         for (let y = Math.max(0, e.y0); y <= Math.min(N - 1, e.y1); y++) {
@@ -422,7 +432,8 @@
         if (cerrado && (t.herramienta === "repasar" || t.herramienta === "puntear")) r.sinDesague++;
         r[t.cara === "anverso" ? "anverso" : "reverso"]++;
       }
-      r.minutos = this.trazos.length ? 4 + r.surco / 20 + r.punteado / 9 + (r.relleno + r.alisado) / 60 : 0;
+      r.minutos = this.trazos.length ? MANO.preparar + MANO.retirar + r.surco / MANO.surco + r.punteado / MANO.punteado +
+        (r.relleno + r.alisado) / 60 : 0;
       return r;
     }
 
@@ -488,11 +499,11 @@
      * mano (un ruido a lo largo del recorrido), la base y la bola. */
     _prof(q, s) {
       const { t, e } = this.actual;
-      const p = q[2] * (1 + 0.3 * (t.temblor ?? 0.5) * e.ruido(s / 6, 0.37)) * (1 + 0.05 * e.ruido(s / 0.8, 7.7));
+      const p = q[2] * (1 + 0.15 * (t.temblor ?? 0.5) * e.ruido(s / 6, 0.37)) * (1 + 0.03 * e.ruido(s / 0.8, 7.7));
       const [hunde, abre] = this.hoja.doble ? [0.9, 1.12] : [1, 1];                 // la hoja doble se hunde menos y se abre más
       const D = Math.min(e.base.limite, Math.max(0, e.base.hondo * p * (t.fuerza ?? 1) * hunde));
       const w = anchoSurco(e.punzon.radio, D, e.base.abre);
-      return [D, w * abre * (1 + 0.15 * (t.temblor ?? 0.5) * e.ruido(s / 3.5, 21.1))];     // el ancho también tiembla
+      return [D, w * abre * (1 + 0.08 * (t.temblor ?? 0.5) * e.ruido(s / 3.5, 21.1))];     // el ancho también tiembla
     }
 
     _consumir() {
@@ -501,29 +512,29 @@
       for (; e.i < P.length; e.i++) {
         const q = P[e.i];
         if (!e.prev) {
-          e.prev = q; e.inicio = q;
+          e.prev = q; e.inicio = q; e.sello = q; e.sSello = 0;
           if (t.herramienta === "repasar") this._descanso(q, 0, sucio);
-          else if (t.herramienta === "puntear") { this._punto(q, 0, 0, 0, sucio); e.siguiente = PUNTEADO; }
+          else if (t.herramienta === "puntear") { this._punto(q, 0, 0, 0, sucio); e.siguiente = this._paso(0); }
           else { this._mancha(q, sucio); e.siguiente = this._pasoMancha(); }
           continue;
         }
         const a = e.prev, dx = q[0] - a[0], dy = q[1] - a[1], L = Math.hypot(dx, dy);
-        if (L < 1e-3) continue;
+        if (L < 1e-3) {
+          if (q[4] && t.herramienta === "repasar") this._descanso(a, e.recorrido, sucio);     // duda: descansa ahí
+          continue;
+        }
         const s0 = e.recorrido, tx = dx / L, ty = dy / L;
         if (t.herramienta === "repasar") {
-          const k = Math.max(1, Math.ceil(L / TRAMO));
-          let pa = a, da = this._prof(a, s0);
-          for (let i = 1; i <= k; i++) {
-            const f = i / k, pb = [a[0] + dx * f, a[1] + dy * f, a[2] + (q[2] - a[2]) * f], db = this._prof(pb, s0 + L * f);
-            this._capsula(pa, pb, da, db, sucio, s0 + L * (i - 1) / k, s0 + L * f);
-            this._esfuerzo(pb, (db[0] / db[1]) ** 2 * (L / k), tx, ty, sucio);
-            pa = pb; da = db;
+          // se estampa cada TRAMO a lo largo del recorrido, lleguen los puntos tan juntos como lleguen
+          while (e.sSello + TRAMO <= s0 + L) {
+            const sb = e.sSello + TRAMO, f = (sb - s0) / L;
+            this._sellar([a[0] + dx * f, a[1] + dy * f, a[2] + (q[2] - a[2]) * f], sb, sucio);
           }
         } else if (t.herramienta === "puntear") {
           while (e.siguiente <= s0 + L) {
             const f = (e.siguiente - s0) / L;
             this._punto([a[0] + dx * f, a[1] + dy * f, a[2] + (q[2] - a[2]) * f], tx, ty, e.siguiente, sucio);
-            e.siguiente += PUNTEADO;
+            e.siguiente += this._paso(e.siguiente);
           }
         } else {
           const paso = this._pasoMancha();
@@ -541,6 +552,16 @@
       return sucio.x1 >= 0 ? sucio : null;
     }
 
+    /* Un tramo del surco, desde el último sello hasta pb (que está sb mm adentro del recorrido). */
+    _sellar(pb, sb, sucio) {
+      const { e } = this.actual, pa = e.sello, sa = e.sSello, L = Math.hypot(pb[0] - pa[0], pb[1] - pa[1]);
+      if (L < 1e-3) return;
+      const da = this._prof(pa, sa), db = this._prof(pb, sb);
+      this._capsula(pa, pb, da, db, sucio, sa, sb);
+      this._esfuerzo(pb, (db[0] / db[1]) ** 2 * L, (pb[0] - pa[0]) / L, (pb[1] - pa[1]) / L, sucio);
+      e.sello = pb; e.sSello = sb;
+    }
+
     /* Donde la mano arranca y donde se detiene, el punzón descansa y hunde un poco más (contener.py). */
     _descanso(q, s, sucio) {
       const [D] = this._prof(q, s), { e } = this.actual, rb = e.punzon.radio;
@@ -550,11 +571,16 @@
     }
 
     /* Un punto del punteado: la punta se hunde más y el aluminio sufre más (contener.py: «el punteado perfora»). */
+    /* Una mano que puntea no lo hace a paso de máquina: cada punto cae un poco antes o un poco después. */
+    _paso(s) {
+      const r = azar("paso", this.hoja.semilla, this.actual.n, Math.round(s * 100));
+      return PUNTEADO * Math.exp(0.07 * gauss(r));
+    }
     _punto(q, tx, ty, s, sucio) {
       const { e, n } = this.actual, r = azar("punto", this.hoja.semilla, n, Math.round(s * 100));
-      const c = [q[0] + gauss(r) * 0.15, q[1] + gauss(r) * 0.15, q[2]];
+      const c = [q[0] + gauss(r) * 0.06, q[1] + gauss(r) * 0.06, q[2]];             // la punta no cae justo en la línea
       const [D0] = this._prof(c, s), rb = e.punzon.radio;
-      const D = Math.min(e.base.limite, 1.2 * D0);
+      const D = Math.min(e.base.limite, 1.2 * D0 * Math.exp(0.05 * gauss(r)));      // y cada punto aprieta distinto
       const w = anchoSurco(rb, D, e.base.abre, true);
       this._capsula(c, c, [D, w], [D, w], sucio, undefined, undefined, true);
       this._esfuerzo(c, 1.6 * (D / w) ** 2, tx, ty, sucio);
@@ -1009,7 +1035,7 @@
   }
 
   return {
-    LADO, SEMILLA, PUNTEADO, DESAGUE, BASES, PUNZONES, Placa, Vista,
+    LADO, SEMILLA, PUNTEADO, DESAGUE, MANO, BASES, PUNZONES, Placa, Vista,
     azar, ruido, tijera, rasterizar, arrugas, umbral, pngConTexto, crc32,
   };
 });

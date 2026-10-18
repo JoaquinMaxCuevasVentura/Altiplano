@@ -60,6 +60,7 @@ El 10.10.2026 decidiste incluir motivos tiwanacotas y tipografías «étnicas» 
 | Quién hizo el dibujo de tu lámina con el poema | Sin confirmar | Confirmarlo si se reproduce |
 | Cuántas frotadas aguanta una placa | Supuesto de la simulación: se aplasta entre un 5 y un 9 % del relieve por frotada | Frotar una placa de prueba hasta que no se lea (Acción 8) |
 | Cuánto se hunde el aluminio en cada base, cuánto se abre el surco y cuánto aguanta antes de romperse | Supuestos del ensayo del repujado (`repujado/README.md`, «Lo que falta medir») | Repujar una placa de prueba en cada base (Acción 4) y corregir `BASES` en `repujado/repujado.js` |
+| Cómo es el pulso de la mano que calca y repuja: cuánto se aparta, cuántas veces levanta, cuánto duda, cuánto tarda y cuánto se cansa en una sesión | Supuestos de la motricidad en la simulación (`simulacion/pulso.py`, `OFICIOS`) | Anotar en las fichas levantadas, dudas y minutos por placa, y medir el desvío en los calcos y las placas escaneadas; corregir `OFICIOS` |
 | Citas de las dos tesis | Cotejadas con el texto de los `.docx` | Agregar páginas desde los PDF originales si se citan en público |
 | La frase de otro asistente sobre «nuestro envase convulso: el cuerpo» | Citada en tu texto | No se usa. Si se usa, pedir permiso y nombrar a su autor |
 

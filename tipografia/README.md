@@ -40,6 +40,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
 | `simulacion/informe.md` | **La propuesta de la máquina:** el pie, la gramática y seis estados simulados con código (calco, placa, cinta, frotado, agua y voz), con sus láminas, 119 fichas y lo que apareció sin diseñarlo. Para confrontarla con la tuya |
 | `simulacion/simular.py` | Corre la simulación (`comun.py`, `desenterrar.py`, `gramatica.py`, `contener.py`, `devolver.py`) |
+| `simulacion/pulso.py` | **El pulso:** las manos y la voz de la simulación son de una persona, no de una máquina. Levantan, retoman, dudan, cambian de velocidad, tienen direcciones cómodas y se cansan con la sesión. Es sutil: se ve de cerca. Son supuestos de la motricidad, para confrontar |
 | `simulacion/extraer_testigos.py`, `simulacion/testigos/` | El pie en la foto de la lámina: 336 letras recortadas y enderezadas, y lo que la foto deja medir (sin la foto) |
 | `07_posnansky.md` | Lo que se rescata del libro de Posnansky (tomo I, 1945), el testigo (lo que se probó y lo que quedó) y otros registros de la ruina, de dominio público |
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
@@ -78,7 +79,7 @@ python3 tipografia/simulacion/extraer_testigos.py \
 python3 tipografia/simulacion/gramatica.py          # la gramática: los 55 cuerpos base y la cinta
 python3 tipografia/esquemas/generar_esquemas.py \
   --azulejo 150                                     # la placa, en mm; la pauta toma las líneas de la gramática
-python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (un minuto y medio);
+python3 tipografia/simulacion/simular.py            # la propuesta de la máquina (unos dos minutos);
                                                     #   con --parametros parametros.json, los ajustes de la aplicación
 python3 tipografia/aplicacion/exportar.py           # los datos del pie para la aplicación
 python3 tipografia/taxonomia/generar_taxonomia.py   # las láminas de la taxonomía (necesitan Chromium)

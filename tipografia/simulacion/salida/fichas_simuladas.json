@@ -5,7 +5,7 @@
   "signo": ",",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "reconstructivo,",
    "linea": 1,
@@ -15,13 +15,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 0.0,
+   "segundos": 5.7,
+   "levantadas": 1,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 7.7,
-   "recorrido_mm": 56
+   "minutos": 5.2,
+   "recorrido_mm": 60
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 14.2,
+   "levantadas": 1,
+   "dudas": 0,
+   "lecturas": 0,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -36,20 +51,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 26,
+   "sesion": 1,
+   "minuto": 0.0,
+   "minutos": 25.6
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 4.19
+   "dedo": {
+    "punto": [
+     0.09,
+     0.932
+    ],
+    "fuerza": 1.11,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.73
   },
   "voz": {
    "verso": "quedó el contenedor",
-   "silaba": "5 de 7",
-   "hz": 140,
-   "volumen": 0.77,
-   "lambda_mm": 4.5
+   "silaba": "3 de 7",
+   "silencio": false,
+   "hz": 191,
+   "volumen": 0.47,
+   "lambda_mm": 3.7
   }
  },
  "01.02": {
@@ -58,7 +85,7 @@
   "signo": ",",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "reconstructivo,",
    "linea": 1,
@@ -68,13 +95,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 0.0,
+   "segundos": 5.7,
+   "levantadas": 1,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 6.7,
-   "recorrido_mm": 56
+   "minutos": 4.8,
+   "recorrido_mm": 60
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 14.7,
+   "levantadas": 1,
+   "dudas": 0,
+   "lecturas": 0,
+   "sesion": 6
   }
  },
  "01.03": {
@@ -83,7 +125,7 @@
   "signo": ",",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "reconstructivo,",
    "linea": 1,
@@ -93,13 +135,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 0.0,
+   "segundos": 5.7,
+   "levantadas": 1,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 8.8,
-   "recorrido_mm": 57
+   "minutos": 4.6,
+   "recorrido_mm": 60
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 14.5,
+   "levantadas": 1,
+   "dudas": 1,
+   "lecturas": 0,
+   "sesion": 8
   }
  },
  "01.04": {
@@ -108,7 +165,7 @@
   "signo": ",",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "reconstructivo,",
    "linea": 1,
@@ -118,13 +175,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 0.0,
+   "segundos": 5.7,
+   "levantadas": 1,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 5.4,
-   "recorrido_mm": 56
+   "minutos": 5.5,
+   "recorrido_mm": 60
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 14.4,
+   "levantadas": 1,
+   "dudas": 0,
+   "lecturas": 0,
+   "sesion": 9
   }
  },
  "02.01": {
@@ -133,7 +205,7 @@
   "signo": "s",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -143,13 +215,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.3,
-   "recorrido_mm": 269
+   "minutos": 6.8,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.2,
+   "cansancio": 0.051,
+   "segundos_de_punzon": 76.6,
+   "levantadas": 8,
+   "dudas": 4,
+   "lecturas": 5,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 2,
@@ -164,20 +251,32 @@
    "pliegues": 8
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 27,
+   "sesion": 1,
+   "minuto": 25.6,
+   "minutos": 26.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 4.01
+   "dedo": {
+    "punto": [
+     0.072,
+     0.933
+    ],
+    "fuerza": 0.97,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.91
   },
   "voz": {
    "verso": "quedó el contenedor",
-   "silaba": "6 de 7",
-   "hz": 145,
-   "volumen": 0.23,
-   "lambda_mm": 4.4
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 131,
+   "volumen": 0.03,
+   "lambda_mm": 4.7
   }
  },
  "02.02": {
@@ -186,7 +285,7 @@
   "signo": "s",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -196,13 +295,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.5,
-   "recorrido_mm": 268
+   "minutos": 7.2,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 4.8,
+   "cansancio": 0.047,
+   "segundos_de_punzon": 71.7,
+   "levantadas": 7,
+   "dudas": 1,
+   "lecturas": 1,
+   "sesion": 6
   }
  },
  "02.03": {
@@ -211,7 +325,7 @@
   "signo": "s",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -221,13 +335,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.5,
-   "recorrido_mm": 272
+   "minutos": 6.1,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 4.6,
+   "cansancio": 0.045,
+   "segundos_de_punzon": 67.5,
+   "levantadas": 6,
+   "dudas": 1,
+   "lecturas": 0,
+   "sesion": 8
   }
  },
  "02.04": {
@@ -236,7 +365,7 @@
   "signo": "s",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -246,13 +375,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 11.9,
-   "recorrido_mm": 266
+   "minutos": 5.1,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.5,
+   "cansancio": 0.054,
+   "segundos_de_punzon": 67.5,
+   "levantadas": 5,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 9
   }
  },
  "02.05": {
@@ -261,7 +405,7 @@
   "signo": "s",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -271,13 +415,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.1,
-   "recorrido_mm": 271
+   "minutos": 6.5,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 62.1,
+   "levantadas": 5,
+   "dudas": 2,
+   "lecturas": 2,
+   "sesion": 10
   }
  },
  "02.06": {
@@ -286,7 +445,7 @@
   "signo": "s",
   "variante": 6,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -296,13 +455,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 2.1,
+   "segundos": 21.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 269
+   "minutos": 5.3,
+   "recorrido_mm": 278
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 70.9,
+   "levantadas": 8,
+   "dudas": 2,
+   "lecturas": 2,
+   "sesion": 11
   }
  },
  "03.01": {
@@ -311,7 +485,7 @@
   "signo": "e",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -321,13 +495,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 3,
-   "roturas": 2,
-   "minutos": 62.5,
-   "recorrido_mm": 329
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 7.1,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 12.0,
+   "cansancio": 0.113,
+   "segundos_de_punzon": 82.1,
+   "levantadas": 9,
+   "dudas": 5,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -342,20 +531,32 @@
    "pliegues": 6
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 25,
+   "sesion": 1,
+   "minuto": 52.2,
+   "minutos": 24.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 4.42
+   "dedo": {
+    "punto": [
+     0.082,
+     0.9
+    ],
+    "fuerza": 0.98,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 4.0
   },
   "voz": {
    "verso": "de lo que ya no está.",
-   "silaba": "6 de 7",
-   "hz": 123,
-   "volumen": 0.64,
-   "lambda_mm": 4.9
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 119,
+   "volumen": 0.0,
+   "lambda_mm": 5.0
   }
  },
  "03.02": {
@@ -364,7 +565,7 @@
   "signo": "e",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -374,13 +575,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.2,
-   "recorrido_mm": 328
+   "minutos": 5.9,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 12.0,
+   "cansancio": 0.113,
+   "segundos_de_punzon": 81.2,
+   "levantadas": 10,
+   "dudas": 3,
+   "lecturas": 4,
+   "sesion": 6
   }
  },
  "03.03": {
@@ -389,7 +605,7 @@
   "signo": "e",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -399,13 +615,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.8,
-   "recorrido_mm": 326
+   "minutos": 6.4,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 10.7,
+   "cansancio": 0.101,
+   "segundos_de_punzon": 94.7,
+   "levantadas": 14,
+   "dudas": 1,
+   "lecturas": 6,
+   "sesion": 8
   }
  },
  "03.04": {
@@ -414,7 +645,7 @@
   "signo": "e",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -424,13 +655,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.5,
-   "recorrido_mm": 330
+   "minutos": 6.6,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 10.6,
+   "cansancio": 0.101,
+   "segundos_de_punzon": 74.6,
+   "levantadas": 8,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 9
   }
  },
  "03.05": {
@@ -439,7 +685,7 @@
   "signo": "e",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -449,13 +695,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.5,
-   "recorrido_mm": 325
+   "minutos": 6.6,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 6.5,
+   "cansancio": 0.063,
+   "segundos_de_punzon": 76.4,
+   "levantadas": 9,
+   "dudas": 0,
+   "lecturas": 2,
+   "sesion": 10
   }
  },
  "03.06": {
@@ -464,7 +725,7 @@
   "signo": "e",
   "variante": 6,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -474,13 +735,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.9,
-   "recorrido_mm": 329
+   "minutos": 6.0,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.3,
+   "cansancio": 0.052,
+   "segundos_de_punzon": 78.3,
+   "levantadas": 9,
+   "dudas": 4,
+   "lecturas": 4,
+   "sesion": 11
   }
  },
  "03.07": {
@@ -489,7 +765,7 @@
   "signo": "e",
   "variante": 7,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -499,13 +775,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.7,
-   "recorrido_mm": 329
+   "minutos": 7.1,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 80.4,
+   "levantadas": 10,
+   "dudas": 2,
+   "lecturas": 4,
+   "sesion": 12
   }
  },
  "03.08": {
@@ -514,7 +805,7 @@
   "signo": "e",
   "variante": 8,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "bien",
    "linea": 2,
@@ -524,13 +815,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 4.5,
+   "segundos": 22.3,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.5,
-   "recorrido_mm": 329
+   "minutos": 5.6,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 71.4,
+   "levantadas": 9,
+   "dudas": 2,
+   "lecturas": 1,
+   "sesion": 13
   }
  },
  "04.01": {
@@ -539,7 +845,7 @@
   "signo": "g",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "fotografías",
    "linea": 1,
@@ -549,13 +855,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 6.8,
+   "segundos": 37.8,
+   "levantadas": 10,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 28.8,
-   "recorrido_mm": 513
+   "minutos": 5.9,
+   "recorrido_mm": 516
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 19.1,
+   "cansancio": 0.174,
+   "segundos_de_punzon": 127.3,
+   "levantadas": 14,
+   "dudas": 7,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -570,20 +891,32 @@
    "pliegues": 12
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 23,
+   "sesion": 1,
+   "minuto": 76.3,
+   "minutos": 22.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 3.86
+   "dedo": {
+    "punto": [
+     0.076,
+     0.926
+    ],
+    "fuerza": 0.8,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.76
   },
   "voz": {
    "verso": "una piscina vacía,",
-   "silaba": "7 de 8",
-   "hz": 141,
-   "volumen": 0.45,
-   "lambda_mm": 4.5
+   "silaba": "8 de 8",
+   "silencio": true,
+   "hz": 121,
+   "volumen": 0.06,
+   "lambda_mm": 5.0
   }
  },
  "04.02": {
@@ -592,7 +925,7 @@
   "signo": "g",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "fotografías",
    "linea": 1,
@@ -602,13 +935,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 6.8,
+   "segundos": 37.8,
+   "levantadas": 10,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 26.9,
-   "recorrido_mm": 514
+   "minutos": 6.8,
+   "recorrido_mm": 516
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 17.9,
+   "cansancio": 0.164,
+   "segundos_de_punzon": 127.6,
+   "levantadas": 15,
+   "dudas": 4,
+   "lecturas": 3,
+   "sesion": 6
   }
  },
  "05.01": {
@@ -617,7 +965,7 @@
   "signo": "ú",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "según",
    "linea": 1,
@@ -627,13 +975,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 9.5,
+   "segundos": 23.1,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.2,
-   "recorrido_mm": 304
+   "minutos": 5.7,
+   "recorrido_mm": 279
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 25.0,
+   "cansancio": 0.221,
+   "segundos_de_punzon": 65.7,
+   "levantadas": 5,
+   "dudas": 1,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 2,
@@ -649,20 +1012,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 26,
+   "sesion": 1,
+   "minuto": 98.4,
+   "minutos": 25.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 4.02
+   "dedo": {
+    "punto": [
+     0.064,
+     0.939
+    ],
+    "fuerza": 0.96,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.55
   },
   "voz": {
    "verso": "donde una vez aprendí a flotar,",
-   "silaba": "8 de 11",
-   "hz": 158,
-   "volumen": 0.57,
-   "lambda_mm": 4.2
+   "silaba": "7 de 11",
+   "silencio": false,
+   "hz": 161,
+   "volumen": 0.71,
+   "lambda_mm": 4.1
   }
  },
  "06.01": {
@@ -671,7 +1046,7 @@
   "signo": "n",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -681,13 +1056,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.3,
+   "minutos": 6.2,
    "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 30.7,
+   "cansancio": 0.264,
+   "segundos_de_punzon": 63.7,
+   "levantadas": 7,
+   "dudas": 2,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -702,20 +1092,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 26,
+   "sesion": 2,
+   "minuto": 0.0,
+   "minutos": 25.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 4.17
+   "dedo": {
+    "punto": [
+     0.077,
+     0.925
+    ],
+    "fuerza": 1.08,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.87
   },
   "voz": {
    "verso": "donde una vez aprendí a flotar,",
-   "silaba": "1 de 11",
-   "hz": 200,
-   "volumen": 0.53,
-   "lambda_mm": 3.6
+   "silaba": "4 de 11",
+   "silencio": false,
+   "hz": 184,
+   "volumen": 0.26,
+   "lambda_mm": 3.8
   }
  },
  "06.02": {
@@ -724,7 +1126,7 @@
   "signo": "n",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -734,13 +1136,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 269
+   "minutos": 6.9,
+   "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 24.7,
+   "cansancio": 0.219,
+   "segundos_de_punzon": 61.9,
+   "levantadas": 6,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 6
   }
  },
  "06.03": {
@@ -749,7 +1166,7 @@
   "signo": "n",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -759,13 +1176,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.9,
-   "recorrido_mm": 267
+   "minutos": 6.1,
+   "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 17.1,
+   "cansancio": 0.157,
+   "segundos_de_punzon": 64.9,
+   "levantadas": 8,
+   "dudas": 3,
+   "lecturas": 2,
+   "sesion": 8
   }
  },
  "06.04": {
@@ -774,7 +1206,7 @@
   "signo": "n",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -784,13 +1216,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.9,
+   "minutos": 5.6,
    "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 17.2,
+   "cansancio": 0.158,
+   "segundos_de_punzon": 57.7,
+   "levantadas": 5,
+   "dudas": 3,
+   "lecturas": 0,
+   "sesion": 9
   }
  },
  "06.05": {
@@ -799,7 +1246,7 @@
   "signo": "n",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -809,13 +1256,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.2,
-   "recorrido_mm": 267
+   "minutos": 5.9,
+   "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 13.1,
+   "cansancio": 0.123,
+   "segundos_de_punzon": 65.2,
+   "levantadas": 8,
+   "dudas": 4,
+   "lecturas": 2,
+   "sesion": 10
   }
  },
  "06.06": {
@@ -824,7 +1286,7 @@
   "signo": "n",
   "variante": 6,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -834,13 +1296,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 19.6,
-   "recorrido_mm": 270
+   "intentos": 3,
+   "roturas": 2,
+   "minutos": 17.1,
+   "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 11.3,
+   "cansancio": 0.21,
+   "segundos_de_punzon": 196.9,
+   "levantadas": 21,
+   "dudas": 8,
+   "lecturas": 7,
+   "sesion": 11
   }
  },
  "06.07": {
@@ -849,7 +1326,7 @@
   "signo": "n",
   "variante": 7,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -859,13 +1336,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.5,
+   "minutos": 5.9,
    "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 7.1,
+   "cansancio": 0.069,
+   "segundos_de_punzon": 59.1,
+   "levantadas": 6,
+   "dudas": 4,
+   "lecturas": 0,
+   "sesion": 12
   }
  },
  "06.08": {
@@ -874,7 +1366,7 @@
   "signo": "n",
   "variante": 8,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "no",
    "linea": 2,
@@ -884,13 +1376,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 11.8,
+   "segundos": 17.6,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.9,
-   "recorrido_mm": 269
+   "minutos": 7.2,
+   "recorrido_mm": 268
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.6,
+   "cansancio": 0.054,
+   "segundos_de_punzon": 60.5,
+   "levantadas": 6,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 13
   }
  },
  "07.01": {
@@ -899,7 +1406,7 @@
   "signo": "o",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -909,13 +1416,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.2,
-   "recorrido_mm": 328
+   "minutos": 5.9,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 36.9,
+   "cansancio": 0.309,
+   "segundos_de_punzon": 80.4,
+   "levantadas": 9,
+   "dudas": 4,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -929,20 +1451,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 24,
+   "sesion": 2,
+   "minuto": 25.5,
+   "minutos": 23.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 4.13
+   "dedo": {
+    "punto": [
+     0.081,
+     0.913
+    ],
+    "fuerza": 1.14,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.85
   },
   "voz": {
    "verso": "ahora aprendo a mirar.",
-   "silaba": "7 de 9",
-   "hz": 158,
-   "volumen": 0.26,
-   "lambda_mm": 4.2
+   "silaba": "9 de 9",
+   "silencio": true,
+   "hz": 128,
+   "volumen": 0.0,
+   "lambda_mm": 4.8
   }
  },
  "07.02": {
@@ -951,7 +1485,7 @@
   "signo": "o",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -961,13 +1495,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.5,
-   "recorrido_mm": 325
+   "minutos": 5.8,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 31.6,
+   "cansancio": 0.271,
+   "segundos_de_punzon": 82.2,
+   "levantadas": 10,
+   "dudas": 4,
+   "lecturas": 3,
+   "sesion": 6
   }
  },
  "07.03": {
@@ -976,7 +1525,7 @@
   "signo": "o",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -986,13 +1535,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.4,
-   "recorrido_mm": 327
+   "minutos": 5.8,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 23.2,
+   "cansancio": 0.207,
+   "segundos_de_punzon": 70.4,
+   "levantadas": 6,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 8
   }
  },
  "07.04": {
@@ -1001,7 +1565,7 @@
   "signo": "o",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -1011,13 +1575,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.5,
-   "recorrido_mm": 325
+   "minutos": 7.5,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 22.8,
+   "cansancio": 0.204,
+   "segundos_de_punzon": 78.4,
+   "levantadas": 9,
+   "dudas": 2,
+   "lecturas": 4,
+   "sesion": 9
   }
  },
  "07.05": {
@@ -1026,7 +1605,7 @@
   "signo": "o",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -1036,13 +1615,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.8,
-   "recorrido_mm": 327
+   "minutos": 6.4,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 19.0,
+   "cansancio": 0.173,
+   "segundos_de_punzon": 74.9,
+   "levantadas": 9,
+   "dudas": 1,
+   "lecturas": 3,
+   "sesion": 10
   }
  },
  "07.06": {
@@ -1051,7 +1645,7 @@
   "signo": "o",
   "variante": 6,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "donde",
    "linea": 3,
@@ -1061,13 +1655,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 14.1,
+   "segundos": 25.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.7,
-   "recorrido_mm": 324
+   "minutos": 6.5,
+   "recorrido_mm": 311
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 28.4,
+   "cansancio": 0.247,
+   "segundos_de_punzon": 81.7,
+   "levantadas": 10,
+   "dudas": 2,
+   "lecturas": 4,
+   "sesion": 11
   }
  },
  "08.01": {
@@ -1076,7 +1685,7 @@
   "signo": "a",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1086,13 +1695,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.7,
-   "recorrido_mm": 310
+   "minutos": 6.1,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 42.8,
+   "cansancio": 0.348,
+   "segundos_de_punzon": 82.0,
+   "levantadas": 8,
+   "dudas": 4,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1108,20 +1732,32 @@
    "pliegues": 5
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 22,
+   "sesion": 2,
+   "minuto": 49.0,
+   "minutos": 22.4
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 4.09
+   "dedo": {
+    "punto": [
+     0.09,
+     0.909
+    ],
+    "fuerza": 0.93,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.86
   },
   "voz": {
    "verso": "moverse como se mueve la piedra,",
-   "silaba": "5 de 11",
-   "hz": 153,
-   "volumen": 0.57,
-   "lambda_mm": 4.3
+   "silaba": "11 de 11",
+   "silencio": false,
+   "hz": 116,
+   "volumen": 0.7,
+   "lambda_mm": 5.1
   }
  },
  "08.02": {
@@ -1130,7 +1766,7 @@
   "signo": "a",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1140,13 +1776,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.3,
-   "recorrido_mm": 307
+   "minutos": 7.3,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 37.4,
+   "cansancio": 0.312,
+   "segundos_de_punzon": 86.7,
+   "levantadas": 10,
+   "dudas": 3,
+   "lecturas": 4,
+   "sesion": 6
   }
  },
  "08.03": {
@@ -1155,7 +1806,7 @@
   "signo": "a",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1165,13 +1816,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 38.7,
-   "recorrido_mm": 309
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 6.3,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 29.0,
+   "cansancio": 0.252,
+   "segundos_de_punzon": 85.0,
+   "levantadas": 10,
+   "dudas": 5,
+   "lecturas": 2,
+   "sesion": 8
   }
  },
  "08.04": {
@@ -1180,7 +1846,7 @@
   "signo": "a",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1190,13 +1856,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.0,
-   "recorrido_mm": 310
+   "minutos": 6.2,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 30.3,
+   "cansancio": 0.261,
+   "segundos_de_punzon": 74.3,
+   "levantadas": 7,
+   "dudas": 2,
+   "lecturas": 1,
+   "sesion": 9
   }
  },
  "08.05": {
@@ -1205,7 +1886,7 @@
   "signo": "a",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1215,13 +1896,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 35.7,
-   "recorrido_mm": 307
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 4.9,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 25.4,
+   "cansancio": 0.224,
+   "segundos_de_punzon": 68.9,
+   "levantadas": 7,
+   "dudas": 1,
+   "lecturas": 1,
+   "sesion": 10
   }
  },
  "08.06": {
@@ -1230,7 +1926,7 @@
   "signo": "a",
   "variante": 6,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1240,13 +1936,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.7,
-   "recorrido_mm": 307
+   "minutos": 5.9,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 34.9,
+   "cansancio": 0.295,
+   "segundos_de_punzon": 77.1,
+   "levantadas": 8,
+   "dudas": 3,
+   "lecturas": 3,
+   "sesion": 11
   }
  },
  "08.07": {
@@ -1255,7 +1966,7 @@
   "signo": "a",
   "variante": 7,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1265,13 +1976,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.2,
-   "recorrido_mm": 305
+   "minutos": 7.3,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 13.0,
+   "cansancio": 0.122,
+   "segundos_de_punzon": 72.4,
+   "levantadas": 7,
+   "dudas": 1,
+   "lecturas": 2,
+   "sesion": 12
   }
  },
  "08.08": {
@@ -1280,7 +2006,7 @@
   "signo": "a",
   "variante": 8,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1290,13 +2016,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.5,
-   "recorrido_mm": 309
+   "minutos": 6.0,
+   "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 12.8,
+   "cansancio": 0.12,
+   "segundos_de_punzon": 73.9,
+   "levantadas": 6,
+   "dudas": 5,
+   "lecturas": 2,
+   "sesion": 13
   }
  },
  "08.09": {
@@ -1305,7 +2046,7 @@
   "signo": "a",
   "variante": 9,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1315,13 +2056,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 16.6,
+   "segundos": 27.0,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.2,
+   "minutos": 6.9,
    "recorrido_mm": 304
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 78.3,
+   "levantadas": 9,
+   "dudas": 0,
+   "lecturas": 4,
+   "sesion": 14
   }
  },
  "09.01": {
@@ -1330,7 +2086,7 @@
   "signo": "k",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Posnansky,",
    "linea": 1,
@@ -1340,13 +2096,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 19.0,
+   "segundos": 25.3,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 21.7,
-   "recorrido_mm": 348
+   "minutos": 5.2,
+   "recorrido_mm": 350
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 48.9,
+   "cansancio": 0.387,
+   "segundos_de_punzon": 102.8,
+   "levantadas": 12,
+   "dudas": 4,
+   "lecturas": 5,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1361,20 +2132,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 23,
+   "sesion": 2,
+   "minuto": 71.3,
+   "minutos": 22.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 3.91
+   "dedo": {
+    "punto": [
+     0.084,
+     0.901
+    ],
+    "fuerza": 1.25,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.61
   },
   "voz": {
    "verso": "es decir, apenas, es decir, temblor,",
-   "silaba": "10 de 11",
-   "hz": 147,
-   "volumen": 0.59,
-   "lambda_mm": 4.4
+   "silaba": "9 de 11",
+   "silencio": true,
+   "hz": 134,
+   "volumen": 0.03,
+   "lambda_mm": 4.7
   }
  },
  "10.01": {
@@ -1383,7 +2166,7 @@
   "signo": "y",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "(hoy",
    "linea": 1,
@@ -1393,13 +2176,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 21.4,
+   "segundos": 24.3,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.3,
-   "recorrido_mm": 282
+   "minutos": 5.4,
+   "recorrido_mm": 294
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 54.1,
+   "cansancio": 0.418,
+   "segundos_de_punzon": 76.5,
+   "levantadas": 8,
+   "dudas": 3,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1414,20 +2212,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 25,
+   "sesion": 2,
+   "minuto": 93.8,
+   "minutos": 24.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 3.72
+   "dedo": {
+    "punto": [
+     0.085,
+     0.913
+    ],
+    "fuerza": 1.08,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.42
   },
   "voz": {
    "verso": "es decir, apenas, es decir, temblor,",
-   "silaba": "11 de 11",
-   "hz": 137,
-   "volumen": 0.63,
-   "lambda_mm": 4.6
+   "silaba": "6 de 11",
+   "silencio": false,
+   "hz": 159,
+   "volumen": 0.61,
+   "lambda_mm": 4.2
   }
  },
  "11.01": {
@@ -1436,7 +2246,7 @@
   "signo": "p",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Suponemos",
    "linea": 3,
@@ -1446,13 +2256,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 23.8,
+   "segundos": 30.6,
+   "levantadas": 6,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.0,
-   "recorrido_mm": 383
+   "minutos": 6.0,
+   "recorrido_mm": 386
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 59.5,
+   "cansancio": 0.448,
+   "segundos_de_punzon": 104.1,
+   "levantadas": 11,
+   "dudas": 8,
+   "lecturas": 3,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1466,20 +2291,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 23
+   "legibles": 25,
+   "sesion": 2,
+   "minuto": 118.0,
+   "minutos": 24.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 3.95
+   "dedo": {
+    "punto": [
+     0.07,
+     0.925
+    ],
+    "fuerza": 0.98,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.66
   },
   "voz": {
    "verso": "es decir, un presente continuo.",
-   "silaba": "2 de 10",
-   "hz": 169,
-   "volumen": 0.79,
-   "lambda_mm": 4.0
+   "silaba": "3 de 10",
+   "silencio": false,
+   "hz": 174,
+   "volumen": 1.0,
+   "lambda_mm": 3.9
   }
  },
  "11.02": {
@@ -1488,7 +2325,7 @@
   "signo": "p",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Suponemos",
    "linea": 3,
@@ -1498,13 +2335,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 23.8,
+   "segundos": 30.6,
+   "levantadas": 6,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 24.8,
-   "recorrido_mm": 379
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 14.7,
+   "recorrido_mm": 386
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 44.7,
+   "cansancio": 0.407,
+   "segundos_de_punzon": 201.2,
+   "levantadas": 24,
+   "dudas": 6,
+   "lecturas": 5,
+   "sesion": 6
   }
  },
  "12.01": {
@@ -1513,7 +2365,7 @@
   "signo": "r",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "presentado",
    "linea": 1,
@@ -1523,13 +2375,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 26.3,
+   "segundos": 17.0,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.8,
-   "recorrido_mm": 179
+   "minutos": 5.2,
+   "recorrido_mm": 178
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 65.5,
+   "cansancio": 0.481,
+   "segundos_de_punzon": 48.7,
+   "levantadas": 4,
+   "dudas": 2,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1544,20 +2411,32 @@
    "pliegues": 1
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 25,
+   "sesion": 3,
+   "minuto": 0.0,
+   "minutos": 24.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 4.28
+   "dedo": {
+    "punto": [
+     0.079,
+     0.917
+    ],
+    "fuerza": 1.03,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.67
   },
   "voz": {
    "verso": "tocas el agua y la diosa se deforma.",
-   "silaba": "3 de 12",
-   "hz": 181,
-   "volumen": 0.89,
-   "lambda_mm": 3.8
+   "silaba": "12 de 12",
+   "silencio": false,
+   "hz": 111,
+   "volumen": 0.7,
+   "lambda_mm": 5.3
   }
  },
  "12.02": {
@@ -1566,7 +2445,7 @@
   "signo": "r",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "presentado",
    "linea": 1,
@@ -1576,13 +2455,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 26.3,
+   "segundos": 17.0,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.2,
-   "recorrido_mm": 177
+   "minutos": 6.0,
+   "recorrido_mm": 178
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 59.4,
+   "cansancio": 0.448,
+   "segundos_de_punzon": 42.6,
+   "levantadas": 3,
+   "dudas": 1,
+   "lecturas": 0,
+   "sesion": 6
   }
  },
  "12.03": {
@@ -1591,7 +2485,7 @@
   "signo": "r",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "presentado",
    "linea": 1,
@@ -1601,13 +2495,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 26.3,
+   "segundos": 17.0,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.2,
-   "recorrido_mm": 177
+   "minutos": 5.8,
+   "recorrido_mm": 178
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 35.3,
+   "cansancio": 0.297,
+   "segundos_de_punzon": 42.4,
+   "levantadas": 3,
+   "dudas": 2,
+   "lecturas": 0,
+   "sesion": 8
   }
  },
  "12.04": {
@@ -1616,7 +2525,7 @@
   "signo": "r",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "presentado",
    "linea": 1,
@@ -1626,13 +2535,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 26.3,
+   "segundos": 17.0,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.7,
+   "minutos": 5.2,
    "recorrido_mm": 178
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 36.5,
+   "cansancio": 0.306,
+   "segundos_de_punzon": 50.5,
+   "levantadas": 6,
+   "dudas": 0,
+   "lecturas": 2,
+   "sesion": 9
   }
  },
  "12.05": {
@@ -1641,7 +2565,7 @@
   "signo": "r",
   "variante": 5,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "presentado",
    "linea": 1,
@@ -1651,13 +2575,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 26.3,
+   "segundos": 17.0,
+   "levantadas": 4,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.7,
-   "recorrido_mm": 177
+   "minutos": 5.1,
+   "recorrido_mm": 178
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 30.3,
+   "cansancio": 0.261,
+   "segundos_de_punzon": 47.4,
+   "levantadas": 4,
+   "dudas": 2,
+   "lecturas": 2,
+   "sesion": 10
   }
  },
  "13.01": {
@@ -1666,7 +2605,7 @@
   "signo": "t",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "distinto",
    "linea": 2,
@@ -1676,13 +2615,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 28.6,
+   "segundos": 12.8,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.4,
-   "recorrido_mm": 182
+   "minutos": 4.9,
+   "recorrido_mm": 179
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 70.7,
+   "cansancio": 0.507,
+   "segundos_de_punzon": 50.0,
+   "levantadas": 6,
+   "dudas": 0,
+   "lecturas": 1,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1696,20 +2650,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 20
+   "legibles": 24,
+   "sesion": 3,
+   "minuto": 24.7,
+   "minutos": 24.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 4.39
+   "dedo": {
+    "punto": [
+     0.092,
+     0.912
+    ],
+    "fuerza": 0.98,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.93
   },
   "voz": {
    "verso": "todos los archivos funcionan así.",
-   "silaba": "7 de 11",
-   "hz": 154,
-   "volumen": 0.89,
-   "lambda_mm": 4.2
+   "silaba": "3 de 11",
+   "silencio": false,
+   "hz": 192,
+   "volumen": 0.93,
+   "lambda_mm": 3.7
   }
  },
  "13.02": {
@@ -1718,7 +2684,7 @@
   "signo": "t",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "distinto",
    "linea": 2,
@@ -1728,13 +2694,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 28.6,
+   "segundos": 12.8,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.8,
-   "recorrido_mm": 182
+   "minutos": 6.9,
+   "recorrido_mm": 179
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 65.4,
+   "cansancio": 0.48,
+   "segundos_de_punzon": 55.8,
+   "levantadas": 5,
+   "dudas": 7,
+   "lecturas": 2,
+   "sesion": 6
   }
  },
  "13.03": {
@@ -1743,7 +2724,7 @@
   "signo": "t",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "distinto",
    "linea": 2,
@@ -1753,13 +2734,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 28.6,
+   "segundos": 12.8,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.4,
-   "recorrido_mm": 180
+   "minutos": 6.1,
+   "recorrido_mm": 179
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 41.1,
+   "cansancio": 0.337,
+   "segundos_de_punzon": 42.3,
+   "levantadas": 4,
+   "dudas": 1,
+   "lecturas": 0,
+   "sesion": 8
   }
  },
  "14.01": {
@@ -1768,7 +2764,7 @@
   "signo": "d",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1778,13 +2774,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 30.8,
+   "segundos": 31.0,
+   "levantadas": 7,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.7,
-   "recorrido_mm": 414
+   "minutos": 7.3,
+   "recorrido_mm": 412
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 75.6,
+   "cansancio": 0.53,
+   "segundos_de_punzon": 101.4,
+   "levantadas": 11,
+   "dudas": 4,
+   "lecturas": 0,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1799,20 +2810,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 23
+   "legibles": 23,
+   "sesion": 3,
+   "minuto": 48.9,
+   "minutos": 22.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 3.94
+   "dedo": {
+    "punto": [
+     0.046,
+     0.889
+    ],
+    "fuerza": 0.99,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.63
   },
   "voz": {
    "verso": "todos los archivos funcionan así.",
-   "silaba": "4 de 11",
-   "hz": 155,
-   "volumen": 0.72,
-   "lambda_mm": 4.2
+   "silaba": "8 de 11",
+   "silencio": false,
+   "hz": 143,
+   "volumen": 0.75,
+   "lambda_mm": 4.5
   }
  },
  "14.02": {
@@ -1821,7 +2844,7 @@
   "signo": "d",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1831,13 +2854,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 30.8,
+   "segundos": 31.0,
+   "levantadas": 7,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.4,
-   "recorrido_mm": 418
+   "minutos": 7.3,
+   "recorrido_mm": 412
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 72.3,
+   "cansancio": 0.515,
+   "segundos_de_punzon": 120.7,
+   "levantadas": 14,
+   "dudas": 8,
+   "lecturas": 6,
+   "sesion": 6
   }
  },
  "14.03": {
@@ -1846,7 +2884,7 @@
   "signo": "d",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "erosionado",
    "linea": 2,
@@ -1856,13 +2894,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 30.8,
+   "segundos": 31.0,
+   "levantadas": 7,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.7,
-   "recorrido_mm": 418
+   "minutos": 6.4,
+   "recorrido_mm": 412
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 47.2,
+   "cansancio": 0.376,
+   "segundos_de_punzon": 113.0,
+   "levantadas": 13,
+   "dudas": 3,
+   "lecturas": 4,
+   "sesion": 8
   }
  },
  "15.01": {
@@ -1871,7 +2924,7 @@
   "signo": "m",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "originariamente",
    "linea": 3,
@@ -1881,13 +2934,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 33.4,
+   "segundos": 37.5,
+   "levantadas": 7,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.2,
-   "recorrido_mm": 427
+   "minutos": 7.3,
+   "recorrido_mm": 429
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 82.9,
+   "cansancio": 0.564,
+   "segundos_de_punzon": 135.6,
+   "levantadas": 16,
+   "dudas": 8,
+   "lecturas": 7,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -1902,20 +2970,32 @@
    "pliegues": 6
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 25,
+   "sesion": 3,
+   "minuto": 71.4,
+   "minutos": 25.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 3.97
+   "dedo": {
+    "punto": [
+     0.086,
+     0.908
+    ],
+    "fuerza": 0.91,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.6
   },
   "voz": {
    "verso": "a la ídolo la desenterraron,",
-   "silaba": "10 de 11",
-   "hz": 136,
-   "volumen": 0.19,
-   "lambda_mm": 4.6
+   "silaba": "11 de 11",
+   "silencio": true,
+   "hz": 123,
+   "volumen": 0.52,
+   "lambda_mm": 4.9
   }
  },
  "15.02": {
@@ -1924,7 +3004,7 @@
   "signo": "m",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "originariamente",
    "linea": 3,
@@ -1934,13 +3014,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 33.4,
+   "segundos": 37.5,
+   "levantadas": 7,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.8,
-   "recorrido_mm": 425
+   "minutos": 6.9,
+   "recorrido_mm": 429
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 79.6,
+   "cansancio": 0.549,
+   "segundos_de_punzon": 117.5,
+   "levantadas": 13,
+   "dudas": 5,
+   "lecturas": 3,
+   "sesion": 6
   }
  },
  "15.03": {
@@ -1949,7 +3044,7 @@
   "signo": "m",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "originariamente",
    "linea": 3,
@@ -1959,13 +3054,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 33.4,
+   "segundos": 37.5,
+   "levantadas": 7,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 24.4,
-   "recorrido_mm": 425
+   "minutos": 6.6,
+   "recorrido_mm": 429
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 53.6,
+   "cansancio": 0.415,
+   "segundos_de_punzon": 116.8,
+   "levantadas": 13,
+   "dudas": 3,
+   "lecturas": 5,
+   "sesion": 8
   }
  },
  "16.01": {
@@ -1974,7 +3084,7 @@
   "signo": "l",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Sol",
    "linea": 2,
@@ -1984,13 +3094,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 36.0,
+   "segundos": 13.3,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.7,
-   "recorrido_mm": 201
+   "minutos": 6.2,
+   "recorrido_mm": 195
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 90.2,
+   "cansancio": 0.594,
+   "segundos_de_punzon": 49.5,
+   "levantadas": 5,
+   "dudas": 2,
+   "lecturas": 0,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -2005,20 +3130,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 24,
+   "sesion": 3,
+   "minuto": 96.9,
+   "minutos": 24.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 4.1
+   "dedo": {
+    "punto": [
+     0.086,
+     0.925
+    ],
+    "fuerza": 1.34,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.72
   },
   "voz": {
    "verso": "le pusieron nombre,",
-   "silaba": "4 de 6",
-   "hz": 151,
-   "volumen": 0.62,
-   "lambda_mm": 4.3
+   "silaba": "6 de 6",
+   "silencio": false,
+   "hz": 124,
+   "volumen": 0.26,
+   "lambda_mm": 4.9
   }
  },
  "16.02": {
@@ -2027,7 +3164,7 @@
   "signo": "l",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Sol",
    "linea": 2,
@@ -2037,13 +3174,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 36.0,
+   "segundos": 13.3,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 11.6,
-   "recorrido_mm": 202
+   "minutos": 5.4,
+   "recorrido_mm": 195
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 86.5,
+   "cansancio": 0.579,
+   "segundos_de_punzon": 52.1,
+   "levantadas": 5,
+   "dudas": 2,
+   "lecturas": 1,
+   "sesion": 6
   }
  },
  "16.03": {
@@ -2052,7 +3204,7 @@
   "signo": "l",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Sol",
    "linea": 2,
@@ -2062,13 +3214,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 36.0,
+   "segundos": 13.3,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.3,
-   "recorrido_mm": 201
+   "minutos": 5.9,
+   "recorrido_mm": 195
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 60.2,
+   "cansancio": 0.452,
+   "segundos_de_punzon": 46.7,
+   "levantadas": 4,
+   "dudas": 0,
+   "lecturas": 1,
+   "sesion": 8
   }
  },
  "16.04": {
@@ -2077,7 +3244,7 @@
   "signo": "l",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "Sol",
    "linea": 2,
@@ -2087,13 +3254,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 36.0,
+   "segundos": 13.3,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.0,
-   "recorrido_mm": 200
+   "minutos": 5.1,
+   "recorrido_mm": 195
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 41.7,
+   "cansancio": 0.341,
+   "segundos_de_punzon": 48.5,
+   "levantadas": 4,
+   "dudas": 4,
+   "lecturas": 1,
+   "sesion": 9
   }
  },
  "17.01": {
@@ -2102,7 +3284,7 @@
   "signo": "i",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "motivos",
    "linea": 3,
@@ -2112,13 +3294,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 38.2,
+   "segundos": 14.2,
+   "levantadas": 3,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 11.7,
-   "recorrido_mm": 151
+   "minutos": 6.8,
+   "recorrido_mm": 144
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 96.4,
+   "cansancio": 0.619,
+   "segundos_de_punzon": 47.0,
+   "levantadas": 5,
+   "dudas": 0,
+   "lecturas": 1,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 2,
@@ -2133,20 +3330,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 24,
+   "sesion": 4,
+   "minuto": 0.0,
+   "minutos": 24.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 4.47
+   "dedo": {
+    "punto": [
+     0.083,
+     0.932
+    ],
+    "fuerza": 1.0,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.84
   },
   "voz": {
    "verso": "otra manera de enterrar.",
-   "silaba": "1 de 9",
-   "hz": 209,
-   "volumen": 0.52,
-   "lambda_mm": 3.5
+   "silaba": "8 de 9",
+   "silencio": false,
+   "hz": 133,
+   "volumen": 0.71,
+   "lambda_mm": 4.7
   }
  },
  "17.02": {
@@ -2155,7 +3364,7 @@
   "signo": "i",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "motivos",
    "linea": 3,
@@ -2165,13 +3374,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 38.2,
+   "segundos": 14.2,
+   "levantadas": 3,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 12.4,
-   "recorrido_mm": 152
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 10.8,
+   "recorrido_mm": 144
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 91.9,
+   "cansancio": 0.619,
+   "segundos_de_punzon": 90.8,
+   "levantadas": 6,
+   "dudas": 4,
+   "lecturas": 3,
+   "sesion": 6
   }
  },
  "17.03": {
@@ -2180,7 +3404,7 @@
   "signo": "i",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "motivos",
    "linea": 3,
@@ -2190,13 +3414,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 38.2,
+   "segundos": 14.2,
+   "levantadas": 3,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 8.3,
-   "recorrido_mm": 153
+   "minutos": 5.1,
+   "recorrido_mm": 144
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 66.1,
+   "cansancio": 0.484,
+   "segundos_de_punzon": 43.9,
+   "levantadas": 4,
+   "dudas": 2,
+   "lecturas": 1,
+   "sesion": 8
   }
  },
  "18.01": {
@@ -2205,7 +3444,7 @@
   "signo": "c",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "encontraba",
    "linea": 3,
@@ -2215,13 +3454,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 40.4,
+   "segundos": 19.1,
+   "levantadas": 3,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.5,
-   "recorrido_mm": 262
+   "minutos": 6.4,
+   "recorrido_mm": 240
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 103.2,
+   "cansancio": 0.644,
+   "segundos_de_punzon": 68.6,
+   "levantadas": 6,
+   "dudas": 7,
+   "lecturas": 1,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -2235,20 +3489,32 @@
    "pliegues": 6
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 24,
+   "sesion": 4,
+   "minuto": 24.2,
+   "minutos": 22.8
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 4.12
+   "dedo": {
+    "punto": [
+     0.093,
+     0.924
+    ],
+    "fuerza": 1.23,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.71
   },
   "voz": {
    "verso": "otra manera de enterrar.",
-   "silaba": "8 de 9",
-   "hz": 142,
-   "volumen": 0.8,
-   "lambda_mm": 4.5
+   "silaba": "9 de 9",
+   "silencio": true,
+   "hz": 132,
+   "volumen": 0.03,
+   "lambda_mm": 4.7
   }
  },
  "18.02": {
@@ -2257,7 +3523,7 @@
   "signo": "c",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "encontraba",
    "linea": 3,
@@ -2267,13 +3533,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 40.4,
+   "segundos": 19.1,
+   "levantadas": 3,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 39.6,
-   "recorrido_mm": 259
+   "minutos": 13.4,
+   "recorrido_mm": 240
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 102.7,
+   "cansancio": 0.661,
+   "segundos_de_punzon": 153.0,
+   "levantadas": 15,
+   "dudas": 10,
+   "lecturas": 6,
+   "sesion": 6
   }
  },
  "18.03": {
@@ -2282,7 +3563,7 @@
   "signo": "c",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "encontraba",
    "linea": 3,
@@ -2292,13 +3573,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 40.4,
+   "segundos": 19.1,
+   "levantadas": 3,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.0,
-   "recorrido_mm": 261
+   "minutos": 7.0,
+   "recorrido_mm": 240
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 71.2,
+   "cansancio": 0.509,
+   "segundos_de_punzon": 65.8,
+   "levantadas": 7,
+   "dudas": 4,
+   "lecturas": 1,
+   "sesion": 8
   }
  },
  "19.01": {
@@ -2307,7 +3603,7 @@
   "signo": "u",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "luego",
    "linea": 3,
@@ -2317,13 +3613,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 42.8,
+   "segundos": 17.8,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.5,
-   "recorrido_mm": 276
+   "minutos": 7.0,
+   "recorrido_mm": 244
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 109.6,
+   "cansancio": 0.666,
+   "segundos_de_punzon": 74.2,
+   "levantadas": 9,
+   "dudas": 5,
+   "lecturas": 2,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -2338,20 +3649,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 23
+   "legibles": 24,
+   "sesion": 4,
+   "minuto": 47.1,
+   "minutos": 23.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 4.03
+   "dedo": {
+    "punto": [
+     0.068,
+     0.913
+    ],
+    "fuerza": 1.05,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.63
   },
   "voz": {
    "verso": "es lo que hacemos con todo, no?",
-   "silaba": "9 de 10",
-   "hz": 129,
-   "volumen": 0.54,
-   "lambda_mm": 4.8
+   "silaba": "1 de 10",
+   "silencio": false,
+   "hz": 175,
+   "volumen": 0.57,
+   "lambda_mm": 3.9
   }
  },
  "19.02": {
@@ -2360,7 +3683,7 @@
   "signo": "u",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "luego",
    "linea": 3,
@@ -2370,13 +3693,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 42.8,
+   "segundos": 17.8,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.0,
-   "recorrido_mm": 273
+   "minutos": 6.0,
+   "recorrido_mm": 244
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 116.1,
+   "cansancio": 0.687,
+   "segundos_de_punzon": 73.9,
+   "levantadas": 8,
+   "dudas": 6,
+   "lecturas": 3,
+   "sesion": 6
   }
  },
  "19.03": {
@@ -2385,7 +3723,7 @@
   "signo": "u",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "luego",
    "linea": 3,
@@ -2395,13 +3733,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 42.8,
+   "segundos": 17.8,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 19.1,
-   "recorrido_mm": 273
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 14.1,
+   "recorrido_mm": 244
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 78.2,
+   "cansancio": 0.578,
+   "segundos_de_punzon": 136.5,
+   "levantadas": 16,
+   "dudas": 4,
+   "lecturas": 4,
+   "sesion": 8
   }
  },
  "19.04": {
@@ -2410,7 +3763,7 @@
   "signo": "u",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "luego",
    "linea": 3,
@@ -2420,13 +3773,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 42.8,
+   "segundos": 17.8,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.6,
-   "recorrido_mm": 273
+   "minutos": 4.7,
+   "recorrido_mm": 244
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 46.8,
+   "cansancio": 0.374,
+   "segundos_de_punzon": 68.0,
+   "levantadas": 8,
+   "dudas": 4,
+   "lecturas": 3,
+   "sesion": 9
   }
  },
  "20.01": {
@@ -2435,7 +3803,7 @@
   "signo": "v",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "todavía",
    "linea": 2,
@@ -2445,13 +3813,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 45.1,
+   "segundos": 21.1,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 14.8,
-   "recorrido_mm": 215
+   "minutos": 6.5,
+   "recorrido_mm": 221
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 116.6,
+   "cansancio": 0.688,
+   "segundos_de_punzon": 76.5,
+   "levantadas": 8,
+   "dudas": 4,
+   "lecturas": 5,
+   "sesion": 1
   },
   "gramatica": {
    "desagues": 1,
@@ -2465,20 +3848,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 19
+   "legibles": 25,
+   "sesion": 4,
+   "minuto": 70.7,
+   "minutos": 24.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 3.89
+   "dedo": {
+    "punto": [
+     0.065,
+     0.911
+    ],
+    "fuerza": 0.84,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.71
   },
   "voz": {
    "verso": "primero enterramos,",
-   "silaba": "4 de 7",
-   "hz": 174,
-   "volumen": 0.74,
-   "lambda_mm": 3.9
+   "silaba": "3 de 7",
+   "silencio": false,
+   "hz": 165,
+   "volumen": 0.62,
+   "lambda_mm": 4.1
   }
  },
  "20.02": {
@@ -2487,7 +3882,7 @@
   "signo": "v",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "todavía",
    "linea": 2,
@@ -2497,13 +3892,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 45.1,
+   "segundos": 21.1,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.7,
-   "recorrido_mm": 213
+   "minutos": 5.3,
+   "recorrido_mm": 221
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 46.4,
+   "levantadas": 4,
+   "dudas": 0,
+   "lecturas": 1,
+   "sesion": 7
   }
  },
  "20.03": {
@@ -2512,7 +3922,7 @@
   "signo": "v",
   "variante": 3,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "todavía",
    "linea": 2,
@@ -2522,13 +3932,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 45.1,
+   "segundos": 21.1,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 15.2,
-   "recorrido_mm": 214
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 13.1,
+   "recorrido_mm": 221
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 92.3,
+   "cansancio": 0.629,
+   "segundos_de_punzon": 134.4,
+   "levantadas": 14,
+   "dudas": 8,
+   "lecturas": 8,
+   "sesion": 8
   }
  },
  "20.04": {
@@ -2537,7 +3962,7 @@
   "signo": "v",
   "variante": 4,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "todavía",
    "linea": 2,
@@ -2547,13 +3972,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 45.1,
+   "segundos": 21.1,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.7,
-   "recorrido_mm": 214
+   "minutos": 6.8,
+   "recorrido_mm": 221
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 51.5,
+   "cansancio": 0.402,
+   "segundos_de_punzon": 59.8,
+   "levantadas": 7,
+   "dudas": 5,
+   "lecturas": 0,
+   "sesion": 9
   }
  },
  "21.01": {
@@ -2562,7 +4002,7 @@
   "signo": "j",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "viejas",
    "linea": 1,
@@ -2572,13 +4012,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 47.4,
+   "segundos": 22.5,
+   "levantadas": 6,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.4,
-   "recorrido_mm": 221
+   "minutos": 5.7,
+   "recorrido_mm": 220
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 62.3,
+   "levantadas": 7,
+   "dudas": 2,
+   "lecturas": 5,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -2593,20 +4048,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 26,
+   "sesion": 4,
+   "minuto": 95.2,
+   "minutos": 25.4
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 4.06
+   "dedo": {
+    "punto": [
+     0.073,
+     0.919
+    ],
+    "fuerza": 1.17,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.57
   },
   "voz": {
    "verso": "después nos emocionamos.",
-   "silaba": "8 de 8",
-   "hz": 135,
-   "volumen": 0.69,
-   "lambda_mm": 4.6
+   "silaba": "1 de 8",
+   "silencio": false,
+   "hz": 208,
+   "volumen": 0.72,
+   "lambda_mm": 3.5
   }
  },
  "22.01": {
@@ -2615,7 +4082,7 @@
   "signo": "f",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "fotografías",
    "linea": 1,
@@ -2625,13 +4092,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 49.8,
+   "segundos": 21.1,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 278
+   "minutos": 7.0,
+   "recorrido_mm": 285
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.7,
+   "cansancio": 0.055,
+   "segundos_de_punzon": 73.6,
+   "levantadas": 9,
+   "dudas": 0,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -2646,20 +4128,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 20
+   "legibles": 26,
+   "sesion": 5,
+   "minuto": 0.0,
+   "minutos": 25.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 4.12
+   "dedo": {
+    "punto": [
+     0.079,
+     0.908
+    ],
+    "fuerza": 0.9,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.91
   },
   "voz": {
    "verso": "después nos emocionamos.",
-   "silaba": "4 de 8",
-   "hz": 164,
-   "volumen": 0.68,
-   "lambda_mm": 4.1
+   "silaba": "8 de 8",
+   "silencio": true,
+   "hz": 121,
+   "volumen": 0.09,
+   "lambda_mm": 5.0
   }
  },
  "23.01": {
@@ -2668,7 +4162,7 @@
   "signo": "í",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "fotografías",
    "linea": 1,
@@ -2678,13 +4172,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 52.1,
+   "segundos": 18.9,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 9.3,
-   "recorrido_mm": 157
+   "minutos": 5.5,
+   "recorrido_mm": 156
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 12.7,
+   "cansancio": 0.119,
+   "segundos_de_punzon": 40.2,
+   "levantadas": 3,
+   "dudas": 3,
+   "lecturas": 0,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -2699,20 +4208,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 24
+   "legibles": 24,
+   "sesion": 5,
+   "minuto": 25.7,
+   "minutos": 23.4
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 3.81
+   "dedo": {
+    "punto": [
+     0.09,
+     0.907
+    ],
+    "fuerza": 1.29,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.54
   },
   "voz": {
    "verso": "no se salvó la piedra,",
-   "silaba": "4 de 7",
-   "hz": 162,
-   "volumen": 0.51,
-   "lambda_mm": 4.1
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 119,
+   "volumen": 0.01,
+   "lambda_mm": 5.0
   }
  },
  "24.01": {
@@ -2721,7 +4242,7 @@
   "signo": "(",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "(hoy",
    "linea": 1,
@@ -2731,13 +4252,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 54.5,
+   "segundos": 15.2,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 13.8,
-   "recorrido_mm": 205
+   "minutos": 6.9,
+   "recorrido_mm": 202
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 18.2,
+   "cansancio": 0.166,
+   "segundos_de_punzon": 50.1,
+   "levantadas": 6,
+   "dudas": 2,
+   "lecturas": 1,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -2749,20 +4285,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 26,
+   "sesion": 5,
+   "minuto": 49.1,
+   "minutos": 25.8
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 4.04
+   "dedo": {
+    "punto": [
+     0.089,
+     0.917
+    ],
+    "fuerza": 1.17,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.9
   },
   "voz": {
    "verso": "solo la opinión sobre ella.",
-   "silaba": "3 de 10",
-   "hz": 165,
-   "volumen": 0.79,
-   "lambda_mm": 4.1
+   "silaba": "1 de 10",
+   "silencio": false,
+   "hz": 206,
+   "volumen": 0.52,
+   "lambda_mm": 3.5
   }
  },
  "25.01": {
@@ -2771,7 +4319,7 @@
   "signo": "h",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "(hoy",
    "linea": 1,
@@ -2781,13 +4329,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 56.7,
+   "segundos": 26.2,
+   "levantadas": 6,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.9,
-   "recorrido_mm": 349
+   "minutos": 6.7,
+   "recorrido_mm": 348
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 25.1,
+   "cansancio": 0.222,
+   "segundos_de_punzon": 84.9,
+   "levantadas": 7,
+   "dudas": 6,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -2802,20 +4365,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 26,
+   "sesion": 5,
+   "minuto": 74.9,
+   "minutos": 25.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 3.9
+   "dedo": {
+    "punto": [
+     0.088,
+     0.921
+    ],
+    "fuerza": 1.06,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.7
   },
   "voz": {
    "verso": "la tierra se dio de beber a sí misma",
-   "silaba": "7 de 12",
-   "hz": 142,
-   "volumen": 0.56,
-   "lambda_mm": 4.5
+   "silaba": "4 de 12",
+   "silencio": false,
+   "hz": 172,
+   "volumen": 0.54,
+   "lambda_mm": 3.9
   }
  },
  "25.02": {
@@ -2824,7 +4399,7 @@
   "signo": "h",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "(hoy",
    "linea": 1,
@@ -2834,13 +4409,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 56.7,
+   "segundos": 26.2,
+   "levantadas": 6,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 24.1,
-   "recorrido_mm": 350
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 11.2,
+   "recorrido_mm": 348
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 5.3,
+   "cansancio": 0.101,
+   "segundos_de_punzon": 163.5,
+   "levantadas": 18,
+   "dudas": 7,
+   "lecturas": 4,
+   "sesion": 7
   }
  },
  "26.01": {
@@ -2849,7 +4439,7 @@
   "signo": "á",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "está",
    "linea": 2,
@@ -2859,13 +4449,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 59.1,
+   "segundos": 30.1,
+   "levantadas": 6,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.2,
-   "recorrido_mm": 337
+   "minutos": 6.7,
+   "recorrido_mm": 342
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 31.8,
+   "cansancio": 0.272,
+   "segundos_de_punzon": 93.7,
+   "levantadas": 11,
+   "dudas": 4,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -2882,20 +4487,32 @@
    "pliegues": 5
   },
   "frotado": {
-   "legibles": 21
+   "legibles": 23,
+   "sesion": 5,
+   "minuto": 100.6,
+   "minutos": 22.8
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 3.97
+   "dedo": {
+    "punto": [
+     0.078,
+     0.905
+    ],
+    "fuerza": 0.99,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.58
   },
   "voz": {
    "verso": "la tierra se dio de beber a sí misma",
-   "silaba": "5 de 12",
-   "hz": 172,
-   "volumen": 0.77,
-   "lambda_mm": 3.9
+   "silaba": "9 de 12",
+   "silencio": false,
+   "hz": 149,
+   "volumen": 0.63,
+   "lambda_mm": 4.3
   }
  },
  "27.01": {
@@ -2904,7 +4521,7 @@
   "signo": ")",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "detalles).",
    "linea": 2,
@@ -2914,13 +4531,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 61.6,
+   "segundos": 14.2,
+   "levantadas": 2,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 15.2,
-   "recorrido_mm": 203
+   "minutos": 5.0,
+   "recorrido_mm": 200
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 38.5,
+   "cansancio": 0.32,
+   "segundos_de_punzon": 47.6,
+   "levantadas": 4,
+   "dudas": 3,
+   "lecturas": 1,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -2932,20 +4564,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 23
+   "legibles": 26,
+   "sesion": 6,
+   "minuto": 0.0,
+   "minutos": 25.9
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 3.86
+   "dedo": {
+    "punto": [
+     0.092,
+     0.926
+    ],
+    "fuerza": 0.88,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.58
   },
   "voz": {
    "verso": "y ningún contenedor aguanta lo que contiene.",
    "silaba": "1 de 14",
-   "hz": 203,
-   "volumen": 0.52,
-   "lambda_mm": 3.5
+   "silencio": false,
+   "hz": 198,
+   "volumen": 0.58,
+   "lambda_mm": 3.6
   }
  },
  "28.01": {
@@ -2954,7 +4598,7 @@
   "signo": ".",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "antiguos.",
    "linea": 3,
@@ -2964,13 +4608,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 63.9,
+   "segundos": 2.7,
+   "levantadas": 0,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 9.6,
-   "recorrido_mm": 28
+   "minutos": 5.2,
+   "recorrido_mm": 25
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 43.5,
+   "cansancio": 0.353,
+   "segundos_de_punzon": 8.0,
+   "levantadas": 0,
+   "dudas": 0,
+   "lecturas": 0,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -2984,20 +4643,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 22
+   "legibles": 23,
+   "sesion": 6,
+   "minuto": 25.9,
+   "minutos": 22.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 4.7
+   "dedo": {
+    "punto": [
+     0.089,
+     0.91
+    ],
+    "fuerza": 1.12,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.73
   },
   "voz": {
    "verso": "vuelve sin que la llames.",
-   "silaba": "1 de 7",
-   "hz": 175,
-   "volumen": 0.71,
-   "lambda_mm": 3.9
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 124,
+   "volumen": 0.4,
+   "lambda_mm": 4.9
   }
  },
  "29.01": {
@@ -3006,7 +4677,7 @@
   "signo": "b",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "encontraba",
    "linea": 3,
@@ -3016,13 +4687,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 65.9,
+   "segundos": 37.8,
+   "levantadas": 9,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.7,
-   "recorrido_mm": 405
+   "minutos": 5.8,
+   "recorrido_mm": 393
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 48.7,
+   "cansancio": 0.386,
+   "segundos_de_punzon": 105.0,
+   "levantadas": 10,
+   "dudas": 6,
+   "lecturas": 3,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -3037,20 +4723,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 23
+   "legibles": 23,
+   "sesion": 6,
+   "minuto": 48.6,
+   "minutos": 22.9
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 3.98
+   "dedo": {
+    "punto": [
+     0.081,
+     0.915
+    ],
+    "fuerza": 0.93,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 3.8
   },
   "voz": {
    "verso": "termina y empieza,",
-   "silaba": "3 de 6",
-   "hz": 172,
-   "volumen": 0.39,
-   "lambda_mm": 3.9
+   "silaba": "5 de 6",
+   "silencio": false,
+   "hz": 149,
+   "volumen": 0.31,
+   "lambda_mm": 4.3
   }
  },
  "29.02": {
@@ -3059,7 +4757,7 @@
   "signo": "b",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "encontraba",
    "linea": 3,
@@ -3069,13 +4767,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 65.9,
+   "segundos": 37.8,
+   "levantadas": 9,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 23.6,
-   "recorrido_mm": 404
+   "minutos": 6.3,
+   "recorrido_mm": 393
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 16.5,
+   "cansancio": 0.152,
+   "segundos_de_punzon": 104.8,
+   "levantadas": 11,
+   "dudas": 2,
+   "lecturas": 6,
+   "sesion": 7
   }
  },
  "30.01": {
@@ -3084,7 +4797,7 @@
   "signo": "q",
   "variante": 1,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "que",
    "linea": 3,
@@ -3094,13 +4807,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 68.6,
+   "segundos": 36.4,
+   "levantadas": 9,
+   "dudas": 4
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 22.4,
-   "recorrido_mm": 375
+   "minutos": 5.9,
+   "recorrido_mm": 383
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 54.5,
+   "cansancio": 0.42,
+   "segundos_de_punzon": 95.1,
+   "levantadas": 9,
+   "dudas": 3,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -3114,20 +4842,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 20
+   "legibles": 26,
+   "sesion": 6,
+   "minuto": 71.6,
+   "minutos": 25.4
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 3.88
+   "dedo": {
+    "punto": [
+     0.073,
+     0.917
+    ],
+    "fuerza": 0.86,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 3.62
   },
   "voz": {
    "verso": "termina y empieza,",
-   "silaba": "2 de 6",
-   "hz": 162,
-   "volumen": 0.53,
-   "lambda_mm": 4.1
+   "silaba": "6 de 6",
+   "silencio": false,
+   "hz": 132,
+   "volumen": 0.61,
+   "lambda_mm": 4.7
   }
  },
  "30.02": {
@@ -3136,7 +4876,7 @@
   "signo": "q",
   "variante": 2,
   "estado": "hallada",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "pie": {
    "palabra": "que",
    "linea": 3,
@@ -3146,13 +4886,28 @@
   },
   "calco": {
    "linea": "continua",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 68.6,
+   "segundos": 36.4,
+   "levantadas": 9,
+   "dudas": 4
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 45.9,
-   "recorrido_mm": 374
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 6.0,
+   "recorrido_mm": 383
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 22.8,
+   "cansancio": 0.204,
+   "segundos_de_punzon": 100.3,
+   "levantadas": 11,
+   "dudas": 7,
+   "lecturas": 3,
+   "sesion": 7
   }
  },
  "31.01": {
@@ -3161,17 +4916,32 @@
   "signo": "ó",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "la cuenca de la o y una tilde en gota",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 71.2,
+   "segundos": 36.1,
+   "levantadas": 7,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 87.9,
-   "recorrido_mm": 363
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 6.8,
+   "recorrido_mm": 348
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 60.4,
+   "cansancio": 0.453,
+   "segundos_de_punzon": 163.8,
+   "levantadas": 12,
+   "dudas": 11,
+   "lecturas": 3,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -3186,20 +4956,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 17,
+   "sesion": 6,
+   "minuto": 96.9,
+   "minutos": 17.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.32
+   "dedo": {
+    "punto": [
+     0.089,
+     0.917
+    ],
+    "fuerza": 0.88,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 1.29
   },
   "voz": {
    "verso": "termina y empieza.",
-   "silaba": "4 de 6",
-   "hz": 152,
-   "volumen": 1.0,
-   "lambda_mm": 4.3
+   "silaba": "1 de 6",
+   "silencio": false,
+   "hz": 205,
+   "volumen": 0.43,
+   "lambda_mm": 3.5
   }
  },
  "32.01": {
@@ -3208,17 +4990,32 @@
   "signo": "z",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos barras y una diagonal, redondeadas al radio de la chapa, con alivio en los dos rincones",
   "calco": {
    "linea": "punteada",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 73.8,
+   "segundos": 23.8,
+   "levantadas": 5,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 35.8,
-   "recorrido_mm": 293
+   "minutos": 6.5,
+   "recorrido_mm": 262
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 67.2,
+   "cansancio": 0.489,
+   "segundos_de_punzon": 113.7,
+   "levantadas": 7,
+   "dudas": 10,
+   "lecturas": 0,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -3232,20 +5029,32 @@
    "pliegues": 4
   },
   "frotado": {
-   "legibles": 9
+   "legibles": 15,
+   "sesion": 6,
+   "minuto": 114.1,
+   "minutos": 15.3
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.43
+   "dedo": {
+    "punto": [
+     0.067,
+     0.912
+    ],
+    "fuerza": 1.05,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.33
   },
   "voz": {
    "verso": "cada vuelta pasa por el agua",
-   "silaba": "3 de 10",
-   "hz": 171,
-   "volumen": 0.73,
-   "lambda_mm": 3.9
+   "silaba": "4 de 10",
+   "silencio": false,
+   "hz": 185,
+   "volumen": 0.43,
+   "lambda_mm": 3.7
   }
  },
  "33.01": {
@@ -3254,17 +5063,32 @@
   "signo": "?",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "un gancho que gotea, un fuste corto y un punto de cinta",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 76.2,
+   "segundos": 25.2,
+   "levantadas": 5,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 72.3,
-   "recorrido_mm": 286
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 7.2,
+   "recorrido_mm": 288
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 73.7,
+   "cansancio": 0.521,
+   "segundos_de_punzon": 143.3,
+   "levantadas": 9,
+   "dudas": 11,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -3279,20 +5103,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 9
+   "legibles": 15,
+   "sesion": 7,
+   "minuto": 0.0,
+   "minutos": 14.9
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.4
+   "dedo": {
+    "punto": [
+     0.067,
+     0.92
+    ],
+    "fuerza": 1.12,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.29
   },
   "voz": {
    "verso": "y el agua no repite,",
-   "silaba": "2 de 7",
-   "hz": 204,
-   "volumen": 0.48,
-   "lambda_mm": 3.5
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 135,
+   "volumen": 0.16,
+   "lambda_mm": 4.6
   }
  },
  "34.01": {
@@ -3301,17 +5137,32 @@
   "signo": "é",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "la e y una tilde en gota",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 78.6,
+   "segundos": 35.4,
+   "levantadas": 9,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 45.5,
-   "recorrido_mm": 364
+   "minutos": 8.3,
+   "recorrido_mm": 350
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 80.9,
+   "cansancio": 0.555,
+   "segundos_de_punzon": 180.2,
+   "levantadas": 14,
+   "dudas": 15,
+   "lecturas": 2,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -3327,20 +5178,32 @@
    "pliegues": 6
   },
   "frotado": {
-   "legibles": 7
+   "legibles": 17,
+   "sesion": 7,
+   "minuto": 14.9,
+   "minutos": 16.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.46
+   "dedo": {
+    "punto": [
+     0.075,
+     0.933
+    ],
+    "fuerza": 1.08,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.41
   },
   "voz": {
    "verso": "y el agua no repite,",
-   "silaba": "1 de 7",
-   "hz": 207,
-   "volumen": 0.76,
-   "lambda_mm": 3.5
+   "silaba": "6 de 7",
+   "silencio": false,
+   "hz": 136,
+   "volumen": 0.39,
+   "lambda_mm": 4.6
   }
  },
  "35.01": {
@@ -3349,17 +5212,32 @@
   "signo": ";",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "un punto de cinta sobre la coma: un punto del que cae una gota",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 81.2,
+   "segundos": 11.0,
+   "levantadas": 2,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.2,
+   "minutos": 8.1,
    "recorrido_mm": 86
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 89.2,
+   "cansancio": 0.59,
+   "segundos_de_punzon": 53.7,
+   "levantadas": 3,
+   "dudas": 4,
+   "lecturas": 0,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -3374,20 +5252,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 8
+   "legibles": 15,
+   "sesion": 7,
+   "minuto": 31.5,
+   "minutos": 15.6
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.49
+   "dedo": {
+    "punto": [
+     0.098,
+     0.92
+    ],
+    "fuerza": 1.03,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.36
   },
   "voz": {
    "verso": "la misma diosa dos veces",
-   "silaba": "8 de 8",
-   "hz": 133,
-   "volumen": 0.24,
-   "lambda_mm": 4.7
+   "silaba": "1 de 8",
+   "silencio": false,
+   "hz": 184,
+   "volumen": 0.71,
+   "lambda_mm": 3.8
   }
  },
  "36.01": {
@@ -3396,17 +5286,32 @@
   "signo": "ñ",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "la n y la onda del agua tocada",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 1,
+   "minuto": 83.4,
+   "segundos": 30.0,
+   "levantadas": 6,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 44.5,
+   "minutos": 7.6,
    "recorrido_mm": 359
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 97.3,
+   "cansancio": 0.622,
+   "segundos_de_punzon": 195.8,
+   "levantadas": 16,
+   "dudas": 12,
+   "lecturas": 8,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 2,
@@ -3422,20 +5327,32 @@
    "pliegues": 5
   },
   "frotado": {
-   "legibles": 9
+   "legibles": 16,
+   "sesion": 7,
+   "minuto": 47.1,
+   "minutos": 16.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.4
+   "dedo": {
+    "punto": [
+     0.066,
+     0.933
+    ],
+    "fuerza": 1.01,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 1.33
   },
   "voz": {
    "verso": "y ninguna igual.",
-   "silaba": "3 de 5",
-   "hz": 146,
-   "volumen": 1.0,
-   "lambda_mm": 4.4
+   "silaba": "5 de 5",
+   "silencio": false,
+   "hz": 117,
+   "volumen": 0.68,
+   "lambda_mm": 5.1
   }
  },
  "37.01": {
@@ -3444,17 +5361,32 @@
   "signo": "w",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos v: cuatro rectas y tres alivios",
   "calco": {
    "linea": "punteada",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 85.9,
+   "segundos": 26.7,
+   "levantadas": 4,
+   "dudas": 1
   },
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 83.7,
-   "recorrido_mm": 343
+   "minutos": 15.4,
+   "recorrido_mm": 353
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 104.9,
+   "cansancio": 0.675,
+   "segundos_de_punzon": 346.3,
+   "levantadas": 25,
+   "dudas": 23,
+   "lecturas": 4,
+   "sesion": 2
   },
   "gramatica": {
    "desagues": 1,
@@ -3468,19 +5400,31 @@
    "pliegues": 5
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 15,
+   "sesion": 7,
+   "minuto": 63.3,
+   "minutos": 15.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
+   "dedo": {
+    "punto": [
+     0.075,
+     0.917
+    ],
+    "fuerza": 1.09,
+    "dos_toques": false
+   },
    "contraste_de_la_letra": 1.4
   },
   "voz": {
    "verso": "es lo más parecido a estar viva",
-   "silaba": "9 de 12",
-   "hz": 135,
-   "volumen": 0.92,
+   "silaba": "8 de 12",
+   "silencio": false,
+   "hz": 137,
+   "volumen": 0.66,
    "lambda_mm": 4.6
   }
  },
@@ -3490,17 +5434,32 @@
   "signo": "x",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos rectas que se cruzan, con alivio arriba y abajo del cruce",
   "calco": {
    "linea": "punteada",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 1,
+   "minuto": 88.3,
+   "segundos": 23.5,
+   "levantadas": 6,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 38.0,
-   "recorrido_mm": 291
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 16.0,
+   "recorrido_mm": 272
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.076,
+   "segundos_de_punzon": 225.6,
+   "levantadas": 17,
+   "dudas": 10,
+   "lecturas": 2,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 1,
@@ -3514,20 +5473,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 16,
+   "sesion": 7,
+   "minuto": 78.4,
+   "minutos": 16.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.52
+   "dedo": {
+    "punto": [
+     0.072,
+     0.915
+    ],
+    "fuerza": 1.01,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.54
   },
   "voz": {
    "verso": "es lo más parecido a estar viva",
-   "silaba": "4 de 12",
-   "hz": 178,
-   "volumen": 0.76,
-   "lambda_mm": 3.9
+   "silaba": "5 de 12",
+   "silencio": false,
+   "hz": 160,
+   "volumen": 0.58,
+   "lambda_mm": 4.1
   }
  },
  "39.01": {
@@ -3536,17 +5507,32 @@
   "signo": "ü",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "la u y dos puntos de cinta",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 90.7,
+   "segundos": 30.4,
+   "levantadas": 7,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 40.8,
-   "recorrido_mm": 331
+   "minutos": 5.9,
+   "recorrido_mm": 295
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 16.0,
+   "cansancio": 0.148,
+   "segundos_de_punzon": 122.9,
+   "levantadas": 6,
+   "dudas": 4,
+   "lecturas": 1,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3562,20 +5548,32 @@
    "pliegues": 3
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 14,
+   "sesion": 7,
+   "minuto": 94.5,
+   "minutos": 14.4
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.34
+   "dedo": {
+    "punto": [
+     0.08,
+     0.926
+    ],
+    "fuerza": 1.03,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.27
   },
   "voz": {
    "verso": "que puede hacer una imagen.",
-   "silaba": "3 de 10",
-   "hz": 188,
-   "volumen": 0.97,
-   "lambda_mm": 3.7
+   "silaba": "4 de 10",
+   "silencio": false,
+   "hz": 182,
+   "volumen": 0.44,
+   "lambda_mm": 3.8
   }
  },
  "40.01": {
@@ -3584,17 +5582,32 @@
   "signo": "0",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una cuenca más angosta que la o; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 93.2,
+   "segundos": 142.0,
+   "levantadas": 27,
+   "dudas": 3
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 227.6,
-   "recorrido_mm": 2014
+   "minutos": 18.8,
+   "recorrido_mm": 1928
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 21.9,
+   "cansancio": 0.197,
+   "segundos_de_punzon": 775.6,
+   "levantadas": 58,
+   "dudas": 46,
+   "lecturas": 14,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3609,20 +5622,32 @@
    "pliegues": 15
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 16,
+   "sesion": 7,
+   "minuto": 108.9,
+   "minutos": 16.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.26
+   "dedo": {
+    "punto": [
+     0.073,
+     0.94
+    ],
+    "fuerza": 1.21,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.19
   },
   "voz": {
    "verso": "al final del ciclo,",
    "silaba": "6 de 6",
-   "hz": 121,
-   "volumen": 0.7,
-   "lambda_mm": 5.0
+   "silencio": true,
+   "hz": 127,
+   "volumen": 0.09,
+   "lambda_mm": 4.8
   }
  },
  "41.01": {
@@ -3631,17 +5656,32 @@
   "signo": "1",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "un fuste con asiento y una bandera, con alivio; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 97.6,
+   "segundos": 134.8,
+   "levantadas": 30,
+   "dudas": 4
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 216.0,
-   "recorrido_mm": 1909
+   "minutos": 17.8,
+   "recorrido_mm": 1827
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 40.7,
+   "cansancio": 0.334,
+   "segundos_de_punzon": 777.4,
+   "levantadas": 58,
+   "dudas": 32,
+   "lecturas": 20,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3657,20 +5697,32 @@
    "pliegues": 8
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 16,
+   "sesion": 8,
+   "minuto": 0.0,
+   "minutos": 16.0
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.24
+   "dedo": {
+    "punto": [
+     0.06,
+     0.918
+    ],
+    "fuerza": 0.91,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.17
   },
   "voz": {
    "verso": "de la boca sale un signo",
-   "silaba": "9 de 9",
-   "hz": 140,
-   "volumen": 0.71,
-   "lambda_mm": 4.5
+   "silaba": "3 de 9",
+   "silencio": false,
+   "hz": 183,
+   "volumen": 0.74,
+   "lambda_mm": 3.8
   }
  },
  "42.01": {
@@ -3679,17 +5731,32 @@
   "signo": "2",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "un gancho que gotea, una diagonal y una barra de fondo, con alivio; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 101.8,
+   "segundos": 148.9,
+   "levantadas": 31,
+   "dudas": 5
   },
   "placa_": {
-   "intentos": 3,
-   "roturas": 2,
-   "minutos": 681.6,
-   "recorrido_mm": 2026
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 19.1,
+   "recorrido_mm": 1939
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 58.5,
+   "cansancio": 0.443,
+   "segundos_de_punzon": 845.8,
+   "levantadas": 64,
+   "dudas": 39,
+   "lecturas": 23,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3705,20 +5772,32 @@
    "pliegues": 15
   },
   "frotado": {
-   "legibles": 9
+   "legibles": 14,
+   "sesion": 8,
+   "minuto": 16.0,
+   "minutos": 13.9
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.15
+   "dedo": {
+    "punto": [
+     0.086,
+     0.9
+    ],
+    "fuerza": 0.98,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 1.1
   },
   "voz": {
    "verso": "de la boca sale un signo",
-   "silaba": "7 de 9",
-   "hz": 142,
-   "volumen": 0.68,
-   "lambda_mm": 4.5
+   "silaba": "9 de 9",
+   "silencio": true,
+   "hz": 131,
+   "volumen": 0.73,
+   "lambda_mm": 4.7
   }
  },
  "43.01": {
@@ -3727,17 +5806,32 @@
   "signo": "3",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos hombros apilados que bajan del fondo; el de arriba gotea, el de abajo mira arriba y no; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 106.3,
+   "segundos": 148.4,
+   "levantadas": 29,
+   "dudas": 7
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 230.3,
-   "recorrido_mm": 2041
+   "minutos": 20.5,
+   "recorrido_mm": 1981
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 77.6,
+   "cansancio": 0.54,
+   "segundos_de_punzon": 902.5,
+   "levantadas": 68,
+   "dudas": 58,
+   "lecturas": 17,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3753,19 +5847,31 @@
    "pliegues": 17
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 17,
+   "sesion": 8,
+   "minuto": 29.8,
+   "minutos": 17.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.19
+   "dedo": {
+    "punto": [
+     0.079,
+     0.915
+    ],
+    "fuerza": 1.01,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.12
   },
   "voz": {
    "verso": "hecho con las manos,",
-   "silaba": "3 de 6",
-   "hz": 179,
-   "volumen": 0.91,
+   "silaba": "2 de 6",
+   "silencio": false,
+   "hz": 184,
+   "volumen": 0.56,
    "lambda_mm": 3.8
   }
  },
@@ -3775,17 +5881,32 @@
   "signo": "4",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una diagonal, una barra y un fuste que baja del fondo, con dos alivios; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 4
+   "desagues": 4,
+   "sesion": 1,
+   "minuto": 110.8,
+   "segundos": 150.8,
+   "levantadas": 30,
+   "dudas": 6
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 228.8,
-   "recorrido_mm": 2011
+   "minutos": 19.0,
+   "recorrido_mm": 1941
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 98.1,
+   "cansancio": 0.625,
+   "segundos_de_punzon": 889.5,
+   "levantadas": 60,
+   "dudas": 53,
+   "lecturas": 17,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 4,
@@ -3800,20 +5921,32 @@
    "pliegues": 8
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 15,
+   "sesion": 8,
+   "minuto": 47.0,
+   "minutos": 15.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.22
+   "dedo": {
+    "punto": [
+     0.08,
+     0.917
+    ],
+    "fuerza": 0.86,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.16
   },
   "voz": {
    "verso": "ninguna palabra,",
-   "silaba": "2 de 6",
-   "hz": 171,
-   "volumen": 0.37,
-   "lambda_mm": 4.0
+   "silaba": "6 de 6",
+   "silencio": false,
+   "hz": 122,
+   "volumen": 0.61,
+   "lambda_mm": 4.9
   }
  },
  "45.01": {
@@ -3822,17 +5955,32 @@
   "signo": "5",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una barra, un fuste corto y un hombro que baja del fondo; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 1,
+   "minuto": 115.3,
+   "segundos": 156.1,
+   "levantadas": 34,
+   "dudas": 5
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 235.8,
-   "recorrido_mm": 2057
+   "minutos": 20.9,
+   "recorrido_mm": 1994
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 117.1,
+   "cansancio": 0.69,
+   "segundos_de_punzon": 974.4,
+   "levantadas": 73,
+   "dudas": 57,
+   "lecturas": 23,
+   "sesion": 3
   },
   "gramatica": {
    "desagues": 3,
@@ -3847,20 +5995,32 @@
    "pliegues": 15
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 16,
+   "sesion": 8,
+   "minuto": 62.2,
+   "minutos": 16.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.19
+   "dedo": {
+    "punto": [
+     0.068,
+     0.9
+    ],
+    "fuerza": 1.1,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.14
   },
   "voz": {
    "verso": "acciones del cuerpo.",
    "silaba": "5 de 6",
-   "hz": 131,
-   "volumen": 0.65,
-   "lambda_mm": 4.7
+   "silencio": false,
+   "hz": 144,
+   "volumen": 0.63,
+   "lambda_mm": 4.4
   }
  },
  "46.01": {
@@ -3869,17 +6029,32 @@
   "signo": "6",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una cuenca y un hombro que sube y gotea; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 4
+   "desagues": 4,
+   "sesion": 1,
+   "minuto": 119.9,
+   "segundos": 162.2,
+   "levantadas": 34,
+   "dudas": 5
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 244.1,
-   "recorrido_mm": 2148
+   "minutos": 18.5,
+   "recorrido_mm": 2060
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 788.9,
+   "levantadas": 57,
+   "dudas": 35,
+   "lecturas": 13,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 4,
@@ -3895,20 +6070,32 @@
    "pliegues": 18
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 14,
+   "sesion": 8,
+   "minuto": 78.7,
+   "minutos": 14.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.09
+   "dedo": {
+    "punto": [
+     0.084,
+     0.92
+    ],
+    "fuerza": 0.88,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.05
   },
   "voz": {
    "verso": "acciones del cuerpo.",
-   "silaba": "5 de 6",
-   "hz": 138,
-   "volumen": 0.66,
-   "lambda_mm": 4.6
+   "silaba": "6 de 6",
+   "silencio": false,
+   "hz": 130,
+   "volumen": 0.58,
+   "lambda_mm": 4.8
   }
  },
  "47.01": {
@@ -3917,17 +6104,32 @@
   "signo": "7",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una barra y una diagonal que baja del fondo, con alivio; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 2,
+   "minuto": 0.0,
+   "segundos": 115.8,
+   "levantadas": 27,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 223.0,
-   "recorrido_mm": 1966
+   "minutos": 16.0,
+   "recorrido_mm": 1825
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 18.5,
+   "cansancio": 0.169,
+   "segundos_de_punzon": 686.7,
+   "levantadas": 53,
+   "dudas": 31,
+   "lecturas": 16,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 3,
@@ -3942,20 +6144,32 @@
    "pliegues": 10
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 15,
+   "sesion": 8,
+   "minuto": 92.8,
+   "minutos": 14.9
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.23
+   "dedo": {
+    "punto": [
+     0.071,
+     0.94
+    ],
+    "fuerza": 0.81,
+    "dos_toques": true
+   },
+   "contraste_de_la_letra": 1.18
   },
   "voz": {
    "verso": "y es que lo que vuelve, vuelve escrito;",
-   "silaba": "6 de 11",
-   "hz": 163,
-   "volumen": 0.53,
-   "lambda_mm": 4.1
+   "silaba": "9 de 11",
+   "silencio": false,
+   "hz": 131,
+   "volumen": 0.61,
+   "lambda_mm": 4.7
   }
  },
  "48.01": {
@@ -3964,17 +6178,32 @@
   "signo": "8",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos cuencas apiladas y comunicadas: un sifón; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 2,
+   "minuto": 3.9,
+   "segundos": 126.8,
+   "levantadas": 24,
+   "dudas": 5
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 241.0,
-   "recorrido_mm": 2145
+   "minutos": 19.0,
+   "recorrido_mm": 2059
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 34.5,
+   "cansancio": 0.292,
+   "segundos_de_punzon": 829.5,
+   "levantadas": 65,
+   "dudas": 50,
+   "lecturas": 17,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 3,
@@ -3990,20 +6219,32 @@
    "pliegues": 21
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 15,
+   "sesion": 8,
+   "minuto": 107.7,
+   "minutos": 15.2
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.02
+   "dedo": {
+    "punto": [
+     0.095,
+     0.934
+    ],
+    "fuerza": 1.1,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 0.98
   },
   "voz": {
    "verso": "pocas veces vuelve hablado.",
-   "silaba": "5 de 9",
-   "hz": 166,
-   "volumen": 0.55,
-   "lambda_mm": 4.0
+   "silaba": "8 de 9",
+   "silencio": false,
+   "hz": 139,
+   "volumen": 0.56,
+   "lambda_mm": 4.6
   }
  },
  "49.01": {
@@ -4012,17 +6253,32 @@
   "signo": "9",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "el doble opuesto del 6, con variación: la cuenca y un trazo que baja; no gotea, porque la gravedad no se da vuelta; en su celda",
   "calco": {
    "linea": "punteada",
-   "desagues": 4
+   "desagues": 4,
+   "sesion": 2,
+   "minuto": 8.0,
+   "segundos": 132.4,
+   "levantadas": 28,
+   "dudas": 6
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 233.8,
-   "recorrido_mm": 2073
+   "minutos": 19.0,
+   "recorrido_mm": 2010
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 53.5,
+   "cansancio": 0.414,
+   "segundos_de_punzon": 849.6,
+   "levantadas": 66,
+   "dudas": 62,
+   "lecturas": 15,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 4,
@@ -4038,20 +6294,32 @@
    "pliegues": 18
   },
   "frotado": {
-   "legibles": 10
+   "legibles": 17,
+   "sesion": 9,
+   "minuto": 0.0,
+   "minutos": 16.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.16
+   "dedo": {
+    "punto": [
+     0.091,
+     0.916
+    ],
+    "fuerza": 0.92,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.1
   },
   "voz": {
    "verso": "desenterrar una voz",
-   "silaba": "4 de 7",
-   "hz": 158,
-   "volumen": 0.56,
-   "lambda_mm": 4.2
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 134,
+   "volumen": 0.11,
+   "lambda_mm": 4.6
   }
  },
  "50.01": {
@@ -4060,17 +6328,32 @@
   "signo": ":",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos puntos de cinta",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 2,
+   "minuto": 12.2,
+   "segundos": 5.1,
+   "levantadas": 0,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 12.6,
-   "recorrido_mm": 57
+   "minutos": 6.0,
+   "recorrido_mm": 50
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 72.5,
+   "cansancio": 0.516,
+   "segundos_de_punzon": 30.1,
+   "levantadas": 0,
+   "dudas": 3,
+   "lecturas": 0,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 2,
@@ -4084,20 +6367,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 8
+   "legibles": 12,
+   "sesion": 9,
+   "minuto": 16.7,
+   "minutos": 12.3
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.5
+   "dedo": {
+    "punto": [
+     0.081,
+     0.922
+    ],
+    "fuerza": 1.09,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.42
   },
   "voz": {
    "verso": "desenterrar una voz",
-   "silaba": "6 de 7",
-   "hz": 133,
-   "volumen": 0.84,
-   "lambda_mm": 4.7
+   "silaba": "7 de 7",
+   "silencio": true,
+   "hz": 119,
+   "volumen": 0.01,
+   "lambda_mm": 5.0
   }
  },
  "51.01": {
@@ -4106,17 +6401,32 @@
   "signo": "¿",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "el doble opuesto de la ?, con variación: el punto arriba y el gancho abajo, que no gotea porque la gravedad no se da vuelta",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 2,
+   "minuto": 14.3,
+   "segundos": 26.5,
+   "levantadas": 8,
+   "dudas": 0
   },
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 61.6,
+   "minutos": 13.7,
    "recorrido_mm": 247
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 78.5,
+   "cansancio": 0.577,
+   "segundos_de_punzon": 252.5,
+   "levantadas": 17,
+   "dudas": 18,
+   "lecturas": 5,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 2,
@@ -4131,20 +6441,32 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 9
+   "legibles": 17,
+   "sesion": 9,
+   "minuto": 29.0,
+   "minutos": 17.0
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 1.37
+   "dedo": {
+    "punto": [
+     0.072,
+     0.913
+    ],
+    "fuerza": 1.15,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.3
   },
   "voz": {
    "verso": "es desenterrar la mano del que la escribió.",
-   "silaba": "2 de 14",
-   "hz": 172,
-   "volumen": 0.64,
-   "lambda_mm": 3.9
+   "silaba": "9 de 14",
+   "silencio": false,
+   "hz": 144,
+   "volumen": 0.8,
+   "lambda_mm": 4.4
   }
  },
  "52.01": {
@@ -4153,17 +6475,32 @@
   "signo": "«",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "dos ángulos redondeados al radio de la chapa, con alivio",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 2,
+   "minuto": 16.8,
+   "segundos": 17.0,
+   "levantadas": 3,
+   "dudas": 2
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 22.8,
-   "recorrido_mm": 189
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 13.8,
+   "recorrido_mm": 158
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 92.2,
+   "cansancio": 0.625,
+   "segundos_de_punzon": 170.4,
+   "levantadas": 9,
+   "dudas": 18,
+   "lecturas": 1,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 2,
@@ -4177,20 +6514,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 14,
+   "sesion": 9,
+   "minuto": 46.0,
+   "minutos": 14.5
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.5,
-   "contraste_de_la_letra": 1.56
+   "dedo": {
+    "punto": [
+     0.079,
+     0.927
+    ],
+    "fuerza": 0.96,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.34
   },
   "voz": {
    "verso": "nos fuimos con las manos secas,",
-   "silaba": "4 de 9",
-   "hz": 162,
-   "volumen": 0.45,
-   "lambda_mm": 4.1
+   "silaba": "8 de 9",
+   "silencio": false,
+   "hz": 134,
+   "volumen": 0.51,
+   "lambda_mm": 4.7
   }
  },
  "53.01": {
@@ -4199,17 +6548,32 @@
   "signo": "»",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "el doble opuesto de «, con variación: armado con su propio azar",
   "calco": {
    "linea": "punteada",
-   "desagues": 2
+   "desagues": 2,
+   "sesion": 2,
+   "minuto": 19.1,
+   "segundos": 16.3,
+   "levantadas": 3,
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 26.3,
-   "recorrido_mm": 188
+   "intentos": 3,
+   "roturas": 2,
+   "minutos": 22.6,
+   "recorrido_mm": 157
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 106.0,
+   "cansancio": 0.7,
+   "segundos_de_punzon": 270.2,
+   "levantadas": 17,
+   "dudas": 22,
+   "lecturas": 4,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 2,
@@ -4223,20 +6587,32 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 8
+   "legibles": 14,
+   "sesion": 9,
+   "minuto": 60.5,
+   "minutos": 14.3
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.0,
-   "contraste_de_la_letra": 1.48
+   "dedo": {
+    "punto": [
+     0.078,
+     0.907
+    ],
+    "fuerza": 1.12,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.31
   },
   "voz": {
    "verso": "que es como se sale de todas las ruinas.",
-   "silaba": "2 de 13",
-   "hz": 200,
-   "volumen": 0.58,
-   "lambda_mm": 3.6
+   "silaba": "1 de 13",
+   "silencio": false,
+   "hz": 177,
+   "volumen": 0.68,
+   "lambda_mm": 3.9
   }
  },
  "54.01": {
@@ -4245,17 +6621,32 @@
   "signo": "—",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "una recta en tres planos",
   "calco": {
    "linea": "punteada",
-   "desagues": 1
+   "desagues": 1,
+   "sesion": 2,
+   "minuto": 21.3,
+   "segundos": 8.9,
+   "levantadas": 2,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 22.2,
-   "recorrido_mm": 152
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 12.0,
+   "recorrido_mm": 111
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 0.0,
+   "cansancio": 0.062,
+   "segundos_de_punzon": 87.6,
+   "levantadas": 5,
+   "dudas": 5,
+   "lecturas": 0,
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 1,
@@ -4267,20 +6658,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 16,
+   "sesion": 9,
+   "minuto": 74.9,
+   "minutos": 16.1
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 3.5,
-   "contraste_de_la_letra": 1.53
+   "dedo": {
+    "punto": [
+     0.082,
+     0.926
+    ],
+    "fuerza": 1.12,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.59
   },
   "voz": {
    "verso": "que es como se sale de todas las ruinas.",
-   "silaba": "5 de 13",
-   "hz": 164,
-   "volumen": 0.82,
-   "lambda_mm": 4.1
+   "silaba": "3 de 13",
+   "silencio": false,
+   "hz": 188,
+   "volumen": 0.56,
+   "lambda_mm": 3.7
   }
  },
  "55.01": {
@@ -4289,17 +6692,32 @@
   "signo": "…",
   "variante": 1,
   "estado": "reconstruida",
-  "mano": "simulación (semilla fija)",
+  "mano": "simulación (semilla fija): las dos; el punzón en la derecha y la izquierda lee el anverso",
   "reconstruccion": "tres puntos de cinta",
   "calco": {
    "linea": "punteada",
-   "desagues": 3
+   "desagues": 3,
+   "sesion": 2,
+   "minuto": 23.5,
+   "segundos": 12.0,
+   "levantadas": 3,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 12.4,
-   "recorrido_mm": 84
+   "intentos": 3,
+   "roturas": 2,
+   "minutos": 17.9,
+   "recorrido_mm": 76
+  },
+  "pulso": {
+   "lado": "las dos",
+   "minuto": 12.0,
+   "cansancio": 0.212,
+   "segundos_de_punzon": 136.3,
+   "levantadas": 6,
+   "dudas": 11,
+   "lecturas": 1,
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 3,
@@ -4313,20 +6731,32 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 11
+   "legibles": 15,
+   "sesion": 9,
+   "minuto": 90.9,
+   "minutos": 14.7
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 1.5,
-   "contraste_de_la_letra": 1.57
+   "dedo": {
+    "punto": [
+     0.082,
+     0.899
+    ],
+    "fuerza": 1.0,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 1.59
   },
   "voz": {
    "verso": "a la boca la taparon, a las manos no,",
-   "silaba": "7 de 13",
-   "hz": 179,
-   "volumen": 0.61,
-   "lambda_mm": 3.8
+   "silaba": "13 de 13",
+   "silencio": true,
+   "hz": 130,
+   "volumen": 0.0,
+   "lambda_mm": 4.7
   }
  },
  "56.01": {
@@ -4335,29 +6765,47 @@
   "signo": "¶",
   "variante": 1,
   "estado": "manos",
-  "mano": "simulación (semilla fija)",
-  "signo_final": "una presión de pulgar genérico: la máquina no tiene dedos",
+  "mano": "simulación (semilla fija): el pulgar derecho",
+  "signo_final": "2 presiones de un pulgar genérico: la máquina no tiene dedos",
   "placa_": {
    "intentos": 1,
    "roturas": 0,
    "minutos": 3.0,
    "recorrido_mm": 0
   },
+  "pulso": {
+   "lado": "derecha",
+   "presiones": 2,
+   "sesion": 5,
+   "minuto": 29.9
+  },
   "frotado": {
-   "legibles": 0
+   "legibles": 0,
+   "sesion": 9,
+   "minuto": 105.6,
+   "minutos": 1.0
   },
   "agua": {
    "quieta": true,
    "tocada": true,
    "fase_de_la_onda": 2.0,
-   "contraste_de_la_letra": 0.74
+   "dedo": {
+    "punto": [
+     0.068,
+     0.913
+    ],
+    "fuerza": 1.03,
+    "dos_toques": false
+   },
+   "contraste_de_la_letra": 0.77
   },
   "voz": {
    "verso": "no tiene lengua pero igual dice.",
-   "silaba": "9 de 11",
-   "hz": 143,
-   "volumen": 0.91,
-   "lambda_mm": 4.5
+   "silaba": "1 de 11",
+   "silencio": false,
+   "hz": 195,
+   "volumen": 0.69,
+   "lambda_mm": 3.6
   }
  }
 }

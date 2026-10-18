@@ -40,8 +40,9 @@ from shapely import affinity
 from shapely.geometry import LineString, Point, Polygon
 from shapely.ops import unary_union
 
-from comun import (AJUSTES, CELDAS, SALIDA, T, a8, argumento_parametros, azar, caja_tinta, componentes, guardar,
-                   lamina as lamina_8x7, rotulo)
+from comun import (AJUSTES, CELDAS, PX_MM, SALIDA, T, a8, argumento_parametros, azar, caja_tinta, componentes,
+                   guardar, lamina as lamina_8x7, rotulo)
+from pulso import colocar
 
 GRAM = SALIDA / "gramatica"
 GENERADORES = "olna"
@@ -1132,9 +1133,10 @@ def encintar(G, ancho, rng, arrancada=False):
     La cinta es una banda de ancho constante que no curva en su plano: solo va recta.
     Para girar se pliega (el pliegue sigue la bisectriz) o se superpone otro tramo;
     donde hay dos capas pasa menos luz. Es papel crepé: tiene arrugas finas a lo ancho.
-    Se corta con la mano: los extremos quedan dentados. Sobre el volumen guarda arrugas
-    cerca de cada pliegue. No hace gotas ni asientos: solo sigue los trazos. Arrancada,
-    deja el rastro del adhesivo, que el polvo vuelve visible.
+    Se corta con la mano: los extremos quedan dentados, cortos o pasados. Se pone a mano: cada
+    vértice queda un poco corrido (pulso.colocar). Sobre el volumen guarda arrugas cerca de
+    cada pliegue. No hace gotas ni asientos: solo sigue los trazos. Arrancada, deja el rastro
+    del adhesivo, que el polvo vuelve visible.
     Devuelve la imagen y cuántos tramos y pliegues llevó.
     """
     S = 2
@@ -1146,7 +1148,7 @@ def encintar(G, ancho, rng, arrancada=False):
     for tr, w in G.trazos:
         if len(tr) < 2:
             continue
-        simple = np.array(LineString(tr).simplify(0.3 * ancho).coords)
+        simple = colocar(np.array(LineString(tr).simplify(0.3 * ancho).coords), rng, PX_MM)
         n = len(simple)
         for i in range(n - 1):
             p0, p1 = simple[i], simple[i + 1]

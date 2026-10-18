@@ -9,7 +9,7 @@ Una hoja de papel de aluminio de cocina sobre una base blanda. **La mano dibuja 
 | **a** (hallada: surco continuo) | ![](muestras/a_anverso_registro.png) | ![](muestras/a_reverso_registro.png) | ![](muestras/a_anverso_taller.png) |
 | **ó** (reconstruida: a puntos) | ![](muestras/o_tilde_anverso_registro.png) | ![](muestras/o_tilde_reverso_registro.png) | ![](muestras/o_tilde_anverso_taller.png) |
 
-Las muestras las repasó la máquina sobre el calco de la gramática, con un temblor de 0,25 mm. Son muestras de la herramienta, no placas.
+Las muestras las repujó la mano simulada (`pulso.js`) sobre el calco de la gramática: en tramos, con dudas y con las dos manos, por el reverso. Son muestras de la herramienta, no placas.
 
 ## Cómo se abre
 
@@ -30,7 +30,7 @@ Lo que se dibuja queda guardado en ese navegador. Para llevarlo a otro lado, se 
 | | |
 |---|---|
 | **La cara** · espacio | **El reverso** se ve en espejo: ahí se trabaja. **El anverso** muestra la letra al derecho. La herramienta empuja hacia la cara de abajo: desde el reverso, el relieve sale por el anverso; desde el anverso, se hunde |
-| **La herramienta** · 1 a 4 | **Repasar:** el punzón hunde un surco, y los surcos se funden. Lo hallado va con un trazo continuo. **Puntear:** un punto cada 2,25 mm; lo reconstruido va a puntos. **Rellenar:** el lado redondo sube la letra de a poco. **Alisar:** la yema baja las arrugas; el surco queda |
+| **La herramienta** · 1 a 4 | **Repasar:** el punzón hunde un surco, y los surcos se funden. Lo hallado va con un trazo continuo. **Puntear:** un punto cada 2,25 mm, más o menos, como los pondría una mano; lo reconstruido va a puntos. **Rellenar:** el lado redondo sube la letra de a poco. **Alisar:** la yema baja las arrugas; el surco queda |
 | **El punzón y la base** | Un punzón de bola de 1 mm, un bolígrafo sin tinta o un palito de brocheta. La base es fieltro, goma eva, una pila de periódico o una alfombrilla de ratón: cada una hunde y abre distinto, y aguanta distinto |
 | **La presión** | Sale de la velocidad (despacio hunde más), del lápiz de una tableta, o es pareja. Además: la fuerza y el temblor de la mano |
 | **El calco** · C | Un signo de la caja, la propuesta de la máquina: lo hallado en línea continua, lo reconstruido a puntos y en violeta, y el desagüe. O una imagen: la foto de tu calco. Por el reverso va en espejo |
@@ -130,9 +130,14 @@ La placa ya estaba simulada en `../simulacion/contener.py` (la propuesta de la m
   - El perfil es el de `contener.py`: 2,6 · cresta − 1,1 · (ancho − cresta), en anchos del surco. Las cunetas bajan más en una base firme.
   - Los tramos de un trazo se funden por el máximo. Las cunetas de los puntos se suman.
   - Cada surco se mide desde lo que ya estaba: una línea sobre una zona rellena se hunde desde la zona.
-  - El temblor mueve la presión y el ancho a lo largo del recorrido. A los lados, el aluminio se frunce.
+  - El temblor mueve la presión y el ancho a lo largo del recorrido, apenas. A los lados, el aluminio se frunce.
+  - El surco se estampa cada 0,5 mm a lo largo del recorrido, lleguen los puntos tan juntos como lleguen.
   - Donde el punzón arranca y donde se detiene, descansa y hunde un poco más.
 - **La rotura.** El esfuerzo, (*D* / *w*)² por mm de recorrido, se acumula en una grilla de 0,5 mm. Cada celda aguanta hasta un umbral con semilla, de Weibull de módulo 6: la hoja es pareja y se rompe por trabajarla de más. Un punto vale 1,6 (*D* / *w*)²: el punteado rompe más. La hoja doble aguanta 2,5 veces más.
+- **El pulso.** En la mesa, la mano es la tuya: la máquina no le agrega temblor. Agrega solo lo que la pantalla no tiene del aluminio, y es sutil:
+  - si la mano se queda quieta apretando (un tercio de segundo), el punzón descansa ahí y hunde un poco más;
+  - el punteado no cae a paso de máquina: cada punto, un poco antes o un poco después (un 7 %), un poco al costado (0,06 mm) y apretando distinto (un 5 %).
+- **La mano simulada** (`pulso.js`, la misma de `../simulacion/pulso.py`) repuja las muestras: levanta el punzón (un contorno se hace en tramos que, al retomar, se montan sobre lo hecho), va más despacio en las curvas, sigue la línea con retardo, se desvía y se corrige, tiembla un poco, duda, aprieta distinto, tiene direcciones cómodas, lee el anverso con la otra mano y se cansa con los minutos de la sesión. Son supuestos de la motricidad, no medidas de una mano.
 - **El azar** tiene semilla: el día de la obra, como en la simulación. La misma hoja y los mismos trazos dan siempre la misma placa.
 - **La luz.**
   - *El registro:* 0,16 + 0,95 · difusa + especular (^18 en la cara brillante, ^8 en la mate), con sombras barridas desde la lámpara.
@@ -148,7 +153,7 @@ La placa ya estaba simulada en `../simulacion/contener.py` (la propuesta de la m
 | Una pila de periódico | 0,52 | 0,5 | 0,22 | 0,9 mm |
 | Una alfombrilla de ratón | 0,8 | 0,7 | 0,15 | 1,3 mm |
 
-También son supuestos la tenacidad del aluminio (4,4, en `TENACIDAD`) y el tiempo: 20 mm de surco por minuto, 9 mm de punteado y 4 minutos para preparar la placa, como en la simulación.
+También son supuestos la tenacidad del aluminio (4,4, en `TENACIDAD`) y el tiempo, que sale de la mano simulada, como en la simulación (`MANO`): 230 mm de surco y 136 mm de punteado por minuto, con sus levantadas, dudas y lecturas; 4 minutos para cortar la hoja y pegar el calco, y 1 para retirarlo.
 
 ## Archivos
 
@@ -157,6 +162,7 @@ También son supuestos la tenacidad del aluminio (4,4, en `TENACIDAD`) y el tiem
 | `index.html` | La mesa: la placa y las herramientas |
 | `mesa.js` | La mano: el puntero, la presión, el calco, la luz, el registro y las salidas |
 | `repujado.js` | El motor: la hoja, el punzón, la base, el surco, la rotura y la luz. No depende de nada; corre en el navegador y en Node |
+| `pulso.js` | La mano simulada, la de `../simulacion/pulso.py`: repuja las muestras. La mesa no la usa: ahí la mano es la tuya |
 | `prueba.mjs` | Las pruebas del motor. Con `--imagenes muestras` rehace las muestras de arriba |
 | `muestras/` | La a y la ó de las muestras, por las dos caras |
 
@@ -173,6 +179,8 @@ Las pruebas comprueban:
 - que el reverso es el anverso dado vuelta;
 - que el contorno cerrado se marca;
 - que el punteado rompe más que el surco;
+- que la mano quieta, apretando, hunde un poco más, y que rehacer lo repite;
+- que la mano simulada sale siempre igual, levanta y se cansa, y que se aparta poco de la línea;
 - y cuánto tarda la luz.
 
 Hecho con asistencia de IA. La máquina vio el reel cuadro por cuadro, leyó su panel y escribió el motor sin ver el código de Vooolume. Lo que se sabe de Vooolume sale de lo que muestran el reel, el video y su página.

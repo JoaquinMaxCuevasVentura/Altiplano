@@ -6,6 +6,9 @@ Uso (desde la raíz del repositorio, después de inventario.py):
 
 Arma el testigo del pie y la gramática, y corre los simuladores del taller
 —calco, placa, cinta, frotado, agua y voz— sobre las 56 celdas y las 119 placas.
+Las manos y la voz son de una persona, no de una máquina (pulso.py): levantan,
+dudan, cambian de velocidad, tienen direcciones cómodas y se cansan a lo largo
+de cada sesión.
 Escribe en tipografia/simulacion/salida/:
   láminas (JPG y PNG) por estado,
   agua.gif (la palabra «agua» en el agua tocada) y voz.gif (la palabra «voz» movida por una voz),
@@ -30,9 +33,10 @@ from PIL import Image, ImageDraw
 from comun import (AJUSTES, CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T, VERSOS, a8, a_rgb, azar,
                    fila_de_paneles, guardar, lamina, poliza, rotulo)
 from contener import foto_placa, repujar_placa, reverso, signo_final
-from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared
+from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared, tramos_de
 from devolver import agua, agua_tocada_en_bucle, foto_agua, frotadas, voz_del_verso, voz_en_bucle
 from gramatica import V, celda, encintar, imagen_cuerpo
+from pulso import OFICIOS, SESION_MIN, Mano, toque
 
 OSCURO = dict(fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
 
@@ -84,35 +88,51 @@ def main():
         y = j + (c["fila"] - 1) * (px + j)
         fondos[c["celda"]] = cv2.resize(F[y:y + px, x:x + px], (T, T), interpolation=cv2.INTER_LINEAR)
     pauta = dict(celda=celda(e), fondo=e["fondo"], borde=e["borde"])
-    calcos, trazos = {}, {}
+    calcos, trazos, D["calco"] = {}, {}, {}
+    sesion, reloj = 0, SESION_MIN
     for c in CELDAS:
         s = c["signo"]
         if c["estado"] == "manos":
             calcos[c["celda"]] = 1 - 0.22 * (1 - fondos[c["celda"]])
             continue
+        if reloj >= SESION_MIN:                      # dos horas calcando: se descansa
+            sesion, reloj = sesion + 1, 0.0
         cuerpo = D["gramatica"][s]
         cv2.imwrite(str(GLIFOS / f"forma_{c['celda']:02d}.png"), (~cuerpo["mascara"]).astype(np.uint8) * 255)
-        img, tr = calco(cuerpo["geo"], c["estado"] == "reconstruida", fondos[c["celda"]], pauta, azar("calco", c["celda"]))
+        img, tr = calco(cuerpo["geo"], c["estado"] == "reconstruida", fondos[c["celda"]], pauta, azar("calco", c["celda"]),
+                        Mano("calcar", "derecha", reloj))
         calcos[c["celda"]], trazos[c["celda"]] = img, tr
+        segundos = sum(l["resumen"]["segundos"] for l in tr)
+        D["calco"][c["celda"]] = dict(sesion=sesion, minuto=round(reloj, 1), segundos=round(segundos, 1),
+                                      levantadas=sum(l["resumen"]["levantadas"] for l in tr),
+                                      dudas=sum(l["resumen"]["dudas"] for l in tr))
+        reloj += 2.0 + segundos / 60                 # poner el papel, la pauta con regla, y calcar
     D["desagues"] = {celda_: len(tr) for celda_, tr in trazos.items()}
     lamina(calcos, "Calco · simulación",
            "En papel de calco, sobre el frotado de la pared: el contorno del cuerpo de la gramática, abierto en su punto más bajo\n"
-           f"(el desagüe). Continuo lo hallado, punteado lo reconstruido; la celda, en lápiz. Canal de {coma(med['canal'] / 4)} mm. "
-           "La celda 56 no se calca: se hace con los dedos.", SALIDA / "03_calco.png")
+           "(el desagüe), calcado a mano. Continuo lo hallado, punteado lo reconstruido; la celda, con regla y en lápiz. "
+           f"Canal de {coma(med['canal'] / 4)} mm. La celda 56 se hace con los dedos.", SALIDA / "03_calco.png")
     notdef = dibujar_trazos((T, T), celda_notdef(azar("notdef")), False, azar("notdef"))
     guardar(SALIDA / "03b_notdef.png", 1 - 0.85 * notdef)
 
     # ------------------------------------------------ placa: repujar por el reverso
-    paso("placa: repujar 119 placas")
-    claves = [(c["celda"], v) for c in CELDAS for v in range(1, pol[c["signo"]] + 1)]
+    paso("placa: repujar 119 placas, por sesiones")
+    # el orden del taller (04, acción 4): primero una placa por celda; después, el resto de la póliza, cada
+    # vuelta en otra sesión, para que cada «a» sea de otro momento. Una sesión dura dos horas: después se descansa
+    claves = sorted(((c["celda"], v) for c in CELDAS for v in range(1, pol[c["signo"]] + 1)), key=lambda k: (k[1], k[0]))
     para_el_agua = {(POR_SIGNO["a"]["celda"], 2)}                 # la segunda «a» de la palabra «agua»
     foto_a, foto_r, placas, rotas = {}, {}, {}, []
+    sesion, reloj, vuelta = 0, SESION_MIN, 0
     for celda_, v in claves:
+        if v != vuelta or reloj >= SESION_MIN:
+            sesion, reloj, vuelta = sesion + 1, 0.0, v
         c = next(x for x in CELDAS if x["celda"] == celda_)
         if c["estado"] == "manos":
             p = signo_final(azar("signo", v))
         else:
-            p = repujar_placa(trazos[celda_], c["estado"] == "reconstruida", celda_, v)
+            p = repujar_placa(trazos[celda_], c["estado"] == "reconstruida", celda_, v, minuto=reloj)
+        p["pulso"].update(sesion=sesion, minuto=round(reloj, 1))
+        reloj += p["minutos"]
         if v == 1:
             foto_a[celda_] = u8(foto_placa(p, azar("foto", celda_, v)))
             foto_r[celda_] = u8(foto_placa(reverso(p), azar("foto reverso", celda_)))
@@ -128,7 +148,9 @@ def main():
            SALIDA / "04_placa_reverso.jpg")
     lamina(foto_a, "Placa · simulación",
            "La misma placa por el anverso: la letra se lee, en relieve. Foto con luz rasante desde la izquierda (15°).\n"
-           "Primera placa de cada celda. La celda 56, una presión de pulgar.", SALIDA / "04_placa.jpg")
+           "Primera placa de cada celda, repujada a mano: donde arranca, duda o termina, hunde más. La celda 56, presiones de pulgar.",
+           SALIDA / "04_placa.jpg")
+    lamina_pulso(D, trazos)
     if rotas:
         fila_de_paneles([f for _, f in rotas], [f"«{s}» rota" for s, _ in rotas], SALIDA / "04b_placas_rotas.jpg", alto=260,
                         titulo="Placas que se rompieron: se guardan en la caja y se hace otra")
@@ -151,12 +173,17 @@ def main():
     # ------------------------------------------------ frotado: papel y grafito sobre la placa
     paso("frotado: frotar cada placa hasta que no se lea")
     frotados, legibles = {}, {}
+    sesion, reloj = 0, SESION_MIN
     for c in CELDAS:
         celda_ = c["celda"]
-        imgs, n = frotadas(placas[(celda_, 1)], azar("frotado", celda_))
+        if reloj >= SESION_MIN:
+            sesion, reloj = sesion + 1, 0.0
+        imgs, n, minutos = frotadas(placas[(celda_, 1)], azar("frotado", celda_), minuto=reloj)
         frotados[celda_] = imgs[1]
         legibles[celda_] = n
-        fichas[f"{celda_:02d}.01"]["frotado"] = {"legibles": n}
+        fichas[f"{celda_:02d}.01"]["frotado"] = {"legibles": n, "sesion": sesion, "minuto": round(reloj, 1),
+                                                 "minutos": round(minutos, 1)}
+        reloj += minutos
         if celda_ == POR_SIGNO["a"]["celda"]:
             orden = sorted(imgs)
             fila_de_paneles([imgs[k] for k in orden], [f"frotada {k}" + (" (la última que se lee)" if k == n else "")
@@ -164,8 +191,8 @@ def main():
                             SALIDA / "08b_frotadas_de_la_a.jpg", alto=300,
                             titulo=f"La misma «a» frotada una y otra vez: cada frotada aplasta el relieve. Se leyeron {n}")
     lamina(frotados, "Frotado · simulación",
-           "Un papel sobre la placa, por el anverso, frotado con grafito: el mismo gesto con el que empezó todo (la pared).\n"
-           "Se marca lo que sobresale. Primera frotada de cada placa; cada una aplasta un poco el relieve.",
+           "Un papel sobre la placa, por el anverso, frotado con grafito a mano, en diagonal: el mismo gesto con el que empezó\n"
+           "todo (la pared). Se marca lo que sobresale. Primera frotada de cada placa; cada una aplasta un poco el relieve.",
            SALIDA / "08_frotado.jpg")
 
     # ------------------------------------------------ agua: la placa en la bandeja
@@ -177,16 +204,20 @@ def main():
         lq, _ = agua(pl, azar("agua", celda_))
         quietas[celda_] = u8(foto_agua(lq, azar("foto agua", celda_)))
         fase = 1.5 + (celda_ % 5) * 0.5
-        lt, _ = agua(pl, azar("tocada", celda_), fase=fase)
+        dedo = toque(azar("dedo", celda_))
+        lt, _ = agua(pl, azar("tocada", celda_), fase=fase, dedo=dedo)
         tocadas[celda_] = u8(foto_agua(lt, azar("foto tocada", celda_)))
         fichas[f"{celda_:02d}.01"]["agua"] = {"quieta": True, "tocada": True, "fase_de_la_onda": fase,
+                                              "dedo": {"punto": [round(x, 3) for x in dedo["punto"]],
+                                                       "fuerza": round(dedo["amplitud"] / 2.2, 2), "dos_toques": "segundo" in dedo},
                                               "contraste_de_la_letra": round(contraste_en_el_agua(lq, pl["relieve"]), 2)}
     lamina(quietas, "Agua quieta · simulación",
            "La placa en el fondo de una bandeja con un dedo de agua; la luz rebota y cae, al revés y en trapecio,\n"
            "sobre dos por dos azulejos sueltos. El punto brillante es la lámpara reflejada en el agua.",
            SALIDA / "09_agua_quieta.jpg", **OSCURO)
     lamina(tocadas, "Agua tocada · simulación",
-           "Un dedo toca el agua en una esquina: ondas concéntricas. Cada foto, en otro momento de la onda.",
+           "Un dedo toca el agua en una esquina: ondas concéntricas. Nunca en el mismo punto ni con la misma fuerza; a veces\n"
+           "toca dos veces. Cada foto, en otro momento de la onda.",
            SALIDA / "09b_agua_tocada.jpg", **OSCURO)
     gif_agua(placas)
 
@@ -196,14 +227,14 @@ def main():
     for c in CELDAS:
         celda_ = c["celda"]
         verso = VERSOS[(celda_ - 1) * len(VERSOS) // len(CELDAS)]
-        hz, vol, sil, nsil = voz_del_verso(verso, azar("voz", celda_))
+        hz, vol, sil, nsil, silencio = voz_del_verso(verso, azar("voz", celda_))
         lv, iv = agua(placas[(celda_, 1)], azar("agua voz", celda_), voz=(hz, vol))
         voces[celda_] = u8(foto_agua(lv, azar("foto voz", celda_)))
-        fichas[f"{celda_:02d}.01"]["voz"] = {"verso": verso, "silaba": f"{sil} de {nsil}", "hz": round(hz),
-                                             "volumen": round(vol, 2), "lambda_mm": round(iv["lambda_mm"], 1)}
+        fichas[f"{celda_:02d}.01"]["voz"] = {"verso": verso, "silaba": f"{sil} de {nsil}", "silencio": silencio,
+                                             "hz": round(hz), "volumen": round(vol, 2), "lambda_mm": round(iv["lambda_mm"], 1)}
     lamina(voces, "Voz · simulación",
-           "El agua vibra con el ritmo silábico del poema, leído una vez mientras se fotografían las 56 placas.\n"
-           "Ondas de Faraday: la longitud de onda sale de la altura de la voz (inventada, no la tuya).",
+           "El agua vibra con el ritmo silábico del poema, leído una vez mientras se fotografían las 56 placas: cada foto, un instante\n"
+           "de la lectura, a veces un silencio. Ondas de Faraday: la longitud de onda sale de la altura de la voz (inventada, no la tuya).",
            SALIDA / "10_voz.jpg", **OSCURO)
     gif_voz(placas)
 
@@ -223,6 +254,7 @@ def main():
 
     # ------------------------------------------------ fichas e informe
     paso("fichas e informe")
+    fichas = dict(sorted(fichas.items()))
     (SALIDA / "fichas_simuladas.json").write_text(json.dumps(fichas, ensure_ascii=False, indent=1), encoding="utf8")
     informe(D, fichas, pol, legibles)
     paso("listo")
@@ -242,7 +274,8 @@ def cuadrado(img, lado=T):
 def ficha_base(c, v, D, p):
     s = c["signo"]
     f = {"placa": f"{s}.{v:02d}", "celda": c["celda"], "signo": s, "variante": v, "estado": c["estado"],
-         "mano": "simulación (semilla fija)"}
+         "mano": "simulación (semilla fija): " + ("el pulgar derecho" if c["estado"] == "manos"
+                                                  else "las dos; el punzón en la derecha y la izquierda lee el anverso")}
     if c["estado"] == "hallada":
         t = D["testigos"][s]
         f["pie"] = {"palabra": t["palabra"], "linea": t["linea"], "testigo": t["elegido"], "de": t["de"],
@@ -250,12 +283,13 @@ def ficha_base(c, v, D, p):
     elif c["estado"] == "reconstruida":
         f["reconstruccion"] = D["receta"][s]
     else:
-        f["signo_final"] = "una presión de pulgar genérico: la máquina no tiene dedos"
+        f["signo_final"] = (f"{p['pulso']['presiones']} presiones de un pulgar genérico: la máquina no tiene dedos")
     if c["estado"] != "manos":
         f["calco"] = {"linea": "punteada" if c["estado"] == "reconstruida" else "continua",
-                      "desagues": D["desagues"].get(c["celda"], 0)}
+                      "desagues": D["desagues"].get(c["celda"], 0), **D["calco"].get(c["celda"], {})}
     f["placa_"] = {"intentos": p["intentos"], "roturas": p["roturas"], "minutos": p["minutos"],
                    "recorrido_mm": round(float(p["largo_mm"]))}
+    f["pulso"] = p["pulso"]
     if v == 1 and c["estado"] != "manos":
         g = D["gramatica"][s]["glifo"]
         f["gramatica"] = {"desagues": D["desagues"].get(c["celda"], 0), "alivios": len(g.menos),
@@ -275,7 +309,7 @@ def gif_agua(placas):
 def gif_voz(placas):
     """La palabra «voz» en el agua, movida por una voz: la onda quieta que va y vuelve."""
     fila = [placas[(POR_SIGNO[s]["celda"], 1)] for s in "voz"]
-    hz, vol, _, _ = voz_del_verso("acciones para componer una voz", azar("voz", "gif"))
+    hz, vol, _, _, _ = voz_del_verso("acciones para componer una voz", azar("voz", "gif"), sostenida=True)
     cuadros = [Image.fromarray(a8(f)).convert("P", palette=Image.ADAPTIVE, colors=64)
                for f in voz_en_bucle(fila, hz, vol, "voz", ancho=720, alto=300)]
     cuadros[0].save(SALIDA / "voz.gif", save_all=True, append_images=cuadros[1:], duration=90, loop=0, optimize=True)
@@ -375,7 +409,7 @@ def _panel_letra(D, s, lado=900, lineas=True):
             vistos.add(nombre)
             puntos.append((nombre, np.array(p)))
     if tr and "desagüe" not in vistos:
-        exterior = max(tr, key=lambda q: np.ptp(q[:, 0]) * np.ptp(q[:, 1]))
+        exterior = max((l["ideal"] for l in tr), key=lambda q: np.ptp(q[:, 0]) * np.ptp(q[:, 1]))
         puntos.append(("desagüe del canal", punto_de_desague(exterior)))
     ocupados = []
     for nombre, p in puntos:
@@ -410,6 +444,40 @@ def lamina_anatomia(D):
     for i, p in enumerate(paneles):
         lienzo.paste(p, (30 + (i % 3) * 930, 110 + (i // 3) * 930))
     guardar(SALIDA / "03c_anatomia.png", lienzo)
+
+
+def _de_cerca(img, mascara, arriba=False, lado=150):
+    """Un recorte alrededor de la letra (o de su parte de arriba), para mirarlo ampliado."""
+    ys, xs = np.nonzero(mascara)
+    cy = int(np.percentile(ys, 15)) if arriba else int((ys.min() + ys.max()) / 2)
+    cx = int((xs.min() + xs.max()) / 2)
+    y0, x0 = int(np.clip(cy - lado / 2, 0, T - lado)), int(np.clip(cx - lado / 2, 0, T - lado))
+    return img[y0:y0 + lado, x0:x0 + lado]
+
+
+def lamina_pulso(D, trazos):
+    """La mano, de cerca: el calco de la «a» tramo por tramo, la misma placa repujada al empezar la sesión
+    y a los 110 minutos, y el surco y el punteado ampliados. Todo es sutil: se ve de cerca."""
+    a, n = POR_SIGNO["a"]["celda"], POR_SIGNO["ñ"]["celda"]
+    colores = [np.array(c, np.float32) for c in ((0.11, 0.11, 0.10), (0.29, 0.14, 0.44), (0.56, 0.55, 0.51))]
+    img = np.ones((T, T, 3), np.float32) * np.array([0.965, 0.96, 0.945], np.float32)
+    for k, tr in enumerate(tramos_de(trazos[a])):
+        capa = dibujar_trazos((T, T), [tr], False, azar("pulso color", k), grosor=3)[..., None]
+        img = img * (1 - capa) + capa * colores[k % 3]
+        for idx, _ in tr["pausas"]:
+            x, y = tr["xy"][min(idx, len(tr["xy"]) - 1)]
+            cv2.circle(img, (int(round(x)), int(round(y))), 8, tuple(float(c) for c in colores[1]), 1, cv2.LINE_AA)
+    fresca = repujar_placa(trazos[a], False, a, "pulso", minuto=0.0)
+    cansada = repujar_placa(trazos[a], False, a, "pulso", minuto=110.0)
+    punteada = repujar_placa(trazos[n], True, n, "pulso", minuto=0.0)
+    f0, f1, fp = (foto_placa(x, azar("foto pulso")) for x in (fresca, cansada, punteada))
+    letra_a = np.abs(fresca["relieve"]) > 0.3
+    fila_de_paneles([_de_cerca(img, letra_a, lado=330), f0, f1, _de_cerca(f0, letra_a),
+                     _de_cerca(fp, np.abs(punteada["relieve"]) > 0.3, arriba=True)],
+                    ["el calco, tramo por tramo", "la placa, al empezar", "a los 110 minutos", "el surco, de cerca",
+                     "el punteado, de cerca"], SALIDA / "05_pulso.png", alto=300,
+                    titulo="La mano · simulación: levanta, duda, cambia de velocidad y se cansa. Es sutil, como una mano "
+                           "cuidadosa: se ve de cerca")
 
 
 def lamina_antes_y_despues(D, letras="aoegrcfsjiáqbp"):
@@ -470,6 +538,33 @@ def informe(D, fichas, pol, legibles):
                       "tomar el grafito y se borran antes." if fr < fh else "Las reconstruidas no se borran antes que las halladas."))
     tramos = sum(f.get("cinta", {}).get("tramos", 0) for f in fichas.values())
     pliegues = sum(f.get("cinta", {}).get("pliegues", 0) for f in fichas.values())
+    # el pulso
+    repujadas = [f for f in placas if f["estado"] != "manos"]
+    sesiones = len({f["pulso"]["sesion"] for f in placas})
+    punzon = sum(f["pulso"]["segundos_de_punzon"] for f in repujadas) / 3600
+    lev, dud, lec = (sum(f["pulso"][k] for f in repujadas) for k in ("levantadas", "dudas", "lecturas"))
+    c_lev = sum(v["levantadas"] for v in D["calco"].values())
+    c_dud = sum(v["dudas"] for v in D["calco"].values())
+    c_lin = sum(D["desagues"].values())
+    # el cansancio se compara dentro de las halladas: las reconstruidas, a puntos, se rompen y se frotan
+    # distinto de por sí, y no caen parejas a lo largo de las sesiones
+    halladas_ = [f for f in repujadas if f["estado"] == "hallada"]
+    temprano = [f for f in halladas_ if f["pulso"]["minuto"] < 40]
+    tarde = [f for f in halladas_ if f["pulso"]["minuto"] >= 80]
+
+    def cada(fs):
+        """Cuántos milímetros recorre el punzón, en promedio, entre una levantada y la siguiente."""
+        return sum(f["placa_"]["recorrido_mm"] * f["placa_"]["intentos"] for f in fs) / max(1, sum(f["pulso"]["levantadas"] for f in fs))
+
+    fr_t = [f["frotado"]["legibles"] for f in temprano if f["variante"] == 1]
+    fr_l = [f["frotado"]["legibles"] for f in tarde if f["variante"] == 1]
+    cansada_txt = ""
+    if min(len(fr_t), len(fr_l)) >= 5 and np.mean(fr_l) < np.mean(fr_t) - 1.5:
+        cansada_txt = (f" **Lo que la máquina no diseñó y apareció:** las halladas repujadas en la segunda hora de una "
+                       f"sesión, con la mano cansada, tienen menos relieve y se borran antes: se leen hasta la frotada "
+                       f"{coma(np.mean(fr_l))}, contra {coma(np.mean(fr_t))} las de la primera media hora.")
+    toques = sum(1 for f in fichas.values() if f.get("agua", {}).get("dedo", {}).get("dos_toques"))
+    silencios = sum(1 for f in fichas.values() if f.get("voz", {}).get("silencio"))
     xh = e["xh"]
     foto = (D.get("pie_foto") or {}).get("medidas")
     L = ["# La propuesta de la máquina: el taller simulado",
@@ -498,7 +593,9 @@ def informe(D, fichas, pol, legibles):
          "la cabeza como un cilindro. El 0,84 cae dentro.",
          "- **El frotado:** cada frotada aplasta entre un 5 y un 9 % del relieve del surco. Es un supuesto: se mide frotando.",
          "- **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.",
-         "- **El signo final:** la máquina no tiene dedos. Simula una sola presión de un pulgar genérico.",
+         "- **El signo final:** la máquina no tiene dedos. Simula las presiones de un pulgar genérico: dos a cuatro.",
+         "- **La mano y la voz** (`pulso.py`): las velocidades, los desvíos, el temblor, las dudas, el cansancio y las "
+         "lecturas son supuestos de la motricidad, no medidas de una mano. Se confrontan con las placas y las fotos reales.",
          "",
          "## El pie",
          "",
@@ -579,19 +676,58 @@ def informe(D, fichas, pol, legibles):
           "(Agüero, Uribe y Berenguer 2003). Aquí tampoco: la ¿ no es la ? dada vuelta, ni el 9 el 6, porque la gravedad no "
           "se da vuelta: la gota cae siempre hacia abajo, y el terminal que mira arriba termina en un corte.",
           "",
+          "## El pulso",
+          "",
+          "Las manos de la simulación no son las de una máquina (`pulso.py`). Una mano que calca, repuja, encinta o frota:",
+          "",
+          "- **levanta la herramienta:** un contorno largo se hace en tramos que, al retomar, se montan o dejan un hueco; "
+          "levanta en algunas esquinas y donde tendría que empujar, y ahí gira la hoja;",
+          "- **cambia de velocidad:** arranca, frena y va más despacio en las curvas (la ley de los dos tercios); donde "
+          "levanta para seguir, levanta andando;",
+          "- **sigue el calco con retardo,** se desvía y se corrige, y **tiembla** a su frecuencia, de 8 a 12 Hz. Apoyado "
+          "en el aluminio, el punzón tiembla menos: el roce lo frena;",
+          "- **duda:** se detiene, y el punzón hunde más;",
+          "- **aprieta distinto:** entra y sale de a poco y aprieta más cuando va despacio;",
+          "- **tiene direcciones cómodas:** la derecha tira bien hacia abajo y a la izquierda, y empuja peor hacia arriba "
+          "y a la derecha. Repuja en espejo, por el reverso: sus direcciones cómodas son las del reverso;",
+          "- **con las dos manos** (acción 4), la otra lee el anverso cada tanto: el punzón se levanta y retoma;",
+          "- **se cansa:** con los minutos de la sesión tiembla más, se desvía más, aprieta menos, va más lento y levanta "
+          "más seguido. Una sesión dura dos horas; después se descansa.",
+          "",
+          "| Oficio | En lo recto | Se aparta | Tramo antes de levantar | Duda cada | Presión |",
+          "|---|---|---|---|---|---|",
+          *[f"| {k} | {coma(o['v'], 0)} mm/s | {coma(o['deriva'], 2)} mm | {coma(o['tramo'][0], 0)} a "
+            f"{coma(o['tramo'][1], 0)} mm | {coma(1 / o['duda'], 0)} s | {coma(o['presion'], 2)} |" for k, o in OFICIOS.items()],
+          "",
+          "![El pulso](salida/05_pulso.png)",
+          "",
+          f"En los 55 calcos, la mano levantó el lápiz {c_lev} veces y dudó {c_dud}: {c_lin + c_lev} tramos. En las placas "
+          f"repujadas levantó el punzón {lev} veces, dudó {dud} y la otra mano leyó el anverso {lec}, en {sesiones} "
+          "sesiones. Todo es sutil, como en una mano cuidadosa: se ve de cerca, no a primera vista. El cansancio también: "
+          f"en las halladas, el punzón recorre {coma(cada(temprano), 0)} mm entre una levantada y la siguiente en la primera "
+          f"media hora de la sesión, y {coma(cada(tarde), 0)} mm en la segunda hora." + cansada_txt,
+          "",
+          "La cinta también se pone a mano: cada vértice queda un poco corrido, y las puntas, cortadas con la mano, se "
+          "quedan cortas o se pasan. El frotado va y viene en diagonal, por parches, cada pasada con su presión. El dedo "
+          "nunca toca el agua en el mismo punto ni con la misma fuerza, y a veces toca dos veces. La "
+          "voz no es un metrónomo: cada sílaba dura distinto, se detiene al final del verso, la altura baja a lo largo de "
+          "la frase y tiembla un poco.",
+          "",
           "## Calco",
           "",
           "![Frotado](salida/01_frotado_de_la_pared.jpg)",
           "",
           "Un paño de 8 × 7 azulejos con juntas torcidas, craquelado, manchas y desportillados. En el frotado se marca lo que "
-          "sobresale: juntas y grietas quedan blancas; las manchas no salen, porque no tienen relieve. Sobre ese frotado se "
+          "sobresale: juntas y grietas quedan blancas; las manchas no salen, porque no tienen relieve. Se frota a mano, por "
+          "parches: lo que alcanza el brazo; donde dos parches se montan, el papel se frota dos veces. Sobre ese frotado se "
           "pone el papel de calco.",
           "",
           "![Calco](salida/03_calco.png)",
           "",
-          "Se calca el cuerpo de la gramática, en vectores: su contorno, con el temblor de la mano, abierto en su punto más "
-          f"bajo. {sum(D['desagues'].values())} desagües en 55 signos. **La escala la decidió el pie:** la letra más alta y la "
-          "más baja caben en la placa con aire. Medidas desde el fondo:",
+          "Se calca el cuerpo de la gramática, en vectores: su contorno, abierto en su punto más bajo y recorrido a mano "
+          f"(*El pulso*). {sum(D['desagues'].values())} desagües en 55 signos. La pauta (la celda y las líneas de fondo y de "
+          "borde) va con regla y en lápiz muy suave, y se pasa en las puntas. **La escala la decidió el pie:** la letra más "
+          "alta y la más baja caben en la placa con aire. Medidas desde el fondo:",
           "",
           "| Línea | Desde el fondo |",
           "|---|---|",
@@ -616,15 +752,21 @@ def informe(D, fichas, pol, legibles):
           "Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, con un escalón donde la tijera se "
           "retoma y, a veces, una esquina cortada en diagonal. El calco se da vuelta y se repasa por el reverso con un punzón "
           "de bola de 1 mm sobre una base blanda. Por el reverso la letra queda al revés y hundida: una canaleta con dos lomas "
-          "bajas, un canal. Por el anverso se lee, en relieve. Donde la mano arranca y donde se detiene, el punzón hunde un "
-          "poco más; cerca del surco, las arrugas de la hoja se alisan.",
+          "bajas, un canal. Por el anverso se lee, en relieve. El punzón sigue la línea de grafito del calco, no el contorno "
+          "de la gramática, con su propio pulso: donde arranca, duda o termina, hunde un poco más; donde retoma, deja un "
+          "hoyuelo chico; cerca del surco, las arrugas de la hoja se alisan. Lo reconstruido va a puntos: cada punto, una "
+          "presión, a un paso que no es parejo.",
           "",
           f"- **119 placas** ({n_h} de signos hallados, {n_r} reconstruidos y {pol['¶']} signo final).",
-          f"- **Tiempo simulado:** {coma(minutos / 60)} horas de repujado, contando las placas que se rompieron. El plan "
-          "estimaba entre 30 y 40. La máquina supuso 20 mm de surco por minuto, 9 mm de punteado por minuto y 4 minutos "
-          "para preparar cada placa.",
+          f"- **Tiempo simulado:** {coma(minutos / 60)} horas de repujado en {sesiones} sesiones de hasta dos horas, contando "
+          "las placas que se rompieron. El plan estimaba entre 30 y 40 (de 15 a 20 minutos por placa). El tiempo sale de "
+          f"la mano: {coma(punzon)} horas con el punzón en la hoja, más 4 minutos por intento para cortar la hoja y pegar el "
+          "calco, y 1 para retirarlo. La máquina no cuenta fotografiar las dos caras ni anotar la ficha.",
+          "- **El orden:** primero una placa por celda; después, el resto de la póliza, cada vuelta en otra sesión, para "
+          "que cada «a» sea de otro momento (04, acción 4).",
           f"- **Roturas:** {rot_h} en {n_h} placas halladas y {rot_r} en {n_r} reconstruidas. La máquina supuso que el "
-          "punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %).",
+          "punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %), un poco más "
+          "con la mano cansada, y se rompe donde la mano más apretó.",
           "",
           "![Rotas](salida/04b_placas_rotas.jpg)",
           "",
@@ -643,15 +785,17 @@ def informe(D, fichas, pol, legibles):
           "![Frotadas de la a](salida/08b_frotadas_de_la_a.jpg)",
           "",
           "Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acción 1, ahora sobre la letra. El papel "
-          "no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Se frota "
-          "hasta que la letra no se lee: **el peso de una letra se mide en frotadas.** " + frotado_txt,
+          "no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Frota una "
+          "mano, en diagonal, cada pasada con su presión y, con los minutos de la sesión, más suave. Se frota hasta que la "
+          "letra no se lee: **el peso de una letra se mide en frotadas.** " + frotado_txt,
           "",
           "**Las primeras en borrarse:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[:8]) + ".",
           "",
           "**Las últimas:** " + ", ".join(f"«{sig[c]}» ({n})" for c, n in orden[-8:]) + ".",
           "",
-          (f"El signo final, una presión de pulgar, da {final} frotadas legibles: el domo es liso y el papel lo acompaña; "
-           "solo marca el filo." if final == 0 else f"El signo final, una presión de pulgar, da {final} frotadas legibles."),
+          (f"El signo final, las presiones de un pulgar, da {final} frotadas legibles: el domo es liso y el papel lo "
+           "acompaña; solo marca el filo." if final == 0 else
+           f"El signo final, las presiones de un pulgar, da {final} frotadas legibles."),
           "",
           "## Agua",
           "",
@@ -661,7 +805,8 @@ def informe(D, fichas, pol, legibles):
           "",
           "![agua](salida/agua.gif)",
           "",
-          "La placa, por el anverso, en el fondo de una bandeja con un dedo de agua. " + agua_txt,
+          "La placa, por el anverso, en el fondo de una bandeja con un dedo de agua. " + agua_txt + " El dedo que toca el "
+          f"agua nunca toca en el mismo punto ni con la misma fuerza; en {toques} de las 56 fotos tocó dos veces.",
           "",
           "## Voz",
           "",
@@ -670,7 +815,8 @@ def informe(D, fichas, pol, legibles):
           "![voz](salida/voz.gif)",
           "",
           "El poema se lee una vez en voz alta junto a la bandeja, mientras se fotografían las 56 placas: a cada placa le toca "
-          "una sílaba de su verso. El agua responde con ondas de Faraday, a la mitad de la frecuencia de la voz; cuanto más "
+          f"un instante de su verso, una sílaba o, en {silencios} de las 56, el silencio que la sigue, con el agua todavía "
+          "moviéndose. El agua responde con ondas de Faraday, a la mitad de la frecuencia de la voz; cuanto más "
           f"aguda la sílaba, más corta la onda (entre {coma(min(f['voz']['lambda_mm'] for f in fichas.values() if 'voz' in f))} "
           f"y {coma(max(f['voz']['lambda_mm'] for f in fichas.values() if 'voz' in f))} mm). Con volumen alto, la onda cruza "
           "tres frentes en lugar de dos.",
@@ -684,7 +830,9 @@ def informe(D, fichas, pol, legibles):
           "## Lo que la máquina no sabe",
           "",
           "- **El libro:** qué letra tiene el pie en su tamaño real, ni cómo se imprimió. La foto da sus medidas, no sus formas.",
-          "- **La mano:** el temblor es ruido con un ritmo; no cansa, no duda, no se distrae.",
+          "- **La mano:** ahora levanta, duda, cambia de velocidad, tiene direcciones cómodas y se cansa, pero con supuestos "
+          "de la motricidad, no con medidas de una mano. No se distrae, no aprende de una placa a la otra y no tiene días "
+          "buenos ni malos.",
           "- **El aluminio:** cómo se rompe de verdad. Aquí se rompe con una probabilidad.",
           "- **El grafito:** cuánto relieve se lleva cada frotada.",
           "- **La cinta:** cómo se despega de verdad; aquí cada tramo deja un residuo supuesto.",
@@ -710,6 +858,8 @@ def informe(D, fichas, pol, legibles):
           "5. **Frotado:** cuántas frotadas se leen, y qué signos se borran primero.",
           "6. **Agua:** si las reconstruidas también llegan más débiles.",
           "7. **Voz:** qué sílaba le tocó a cada placa y qué onda dejó.",
+          "8. **Pulso:** levantadas, dudas y minutos por placa; si las placas de la segunda hora de una sesión se ven, se "
+          "rompen o se frotan distinto de las de la primera.",
           ""]
     (SALIDA.parent / "informe.md").write_text("\n".join(L), encoding="utf8")
 

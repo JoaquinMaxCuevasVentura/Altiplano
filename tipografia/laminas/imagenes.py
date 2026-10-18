@@ -24,6 +24,7 @@ from comun import CELDAS, SALIDA, VERSOS, a8, a_rgb, azar  # noqa: E402
 from contener import foto_placa, repujar_placa, signo_final  # noqa: E402
 from desenterrar import calcar, desenterrar  # noqa: E402
 from devolver import agua, foto_agua, voz_del_verso  # noqa: E402
+from pulso import Mano, toque  # noqa: E402
 
 IMG = AQUI / "img"
 ESQ = TIPO / "esquemas"
@@ -43,13 +44,16 @@ def celda_de(signo):
 
 
 def placas(D, signos):
-    """Repite la simulación (misma semilla) solo para las placas que se piden: [(signo, variante)]."""
+    """Repite la simulación (misma semilla) solo para las placas que se piden: [(signo, variante)]. La mano
+    se cansa con la sesión: el minuto en que se calcó y se repujó cada placa sale de las fichas."""
+    fichas = json.loads((SALIDA / "fichas_simuladas.json").read_text(encoding="utf8"))
     salida = {}
     for s, v in signos:
         c = celda_de(s)
         celda = c["celda"]
-        trazos = calcar(D["gramatica"][s]["geo"], azar("calco", celda))
-        salida[(s, v)] = repujar_placa(trazos, c["estado"] == "reconstruida", celda, v)
+        f = fichas[f"{celda:02d}.{v:02d}"]
+        trazos = calcar(D["gramatica"][s]["geo"], azar("calco", celda), Mano("calcar", "derecha", f["calco"]["minuto"]))
+        salida[(s, v)] = repujar_placa(trazos, c["estado"] == "reconstruida", celda, v, minuto=f["pulso"]["minuto"])
     return salida
 
 
@@ -76,10 +80,10 @@ def la_a_en_el_agua(pl):
     lq, _ = agua(p, azar("agua", celda))
     guardar("a_quieta.jpg", foto_agua(lq, azar("foto agua", celda)))
     fase = 1.5 + (celda % 5) * 0.5
-    lt, _ = agua(p, azar("tocada", celda), fase=fase)
+    lt, _ = agua(p, azar("tocada", celda), fase=fase, dedo=toque(azar("dedo", celda)))
     guardar("a_tocada.jpg", foto_agua(lt, azar("foto tocada", celda)))
     verso = VERSOS[(celda - 1) * len(VERSOS) // len(CELDAS)]
-    hz, vol, _, _ = voz_del_verso(verso, azar("voz", celda))
+    hz, vol, _, _, _ = voz_del_verso(verso, azar("voz", celda))
     lv, _ = agua(p, azar("agua voz", celda), voz=(hz, vol))
     guardar("a_voz.jpg", foto_agua(lv, azar("foto voz", celda)))
 

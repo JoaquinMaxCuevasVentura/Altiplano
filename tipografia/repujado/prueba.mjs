@@ -4,8 +4,9 @@
  *
  * Comprueba que la placa sale siempre igual (el azar tiene semilla), que el reverso es el anverso dado vuelta,
  * que el punzón por el reverso levanta el anverso y por el anverso lo hunde, que rehacer da lo mismo que dibujar,
- * que el punteado rompe más que el surco y que la luz se calcula en un tiempo razonable. Con --imagenes CARPETA
- * guarda las muestras del README: la a y la ó de la gramática, por las dos caras.
+ * que el punteado rompe más que el surco, que la mano quieta hunde un poco más, que la mano simulada (pulso.js)
+ * sale siempre igual y que la luz se calcula en un tiempo razonable. Con --imagenes CARPETA guarda las muestras
+ * del README: la a y la ó de la gramática, repujadas por la mano simulada, por las dos caras.
  */
 import { createRequire } from "node:module";
 import { deflateSync } from "node:zlib";
@@ -15,6 +16,7 @@ import assert from "node:assert/strict";
 
 const require = createRequire(import.meta.url);
 const R = require("./repujado.js");
+const Pulso = require("./pulso.js");
 
 let fallas = 0;
 function prueba(nombre, f) {
@@ -40,7 +42,7 @@ const huella = (a) => { let h = 0; for (let i = 0; i < a.length; i += 3) h = (h 
 function dibujar(placa, t) {
   const [primero, ...resto] = t.puntos;
   placa.empezar({ ...t, puntos: [primero] });
-  for (const q of resto) placa.agregar(q[0], q[1], q[2], q[3]);
+  for (const q of resto) placa.agregar(q[0], q[1], q[2], q[3], !!q[4]);
   return placa.terminar();
 }
 
@@ -126,6 +128,39 @@ prueba("pasar muchas veces por el mismo surco termina rompiendo", () => {
   assert.ok(rotas >= 5);
 });
 
+prueba("la mano quieta, apretando, hunde un poco más (y rehacer lo repite)", () => {
+  function hacer(duda) {
+    const p = new R.Placa({ N: 300, semilla: "q", arrugas: 0 }), puntos = [];
+    for (let x = 30; x <= 120; x += 0.5) {
+      puntos.push([x, 75, 0.8, x * 20]);
+      if (duda && x === 75) puntos.push([x, 75, 0.8, x * 20 + 400, 1]);          // se detiene a la mitad
+    }
+    dibujar(p, { herramienta: "repasar", cara: "reverso", puntos });
+    return p;
+  }
+  const sin = hacer(false), con = hacer(true), j = Math.floor(75 / sin.mm) * sin.N + Math.floor(75 / sin.mm);
+  assert.ok(con.R[j] > 1.02 * sin.R[j], `con la duda ${con.R[j].toFixed(3)} mm, sin ella ${sin.R[j].toFixed(3)} mm`);
+  assert.ok(con.R[j] < 1.25 * sin.R[j], "la duda es sutil");
+  const antes = huella(con.H);
+  con.reconstruir();
+  assert.equal(huella(con.H), antes);
+  assert.equal(huella(R.Placa.deJSON(JSON.parse(JSON.stringify(con.aJSON())), 300).H), antes);
+});
+
+prueba("la mano simulada sale siempre igual, levanta y se cansa", () => {
+  const cam = [];
+  for (let i = 0; i <= 400; i++) { const a = -Math.PI / 2 + 1.94 * Math.PI * (i / 400); cam.push([75 + 30 * Math.cos(a), 75 + 40 * Math.sin(a)]); }
+  const una = Pulso.trazar(cam, { oficio: "repujar", lado: "las dos" }, R.azar("mano", 1));
+  const otra = Pulso.trazar(cam, { oficio: "repujar", lado: "las dos" }, R.azar("mano", 1));
+  assert.deepEqual(una, otra);
+  assert.ok(una.resumen.levantadas >= 1, "un contorno largo se hace en tramos");
+  const cansada = Pulso.trazar(cam, { oficio: "repujar", lado: "las dos", minutos: 110 }, R.azar("mano", 1));
+  assert.ok(cansada.resumen.segundos > una.resumen.segundos, "cansada va más lento");
+  let lejos = 0;
+  for (const t of una.tramos) for (const [x, y] of t.puntos) lejos = Math.max(lejos, Math.abs(Math.hypot((x - 75) / 30, (y - 75) / 40) - 1) * 30);
+  assert.ok(lejos < 0.8, `se aparta de la línea ${lejos.toFixed(2)} mm: sutil`);
+});
+
 let placa, vista;
 prueba("una placa de 1024 px: la hoja, una letra y la luz", () => {
   let t0 = performance.now();
@@ -154,8 +189,9 @@ prueba("una placa de 1024 px: la hoja, una letra y la luz", () => {
 
 const i = process.argv.indexOf("--imagenes");
 if (i > 0 && fallas === 0) {
-  /* Muestras para el README: la a (hallada, surco continuo) y la ó (reconstruida, a puntos), repasadas por la
-   * máquina sobre el calco de la gramática, con un temblor de 0,25 mm. Son muestras de la herramienta, no placas. */
+  /* Muestras para el README: la a (hallada, surco continuo) y la ó (reconstruida, a puntos), repujadas sobre el
+   * calco de la gramática por la mano simulada (pulso.js): en tramos, con dudas, con las dos manos. Trabaja por
+   * el reverso, en espejo. Son muestras de la herramienta, no placas. */
   const dir = process.argv[i + 1];
   mkdirSync(dir, { recursive: true });
   globalThis.window = globalThis;
@@ -163,19 +199,20 @@ if (i > 0 && fallas === 0) {
   require("../aplicacion/datos.js");
   require("../aplicacion/gramatica.js");
   const G = globalThis.Gramatica, D = globalThis.DATOS, base = G.preparar(D, {});
-  const temblor = R.ruido("muestra");
+  const espejo = (q) => q.map(([x, y, ...resto]) => [R.LADO - x, y, ...resto]);
   function repasar(placa, signo, herramienta) {
-    for (const anillo of G.construir(base, D, signo).geo.map((a) => a.map(([x, y]) => [x / 4, y / 4]))) {
+    G.construir(base, D, signo).geo.map((a) => a.map(([x, y]) => [x / 4, y / 4])).forEach((anillo, k) => {
       let L = 0;
       const pts = [anillo[0]];
-      for (let k = 1; k < anillo.length; k++) {
-        L += Math.hypot(anillo[k][0] - anillo[k - 1][0], anillo[k][1] - anillo[k - 1][1]);
-        if (L > 20 && Math.hypot(anillo[k][0] - anillo[0][0], anillo[k][1] - anillo[0][1]) < 3.2) break;   // el desagüe
-        if (Math.hypot(anillo[k][0] - pts.at(-1)[0], anillo[k][1] - pts.at(-1)[1]) > 0.6) pts.push(anillo[k]);
+      for (let j = 1; j < anillo.length; j++) {
+        L += Math.hypot(anillo[j][0] - anillo[j - 1][0], anillo[j][1] - anillo[j - 1][1]);
+        if (L > 20 && Math.hypot(anillo[j][0] - anillo[0][0], anillo[j][1] - anillo[0][1]) < 3.2) break;   // el desagüe
+        pts.push(anillo[j]);
       }
-      const t = pts.map(([x, y], k) => [x + 0.25 * temblor(k / 12, 1.5), y + 0.25 * temblor(k / 12, 7.5), 0.8, k * 20]);
-      dibujar(placa, { herramienta, cara: "reverso", punzon: "bola", base: "fieltro", puntos: t });
-    }
+      const mano = { oficio: herramienta === "puntear" ? "puntear" : "repujar", lado: "las dos", minutos: 0 };
+      for (const tramo of Pulso.trazar(espejo(pts), mano, R.azar("muestra", signo, k)).tramos)
+        dibujar(placa, { herramienta, cara: "reverso", punzon: "bola", base: "fieltro", puntos: espejo(Pulso.puntosDe(tramo)) });
+    });
   }
   const png = (rgba, W, H) => {
     const fila = W * 4 + 1, crudo = Buffer.alloc(fila * H);
