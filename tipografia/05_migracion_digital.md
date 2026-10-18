@@ -94,7 +94,7 @@ Se recibió una propuesta de otra IA para el ecosistema digital. Esto es lo que 
 - **Un laboratorio de discrepancias**, con placas reales, no simuladas. Cuando haya placas escaneadas, se mide:
   - **dónde se rompe el aluminio**, frente a lo que supone la gramática (`radio_chapa`, `alivio`);
   - **el quiebre de los fustes a lo largo de las sesiones**, frente al 1,6° fijo de la gramática: la mano que se cansa;
-  - **cuántas frotadas resiste el ¶ hecho con los dedos.** La simulación dice 0, porque supone «una presión de pulgar genérico: la máquina no tiene dedos».
+  - **cuántas frotadas resiste el ¶ hecho con los dedos.** La simulación dice 0, porque supone las presiones de un pulgar genérico: «la máquina no tiene dedos».
 
   Lo que se mida va a `simulacion/informe.md`, como confrontación. No corrige ninguna placa.
 

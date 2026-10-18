@@ -184,6 +184,7 @@ def ficha():
              ("Reconstrucción", "por analogía con ______________________"),
              ("Calco", "mano ______________ fecha ________"),
              ("Placa", "mano ______ fecha ______ intentos __ roturas __"),
+             ("Pulso", "sesión __ min. __ tardó __ min. levantadas ________"),
              ("Cinta", "tramos __ pliegues __   foto nº ______"),
              ("Frotado", "papel ______ frotadas legibles __ última __"),
              ("Agua", "[ ] quieta  [ ] tocada   foto nº ______"),

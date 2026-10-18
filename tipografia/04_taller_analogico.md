@@ -171,9 +171,9 @@ Se toma el procedimiento, no las formas.
    - después, el resto de la póliza hasta 119, en sesiones distintas, para que cada «a» sea de otro momento.
 7. **Si se rompe:** la placa no se tira. Va a la ficha («roturas») y a la caja, junto a la que se hizo después.
 
-**Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas.
+**Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas. La máquina, con su mano simulada, calcula unas 16 horas sin contar fotografiar ni anotar la ficha (`simulacion/informe.md`): se confronta.
 
-**Registro:** en la ficha, *Placa*, con quién repujó y con qué mano (la derecha, la izquierda o las dos). Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
+**Registro:** en la ficha, *Placa*, con quién repujó y con qué mano (la derecha, la izquierda o las dos). En *Pulso*, la sesión, el minuto de la sesión en que empezó la placa, cuánto tardó y cuántas veces levantó el punzón (con palotes, sin interrumpir la mano): es lo que se confronta con el pulso de la máquina. Las dudas no se cuentan mientras se trabaja: se ven después en la placa, como hoyuelos. Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
 
 ### Acción 5 · Llenar la caja
 
