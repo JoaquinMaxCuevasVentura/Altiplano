@@ -69,15 +69,14 @@ Son observaciones sobre esta selección, no sobre la historia de la imagen.
 | Det Kgl. Bibliotek (Copenhague): Guaman Poma, *Nueva corónica y buen gobierno*, 1615 (GKS 2232 4º) | 17 | Marca de dominio público 1.0, según la página del proyecto. Títulos y páginas tomados de la transcripción de la propia biblioteca |
 | Internet Archive, escaneo del Getty Research Institute: E. G. Squier, *Peru: Incidents of Travel and Exploration in the Land of the Incas*, 1877 | 15 | `NOT_IN_COPYRIGHT` en los metadatos del ejemplar. Grabados recortados de la página; el catálogo da la página impresa |
 | Public Domain Image Archive (PDIA) | 15 | «Public Domain Worldwide» y «No Additional Rights» en la ficha de cada imagen, que también da la institución de origen |
-| Library of Congress | 4 | **Por confirmar.** Su sitio pidió una verificación de navegador y no se pudieron abrir las fichas |
+| Library of Congress | 4 | Confirmados el 18 de octubre en la ficha de cada foto. Las dos de la mina Siglo XX (n.os 39 y 51) son de la colección FSA/OWI, de dominio público. Las de Potosí (n.º 40) y Corocoro (n.º 18) no tienen «restricciones conocidas para publicar». Las fichas dan rangos de fechas: 1940-1946, 1880-1923 y 1908-1919 |
 
 - **Lo que se descartó.** Una lámina de Zubler (1607) del PDIA tiene derechos digitales CC BY-SA. Habría obligado a compartir los tableros con esa licencia, así que se dejó fuera.
 - **Wikimedia Commons** no respondió desde el entorno de trabajo: dio el error 429, «demasiadas solicitudes». Por eso faltan las apachetas, Cieza de León y d'Orbigny (véase abajo).
 
 ## Lo que falta o decides tú
 
-1. **Las cuatro fotos de la Library of Congress** (n.os 18, 39, 40 y 51). Abre su ficha y confirma los derechos. Los enlaces están en el catálogo.
-   - La del cerro de Potosí (n.º 40) dice «1880», pero la firma la agencia Ewing Galloway. Conviene confirmar la fecha.
+1. **Las fechas de las fotos de la Library of Congress** son rangos. El mapa de fechas las pone en el primer año del rango.
 2. **El impreso de Posada** (n.º 5). El PDIA lo titula «Number 2», pero en la hoja se lee «Número 1».
 3. **Las categorías** son una propuesta. Puedes añadir un material, como madera o agua; mover una imagen de casilla o quitarla.
 4. **Las 36 imágenes sin referencia.** Cada una necesita su cita de la novela o salir del tablero.

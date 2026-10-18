@@ -73,3 +73,15 @@ Lo pidió el autor después de ver los tres primeros. Es `taxonomia/tablero_4_re
 - **Lo que la novela calla.** Un recuadro aparte con el escribano y el contador de Guaman Poma; lo ata el tercer hallazgo.
 - **Un paso añadido.** La primera versión no tenía el paso de *Los Yungas*. Se añadió porque el segundo hallazgo nombra «el cocal».
 - **Los datos.** El contenido está en la sección `relato` de `catalogo.json`.
+
+## Nota del 18 de octubre: los derechos de la Library of Congress
+
+Por la tarde, las fichas de la Library of Congress se pudieron abrir. Confirman los derechos y corrigen tres fechas:
+
+| N.º | Foto | Derechos según la ficha | Fecha según la ficha |
+|---|---|---|---|
+| 39 y 51 | Mina Siglo XX, de Patiño (LC-USE6-D-000117 y 000116) | Colección FSA/OWI: «in the public domain and are free to use and reuse» | Entre 1940 y 1946, no 1940 |
+| 40 | Cerro de Potosí (LC-DIG-ds-01846). Ewing Galloway figura como titular del copyright | «No known restrictions on publication» | Entre 1880 y 1923 |
+| 18 | Lavado de cobre en Corocoro (LC-DIG-npcc-19842) | «No known restrictions on publication» | Entre 1908 y 1919 |
+
+El catálogo, el LEEME y los tableros se pusieron al día con estos datos.
