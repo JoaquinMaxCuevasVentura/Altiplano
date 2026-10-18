@@ -5,10 +5,11 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 ## El proyecto
 
 - **El artículo.** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura. Lee la novela *Altiplano* (1945) desde la arquitectura y el dibujo.
-- **Su estado** (11 de octubre de 2026):
-  - versión final de 61.705 caracteres y 10.286 palabras, 29 páginas en Word;
+- **Su estado** (18 de octubre de 2026):
+  - versión final de 65.722 caracteres y 10.946 palabras, 33 páginas en Word;
   - 153 citas de la novela entre comillas y 2 en bloque;
-  - 32 obras en la bibliografía.
+  - 34 obras en la bibliografía;
+  - ocho figuras y, en serie aparte, cinco imágenes de dominio público.
 - **El destino.** Sin elegir. La primera candidata es la revista *Atenea*, que pide recortar unas 1.800 palabras.
 - **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
 - **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
@@ -19,8 +20,8 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 |---|---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | El texto fuente del artículo | Sí, solo con cambios aprobados por el autor |
 | `articulo/articulo_cosecha_de_piedras.docx` | El Word, generado desde el `.md` | No a mano: se regenera |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 45624ba | No a mano |
-| `articulo/figuras/` | Las ocho figuras y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 541ae4b, el anterior a las imágenes | No a mano |
+| `articulo/figuras/` | Las ocho figuras, las cinco imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y cinco documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
 | `analisis/01_…` a `analisis/31_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
@@ -39,7 +40,9 @@ La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la ra
    - Comillas latinas «», y “ ” dentro de ellas.
    - Coma decimal y punto en los millares (61.705).
 5. **Formato de las citas.** Autor y año con página: «(Botelho Gosálvez, 1982 [1945]: 96)», y luego «(ibid.: 102)». Las omisiones dentro de una cita van como «[...]». Mantén las cadenas de *ibid.* correctas si mueves texto.
-6. **Las figuras.** La numeración es la del artículo: el Castillete es la 4, la Pelvis la 5 y el Centinela la 6. Las figuras 1 a 6 son esquemas que se reemplazarán por los escaneos de los pasteles del autor. Las imágenes hechas con generadores de IA son solo exploración y no se publican.
+6. **Las figuras y las imágenes.** La numeración es la del artículo: el Castillete es la 4, la Pelvis la 5 y el Centinela la 6. Las figuras 1 a 6 son esquemas que se reemplazarán por los escaneos de los pasteles del autor. Las imágenes hechas con generadores de IA son solo exploración y no se publican.
+   - Las cinco imágenes de dominio público van en serie aparte, «Imagen 1-5», para no mover la numeración de las figuras. Cada una necesita un pasaje del artículo que la pida, una fuente con su página y un dominio público comprobado en la ficha de la institución.
+   - Si quitas o añades una, ajusta la cifra de la sección 2, la declaración de IA y el *ibid.* siguiente (`articulo/figuras/LEEME.md`).
 7. **La declaración de uso de IA.** Está al final del artículo y tiene que decir la verdad. Si redactas o corriges texto del artículo, avísale al autor y propón añadir la herramienta que usaste a la declaración.
 8. **Datos personales.** El repositorio es público. No añadas datos personales del autor más allá de los que ya figuran en el artículo.
 

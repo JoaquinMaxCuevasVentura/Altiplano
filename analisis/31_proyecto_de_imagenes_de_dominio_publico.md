@@ -236,3 +236,56 @@ Si la revista exige una sola serie, se renumera al enviar, con un guion que lo h
 3. Añadir las dos obras a la bibliografía y poner al día la declaración de IA.
 4. Regenerar el Word y el PDF, y revisar página por página dónde cae cada imagen.
 5. Poner al día las cifras de extensión, `figuras/LEEME.md`, `AGENTS.md` y la lista de envío.
+
+## Nota del 18 de octubre: cómo se aplicó
+
+El autor aprobó el proyecto con una condición: que entren solo las imágenes que aporten de verdad al artículo, no por bulto. Antes de tocar el texto se volvió a pasar cada imagen por los seis criterios y se cotejó cada frase con su fuente. Entraron cinco; dos quedaron fuera.
+
+### Lo que entró
+
+| Imagen | Antes | Sección | Qué cambió respecto de la propuesta |
+|---|---|---|---|
+| 1. Escribano de cabildo | 1 | 2 | La frase va después de las escuelas de Achacachi y no al final del párrafo: «Tampoco era nueva la escritura en manos andinas». Una nota explica la paginación de Guaman Poma, «814 [828]» |
+| 2. La Puerta del Sol | 2 | 3 | Frase nueva, con un hallazgo en el relato de Squier (véase abajo). Va en un párrafo propio |
+| 3. La tejedora y el contador | 3 | 4 | «En los Andes, el hilo servía también para registrar». No llama escritura al khipu, porque eso se discute |
+| 4. La mina Siglo XX | 5 | 5 | La frase sigue a la del campamento (p. 135) y no a la de la cosecha de estaño (p. 142), que cierra el párrafo. Describe solo lo que se ve |
+| 5. Agosto | 6 | 7 | La frase responde a «una piedra fuera de la historia»: abrir la tierra tiene historia en los Andes y tuvo su herramienta |
+
+**El hallazgo de la Imagen 2.**
+
+- En el capítulo XVI, Squier cuenta que, desde el primer día, un anciano pasaba las jornadas en las ruinas labrando una piedra entre las rodillas, al pie del gran monolito (Squier, 1877: 302-303).
+- A un arriero que le preguntó en aymara qué hacía, le contestó que estaba «cutting out a cross».
+- Y Squier escribe: «After a time we came to look upon him as an integral part of the monuments, and should have missed him as much as the great monolith itself» (ibid.: 303).
+- Se leyó en el escaneo de la página, no solo en el OCR.
+- El grabado de la p. 288, hecho de las fotografías de Squier, muestra al pie de la portada a un hombre sentado con un bloque entre las piernas. Squier no dice que sea el anciano, y el artículo tampoco lo dice: pone el grabado y el relato uno junto al otro.
+- La frase final es una interpretación: «El viajero vuelve piedra al que trabaja la piedra, como hará el narrador con los comunarios». Enlaza con el cuarto hallazgo de las conclusiones. **La decide el autor.**
+
+**Las comprobaciones.**
+
+- **Guaman Poma.** Títulos, páginas, números de dibujo y rótulos salen de la transcripción de la Biblioteca Real, página por página:
+  - el *qilqay kamayuq* que «redacta un testamento», en la p. 814 [828];
+  - la «tejedora de treinta y tres años», en la p. 215 [217];
+  - el «contador mayor y tesorero», en la p. 360 [362];
+  - el canto «ayau haylli yau», en la p. 1153 [1163].
+- **La mina Siglo XX.** La ficha de la Library of Congress (LC-USE6-D-000117) da el título, el rango de fechas y la colección. La tira pegada al negativo dice «BOLIVIA - Catavi! (Patino Mines and Enterprises) General view of the 20th Century Tin Mines».
+- **La novela.** No entra ninguna cita nueva: siguen las 153 entre comillas y las 2 en bloque. La única referencia nueva es el arado que cuelga junto al yugo (p. 31), sin comillas, comprobada en la transcripción.
+- **Los *ibid.*** Tres pasan a la cita completa porque ahora los precede otra obra: la p. 36 (sección 3), la p. 13 (sección 4; el proyecto no lo había previsto) y la p. 156 (sección 7). Se repasó la cadena entera con un guion: todas apuntan bien.
+- **«El mismo capítulo».** En la sección 3 pasa a «El mismo capítulo de la novela», porque ahora lo precede el párrafo de Squier.
+
+### Lo que quedó fuera
+
+- **Las pilastras de Tiwanaku (antes, Imagen 7).** Al cotejar la p. 277 apareció un error de la propuesta.
+  - El «wall of rough stones» que Squier supone se refiere a las piedras que cercan el recinto que él llama Templo.
+  - El grabado, que interrumpe esa descripción, muestra la hilera de pilastras de su terraza. Entre ellas Squier supone losas encajadas, no piedras toscas (p. 278).
+  - La frase propuesta mezclaba las dos cosas. Y aun corregida, la imagen solo ilustra la analogía de la pirca, que el texto ya dice y la Figura 7 ya dibuja. No cumple el criterio 2.
+- **La apacheta (antes, Imagen 4).** Wikimedia Commons siguió respondiendo con el error 429, y el buscador del museo de Estocolmo no respondió a la búsqueda. Queda pendiente en la lista de envío (paso 5). Si se consigue con una licencia libre, entraría junto a la Figura 3.
+- **Las opcionales.** Ninguna: ninguna cumplía los seis criterios mejor que las cinco.
+
+### El resto de los cambios
+
+- **Sección 2.** Una frase después de la condición de Fuão: el artículo reproduce cinco imágenes de dominio público, en serie aparte; cada una va junto al pasaje que la pide y muestra lo que la novela calla o aquello con lo que contrasta.
+- **Bibliografía.** Guaman Poma de Ayala (1615) y Squier (1877): 34 obras.
+- **Declaración de IA.** El alcance añade «la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5)».
+- **Extensión.** 65.722 caracteres y 10.946 palabras: unas 680 palabras más (400 en el texto, 200 en los pies, 25 en la nota y 45 en la bibliografía). El PDF pasa de 29 a 33 páginas.
+- **Los archivos.** Las imágenes están en `articulo/figuras/imagen_1.jpg` a `imagen_5.jpg`. Las de Guaman Poma son las de la web de la biblioteca, de 550 px de alto: hay que pedir la alta resolución.
+- **El Word con cambios marcados** compara ahora con el commit 541ae4b, el anterior a las imágenes. Marca 20 cambios.

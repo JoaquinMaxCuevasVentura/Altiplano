@@ -84,9 +84,14 @@ Son observaciones sobre esta selección, no sobre la historia de la imagen.
    - la apacheta (hay un dibujo con licencia CC0, «Apacheta, monticule votif»);
    - el Potosí de Cieza de León;
    - las láminas de d'Orbigny y de Wiener.
-6. **Si alguna imagen pasa al artículo:**
-   - **La numeración de las figuras.** Hay que rehacerla.
-   - **La declaración de uso de IA.** Las imágenes son históricas y no se hicieron con IA. Pero la selección, la clasificación y la composición de los tableros se hicieron con Claude, un asistente de IA, y la declaración tendría que decirlo.
+6. **Las imágenes que pasaron al artículo.** El 18 de octubre entraron seis, como imágenes 1-5 en serie aparte (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md`):
+   - el escribano (n.º 27);
+   - la Puerta del Sol (n.º 29);
+   - la tejedora y el contador, en un díptico (n.os 20 y 25);
+   - la mina Siglo XX (n.º 39);
+   - agosto (n.º 13).
+
+   La numeración de las figuras no cambió. La declaración de uso de IA nombra ya la búsqueda y la preparación de las imágenes, que son históricas y no se hicieron con IA. Los tableros no entran al artículo.
 
 ## Cómo regenerar
 

@@ -1,6 +1,6 @@
 # Figuras del artículo
 
-El artículo definitivo (`../articulo_cosecha_de_piedras.md`) lleva ocho figuras. Las seis primeras son los **esquemas de encaje** de los seis pasteles: fijan las coordenadas que da el texto (con su página) y las decisiones del dibujo (punto de vista, escala, operación de cada zona). Desde el 1 de octubre de 2026 están trazados como notaciones, en el mismo lenguaje de los diagramas (`analisis/23_esquemas_de_encaje_como_notaciones.md`). Se elaboraron con asistencia de IA y así lo dicen el pie de cada figura y la declaración de IA. Las dos últimas son **diagramas** trazados como notaciones (véase abajo).
+El artículo definitivo (`../articulo_cosecha_de_piedras.md`) lleva ocho figuras y, en serie aparte, cinco imágenes de dominio público (véase «Las imágenes de dominio público», abajo). Las seis primeras son los **esquemas de encaje** de los seis pasteles: fijan las coordenadas que da el texto (con su página) y las decisiones del dibujo (punto de vista, escala, operación de cada zona). Desde el 1 de octubre de 2026 están trazados como notaciones, en el mismo lenguaje de los diagramas (`analisis/23_esquemas_de_encaje_como_notaciones.md`). Se elaboraron con asistencia de IA y así lo dicen el pie de cada figura y la declaración de IA. Las dos últimas son **diagramas** trazados como notaciones (véase abajo).
 
 La numeración sigue el orden de aparición en el artículo, que no coincide con la de la serie original:
 
@@ -40,4 +40,22 @@ Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis
      - en a), agrega GPT Image 2 (OpenAI).
    - Mide casi lo mismo que lo que sale (`analisis/17_estilo_y_prompts_gpt_image.md`, §17.7).
 5. No vuelvas a correr `generar_figuras.py` sobre un número que ya sea fotografía.
-6. Regenera el Word (`python3 articulo/generar_docx.py`) y mira la extensión que informa. Ya no hay un límite fijo: hoy son 61.705 caracteres y 10.286 palabras, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`).
+6. Regenera el Word (`python3 articulo/generar_docx.py`) y mira la extensión que informa. Ya no hay un límite fijo: hoy son 65.722 caracteres y 10.946 palabras, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`).
+
+## Las imágenes de dominio público (imágenes 1-5)
+
+Entraron el 18 de octubre de 2026 (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md`). Van en serie aparte, «Imagen 1-5», para que las Figuras 1-8 no cambien de número. No ilustran la novela: cada una va junto al pasaje que la pide y muestra lo que la novela calla o aquello con lo que contrasta.
+
+| Archivo | Imagen | Sección | Fuente y derechos | Resolución |
+|---|---|---|---|---|
+| `imagen_1.jpg` | Escribano de cabildo, de Guaman Poma (1615, p. 814 [828], dibujo 307) | 2 | Det Kgl. Bibliotek (Copenhague), GKS 2232 4º. Marca de dominio público 1.0 | 372 × 537 px: **no alcanza para imprimir** |
+| `imagen_2.jpg` | Frente de la gran portada monolítica de Tiwanaku, grabado en Squier (1877: 288) | 3 | Internet Archive, ejemplar del Getty Research Institute, marcado `NOT_IN_COPYRIGHT` | 1.580 × 1.170 px: unos 290 ppp a 14 cm |
+| `imagen_3.jpg` | Díptico de Guaman Poma: a) la tejedora (p. 215 [217], dibujo 80); b) el contador mayor con su khipu (p. 360 [362], dibujo 143) | 4 | Det Kgl. Bibliotek, como la 1 | 776 × 589 px: **no alcanza para imprimir** |
+| `imagen_4.jpg` | Vista general de las minas de estaño Siglo XX, entre 1940 y 1946 (LC-USE6-D-000117) | 5 | Library of Congress, colección FSA/OWI: «in the public domain and are free to use and reuse» | 2.063 × 1.542 px, recortada del JPEG de 2.600 px; el TIFF original tiene 13.162 px |
+| `imagen_5.jpg` | Agosto: cantos triunfales, tiempo de abrir las tierras, de Guaman Poma (p. 1153 [1163], dibujo 393) | 7 | Det Kgl. Bibliotek, como la 1 | 388 × 537 px: **no alcanza para imprimir** |
+
+- **Los pies.** Siguen el modelo de las figuras: título en cursiva, autor y obra, «Fuente:» con la institución y el estado de derechos.
+- **Guaman Poma en alta resolución.** La Biblioteca Real de Dinamarca solo sirve 550 px de alto en su web. Hay que pedirle los cuatro dibujos (pp. 814 [828], 215 [217], 360 [362] y 1153 [1163]) y reemplazar los archivos con el mismo nombre. El díptico de la Imagen 3 se arma con las letras a y b arriba de cada dibujo.
+- **Si la revista pide una sola serie,** se renumera todo por orden de aparición. Las imágenes quedarían intercaladas con las figuras, y habría que rehacer los números en el texto, los pies, la sección 2 y la declaración de IA.
+- **Si una imagen sale,** borra su frase de enlace, su bloque y su pie; renumera las que siguen; ajusta la cifra de la sección 2 («cinco imágenes», «imágenes 1-5») y la de la declaración de IA, y revisa el *ibid.* siguiente. Si salen todas las de Guaman Poma o las de Squier, quita también su entrada de la bibliografía.
+- **Lo que quedó fuera** (`analisis/31_…`, nota del 18 de octubre): las pilastras de Tiwanaku, porque solo ilustraban la analogía de la pirca, y la apacheta de la expedición Nordenskiöld, que no se pudo bajar ni confirmar su licencia. Si la consigues, entraría después de la Figura 3 como Imagen 4, y las dos siguientes pasarían a ser la 5 y la 6.

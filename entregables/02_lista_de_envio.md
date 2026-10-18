@@ -2,19 +2,20 @@
 
 **«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura.
 
-Estado al 11 de octubre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
+Estado al 18 de octubre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
 
 ## El artículo hoy
 
 | Dato | Valor |
 |---|---|
-| Extensión | 61.705 caracteres con espacios y 10.286 palabras, con notas y bibliografía. En Word, 29 páginas (tamaño carta, Times New Roman 12, interlineado 1,5) |
+| Extensión | 65.722 caracteres con espacios y 10.946 palabras, con notas y bibliografía. En Word, 33 páginas (tamaño carta, Times New Roman 12, interlineado 1,5) |
 | Resúmenes | 99 palabras en español y 90 en inglés |
 | Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
 | Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
 | Figuras | Ocho. Las figuras 1 a 6 son los esquemas de encaje de los seis pasteles; la 7 y la 8, diagramas. Va además el Cuadro 1 |
+| Imágenes | Cinco de dominio público, en serie aparte (imágenes 1-5): tres dibujos de Guaman Poma, un grabado de Squier y una foto de la mina Siglo XX de la Library of Congress |
 | Citas de la novela | 153 entre comillas y 2 en bloque. Todas se comprobaron contra la transcripción: existen tal cual y están en la página indicada |
-| Bibliografía | 32 obras |
+| Bibliografía | 34 obras |
 | Destino | Sin elegir. La primera candidata es *Atenea* (véase `05_revistas_candidatas`) |
 
 ## Lo que ya está hecho
@@ -26,6 +27,7 @@ Estado al 11 de octubre de 2026. Aquí está lo que ya se hizo y lo que te toca 
 - [x] Citas de la novela comprobadas contra la transcripción, una por una. Cadenas de *ibid.* revisadas.
 - [x] Citas de las demás fuentes cotejadas con el texto de cada una, con su página.
 - [x] El pasaje de «Pyramid of Bones» sigue la letra oficial, la del librillo de la edición japonesa de *Virtue*.
+- [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
 - [x] Word regenerado con la versión final.
 
 ## Lo que te toca, en orden
@@ -42,7 +44,8 @@ Cambia lo que no suene a ti. Antes de firmar, decide si sostienes cada interpret
 - las dos analogías: el esgrafiado (sección 1) y la pirca de doble cara (sección 7);
 - el cierre de la Figura 1: el narrador declara cerrada el alma de los comunarios y los ve como estatuas;
 - el *qalachuyma*, que el artículo presenta como parte de un relato de Spedding (sección 7);
-- los cruces con la cultura popular: el apodo «el lobo» del Alcalde y las tres canciones de The Voidz (secciones 2, 3, 4 y 7).
+- los cruces con la cultura popular: el apodo «el lobo» del Alcalde y las tres canciones de The Voidz (secciones 2, 3, 4 y 7);
+- las frases que acompañan a las imágenes, sobre todo dos: el anciano que labraba una piedra al pie de la Puerta del Sol y que Squier llegó a ver «como parte integrante de los monumentos» (sección 3), y el arado de pie de Guaman Poma, hecho para el cuerpo, frente al arado de buey de la chujlla (sección 7).
 
 Si cambias algo, regenera el Word con `python3 articulo/generar_docx.py` y después los entregables con `python3 entregables/generar_entregables.py`.
 
@@ -64,9 +67,9 @@ Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice 
 
 Así figura hoy en el artículo:
 
-> a\) *Herramientas*: Claude (Anthropic) y ChatGPT (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, y el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
+> a\) *Herramientas*: Claude (Anthropic) y ChatGPT (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
 
-- **Describe lo que se hizo.** El alcance incluye la redacción de borradores y el trazado de las ocho figuras porque así se preparó el texto.
+- **Describe lo que se hizo.** El alcance incluye la redacción de borradores, el trazado de las ocho figuras y la búsqueda de las cinco imágenes porque así se preparó el texto. Las imágenes son históricas: ninguna se hizo con IA.
 - **Si reescribes el artículo con tus palabras** antes de enviarlo, puedes decirlo en el rol.
 - **Cuando entren los escaneos de los pasteles,** quita del alcance «el diseño y trazado de los esquemas de encaje (figuras 1-6)». Si las exploraciones con GPT Image 2 influyeron en los pasteles, dilo.
 - **Si redibujas a mano los diagramas 7 y 8,** quítalos también del alcance y cambia sus pies.
@@ -83,7 +86,16 @@ La guía está en `03_guia_de_los_seis_pasteles`. Cuando tengas los escaneos:
 
 Revisa también las notaciones de las figuras 1 a 6 (rótulos y decisiones marcadas con asterisco) y los diagramas 7 y 8 (rótulos y páginas). Decide si los diagramas entran.
 
-### 5. Cotejar las citas con el libro impreso
+### 5. Pedir las imágenes de Guaman Poma en alta resolución
+
+Las cinco imágenes de dominio público ya están en el artículo (`articulo/figuras/imagen_1.jpg` a `imagen_5.jpg`). Dos alcanzan para imprimir: el grabado de Squier (Imagen 2) y la foto de la mina Siglo XX (Imagen 4). Las tres de Guaman Poma, no: la Biblioteca Real de Dinamarca solo da 550 px de alto en su web.
+
+- **Pide a la biblioteca** (kb@kb.dk) los cuatro dibujos del manuscrito GKS 2232 4º, con su paginación: 814 [828], 215 [217], 360 [362] y 1153 [1163]. Pregunta el costo, si lo tiene, y qué línea de crédito piden.
+- **Cuando lleguen,** guárdalos con el mismo nombre en `articulo/figuras/` y regenera el Word (`articulo/figuras/LEEME.md` explica el díptico de la Imagen 3).
+- **Decide la numeración.** Las imágenes van en serie aparte para no mover las figuras. Si la revista pide una sola serie, hay que renumerar todo por orden de aparición.
+- **Una imagen más, si la consigues.** La apacheta entre Pelechuco y Queara, de la expedición de Erland Nordenskiöld (1904-1905), está en Wikimedia Commons («Bolivia - SMVK - 002387»). Desde el entorno de trabajo no se pudo bajar. Si la bajas desde tu navegador y su ficha confirma una licencia libre, entraría junto a la Figura 3 (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md` trae la frase y el pie).
+
+### 6. Cotejar las citas con el libro impreso
 
 Usa `04_fichero_de_pasajes`: trae las citas de la novela por página, con una casilla para marcar. Empieza por las pp. 88-107, donde la transcripción repite texto y alguna cita puede estar corrida una página.
 
@@ -91,9 +103,9 @@ Coteja también tres citas tomadas de fuentes escaneadas:
 
 - Barnadas (1978 [1975]: 84), cuyo OCR estaba muy dañado;
 - Zavaleta Mercado (1986: 21, n. 1);
-- Cornejo Polar, si decides citar la 1.ª edición (véase el paso 6).
+- Cornejo Polar, si decides citar la 1.ª edición (véase el paso 7).
 
-### 6. Revisar los datos que no se pudieron comprobar del todo
+### 7. Revisar los datos que no se pudieron comprobar del todo
 
 | Fuente | Qué falta |
 |---|---|
@@ -107,7 +119,7 @@ Coteja también tres citas tomadas de fuentes escaneadas:
 | Cornejo Polar (2003 [1994]: 41, 180) | Se cita la 2.ª edición (2003). Si prefieres la 1.ª (Horizonte, 1994), comprobar las páginas |
 | Bertonio (2011 [1612]) | Se cita la transcripción digital. Si un evaluador lo pide, cotejar con el facsímil de 1612 |
 
-### 7. Cotejar «Father Electricity»
+### 8. Cotejar «Father Electricity»
 
 El pasaje de la sección 7 («I do not want to see the whole mess / I wish I could live in retrospect») sale de la letra que aportaste. Es de *Tyranny* (2014), y el librillo de *Virtue* no lo trae.
 
@@ -115,23 +127,24 @@ El pasaje de la sección 7 («I do not want to see the whole mess / I wish I cou
 - Si cambia algo (palabras, corte de verso, mayúsculas), dale al artículo la forma de esa fuente y di de dónde sale en la bibliografía, como ya se hizo con *Virtue*.
 - Mientras tanto, si la revista pregunta, la cita es de la grabación y la transcripción es tuya.
 
-### 8. Elegir la revista
+### 9. Elegir la revista
 
 Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada revista y confirma la recepción, la extensión, el trato de las figuras, los cobros y la política de IA. Esos datos salen de extractos del buscador, no de una lectura directa.
 
-### 9. Adaptar el texto a la revista
+### 10. Adaptar el texto a la revista
 
 - **Formato y citas.** El Word sigue hoy la plantilla de *Estudios Bolivianos*. Según la revista, hará falta APA 7, MLA o Chicago.
-- **Extensión.** Para *Atenea* (8.500 palabras con resumen y referencias) hay que quitar unas 1.800.
+- **Extensión.** Para *Atenea* (8.500 palabras con resumen y referencias) hay que quitar unas 2.450.
   - La palanca principal son los pies de figura analíticos y el Cuadro 1, unas 1.850 palabras: acórtalos o pasa parte de su análisis al texto.
+  - Las cinco imágenes, con sus frases, sus pies y la nota, suman unas 680 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 1) y la Puerta del Sol (Imagen 2).
   - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.
   - El marco teórico y la bibliografía deben quedar completos. Si una obra deja de citarse, sácala de la bibliografía.
 - **La frase «Se trata de una investigación en desarrollo»** (final de la sección 1) respondía a una norma de *Estudios Bolivianos*. Decide si la mantienes.
-- **Las figuras, aparte.** *Atenea* las pide en JPG o TIF, a 300 ppp o más y con 12 cm de ancho como mínimo, con su pie y su fuente.
+- **Las figuras, aparte.** *Atenea* las pide en JPG o TIF, a 300 ppp o más y con 12 cm de ancho como mínimo, con su pie y su fuente. Lo mismo vale para las imágenes: las de Guaman Poma necesitan la alta resolución del paso 5.
 - **Filiación.** No tienes una institucional. La salida habitual es «Investigador independiente, La Paz (Bolivia)». Si la revista pide filiación, pregúntale si la acepta.
 - **ORCID.** Créalo antes del primer envío: es gratis y muchas plataformas lo exigen.
 
-### 10. Preparar la versión anónima, si la piden
+### 11. Preparar la versión anónima, si la piden
 
 Para el arbitraje a doble ciego:
 
@@ -139,7 +152,7 @@ Para el arbitraje a doble ciego:
 - deja «El autor» en las declaraciones, porque no identifica a nadie;
 - borra tu nombre de las propiedades del archivo (en Word: Archivo → Información → Inspeccionar documento).
 
-### 11. Enviar
+### 12. Enviar
 
 Envía a una sola revista por vez: casi todas lo exigen. Anota la fecha de envío para reclamar respuesta según el plazo que declare la revista.
 
@@ -169,6 +182,7 @@ No hacen falta para enviar. Cada una tiene su fuente:
 - [ ] Declaración de IA revisada
 - [ ] Pasteles hechos y escaneados; figuras, pies, plano (3) y declaración ajustados
 - [ ] Notaciones de las figuras 1 a 6 y diagramas 7 y 8 revisados
+- [ ] Imágenes de Guaman Poma pedidas en alta resolución; numeración de las imágenes decidida
 - [ ] Citas de la novela cotejadas con el impreso
 - [ ] Datos por confirmar revisados
 - [ ] «Father Electricity» cotejado con la letra oficial
