@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>El repujado de Contenida</title>
+<style>
+/* La mesa del repujado: a la izquierda, la placa; a la derecha, la mano y sus herramientas.
+   Los colores y las letras son los de los planos (tipografia/planos/): papel, tinta, violeta para lo reconstruido. */
+@font-face { font-family: "Newsreader"; font-weight: 300; font-style: normal; src: url(../laminas/fuentes/newsreader-latin-300-normal.woff2) format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 400; font-style: normal; src: url(../laminas/fuentes/newsreader-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 500; font-style: normal; src: url(../laminas/fuentes/newsreader-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 400; font-style: italic; src: url(../laminas/fuentes/newsreader-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "Courier Prime"; font-weight: 400; font-style: normal; src: url(../laminas/fuentes/courier-prime-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Courier Prime"; font-weight: 700; font-style: normal; src: url(../laminas/fuentes/courier-prime-latin-700-normal.woff2) format("woff2"); }
+
+:root {
+  --papel: #f6f4ee;
+  --papel-2: #eeebe3;
+  --tinta: #1d1c1a;
+  --violeta: #4a2470;
+  --gris: #6d6a63;
+  --gris-2: #9a968d;
+  --filete: #cfcac0;
+  --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--papel); color: var(--tinta); }
+body {
+  margin: 0; padding-block: 0 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  font-family: var(--serif); font-size: 17px; line-height: 1.45; font-weight: 300;
+}
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--violeta); outline-offset: 2px; }
+.mono { font-family: var(--mono); }
+
+header { max-width: 1440px; margin: 0 auto; padding: 26px 0 16px; border-bottom: 1px solid var(--tinta); }
+.volanta { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; color: var(--gris); }
+h1 { font-weight: 300; font-size: clamp(32px, 4.6vw, 54px); line-height: 1.02; margin: 0; letter-spacing: -.01em; }
+.bajada { font-style: italic; font-weight: 400; color: var(--gris); margin: 10px 0 0; max-width: 78ch; }
+
+main { max-width: 1440px; margin: 0 auto; padding-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 26px; align-items: start; }
+@media (max-width: 1000px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+/* la placa */
+.mesa { min-width: 0; }
+.mesa-cabeza { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.cara { font-size: 34px; line-height: 1; font-weight: 400; margin: 0; }
+.cara small { font-family: var(--mono); font-size: 13px; color: var(--gris); font-weight: 400; margin-left: 10px; letter-spacing: .02em; }
+.marco { position: relative; width: 100%; max-height: calc(100vh - 150px); overflow: auto; border: 1px solid var(--tinta); background: var(--tinta); }
+.lienzo { position: relative; width: 100%; aspect-ratio: 1 / 1; touch-action: none; cursor: none; outline: 1px solid #45423d; }
+.lienzo canvas, .lienzo svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.lienzo svg { pointer-events: none; }
+#calco.espejo { transform: scaleX(-1); }
+.barra { display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--gris); padding: 6px 0 0; }
+.barra b { color: var(--tinta); font-weight: 400; }
+.aviso { font-family: var(--mono); font-size: 13px; color: var(--violeta); min-height: 1.5em; margin: 6px 0 0; }
+
+/* el panel */
+aside { background: var(--papel-2); border: 1px solid var(--filete); }
+@media (min-width: 1001px) { aside { position: sticky; top: 10px; max-height: calc(100vh - 20px); overflow: auto; } }
+.grupo { padding: 11px 16px 13px; border-bottom: 1px solid var(--filete); }
+.grupo h2 { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; display: flex; justify-content: space-between; gap: 8px; }
+.grupo h2 span { color: var(--gris); letter-spacing: .02em; text-transform: none; font-size: 12px; }
+.grupo p { margin: 6px 0 0; font-size: 14px; line-height: 1.38; }
+.grupo p.gris { color: var(--gris); }
+.botonera { display: grid; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); border: 1px solid var(--tinta); }
+.botonera button { border: 0; border-left: 1px solid var(--tinta); background: var(--papel); padding: 6px 4px; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; }
+.botonera button:first-child { border-left: 0; }
+.botonera button[aria-pressed="true"] { background: var(--tinta); color: var(--papel); }
+.botonera button:disabled { color: var(--gris-2); cursor: default; }
+.campo { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: baseline; margin-top: 8px; }
+.campo label { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.campo output { font-family: var(--mono); font-size: 12px; }
+.campo input[type=range] { grid-column: 1 / -1; width: 100%; margin: 2px 0 0; accent-color: var(--violeta); }
+.campo select { grid-column: 1 / -1; width: 100%; border: 1px solid var(--filete); background: var(--papel); padding: 4px 6px; font-size: 15px; }
+.campo input[type=range]:disabled { opacity: .45; }
+.chequeo { display: flex; gap: 8px; align-items: center; margin-top: 8px; font-size: 14px; }
+.chequeo input { accent-color: var(--violeta); }
+.boton { font-family: var(--mono); font-size: 12px; letter-spacing: .03em; padding: 6px 9px; border: 1px solid var(--tinta); background: var(--papel); cursor: pointer; }
+.boton:hover { background: var(--tinta); color: var(--papel); }
+.botones { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.registro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; margin: 0; font-size: 14px; }
+.registro dt { color: var(--gris); }
+.registro dd { margin: 0; font-family: var(--mono); font-size: 13px; text-align: right; }
+.rotas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.rotas img { width: 64px; height: 64px; border: 1px solid var(--violeta); display: block; }
+.oculto { display: none !important; }
+.salida textarea { width: 100%; min-height: 120px; font-family: var(--mono); font-size: 12px; border: 1px solid var(--filete); background: var(--papel); color: var(--tinta); padding: 8px; resize: vertical; }
+footer { max-width: 1440px; margin: 18px auto 0; font-size: 14px; color: var(--gris); }
+footer p { margin: 4px 0; max-width: 92ch; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+<header>
+  <p class="volanta">Contenida · Acción 4 · ensayo</p>
+  <h1>El repujado</h1>
+  <p class="bajada">Una hoja de aluminio de cocina sobre una base blanda. Se trabaja por el reverso, en espejo, con el punzón; por el anverso sale la letra en relieve. La mano dibuja y la máquina pone el aluminio. Es un ensayo: la placa de la caja se repuja a mano, en aluminio.</p>
+</header>
+<main>
+  <section class="mesa" aria-label="La placa">
+    <div class="mesa-cabeza">
+      <p class="cara" id="cara-nombre">Reverso <small>se trabaja aquí, en espejo</small></p>
+      <button class="boton" id="dar-vuelta" type="button">Dar vuelta la placa · espacio</button>
+    </div>
+    <div class="marco" id="marco">
+      <div class="lienzo" id="lienzo">
+        <canvas id="placa" aria-label="La placa de aluminio. Se dibuja con el puntero."></canvas>
+        <svg id="calco" viewBox="0 0 150 150" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <svg id="guia" viewBox="0 0 150 150" preserveAspectRatio="none" aria-hidden="true"></svg>
+      </div>
+    </div>
+    <div class="barra" id="barra"></div>
+    <p class="aviso" id="aviso" role="status"></p>
+  </section>
+
+  <aside aria-label="Las herramientas">
+    <div class="grupo">
+      <h2>La herramienta <span>1 · 2 · 3 · 4</span></h2>
+      <div class="botonera" id="herramientas">
+        <button type="button" data-h="repasar">Repasar</button>
+        <button type="button" data-h="puntear">Puntear</button>
+        <button type="button" data-h="rellenar">Rellenar</button>
+        <button type="button" data-h="alisar">Alisar</button>
+      </div>
+      <p id="herramienta-que"></p>
+      <p class="gris">No hay goma: el aluminio no olvida. Deshacer es un privilegio de la máquina.</p>
+    </div>
+
+    <div class="grupo">
+      <h2>El punzón y la base</h2>
+      <div class="campo" id="campo-punzon"><label for="punzon">El punzón</label><select id="punzon"></select></div>
+      <div class="campo"><label for="base">La base blanda</label><select id="base"></select></div>
+      <div class="campo"><label for="fuerza">La fuerza</label><output id="fuerza-v"></output><input type="range" id="fuerza" min="0.4" max="1.6" step="0.05"></div>
+      <div class="campo"><label for="temblor">El temblor de la mano</label><output id="temblor-v"></output><input type="range" id="temblor" min="0" max="1" step="0.05"></div>
+      <div class="campo" id="campo-radio"><label for="radio">El ancho de la herramienta</label><output id="radio-v"></output><input type="range" id="radio" min="1.5" max="9" step="0.5"></div>
+      <div class="campo"><label for="presion">La presión</label>
+        <select id="presion">
+          <option value="velocidad">de la velocidad: despacio hunde más</option>
+          <option value="tableta">de la tableta (el lápiz)</option>
+          <option value="pareja">pareja</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>El calco <span>C</span></h2>
+      <div class="campo"><label for="signo">Un signo de la caja</label><select id="signo"><option value="">ninguno</option></select></div>
+      <div class="botones">
+        <label class="boton" for="imagen-calco">Una imagen…</label>
+        <input id="imagen-calco" type="file" accept="image/*" class="oculto">
+        <button class="boton" id="sin-calco" type="button">Sacar el calco</button>
+      </div>
+      <div class="campo"><label for="calco-opacidad">Cuánto se ve</label><output id="calco-opacidad-v"></output><input type="range" id="calco-opacidad" min="0.1" max="1" step="0.05"></div>
+      <label class="chequeo"><input type="checkbox" id="ver-calco"> Mostrar el calco</label>
+      <p class="gris" id="calco-nota">Por el reverso el calco va en espejo, como en la Acción 4. Del signo de la caja se ve la propuesta de la máquina: lo hallado en línea continua, lo reconstruido a puntos y en violeta, y el desagüe.</p>
+    </div>
+
+    <div class="grupo">
+      <h2>La hoja</h2>
+      <div class="campo"><label for="arrugas">Las arrugas</label><output id="arrugas-v"></output><input type="range" id="arrugas" min="0" max="1" step="0.05"></div>
+      <div class="campo"><label for="brillante">El lado brillante</label>
+        <select id="brillante"><option value="anverso">el anverso</option><option value="reverso">el reverso</option></select>
+      </div>
+      <label class="chequeo"><input type="checkbox" id="doble"> Hoja doble: si se rompe demasiado</label>
+      <div class="botones"><button class="boton" id="hoja-nueva" type="button">Cortar otra hoja</button></div>
+      <p class="gris">Las arrugas son del aluminio, no del trazo: están antes de repujar. Cortar otra hoja rehace lo repujado sobre ella.</p>
+    </div>
+
+    <div class="grupo">
+      <h2>La luz <span>L</span></h2>
+      <div class="botonera" id="luces">
+        <button type="button" data-luz="taller">El taller</button>
+        <button type="button" data-luz="registro">El registro</button>
+      </div>
+      <p class="gris" id="luz-que"></p>
+      <div class="campo"><label for="azimut">De dónde viene</label><output id="azimut-v"></output><input type="range" id="azimut" min="0" max="359" step="1"></div>
+      <div class="campo"><label for="elevacion">Qué tan alta</label><output id="elevacion-v"></output><input type="range" id="elevacion" min="5" max="85" step="1"></div>
+      <label class="chequeo"><input type="checkbox" id="sombras"> Las sombras</label>
+      <div class="campo"><label for="fondo">El fondo</label>
+        <select id="fondo"><option value="tinta">tinta</option><option value="fieltro">la base de fieltro</option><option value="papel">papel</option></select>
+      </div>
+      <div class="campo"><label for="zoom">El tamaño</label>
+        <select id="zoom"><option value="1">la placa entera</option><option value="2">al doble</option><option value="3">al triple</option></select>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h2>El registro</h2>
+      <dl class="registro" id="registro"></dl>
+      <div class="campo"><label for="mano">Con qué mano</label>
+        <select id="mano"><option value="derecha">la derecha</option><option value="izquierda">la izquierda</option><option value="las dos">las dos</option></select>
+      </div>
+      <div class="rotas" id="rotas"></div>
+      <div class="botones" id="acciones-rota" hidden><button class="boton" id="guardar-rota" type="button">Guardar la rota y empezar otra</button></div>
+    </div>
+
+    <div class="grupo">
+      <h2>Las acciones</h2>
+      <div class="botones">
+        <button class="boton" id="deshacer" type="button">Deshacer</button>
+        <button class="boton" id="rehacer" type="button">Rehacer</button>
+        <button class="boton" id="empezar" type="button">Empezar otra placa</button>
+      </div>
+      <div class="campo"><label for="tamano">Las imágenes</label>
+        <select id="tamano"><option value="1024">1024 px · 173 ppp a 1:1</option><option value="1536">1536 px · 260 ppp</option><option value="2048">2048 px · 347 ppp</option></select>
+      </div>
+      <div class="botones">
+        <button class="boton" id="png-cara" type="button">Esta cara en PNG</button>
+        <button class="boton" id="png-registro" type="button">La foto del registro</button>
+        <button class="boton" id="json" type="button">El ensayo en JSON</button>
+        <label class="boton" for="abrir-json">Abrir un ensayo…</label>
+        <input id="abrir-json" type="file" accept="application/json,.json" class="oculto">
+      </div>
+      <p class="gris" id="nota" role="status"></p>
+      <div class="salida" id="salida" hidden>
+        <p>Aquí no se puede descargar: copia el texto y guárdalo con ese nombre.</p>
+        <textarea id="salida-texto" readonly spellcheck="false" aria-label="El archivo, como texto"></textarea>
+      </div>
+    </div>
+  </aside>
+</main>
+<footer>
+  <p>La manera de dibujar viene de <a href="https://krftoools.gumroad.com/l/Vooolume-Relief-Brush-Tool">Vooolume</a>, de Krftoools: un mapa de alturas donde cada trazo se funde con los otros y una luz que vuelve a iluminar todo. Aquí el material es el de la Acción 4: el perfil de una bola contra una base blanda, el reverso y el anverso, el desagüe, la rotura (README).</p>
+  <p>Es la propuesta de la máquina: <b>no entra en la caja ni en la fuente</b>. Las imágenes que salen de aquí lo dicen en sus datos. Hecho con asistencia de IA.</p>
+</footer>
+<script src="../aplicacion/clipper.js"></script>
+<script src="../aplicacion/datos.js"></script>
+<script src="../aplicacion/gramatica.js"></script>
+<script src="repujado.js"></script>
+<script src="mesa.js"></script>
+</body>
+</html>

@@ -51,6 +51,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `planos/` | **Los planos de la anatomía base:** once láminas A3, como un plano de arquitectura (cotas, ejes, niveles, cortes, detalles, cajetín), con el porqué de cada decisión de anatomía tipográfica: concepto, retórica y poética. En SVG, PDF y DXF. Es la concepción formal: la mano calca desde el pie |
 | `taxonomia/` | **Las referencias, por su mecanismo:** diez láminas A3 que ordenan las imágenes de dominio público de `10` con un método tomado con cuidado de un reel de Jason Murray (operación, dominio, técnica, referencia y dónde cae en el taller). Cada técnica se dibuja como un mecanismo, nunca como la imagen; cada ficha va a puntos hasta que la mires. En SVG, PNG y PDF con enlaces |
 | `aplicacion/` | **Las decisiones de la letra:** una sola pantalla con el plano del signo, nueve decisiones de anatomía con su porqué y la caja. Exporta `parametros.json` para `gramatica.py --parametros` |
+| `repujado/` | **El repujado, ensayado:** una mesa en el navegador donde la mano dibuja con el puntero y la máquina pone el aluminio: el reverso en espejo, el punzón y la base blanda, el calco, el desagüe, la rotura y la luz del registro. La manera viene de un reel de Krftoools (*Vooolume*) y la imagen, de la primera simulación. No entra en la caja |
 
 ## Estado
 
@@ -60,6 +61,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - los planos de la anatomía base (`planos/`): la concepción formal, con el porqué de cada decisión;
   - la taxonomía de las referencias (`taxonomia/`): qué sirve de cada una y dónde cae en el taller;
   - la página de las decisiones (`aplicacion/`), para discutirlas;
+  - el ensayo del repujado (`repujado/`), para probar la Acción 4 antes del aluminio;
   - el informe de decisiones, con sus mapas (`informe/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`).
