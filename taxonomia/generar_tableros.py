@@ -1,13 +1,14 @@
 """Genera los tableros de la taxonomía visual a partir de catalogo.json.
 
 Uso (desde la raíz del repositorio):
-    python3 taxonomia/generar_tableros.py          # los tres tableros y el catálogo legible
+    python3 taxonomia/generar_tableros.py          # los cuatro tableros y el catálogo legible
     python3 taxonomia/generar_tableros.py 2        # solo el tablero 2
 
 Escribe en taxonomia/:
     tablero_1_arbol.jpg y .pdf   materiales arriba, gestos abajo (a la manera del «Tree Diagram» de Kuma)
     tablero_2_fases.jpg y .pdf   los nueve capítulos de la novela como fases, sobre una línea de horizonte
     tablero_3_fechas.jpg y .pdf  las imágenes por fecha, en una franja por gesto
+    tablero_4_relato.jpg y .pdf  el argumento del artículo: hilo rojo para el desarrollo, azul para los hallazgos
     catalogo.md                  la ficha de cada imagen, en una tabla
 
 Las imágenes están en taxonomia/imagenes/. Necesita Chromium (ruta en la variable
@@ -16,6 +17,7 @@ CHROME) y Pillow.
 
 import html
 import json
+import math
 import os
 import subprocess
 import sys
@@ -50,8 +52,11 @@ def lineas(texto, ancho):
     return textwrap.wrap(texto, ancho, break_long_words=False) or [""]
 
 
-def texto(x, y, cadena, tam, color=TINTA, fuente=SERIF, peso="normal", estilo="normal", ancla="start", alto=1.25):
-    """Una o varias líneas de texto SVG; cadena puede ser lista de líneas."""
+def texto(x, y, cadena, tam, color=TINTA, fuente=SERIF, peso="normal", estilo="normal", ancla="start", alto=1.25,
+          halo=False):
+    """Una o varias líneas de texto SVG; cadena puede ser lista de líneas. Con halo, un borde del color del
+    papel separa el texto de los hilos que pasan por debajo."""
+    borde = f' stroke="{PAPEL}" stroke-width="7" stroke-linejoin="round" paint-order="stroke"' if halo else ""
     filas = cadena if isinstance(cadena, list) else [cadena]
     out = []
     for i, f in enumerate(filas):
@@ -60,7 +65,7 @@ def texto(x, y, cadena, tam, color=TINTA, fuente=SERIF, peso="normal", estilo="n
         otro = "normal" if estilo == "italic" else "italic"
         cuerpo = "".join(e(p) if j % 2 == 0 else f'<tspan font-style="{otro}">{e(p)}</tspan>' for j, p in enumerate(partes))
         out.append(f'<text x="{x:.1f}" y="{y + i * tam * alto:.1f}" font-size="{tam}" fill="{color}" '
-                   f'font-family="{fuente}" font-weight="{peso}" font-style="{estilo}" text-anchor="{ancla}">{cuerpo}</text>')
+                   f'font-family="{fuente}" font-weight="{peso}" font-style="{estilo}" text-anchor="{ancla}"{borde}>{cuerpo}</text>')
     return "\n".join(out)
 
 
@@ -328,6 +333,130 @@ def tablero_fechas():
     return W, H, pagina(W, H, "\n".join(s))
 
 
+# ---------------------------------------------------------------- tablero 4: el relato
+
+ROJO = "#c0262d"
+AZUL = "#1f5fbf"
+
+
+def tablero_relato():
+    """El argumento del artículo como un tablero de collage: hilo rojo para el desarrollo, azul para los hallazgos."""
+    W, H = 3000, 2110
+    R = CAT["relato"]
+    POR_ID = {im["id"]: im for im in IMAGENES}
+    # Centro de cada grupo de imágenes: arriba de izquierda a derecha, baja por la derecha y vuelve abajo.
+    sitio = {"1": (300, 450), "2": (870, 450), "3": (1450, 450), "4": (2030, 450), "5": (2600, 450),
+             "6": (2790, 930), "7": (2260, 1330), "8": (1560, 1330), "9": (880, 1330), "callado": (1960, 900)}
+    giro = {"1": -1.5, "2": 1.2, "3": -0.8, "4": 1.5, "5": -1.0, "6": -1.2, "7": 1.0, "8": -1.4, "9": 0.9,
+            "callado": 1.8}
+    altoMax, anchoMax = 220, 500
+    s = [texto(60, 84, "El relato: el argumento de «Cosecha de piedras» sobre las imágenes", 46, peso="bold"),
+         texto(60, 128, "Hilo rojo: el desarrollo, en el orden de la novela. Hilo azul: los cuatro hallazgos de las "
+               "conclusiones (sección 8). Las imágenes son analogías; las citas, las del artículo.", 23, GRIS,
+               estilo="italic")]
+    capas_hilo, capas_img, capas_txt = [], [], []
+    ancla = {}   # centro de cada grupo, para los hilos
+    pie_grupo = {}   # borde inferior del grupo de imágenes
+
+    def grupo(clave, ids):
+        cx, cy = sitio[clave]
+        ims = [POR_ID[i] for i in ids]
+        medidas = [ajustada(im, anchoMax / len(ims) - 16, altoMax) for im in ims]
+        total = sum(w for w, h in medidas) + 22 * (len(ims) - 1)
+        x = cx - total / 2
+        alto = max(h for w, h in medidas)
+        partes = []
+        for im, (w, h) in zip(ims, medidas):
+            y = cy - h / 2
+            partes.append(f'<rect x="{x - 7:.1f}" y="{y - 7:.1f}" width="{w + 14:.1f}" height="{h + 14:.1f}" '
+                          f'fill="#fffdf8" stroke="#cfc6b6" stroke-width="1"/>')
+            partes.append(imagen(im, x, y, w, h))
+            partes.append(insignia(x - 2, y - 2, im["id"], MAT[im["material"]]["color"], 14))
+            x += w + 22
+        capas_img.append(f'<g transform="rotate({giro[clave]} {cx:.1f} {cy:.1f})">{"".join(partes)}</g>')
+        ancla[clave] = (cx, cy)
+        pie_grupo[clave] = cy + alto / 2 + 7
+        return cx, cy, alto, total
+
+    # Nodos del desarrollo
+    nodos = R["nodos"]
+    for nd in nodos:
+        cx, cy, alto, total = grupo(nd["n"], nd["imagenes"])
+        y0 = cy + alto / 2 + 44
+        x0 = cx - max(total, 300) / 2
+        etiqueta = f'{nd["n"]} · {nd["titulo"]}'
+        capas_txt.append(f'<rect x="{x0:.1f}" y="{y0 - 27:.1f}" width="{len(etiqueta) * 15 + 26:.1f}" height="38" fill="{ROJO}"/>')
+        capas_txt.append(texto(x0 + 13, y0, etiqueta, 25, "#fff", SERIF, "bold"))
+        capas_txt.append(texto(x0, y0 + 36, f'{nd["capitulo"]}, p. {nd["pagina"]}', 17, GRIS, SANS, halo=True))
+        capas_txt.append(texto(x0, y0 + 64, lineas(f'«{nd["cita"]}»', 44), 21, TINTA, estilo="italic", halo=True))
+    # Lo que la novela calla
+    cl = R["callado"]
+    cx, cy, alto, total = grupo("callado", cl["imagenes"])
+    capas_img.append(f'<rect x="{cx - total / 2 - 26:.1f}" y="{cy - alto / 2 - 30:.1f}" width="{total + 52:.1f}" '
+                     f'height="{alto + 60:.1f}" fill="none" stroke="{AZUL}" stroke-width="2.5" stroke-dasharray="10 7"/>')
+    capas_txt.append(texto(cx, cy + alto / 2 + 64, lineas(cl["rotulo"], 30), 22, AZUL, SERIF, "bold", "italic",
+                           ancla="middle", halo=True))
+    capas_txt.append(texto(cx, cy + alto / 2 + 120, "Guaman Poma, 1615", 16, GRIS, SANS, ancla="middle", halo=True))
+
+    # Hilo rojo: de un nodo al siguiente, con una flecha a mitad de cada tramo.
+    codos = {("5", "6"): [(2945, 450), (2945, 930)]}   # rodeos para no cruzar los rótulos
+    for a, b in zip(nodos, nodos[1:]):
+        pts = [ancla[a["n"]]] + codos.get((a["n"], b["n"]), []) + [ancla[b["n"]]]
+        capas_hilo.append(f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" fill="none" '
+                          f'stroke="{ROJO}" stroke-width="6" stroke-linejoin="round"/>')
+        # Flecha a mitad del tramo más largo
+        (x1, y1), (x2, y2) = max(zip(pts, pts[1:]), key=lambda s: math.dist(*s))
+        mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+        ang = math.degrees(math.atan2(y2 - y1, x2 - x1))
+        capas_txt.append(f'<polygon points="-16,-12 14,0 -16,12" fill="{ROJO}" transform="translate({mx:.1f} {my:.1f}) rotate({ang:.1f})"/>')
+    for nd in nodos:
+        x, y = ancla[nd["n"]]
+        capas_txt.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11" fill="{ROJO}" stroke="#fff" stroke-width="3"/>')
+    # Arco de la profecía: del primer montón al último.
+    ar = R["arco"]
+    (x1, y1), (x2, y2) = ancla[ar["desde"]], ancla[ar["hasta"]]
+    capas_hilo.append(f'<path d="M{x1:.1f},{y1:.1f} C{x1 - 80:.1f},{y1 + 900:.1f} {x2 - 700:.1f},{y2 + 120:.1f} {x2:.1f},{y2:.1f}" '
+                      f'fill="none" stroke="{ROJO}" stroke-width="3.5" stroke-dasharray="14 9"/>')
+    ls = lineas(f'«{ar["cita"]}» (p. {ar["pagina"]})', 34)
+    capas_txt.append(texto(140, 1000, ls, 21, ROJO, estilo="italic", halo=True))
+    capas_txt.append(texto(140, 1000 + len(ls) * 26 + 6, lineas(ar["rotulo"], 34), 19, ROJO, SANS, "bold", halo=True))
+
+    # Hallazgos (azul), al pie, con sus hilos hacia los nodos que los sostienen.
+    hs = R["hallazgos"]
+    yC, hC, mC = 1690, 230, 60
+    anchoC = (W - 2 * mC - 3 * 40) / len(hs)
+    for i, h in enumerate(hs):
+        xC = mC + i * (anchoC + 40)
+        n = len(h["nodos"])
+        for j, destino in enumerate(h["nodos"]):
+            px = xC + anchoC * (j + 1) / (n + 1)
+            dx, dy = ancla[destino]
+            dy = pie_grupo[destino] - 20
+            raya = ' stroke-dasharray="12 8"' if destino == "callado" else ""
+            capas_hilo.append(f'<line x1="{px:.1f}" y1="{yC:.1f}" x2="{dx:.1f}" y2="{dy:.1f}" stroke="{AZUL}" '
+                              f'stroke-width="3" stroke-opacity="0.85"{raya}/>')
+            capas_txt.append(f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="7" fill="{AZUL}" stroke="#fff" stroke-width="2"/>')
+            capas_txt.append(f'<circle cx="{px:.1f}" cy="{yC:.1f}" r="7" fill="{AZUL}"/>')
+        capas_txt.append(f'<rect x="{xC:.1f}" y="{yC:.1f}" width="{anchoC:.1f}" height="{hC}" fill="#f8fbff" '
+                         f'stroke="{AZUL}" stroke-width="3"/>')
+        capas_txt.append(texto(xC + 24, yC + 48, f'Hallazgo {h["n"]}', 28, AZUL, SERIF, "bold"))
+        capas_txt.append(texto(xC + 24, yC + 90, lineas(h["texto"], 52), 23, TINTA))
+        capas_txt.append(texto(xC + anchoC - 24, yC + hC - 18, "hilos a: " + ", ".join(
+            "lo callado" if d == "callado" else d for d in h["nodos"]), 16, GRIS, SANS, ancla="end"))
+    # Leyenda
+    ly = 168
+    s.append(f'<line x1="1960" y1="{ly}" x2="2040" y2="{ly}" stroke="{ROJO}" stroke-width="6"/>')
+    s.append(texto(2055, ly + 7, "desarrollo", 20, TINTA, SANS))
+    s.append(f'<line x1="2220" y1="{ly}" x2="2300" y2="{ly}" stroke="{ROJO}" stroke-width="3.5" stroke-dasharray="14 9"/>')
+    s.append(texto(2315, ly + 7, "eco", 20, TINTA, SANS))
+    s.append(f'<line x1="2420" y1="{ly}" x2="2500" y2="{ly}" stroke="{AZUL}" stroke-width="3"/>')
+    s.append(texto(2515, ly + 7, "conclusión", 20, TINTA, SANS))
+    s.append(texto(60, H - 76, lineas("Los hallazgos resumen la sección 8 del artículo. Los números de colores son los de "
+                                      "las imágenes en catalogo.md; el color es el de su material.", 230), 18, TINTA, SANS))
+    s.append(pie(W, H - 34))
+    return W, H, pagina(W, H, "\n".join(s + capas_hilo + capas_img + capas_txt))
+
+
 # ---------------------------------------------------------------- catálogo legible
 
 def catalogo_md():
@@ -368,7 +497,7 @@ def render(nombre, W, H, doc):
 def main():
     pedidos = {int(a) for a in sys.argv[1:]}
     tableros = [(1, "tablero_1_arbol", tablero_arbol), (2, "tablero_2_fases", tablero_fases),
-                (3, "tablero_3_fechas", tablero_fechas)]
+                (3, "tablero_3_fechas", tablero_fechas), (4, "tablero_4_relato", tablero_relato)]
     for n, nombre, f in tableros:
         if pedidos and n not in pedidos:
             continue

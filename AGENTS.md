@@ -23,7 +23,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/figuras/` | Las ocho figuras y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y cinco documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
 | `analisis/01_…` a `analisis/30_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
-| `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y tres tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
+| `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
 

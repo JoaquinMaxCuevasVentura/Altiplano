@@ -60,3 +60,16 @@ El autor propuso buscar material en el Public Domain Image Archive (PDIA) y en o
 ## Estado
 
 Los tableros, el catálogo y las 51 imágenes están en `taxonomia/`. No se cambió el artículo.
+
+## Nota del 18 de octubre: el cuarto tablero
+
+Lo pidió el autor después de ver los tres primeros. Es `taxonomia/tablero_4_relato`, a la manera de «The Narrative – Doing a Duchamp».
+
+- **El hilo rojo.** Recorre nueve pasos del argumento del artículo en el orden de la novela: el despedre, el mojón, las estacas, el montón de papeles, el umbral del yunga, la huella, la cosecha de estaño, el informe montón y la pirca compuesta.
+  - Cada paso lleva una o dos imágenes del catálogo y una cita del artículo con su página.
+  - Las nueve citas y la del arco (p. 9) se comprobaron contra la transcripción. La de la p. 20 pasa con la corrección «empotró» de la sección 2 del fichero de pasajes.
+- **El arco discontinuo.** Une el primer montón con el último: la profecía que, según la sección 8, se cumple al revés.
+- **El hilo azul.** Ata cada uno de los cuatro hallazgos de la sección 8 a los pasos que lo sostienen. Los textos de los hallazgos resumen esa sección sin cambiar su sentido.
+- **Lo que la novela calla.** Un recuadro aparte con el escribano y el contador de Guaman Poma; lo ata el tercer hallazgo.
+- **Un paso añadido.** La primera versión no tenía el paso de *Los Yungas*. Se añadió porque el segundo hallazgo nombra «el cocal».
+- **Los datos.** El contenido está en la sección `relato` de `catalogo.json`.

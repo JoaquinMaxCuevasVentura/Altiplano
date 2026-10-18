@@ -1,6 +1,6 @@
 # Taxonomía visual de «Cosecha de piedras»
 
-51 imágenes de dominio público, ordenadas por lo que muestran (un material) y por lo que se hace con ese material (un gesto), y montadas en tres tableros. 18 de octubre de 2026.
+51 imágenes de dominio público, ordenadas por lo que muestran (un material) y por lo que se hace con ese material (un gesto), y montadas en cuatro tableros. 18 de octubre de 2026.
 
 ## Qué hay
 
@@ -9,12 +9,11 @@
 | `tablero_1_arbol.jpg` y `.pdf` | **El árbol.** 42 imágenes. Seis materiales arriba y siete gestos abajo; cada imagen está en la columna de su gesto, y una línea del color de su material la ata a él. Sigue el «Tree Diagram» de Kengo Kuma |
 | `tablero_2_fases.jpg` y `.pdf` | **Las fases.** Los nueve capítulos de la novela como fases, sobre una línea de horizonte: arriba, lo que se levanta y queda a la vista; abajo, lo que va a la tierra. 24 imágenes. Sigue la tira «Phase 01 … Phase 07» |
 | `tablero_3_fechas.jpg` y `.pdf` | **El mapa de fechas.** Las 51 imágenes por año, en una franja por gesto; una línea une las imágenes de una misma obra. Sigue el mapa de las vanguardias |
-| `catalogo.json` | La fuente de datos: la ficha de cada imagen, los materiales, los gestos y las fases. Se edita a mano |
+| `tablero_4_relato.jpg` y `.pdf` | **El relato.** El argumento del artículo como un collage. Un hilo rojo recorre nueve pasos en el orden de la novela, del «erial de piedras» (p. 9) a la pirca compuesta (p. 156). Un hilo azul ata cada uno de los cuatro hallazgos de las conclusiones a los pasos que lo sostienen. Aparte, en un recuadro, va lo que la novela calla: la escritura andina. 16 imágenes. Sigue «The Narrative – Doing a Duchamp» |
+| `catalogo.json` | La fuente de datos: la ficha de cada imagen, los materiales, los gestos, las fases y el relato. Se edita a mano |
 | `catalogo.md` | La misma ficha en una tabla legible. La escribe el generador: no se edita |
 | `imagenes/` | Las 51 imágenes, reducidas a 900 px de lado como máximo |
 | `generar_tableros.py` | Rehace los tableros y `catalogo.md` |
-
-El cuarto ejemplo, el tablero narrativo con líneas rojas para el desarrollo y azules para las conclusiones, no se hizo. Queda propuesto en «Lo que falta».
 
 ## Cómo se clasifica
 
@@ -59,6 +58,9 @@ Son observaciones sobre esta selección, no sobre la historia de la imagen.
    - En el tablero 2 solo lo llenan las cosechas de Guaman Poma.
    - El título del artículo habla de cosecha: conviene releer ese capítulo.
 5. **El mapa de fechas tiene un hueco entre 1680 y 1800.** Es un efecto de la selección, no un dato.
+6. **El montón cambia de materia.**
+   - El tablero 4 sigue la palabra a lo largo de la novela: primero es de piedras («erial de piedras», p. 9), luego de papeles («un desordenado montón de papeles y libracos», p. 103) y al final un derrumbe en la mina («un informe montón de rocas, lodo y maderos astillados», p. 154).
+   - El hilo rojo discontinuo une el primero con el último, como hace el artículo al cerrar: la profecía de la montaña de piedras se cumple al revés.
 
 ## Fuentes y derechos
 
@@ -83,15 +85,14 @@ Son observaciones sobre esta selección, no sobre la historia de la imagen.
    - la apacheta (hay un dibujo con licencia CC0, «Apacheta, monticule votif»);
    - el Potosí de Cieza de León;
    - las láminas de d'Orbigny y de Wiener.
-6. **El cuarto tablero, el narrativo.** Sería un collage con líneas rojas para el desarrollo del argumento (montón, pirca, papel, máquina, «informe montón») y azules para los cuatro hallazgos de las conclusiones.
-7. **Si alguna imagen pasa al artículo:**
+6. **Si alguna imagen pasa al artículo:**
    - **La numeración de las figuras.** Hay que rehacerla.
    - **La declaración de uso de IA.** Las imágenes son históricas y no se hicieron con IA. Pero la selección, la clasificación y la composición de los tableros se hicieron con Claude, un asistente de IA, y la declaración tendría que decirlo.
 
 ## Cómo regenerar
 
 ```bash
-python3 taxonomia/generar_tableros.py      # los tres tableros y catalogo.md
+python3 taxonomia/generar_tableros.py      # los cuatro tableros y catalogo.md
 python3 taxonomia/generar_tableros.py 2    # solo el tablero 2
 ```
 

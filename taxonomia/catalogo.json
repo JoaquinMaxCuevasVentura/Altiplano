@@ -1213,5 +1213,166 @@
    "nota": "La planta de la mina: lo que la mina levanta en la superficie.",
    "autor_breve": "FSA/OWI"
   }
- ]
+ ],
+ "relato": {
+  "nodos": [
+   {
+    "n": "1",
+    "titulo": "El despedre",
+    "capitulo": "El Ayllu",
+    "cita": "erial de piedras",
+    "pagina": "9",
+    "imagenes": [
+     1,
+     3
+    ],
+    "nota": "Limpiar la chacra deja un montón: la arquitectura mínima."
+   },
+   {
+    "n": "2",
+    "titulo": "El mojón",
+    "capitulo": "El Ayllu",
+    "cita": "mojones que han sido puestos allí desde tiempos antiguos",
+    "pagina": "9",
+    "imagenes": [
+     7
+    ],
+    "nota": "La piedra hincada marca la posesión."
+   },
+   {
+    "n": "3",
+    "titulo": "Las estacas",
+    "capitulo": "El Signo Escalonado",
+    "cita": "empotró en el suelo del ayllu las estacas de propiedad y empezó a dominar",
+    "pagina": "20",
+    "imagenes": [
+     29,
+     11
+    ],
+    "nota": "El signo escalonado y la casa del ayllu."
+   },
+   {
+    "n": "4",
+    "titulo": "El montón de papeles",
+    "capitulo": "La Aldea",
+    "cita": "un desordenado montón de papeles y libracos",
+    "pagina": "103",
+    "imagenes": [
+     28
+    ],
+    "nota": "El papel captura la posesión."
+   },
+   {
+    "n": "5",
+    "titulo": "El umbral del yunga",
+    "capitulo": "Los Yungas",
+    "cita": "Tras de la muralla que condena el horizonte del altiplano empieza el yunga",
+    "pagina": "108",
+    "imagenes": [
+     33
+    ],
+    "nota": "Otro piso de la misma tierra, que el éxodo deshace."
+   },
+   {
+    "n": "6",
+    "titulo": "La huella",
+    "capitulo": "La Mina",
+    "cita": "Tomaron su identidad e impresiones digitales",
+    "pagina": "140",
+    "imagenes": [
+     35
+    ],
+    "nota": "El cuerpo se vuelve legible."
+   },
+   {
+    "n": "7",
+    "titulo": "La cosecha de estaño",
+    "capitulo": "La Mina",
+    "cita": "Aquí cosecharás miles de cargas de estaño",
+    "pagina": "142",
+    "imagenes": [
+     18,
+     39
+    ],
+    "nota": "La máquina captura el gesto de la cosecha."
+   },
+   {
+    "n": "8",
+    "titulo": "El informe montón",
+    "capitulo": "La Mina",
+    "cita": "un informe montón de rocas, lodo y maderos astillados",
+    "pagina": "154",
+    "imagenes": [
+     40,
+     5
+    ],
+    "nota": "El montón vuelve como derrumbe."
+   },
+   {
+    "n": "9",
+    "titulo": "La pirca compuesta",
+    "capitulo": "Los Derrotados",
+    "cita": "las pircas de piedra que separan las parcelas fueron compuestas",
+    "pagina": "156",
+    "imagenes": [
+     50,
+     48
+    ],
+    "nota": "El retorno repara y vuelve a sembrar."
+   }
+  ],
+  "arco": {
+   "desde": "1",
+   "hasta": "8",
+   "cita": "Quizá un día la montaña de piedras sobrepase la altura del cerro",
+   "pagina": "9",
+   "rotulo": "la profecía, cumplida al revés (sección 8)"
+  },
+  "callado": {
+   "imagenes": [
+    27,
+    25
+   ],
+   "rotulo": "Lo que la novela calla: la escritura andina"
+  },
+  "hallazgos": [
+   {
+    "n": "1",
+    "texto": "El montón de piedras es la arquitectura mínima de la novela, masa sin edificio. La cosecha de estaño que promete el capataz es la captura de ese gesto por la máquina.",
+    "nodos": [
+     "1",
+     "7",
+     "8"
+    ]
+   },
+   {
+    "n": "2",
+    "texto": "El Signo Escalonado vuelve a escalonar a la gente en el ayllu, la aldea, el cocal y el campamento. El retorno lo rehace sin su último escalón.",
+    "nodos": [
+     "3",
+     "4",
+     "5",
+     "7",
+     "9"
+    ]
+   },
+   {
+    "n": "3",
+    "texto": "El despojo funciona con una cadena de personas, instituciones y soportes que vuelven legibles la tierra y los cuerpos. La novela calla lo que los aymaras hicieron con la escritura.",
+    "nodos": [
+     "4",
+     "6",
+     "callado"
+    ]
+   },
+   {
+    "n": "4",
+    "texto": "El narrador vuelve paisaje una posesión que la novela, a sus espaldas, deja escrita en la piedra: mojones, pircas, linderos, un apellido.",
+    "nodos": [
+     "2",
+     "9"
+    ]
+   }
+  ]
+ }
 }
