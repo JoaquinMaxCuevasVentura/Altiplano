@@ -16,12 +16,13 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 | **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 153 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
 | **Las revistas candidatas** | `entregables/05_revistas_candidatas` | Resumen final de `reports/Convocatorias abiertas para el artículo.md`: diez revistas, recortes, barreras y qué hacer antes de enviar |
 | **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; resumen en `entregables/06_atlas_de_arena`; registro en `analisis/29_atlas_arena.md` | 38 bloques; el canal de pasteles espera tus escaneos |
+| **La taxonomía visual** | `taxonomia/` y su `LEEME.md`; registro en `analisis/30_taxonomia_visual.md` | 51 imágenes de dominio público (Guaman Poma, Squier, el Public Domain Image Archive y la Library of Congress) clasificadas por material y gesto, en tres tableros: el árbol, las fases de la novela y el mapa de fechas. Hecha el 18 de octubre; no cambia el artículo |
 | **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre |
 | **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 30 cambios de la revisión final respecto de la versión con Fuão y Monteys y Fuertes; rehecho el 11 de octubre con la cita cotejada |
 | **Los generadores** | `articulo/generar_docx.py`, `articulo/generar_figuras.py` y `entregables/generar_entregables.py` | Funcionan. Los Word que hacen pasan la validación de esquema |
 | *La versión 3 (alternativa)* | `articulo/articulo_altiplano.md` y `.docx` | Archivada desde el 25 de septiembre; no se actualiza |
 
-Los análisis `01` a `29` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
+Los análisis `01` a `30` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
 
 ## Artículo definitivo
 

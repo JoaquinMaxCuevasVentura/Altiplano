@@ -22,7 +22,8 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 45624ba | No a mano |
 | `articulo/figuras/` | Las ocho figuras y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y cinco documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/29_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/30_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y tres tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
 
@@ -51,6 +52,7 @@ git checkout -- articulo/plantilla_estudios_bolivianos.docx   # el generador ree
 python3 entregables/generar_entregables.py              # copia el artículo, hace su PDF (necesita LibreOffice) y los Word de entregables/
 node analisis/esquemas/diagramas/generar_diagramas.js   # las notaciones SVG de las figuras 1 a 8
 python3 articulo/generar_figuras.py                     # los PNG de las figuras (necesita Chromium; variable CHROME)
+python3 taxonomia/generar_tableros.py                   # los tableros de la taxonomía visual y su catálogo (Chromium)
 ```
 
 Cada vez que cambie el artículo:
