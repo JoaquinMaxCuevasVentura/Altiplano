@@ -1,0 +1,12 @@
+{
+  "name": "contenida-libro",
+  "private": true,
+  "description": "El libro de Contenida: HTML y CSS compuestos en páginas con Vivliostyle.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "armar": "python3 armar.py"
+  },
+  "devDependencies": {
+    "@vivliostyle/cli": "11.3.3"
+  }
+}

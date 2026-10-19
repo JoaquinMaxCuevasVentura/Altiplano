@@ -52,6 +52,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `planos/` | **Los planos de la anatomía base:** once láminas A3, como un plano de arquitectura (cotas, ejes, niveles, cortes, detalles, cajetín), con el porqué de cada decisión de anatomía tipográfica: concepto, retórica y poética. En SVG, PDF y DXF. Es la concepción formal: la mano calca desde el pie |
 | `taxonomia/` | **Las referencias, por su mecanismo:** diez láminas A3 que ordenan las imágenes de dominio público de `10` con un método tomado con cuidado de un reel de Jason Murray (operación, dominio, técnica, referencia y dónde cae en el taller). Cada técnica se dibuja como un mecanismo, nunca como la imagen; cada ficha va a puntos hasta que la mires. En SVG, PNG y PDF con enlaces |
 | `aplicacion/` | **Las decisiones de la letra:** una sola pantalla con el plano del signo, nueve decisiones de anatomía con su porqué y la caja. Exporta `parametros.json` para `gramatica.py --parametros` |
+| `editorial/` | **El libro:** un solo documento editorial con todo el proyecto, 210 × 250 mm (la proporción de la celda) sobre una retícula que es la caja de 8 × 7. El texto del informe, los mapas, los planos, la taxonomía y las láminas, y entre capítulos el pie letra por letra, la caja, la ficha, las 119 placas, la placa de cerca y el poema en la caja. Lo que falta hacer a mano o espera un permiso queda punteado. PDF para pantalla y para la imprenta, con su cubierta; se arma con Vivliostyle |
 | `repujado/` | **El repujado, ensayado:** una mesa en el navegador donde la mano dibuja con el puntero y la máquina pone el aluminio: el reverso en espejo, el punzón y la base blanda, el calco, el desagüe, la rotura y la luz del registro. La manera viene de un reel de Krftoools (*Vooolume*) y la imagen, de la primera simulación. No entra en la caja |
 
 ## Estado
@@ -64,6 +65,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - la página de las decisiones (`aplicacion/`), para discutirlas;
   - el ensayo del repujado (`repujado/`), para probar la Acción 4 antes del aluminio;
   - el informe de decisiones, con sus mapas (`informe/`);
+  - el libro, que junta todo en un solo documento (`editorial/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
@@ -86,6 +88,7 @@ python3 tipografia/taxonomia/generar_taxonomia.py   # las láminas de la taxonom
 python3 tipografia/digital/poliza.py --probar       # la póliza en OpenType, probada verso por verso (uharfbuzz)
 python3 tipografia/informe/mapas.py                 # los mapas del informe
 python3 tipografia/informe/armar.py                 # el informe de decisiones (.docx y PDF; necesita node y docx)
+python3 tipografia/editorial/armar.py              # el libro (necesita `npm install` en editorial/ y Chromium)
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
 python3 tipografia/laminas/generar_laminas.py       #   (los esquemas y las láminas necesitan Chromium: CHROME)
 ```
