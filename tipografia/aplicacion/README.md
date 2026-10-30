@@ -1,44 +1,74 @@
 # Las decisiones de la letra
 
-Una sola pantalla para discutir la anatomía base de *Contenida* (`../03c_gramatica.md`).
+Una mesa para discutir la anatomía base de *Contenida* (`../03c_gramatica.md`), dibujada con las convenciones de sus planos (`../planos/`).
 
 - **A la izquierda, el plano del signo elegido:** la celda con sus cuatro líneas y sus niveles en unidades de la fuente, el cuerpo, los ejes, los nodos, los alivios y las partes. Debajo, sus medidas en milímetros de la placa y en UPM.
-- **A la derecha, nueve decisiones de anatomía.** Cada una lleva su porqué y el rombo de su plano (`../planos/`). Al moverla, los 55 signos se rehacen.
+- **A la derecha, siete planos de detalle, uno por parte de la anatomía.** Cada decisión se mueve en su propio dibujo: se toma el asa (el círculo) y se arrastra. Con el teclado, las flechas la mueven de a un paso (con Mayús, de a diez), Inicio y Fin la llevan a los extremos, y Supr o Esc la devuelven a la obra. Al soltar, los 55 signos se rehacen.
 - **Abajo, la caja de 8 × 7,** para elegir el signo.
 
 Como el resto de la simulación, es la propuesta de la máquina: **no entra en la caja ni en la fuente.** La letra de la caja la calca la mano desde el pie (`../04_taller_analogico.md`, acciones 3 y 4).
 
-## Por qué es más simple que antes
+## Una interfaz hecha para esta letra
 
-La aplicación de septiembre tenía cuatro vistas, seis simuladores, veinte parámetros y versiones guardadas. Simulaba los estados (calco, placa, cinta, frotado, agua, voz) que ahora hace la mano. Quedó lo que corresponde a la concepción formal:
+No es un panel de deslizadores. En *Contenida*, la anatomía se discute en planos: niveles, cortes, cotas, ejes y la gravedad en lugar del norte. Por eso las decisiones se mueven ahí, cada una con el gesto de su dibujo:
 
-| Antes | Ahora |
+- el nivel del borde sube y baja;
+- el corte del canal se ensancha;
+- la pared de la cuenca se tira de su tirador;
+- el asta se quiebra;
+- el hombro se tensa;
+- la gota se estira hacia abajo, por su peso;
+- el radio del desgaste se acota desde su centro.
+
+Cada dibujo usa las fórmulas de la gramática (`gramatica.js`), así que lo que se mueve en él es lo que cambia en la letra.
+
+La convención es la de la caja:
+
+- **En gris metal,** la letra como queda.
+- **Encima, su eje o su contorno:** en tinta y continuo, la obra; en violeta y a puntos, lo que se aparta de ella, como lo reconstruido.
+- **El asa:** queda en tinta mientras la decisión es la de la obra, y se llena de violeta cuando se aparta.
+
+La idea de hacer el control a la medida del proyecto viene de un reel de Aimeric sobre *Ultravaria*, una tipografía paramétrica de veinte ejes con una interfaz inventada para ella. **Se toma el método, no la interfaz:** el video se cita, no se sube.
+
+## Los siete dibujos
+
+| Dibujo | Plano | Qué se ve | Qué se mueve | La decisión y la obra |
+|---|---|---|---|---|
+| La celda y sus niveles | P-01 · 4 | La n y la l a su altura, las líneas de la celda y sus niveles en UPM | El nivel del borde, arriba y abajo | `razon_x`: 1,71 de las ascendentes (la foto del pie) |
+| El canal | P-02 · 1 | El corte A–A del aluminio y una tira en planta, ampliados 1,9 veces | El borde del surco, hacia los lados | `canal`: 8,9 mm, la media entre el grueso y el fino de la o del pie |
+| La cuenca | P-03 · 2 | La o a la escala del plano, con su eje, el desagüe y el nivel del fondo | La esquina del fondo, hacia los lados; el tirador de la pared, arriba y abajo | `trapecio`: 0,70 del ancho mayor · `pared`: 0,55 |
+| El fuste | P-04 · 1 | La l en tres planos, con su corte y su asiento; los desvíos, × 10, como en el plano | El quiebre del primer plano | `quiebre`: 1,6° por plano |
+| El hombro | P-05 · 1 · 3 | La n, ampliada 1,1 veces, con los arcos de n = 2 y n = 5 en gris | El punto del arco a 45°; el arranque, en la pata | `hombro`: n = 3 · `hombro_caida`: 0,40, a ojo (falta medirlo) |
+| La gota | P-06 · 2 | El gancho de la a, su gota y la gravedad | El fondo de la gota, hacia abajo | `gota_masa`: 1,25 canal |
+| La intemperie | P-02 · 3 | La punta del fuste, ampliada 8 veces, con su línea de corte | El centro del radio, en diagonal | `intemperie`: 0,12 canal |
+
+**Lo que no se mueve** lo fija el material o una regla, y va en una lista aparte:
+
+- el radio de la chapa (0,6 canal);
+- el desagüe (3 mm, el surco del punzón);
+- el alivio y el asiento;
+- los tres planos;
+- el gancho a 105°;
+- la caída y el cuello de la gota;
+- el sifón y la cinta.
+
+## Por qué es más simple que la de septiembre
+
+La aplicación de septiembre simulaba los estados (calco, placa, cinta, frotado, agua, voz) que ahora hace la mano. Quedó lo que corresponde a la concepción formal:
+
+| Septiembre | Ahora |
 |---|---|
-| Cuatro vistas: caja, signo, texto y estados | Una mesa: el plano del signo, sus decisiones y la caja |
+| Cuatro vistas: caja, signo, texto y estados | Una mesa: el plano del signo, siete planos de detalle y la caja |
 | Seis simuladores (`simuladores.js`) | Ninguno: los estados los hace la mano |
-| Veinte parámetros, en tres grupos | Nueve decisiones que la mano puede discutir; lo que fija el material, en una lista aparte |
+| Veinte parámetros en tres grupos, con deslizadores | Nueve decisiones, cada una en el dibujo de su parte; lo que fija el material, en una lista aparte |
 | El signo sin medidas de la fuente | Las cotas en mm y en UPM, los niveles (el fondo es ±0) y los lados de la celda |
 | Clipper desde un CDN | `clipper.js`, en la carpeta: abre sin conexión |
 
-## Las nueve decisiones
-
-| Decisión | Parámetro | De la obra | Plano |
-|---|---|---|---|
-| La altura de x | `razon_x` | 1,71 de las ascendentes (la foto del pie) | P-01 · 4 |
-| El contraste: ninguno | `canal` | 8,9 mm: la media entre el grueso y el fino de la o del pie | P-02 · 1 |
-| La panza: el fondo plano | `trapecio` | 0,70 del ancho mayor | P-03 · 2 |
-| La panza: la pared | `pared` | 0,55 | P-03 · 2 |
-| El hombro: la tensión | `hombro` | superelipse, n = 3 | P-05 · 1 |
-| El hombro: dónde arranca | `hombro_caida` | 0,40, a ojo: falta medirlo | P-05 · 3 |
-| El asta: el quiebre | `quiebre` | 1,6° por plano | P-04 · 1 |
-| Los remates: la intemperie | `intemperie` | 0,12 canal | P-02 · 3 |
-| El terminal: la gota | `gota_masa` | 1,25 canal | P-06 · 2 |
-
-**Lo que no se mueve** lo fija el material o una regla: el radio de la chapa (0,6 canal), el desagüe (3 mm, el surco del punzón), el alivio, el asiento, los tres planos, el gancho a 105°, la caída y el cuello de la gota, el sifón y la cinta.
-
 ## Cómo se abre
 
-- **En línea:** el artefacto de Claude [«Gramática de Contenida»](https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL), privado (se comparte desde su menú). Es la misma página; ahí las fuentes vienen de Google Fonts, Clipper de jsDelivr, y las descargas pasan por el visor, que pide confirmación.
+- **En línea:** el artefacto de Claude [«Gramática de Contenida»](https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL), privado (se comparte desde su menú). Es la misma página, pero ahí:
+  - las fuentes vienen de Google Fonts y Clipper, de jsDelivr;
+  - las descargas pasan por el visor, que pide confirmación.
 - **Sin servidor:** abre `index.html` en el navegador. Las fuentes las toma de `../laminas/fuentes/`; si el navegador no las carga desde el disco, usa las del sistema, y la página funciona igual.
 - **Con servidor,** desde `tipografia/`:
 
@@ -47,7 +77,7 @@ La aplicación de septiembre tenía cuatro vistas, seis simuladores, veinte par�
   # y abre http://localhost:8000/aplicacion/
   ```
 
-Los ajustes quedan guardados en ese navegador, nada más.
+Los ajustes quedan guardados solo en ese navegador.
 
 ## De la página a Python
 
@@ -68,7 +98,7 @@ El botón *El plano en SVG* descarga el plano del signo a escala: 4 px del lienz
 | Archivo | Qué es |
 |---|---|
 | `index.html` | La página |
-| `app.js` | La mesa: el plano, las decisiones, la caja y las salidas |
+| `app.js` | La mesa: el plano, los siete dibujos con sus asas, la caja y las salidas |
 | `gramatica.js` | La gramática: achatar el pie, medirlo, el esqueleto, los parámetros, el taller, las 55 recetas y el cuerpo |
 | `clipper.js` | Clipper 6.4.2 (Angus Johnson; traducción a JavaScript de Timo), para unir y engrosar polígonos. Licencia Boost 1.0, en la cabecera del archivo |
 | `datos.js` | Generado: los 30 testigos del pie, sus medidas, la razón de la foto, la caja, las recetas, los parámetros y el azar de cada receta |

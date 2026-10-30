@@ -573,12 +573,13 @@ function contenido() {
     H2("8.4. Las decisiones de la letra, en el navegador"),
     P("La aplicación (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. Se simplificó: mientras menos compleja, más sentido tiene con el proyecto. Quedó una sola pantalla:"),
     vineta("**El plano del signo elegido:** la celda con sus líneas y sus niveles en unidades de la fuente, el cuerpo, los ejes, los nodos, los alivios y las partes, con sus medidas en milímetros y en UPM."),
-    vineta("**Nueve decisiones** que la mano puede discutir: la altura de x, el canal, el fondo plano y la pared de la panza, la tensión del hombro y dónde arranca, el quiebre del asta, la intemperie y la gota. Cada una lleva su porqué y el número de su plano. Lo que fija el material no se mueve, y se dice por qué."),
+    vineta("**Nueve decisiones, en siete planos de detalle,** que la mano puede discutir: la altura de x, el canal, el fondo plano y la pared de la panza, la tensión del hombro y dónde arranca, el quiebre del asta, la intemperie y la gota. Cada una se mueve en el dibujo de su parte, con el gesto de ese dibujo: el nivel del borde sube y baja, el corte del canal se ensancha, la pared se tira de su tirador, el asta se quiebra, el hombro se tensa, la gota se estira por su peso y el radio de la intemperie se acota desde su centro. Cada una lleva su porqué y el número de su plano. Lo que fija el material no se mueve, y se dice por qué."),
     vineta("**La caja,** para elegir el signo."),
+    P("No es un panel de deslizadores: la interfaz se hizo desde la lógica del proyecto. Los dibujos usan las convenciones de los planos (niveles, cortes, cotas, ejes y la gravedad en lugar del norte) y las mismas fórmulas de la gramática. La obra va en tinta y continua; lo que se aparta de ella, en violeta y a puntos, como lo reconstruido. Es el método de un reel de Aimeric sobre *Ultravaria*, una tipografía paramétrica con una interfaz inventada para ella: se toma el método, no la interfaz."),
     P("Se sacaron los seis simuladores de los estados: los estados los hace la mano. Los ajustes vuelven a Python como `parametros.json` (`gramatica.py --parametros`). Con los mismos ajustes, los contornos de los 55 signos de la página y los de Python coinciden: la diferencia es de 0,16 % del área en la mediana, porque la página repite el azar de las recetas."),
   );
   const app = path.join(AQUI, "img", "aplicacion.png");
-  if (fs.existsSync(app)) add(...figura(app, "La aplicación: el plano del signo, las nueve decisiones con su porqué y la caja de 8 × 7. Propuesta de la máquina.", ANCHO));
+  if (fs.existsSync(app)) add(...figura(app, "La aplicación: el plano del signo y los planos de detalle donde se mueve cada decisión. Propuesta de la máquina.", ANCHO));
 
   // ---------------------------------------------------------------- 9. retórica y poética
   add(
