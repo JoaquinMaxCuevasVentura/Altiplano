@@ -1,0 +1,175 @@
+/* Láminas de Contenida. La retícula es la de la piscina: 16 × 12 azulejos de 150 px. */
+
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-300-normal.woff2) format("woff2"); font-weight: 300; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-300-italic.woff2) format("woff2"); font-weight: 300; font-style: italic; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-400-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-400-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; }
+
+:root {
+  --papel: #f3f1ea;
+  --tinta: #1d1c1a;
+  --gris: #6d6a63;
+  --gris2: #9a968d;
+  --filete: #cfcac0;
+  --violeta: #4a2470;
+  --oscuro: #0f1011;
+  --claro: #e8e6df;
+  --lila: #b9a6d6;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--papel); }
+
+.lamina {
+  width: 2400px; height: 1800px; position: relative; overflow: hidden;
+  background: var(--papel); color: var(--tinta);
+  font-family: "Newsreader", serif; font-weight: 400; font-size: 28px; line-height: 1.46;
+  font-variant-numeric: oldstyle-nums; hyphens: auto;
+  break-after: page;
+}
+.lamina:last-child { break-after: auto; }
+
+/* la retícula, visible solo en la lámina de la pauta */
+.rejilla::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(29, 28, 26, .07) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(29, 28, 26, .07) 1.5px, transparent 1.5px);
+  background-size: 150px 150px;
+}
+
+.cabeza, .pie {
+  position: absolute; left: 150px; right: 150px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: "Courier Prime", monospace; color: var(--gris);
+}
+.cabeza { top: 56px; height: 40px; font-size: 21px; letter-spacing: .02em; }
+.cabeza .capitulo { display: flex; align-items: center; gap: 18px; }
+.pie { bottom: 52px; font-size: 18px; color: var(--gris2); }
+
+.cuerpo {
+  position: absolute; left: 150px; top: 150px; width: 2100px; height: 1500px;
+  display: grid; grid-template-columns: repeat(14, 150px); grid-template-rows: repeat(10, 150px);
+}
+.b { position: relative; min-width: 0; }
+
+h1 {
+  font-weight: 300; font-size: 108px; line-height: .98; letter-spacing: -.02em;
+  margin: 0 0 30px; font-variant-numeric: oldstyle-nums; text-wrap: balance;
+}
+h1.largo { font-size: 96px; }
+h2 { font-family: "Courier Prime", monospace; font-weight: 400; font-size: 22px; letter-spacing: .03em;
+     color: var(--gris); margin: 0 0 12px; text-transform: none; }
+.bajada { font-style: italic; font-weight: 300; font-size: 38px; line-height: 1.26; color: var(--gris); margin: 0 0 40px; text-wrap: balance; }
+p { margin: 0 0 .7em; text-wrap: pretty; }
+i, em { font-style: italic; }
+
+figure { margin: 0; }
+figure img { display: block; width: 100%; height: auto; }
+/* en papel claro, los fondos blancos de las figuras toman el color del papel */
+.lamina:not(.oscura) figure img, .paneles img { mix-blend-mode: multiply; }
+figcaption, .leyenda, .nota {
+  font-family: "Courier Prime", monospace; font-size: 19px; line-height: 1.42; color: var(--gris);
+  margin-top: 14px; hyphens: manual; font-variant-numeric: normal;
+}
+figcaption b { color: var(--tinta); font-weight: 700; margin-right: .4em; }
+.nota { margin-top: 26px; }
+
+.verso { margin: 0; font-style: italic; font-weight: 400; color: var(--violeta); font-size: 36px; line-height: 1.34; hyphens: manual; }
+.verso .de { display: block; margin-top: 14px; font-style: normal; font-family: "Courier Prime", monospace; font-size: 18px; color: var(--gris); }
+.final .verso { font-size: 76px; line-height: 1.16; font-weight: 300; }
+
+/* fichas al modo de Afrography: rótulo y valor, con filete */
+.ficha { margin: 34px 0 0; font-family: "Courier Prime", monospace; font-size: 20px; line-height: 1.36; border-top: 1.5px solid var(--filete); hyphens: manual; font-variant-numeric: normal; }
+.ficha div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 9px 0; border-bottom: 1.5px solid var(--filete); }
+.ficha dt { color: var(--gris); }
+.ficha dd { margin: 0; }
+
+.cifras { display: flex; gap: 70px; align-items: baseline; }
+.cifras.columna { flex-direction: column; align-items: flex-start; gap: 44px; }
+.cifra span { display: block; font-weight: 300; font-size: 150px; line-height: .86; letter-spacing: -.02em; font-variant-numeric: oldstyle-nums; }
+.cifra small { display: block; margin-top: 12px; max-width: 300px; font-family: "Courier Prime", monospace; font-size: 19px; line-height: 1.35; color: var(--gris); }
+.cifra.total span { color: var(--violeta); }
+.cifra.violeta span { color: var(--violeta); }
+
+/* portada */
+.oscura { background: var(--oscuro); color: var(--claro); }
+.oscura .cabeza, .oscura figcaption, .oscura .leyenda, .oscura .bajada, .oscura .verso .de { color: #8f8d86; }
+.oscura .pie { color: #6e6c66; }
+.oscura figcaption b { color: var(--claro); }
+.oscura .verso { color: var(--lila); }
+.oscura .marca path, .oscura .marca rect { stroke: #4b4a46; }
+.nombre { font-weight: 300; font-size: 360px; line-height: .8; letter-spacing: -.035em; margin: 0 0 28px -14px; }
+.sobre { font-family: "Courier Prime", monospace; font-size: 22px; line-height: 1.45; color: #8f8d86; max-width: 1100px; }
+.sobre i { font-family: "Newsreader", serif; font-size: 25px; color: var(--claro); }
+.subtitulo { font-style: italic; font-weight: 300; font-size: 58px; margin: 0; }
+.firma { font-family: "Courier Prime", monospace; font-size: 21px; line-height: 1.5; text-align: right; color: #8f8d86; margin: 0; }
+
+/* lámina 3 */
+.pie-lamina { font-size: 50px; line-height: 1.5; color: #8c887f; margin: 0 0 10px; hyphens: manual; }
+.testigo { color: var(--violeta); font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.entrada { font-family: "Courier Prime", monospace; font-size: 21px; color: var(--gris); margin: 28px 0 12px; }
+.confesiones, .toma, .sigue { margin: 0 0 30px; padding-left: 1.2em; }
+.confesiones li, .toma li { margin-bottom: 8px; }
+
+/* lámina 4 */
+.tesis-titulo { font-size: 42px; line-height: 1.16; margin: 0 0 6px; }
+.franja { font-size: 30px; border-top: 1.5px solid var(--tinta); padding-top: 22px; margin: 0; max-width: 1900px; }
+
+/* lámina 7 */
+.paneles { display: grid; grid-template-columns: repeat(3, 580px); gap: 30px 30px; }
+.paneles img { width: 580px; height: 580px; display: block; }
+
+/* lámina 8 */
+.reglas { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 90px; font-size: 25px; line-height: 1.36; border-top: 1.5px solid var(--tinta); padding-top: 18px; }
+.reglas li { break-inside: avoid; padding: 0 0 16px 64px; position: relative; }
+.reglas .n { position: absolute; left: 0; top: 2px; font-family: "Courier Prime", monospace; font-size: 20px; color: var(--gris); }
+.reglas b { font-weight: 500; }
+.reglas em { display: block; font-family: "Courier Prime", monospace; font-style: normal; font-size: 18px; color: var(--violeta); margin-top: 2px; }
+
+/* lámina 9 */
+.estados { display: grid; grid-template-columns: repeat(7, 1fr); gap: 26px; border-top: 1.5px solid var(--tinta); padding-top: 18px; }
+.estados b { display: block; font-weight: 300; font-size: 50px; line-height: 1; margin-bottom: 10px; }
+.estados span { display: block; font-family: "Courier Prime", monospace; font-size: 19px; line-height: 1.35; color: var(--gris); }
+
+/* lámina 10 */
+.par { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+/* lámina 12 */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+/* lámina 14 */
+.rotulo-fila { font-family: "Courier Prime", monospace; font-size: 21px; color: var(--gris); margin: 0 0 10px; }
+.rotulo-fila b { font-family: "Newsreader", serif; font-weight: 300; font-size: 64px; color: var(--tinta); margin-right: 16px; vertical-align: -6px; }
+.linea { display: grid; grid-template-columns: 2.1fr 1.3fr 1fr 1fr .8fr 1.5fr .7fr; gap: 22px; margin: 16px 0 0; font-family: "Courier Prime", monospace; font-size: 18px; line-height: 1.35; hyphens: manual; }
+.linea dt { color: var(--violeta); }
+.linea dd { margin: 0; color: var(--tinta); }
+
+/* lámina 14 */
+.dos-filas { display: flex; flex-direction: column; gap: 90px; }
+
+/* lámina 15 */
+.comparaciones { display: grid; grid-template-columns: 1fr 1fr; gap: 80px 110px; }
+.comparacion { border-top: 1.5px solid var(--tinta); padding-top: 18px; }
+.comparacion .que { font-size: 34px; margin-bottom: 22px; }
+.comparacion p:last-child { font-size: 26px; color: var(--gris); margin: 20px 0 0; }
+.barra { display: grid; grid-template-columns: 190px 1fr 150px; align-items: center; gap: 18px; margin: 12px 0; font-family: "Courier Prime", monospace; font-size: 20px; }
+.barra .r { color: var(--gris); }
+.barra .pista { height: 34px; background: #e4e0d6; position: relative; }
+.barra .pista span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--tinta); }
+.barra.violeta .pista span { background: var(--violeta); }
+.barra.gris .pista span { background: repeating-linear-gradient(90deg, var(--gris2) 0 8px, transparent 8px 13px); }
+.barra .v { font-size: 22px; text-align: right; }
+
+/* lámina 16 */
+.sigue li { margin-bottom: 14px; padding-left: 8px; }
+.colofon { font-family: "Courier Prime", monospace; font-size: 20px; line-height: 1.45; color: var(--gris); border-top: 1.5px solid var(--tinta); padding-top: 18px; hyphens: manual; }
+.colofon p { margin: 0 0 16px; }
+.colofon b { color: var(--tinta); }
+.colofon i { font-family: "Newsreader", serif; font-size: 22px; color: var(--tinta); }
+
+.marca { display: block; }

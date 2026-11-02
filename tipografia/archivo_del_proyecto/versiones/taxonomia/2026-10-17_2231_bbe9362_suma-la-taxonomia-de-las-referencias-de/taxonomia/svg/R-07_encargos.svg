@@ -1,0 +1,414 @@
+<svg text-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 297" width="420mm" height="297mm">
+<title>Contenida · R-07 · Del encargo a la referencia</title>
+<defs><style>@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-500-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-700-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-italic.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}</style><pattern id="metal" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#e2e0d9"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#a9a69d" stroke-width="0.16"/></pattern><pattern id="metal_r" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#ebe6ef"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#b9a9c9" stroke-width="0.16"/></pattern><pattern id="blanda" patternUnits="userSpaceOnUse" width="2.2" height="2.2"><rect width="2.2" height="2.2" fill="#f6f4ee"/><circle cx="0.55" cy="0.55" r="0.22" fill="#9a968d"/><circle cx="1.65" cy="1.65" r="0.22" fill="#9a968d"/></pattern></defs>
+<rect width="420" height="297" fill="#f6f4ee"/>
+
+<line x1="27" y1="167" x2="278" y2="167" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M55.375,234.42 H27 V206.5 H86.75 V234.42 H58.375" fill="none" stroke="#4a2470" stroke-width="0.35" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M119.125,237.02 H90.75 V206.5 H150.5 V237.02 H122.125" fill="none" stroke="#4a2470" stroke-width="0.35" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182.875,237.54 H154.5 V206.5 H214.25 V237.54 H185.875" fill="none" stroke="#4a2470" stroke-width="0.35" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M246.625,234.42 H218.25 V206.5 H278 V234.42 H249.625" fill="none" stroke="#4a2470" stroke-width="0.35" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+
+
+
+<line x1="55" y1="59" x2="55" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M55,167 L55.75,165 L54.25,165 Z" fill="#1d1c1a"/>
+<line x1="87" y1="59" x2="87" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M87,167 L87.75,165 L86.25,165 Z" fill="#1d1c1a"/>
+<line x1="119" y1="59" x2="119" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M119,167 L119.75,165 L118.25,165 Z" fill="#1d1c1a"/>
+<line x1="151" y1="59" x2="151" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M151,167 L151.75,165 L150.25,165 Z" fill="#1d1c1a"/>
+<line x1="183" y1="59" x2="183" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M183,167 L183.75,165 L182.25,165 Z" fill="#1d1c1a"/>
+<line x1="215" y1="59" x2="215" y2="165" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M215,167 L215.75,165 L214.25,165 Z" fill="#1d1c1a"/>
+<line x1="247" y1="59" x2="247" y2="165" fill="none" stroke="#4a2470" stroke-width="0.35" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M247,167 L247.75,165 L246.25,165 Z" fill="#4a2470"/>
+<circle cx="31.5" cy="21.5" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27.3" y1="21.5" x2="35.7" y2="21.5" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="31.5" y="20.5" font-family="Courier Prime" font-size="3" font-weight="700" fill="#1d1c1a" text-anchor="middle">1</text>
+<text x="31.5" y="24.5" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">R-07</text>
+<text x="38.2" y="20.9" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">DEL ENCARGO A LA REFERENCIA · CORTE</text>
+<line x1="38.2" y1="22.3" x2="106.409" y2="22.3" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="38.2" y="25.7" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">cada columna baja de un verso, o de una decisión de la obra, hasta lo que cae en Contenida</text>
+<text x="29" y="36.4" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">el encargo</text>
+<line x1="27" y1="77" x2="41" y2="77" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M29,77 L27.5,74.5 L30.5,74.5 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M29,77 L29,74.5 L30.5,74.5 Z" fill="#1d1c1a"/>
+<text x="31.6" y="76.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">01</text>
+<text x="29" y="80.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">operación</text>
+<line x1="27" y1="97" x2="41" y2="97" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M29,97 L27.5,94.5 L30.5,94.5 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M29,97 L29,94.5 L30.5,94.5 Z" fill="#1d1c1a"/>
+<text x="31.6" y="96.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">02</text>
+<text x="29" y="100.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">dominio</text>
+<line x1="27" y1="112" x2="41" y2="112" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M29,112 L27.5,109.5 L30.5,109.5 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M29,112 L29,109.5 L30.5,109.5 Z" fill="#1d1c1a"/>
+<text x="31.6" y="111.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">03</text>
+<text x="29" y="115.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">técnica</text>
+<line x1="27" y1="128" x2="41" y2="128" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M29,128 L27.5,125.5 L30.5,125.5 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M29,128 L29,125.5 L30.5,125.5 Z" fill="#1d1c1a"/>
+<text x="31.6" y="127.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">04</text>
+<text x="29" y="131.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">referencias</text>
+<line x1="27" y1="167" x2="41" y2="167" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M29,167 L27.5,164.5 L30.5,164.5 Z" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.2"/>
+<path d="M29,167 L29,164.5 L30.5,164.5 Z" fill="#1d1c1a"/>
+<text x="31.6" y="166.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">±0</text>
+<text x="29" y="170.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">cae en</text>
+<text x="278" y="165.8" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#6d6a63" text-anchor="end">±0 · Contenida</text>
+<text x="56.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">La letra se lee con los dedos.</text>
+<text x="56.4" y="40.555" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: D2 y la Acción 4</text>
+<path d="M57.703,76 H56.4 V72.4 H59.379 V76 H58.076" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="57.021" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<path d="M61.924,76 H60.621 V72.4 H63.6 V76 H62.297" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="61.241" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M66.145,76 H64.841 V72.4 H67.821 V76 H66.517" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="65.462" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M70.366,76 H69.062 V72.4 H72.041 V76 H70.738" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="69.683" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<text x="56.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">diferenciar</text>
+<text x="56.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">antítesis</text>
+<text x="56.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Materia y tacto</text>
+<rect x="56.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M58.341,113.3 H56.531 V108.3 H60.669 V113.3 H58.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="58.6" y="111.7" font-family="Courier Prime" font-size="2.5" font-weight="700" fill="#1d1c1a" text-anchor="middle">1</text>
+<text x="62.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">Textura contra</text>
+<text x="62.4" y="114.95" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">plano</text>
+<rect x="56.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="57.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Haüy, 1786</text>
+<rect x="56.4" y="132.08" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="57.8" y="134.88" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Moon, 1845</text>
+<text x="56.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">la placa en relieve (P-02 · 5);</text>
+<text x="56.4" y="174.35" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">Acción 4, paso 3</text>
+<text x="88.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">la misma diosa dos veces</text>
+<text x="88.4" y="39.755" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">y ninguna igual.</text>
+<text x="88.4" y="43.91" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: el poema y D15</text>
+<path d="M89.703,76 H88.4 V72.4 H91.379 V76 H90.076" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="89.021" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M93.924,76 H92.621 V72.4 H95.6 V76 H94.297" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="93.241" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M98.145,76 H96.841 V72.4 H99.821 V76 H98.517" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="97.462" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<path d="M102.366,76 H101.062 V72.4 H104.041 V76 H102.738" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="101.683" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<text x="88.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">secuenciar</text>
+<text x="88.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">gradación y ciclo</text>
+<text x="88.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Espacio y tiempo</text>
+<rect x="88.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M90.341,113.3 H88.531 V108.3 H92.669 V113.3 H90.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="90.6" y="111.7" font-family="Courier Prime" font-size="2.5" font-weight="700" fill="#1d1c1a" text-anchor="middle">8</text>
+<text x="94.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">Síntesis temporal</text>
+<rect x="88.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="89.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Worthington, 1895</text>
+<text x="88.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">el agua tocada, foto tras foto</text>
+<text x="88.4" y="174.35" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">(Acción 9); la serie de</text>
+<text x="88.4" y="177.1" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">frotados (Acción 8)</text>
+<text x="120.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">Y es que lo que vuelve,</text>
+<text x="120.4" y="39.755" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">vuelve escrito;</text>
+<text x="120.4" y="43.11" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">pocas veces vuelve</text>
+<text x="120.4" y="46.465" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">hablado.</text>
+<text x="120.4" y="50.62" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: el poema y D14</text>
+<path d="M121.703,76 H120.4 V72.4 H123.379 V76 H122.076" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="121.021" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M125.924,76 H124.621 V72.4 H127.6 V76 H126.297" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="125.241" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M130.145,76 H128.841 V72.4 H131.821 V76 H130.517" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="129.462" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<path d="M134.366,76 H133.062 V72.4 H136.041 V76 H134.738" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="133.683" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<text x="120.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">secuenciar</text>
+<text x="120.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">gradación y ciclo</text>
+<text x="120.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Huella</text>
+<rect x="120.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M122.341,113.3 H120.531 V108.3 H124.669 V113.3 H122.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="122.6" y="111.556" font-family="Courier Prime" font-size="2.1" font-weight="700" fill="#1d1c1a" text-anchor="middle">11</text>
+<text x="126.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">La voz como línea</text>
+<rect x="120.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="121.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Scott, 1857-1860</text>
+<rect x="120.4" y="132.08" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="121.8" y="134.88" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Balcomb, 1878</text>
+<text x="120.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">Acción 10; si el</text>
+<text x="120.4" y="174.35" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">fonautograma va en el</text>
+<text x="120.4" y="177.1" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">espécimen (10, §10.11)</text>
+<text x="152.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">de la boca sale un signo</text>
+<text x="152.4" y="39.755" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">hecho con las manos,</text>
+<text x="152.4" y="43.91" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: el poema y D13</text>
+<path d="M153.703,76 H152.4 V72.4 H155.379 V76 H154.076" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="153.021" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M157.924,76 H156.621 V72.4 H159.6 V76 H158.297" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="157.241" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M162.145,76 H160.841 V72.4 H163.821 V76 H162.517" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="161.462" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M166.366,76 H165.062 V72.4 H168.041 V76 H166.738" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="165.683" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<text x="152.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">inferir</text>
+<text x="152.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">elipsis y metáfora</text>
+<text x="152.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">La mano</text>
+<rect x="152.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M154.341,113.3 H152.531 V108.3 H156.669 V113.3 H154.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="154.6" y="111.556" font-family="Courier Prime" font-size="2.1" font-weight="700" fill="#1d1c1a" text-anchor="middle">14</text>
+<text x="158.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">El gesto como</text>
+<text x="158.4" y="114.95" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">signo</text>
+<rect x="152.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="153.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Bulwer, 1644</text>
+<rect x="152.4" y="132.08" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="153.8" y="134.88" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Bonet, 1620</text>
+<text x="152.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">el ¶, con los dedos (Acción 7)</text>
+<text x="184.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">Quedó el contenedor</text>
+<text x="184.4" y="39.755" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">de lo que ya no está.</text>
+<text x="184.4" y="43.91" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: el poema y D6, la</text>
+<text x="184.4" y="46.25" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">piscina vacía</text>
+<path d="M185.703,76 H184.4 V72.4 H187.379 V76 H186.076" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="185.021" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M189.924,76 H188.621 V72.4 H191.6 V76 H190.297" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="189.241" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<path d="M194.145,76 H192.841 V72.4 H195.821 V76 H194.517" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="193.462" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M198.366,76 H197.062 V72.4 H200.041 V76 H198.738" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="197.683" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<text x="184.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">agrupar</text>
+<text x="184.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">sinécdoque</text>
+<text x="184.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Estructura</text>
+<rect x="184.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M186.341,113.3 H184.531 V108.3 H188.669 V113.3 H186.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="186.6" y="111.7" font-family="Courier Prime" font-size="2.5" font-weight="700" fill="#1d1c1a" text-anchor="middle">5</text>
+<text x="190.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">Región común</text>
+<rect x="184.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Anianus, 1492</text>
+<rect x="184.4" y="132.08" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185.8" y="134.88" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Mano de 1466</text>
+<rect x="184.4" y="138.96" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185.8" y="141.76" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Cooperrider, 2022</text>
+<text x="184.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">la celda y la caja de 8 × 7</text>
+<text x="184.4" y="174.35" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">(Acción 5; P-01, P-10)</text>
+<text x="216.4" y="36.4" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">Desenterrar una voz</text>
+<text x="216.4" y="39.755" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">es desenterrar la mano</text>
+<text x="216.4" y="43.11" font-family="Newsreader" font-size="2.75" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">del que la escribió.</text>
+<text x="216.4" y="47.265" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">de: el poema y 06</text>
+<path d="M217.703,76 H216.4 V72.4 H219.379 V76 H218.076" fill="none" stroke="#1d1c1a" stroke-width="0.248"/>
+<rect x="217.021" y="73.021" width="1.738" height="2.359" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.186"/>
+<path d="M221.924,76 H220.621 V72.4 H223.6 V76 H222.297" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="221.241" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M226.145,76 H224.841 V72.4 H227.821 V76 H226.517" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="225.462" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<path d="M230.366,76 H229.062 V72.4 H232.041 V76 H230.738" fill="none" stroke="#9a968d" stroke-width="0.248"/>
+<rect x="229.683" y="73.021" width="1.738" height="2.359" fill="none" stroke="#9a968d" stroke-width="0.186"/>
+<text x="216.4" y="79.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">diferenciar</text>
+<text x="216.4" y="82.2" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">antítesis</text>
+<text x="216.4" y="97" font-family="Newsreader" font-size="2.7" font-weight="400" fill="#1d1c1a" text-anchor="start">Procedencia</text>
+<rect x="216.531" y="108.3" width="4.138" height="5" fill="#f6f4ee"/>
+<path d="M218.341,113.3 H216.531 V108.3 H220.669 V113.3 H218.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="218.6" y="111.7" font-family="Courier Prime" font-size="2.5" font-weight="700" fill="#1d1c1a" text-anchor="middle">4</text>
+<text x="222.4" y="112" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">Quién lo hizo</text>
+<rect x="216.4" y="125.2" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="217.8" y="128" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Haüy, 1786</text>
+<rect x="216.4" y="132.08" width="27.2" height="4.88" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="217.8" y="134.88" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Moreda, 2021</text>
+<rect x="216.4" y="138.96" width="27.2" height="7.76" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="217.8" y="141.76" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">Auer y Bradbury,</text>
+<text x="217.8" y="144.64" font-family="Newsreader" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="start">1852-1855</text>
+<text x="216.4" y="171.6" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">el colofón de manos</text>
+<text x="216.4" y="174.35" font-family="Newsreader" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">(03, §3.11; Acción 12)</text>
+<text x="248.4" y="36.4" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#4a2470" text-anchor="start">tu encargo</text>
+<line x1="248.4" y1="43" x2="275.6" y2="43" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="48" x2="275.6" y2="48" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="53" x2="275.6" y2="53" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="79.5" x2="275.6" y2="79.5" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="99.5" x2="275.6" y2="99.5" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="114.5" x2="275.6" y2="114.5" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="248.4" y="125.4" width="27.2" height="8.6" fill="none" stroke="#4a2470" stroke-width="0.3" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="248.4" y1="173.5" x2="275.6" y2="173.5" fill="none" stroke="#4a2470" stroke-width="0.28" stroke-dasharray="0.1 1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="248.4" y="179" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#6d6a63" text-anchor="start">la máquina propone;</text>
+<text x="248.4" y="181.6" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#6d6a63" text-anchor="start">la mano completa</text>
+<circle cx="36" cy="151" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36" y1="145.3" x2="36" y2="152.8" fill="none" stroke="#1d1c1a" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M36,156.4 L37.5,152.8 L34.5,152.8 Z" fill="#1d1c1a"/>
+<text x="36" y="144.2" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="middle">g</text>
+<text x="36" y="159.8" font-family="Courier Prime" font-size="1.9" font-weight="400" letter-spacing="0.25" fill="#1d1c1a" text-anchor="middle">GRAVEDAD</text>
+<circle cx="31.5" cy="197" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27.3" y1="197" x2="35.7" y2="197" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="31.5" y="196" font-family="Courier Prime" font-size="3" font-weight="700" fill="#1d1c1a" text-anchor="middle">2</text>
+<text x="31.5" y="200" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="middle">R-07</text>
+<text x="38.2" y="196.4" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">ENCARGOS SIN REFERENCIA, TODAVÍA</text>
+<line x1="38.2" y1="197.8" x2="100.562" y2="197.8" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="38.2" y="201.2" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">la obra los pide; ningún archivo los contestó: a puntos, para la mano</text>
+<text x="29" y="210.9" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">D12 · la cinta tapa los ojos y la boca</text>
+<path d="M30.086,216.42 H29 V213.42 H31.483 V216.42 H30.397" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="29.517" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M33.603,216.42 H32.517 V213.42 H35 V216.42 H33.914" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="33.034" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M37.121,216.42 H36.034 V213.42 H38.517 V216.42 H37.431" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="36.552" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M40.638,216.42 H39.552 V213.42 H42.034 V216.42 H40.948" fill="none" stroke="#1d1c1a" stroke-width="0.207"/>
+<rect x="40.069" y="213.937" width="1.448" height="1.966" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.155"/>
+<text x="43.6" y="215.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">inferir</text>
+<text x="29" y="220.62" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">oclusión, del reel</text>
+<text x="29" y="223.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">cae en: Acción 6 · encintar</text>
+<path d="M30.925,232.22 H29 V226.82 H33.4 V232.22 H31.475" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M31.04,231.302 H29.924 V227.738 H32.476 V231.302 H31.36" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="35" y="230.42" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="start">referencia: ninguna, todavía</text>
+<text x="92.75" y="210.9" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">D10 · el video es un bucle</text>
+<path d="M93.836,216.42 H92.75 V213.42 H95.233 V216.42 H94.147" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="93.267" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M97.353,216.42 H96.267 V213.42 H98.75 V216.42 H97.664" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="96.784" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M100.871,216.42 H99.784 V213.42 H102.267 V216.42 H101.181" fill="none" stroke="#1d1c1a" stroke-width="0.207"/>
+<rect x="100.302" y="213.937" width="1.448" height="1.966" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.155"/>
+<path d="M104.388,216.42 H103.302 V213.42 H105.784 V216.42 H104.698" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="103.819" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<text x="107.35" y="215.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">secuenciar</text>
+<text x="92.75" y="220.62" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">síntesis temporal: el ciclo</text>
+<text x="92.75" y="223.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">cae en: Acción 11 · distribuir y volver a</text>
+<text x="92.75" y="226.42" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">empezar</text>
+<path d="M94.675,234.82 H92.75 V229.42 H97.15 V234.82 H95.225" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M94.791,233.902 H93.674 V230.338 H96.226 V233.902 H95.109" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="98.75" y="233.02" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="start">referencia: ninguna, todavía</text>
+<text x="156.5" y="210.9" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">D11 · «Moverse como se mueve la piedra, es decir,</text>
+<text x="156.5" y="214.02" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">apenas»</text>
+<path d="M157.586,219.54 H156.5 V216.54 H158.983 V219.54 H157.897" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="157.017" y="217.057" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M161.103,219.54 H160.017 V216.54 H162.5 V219.54 H161.414" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="160.534" y="217.057" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M164.621,219.54 H163.534 V216.54 H166.017 V219.54 H164.931" fill="none" stroke="#1d1c1a" stroke-width="0.207"/>
+<rect x="164.052" y="217.057" width="1.448" height="1.966" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.155"/>
+<path d="M168.138,219.54 H167.052 V216.54 H169.534 V219.54 H168.448" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="167.569" y="217.057" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<text x="171.1" y="218.94" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">secuenciar</text>
+<text x="156.5" y="223.74" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">síntesis temporal: dos cuadros casi iguales</text>
+<text x="156.5" y="226.94" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">cae en: Acción 9 · el agua quieta y la tocada</text>
+<path d="M158.425,235.34 H156.5 V229.94 H160.9 V235.34 H158.975" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M158.54,234.422 H157.424 V230.858 H159.976 V234.422 H158.859" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="162.5" y="233.54" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="start">referencia: ninguna, todavía</text>
+<text x="220.25" y="210.9" font-family="Newsreader" font-size="2.6" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">D3 · placas sueltas, con piel entre una y otra</text>
+<path d="M221.336,216.42 H220.25 V213.42 H222.733 V216.42 H221.647" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="220.767" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M224.853,216.42 H223.767 V213.42 H226.25 V216.42 H225.164" fill="none" stroke="#1d1c1a" stroke-width="0.207"/>
+<rect x="224.284" y="213.937" width="1.448" height="1.966" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.155"/>
+<path d="M228.371,216.42 H227.284 V213.42 H229.767 V216.42 H228.681" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="227.802" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<path d="M231.888,216.42 H230.802 V213.42 H233.284 V216.42 H232.198" fill="none" stroke="#9a968d" stroke-width="0.207"/>
+<rect x="231.319" y="213.937" width="1.448" height="1.966" fill="none" stroke="#9a968d" stroke-width="0.155"/>
+<text x="234.85" y="215.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">agrupar</text>
+<text x="220.25" y="220.62" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">región común: lo que separa</text>
+<text x="220.25" y="223.82" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">cae en: P-01 · 2; Acción 11</text>
+<path d="M222.175,232.22 H220.25 V226.82 H224.65 V232.22 H222.725" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M222.29,231.302 H221.174 V227.738 H223.726 V231.302 H222.609" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="226.25" y="230.42" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="start">referencia: ninguna, todavía</text>
+<text x="289" y="18.2" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">QUÉ SE DIBUJA</text>
+<line x1="289" y1="19.3" x2="405" y2="19.3" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="289" y="25.1" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">El camino al revés: del encargo a la referencia, y no de la imagen al encargo. Cada columna baja de un</tspan></text>
+<text x="289" y="28.895" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">verso o de una decisión de la obra, pasa por la operación, el dominio y la técnica, y llega a las</tspan></text>
+<text x="289" y="32.69" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">referencias y a lo que cae en Contenida.</tspan></text>
+<text x="289" y="38.885" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">DECISIONES</text>
+<line x1="289" y1="39.985" x2="405" y2="39.985" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M291.5,43.285 L294,45.785 L291.5,48.285 L289,45.785 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="46.635" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">1</text>
+<text x="295.6" y="46.585" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">EL ENCARGO ES LA OBRA</text>
+<text x="295.6" y="51.385" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> El encargo no viene de un cliente: lo dan las decisiones de la obra (D1 … D16) y los</tspan></text>
+<text x="295.6" y="55.18" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">versos del poema. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> Contenida traduce una obra; lo que la obra pide es lo que se busca.</tspan></text>
+<path d="M291.5,59.475 L294,61.975 L291.5,64.475 L289,61.975 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="62.825" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">2</text>
+<text x="295.6" y="62.775" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">TODO CAE</text>
+<text x="295.6" y="67.575" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> Las columnas bajan, con la gravedad, hasta el ±0: lo que cae en Contenida. </tspan><tspan font-weight="500">Por qué.</tspan></text>
+<text x="295.6" y="71.37" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">En lugar del norte, la gravedad (P-00). Lo que no llega al fondo no se toma.</tspan></text>
+<path d="M291.5,75.665 L294,78.165 L291.5,80.665 L289,78.165 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="79.015" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">3</text>
+<text x="295.6" y="78.965" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">POR EL REVERSO</text>
+<text x="295.6" y="83.765" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> Se busca desde el verso hacia la imagen. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> El repujado se trabaja por el</tspan></text>
+<text x="295.6" y="87.56" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">reverso y se lee por el frente. Juntar imágenes por gusto y buscarles un uso después es lo que el</tspan></text>
+<text x="295.6" y="91.355" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">reel critica.</tspan></text>
+<path d="M291.5,95.65 L294,98.15 L291.5,100.65 L289,98.15 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
+<text x="291.5" y="99" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">4</text>
+<text x="295.6" y="98.95" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">UNA COLUMNA VACÍA</text>
+<text x="295.6" y="103.75" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> La última columna está vacía, con sus niveles a puntos. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> La máquina</tspan></text>
+<text x="295.6" y="107.545" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">propone; la mano completa. El próximo encargo lo escribes tú, y la referencia aparece cuando</tspan></text>
+<text x="295.6" y="111.34" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">aparece.</tspan></text>
+<text x="299" y="116.335" font-family="Newsreader" font-size="2.86" font-weight="400" font-style="italic" fill="#1d1c1a" text-anchor="start">Vuelve sin que la llames.</text>
+<text x="289" y="123.353" font-family="Courier Prime" font-size="2.45" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">PARA LA MANO</text>
+<line x1="289" y1="124.453" x2="405" y2="124.453" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="289" y="130.253" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">Escribe tu encargo en la columna vacía: un verso o una decisión de la obra. Pregunta qué operación</tspan></text>
+<text x="289" y="134.048" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">pide, en qué dominio y con qué técnica; recién entonces, busca la referencia. Abajo hay cuatro</tspan></text>
+<text x="289" y="137.843" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">encargos que ya esperan.</tspan></text>
+<rect x="20" y="10" width="390" height="277" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="52.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">1</text>
+<text x="52.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">1</text>
+<line x1="85" y1="10" x2="85" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="85" y1="287" x2="85" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="117.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">2</text>
+<text x="117.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">2</text>
+<line x1="150" y1="10" x2="150" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="150" y1="287" x2="150" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="182.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">3</text>
+<text x="182.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">3</text>
+<line x1="215" y1="10" x2="215" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="215" y1="287" x2="215" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="247.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">4</text>
+<text x="247.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">4</text>
+<line x1="280" y1="10" x2="280" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="280" y1="287" x2="280" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="312.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">5</text>
+<text x="312.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">5</text>
+<line x1="345" y1="10" x2="345" y2="7" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="345" y1="287" x2="345" y2="290" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="377.5" y="8.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">6</text>
+<text x="377.5" y="291.5" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">6</text>
+<text x="15.5" y="38.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">A</text>
+<text x="414.5" y="38.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">A</text>
+<line x1="20" y1="65" x2="17" y2="65" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="65" x2="413" y2="65" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="93.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">B</text>
+<text x="414.5" y="93.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">B</text>
+<line x1="20" y1="120" x2="17" y2="120" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="120" x2="413" y2="120" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="148.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">C</text>
+<text x="414.5" y="148.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">C</text>
+<line x1="20" y1="175" x2="17" y2="175" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="175" x2="413" y2="175" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="203.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">D</text>
+<text x="414.5" y="203.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">D</text>
+<line x1="20" y1="230" x2="17" y2="230" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="230" x2="413" y2="230" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="258.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">E</text>
+<text x="414.5" y="258.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">E</text>
+<line x1="20" y1="285" x2="17" y2="285" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="285" x2="413" y2="285" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="15.5" y="313.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">F</text>
+<text x="414.5" y="313.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="middle">F</text>
+<line x1="210" y1="0" x2="210" y2="10" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="210" y1="287" x2="210" y2="297" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="0" y1="148.5" x2="20" y2="148.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="410" y1="148.5" x2="420" y2="148.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="10" x2="284" y2="287" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="284" y="234" width="126" height="53" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.5"/>
+<line x1="284" y1="246" x2="410" y2="246" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="261" x2="410" y2="261" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="284" y1="272" x2="410" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="384" y1="234" x2="384" y2="261" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="314" y1="261" x2="314" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="348" y1="261" x2="348" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="380" y1="261" x2="380" y2="272" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="286.5" y="239.6" font-family="Courier Prime" font-size="4.4" font-weight="700" letter-spacing="0.6" fill="#1d1c1a" text-anchor="start">CONTENIDA</text>
+<text x="286.5" y="243.8" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">las referencias · una taxonomía tomada con cuidado</text>
+<text x="397" y="244.2" font-family="Courier Prime" font-size="7" font-weight="700" fill="#1d1c1a" text-anchor="middle">R-07</text>
+<text x="286.5" y="253.6" font-family="Newsreader" font-size="5" font-weight="400" fill="#1d1c1a" text-anchor="start">Del encargo a la referencia</text>
+<text x="286.5" y="258.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">el camino al revés: del verso al archivo</text>
+<text x="397" y="250" font-family="Courier Prime" font-size="1.8" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="middle">HOJA</text>
+<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">8 / 9</text>
+<text x="285.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">ESCALA</text>
+<text x="285.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">sin escala</text>
+<text x="315.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">UNIDADES</text>
+<text x="315.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">—</text>
+<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA</text>
+<text x="349.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">17.10.2026</text>
+<text x="381.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FORMATO</text>
+<text x="381.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">A3 · 420 × 297</text>
+<text x="285.6" y="275.4" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">DIBUJÓ</text>
+<text x="300" y="275.4" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">la máquina, desde las fichas de 10, sin ver las imágenes</text>
+<text x="285.6" y="279.6" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">MIRA</text>
+<text x="300" y="279.6" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">la mano: cada imagen en su archivo (10, §10.11)</text>
+<text x="285.6" y="283.8" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">NOTA</text>
+<text x="300" y="283.8" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">se dibuja el mecanismo, no la imagen: nada pasa a la letra</text>
+</svg>

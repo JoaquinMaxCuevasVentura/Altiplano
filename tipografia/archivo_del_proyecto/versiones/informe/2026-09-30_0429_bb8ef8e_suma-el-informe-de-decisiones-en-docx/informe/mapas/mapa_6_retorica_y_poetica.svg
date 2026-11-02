@@ -1,0 +1,427 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600"><defs></defs>
+<rect width="1200" height="1600" fill="#f6f4ee"/>
+<rect x="18" y="18" width="1164" height="1564" fill="none" stroke="#cfcac0" stroke-width="1"/>
+<circle cx="610.0" cy="820.0" r="330.0" fill="none" stroke="#d9d4c8" stroke-width="0.8" opacity="1.0"/>
+<circle cx="610.0" cy="820.0" r="560.0" fill="none" stroke="#d9d4c8" stroke-width="0.8" opacity="1.0"/>
+<line x1="5.2" y1="820.0" x2="1214.8" y2="820.0" stroke="#d9d4c8" stroke-width="0.7" opacity="1.0"/>
+<line x1="610.0" y1="215.2" x2="610.0" y2="1424.8" stroke="#d9d4c8" stroke-width="0.7" opacity="1.0"/>
+
+<path d="M276.6,263.9 C324.7,260.8 507.9,188.9 604.6,149.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40862517046883823"/>
+<path d="M273.4,263.8 C325.9,261.6 478.0,198.2 604.1,150.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.31779378979893036"/>
+<path d="M276.6,263.1 C326.5,261.2 504.1,194.3 603.9,149.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3054891680638082"/>
+<path d="M275.6,260.7 C327.1,262.4 496.6,192.3 605.1,151.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.36263720902546426"/>
+<path d="M301.3,292.2 C351.9,293.4 512.4,201.2 603.5,150.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28614374332151027"/>
+<path d="M302.7,291.2 C348.5,291.8 496.4,208.0 603.1,149.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42579705594239564"/>
+<path d="M301.6,288.1 C351.8,288.6 502.4,209.9 603.5,149.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3400498048368607"/>
+<path d="M298.2,294.0 C348.2,290.6 476.4,225.2 603.4,151.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.43060625902244937"/>
+<path d="M269.4,322.3 C318.1,321.7 458.7,236.3 604.5,149.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2854675580157799"/>
+<path d="M269.9,318.6 C318.3,321.4 489.4,211.6 604.2,149.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.31613619782397584"/>
+<path d="M268.1,322.6 C317.2,319.6 454.9,237.1 603.9,149.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.29559330277017865"/>
+<path d="M267.7,318.8 C319.9,319.1 471.1,236.1 603.7,150.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3276203414521949"/>
+<path d="M351.0,703.9 C403.1,706.2 516.5,433.6 602.9,246.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40924311997412594"/>
+<path d="M349.3,705.3 C400.9,706.2 494.2,482.4 605.1,248.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3459800891959566"/>
+<path d="M353.3,705.9 C401.6,703.8 527.7,413.2 604.3,248.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.295969731113184"/>
+<path d="M352.4,701.6 C399.6,704.7 518.4,451.1 604.5,247.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4198794001814202"/>
+<path d="M189.1,105.7 C243.7,107.0 411.9,174.3 604.7,247.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.43981232802557146"/>
+<path d="M194.1,104.6 C243.0,104.7 459.3,185.7 604.8,249.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3214927205802912"/>
+<path d="M194.2,102.5 C243.4,103.9 406.4,174.5 602.8,247.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.41694689101607163"/>
+<path d="M192.4,105.2 C239.3,103.4 445.8,192.3 604.7,249.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39612349940796215"/>
+<path d="M190.7,102.5 C242.8,103.1 437.1,500.1 602.9,834.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3636480281958686"/>
+<path d="M188.8,105.2 C239.9,103.9 466.9,557.0 603.3,835.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3715302918012359"/>
+<path d="M194.1,104.5 C239.9,104.1 460.5,547.9 604.2,835.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.328547365470896"/>
+<path d="M190.9,104.6 C241.1,107.5 438.8,501.7 604.4,836.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3370003289650524"/>
+<path d="M205.4,136.8 C252.7,134.6 450.4,194.7 604.6,247.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39798807604051906"/>
+<path d="M202.0,133.2 C252.1,134.2 423.9,190.8 605.1,247.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.35478879789943896"/>
+<path d="M205.7,136.2 C252.7,134.8 469.4,210.2 602.9,249.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4050203859160665"/>
+<path d="M205.5,135.4 C255.2,132.9 447.7,201.6 604.7,248.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.30851249314849866"/>
+<path d="M249.8,417.5 C300.7,420.2 438.7,387.9 604.7,345.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.37716560614237077"/>
+<path d="M246.4,418.2 C297.3,421.2 499.8,376.4 603.8,346.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2793150562191118"/>
+<path d="M247.0,416.1 C297.0,416.5 442.7,384.6 603.4,345.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3454589758682142"/>
+<path d="M247.3,421.9 C298.6,419.5 464.2,379.6 603.4,345.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4298486924612156"/>
+<path d="M221.8,476.7 C275.1,477.4 428.8,416.8 603.0,346.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3552651815676485"/>
+<path d="M225.8,477.2 C274.6,478.6 460.7,408.2 603.1,347.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4265539136818306"/>
+<path d="M225.7,476.0 C272.4,475.2 467.4,400.2 602.8,345.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2848554835720122"/>
+<path d="M224.3,478.6 C275.7,474.9 459.5,405.9 604.8,346.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.44172746128635315"/>
+<path d="M191.7,1246.7 C241.5,1244.3 408.5,840.4 604.9,346.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4135999881778015"/>
+<path d="M189.0,1242.8 C239.6,1245.5 421.6,790.1 603.0,346.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.41022498469188123"/>
+<path d="M189.1,1247.9 C242.4,1243.1 448.3,726.0 605.0,345.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3031258408770235"/>
+<path d="M192.4,1247.2 C242.8,1244.8 470.3,680.1 604.8,346.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4021171673091483"/>
+<path d="M303.2,361.8 C352.5,359.9 519.0,410.2 605.2,443.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28103096009814543"/>
+<path d="M299.0,362.3 C349.8,361.6 513.4,412.0 604.8,443.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39011382950207024"/>
+<path d="M300.2,360.4 C348.0,361.2 468.8,400.5 602.8,445.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4445116560381104"/>
+<path d="M301.5,360.9 C348.3,359.1 482.4,408.1 604.9,443.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3159528544863744"/>
+<path d="M300.7,674.1 C350.6,676.9 497.1,602.8 602.9,542.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.38907727269342973"/>
+<path d="M301.1,672.0 C352.3,675.0 484.7,598.2 602.8,541.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.32474751527843326"/>
+<path d="M298.3,672.3 C351.5,676.0 467.7,614.3 604.2,541.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.427500195570258"/>
+<path d="M299.5,673.1 C348.8,677.1 502.9,594.9 603.6,542.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28577907349780596"/>
+<path d="M184.8,774.5 C235.8,774.5 456.4,698.8 604.0,640.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42065411951312887"/>
+<path d="M183.7,772.6 C237.6,773.0 442.2,703.3 604.1,641.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2992408149596335"/>
+<path d="M183.9,774.9 C234.3,774.8 433.3,696.6 603.8,640.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3017825898788999"/>
+<path d="M183.8,771.0 C234.0,773.0 447.2,700.8 604.5,640.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3209278023564354"/>
+<path d="M185.2,804.4 C237.2,801.7 469.3,697.7 604.9,639.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4110816840308547"/>
+<path d="M186.0,805.2 C237.2,801.0 412.7,719.1 603.7,640.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28255449467224913"/>
+<path d="M183.9,801.1 C233.4,801.0 470.3,696.1 603.8,640.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.38015686722960096"/>
+<path d="M185.1,801.9 C235.8,801.5 458.0,704.5 603.1,639.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3332825313793331"/>
+<path d="M230.4,745.9 C280.5,745.5 482.2,683.2 603.8,639.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3738631873932468"/>
+<path d="M227.7,745.9 C282.0,744.3 455.8,691.3 603.7,639.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39828616340286593"/>
+<path d="M229.2,747.4 C279.6,745.4 471.7,682.9 603.0,641.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2988746926632468"/>
+<path d="M230.5,746.1 C279.8,744.1 466.2,681.4 605.0,640.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3565926804998861"/>
+<path d="M250.0,844.8 C300.9,846.4 464.4,731.0 605.0,640.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28270957688318643"/>
+<path d="M249.7,841.7 C298.4,844.8 460.3,739.7 604.3,641.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4160684009354836"/>
+<path d="M247.8,845.7 C298.5,846.2 458.8,733.4 604.9,639.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.27282484022993025"/>
+<path d="M251.0,841.0 C296.9,841.7 458.6,737.5 605.1,639.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.30702842837099886"/>
+<path d="M322.6,1184.7 C367.3,1185.6 475.4,981.4 603.7,737.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40602153256502044"/>
+<path d="M320.4,1185.7 C368.1,1188.6 495.7,942.6 605.2,738.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4352859298021127"/>
+<path d="M320.6,1187.8 C367.2,1189.1 477.7,967.7 604.4,738.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3047483550832133"/>
+<path d="M322.5,1184.6 C369.9,1186.9 508.2,924.2 604.7,738.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2716814435993781"/>
+<path d="M241.8,1216.3 C291.8,1216.5 489.3,908.2 603.3,737.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.344341874720614"/>
+<path d="M243.4,1216.9 C293.3,1216.0 471.8,950.4 605.0,739.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39091373375940464"/>
+<path d="M241.0,1217.2 C291.7,1215.0 465.5,943.0 603.2,737.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.34761578146634925"/>
+<path d="M244.3,1216.9 C291.9,1217.1 468.4,943.2 603.5,737.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4442540091093827"/>
+<path d="M192.2,547.9 C242.1,547.0 426.6,642.8 604.1,737.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2721948355010941"/>
+<path d="M189.9,545.8 C243.9,548.7 473.1,668.1 603.1,737.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4481184558617038"/>
+<path d="M194.1,545.6 C243.0,545.1 427.2,648.4 604.2,739.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.37411449007234476"/>
+<path d="M194.1,545.5 C242.2,545.5 477.0,663.8 603.6,737.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.30626966436517367"/>
+<path d="M225.7,577.5 C273.0,576.3 429.1,656.0 604.9,738.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.36429362111641334"/>
+<path d="M222.1,574.0 C272.0,575.3 472.3,668.6 603.1,738.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.35146871529427276"/>
+<path d="M221.3,577.9 C271.3,575.4 461.8,665.5 605.1,738.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3288661205857655"/>
+<path d="M224.4,575.3 C273.9,576.5 475.8,669.2 605.1,737.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.36152919762153346"/>
+<path d="M182.8,163.1 C234.4,163.6 420.3,503.8 605.0,835.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39204386019123905"/>
+<path d="M186.6,164.7 C232.7,163.7 408.2,482.2 605.0,836.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39709332926494045"/>
+<path d="M186.8,163.7 C233.7,161.3 475.4,600.1 605.2,835.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2961561237250609"/>
+<path d="M184.5,165.6 C233.9,164.9 430.6,510.8 604.8,835.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4035033242615298"/>
+<path d="M188.9,446.8 C241.9,446.9 434.2,656.0 604.3,835.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4459819913465504"/>
+<path d="M190.8,446.8 C241.1,448.7 459.1,672.7 604.2,836.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3184784416464248"/>
+<path d="M190.0,448.1 C243.3,449.7 417.2,629.5 605.0,835.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2726616992626016"/>
+<path d="M191.6,445.1 C239.3,446.5 403.7,627.4 605.1,835.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28884008233071684"/>
+<path d="M305.1,1373.8 C357.8,1372.1 474.6,1151.4 603.7,934.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42230462003696134"/>
+<path d="M309.5,1375.4 C359.1,1373.6 491.5,1126.5 605.0,934.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.35445854897803053"/>
+<path d="M307.6,1374.6 C359.3,1374.1 492.9,1144.2 602.8,935.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3226665716367188"/>
+<path d="M303.8,1371.8 C354.9,1370.5 476.5,1154.3 604.6,933.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.33235672022788304"/>
+<path d="M306.2,1371.9 C358.0,1371.5 476.9,1062.7 603.6,739.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3135091880141634"/>
+<path d="M306.3,1371.6 C354.9,1370.6 486.9,1044.9 603.8,738.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2797278264730448"/>
+<path d="M305.4,1374.4 C355.5,1371.7 489.0,1024.1 602.9,739.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4159433257289399"/>
+<path d="M305.2,1370.7 C356.9,1373.2 470.1,1075.4 604.9,737.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3140084007949794"/>
+<path d="M266.7,194.2 C320.7,191.4 470.0,477.5 604.8,737.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40220148609140993"/>
+<path d="M266.4,189.9 C316.7,190.4 446.5,443.3 602.8,738.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4041988490545239"/>
+<path d="M269.4,194.9 C316.1,193.3 501.6,528.9 603.5,738.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3549250237964836"/>
+<path d="M270.2,189.4 C320.3,189.6 452.4,437.9 602.9,737.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2864538181768321"/>
+<path d="M208.8,219.3 C260.9,221.0 471.6,532.2 604.0,738.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3810816366763262"/>
+<path d="M213.0,223.0 C260.1,222.9 436.4,491.1 604.5,738.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.39619540765738864"/>
+<path d="M212.4,222.4 C262.8,219.8 425.6,466.4 603.3,738.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.424741628756542"/>
+<path d="M212.9,219.3 C258.5,221.2 478.5,544.8 603.1,738.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.38175781643245504"/>
+<path d="M278.6,390.2 C330.2,389.8 471.3,803.5 602.8,1229.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.29493691823245616"/>
+<path d="M283.2,390.8 C331.6,390.7 489.8,871.2 603.5,1227.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.34659758990645384"/>
+<path d="M280.4,390.3 C333.4,389.1 455.4,777.3 604.6,1228.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4327712702578929"/>
+<path d="M281.9,388.8 C332.7,388.8 505.7,935.9 602.8,1228.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3957618971073478"/>
+<path d="M269.4,1315.7 C316.9,1314.9 450.4,1275.1 603.9,1227.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.33553541397599473"/>
+<path d="M267.6,1313.3 C320.5,1312.6 496.7,1264.5 604.5,1227.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.35874839095266625"/>
+<path d="M271.3,1317.2 C317.1,1317.4 443.7,1279.3 603.2,1226.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3430955725621112"/>
+<path d="M271.3,1316.3 C316.8,1316.7 489.6,1264.2 604.4,1228.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.38531872442538573"/>
+<path d="M326.6,1346.5 C376.0,1345.7 496.7,1281.6 604.9,1227.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.34640835545873794"/>
+<path d="M326.8,1342.5 C374.6,1344.0 519.0,1270.5 603.9,1227.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.37046231842115807"/>
+<path d="M327.7,1346.3 C375.7,1344.9 508.3,1275.0 603.5,1227.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.388388754971021"/>
+<path d="M326.3,1342.0 C376.4,1346.5 515.1,1272.7 604.5,1229.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.44646619919251773"/>
+<path d="M270.5,516.7 C320.1,516.1 459.2,916.3 603.7,1327.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3566029219311205"/>
+<path d="M265.9,520.6 C316.7,518.7 466.5,933.8 605.1,1326.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2796516512853323"/>
+<path d="M268.8,520.7 C319.9,517.7 475.9,959.2 602.9,1325.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.34065416507528035"/>
+<path d="M265.5,518.9 C319.0,516.9 474.9,946.9 603.2,1325.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3917079474555871"/>
+<path d="M266.4,960.9 C319.0,957.5 470.8,730.7 603.3,541.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3455648086125653"/>
+<path d="M269.3,957.3 C319.8,959.5 472.4,735.3 603.0,540.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.32057208532724174"/>
+<path d="M271.4,960.7 C316.3,960.5 471.9,733.3 605.0,543.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.36699930454810803"/>
+<path d="M270.7,962.4 C317.4,960.0 495.8,708.5 604.5,541.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40903251350320396"/>
+<path d="M242.2,987.1 C292.5,987.7 431.1,786.8 603.8,540.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4211914029046264"/>
+<path d="M242.0,986.8 C293.6,988.9 465.5,735.3 605.0,541.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28325993065223226"/>
+<path d="M242.6,990.2 C292.1,991.2 442.1,779.4 605.1,541.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.31555262644725623"/>
+<path d="M245.5,988.0 C295.0,990.3 456.1,758.9 604.9,542.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2908657906857161"/>
+<path d="M342.6,1271.8 C396.5,1272.3 528.5,670.6 604.8,346.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2703041485054539"/>
+<path d="M344.5,1274.7 C394.2,1276.3 492.0,822.7 605.1,347.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.29586336498870025"/>
+<path d="M343.5,1275.4 C394.8,1272.5 504.4,791.8 603.9,346.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3250171353194987"/>
+<path d="M343.7,1276.4 C393.0,1271.8 507.7,750.9 603.7,346.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4307615425564526"/>
+<path d="M209.2,603.3 C261.1,604.7 473.0,814.1 604.4,933.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.30238593333721725"/>
+<path d="M208.5,604.3 C262.7,606.1 429.7,764.0 602.8,933.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2789396057787923"/>
+<path d="M213.4,604.5 C262.4,604.1 475.1,806.0 604.9,934.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.33717404464994416"/>
+<path d="M209.8,606.1 C259.9,604.0 426.3,758.6 604.7,933.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3111725110522101"/>
+<path d="M241.2,635.7 C291.3,634.7 483.3,819.5 603.3,932.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3463052496823044"/>
+<path d="M243.6,631.4 C292.5,633.1 447.2,783.1 602.8,934.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3862442814182552"/>
+<path d="M244.4,634.9 C295.1,633.0 496.4,825.8 603.2,933.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.391875576597541"/>
+<path d="M244.9,632.0 C292.0,636.1 453.9,782.0 604.4,932.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3429399998314708"/>
+<path d="M274.5,1400.4 C324.0,1399.6 454.3,1224.8 603.3,1032.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.334628057427847"/>
+<path d="M276.8,1403.1 C326.8,1402.4 507.9,1161.0 604.8,1032.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3124923820439627"/>
+<path d="M277.5,1403.2 C324.7,1400.8 491.0,1171.3 603.4,1031.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.43172419554114344"/>
+<path d="M273.7,1404.8 C324.8,1400.3 507.7,1162.6 604.2,1032.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.33069496953605887"/>
+<path d="M170.4,1117.2 C222.3,1116.8 454.5,1063.7 603.4,1032.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.37075180407860464"/>
+<path d="M171.8,1117.1 C223.4,1118.7 398.3,1077.3 603.6,1032.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3236912572198235"/>
+<path d="M175.3,1117.8 C222.4,1118.1 410.3,1076.7 604.6,1031.6" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.37190775133260284"/>
+<path d="M173.5,1114.3 C223.5,1116.3 446.2,1064.8 602.8,1032.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.31416079393848806"/>
+<path d="M226.1,1057.6 C275.2,1058.4 436.8,1096.4 604.6,1131.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4342823937468694"/>
+<path d="M224.4,1061.4 C272.2,1057.0 434.6,1094.9 602.8,1129.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.40969618199807695"/>
+<path d="M221.6,1061.1 C275.8,1060.3 482.2,1107.6 602.9,1129.8" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.28419064036654285"/>
+<path d="M226.1,1056.9 C275.3,1060.4 440.3,1097.2 603.0,1130.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3302140456099687"/>
+<path d="M200.8,1087.0 C246.9,1088.1 451.6,1111.3 603.8,1130.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4470648790560344"/>
+<path d="M197.7,1089.8 C249.0,1087.2 467.8,1113.6 603.5,1130.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.34387082988832024"/>
+<path d="M197.6,1088.0 C250.1,1088.9 417.9,1107.5 603.4,1130.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.38937115259883914"/>
+<path d="M195.2,1085.6 C250.3,1086.9 483.0,1120.0 604.4,1130.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3256012850190176"/>
+<path d="M190.8,1030.4 C239.6,1029.0 430.8,1084.0 605.2,1131.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.44459308461185"/>
+<path d="M190.7,1030.3 C240.9,1028.3 474.9,1097.3 603.6,1129.9" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2926511975359125"/>
+<path d="M190.1,1032.3 C243.2,1032.3 436.3,1085.3 603.3,1129.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.32853479072222563"/>
+<path d="M192.9,1031.4 C240.4,1031.7 412.4,1073.8 604.1,1129.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4499646585418827"/>
+<path d="M189.7,1030.9 C239.5,1030.6 452.4,800.2 603.4,640.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42696760942127254"/>
+<path d="M190.2,1029.3 C241.6,1031.9 467.4,780.8 605.0,639.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.4146850857237959"/>
+<path d="M193.8,1032.3 C241.3,1029.3 454.8,803.8 603.5,641.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42184251049397237"/>
+<path d="M189.5,1028.5 C242.4,1028.4 472.9,778.9 603.5,640.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3940449598622654"/>
+<path d="M226.1,903.0 C275.0,899.8 444.1,764.0 602.8,641.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2968013998438893"/>
+<path d="M221.4,900.6 C272.0,902.5 453.8,756.9 604.8,640.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.44177791172155284"/>
+<path d="M225.1,900.5 C273.7,900.6 475.0,741.8 603.3,641.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2848780616646176"/>
+<path d="M224.7,900.8 C271.8,902.5 440.3,766.7 603.1,640.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3459093414500093"/>
+<path d="M226.3,903.6 C274.3,903.7 425.2,827.1 603.1,738.0" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.32900052386177503"/>
+<path d="M220.7,904.9 C271.2,900.4 474.7,801.7 605.1,738.3" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3432646964308693"/>
+<path d="M222.8,902.0 C274.8,903.1 479.2,795.4 603.0,738.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.30423470309667394"/>
+<path d="M222.3,904.7 C271.5,901.1 467.1,808.8 603.5,737.4" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.42186903120820685"/>
+<path d="M172.9,931.6 C224.7,929.7 438.0,820.4 602.8,737.5" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.33203585530866875"/>
+<path d="M173.4,933.6 C221.9,930.4 434.3,828.2 603.0,738.7" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.3571428251809978"/>
+<path d="M170.1,929.4 C220.1,930.0 447.6,814.8 604.3,738.2" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.43751275482030927"/>
+<path d="M173.0,930.1 C222.6,931.6 467.4,808.2 602.8,737.1" fill="none" stroke="#4a2470" stroke-width="0.5" opacity="0.2873063421767858"/>
+<path d="M816.9,147.3 C868.9,152.2 908.3,157.4 949.3,166.3" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.277973126439651"/>
+<path d="M817.3,150.9 C870.6,152.3 914.9,156.2 950.3,166.4" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4188323971501787"/>
+<path d="M817.8,148.5 C867.9,150.9 904.8,156.2 950.5,167.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.310983306737967"/>
+<path d="M813.6,148.5 C868.9,150.5 907.8,156.0 949.7,165.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.2904978395362746"/>
+<path d="M813.2,246.8 C871.4,246.8 901.9,246.0 949.2,254.7" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.290559681416664"/>
+<path d="M813.3,250.1 C868.6,248.9 920.8,250.6 950.8,254.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.29415747860904196"/>
+<path d="M814.2,247.7 C870.3,250.4 917.4,252.2 949.3,253.4" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.34465185854728403"/>
+<path d="M812.9,249.9 C871.6,250.4 911.8,247.0 950.4,253.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.34391152745279824"/>
+<path d="M816.5,541.3 C870.7,540.7 917.9,352.2 949.7,253.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.37726617803574203"/>
+<path d="M814.8,543.1 C868.7,541.3 920.1,376.6 949.2,254.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.378759102288443"/>
+<path d="M812.8,544.1 C868.6,542.7 920.6,355.7 949.6,253.4" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.27392494413019"/>
+<path d="M815.4,543.9 C872.3,541.4 923.0,359.9 951.0,254.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3767353654268194"/>
+<path d="M813.1,344.3 C870.9,343.9 915.4,348.0 950.1,341.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3906836536555832"/>
+<path d="M814.6,345.4 C871.2,346.5 916.8,341.2 949.4,341.7" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3205893075747981"/>
+<path d="M814.0,346.9 C869.4,348.0 914.2,348.6 950.1,342.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3779728865704382"/>
+<path d="M817.8,343.8 C867.9,346.2 915.0,347.6 950.4,341.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.2950542667139101"/>
+<path d="M815.7,835.4 C870.2,834.5 905.8,609.0 949.7,340.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.438059575966779"/>
+<path d="M814.1,837.6 C870.4,835.9 905.8,605.3 949.0,342.2" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.413136798795154"/>
+<path d="M816.5,836.9 C869.6,835.3 914.0,592.1 949.4,341.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.35050367937143395"/>
+<path d="M815.5,836.5 C869.4,834.1 919.3,562.8 950.7,342.7" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4381636608843592"/>
+<path d="M816.5,443.6 C869.8,446.1 902.9,436.6 949.7,431.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.2775275377687604"/>
+<path d="M813.5,446.0 C869.3,444.9 909.7,436.6 949.1,429.3" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4382088695025228"/>
+<path d="M817.5,445.4 C871.3,445.8 918.1,438.3 950.6,430.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4106352964501346"/>
+<path d="M812.6,441.3 C868.3,445.0 907.4,433.9 951.1,430.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3104725549460956"/>
+<path d="M817.2,539.6 C871.0,542.2 914.1,525.6 950.5,518.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.27042061326373207"/>
+<path d="M813.7,543.2 C867.8,541.6 910.6,529.0 951.0,517.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3717993345369189"/>
+<path d="M816.3,541.7 C868.0,539.6 915.4,527.3 950.8,517.2" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.2755887217493627"/>
+<path d="M813.3,539.2 C870.3,540.0 918.4,528.4 950.7,519.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3369489407743162"/>
+<path d="M815.9,642.3 C871.3,641.6 909.7,627.0 950.9,605.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.37058849516252457"/>
+<path d="M816.6,637.2 C868.6,640.8 912.1,622.5 950.4,605.7" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.44408285920351526"/>
+<path d="M817.3,638.1 C871.6,642.2 919.7,617.4 949.0,605.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4235317550199584"/>
+<path d="M816.9,638.3 C872.2,637.9 917.7,625.5 949.9,605.2" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3658086681304251"/>
+<path d="M817.9,740.9 C870.6,736.3 910.6,711.2 949.7,693.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.372874178832514"/>
+<path d="M815.9,738.7 C871.8,739.8 911.7,718.5 950.5,693.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3838100664701628"/>
+<path d="M813.1,737.1 C867.6,738.5 907.3,716.8 948.8,695.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3914279640504322"/>
+<path d="M817.6,739.5 C871.8,738.4 904.1,721.1 950.1,693.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.37132895508998837"/>
+<path d="M815.2,835.4 C868.8,835.4 917.7,806.5 950.1,781.3" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3689529665442889"/>
+<path d="M813.6,834.5 C870.7,836.4 910.4,809.9 949.8,782.7" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3554597299179638"/>
+<path d="M814.0,836.4 C872.1,836.1 924.7,798.2 949.4,782.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.36331625783561955"/>
+<path d="M817.8,838.7 C869.6,838.5 918.0,801.3 950.9,782.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.34938115227212424"/>
+<path d="M815.9,934.8 C872.1,936.1 916.9,897.8 950.4,869.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.36768559477599216"/>
+<path d="M813.0,933.6 C870.7,935.9 910.8,903.2 949.5,868.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.43884962946224665"/>
+<path d="M816.3,936.0 C868.6,934.7 913.2,897.7 950.0,869.2" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3981135361503818"/>
+<path d="M814.6,935.8 C870.7,934.9 925.8,891.2 951.2,870.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.422848619178483"/>
+<path d="M816.7,1034.6 C871.8,1033.4 921.0,989.3 948.8,957.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.2965445961556657"/>
+<path d="M815.4,1032.2 C871.6,1033.6 911.8,990.8 949.9,956.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3413550724029463"/>
+<path d="M812.7,1032.7 C871.2,1034.2 909.3,991.1 950.3,959.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.34972358869967524"/>
+<path d="M813.4,1032.4 C869.0,1033.7 918.7,986.7 950.5,956.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.43363765551241285"/>
+<path d="M813.0,1129.5 C872.0,1131.5 919.2,1083.5 948.9,1046.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3430536886408453"/>
+<path d="M818.0,1129.9 C870.0,1130.4 917.9,1079.9 951.1,1045.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.30403846038107335"/>
+<path d="M817.4,1127.9 C867.8,1131.0 912.8,1086.4 949.9,1045.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.43414399723746"/>
+<path d="M815.3,1132.5 C871.6,1130.4 912.6,1081.4 949.1,1044.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4232651015024449"/>
+<path d="M816.2,740.8 C868.0,739.3 912.0,941.9 950.3,1133.0" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3740420195769334"/>
+<path d="M816.6,740.5 C871.0,739.3 906.7,942.9 950.0,1133.1" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.42391631911744476"/>
+<path d="M817.0,739.1 C870.0,736.4 909.4,950.9 948.8,1133.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.37354820634988056"/>
+<path d="M815.0,737.8 C867.6,736.7 924.2,984.7 950.5,1133.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4320649255523281"/>
+<path d="M815.3,1225.9 C867.7,1230.3 907.7,1229.3 949.1,1221.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.417473628438698"/>
+<path d="M817.2,1227.1 C872.2,1229.5 903.1,1226.0 948.9,1221.3" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.31375879693226977"/>
+<path d="M817.1,1226.8 C868.2,1228.9 919.1,1223.6 950.1,1221.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4469195286409143"/>
+<path d="M815.9,1225.3 C868.5,1227.4 921.0,1224.5 951.1,1222.4" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.35846891818321924"/>
+<path d="M815.2,1325.6 C868.9,1328.1 923.7,1316.7 950.8,1309.5" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.28793365538498356"/>
+<path d="M813.5,1323.4 C870.8,1325.1 914.5,1321.5 950.7,1310.4" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3570200249761784"/>
+<path d="M812.2,1323.3 C870.1,1327.9 909.4,1323.5 949.7,1309.8" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.3012248499743209"/>
+<path d="M812.2,1327.2 C869.8,1327.1 917.4,1316.8 950.0,1309.9" fill="none" stroke="#1d1c1a" stroke-width="0.5" opacity="0.4219449225826492"/>
+<circle cx="610.0" cy="150.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="248.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="346.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="444.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="542.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="640.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="738.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="836.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="934.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="1032.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="1130.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="1228.0" r="4.5" fill="#1d1c1a"/>
+<circle cx="610.0" cy="1326.0" r="4.5" fill="#1d1c1a"/>
+<text x="60.0" y="110.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">quedó el contenedor</text>
+<text x="60.0" y="139.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">de lo que ya no está.</text>
+<text x="60.0" y="168.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">una piscina vacía,</text>
+<text x="60.0" y="197.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">donde una vez aprendí a flotar,</text>
+<text x="60.0" y="226.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">ahora aprendo a mirar.</text>
+<text x="60.0" y="267.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">moverse como se mueve la piedra,</text>
+<text x="60.0" y="296.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">es decir, apenas, es decir, temblor,</text>
+<text x="60.0" y="325.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">es decir, un presente continuo.</text>
+<text x="60.0" y="366.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">tocas el agua y la diosa se deforma.</text>
+<text x="60.0" y="395.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">todos los archivos funcionan así.</text>
+<text x="60.0" y="424.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">a la ídolo la desenterraron,</text>
+<text x="60.0" y="453.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">le pusieron nombre,</text>
+<text x="60.0" y="482.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">otra manera de enterrar.</text>
+<text x="60.0" y="523.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">es lo que hacemos con todo, no?</text>
+<text x="60.0" y="552.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">primero enterramos,</text>
+<text x="60.0" y="581.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">después nos emocionamos.</text>
+<text x="60.0" y="610.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">no se salvó la piedra,</text>
+<text x="60.0" y="639.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">solo la opinión sobre ella.</text>
+<text x="60.0" y="680.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">la tierra se dio de beber a sí misma</text>
+<text x="60.0" y="709.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">y ningún contenedor aguanta lo que contiene.</text>
+<text x="60.0" y="750.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">vuelve sin que la llames.</text>
+<text x="60.0" y="779.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">termina y empieza,</text>
+<text x="60.0" y="808.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">termina y empieza.</text>
+<text x="60.0" y="849.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">cada vuelta pasa por el agua</text>
+<text x="60.0" y="878.0" font-family="Newsreader" font-size="13.5" fill="#9a968d" text-anchor="start" font-weight="400" font-style="italic">y el agua no repite,</text>
+<text x="60.0" y="907.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">la misma diosa dos veces</text>
+<text x="60.0" y="936.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">y ninguna igual.</text>
+<text x="60.0" y="965.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">es lo más parecido a estar viva</text>
+<text x="60.0" y="994.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">que puede hacer una imagen.</text>
+<text x="60.0" y="1035.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">al final del ciclo,</text>
+<text x="60.0" y="1064.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">de la boca sale un signo</text>
+<text x="60.0" y="1093.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">hecho con las manos,</text>
+<text x="60.0" y="1122.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">ninguna palabra,</text>
+<text x="60.0" y="1151.0" font-family="Newsreader" font-size="13.5" fill="#9a968d" text-anchor="start" font-weight="400" font-style="italic">acciones del cuerpo.</text>
+<text x="60.0" y="1192.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">y es que lo que vuelve, vuelve escrito;</text>
+<text x="60.0" y="1221.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">pocas veces vuelve hablado.</text>
+<text x="60.0" y="1250.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">desenterrar una voz</text>
+<text x="60.0" y="1279.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">es desenterrar la mano del que la escribió.</text>
+<text x="60.0" y="1320.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">nos fuimos con las manos secas,</text>
+<text x="60.0" y="1349.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">que es como se sale de todas las ruinas.</text>
+<text x="60.0" y="1378.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">a la boca la taparon, a las manos no,</text>
+<text x="60.0" y="1407.0" font-family="Newsreader" font-size="13.5" fill="#4a2470" text-anchor="start" font-weight="400" font-style="italic">no tiene lengua pero igual dice.</text>
+<text x="60.0" y="80.0" font-family="Courier Prime" font-size="12" fill="#6d6a63" text-anchor="start" font-weight="400">el poema, verso a verso</text>
+<text x="624.0" y="155.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">anáfora y gradación</text>
+<rect x="621.0" y="163.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="174.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«es decir, apenas, es decir,</text>
+<text x="624.0" y="187.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">temblor»</text>
+<text x="624.0" y="253.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">paradoja</text>
+<rect x="621.0" y="261.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="272.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">ningún contenedor aguanta lo</text>
+<text x="624.0" y="285.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">que contiene</text>
+<text x="624.0" y="351.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">derivación</text>
+<rect x="621.0" y="359.1" width="157.8" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="370.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">enterrar, desenterrar,</text>
+<text x="624.0" y="383.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">contener, contenida</text>
+<text x="624.0" y="449.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">apóstrofe</text>
+<rect x="621.0" y="457.1" width="192.3" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="468.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«Tocas el agua»: le habla a</text>
+<text x="624.0" y="481.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">quien mira</text>
+<text x="624.0" y="547.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">prosopopeya</text>
+<rect x="621.0" y="555.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="566.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«La tierra se dio de beber a</text>
+<text x="624.0" y="579.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">sí misma»</text>
+<text x="624.0" y="645.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">repetición y ciclo</text>
+<rect x="621.0" y="653.1" width="206.1" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="664.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«termina y empieza, / termina</text>
+<text x="624.0" y="677.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">y empieza»</text>
+<text x="624.0" y="743.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">antítesis</text>
+<rect x="621.0" y="751.1" width="164.7" height="42.5" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="762.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">vuelve escrito / vuelve</text>
+<text x="624.0" y="775.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">hablado; hallado /</text>
+<text x="624.0" y="789.6" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">reconstruido</text>
+<text x="624.0" y="841.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">metáfora</text>
+<rect x="621.0" y="849.1" width="192.3" height="42.5" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="860.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">la letra es una vasija; sus</text>
+<text x="624.0" y="873.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">líneas tienen nombres de</text>
+<text x="624.0" y="887.6" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">vasija</text>
+<text x="624.0" y="939.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">sinécdoque y metonimia</text>
+<rect x="621.0" y="947.1" width="213.0" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="958.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">el pie por la lámina; la cinta</text>
+<text x="624.0" y="971.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">por el rostro tapado</text>
+<text x="624.0" y="1037.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">elipsis</text>
+<rect x="621.0" y="1045.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="1056.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">lo que falta se ve vacío: la</text>
+<text x="624.0" y="1069.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">celda del .notdef, el …</text>
+<text x="624.0" y="1135.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">etimología</text>
+<rect x="621.0" y="1143.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="1154.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">portada y puerta; el ojo del</text>
+<text x="624.0" y="1167.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">tipo; componer; el calderón</text>
+<text x="624.0" y="1233.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">sentencia</text>
+<rect x="621.0" y="1241.1" width="206.1" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="1252.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«Todos los archivos funcionan</text>
+<text x="624.0" y="1265.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">así»</text>
+<text x="624.0" y="1331.0" font-family="Courier Prime" font-size="15" fill="#1d1c1a" text-anchor="start" font-weight="700">interrogación retórica</text>
+<rect x="621.0" y="1339.1" width="199.2" height="28.8" fill="#f6f4ee" opacity=".86"/>
+<text x="624.0" y="1350.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">«Es lo que hacemos con todo,</text>
+<text x="624.0" y="1363.8" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">no?»</text>
+<rect x="975.4" y="157.7" width="177.6" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="170.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el temblor de la mano;</text>
+<text x="1150.0" y="185.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">tres planos a 1,6°</text>
+<rect x="952.0" y="245.7" width="201.0" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="258.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">toda cuenca se abre en un</text>
+<text x="1150.0" y="273.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">desagüe</text>
+<rect x="952.0" y="333.6" width="201.0" height="16.9" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="346.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el nombre no es Kochamama</text>
+<rect x="983.2" y="421.6" width="169.8" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="434.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el agua tocada; tocar</text>
+<text x="1150.0" y="449.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">deforma el espécimen</text>
+<rect x="944.2" y="509.6" width="208.8" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="522.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">la gota: solo gotea lo que</text>
+<text x="1150.0" y="537.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">mira abajo</text>
+<rect x="944.2" y="597.6" width="208.8" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="610.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el bucle; frotar y repujar</text>
+<text x="1150.0" y="625.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">otra; generación 2</text>
+<rect x="975.4" y="685.6" width="177.6" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="698.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">continuo y punteado en</text>
+<text x="1150.0" y="713.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">todos los estados</text>
+<rect x="975.4" y="773.6" width="177.6" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="786.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">fondo, borde, desagüe,</text>
+<text x="1150.0" y="801.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">afuera</text>
+<rect x="952.0" y="861.6" width="201.0" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="874.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">las letras salen del pie;</text>
+<text x="1150.0" y="889.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el punto de cinta</text>
+<rect x="952.0" y="949.6" width="201.0" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="962.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">la celda vacía; lo que no</text>
+<text x="1150.0" y="977.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">cabe</text>
+<rect x="959.8" y="1037.7" width="193.2" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="1050.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">la puerta sobre la celda</text>
+<text x="1150.0" y="1065.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">1; no hay Regular; ¶</text>
+<rect x="944.2" y="1125.7" width="208.8" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="1138.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">el estado Voz: deforma, no</text>
+<text x="1150.0" y="1153.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">se graba</text>
+<rect x="959.8" y="1213.7" width="193.2" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="1226.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">de la piscina no se saca</text>
+<text x="1150.0" y="1241.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">nada</text>
+<rect x="959.8" y="1301.7" width="193.2" height="32.5" fill="#f6f4ee" opacity=".86"/>
+<text x="1150.0" y="1314.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">la ? se arma sin modelo;</text>
+<text x="1150.0" y="1329.6" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400">la ¿ no es su espejo</text>
+<text x="1150.0" y="130.0" font-family="Courier Prime" font-size="12" fill="#6d6a63" text-anchor="end" font-weight="400">lo que hace la letra</text>
+<text x="624.0" y="115.0" font-family="Courier Prime" font-size="12" fill="#6d6a63" text-anchor="start" font-weight="400">las figuras</text>
+<text x="1164.0" y="46.0" font-family="Courier Prime" font-size="12" fill="#6d6a63" text-anchor="end" font-weight="400">contenida · informe de decisiones · mapa 6 / 6</text>
+<text x="36.0" y="46.0" font-family="Courier Prime" font-size="12" fill="#6d6a63" text-anchor="start" font-weight="400">(6)</text>
+<text x="1164.0" y="1566.0" font-family="Courier Prime" font-size="13" fill="#1d1c1a" text-anchor="end" font-weight="400" letter-spacing="1.6">MAPA 6 · RETÓRICA Y POÉTICA</text>
+<rect x="784" y="1406" width="380" height="132" fill="#f6f4ee" stroke="#9a968d" stroke-width="0.8"/>
+<text x="794.0" y="1422.0" font-family="Courier Prime" font-size="12" fill="#1d1c1a" text-anchor="start" font-weight="700">ficha</text>
+<line x1="784.0" y1="1428.0" x2="1164.0" y2="1428.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<line x1="904.0" y1="1428.0" x2="904.0" y2="1450.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<text x="794.0" y="1443.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">versos</text>
+<text x="914.0" y="1443.0" font-family="Courier Prime" font-size="11.5" fill="#1d1c1a" text-anchor="start" font-weight="400">42 del poema</text>
+<line x1="784.0" y1="1450.0" x2="1164.0" y2="1450.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<line x1="904.0" y1="1450.0" x2="904.0" y2="1472.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<text x="794.0" y="1465.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">figuras</text>
+<text x="914.0" y="1465.0" font-family="Courier Prime" font-size="11.5" fill="#1d1c1a" text-anchor="start" font-weight="400">13</text>
+<line x1="784.0" y1="1472.0" x2="1164.0" y2="1472.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<line x1="904.0" y1="1472.0" x2="904.0" y2="1494.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<text x="794.0" y="1487.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">operaciones</text>
+<text x="914.0" y="1487.0" font-family="Courier Prime" font-size="11.5" fill="#1d1c1a" text-anchor="start" font-weight="400">14</text>
+<line x1="784.0" y1="1494.0" x2="1164.0" y2="1494.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<line x1="904.0" y1="1494.0" x2="904.0" y2="1516.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<text x="794.0" y="1509.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">violeta</text>
+<text x="914.0" y="1509.0" font-family="Courier Prime" font-size="11.5" fill="#1d1c1a" text-anchor="start" font-weight="400">los versos que operan</text>
+<line x1="784.0" y1="1516.0" x2="1164.0" y2="1516.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<line x1="904.0" y1="1516.0" x2="904.0" y2="1538.0" stroke="#cfcac0" stroke-width="0.8" opacity="1.0"/>
+<text x="794.0" y="1531.0" font-family="Courier Prime" font-size="11.5" fill="#6d6a63" text-anchor="start" font-weight="400">fecha</text>
+<text x="914.0" y="1531.0" font-family="Courier Prime" font-size="11.5" fill="#1d1c1a" text-anchor="start" font-weight="400">30.09.2026</text>
+</svg>

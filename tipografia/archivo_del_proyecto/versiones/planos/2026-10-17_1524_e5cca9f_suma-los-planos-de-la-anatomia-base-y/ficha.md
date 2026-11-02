@@ -1,0 +1,50 @@
+# Los planos de la anatomía base · 2026-10-17 15:24 UTC
+
+| | |
+|---|---|
+| Línea | [Los planos de la anatomía base](../README.md) |
+| Origen | commit `e5cca9f` de la rama `claude/fervent-lovelace-exgqzl` |
+| Fecha | 2026-10-17 15:24 UTC: la del commit, no la de creación de lo que contiene |
+| Estado de la versión | versión anterior |
+| Lo vigente | [`tipografia/planos/`](../../../../planos/) |
+| La versión siguiente | [2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de](../2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de/ficha.md) |
+
+## Qué contiene esta carpeta
+
+- **1 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `planos/dibujo.py`.
+
+## La versión completa
+
+En este commit, la línea tenía 34 archivos: 1 están en esta carpeta, 0 en carpetas de versiones anteriores y 33 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
+
+## Qué cambió respecto de la anterior
+
+- **Añadidos (34):** `planos/README.md`, `planos/contenida_planos.pdf`, `planos/dibujo.py`, `planos/dxf/P-01_celda.dxf`, `planos/dxf/P-03_o_cuenca.dxf`, `planos/dxf/P-04_l_fuste.dxf`, `planos/dxf/P-05_n_hombro.dxf`, `planos/dxf/P-06_a_gancho_y_gota.dxf`, `planos/dxf/P-10_caja.dxf`, `planos/generar_planos.py`, `planos/geometria.py`, `planos/png/P-00_indice.png`, `planos/png/P-01_celda.png`, `planos/png/P-02_canal.png` y 20 más.
+
+## Lo que lo respalda
+
+El mensaje del commit `e5cca9f`:
+
+> Suma los planos de la anatomía base y simplifica la aplicación
+>
+> Planos (tipografia/planos/): once láminas A3, como un plano de
+> arquitectura, con cotas en mm y UPM, ejes, niveles, cortes del
+> repujado, detalles y cajetín; en lugar del norte, la gravedad. Cada
+> decisión de anatomía tipográfica lleva un rombo en el dibujo y su
+> porqué en la columna: concepto, retórica y poética. Salen en SVG,
+> PDF y DXF (ezdxf), desde la geometría de la gramática.
+>
+> Aplicación: una sola pantalla con el plano del signo, nueve
+> decisiones con su porqué y la caja. Se sacan los simuladores de los
+> estados; Clipper va en la carpeta. La geometría coincide con Python
+> (0,16 % del área en la mediana).
+>
+> Los planos encontraron que la gota de la a deja 2,2 mm libres y no
+> 3,5: queda anotado en 03c. Se corrige la descripción del quiebre y
+> el ángulo del gancho en 03c. Informe, documentos y README al día.
+
+Y el README de la línea en ese commit: [V-0517](../../../../planos/README.md).
+
+## Lo que deduce el archivo
+
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

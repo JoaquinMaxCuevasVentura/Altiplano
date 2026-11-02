@@ -1,0 +1,13 @@
+# La taxonomía de las referencias
+
+Las láminas de la taxonomía y el atlas de imágenes de dominio público.
+
+- **Lo vigente:** [`tipografia/taxonomia/`](../../../taxonomia/), el estado de la rama en `02dcb14`. No se copia aquí.
+- **Versiones:** 3 de git.
+- **Volver:** [al índice del archivo](../../README.md).
+
+| Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
+|---|---|---|---|---|
+| 2026-10-17 22:31 | commit `bbe9362` | [2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de](2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de/ficha.md) | versión anterior | Suma la taxonomía de las referencias de dominio público |
+| 2026-10-17 23:15 | commit `b84984e` | [2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09](2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09/ficha.md) | versión anterior | Suma el atlas de las referencias (R-09) |
+| 2026-10-18 02:41 | commit `976fbf0` | [2026-10-18_0241_976fbf0_baja-las-imagenes-del-atlas-y-rehace-r](2026-10-18_0241_976fbf0_baja-las-imagenes-del-atlas-y-rehace-r/ficha.md) | versión vigente | Baja las imágenes del atlas y rehace R-09 |

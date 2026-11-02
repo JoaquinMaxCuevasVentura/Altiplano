@@ -1,0 +1,232 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Encargo editorial de Contenida</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&display=swap">
+<style>
+/* Una columna, como una ficha del proyecto: el rótulo a máquina, el encargo en un recuadro que se abre abajo (el desagüe). */
+:root {
+  --papel: #f6f4ee;
+  --hoja: #fbfaf6;
+  --tinta: #1d1c1a;
+  --gris: #6b675f;
+  --filete: #cfcac0;
+  --violeta: #4a2470;
+  --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --papel: #171615; --hoja: #1f1e1c; --tinta: #ebe7de; --gris: #a39e94; --filete: #3d3b36; --violeta: #c3b2e0; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --papel: #171615; --hoja: #1f1e1c; --tinta: #ebe7de; --gris: #a39e94; --filete: #3d3b36; --violeta: #c3b2e0; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body {
+  background: var(--papel); color: var(--tinta);
+  font-family: var(--serif); font-size: 18px; line-height: 1.5; font-weight: 300;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 780px; margin: 0 auto; display: grid; gap: 30px; }
+.rotulo { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin: 0; }
+h1 { font-weight: 300; font-size: clamp(36px, 7vw, 58px); line-height: 1; letter-spacing: -.01em; margin: 6px 0 0; text-wrap: balance; }
+.bajada { font-style: italic; font-weight: 400; color: var(--gris); margin: 12px 0 0; max-width: 60ch; }
+h2 { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin: 0 0 10px; }
+ol.pasos { margin: 0; padding-left: 1.4em; display: grid; gap: 8px; max-width: 66ch; }
+ol.pasos li::marker { font-family: var(--mono); color: var(--violeta); }
+code { font-family: var(--mono); font-size: .86em; overflow-wrap: anywhere; }
+.barra { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+button {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--papel); background: var(--tinta); border: 1px solid var(--tinta); padding: 9px 14px; cursor: pointer;
+}
+button:hover { background: var(--violeta); border-color: var(--violeta); }
+button:focus-visible { outline: 2px solid var(--violeta); outline-offset: 3px; }
+.estado { font-family: var(--mono); font-size: 13px; color: var(--violeta); min-height: 1.4em; margin: 0; }
+.recuadro { position: relative; background: var(--hoja); border: 1px solid var(--filete); border-bottom: 0; }
+.recuadro::after {      /* toda forma cerrada se abre abajo, en su punto más bajo */
+  content: ""; position: absolute; left: -1px; right: -1px; bottom: 0; height: 1px;
+  background: linear-gradient(to right, var(--filete) calc(50% - 14px), transparent calc(50% - 14px),
+                                        transparent calc(50% + 14px), var(--filete) calc(50% + 14px));
+}
+pre#prompt {
+  margin: 0; padding: 22px clamp(14px, 3.5vw, 30px) 28px; min-width: 0;
+  font-family: var(--mono); font-size: 14.5px; line-height: 1.55; color: var(--tinta);
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.nota { font-size: 15px; color: var(--gris); margin: 0; max-width: 66ch; }
+</style>
+
+<main>
+  <header>
+    <p class="rotulo">Contenida · para GPT Astra 6</p>
+    <h1>Encargo editorial</h1>
+    <p class="bajada">El prompt para que lea todo el proyecto y diseñe, con su propio criterio, el documento editorial: estilo suizo, en la línea del proyecto o mejorándola.</p>
+  </header>
+
+  <section aria-labelledby="como">
+    <h2 id="como">Cómo usarlo</h2>
+    <ol class="pasos">
+      <li>En ChatGPT, conecta GitHub o usa el modo que navega la web, y apúntalo al repositorio en la rama <code>claude/fervent-lovelace-exgqzl</code>. La rama por defecto es la del artículo y no tiene <i>Contenida</i>.</li>
+      <li>Adjunta en el mismo mensaje las cinco imágenes de referencia, en este orden: el guion, HEAD Genève, las páginas de los noventa, el catálogo de cine y el libro coreano.</li>
+      <li>Pega el prompt.</li>
+      <li>Si no puede entrar al repositorio, súbele los dos zips de entregables: documentos e imágenes.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="texto">
+    <div class="barra">
+      <h2 id="texto" style="margin:0">El prompt</h2>
+      <button type="button" id="copiar">Copiar el prompt</button>
+      <p class="estado" id="estado" role="status"></p>
+    </div>
+  </section>
+
+  <div class="recuadro"><pre id="prompt"># Encargo: el documento editorial de *Contenida*
+
+Te pido dos cosas: que leas a fondo un proyecto tipográfico y que, con tu propio criterio, diseñes el documento editorial que lo cuenta. Te doy el material, cinco referencias visuales y unos pocos límites que no se negocian. Lo demás lo decides tú: el formato, el índice, la retícula, las letras, el color, qué entra y qué queda afuera. Si algo del proyecto no te convence, dilo: me sirve más tu criterio que tu acuerdo.
+
+## El proyecto, en pocas líneas
+
+*Contenida: acciones para componer una voz* es una tipografía en homenaje a *Contener una ruina: acciones para desenterrar una voz*, obra de Rebeca Paz Prada con CreaciónxAcuerpamiento (La Paz, 22 de agosto de 2026).
+
+- Las letras salen del pie de la lámina que Rebeca usó.
+- Lo hallado (30 signos) y lo reconstruido (25) se distinguen siempre: línea continua y punteado.
+- La caja tiene 56 celdas, una letra por celda.
+- Las letras son placas de papel de aluminio repujado, sueltas como tipos móviles: 119 placas.
+- No hay Regular. Los estilos son estados de la letra: calco, placa, cinta, frotado, agua y voz.
+- Primero es analógico; lo digital, solo si cierra.
+- Hay además una propuesta hecha con código (la simulación, «la propuesta de la máquina»), para confrontarla con la de la mano. No entra en la caja ni en la fuente.
+
+## Dónde está el material
+
+- Repositorio público: https://github.com/JoaquinMaxCuevasVentura/Altiplano
+- **Trabaja en la rama `claude/fervent-lovelace-exgqzl`.** La rama por defecto es la de otro trabajo (un artículo) y no tiene este material: https://github.com/JoaquinMaxCuevasVentura/Altiplano/tree/claude/fervent-lovelace-exgqzl
+- Si no puedes navegarla, descárgala entera: https://github.com/JoaquinMaxCuevasVentura/Altiplano/archive/refs/heads/claude/fervent-lovelace-exgqzl.zip
+- El proyecto está en `tipografia/`. Lo demás del repositorio (`articulo/`, `analisis/`) es otro trabajo: no lo mezcles.
+- Empieza por `tipografia/README.md`, que es el mapa. Después lee:
+  - los documentos `01` a `10`: la obra, las dos tesis de referencia, el sistema, la anatomía, la gramática, el taller, lo digital, la ética, Posnansky, los nombres, el manuaje y las imágenes de dominio público;
+  - `informe/contenida_informe_de_decisiones.pdf` (42 páginas, con seis mapas). Es el texto más completo y puede ser la columna del documento, o no;
+  - las láminas de exposición (`laminas/contenida_laminas.pdf`, 17);
+  - los planos de la anatomía (`planos/contenida_planos.pdf`, 11 en A3);
+  - la taxonomía de las referencias, con un atlas (`taxonomia/contenida_taxonomia.pdf`, 10 en A3);
+  - los esquemas de `esquemas/`: la caja, la pauta, la ficha y la cadena de estados;
+  - la propuesta de la máquina: `simulacion/informe.md`, con sus imágenes en `simulacion/salida/`;
+  - los textos de `textos/`: el poema, el pie de la lámina y el inventario;
+  - `aplicacion/` y `repujado/`, que son páginas web; ábrelas si puedes.
+- Si no puedes entrar, dímelo y te subo los entregables en dos zips.
+
+## Las referencias visuales
+
+Te adjunto cinco imágenes. Analízalas antes de proponer. Esta es mi lectura, para que no las confundas; la tuya puede ser otra:
+
+1. **Un libro con forma de guion.** Texto mecanografiado, fotos chicas con código de tiempo y un índice en el margen. El documento como transcripción.
+2. **Un cuadernillo de HEAD Genève** sobre diseño gráfico y diplomacia cultural. Una grotesca grande y apretada sobre un documento de archivo (una guía aérea de Swissair a Dakar), texto girado en los bordes, blanco y negro.
+3. **Páginas experimentales de los noventa** («PAST (in)tense / future (im)PERFECT»). Contrastes de escala, columnas que se pisan, collage y un bloque de mayúsculas espaciadas donde las palabras se cortan donde cae la retícula.
+4. **El catálogo de un festival de cine.** Fotogramas en una retícula modular, letras grandes como señales de sección, capítulos con mucho aire, columnas bilingües y un índice de nombres y páginas.
+5. **Un libro coreano sobre la vida cotidiana en Japón.** Fotografía de objetos en blanco y negro, mucho blanco, columnas angostas y rótulos verticales en el borde.
+
+Lo que tienen en común:
+
+- papel blanco roto, blanco y negro;
+- retícula estricta y composición asimétrica;
+- letra chica con márgenes amplios;
+- los datos (índices, códigos de tiempo, números de página) como parte del diseño.
+
+Algunas cruzan con el proyecto. La caja es una retícula de una letra por celda. Las fichas y el inventario son índices. El pie y la lámina son documentos de archivo. No te pido que las copies: tómalas como una conversación.
+
+## La línea estética que ya existe
+
+Es un punto de partida, no una camisa de fuerza.
+
+- **Los colores son materiales:**
+  - papel `#f6f4ee`;
+  - tinta `#1d1c1a`;
+  - violeta `#4a2470`, la tinta del esténcil y lo reconstruido;
+  - lila `#b9a6d6`, el agua;
+  - grafito `#55534e`;
+  - plata `#a7a9a6`, el aluminio;
+  - hueso `#e4d9bd`, la cinta.
+- **Las letras** tienen licencia SIL OFL y están en `tipografia/laminas/fuentes/`:
+  - Newsreader, para leer;
+  - Courier Prime, a máquina: lo que ya estaba escrito, como el pie, el poema y los datos;
+  - La Belle Aurore, en los mapas: a mano.
+- **Reglas que ya funcionan en las láminas y los mapas:**
+  - lo continuo es lo hallado y lo punteado, lo reconstruido;
+  - toda forma cerrada se abre abajo, en su punto más bajo (el desagüe);
+  - a máquina va lo que ya estaba escrito, y a mano, lo que se hace con eso.
+- **Formatos:**
+  - láminas 4:3 sobre una retícula de 16 × 12 módulos;
+  - planos y taxonomía en A3 apaisado;
+  - informe en A4.
+
+Puedes conservar, cambiar o mejorar todo esto. Si el estilo suizo no le sirve al proyecto, o le sirve solo en parte, dilo y explica por qué.
+
+## Lo que no se negocia
+
+1. **Ni fotos ni videos de la obra de Rebeca ni de su cuerpo** sin su permiso escrito. Donde harían falta, deja un espacio marcado: «pendiente de permiso».
+2. **Lo que hizo la máquina se rotula siempre como propuesta de la máquina:** las simulaciones, las imágenes y la gramática en código. Ninguna de esas formas es la letra ni se usa para componer texto: la tipografía todavía no existe; las letras de la caja las hace la mano.
+3. **Los motivos de Tiwanaku son referencia visual.** Nunca van sobre las letras ni como ornamento.
+4. **La tipografía no se llama *Kochamama*.** No se usan palabras aymaras ni quechuas como nombre de marca. Los nombres del documento `08` son propuestas: no los des por decididos.
+5. **Lo ajeno se cita y no se reproduce entero:** las tesis, Posnansky, los artículos. Las imágenes de dominio público llevan su licencia y su fuente. El borrador inédito de Cárcamo (documento `09`) no se cita.
+6. **El verde es solo luz,** la del celofán de la obra: nunca tinta.
+7. **No es un producto comercial.** Su primera lectora es Rebeca: el proyecto empieza por su acuerdo (Acción 0).
+8. **El colofón declara la asistencia de IA:** la del proyecto (documento `06`, §6.3) y la tuya.
+9. **No uses Are.na.**
+
+## Lo que te pido
+
+1. **Lectura.** Explica:
+   - qué es el proyecto y para quién sería este documento;
+   - qué está fuerte;
+   - qué está flojo o se contradice;
+   - qué le falta a quien lo lee por primera vez.
+
+   Cita archivos y páginas.
+2. **Propuesta editorial.** Dos o tres direcciones distintas y cuál recomiendas, con su porqué. Para la recomendada:
+   - el concepto y el lector;
+   - el formato y el papel;
+   - la retícula;
+   - las letras, con su licencia;
+   - el color;
+   - cómo se tratan las imágenes y sus pies;
+   - el índice, con su ritmo y una cantidad aproximada de páginas;
+   - cómo mejora la línea estética del proyecto.
+
+   Muestra dos a cuatro dobles páginas.
+3. **El documento.** Entrega:
+   - un PDF listo para imprimir;
+   - los archivos editables;
+   - la lista de imágenes, con su origen en el repositorio y su estado (propia, simulación, dominio público o pendiente de permiso);
+   - un manual breve del sistema editorial, para que se pueda continuar.
+
+Escribe en castellano. Si no puedes esperar mi respuesta entre una fase y otra, elige tú y explica por qué. No modifiques el repositorio: entrega los archivos aquí. No inventes datos ni citas: si algo no se puede leer o no está claro, dilo. Termina con las preguntas que solo yo puedo responder.</pre></div>
+
+  <p class="nota">Es abierto a propósito: le da el material, las referencias y los límites que vienen del acuerdo con Rebeca y de la ética del proyecto, y le deja el formato, el índice, la retícula, las letras y el color.</p>
+</main>
+
+<script>
+(function () {
+  const boton = document.getElementById("copiar"), estado = document.getElementById("estado"), texto = document.getElementById("prompt");
+  function seleccionar() {
+    const r = document.createRange();
+    r.selectNodeContents(texto);
+    const s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+    estado.textContent = "Quedó seleccionado: cópialo desde el menú o con Ctrl+C.";
+  }
+  boton.addEventListener("click", function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto.textContent).then(function () {
+        estado.textContent = "Copiado. Pégalo en ChatGPT junto con las cinco imágenes.";
+      }, seleccionar);
+    } else {
+      seleccionar();
+    }
+  });
+})();
+</script>
+
+</body></html>

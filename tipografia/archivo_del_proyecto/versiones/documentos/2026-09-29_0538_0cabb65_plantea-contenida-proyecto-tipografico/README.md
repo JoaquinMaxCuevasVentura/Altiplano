@@ -1,0 +1,53 @@
+# *Contenida*: acciones para componer una voz
+
+Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterrar una voz*, de Rebeca Paz Prada con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026).
+
+**Referencias de método:**
+
+- Vaishnavi Mahendran, *EthnoGraphemes: Scripts as Vessels for Culture* (RISD, 2020);
+- Osmond Tshuma, *Afrography: Scripting Futures Anchored in Culture & Community* (RISD, 2025).
+
+**El orden:** primero analógico. Después, digital, solo si cierra.
+
+## La idea en siete líneas
+
+1. **Las letras salen del pie de la lámina que Rebeca usó.** Ella tomó lo que la lámina muestra; la tipografía toma lo que la lámina dice.
+2. **Lo hallado y lo reconstruido se distinguen siempre**, en línea continua y en punteado. De 55 signos, el pie da 30 y hay que reconstruir 25: entre ellos, las diez cifras, porque el pie no trae ningún número, y la z de «voz».
+3. **La caja tiene 56 celdas**, las de la retícula de la cabeza en la lámina. Lo que no cabe se ve como celda vacía: la celda de la lámina, calcada a mano.
+4. **La pauta es la piscina.** Una letra por azulejo, la tesela como unidad y la junta como espacio entre letras. Monoespaciada, solo caja baja: la letra de la mano, no la del monumento.
+5. **Las letras son placas de papel de aluminio repujado**, el material de Rebeca. Sueltas, como tipos móviles: 119 placas, 94 de ellas para componer el poema verso a verso sin repetir placa.
+6. **No hay Regular.** Los estilos son estados de la letra: *Calco*, *Placa*, *Piel*, *Copia* (el peso se mide en copias de hectógrafo), *Agua*, *Voz* y *Azulejo*.
+7. **Lo digital es un estado más.** Vuelve a pasar por el agua y vuelve a ser placa: «termina y empieza».
+
+![La caja de 8 × 7](esquemas/caja_8x7.png)
+
+## Archivos
+
+| Archivo | Contenido |
+|---|---|
+| `01_la_obra_decision_por_decision.md` | Las 16 decisiones de la obra, con su procedencia. Lo que muestran los videos y las fotos. Lo que se deja afuera |
+| `02_lo_que_se_toma_de_dos_tesis.md` | Qué se toma de *EthnoGraphemes* y de *Afrography*, con citas cotejadas, qué no y dónde el proyecto se aparta de las dos |
+| `03_sistema_contenida.md` | **El sistema.** Nombre, nueve reglas, el cuadro de correspondencias (cada decisión de la obra y su traducción), el pie, la caja, la pauta, la familia, la póliza, el color, el signo final y el colofón |
+| `04_taller_analogico.md` | **El taller.** Trece acciones en tres cuadernos (*Desenterrar*, *Contener*, *Devolver*), con materiales, pasos, registro y seguridad |
+| `05_migracion_digital.md` | Cuándo es coherente migrar, cómo digitalizar, la especificación de la fuente, el espécimen web y cómo cierra el ciclo |
+| `06_etica_fuentes_y_pendientes.md` | Consentimiento, créditos, lo verificado y lo que falta verificar, y los pendientes en orden |
+| `textos/pie_de_lamina.txt`, `textos/poema.txt` | Los dos textos fuente |
+| `textos/inventario.md` | Hallados, reconstruidos, la caja, la póliza y los versos (generado) |
+| `inventario.py` | Recalcula el inventario desde los textos |
+| `esquemas/` | La caja, la pauta de calco 1:1, la ficha de hallazgo, la cadena de estados y los montajes con agua (SVG y PNG), y `plantillas_imprimibles.pdf` |
+| `esquemas/generar_esquemas.py` | Regenera los esquemas con las medidas reales de la piscina |
+
+## Estado
+
+- **Hecho:** el plan completo del proyecto y las plantillas para empezar el taller.
+- **Sin hacer:** ninguna letra. Las letras las hace la mano, desde la Acción 3.
+- **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
+
+## Regenerar
+
+```bash
+pip install pillow
+python3 tipografia/inventario.py                    # después de corregir textos/pie_de_lamina.txt
+python3 tipografia/esquemas/generar_esquemas.py \
+  --azulejo 150 --teselas 6 --junta 3               # con las medidas reales, en mm; necesita Chromium (CHROME)
+```

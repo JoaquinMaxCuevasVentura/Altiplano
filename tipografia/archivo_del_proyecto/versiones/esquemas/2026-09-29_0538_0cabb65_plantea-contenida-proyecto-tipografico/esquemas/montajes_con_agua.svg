@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" font-family="'Courier New', Courier, 'Liberation Mono', monospace">
+<rect width="1200" height="860" fill="#ffffff"/>
+<defs><marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#39c97e"/></marker></defs>
+<text x="40.00" y="40.00" font-size="24" fill="#1f1f1f" text-anchor="start" font-weight="bold" >Montajes con agua</text>
+<text x="40.00" y="64.00" font-size="13" fill="#6d6d6d" text-anchor="start" font-weight="normal" >Nada con enchufe sobre el agua ni al lado de la bandeja: lámpara y parlante a pilas.</text>
+<rect x="40" y="90" width="540" height="350" fill="none" stroke="#f3f2ec" stroke-width="2"/>
+<rect x="620" y="90" width="540" height="350" fill="none" stroke="#f3f2ec" stroke-width="2"/>
+<rect x="40" y="470" width="540" height="350" fill="none" stroke="#f3f2ec" stroke-width="2"/>
+<rect x="620" y="470" width="540" height="350" fill="none" stroke="#f3f2ec" stroke-width="2"/>
+<text x="56.00" y="118.00" font-size="16" fill="#1f1f1f" text-anchor="start" font-weight="bold" >A · Agua</text>
+<rect x="480" y="150" width="70" height="240" fill="#f3f2ec" stroke="#a4a39b" stroke-width="1.2"/>
+<line x1="480" y1="176" x2="550" y2="176" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="202" x2="550" y2="202" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="228" x2="550" y2="228" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="254" x2="550" y2="254" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="280" x2="550" y2="280" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="306" x2="550" y2="306" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="332" x2="550" y2="332" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="358" x2="550" y2="358" stroke="#a4a39b" stroke-width="0.8"/>
+<line x1="480" y1="384" x2="550" y2="384" stroke="#a4a39b" stroke-width="0.8"/>
+<path d="M220,340 L228,366 L382,366 L390,340" fill="none" stroke="#161616" stroke-width="2"/>
+<path d="M223,348 L228,365 L382,365 L387,348 Z" fill="#cfe9ef" opacity="0.9"/>
+<line x1="240" y1="362" x2="370" y2="362" stroke="#7d8388" stroke-width="4"/>
+<rect x="80" y="210" width="46" height="26" rx="4" fill="#161616"/>
+<line x1="126" y1="226" x2="302" y2="358" stroke="#39c97e" stroke-width="2.5" marker-end="url(#fa)"/>
+<line x1="304" y1="356" x2="478" y2="208" stroke="#39c97e" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="480" y="176" width="70" height="70" fill="#39c97e" opacity="0.35"/>
+<text x="70.00" y="200.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >lámpara a pilas</text>
+<text x="220.00" y="408.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >un dedo de agua; la placa en el fondo</text>
+<text x="465.00" y="166.00" font-size="11" fill="#6d6d6d" text-anchor="end" font-weight="normal" >llega a la pared temblando</text>
+<text x="465.00" y="181.00" font-size="11" fill="#6d6d6d" text-anchor="end" font-weight="normal" >y al revés</text>
+<text x="636.00" y="118.00" font-size="16" fill="#1f1f1f" text-anchor="start" font-weight="bold" >B · Voz</text>
+<path d="M790,280 L798,306 L982,306 L990,280" fill="none" stroke="#161616" stroke-width="2"/>
+<path d="M793,288 L798,305 L982,305 L987,288 Z" fill="#cfe9ef" opacity="0.9"/>
+<rect x="845" y="308" width="90" height="60" rx="6" fill="#161616"/>
+<circle cx="890" cy="338" r="18" fill="none" stroke="#b8bcc0" stroke-width="3"/>
+<path d="M834,302 L834,376 L946,376 L946,302" fill="none" stroke="#6d6d6d" stroke-dasharray="3 3"/>
+<path d="M862,290 q14,-4.666666666666667 28,0 q14,4.666666666666667 28,0" fill="none" stroke="#39c97e" stroke-width="1.5"/>
+<path d="M834,290 q28,-9.333333333333334 56,0 q28,9.333333333333334 56,0" fill="none" stroke="#39c97e" stroke-width="1.5"/>
+<path d="M806,290 q42,-14.0 84,0 q42,14.0 84,0" fill="none" stroke="#39c97e" stroke-width="1.5"/>
+<text x="650.00" y="408.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >parlante a pilas, dentro de una bolsa, bajo la bandeja</text>
+<text x="650.00" y="424.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >tu voz leyendo el poema: se guarda lo que hace en el agua, no la grabación</text>
+<text x="56.00" y="498.00" font-size="16" fill="#1f1f1f" text-anchor="start" font-weight="bold" >C · Pliego de agua</text>
+<line x1="260" y1="530" x2="530" y2="530" stroke="#6d6d6d" stroke-width="1"/>
+<line x1="280" y1="530" x2="280" y2="560" stroke="#6d6d6d"/>
+<line x1="510" y1="530" x2="510" y2="560" stroke="#6d6d6d"/>
+<rect x="270" y="560" width="250" height="6" fill="#1f1f1f"/>
+<text x="255.00" y="562.00" font-size="11" fill="#6d6d6d" text-anchor="end" font-weight="normal" >pliego en espejo,</text>
+<text x="255.00" y="577.00" font-size="11" fill="#6d6d6d" text-anchor="end" font-weight="normal" >boca abajo</text>
+<path d="M260,720 L268,746 L522,746 L530,720" fill="none" stroke="#161616" stroke-width="2"/>
+<path d="M263,728 L268,745 L522,745 L527,728 Z" fill="#cfe9ef" opacity="0.9"/>
+<circle cx="240" cy="668" r="11" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+<text x="222.00" y="672.00" font-size="11" fill="#6d6d6d" text-anchor="end" font-weight="normal" >quien lee se asoma</text>
+<line x1="248" y1="676" x2="290" y2="728" stroke="#39c97e" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="290" y1="728" x2="425" y2="566" stroke="#39c97e" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="70.00" y="788.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >el texto solo se lee en el agua; si alguien la toca, se deforma</text>
+<text x="636.00" y="498.00" font-size="16" fill="#1f1f1f" text-anchor="start" font-weight="bold" >D · Hectógrafo</text>
+<rect x="650" y="540" width="80" height="100" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="672" y="566" width="36" height="48" fill="none" stroke="#4a2470" stroke-width="3"/>
+<text x="690.00" y="660.00" font-size="11" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >matriz</text>
+<path d="M760,590 L770,620 L910,620 L920,590" fill="#e9dcc0" stroke="#161616" stroke-width="2"/>
+<text x="840.00" y="660.00" font-size="11" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >bandeja de gelatina</text>
+<rect x="940" y="530" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="954" y="546" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.95"/>
+<text x="968.00" y="620.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >1</text>
+<rect x="1006" y="530" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="1020" y="546" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.77"/>
+<text x="1034.00" y="620.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >5</text>
+<rect x="1072" y="530" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="1086" y="546" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.59"/>
+<text x="1100.00" y="620.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >10</text>
+<rect x="940" y="622" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="954" y="638" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.41"/>
+<text x="968.00" y="710.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >20</text>
+<rect x="1006" y="622" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="1020" y="638" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.23"/>
+<text x="1034.00" y="710.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >30</text>
+<rect x="1072" y="622" width="56" height="76" fill="#ffffff" stroke="#a4a39b"/>
+<rect x="1086" y="638" width="28" height="40" fill="none" stroke="#4a2470" stroke-width="3" opacity="0.06"/>
+<text x="1100.00" y="710.00" font-size="10" fill="#6d6d6d" text-anchor="middle" font-weight="normal" >…</text>
+<text x="650.00" y="788.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >cada copia pierde tinta; la bandeja bebe la matriz</text>
+<text x="650.00" y="804.00" font-size="11" fill="#6d6d6d" text-anchor="start" font-weight="normal" >y en uno o dos días queda limpia para empezar otra vez</text>
+</svg>
