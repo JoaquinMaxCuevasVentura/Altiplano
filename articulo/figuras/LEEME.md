@@ -40,7 +40,7 @@ Para explorar cada pastel con GPT Image 2 hay seis guías sin texto en `analisis
      - en a), agrega GPT Image 2 (OpenAI).
    - Mide casi lo mismo que lo que sale (`analisis/17_estilo_y_prompts_gpt_image.md`, §17.7).
 5. No vuelvas a correr `generar_figuras.py` sobre un número que ya sea fotografía.
-6. Regenera el Word (`python3 articulo/generar_docx.py`) y mira la extensión que informa. Ya no hay un límite fijo: hoy son 65.722 caracteres y 10.946 palabras, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`).
+6. Regenera el Word (`python3 articulo/generar_docx.py`) y mira la extensión que informa. Ya no hay un límite fijo: hoy son 74.594 caracteres y 12.609 palabras, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`).
 
 ## Las imágenes de dominio público (imágenes 1-5)
 

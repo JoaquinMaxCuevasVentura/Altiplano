@@ -5,12 +5,12 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 ## El proyecto
 
 - **El artículo.** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura. Lee la novela *Altiplano* (1945) desde la arquitectura y el dibujo.
-- **Su estado** (18 de octubre de 2026):
-  - versión final de 65.722 caracteres y 10.946 palabras, 33 páginas en Word;
-  - 153 citas de la novela entre comillas y 2 en bloque;
-  - 34 obras en la bibliografía;
+- **Su estado** (2 de noviembre de 2026):
+  - versión final de 74.594 caracteres y 12.609 palabras, 38 páginas en Word, reescrita el 2 de noviembre (`analisis/33`). El autor la reescribirá con su voz;
+  - 157 citas de la novela entre comillas y 2 en bloque;
+  - 36 obras en la bibliografía;
   - ocho figuras y, en serie aparte, cinco imágenes de dominio público.
-- **El destino.** Sin elegir. La primera candidata es la revista *Atenea*, que pide recortar unas 2.450 palabras.
+- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 4.100 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
 - **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
 - **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
 
@@ -20,10 +20,10 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 |---|---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | El texto fuente del artículo | Sí, solo con cambios aprobados por el autor |
 | `articulo/articulo_cosecha_de_piedras.docx` | El Word, generado desde el `.md` | No a mano: se regenera |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 541ae4b, el anterior a las imágenes | No a mano |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
 | `articulo/figuras/` | Las ocho figuras, las cinco imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y cinco documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/31_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/33_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
@@ -35,8 +35,10 @@ La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la ra
 1. **No inventes citas, páginas, fuentes ni hallazgos.** Cada cita tiene que existir tal cual en su fuente y en la página indicada. Si no puedes comprobarla, no la añadas: déjala como pendiente y dilo.
 2. **Las fuentes no están en el repositorio.** Faltan la transcripción paginada de la novela y los OCR de los libros, y el repositorio es público, así que no los subas. Sin ellas no se pueden volver a comprobar las citas. No cambies una cita salvo que el autor te dé la fuente.
 3. **Las letras de canciones no se copian enteras.** Se citan uno o dos versos con su referencia. La de «Pyramid of Bones» sigue el librillo de la edición japonesa de *Virtue*. La de «Father Electricity» está pendiente de cotejo.
-4. **Lenguaje llano, en español.**
-   - Frases cortas; los términos técnicos se explican.
+4. **Lenguaje llano, en español, que no suene a IA.**
+   - Los términos técnicos se explican.
+   - Oraciones de largo variado. No encadenes frases cortas.
+   - Evita los patrones de redacción de la IA que se corrigieron el 2 de noviembre (`analisis/33`): los dos puntos que «revelan» algo, el «no es X, sino Y», la frase redonda al final de cada párrafo, las series de tres y el vocabulario inflado (*crucial*, *clave*, *subrayar*).
    - Comillas latinas «», y “ ” dentro de ellas.
    - Coma decimal y punto en los millares (61.705).
 5. **Formato de las citas.** Autor y año con página: «(Botelho Gosálvez, 1982 [1945]: 96)», y luego «(ibid.: 102)». Las omisiones dentro de una cita van como «[...]». Mantén las cadenas de *ibid.* correctas si mueves texto.

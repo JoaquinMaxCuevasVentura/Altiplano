@@ -1,11 +1,12 @@
 # Fichero de pasajes de *Altiplano*
 
-Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», ordenadas por página, para cotejarlas con el libro impreso. Versión final, 11 de octubre de 2026.
+Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», ordenadas por página, para cotejarlas con el libro impreso. Versión final, 11 de octubre de 2026; puesta al día el 2 de noviembre con la versión final reescrita del artículo.
 
 ## Cómo usarlo
 
-- **Qué trae.** Las 153 citas entre comillas y las 2 citas en bloque del artículo, en 154 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
+- **Qué trae.** Las 157 citas entre comillas y las 2 citas en bloque del artículo, en 158 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
 - **Qué está comprobado.** Cada cita se comprobó contra una transcripción digital de la novela: existe tal cual, con las correcciones de la sección 2, y está en la página indicada. Las cinco citas breves del Cuadro 1 y los datos parafraseados (cifras, orden de los hechos, quién dice qué) se revisaron aparte.
+- **Las cuatro citas que entraron el 2 de noviembre** (pp. 4, 33 y 34) y la de la p. 155, que volvió a su forma completa, se habían comprobado contra la transcripción en etapas anteriores (`analisis/06`, `13`, `16`, `29` y `30`; el detalle, en `analisis/33`). La transcripción ya no estaba en el entorno de trabajo el 2 de noviembre, así que no se volvieron a comprobar ese día.
 - **Qué falta.** Compararlas con el libro impreso. Marca la casilla ☐ de cada fila cuando lo hagas. Empieza por las pp. 88-107 (sección 1).
 - **Si encuentras una diferencia,** corrige la cita en `articulo/articulo_cosecha_de_piedras.md` y regenera el Word con `python3 articulo/generar_docx.py`.
 
@@ -67,6 +68,8 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 
 | Pág. | Cita | Dónde | Impreso |
 |------|----------------------------------------------------------|----------|--------|
+| 4 | «entre junio y agosto de 1940» | §1 | ☐ |
+| 4 | «cuyo argumento tiene un sorprendente parecido al de “Altiplano”» | §1 | ☐ |
 | 5 | «ama al indio» | §1 | ☐ |
 | 5 | «es, en realidad, Warisata» | §1, §2 | ☐ |
 | 6 | «en la planta de una alta y rojiza peñería» | §1 | ☐ |
@@ -105,7 +108,9 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 31 | «la mano que les acaricie» | §3 | ☐ |
 | 31 | «morada de piojos y pulgas» | §3 | ☐ |
 | 32 | «cerca del fuego» | §3 | ☐ |
+| 33 | «Que Dios les alumbre el camino y que en las apachetas no les detenga el Supaya» | §5 | ☐ |
 | 34 | «con la madera del arado en un hombro y las correas del yugo en las manos» | §2 | ☐ |
+| 34 | «desde el portal de su chujlla» | §3 | ☐ |
 | 35 | «amontonó piedras sobre el cadáver» | §1 | ☐ |
 | 35 | «una chujlla que estaba abandonada cerro arriba» | §3 | ☐ |
 | 36 | «amparados por las Cédulas Reales» | §3 | ☐ |
@@ -205,7 +210,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 154 | «quebróse la viga del techo» | §5 | ☐ |
 | 154 | «nadie sospechó el crimen» | §5 | ☐ |
 | 154 | «informe montón» | §8 | ☐ |
-| 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror» | §7 | ☐ |
+| 155 | «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror de la mala época» | §7 | ☐ |
 | 155 | «de los cuatro rumbos de la pampa» | §7 | ☐ |
 | 156 | «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» | §7 | ☐ |
 | 156 | «los mismos hombres eran quienes tiraban el arado» | §7 | ☐ |

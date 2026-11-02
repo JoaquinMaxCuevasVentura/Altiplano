@@ -4,26 +4,26 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 
 **Si trabajas con un asistente de IA (Codex u otro):** sus instrucciones están en `AGENTS.md`.
 
-## Entregables (al 18 de octubre de 2026)
+## Entregables (al 2 de noviembre de 2026)
 
 **Los archivos finales están en `entregables/`**, con su `LEEME.md`: el artículo en Word y en PDF, y cinco documentos en Markdown y en Word para enviarlo. Son versiones limpias, sin el historial de trabajo.
 
 | Entregable | Archivo final | Estado |
 |---|---|---|
-| **El artículo** | `entregables/01_articulo_cosecha_de_piedras.docx` y `.pdf` (fuente: `articulo/articulo_cosecha_de_piedras.md`) | Versión final del 10 de octubre, con la cita de «Pyramid of Bones» cotejada el 11 con el librillo japonés de *Virtue* y, desde el 18, cinco imágenes de dominio público: 65.722 caracteres, 10.946 palabras, 33 páginas en Word; 153 citas de la novela verificadas; 34 entradas de bibliografía |
+| **El artículo** | `entregables/01_articulo_cosecha_de_piedras.docx` y `.pdf` (fuente: `articulo/articulo_cosecha_de_piedras.md`) | Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y evita los patrones de escritura de la IA (`analisis/33`). El autor la reescribirá con su voz. 74.594 caracteres, 12.609 palabras, 38 páginas en Word; 157 citas de la novela; 36 entradas de bibliografía; ocho figuras y cinco imágenes de dominio público |
 | **La lista de envío** | `entregables/02_lista_de_envio` | Lo hecho y lo que falta, en orden: epígrafe, declaración de IA, pasteles, cotejo, datos por confirmar, revista, versión anónima y envío. Sale de `analisis/04_verificaciones_y_pendientes.md` |
 | **La guía de los seis pasteles** | `entregables/03_guia_de_los_seis_pasteles` | Versión final de `analisis/05b_guia_seis_pasteles.md`, con sus citas de la novela comprobadas otra vez |
-| **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 153 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
+| **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 157 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
 | **Las revistas candidatas** | `entregables/05_revistas_candidatas` | Resumen final de `reports/Convocatorias abiertas para el artículo.md`: diez revistas, recortes, barreras y qué hacer antes de enviar |
 | **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; resumen en `entregables/06_atlas_de_arena`; registro en `analisis/29_atlas_arena.md` | 38 bloques; el canal de pasteles espera tus escaneos |
 | **La taxonomía visual** | `taxonomia/` y su `LEEME.md`; registro en `analisis/30_taxonomia_visual.md` | 51 imágenes de dominio público (Guaman Poma, Squier, el Public Domain Image Archive y la Library of Congress) clasificadas por material y gesto, en cuatro tableros: el árbol, las fases de la novela, el mapa de fechas y el relato del argumento. Hecha el 18 de octubre. Los tableros no entran al artículo; seis de sus imágenes, sí, como imágenes 1-5 |
 | **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre |
 | **Las cinco imágenes de dominio público** | `articulo/figuras/imagen_1.jpg` a `imagen_5.jpg`; selección y razones en `analisis/31_proyecto_de_imagenes_de_dominio_publico.md` | Serie aparte de las figuras, añadida el 18 de octubre: tres dibujos de Guaman Poma (el escribano; la tejedora y el contador con su khipu; agosto), la Puerta del Sol de Squier y la mina Siglo XX (Library of Congress). Las de Guaman Poma no alcanzan para imprimir: hay que pedirlas a la Biblioteca Real de Dinamarca |
-| **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | 20 cambios respecto de la versión anterior a las imágenes (commit 541ae4b): las cinco imágenes con sus frases y pies, tres *ibid.* que pasan a la cita completa, la bibliografía y la declaración de IA. Rehecho el 18 de octubre |
+| **El Word con cambios marcados** | `articulo/articulo_cosecha_de_piedras_cambios.docx` | Los cambios de la versión final del 2 de noviembre respecto de la anterior (commit 6f9bed8). Marca 914 cambios, porque la redacción es nueva de punta a punta |
 | **Los generadores** | `articulo/generar_docx.py`, `articulo/generar_figuras.py` y `entregables/generar_entregables.py` | Funcionan. Los Word que hacen pasan la validación de esquema |
 | *La versión 3 (alternativa)* | `articulo/articulo_altiplano.md` y `.docx` | Archivada desde el 25 de septiembre; no se actualiza |
 
-Los análisis `01` a `31` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
+Los análisis `01` a `33` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
 
 ## Artículo definitivo
 
@@ -55,12 +55,19 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
   - Lo que calla: el escribano andino de Guaman Poma (§2) y el hilo que sirve para registrar, la tejedora y el khipu (§4).
   - Con qué contrasta: la Puerta del Sol de Squier, con el anciano que el viajero volvió «parte integrante de los monumentos» (§3); la mina Siglo XX (§5); el arado de pie de agosto, hecho para el cuerpo (§7).
   - La selección y sus razones están en `analisis/31_proyecto_de_imagenes_de_dominio_publico.md`.
+- **Gamaliel Churata (desde el 2 de noviembre).** Escritor puneño que vivía en La Paz y defendió la escuela de Warisata en la prensa. Entra por cuatro textos:
+  - una columna de 1936 que pone la escuela en el ayllu y no en la aldea;
+  - otra de 1943 sobre el «crimen cometido con la escuela de Warisata»;
+  - la descripción de una casa del ayllu de Konkachi (1939);
+  - el abecedario pintado en la pared de una chuklla en *El pez de oro* (1957).
+
+  Las fuentes y las cautelas están en `analisis/33_version_final_sin_patrones_de_ia.md`.
 
 | Archivo | Contenido |
 |---|---|
 | `articulo/articulo_cosecha_de_piedras.md` | Texto fuente (Markdown) |
 | `articulo/articulo_cosecha_de_piedras.docx` | Versión Word con las normas: carta, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5 |
-| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios del 18 de octubre (las cinco imágenes de dominio público, sus frases y pies, los *ibid.* ajustados, la bibliografía y la declaración de IA) marcados respecto de la versión anterior (commit 541ae4b), para aceptarlos o rechazarlos uno por uno en Word. Los cambios de la revisión final del 10 de octubre se marcaban respecto del commit 45624ba; esa versión del archivo sigue en el historial |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El artículo con los cambios de la versión final del 2 de noviembre marcados respecto de la anterior (commit 6f9bed8), para aceptarlos o rechazarlos uno por uno en Word. Las versiones anteriores de este archivo, con los cambios del 18 de octubre (respecto de 541ae4b) y del 10 de octubre (respecto de 45624ba), siguen en el historial |
 | `articulo/figuras/` | Las ocho figuras (seis esquemas de encaje y dos diagramas), las cinco imágenes de dominio público y cómo sustituir los esquemas por los escaneos de los pasteles (`LEEME.md`) |
 | `articulo/generar_docx.py` | Regenera el `.docx` e informa la extensión y las palabras de los resúmenes |
 | `articulo/generar_figuras.py` | Regenera las ocho figuras a partir de las notaciones SVG (o solo las que se le indiquen) |
@@ -69,14 +76,14 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 65.722 caracteres con espacios, bibliografía y notas incluidas; unas 10.900 palabras; el Word tiene 33 páginas. Ya no va a *Estudios Bolivianos* y no hay límite fijo: cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
-- **Resúmenes:** resumen de 99 palabras y abstract de 90.
+- **Extensión:** 74.594 caracteres con espacios, bibliografía y notas incluidas; unas 12.600 palabras; el Word tiene 38 páginas. Desde el 2 de noviembre no hay límite: el artículo no responde a ninguna convocatoria. Ya no va a *Estudios Bolivianos*, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
+- **Resúmenes:** resumen de 122 palabras y abstract de 118.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 153 entre comillas y las dos en bloque se comprobaron automáticamente contra la transcripción; existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas. El fichero `analisis/06_fichero_de_pasajes.md` las ordena por página para el cotejo con el impreso.
+- **Citas de la novela:** las 157 entre comillas y las dos en bloque se comprobaron automáticamente contra la transcripción (las cuatro que entraron el 2 de noviembre, en etapas anteriores; `analisis/33`); existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas. El fichero `analisis/06_fichero_de_pasajes.md` las ordena por página para el cotejo con el impreso.
 - **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
@@ -127,6 +134,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/29_atlas_arena.md` | Registro del atlas de Are.na, hecho el 10 y el 11 de octubre: once canales privados (la matriz, nueve por material o tema y uno vacío para los escaneos de los pasteles) y 38 bloques con su ficha; los identificadores de cada canal y bloque; qué herramientas fallaron (el buscador de Are.na pide Premium, un TIFF de Commons, la ficha de la BnF) y cómo se resolvió; los canales ajenos revisados (no se conectó nada); qué huecos cubre cada hallazgo; lo que tienes que mirar o decidir; y cinco propuestas para el artículo, ninguna aplicada (la primera, mencionar el concurso de 1940 en §1) |
 | `analisis/30_taxonomia_visual.md` | Registro de la taxonomía visual, hecha el 18 de octubre. Las fuentes de las 51 imágenes de dominio público (Guaman Poma en la Det Kgl. Bibliotek, Squier en Internet Archive, el Public Domain Image Archive y la Library of Congress), lo que falló (Wikimedia Commons bloqueado) y los derechos de la LoC, confirmados esa tarde y los cuatro tableros de `taxonomia/` |
 | `analisis/31_proyecto_de_imagenes_de_dominio_publico.md` | Propuesta del 18 de octubre: siete imágenes de dominio público de la taxonomía como serie aparte, cada una después de un pasaje del artículo, con su pie y su frase de enlace; las Figuras 1-8 no cambian. Incluye la revisión de las 51 imágenes. Una nota fechada cuenta cómo se aplicó: entraron cinco, por qué quedaron fuera las pilastras y la apacheta, y el hallazgo de Squier sobre el anciano de la Puerta del Sol |
+| `analisis/33_version_final_sin_patrones_de_ia.md` | La versión final del 2 de noviembre. Qué dicen las fuentes sobre los patrones de escritura de la IA y cuánto aparecían en el texto anterior; lo que se recuperó de lo quitado por extensión, con la fuente y el registro de cada cita; lo que aportó Gamaliel Churata; la verificación de cada cita con su página. El análisis 32, de Codex sobre Churata, está en la rama `codex/analisis-churata`, sin unir |
 | `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
 | `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |

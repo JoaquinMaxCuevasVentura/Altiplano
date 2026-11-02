@@ -2,20 +2,20 @@
 
 **«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura.
 
-Estado al 18 de octubre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
+Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
 
 ## El artículo hoy
 
 | Dato | Valor |
 |---|---|
-| Extensión | 65.722 caracteres con espacios y 10.946 palabras, con notas y bibliografía. En Word, 33 páginas (tamaño carta, Times New Roman 12, interlineado 1,5) |
-| Resúmenes | 99 palabras en español y 90 en inglés |
+| Extensión | 74.594 caracteres con espacios y 12.609 palabras, con notas y bibliografía. En Word, 38 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
+| Resúmenes | 122 palabras en español y 118 en inglés |
 | Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
 | Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
 | Figuras | Ocho. Las figuras 1 a 6 son los esquemas de encaje de los seis pasteles; la 7 y la 8, diagramas. Va además el Cuadro 1 |
 | Imágenes | Cinco de dominio público, en serie aparte (imágenes 1-5): tres dibujos de Guaman Poma, un grabado de Squier y una foto de la mina Siglo XX de la Library of Congress |
-| Citas de la novela | 153 entre comillas y 2 en bloque. Todas se comprobaron contra la transcripción: existen tal cual y están en la página indicada |
-| Bibliografía | 34 obras |
+| Citas de la novela | 157 entre comillas y 2 en bloque. Todas se comprobaron contra la transcripción: existen tal cual y están en la página indicada. Las cuatro que entraron el 2 de noviembre se habían comprobado en etapas anteriores (`analisis/33`) |
+| Bibliografía | 36 obras |
 | Destino | Sin elegir. La primera candidata es *Atenea* (véase `05_revistas_candidatas`) |
 
 ## Lo que ya está hecho
@@ -28,13 +28,14 @@ Estado al 18 de octubre de 2026. Aquí está lo que ya se hizo y lo que te toca 
 - [x] Citas de las demás fuentes cotejadas con el texto de cada una, con su página.
 - [x] El pasaje de «Pyramid of Bones» sigue la letra oficial, la del librillo de la edición japonesa de *Virtue*.
 - [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
+- [x] Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y cambia la redacción para que no se lea como un texto de IA (`analisis/33_version_final_sin_patrones_de_ia.md`).
 - [x] Word regenerado con la versión final.
 
 ## Lo que te toca, en orden
 
 ### 1. Leer el artículo en voz alta y hacerlo tuyo
 
-Cambia lo que no suene a ti. Antes de firmar, decide si sostienes cada interpretación. Las que más conviene mirar:
+La versión del 2 de noviembre la redactó Claude a partir de todo lo acumulado, cuidando no caer en los patrones de escritura de la IA. Es una base: reescríbela con tu voz y cambia lo que no suene a ti. Antes de firmar, decide si sostienes cada interpretación. Las que más conviene mirar:
 
 - la escuela de Warisata, que la novela calla (sección 2);
 - los tinterillos, que en la historia también asesoraron a las comunidades (sección 4);
@@ -45,7 +46,8 @@ Cambia lo que no suene a ti. Antes de firmar, decide si sostienes cada interpret
 - el cierre de la Figura 1: el narrador declara cerrada el alma de los comunarios y los ve como estatuas;
 - el *qalachuyma*, que el artículo presenta como parte de un relato de Spedding (sección 7);
 - los cruces con la cultura popular: el apodo «el lobo» del Alcalde y las tres canciones de The Voidz (secciones 2, 3, 4 y 7);
-- las frases que acompañan a las imágenes, sobre todo dos: el anciano que labraba una piedra al pie de la Puerta del Sol y que Squier llegó a ver «como parte integrante de los monumentos» (sección 3), y el arado de pie de Guaman Poma, hecho para el cuerpo, frente al arado de buey de la chujlla (sección 7).
+- las frases que acompañan a las imágenes, sobre todo dos: el anciano que labraba una piedra al pie de la Puerta del Sol y que Squier llegó a ver «como parte integrante de los monumentos» (sección 3), y el arado de pie de Guaman Poma, hecho para el cuerpo, frente al arado de buey de la chujlla (sección 7);
+- lo nuevo del 2 de noviembre: Warisata en el ayllu y no en la aldea, con Churata y Rivera Cusicanqui (sección 2); el abecedario en la pared de una chuklla de *El pez de oro*, frente a las paredes sin letras de los Huanca, y la casa de Konkachi (sección 3); el título como «mojón que cabe en un bolsillo» (sección 3); el horizonte que en aymara es también cimiento, *thaxsi* (Figura 3); el final que «restaura el ciclo» (sección 7), y Churata en el primer límite de las conclusiones.
 
 Si cambias algo, regenera el Word con `python3 articulo/generar_docx.py` y después los entregables con `python3 entregables/generar_entregables.py`.
 
@@ -67,10 +69,11 @@ Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice 
 
 Así figura hoy en el artículo:
 
-> a\) *Herramientas*: Claude (Anthropic) y ChatGPT (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
+> a\) *Herramientas*: Claude (Anthropic), ChatGPT y Codex (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
 
 - **Describe lo que se hizo.** El alcance incluye la redacción de borradores, el trazado de las ocho figuras y la búsqueda de las cinco imágenes porque así se preparó el texto. Las imágenes son históricas: ninguna se hizo con IA.
-- **Si reescribes el artículo con tus palabras** antes de enviarlo, puedes decirlo en el rol.
+- **Si reescribes el artículo con tus palabras** antes de enviarlo, puedes decirlo en el rol. Si no lo reescribes, la declaración tiene que decir que la versión final la redactó una IA a partir de tus decisiones.
+- **Codex (OpenAI)** está en la declaración porque hizo el primer análisis de Churata (`analisis/32`, en la rama `codex/analisis-churata`).
 - **Cuando entren los escaneos de los pasteles,** quita del alcance «el diseño y trazado de los esquemas de encaje (figuras 1-6)». Si las exploraciones con GPT Image 2 influyeron en los pasteles, dilo.
 - **Si redibujas a mano los diagramas 7 y 8,** quítalos también del alcance y cambia sus pies.
 - **Lee la política de IA de la revista elegida.** Al menos una de primera línea, la *Revista Hispánica Moderna*, prohíbe redactar con IA generativa.
@@ -99,9 +102,12 @@ Las cinco imágenes de dominio público ya están en el artículo (`articulo/fig
 
 Usa `04_fichero_de_pasajes`: trae las citas de la novela por página, con una casilla para marcar. Empieza por las pp. 88-107, donde la transcripción repite texto y alguna cita puede estar corrida una página.
 
-Coteja también tres citas tomadas de fuentes escaneadas:
+Coteja también estas citas, tomadas de fuentes escaneadas o de copias digitales:
 
-- Barnadas (1978 [1975]: 84), cuyo OCR estaba muy dañado;
+- Barnadas (1978 [1975]: 84 y 46-47), cuyo OCR estaba muy dañado;
+- Churata, *El pez de oro*, p. 20: la página es la de una versión digital de 2007 y no la de la edición de 1957; conviene citar una edición de referencia;
+- Churata, *Textos esenciales*, pp. 109-110, 123 y 129: las páginas se tomaron del índice del libro y de una copia en Word, así que conviene confirmarlas en el PDF;
+- las citas recuperadas el 2 de noviembre de versiones anteriores (tabla de `analisis/33`), que no se pudieron volver a comprobar ese día;
 - Zavaleta Mercado (1986: 21, n. 1);
 - Cornejo Polar, si decides citar la 1.ª edición (véase el paso 7).
 
@@ -134,7 +140,7 @@ Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada 
 ### 10. Adaptar el texto a la revista
 
 - **Formato y citas.** El Word sigue hoy la plantilla de *Estudios Bolivianos*. Según la revista, hará falta APA 7, MLA o Chicago.
-- **Extensión.** Para *Atenea* (8.500 palabras con resumen y referencias) hay que quitar unas 2.450.
+- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 4.100. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
   - La palanca principal son los pies de figura analíticos y el Cuadro 1, unas 1.850 palabras: acórtalos o pasa parte de su análisis al texto.
   - Las cinco imágenes, con sus frases, sus pies y la nota, suman unas 680 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 1) y la Puerta del Sol (Imagen 2).
   - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.
