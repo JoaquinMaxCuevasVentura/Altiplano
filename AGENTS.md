@@ -10,7 +10,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
   - 153 citas de la novela entre comillas y 2 en bloque;
   - 34 obras en la bibliografía;
   - ocho figuras y, en serie aparte, cinco imágenes de dominio público.
-- **El destino.** Sin elegir. La primera candidata es la revista *Atenea*, que pide recortar unas 1.800 palabras.
+- **El destino.** Sin elegir. La primera candidata es la revista *Atenea*, que pide recortar unas 2.450 palabras.
 - **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
 - **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
 
