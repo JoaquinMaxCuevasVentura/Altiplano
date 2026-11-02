@@ -100,6 +100,8 @@ Las cinco imágenes de dominio público ya están en el artículo (`articulo/fig
 
 ### 6. Cotejar las citas con el libro impreso
 
+Para eso hacen falta las fuentes, que no están en el repositorio. Qué libros subir, con qué páginas y dónde guardarlos está en `07_fuentes_para_cotejar`.
+
 Usa `04_fichero_de_pasajes`: trae las citas de la novela por página, con una casilla para marcar. Empieza por las pp. 88-107, donde la transcripción repite texto y alguna cita puede estar corrida una página.
 
 Coteja también estas citas, tomadas de fuentes escaneadas o de copias digitales:

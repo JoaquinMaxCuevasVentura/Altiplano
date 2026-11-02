@@ -6,7 +6,7 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 
 ## Entregables (al 2 de noviembre de 2026)
 
-**Los archivos finales están en `entregables/`**, con su `LEEME.md`: el artículo en Word y en PDF, y cinco documentos en Markdown y en Word para enviarlo. Son versiones limpias, sin el historial de trabajo.
+**Los archivos finales están en `entregables/`**, con su `LEEME.md`: el artículo en Word y en PDF, y seis documentos en Markdown y en Word para enviarlo. Son versiones limpias, sin el historial de trabajo.
 
 | Entregable | Archivo final | Estado |
 |---|---|---|
@@ -16,6 +16,7 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 | **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 157 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
 | **Las revistas candidatas** | `entregables/05_revistas_candidatas` | Resumen final de `reports/Convocatorias abiertas para el artículo.md`: diez revistas, recortes, barreras y qué hacer antes de enviar |
 | **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; resumen en `entregables/06_atlas_de_arena`; registro en `analisis/29_atlas_arena.md` | 38 bloques; el canal de pasteles espera tus escaneos |
+| **Las fuentes para cotejar** | `entregables/07_fuentes_para_cotejar` | Los libros que faltan, con sus páginas y por orden de urgencia. Van a un repositorio privado aparte, no a este, que es público |
 | **La taxonomía visual** | `taxonomia/` y su `LEEME.md`; registro en `analisis/30_taxonomia_visual.md` | 51 imágenes de dominio público (Guaman Poma, Squier, el Public Domain Image Archive y la Library of Congress) clasificadas por material y gesto, en cuatro tableros: el árbol, las fases de la novela, el mapa de fechas y el relato del argumento. Hecha el 18 de octubre. Los tableros no entran al artículo; seis de sus imágenes, sí, como imágenes 1-5 |
 | **Las ocho figuras** | `articulo/figuras/` y su `LEEME.md` | Seis esquemas de encaje y dos diagramas, trazados como notaciones el 1 de octubre |
 | **Las cinco imágenes de dominio público** | `articulo/figuras/imagen_1.jpg` a `imagen_5.jpg`; selección y razones en `analisis/31_proyecto_de_imagenes_de_dominio_publico.md` | Serie aparte de las figuras, añadida el 18 de octubre: tres dibujos de Guaman Poma (el escribano; la tejedora y el contador con su khipu; agosto), la Puerta del Sol de Squier y la mina Siglo XX (Library of Congress). Las de Guaman Poma no alcanzan para imprimir: hay que pedirlas a la Biblioteca Real de Dinamarca |

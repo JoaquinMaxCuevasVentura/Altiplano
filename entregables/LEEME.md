@@ -2,7 +2,7 @@
 
 **«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura. Versión final del 2 de noviembre de 2026, reescrita a partir de todo lo acumulado (`analisis/33`). El autor la reescribirá con su voz.
 
-Esta carpeta reúne los archivos finales del proyecto: el artículo y los cinco documentos que acompañan su envío. Cada documento va en Markdown (`.md`), para leerlo aquí, y en Word (`.docx`), para imprimirlo o editarlo. El artículo va en Word y en PDF.
+Esta carpeta reúne los archivos finales del proyecto: el artículo y los seis documentos que acompañan su envío. Cada documento va en Markdown (`.md`), para leerlo aquí, y en Word (`.docx`), para imprimirlo o editarlo. El artículo va en Word y en PDF.
 
 | N.º | Archivo | Qué es | Para qué sirve |
 |---|---|---|---|
@@ -12,11 +12,12 @@ Esta carpeta reúne los archivos finales del proyecto: el artículo y los cinco 
 | 04 | `04_fichero_de_pasajes` | Las citas de la novela por página, con una casilla para marcar, y las cautelas de lectura | Cotejar las citas con el libro impreso |
 | 05 | `05_revistas_candidatas` | Diez revistas ordenadas, lo que pide cada una, cuánto hay que recortar y qué hacer antes de enviar | Elegir adónde enviar el artículo |
 | 06 | `06_atlas_de_arena` | Qué hay en los once canales privados de Are.na y qué falta | Volver a las fuentes visuales y a las pistas de lectura |
+| 07 | `07_fuentes_para_cotejar` | Los libros y artículos que faltan, con las páginas que cita el artículo de cada uno, por orden de urgencia | Saber qué subir, y dónde, para cotejar las citas |
 
 ## Por dónde empezar
 
 1. Lee el artículo (01) en voz alta.
-2. Sigue la lista de envío (02). Te manda, en su momento, a la guía de los pasteles (03), al fichero de pasajes (04) y a las revistas (05).
+2. Sigue la lista de envío (02). Te manda, en su momento, a la guía de los pasteles (03), al fichero de pasajes (04), a la lista de fuentes por subir (07) y a las revistas (05).
 3. Cuando tengas los escaneos de los pasteles, súbelos también al atlas (06).
 
 ## Lo que no está en esta carpeta

@@ -2,7 +2,7 @@
 
 1. Copia el Word del artículo (articulo/articulo_cosecha_de_piedras.docx) como
    01_articulo_cosecha_de_piedras.docx y hace su PDF con LibreOffice.
-2. Convierte a Word cada documento 02 a 06 (.md), con letra Times New Roman,
+2. Convierte a Word cada documento 02 a 07 (.md), con letra Times New Roman,
    tablas con bordes y cabecera repetida, imágenes ajustadas a la caja y número
    de página al pie.
 
