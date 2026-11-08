@@ -401,8 +401,8 @@ class Hoja:
 
     # -------------------------------------------------------------- celdas y signos
     def celda(self, cx, cy, w, color=TINTA, ancho=0.9, punteada=False, doble=True, capa="lineas"):
-        """La celda de la cabeza del ídolo (0,84), a mano, abierta abajo en su desagüe."""
-        h = w / 0.84
+        """La celda de la cabeza del ídolo (0,90), a mano, abierta abajo en su desagüe."""
+        h = w / 0.90
         cajas = [(cx - w / 2, cy - h / 2, w, h)]
         if doble:
             cajas.append((cx - w * 0.32, cy - h * 0.37, w * 0.64, h * 0.74))

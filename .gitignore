@@ -7,3 +7,6 @@ tipografia/digital/poliza.fea
 
 # las imágenes del atlas (taxonomia/descargar_imagenes.py): no entran en el repositorio (06, §6.4)
 tipografia/taxonomia/imagenes/
+
+# la lámina con capturas (tipografia/planos/proporciones_sobre_la_lamina.py): la foto de la lámina no se sube (07, §3)
+tipografia/planos/privado/

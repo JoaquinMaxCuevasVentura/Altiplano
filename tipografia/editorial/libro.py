@@ -29,10 +29,15 @@ except ImportError:                     # sin pyphen, el texto va sin cortes
     DIC = None
 
 # ------------------------------------------------------------------ la retícula (mm)
-COL, JUNTA, FILA = 19.0, 4.0, 22.619
+# La caja: 8 columnas × 7 filas de celdas de la cabeza, 0,90 de ancho por alto (esquemas/celda_medida.json).
+# La fila guarda la interlínea (una fila y su junta son seis líneas de texto); la columna es 0,90 de la fila.
+CELDA = 0.90
+FILA, JUNTA = 22.619, 4.0
+COL = round(CELDA * FILA, 3)                   # 20,357
 PASO_C, PASO_F = COL + JUNTA, FILA + JUNTA
-ANCHO, ALTO = 180.0, 182.333
-ARRIBA, ABAJO, AFUERA, ADENTRO = 28.0, 39.667, 13.0, 17.0
+ANCHO, ALTO = round(8 * COL + 7 * JUNTA, 3), round(7 * FILA + 6 * JUNTA, 3)     # 190,856 × 182,333
+PAGINA = (225.0, 250.0)                        # 0,90 de ancho por alto, como la celda
+ARRIBA, ABAJO, AFUERA, ADENTRO = 28.0, 39.667, 14.8, round(PAGINA[0] - ANCHO - 14.8, 3)
 PAPEL = (246, 244, 238)
 
 

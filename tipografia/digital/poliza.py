@@ -35,8 +35,8 @@ POEMA = TIPO / "textos" / "poema.txt"
 CAJA = TIPO / "esquemas" / "caja.json"
 SALIDA = AQUI / "poliza.fea"
 
-# Las métricas de la celda (`05`, §5.3): el eme es el alto de la celda; el avance, 0,84 de él.
-EME, AVANCE, ASCENDENTE, DESCENDENTE = 1000, 840, 734, -266
+# Las métricas de la celda (`05`, §5.3): el eme es el alto de la celda; el avance, 0,90 de él.
+EME, AVANCE, ASCENDENTE, DESCENDENTE = 1000, 900, 734, -266
 
 
 def nombre(signo):

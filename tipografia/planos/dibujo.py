@@ -140,9 +140,9 @@ class Hoja:
            ("NOTA", "regla de la forma, no pauta de calco: no entra en la caja"))
 
     def __init__(self, codigo, titulo, subtitulo, escala, n, total, fecha="17.10.2026", serie=None, pie=None,
-                 unidades="mm · (UPM)", columna=True):
+                 unidades="mm · (UPM)", columna=True, revision=None):
         self.codigo, self.titulo, self.subtitulo, self.escala = codigo, titulo, subtitulo, escala
-        self.n, self.total, self.fecha = n, total, fecha
+        self.n, self.total, self.fecha, self.revision = n, total, fecha, revision
         self.serie, self.pie, self.unidades = serie or self.SERIE, pie or self.PIE, unidades
         self.con_columna = columna      # sin columna, el dibujo usa todo el ancho (el atlas de la taxonomía)
         self.capas = {c: [] for c in self.CAPAS}
@@ -418,6 +418,8 @@ class Hoja:
                   ("FORMATO", "A3 · 420 × 297")]
         xs = [x0] + cols
         for (k, v), x in zip(campos, xs):
+            if k == "FECHA" and self.revision:          # la fecha del dibujo y, al lado, la de su revisión
+                k = f"FECHA · REV. {self.revision}"
             T(x + 1.6, filas[1] + 3.2, k, 1.7, capa=c, color=GRIS, espaciado=0.2)
             T(x + 1.6, filas[1] + 8.4, v, 2.5, capa=c)
         for i, (k, v) in enumerate(self.pie):

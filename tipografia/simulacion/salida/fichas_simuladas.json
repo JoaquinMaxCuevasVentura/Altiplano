@@ -5589,24 +5589,24 @@
    "desagues": 3,
    "sesion": 1,
    "minuto": 93.2,
-   "segundos": 142.0,
+   "segundos": 143.3,
    "levantadas": 27,
-   "dudas": 3
+   "dudas": 5
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 18.8,
-   "recorrido_mm": 1928
+   "minutos": 18.2,
+   "recorrido_mm": 1987
   },
   "pulso": {
    "lado": "las dos",
    "minuto": 21.9,
    "cansancio": 0.197,
-   "segundos_de_punzon": 775.6,
-   "levantadas": 58,
-   "dudas": 46,
-   "lecturas": 14,
+   "segundos_de_punzon": 792.3,
+   "levantadas": 57,
+   "dudas": 57,
+   "lecturas": 9,
    "sesion": 3
   },
   "gramatica": {
@@ -5639,7 +5639,7 @@
     "fuerza": 1.21,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.19
+   "contraste_de_la_letra": 1.21
   },
   "voz": {
    "verso": "al final del ciclo,",
@@ -5663,24 +5663,24 @@
    "desagues": 3,
    "sesion": 1,
    "minuto": 97.6,
-   "segundos": 134.8,
-   "levantadas": 30,
-   "dudas": 4
+   "segundos": 141.8,
+   "levantadas": 32,
+   "dudas": 3
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 17.8,
-   "recorrido_mm": 1827
+   "minutos": 19.9,
+   "recorrido_mm": 1885
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 40.7,
-   "cansancio": 0.334,
-   "segundos_de_punzon": 777.4,
-   "levantadas": 58,
-   "dudas": 32,
-   "lecturas": 20,
+   "minuto": 40.1,
+   "cansancio": 0.33,
+   "segundos_de_punzon": 798.5,
+   "levantadas": 59,
+   "dudas": 55,
+   "lecturas": 16,
    "sesion": 3
   },
   "gramatica": {
@@ -5714,7 +5714,7 @@
     "fuerza": 0.91,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.17
+   "contraste_de_la_letra": 1.23
   },
   "voz": {
    "verso": "de la boca sale un signo",
@@ -5737,25 +5737,25 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 1,
-   "minuto": 101.8,
-   "segundos": 148.9,
-   "levantadas": 31,
-   "dudas": 5
+   "minuto": 101.9,
+   "segundos": 148.5,
+   "levantadas": 30,
+   "dudas": 3
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.1,
-   "recorrido_mm": 1939
+   "minutos": 18.7,
+   "recorrido_mm": 1996
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 58.5,
-   "cansancio": 0.443,
-   "segundos_de_punzon": 845.8,
-   "levantadas": 64,
-   "dudas": 39,
-   "lecturas": 23,
+   "minuto": 60.0,
+   "cansancio": 0.451,
+   "segundos_de_punzon": 885.7,
+   "levantadas": 65,
+   "dudas": 60,
+   "lecturas": 15,
    "sesion": 3
   },
   "gramatica": {
@@ -5812,24 +5812,24 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 1,
-   "minuto": 106.3,
-   "segundos": 148.4,
-   "levantadas": 29,
-   "dudas": 7
+   "minuto": 106.4,
+   "segundos": 151.6,
+   "levantadas": 32,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.5,
-   "recorrido_mm": 1981
+   "minutos": 19.8,
+   "recorrido_mm": 2035
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 77.6,
-   "cansancio": 0.54,
-   "segundos_de_punzon": 902.5,
+   "minuto": 78.7,
+   "cansancio": 0.545,
+   "segundos_de_punzon": 922.2,
    "levantadas": 68,
-   "dudas": 58,
+   "dudas": 61,
    "lecturas": 17,
    "sesion": 3
   },
@@ -5864,7 +5864,7 @@
     "fuerza": 1.01,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.12
+   "contraste_de_la_letra": 1.13
   },
   "voz": {
    "verso": "hecho con las manos,",
@@ -5887,25 +5887,25 @@
    "linea": "punteada",
    "desagues": 4,
    "sesion": 1,
-   "minuto": 110.8,
-   "segundos": 150.8,
-   "levantadas": 30,
-   "dudas": 6
+   "minuto": 111.0,
+   "segundos": 154.5,
+   "levantadas": 32,
+   "dudas": 5
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 1941
+   "intentos": 2,
+   "roturas": 1,
+   "minutos": 42.5,
+   "recorrido_mm": 1999
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 98.1,
-   "cansancio": 0.625,
-   "segundos_de_punzon": 889.5,
-   "levantadas": 60,
-   "dudas": 53,
-   "lecturas": 17,
+   "minuto": 98.5,
+   "cansancio": 0.7,
+   "segundos_de_punzon": 1915.4,
+   "levantadas": 137,
+   "dudas": 134,
+   "lecturas": 31,
    "sesion": 3
   },
   "gramatica": {
@@ -5921,10 +5921,10 @@
    "pliegues": 8
   },
   "frotado": {
-   "legibles": 15,
+   "legibles": 13,
    "sesion": 8,
    "minuto": 47.0,
-   "minutos": 15.2
+   "minutos": 13.3
   },
   "agua": {
    "quieta": true,
@@ -5938,7 +5938,7 @@
     "fuerza": 0.86,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.16
+   "contraste_de_la_letra": 1.1
   },
   "voz": {
    "verso": "ninguna palabra,",
@@ -5961,26 +5961,26 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 1,
-   "minuto": 115.3,
-   "segundos": 156.1,
+   "minuto": 115.5,
+   "segundos": 163.7,
    "levantadas": 34,
-   "dudas": 5
+   "dudas": 8
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 20.9,
-   "recorrido_mm": 1994
+   "minutos": 17.8,
+   "recorrido_mm": 2051
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 117.1,
-   "cansancio": 0.69,
-   "segundos_de_punzon": 974.4,
-   "levantadas": 73,
-   "dudas": 57,
-   "lecturas": 23,
-   "sesion": 3
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 805.5,
+   "levantadas": 65,
+   "dudas": 38,
+   "lecturas": 18,
+   "sesion": 4
   },
   "gramatica": {
    "desagues": 3,
@@ -5995,10 +5995,10 @@
    "pliegues": 15
   },
   "frotado": {
-   "legibles": 16,
+   "legibles": 18,
    "sesion": 8,
-   "minuto": 62.2,
-   "minutos": 16.5
+   "minuto": 60.3,
+   "minutos": 18.5
   },
   "agua": {
    "quieta": true,
@@ -6012,7 +6012,7 @@
     "fuerza": 1.1,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.14
+   "contraste_de_la_letra": 1.21
   },
   "voz": {
    "verso": "acciones del cuerpo.",
@@ -6034,26 +6034,26 @@
   "calco": {
    "linea": "punteada",
    "desagues": 4,
-   "sesion": 1,
-   "minuto": 119.9,
-   "segundos": 162.2,
-   "levantadas": 34,
-   "dudas": 5
+   "sesion": 2,
+   "minuto": 0.0,
+   "segundos": 139.2,
+   "levantadas": 29,
+   "dudas": 3
   },
   "placa_": {
-   "intentos": 1,
-   "roturas": 0,
-   "minutos": 18.5,
-   "recorrido_mm": 2060
+   "intentos": 3,
+   "roturas": 3,
+   "minutos": 55.8,
+   "recorrido_mm": 2111
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 0.0,
-   "cansancio": 0.0,
-   "segundos_de_punzon": 788.9,
-   "levantadas": 57,
-   "dudas": 35,
-   "lecturas": 13,
+   "minuto": 17.8,
+   "cansancio": 0.425,
+   "segundos_de_punzon": 2484.1,
+   "levantadas": 191,
+   "dudas": 141,
+   "lecturas": 33,
    "sesion": 4
   },
   "gramatica": {
@@ -6070,10 +6070,10 @@
    "pliegues": 18
   },
   "frotado": {
-   "legibles": 14,
+   "legibles": 16,
    "sesion": 8,
-   "minuto": 78.7,
-   "minutos": 14.2
+   "minuto": 78.8,
+   "minutos": 16.0
   },
   "agua": {
    "quieta": true,
@@ -6087,7 +6087,7 @@
     "fuerza": 0.88,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.05
+   "contraste_de_la_letra": 1.07
   },
   "voz": {
    "verso": "acciones del cuerpo.",
@@ -6110,24 +6110,24 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 2,
-   "minuto": 0.0,
-   "segundos": 115.8,
-   "levantadas": 27,
-   "dudas": 2
+   "minuto": 4.3,
+   "segundos": 122.4,
+   "levantadas": 28,
+   "dudas": 6
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 16.0,
-   "recorrido_mm": 1825
+   "minutos": 18.4,
+   "recorrido_mm": 1884
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 18.5,
-   "cansancio": 0.169,
-   "segundos_de_punzon": 686.7,
-   "levantadas": 53,
-   "dudas": 31,
+   "minuto": 73.6,
+   "cansancio": 0.521,
+   "segundos_de_punzon": 817.1,
+   "levantadas": 63,
+   "dudas": 52,
    "lecturas": 16,
    "sesion": 4
   },
@@ -6144,10 +6144,10 @@
    "pliegues": 10
   },
   "frotado": {
-   "legibles": 15,
+   "legibles": 14,
    "sesion": 8,
-   "minuto": 92.8,
-   "minutos": 14.9
+   "minuto": 94.9,
+   "minutos": 14.1
   },
   "agua": {
    "quieta": true,
@@ -6184,25 +6184,25 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 2,
-   "minuto": 3.9,
-   "segundos": 126.8,
-   "levantadas": 24,
-   "dudas": 5
+   "minuto": 8.4,
+   "segundos": 141.1,
+   "levantadas": 30,
+   "dudas": 2
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 2059
+   "minutos": 22.2,
+   "recorrido_mm": 2117
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 34.5,
-   "cansancio": 0.292,
-   "segundos_de_punzon": 829.5,
-   "levantadas": 65,
-   "dudas": 50,
-   "lecturas": 17,
+   "minuto": 92.0,
+   "cansancio": 0.601,
+   "segundos_de_punzon": 943.7,
+   "levantadas": 73,
+   "dudas": 75,
+   "lecturas": 18,
    "sesion": 4
   },
   "gramatica": {
@@ -6221,7 +6221,7 @@
   "frotado": {
    "legibles": 15,
    "sesion": 8,
-   "minuto": 107.7,
+   "minuto": 108.9,
    "minutos": 15.2
   },
   "agua": {
@@ -6236,7 +6236,7 @@
     "fuerza": 1.1,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 0.98
+   "contraste_de_la_letra": 1.0
   },
   "voz": {
    "verso": "pocas veces vuelve hablado.",
@@ -6259,25 +6259,25 @@
    "linea": "punteada",
    "desagues": 4,
    "sesion": 2,
-   "minuto": 8.0,
-   "segundos": 132.4,
-   "levantadas": 28,
-   "dudas": 6
+   "minuto": 12.7,
+   "segundos": 135.3,
+   "levantadas": 29,
+   "dudas": 3
   },
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 19.0,
-   "recorrido_mm": 2010
+   "minutos": 20.0,
+   "recorrido_mm": 2066
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 53.5,
-   "cansancio": 0.414,
-   "segundos_de_punzon": 849.6,
-   "levantadas": 66,
-   "dudas": 62,
-   "lecturas": 15,
+   "minuto": 114.2,
+   "cansancio": 0.681,
+   "segundos_de_punzon": 940.9,
+   "levantadas": 69,
+   "dudas": 76,
+   "lecturas": 12,
    "sesion": 4
   },
   "gramatica": {
@@ -6294,10 +6294,10 @@
    "pliegues": 18
   },
   "frotado": {
-   "legibles": 17,
+   "legibles": 15,
    "sesion": 9,
    "minuto": 0.0,
-   "minutos": 16.7
+   "minutos": 14.8
   },
   "agua": {
    "quieta": true,
@@ -6311,7 +6311,7 @@
     "fuerza": 0.92,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.1
+   "contraste_de_la_letra": 1.06
   },
   "voz": {
    "verso": "desenterrar una voz",
@@ -6334,7 +6334,7 @@
    "linea": "punteada",
    "desagues": 2,
    "sesion": 2,
-   "minuto": 12.2,
+   "minuto": 17.0,
    "segundos": 5.1,
    "levantadas": 0,
    "dudas": 0
@@ -6342,18 +6342,18 @@
   "placa_": {
    "intentos": 1,
    "roturas": 0,
-   "minutos": 6.0,
+   "minutos": 5.1,
    "recorrido_mm": 50
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 72.5,
-   "cansancio": 0.516,
-   "segundos_de_punzon": 30.1,
+   "minuto": 0.0,
+   "cansancio": 0.0,
+   "segundos_de_punzon": 26.2,
    "levantadas": 0,
-   "dudas": 3,
+   "dudas": 2,
    "lecturas": 0,
-   "sesion": 4
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 2,
@@ -6367,10 +6367,10 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 12,
+   "legibles": 15,
    "sesion": 9,
-   "minuto": 16.7,
-   "minutos": 12.3
+   "minuto": 14.8,
+   "minutos": 15.2
   },
   "agua": {
    "quieta": true,
@@ -6384,7 +6384,7 @@
     "fuerza": 1.09,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.42
+   "contraste_de_la_letra": 1.47
   },
   "voz": {
    "verso": "desenterrar una voz",
@@ -6407,26 +6407,26 @@
    "linea": "punteada",
    "desagues": 2,
    "sesion": 2,
-   "minuto": 14.3,
-   "segundos": 26.5,
-   "levantadas": 8,
+   "minuto": 19.1,
+   "segundos": 24.2,
+   "levantadas": 7,
    "dudas": 0
   },
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 13.7,
+   "minutos": 14.2,
    "recorrido_mm": 247
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 78.5,
-   "cansancio": 0.577,
-   "segundos_de_punzon": 252.5,
-   "levantadas": 17,
-   "dudas": 18,
-   "lecturas": 5,
-   "sesion": 4
+   "minuto": 5.1,
+   "cansancio": 0.113,
+   "segundos_de_punzon": 212.4,
+   "levantadas": 16,
+   "dudas": 14,
+   "lecturas": 3,
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 2,
@@ -6441,10 +6441,10 @@
    "pliegues": 7
   },
   "frotado": {
-   "legibles": 17,
+   "legibles": 18,
    "sesion": 9,
-   "minuto": 29.0,
-   "minutos": 17.0
+   "minuto": 30.1,
+   "minutos": 17.9
   },
   "agua": {
    "quieta": true,
@@ -6458,7 +6458,7 @@
     "fuerza": 1.15,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.3
+   "contraste_de_la_letra": 1.38
   },
   "voz": {
    "verso": "es desenterrar la mano del que la escribió.",
@@ -6481,26 +6481,26 @@
    "linea": "punteada",
    "desagues": 2,
    "sesion": 2,
-   "minuto": 16.8,
-   "segundos": 17.0,
-   "levantadas": 3,
-   "dudas": 2
+   "minuto": 21.5,
+   "segundos": 14.6,
+   "levantadas": 2,
+   "dudas": 1
   },
   "placa_": {
-   "intentos": 2,
-   "roturas": 1,
-   "minutos": 13.8,
-   "recorrido_mm": 158
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 5.5,
+   "recorrido_mm": 157
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 92.2,
-   "cansancio": 0.625,
-   "segundos_de_punzon": 170.4,
-   "levantadas": 9,
-   "dudas": 18,
+   "minuto": 19.3,
+   "cansancio": 0.176,
+   "segundos_de_punzon": 69.7,
+   "levantadas": 3,
+   "dudas": 3,
    "lecturas": 1,
-   "sesion": 4
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 2,
@@ -6514,10 +6514,10 @@
    "pliegues": 2
   },
   "frotado": {
-   "legibles": 14,
+   "legibles": 16,
    "sesion": 9,
-   "minuto": 46.0,
-   "minutos": 14.5
+   "minuto": 48.0,
+   "minutos": 16.5
   },
   "agua": {
    "quieta": true,
@@ -6531,7 +6531,7 @@
     "fuerza": 0.96,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.34
+   "contraste_de_la_letra": 1.51
   },
   "voz": {
    "verso": "nos fuimos con las manos secas,",
@@ -6554,26 +6554,26 @@
    "linea": "punteada",
    "desagues": 2,
    "sesion": 2,
-   "minuto": 19.1,
-   "segundos": 16.3,
-   "levantadas": 3,
+   "minuto": 23.7,
+   "segundos": 21.3,
+   "levantadas": 4,
    "dudas": 0
   },
   "placa_": {
-   "intentos": 3,
-   "roturas": 2,
-   "minutos": 22.6,
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 6.4,
    "recorrido_mm": 157
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 106.0,
-   "cansancio": 0.7,
-   "segundos_de_punzon": 270.2,
-   "levantadas": 17,
-   "dudas": 22,
-   "lecturas": 4,
-   "sesion": 4
+   "minuto": 24.8,
+   "cansancio": 0.22,
+   "segundos_de_punzon": 68.7,
+   "levantadas": 3,
+   "dudas": 5,
+   "lecturas": 0,
+   "sesion": 5
   },
   "gramatica": {
    "desagues": 2,
@@ -6589,7 +6589,7 @@
   "frotado": {
    "legibles": 14,
    "sesion": 9,
-   "minuto": 60.5,
+   "minuto": 64.5,
    "minutos": 14.3
   },
   "agua": {
@@ -6604,7 +6604,7 @@
     "fuerza": 1.12,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.31
+   "contraste_de_la_letra": 1.48
   },
   "voz": {
    "verso": "que es como se sale de todas las ruinas.",
@@ -6627,24 +6627,24 @@
    "linea": "punteada",
    "desagues": 1,
    "sesion": 2,
-   "minuto": 21.3,
-   "segundos": 8.9,
+   "minuto": 26.1,
+   "segundos": 9.6,
    "levantadas": 2,
    "dudas": 1
   },
   "placa_": {
    "intentos": 2,
    "roturas": 1,
-   "minutos": 12.0,
+   "minutos": 12.8,
    "recorrido_mm": 111
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 0.0,
-   "cansancio": 0.062,
-   "segundos_de_punzon": 87.6,
-   "levantadas": 5,
-   "dudas": 5,
+   "minuto": 31.2,
+   "cansancio": 0.306,
+   "segundos_de_punzon": 94.9,
+   "levantadas": 7,
+   "dudas": 4,
    "lecturas": 0,
    "sesion": 5
   },
@@ -6660,7 +6660,7 @@
   "frotado": {
    "legibles": 16,
    "sesion": 9,
-   "minuto": 74.9,
+   "minuto": 78.9,
    "minutos": 16.1
   },
   "agua": {
@@ -6675,7 +6675,7 @@
     "fuerza": 1.12,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.59
+   "contraste_de_la_letra": 1.56
   },
   "voz": {
    "verso": "que es como se sale de todas las ruinas.",
@@ -6698,24 +6698,24 @@
    "linea": "punteada",
    "desagues": 3,
    "sesion": 2,
-   "minuto": 23.5,
-   "segundos": 12.0,
+   "minuto": 28.2,
+   "segundos": 11.2,
    "levantadas": 3,
-   "dudas": 1
+   "dudas": 0
   },
   "placa_": {
-   "intentos": 3,
-   "roturas": 2,
-   "minutos": 17.9,
+   "intentos": 1,
+   "roturas": 0,
+   "minutos": 6.2,
    "recorrido_mm": 76
   },
   "pulso": {
    "lado": "las dos",
-   "minuto": 12.0,
-   "cansancio": 0.212,
-   "segundos_de_punzon": 136.3,
-   "levantadas": 6,
-   "dudas": 11,
+   "minuto": 44.0,
+   "cansancio": 0.356,
+   "segundos_de_punzon": 48.3,
+   "levantadas": 2,
+   "dudas": 1,
    "lecturas": 1,
    "sesion": 5
   },
@@ -6731,10 +6731,10 @@
    "pliegues": 0
   },
   "frotado": {
-   "legibles": 15,
+   "legibles": 13,
    "sesion": 9,
-   "minuto": 90.9,
-   "minutos": 14.7
+   "minuto": 94.9,
+   "minutos": 13.0
   },
   "agua": {
    "quieta": true,
@@ -6748,7 +6748,7 @@
     "fuerza": 1.0,
     "dos_toques": false
    },
-   "contraste_de_la_letra": 1.59
+   "contraste_de_la_letra": 1.55
   },
   "voz": {
    "verso": "a la boca la taparon, a las manos no,",
@@ -6777,12 +6777,12 @@
    "lado": "derecha",
    "presiones": 2,
    "sesion": 5,
-   "minuto": 29.9
+   "minuto": 50.2
   },
   "frotado": {
    "legibles": 0,
    "sesion": 9,
-   "minuto": 105.6,
+   "minuto": 107.9,
    "minutos": 1.0
   },
   "agua": {

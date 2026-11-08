@@ -5,10 +5,10 @@ Uso (desde la raíz del repositorio):
     python3 tipografia/planos/generar_planos.py [--cache RUTA.json]
 
 Escribe en tipografia/planos/:
-  svg/P-00_… P-10_….svg      once láminas A3 apaisadas, a escala, en milímetros,
+  svg/P-00_… P-11_….svg      doce láminas A3 apaisadas, a escala, en milímetros,
   dxf/P-0n_….dxf             la vista principal de las láminas a 1:1 y la caja, en mm reales,
-  png/P-00_… P-10_….png      vistas previas,
-  contenida_planos.pdf       las once, una por página, en A3.
+  png/P-00_… P-11_….png      vistas previas,
+  contenida_planos.pdf       las doce, una por página, en A3.
 
 Como un plano de arquitectura: cotas con trazo oblicuo, ejes de trazo y
 punto, niveles con el fondo en ±0, llamadas de vista y de detalle, escala
@@ -55,9 +55,16 @@ LAMINAS = [
     ("P-08", "Detalles", "punto, tilde, onda, sifón, alivio y celda", "2:1 · 1:2"),
     ("P-09", "Los dobles opuestos", "? ¿ · 6 9 · « »", "1:2"),
     ("P-10", "La caja", "plan general: 8 × 7", "1:5"),
+    ("P-11", "Las proporciones", "la celda y la altura de x, medidas en la lámina", "S/E · 1:3"),
 ]
 NOMBRES_ARCHIVO = ["indice", "celda", "canal", "o_cuenca", "l_fuste", "n_hombro", "a_gancho_y_gota", "partes",
-                   "detalles", "dobles_opuestos", "caja"]
+                   "detalles", "dobles_opuestos", "caja", "proporciones"]
+# P-11 mide en vez de dibujar la gramática: su cajetín dice quién midió y qué no se sube
+EXTRA = {"P-11": dict(fecha="08.11.2026", unidades="px · mm · (UPM)", pie=(
+    ("MIDIÓ", "la máquina, en dos imágenes de la lámina (esquemas/*_medida.json)"),
+    ("DIBUJA", "las medidas, redibujadas: las imágenes no se suben"),
+    ("NOTA", "proporciones del registro: a confirmar con regla en el impreso")))}
+REVISION = "08.11.2026"             # la celda pasó de 0,84 a 0,90 (P-11): se rehicieron todas las láminas
 
 
 def familia(s):
@@ -121,6 +128,8 @@ class Medidas:
         M["canal_upm"] = str(int(round(c * U)))
         M["celda_alto"] = coma(self.alto / 4)
         M["celda_ancho"] = coma((x1 - x0) / 4)
+        M["celda_razon"] = coma((x1 - x0) / self.alto, 2)
+        M["avance_upm"] = str(int(round((x1 - x0) * U)))
         M["upm_mm"] = coma(self.alto / 4 / 1000, 3)
         for k, y in (("cabeza", y0), ("afuera", E["afuera"]), ("borde", E["borde"]), ("desague", E["desague"]),
                      ("pie", y1)):
@@ -233,10 +242,10 @@ def cuerpo_base(D, s):
 # ---------------------------------------------------------------- P-00
 
 CUADRO = [
-    ("cuerpo", "la celda de la cabeza, 0,84 : 1", "P-01"),
+    ("cuerpo", "la celda de la cabeza, {celda_razon} : 1", "P-01 · P-11"),
     ("ancho", "monoespaciada: una letra, una celda", "P-01"),
     ("líneas", "fondo, borde, afuera, desagüe", "P-01"),
-    ("altura de x", "1,71 de las ascendentes", "P-01"),
+    ("altura de x", "1,71 de las ascendentes", "P-01 · P-11"),
     ("contraste", "ninguno: un canal de 8,9 mm", "P-02"),
     ("curvas", "radio mínimo de 0,6 canal", "P-02"),
     ("remates", "ninguno: un corte, gastado", "P-02 · P-04"),
@@ -303,7 +312,7 @@ def p00(h, D, M):
         ("contorno_r", "contorno a puntos, en violeta: lo reconstruido"),
         ("eje", "eje del trazo: la curva maestra"),
         ("linea", "líneas de la gramática: afuera, borde, fondo, desagüe"),
-        ("celda", "celda de la cabeza (0,84 : 1)"),
+        ("celda", f"celda de la cabeza ({M['celda_razon']} : 1)"),
         ("placa", "placa de aluminio, 150 × 150 mm"),
         ("aux", "construcción: polígonos de control, cajas, medidas"),
         ("comparar", "comparación: la forma que no se eligió"),
@@ -357,7 +366,7 @@ def p00(h, D, M):
         xx = x + col * 126
         yy = yq + 6.2 + fila * 5.75
         h.texto(xx, yy, parte, 2.5, familia=SERIF, peso=500)
-        h.texto(xx + 27, yy, decision, 2.2)
+        h.texto(xx + 27, yy, decision.format(**M), 2.2)
         h.texto(xx + 118, yy, lamina, 2.0, "end", color=VIOLETA)
         h.linea((xx, yy + 1.7), (xx + 118, yy + 1.7), "fina", "textos")
     h.clave((cx, y0 + 6.4 + 5.4 - 0.8), (cx - 6, y0 + 6.4 + 5.4 - 0.8), 1)
@@ -379,7 +388,7 @@ def p01(h, D, M):
         a = v.p(0, y)
         h.texto(a[0] + 1.6, a[1] - 1.0, nombre, 2.3, color=GRIS)
     x0, y0, x1, y1 = E["celda"]
-    h.texto(v.p(x0, y0)[0] + 1.5, v.p(x0, y0)[1] + 3.6, "celda 0,84 : 1", 2.3)
+    h.texto(v.p(x0, y0)[0] + 1.5, v.p(x0, y0)[1] + 3.6, f"celda {M['celda_razon']} : 1", 2.3)
     h.linea(v.p(300, -24), v.p(300, 624), "eje", "ejes")
     h.texto(v.p(300, -24)[0], v.p(300, -24)[1] - 1.5, "eje de la celda", 2.2, "middle")
     # a la izquierda, la cadena de cotas
@@ -1267,6 +1276,299 @@ def p10(h, D, M):
     h.columna(bloques("P-10", M))
 
 
+# ---------------------------------------------------------------- P-11 · las proporciones
+
+def medidas_de_la_lamina():
+    """Lo que se midió en la lámina: la retícula de la cabeza y el pie (esquemas/celda_medida.json y razon_medida.json)."""
+    import json
+    R = json.loads((TIPO / "esquemas" / "celda_medida.json").read_text(encoding="utf8"))
+    P = json.loads((TIPO / "esquemas" / "razon_medida.json").read_text(encoding="utf8"))
+    return R, P
+
+
+def cilindro(cx):
+    """El cilindro que explica las columnas: x = xc + r · sen((j − 3,5) · dθ + φ), ajustado a los centros."""
+    from scipy.optimize import least_squares
+    x = np.asarray(cx, float)
+    j = np.arange(len(x)) - (len(x) - 1) / 2
+    s = least_squares(lambda p: p[0] + p[1] * np.sin(j * p[2] + p[3]) - x, [x.mean(), 200.0, math.radians(10), 0.0])
+    xc, r, dt, phi = s.x
+    return dict(xc=xc, r=r, dt=dt, phi=phi)
+
+
+TESTIGOS_P11 = (("112.png", "n", "erosionado"), ("136.png", "l", "detalles"), ("033.png", "p", "presentado"))
+
+
+def astas_del_pie():
+    """Las letras de la foto que se dibujan, con sus astas medidas como en extraer_testigos.py (alturas_por_astas):
+    el asta es la columna más oscura de su franja y se corta a la mitad de su oscuridad."""
+    import json
+    import cv2
+    carpeta = TIPO / "simulacion" / "testigos"
+    letras = json.loads((carpeta / "pie.json").read_text(encoding="utf8"))["letras"]
+
+    def leer(nombre):
+        return cv2.imread(str(carpeta / nombre), cv2.IMREAD_GRAYSCALE).astype(np.float32) / 255
+
+    def asta(recta, x0, x1, y0, y1):
+        sub = 1 - recta[y0:y1, x0:x1]
+        c = x0 + int(np.argmax(sub.sum(axis=0)))
+        p = 1 - recta[:, max(0, c - 1):c + 2].mean(axis=1)
+        mitad = float(np.median(p[y0:y1])) / 2
+        a = z = (y0 + y1) // 2
+        while a > 0 and p[a - 1] > mitad:
+            a -= 1
+        while z < len(p) - 1 and p[z + 1] > mitad:
+            z += 1
+        return c, a, z, mitad
+
+    # la base a media oscuridad, como en el método: la mediana de cuánto bajan las astas de x bajo la base
+    bases = []
+    for L in letras:
+        if L["signo"] in "nmur":
+            b, xh = L["base"], L["xh"]
+            _, _, z, _ = asta(leer(L["archivo"]), L["x0"], L["x1"], int(b - 0.8 * xh), int(b - 0.2 * xh))
+            bases.append(z - b)
+    correccion = float(np.median(bases))
+    out = []
+    for archivo, signo, palabra in TESTIGOS_P11:
+        L = next(l for l in letras if l["archivo"] == archivo)
+        g = leer(archivo)
+        b, xh = L["base"], L["xh"]
+        franja = {"n": (b - 0.8 * xh, b - 0.2 * xh), "l": (b - 1.4 * xh, b - 1.1 * xh), "p": (b + 0.2 * xh, b + 0.5 * xh)}[signo]
+        c, a, z, mitad = asta(g, L["x0"], L["x1"], int(franja[0]), int(franja[1]))
+        # el contorno a media oscuridad (la del asta), ampliado ocho veces para que no escalone
+        k = 8
+        grande = cv2.resize(1 - g, None, fx=k, fy=k, interpolation=cv2.INTER_CUBIC)
+        cs, _ = cv2.findContours((grande > mitad).astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+        anillos = []
+        for q in cs:
+            q = q[:, 0, :].astype(float) / k
+            if len(q) < 40:
+                continue
+            cxq = q[:, 0].mean()
+            if L["x0"] - 2 <= cxq <= L["x1"] + 2:         # solo la letra, no las vecinas que entran en el recorte
+                anillos.append(q[::3])
+        out.append(dict(signo=signo, palabra=palabra, archivo=archivo, base=b + correccion, asta=c, a=a, z=z,
+                        anillos=anillos, x0=L["x0"], x1=L["x1"]))
+    return out, correccion
+
+
+def p11(h, D, M):
+    R, P = medidas_de_la_lamina()
+    E = D["esqueleto"]
+    cx, cy, px, py = R["centros_x"], R["centros_y"], R["paso_x"], R["paso_y"]
+    pym = R["paso_y_mediana"]
+
+    # ---- 1. la retícula, redibujada desde las medidas
+    h.llamada(32, 22, 1, titulo="LA RETÍCULA DE LA CABEZA, MEDIDA", escala="en la lámina enderezada · 1 px = 0,28 mm")
+    k = 0.28
+    bx = [cx[0] - px[0] / 2] + [(a + b) / 2 for a, b in zip(cx, cx[1:])] + [cx[-1] + px[-1] / 2]
+    by = [cy[0] - py[0] / 2] + [(a + b) / 2 for a, b in zip(cy, cy[1:])] + [cy[-1] + py[-1] / 2]
+    gx0, gy0 = 47.0, 47.0
+
+    def G(x, y):
+        return (gx0 + (x - bx[0]) * k, gy0 + (y - by[0]) * k)
+
+    X0, Y0 = G(bx[0], by[0])
+    X1, Y1 = G(bx[-1], by[-1])
+    for x in bx:
+        h.linea(G(x, by[0]), G(x, by[-1]), "fina", "fondo")
+    for y in by:
+        h.linea(G(bx[0], y), G(bx[-1], y), "fina", "fondo")
+    # los ejes, con su burbuja: columnas 1-8 arriba, filas A-G a la izquierda
+    for j, x in enumerate(cx):
+        h.linea(G(x, by[0] - 30), G(x, by[-1] + 4), "eje", "ejes")
+        p = G(x, by[0])
+        h.circulo((p[0], Y0 - 13.5), 2.3, "filete", "textos")
+        h.texto(p[0], Y0 - 12.7, str(j + 1), 2.3, "middle", peso=700)
+    for i, y in enumerate(cy):
+        h.linea(G(bx[0] - 30, y), G(bx[-1] + 4, y), "eje", "ejes")
+        p = G(bx[0], y)
+        h.circulo((X0 - 13.5, p[1]), 2.3, "filete", "textos")
+        h.texto(X0 - 13.5, p[1] + 0.8, "ABCDEFG"[i], 2.3, "middle", peso=700)
+    # los huecos medidos (continuo) y los dos que no se pudieron medir (a puntos, en violeta)
+    hw, hh = R["hueco"]["ancho_sobre_paso"] * np.median(px), R["hueco"]["alto_sobre_paso"] * pym
+    for q in R["huecos"]:
+        a = G(q["x"] - q["ancho"] / 2, q["y"] - q["alto"] / 2)
+        h.add("cuerpo", f'<rect x="{f(a[0])}" y="{f(a[1])}" width="{f(q["ancho"] * k)}" height="{f(q["alto"] * k)}" '
+                        f'{estilo("contorno", w=0.3)}/>')
+    for q in R["sin_medir"]:
+        x, y = cx[q["columna"] - 1], cy[q["fila"] - 1]
+        a = G(x - hw / 2, y - hh / 2)
+        h.add("cuerpo", f'<rect x="{f(a[0])}" y="{f(a[1])}" width="{f(hw * k)}" height="{f(hh * k)}" '
+                        f'{estilo("contorno_r", w=0.35)}/>')
+    q = R["sin_medir"][-1]
+    pq = G(cx[q["columna"] - 1] + hw / 2, cy[q["fila"] - 1])
+    h.nota(pq, (X1 + 6, pq[1] - 3), "", 2.0, color=VIOLETA, lineas=["sin medir:", "la línea no cierra"])
+    # cotas: el paso de cada columna arriba, el de cada fila a la izquierda (px de la imagen)
+    for j in range(7):
+        h.cota(G(cx[j], by[0]), G(cx[j + 1], by[0]), 4.5, coma(px[j]), tam=1.8, sobra=1.0)
+    for i in range(6):
+        h.cota(G(bx[0], cy[i]), G(bx[0], cy[i + 1]), -4.5, coma(py[i]), tam=1.8, sobra=1.0)
+    # abajo, cada paso sobre el de las filas
+    h.texto(X0 - 2, Y1 + 5.6, "ancho / alto", 1.9, "end", color=GRIS)
+    for j, r in enumerate(R["ancho_por_alto"]):
+        xm = (G(cx[j], 0)[0] + G(cx[j + 1], 0)[0]) / 2
+        h.texto(xm, Y1 + 5.6, coma(r, 2), 2.2, "middle", peso=700 if j == 3 or j in (0, 6) else 400)
+    ancho7, alto6 = cx[-1] - cx[0], cy[-1] - cy[0]
+    h.texto(X0, Y1 + 11.4, f"la retícula entera: ({coma(ancho7)} / 7) / ({coma(alto6)} / 6) = "
+                           f"{coma((ancho7 / 7) / (alto6 / 6), 3)} ≈ {coma(R['celda'], 2)}", 2.3)
+    h.clave((X0 + 96, Y1 + 10.6), (X0 + 102, Y1 + 10.6), 1)
+    h.texto(X0, Y1 + 15.6, f"{len(R['huecos'])} de 56 huecos: sus centros de masa, agrupados por columna y por fila", 1.9,
+            color=GRIS)
+    h.texto(X0, Y1 + 18.8, "las filas bajan hacia la derecha 2,3° arriba y 0,7° abajo", 1.9, color=GRIS)
+
+    # ---- 2. el cilindro, en planta
+    C = cilindro(cx)
+    r, dt, phi = C["r"], C["dt"], C["phi"]
+    h.llamada(166, 22, 2, titulo="EL CILINDRO: LA CABEZA EN PLANTA", escala=f"1 px = 0,22 mm · R = {coma(r, 0)} px")
+    k2 = 0.22
+    cxs, cys = 219.0, 32.0                                # el centro del cilindro
+    R2 = r * k2
+    ang = [(j - 4) * dt + phi for j in range(9)]          # los bordes de las ocho columnas, desde el frente
+    def en_planta(t, rr=R2):
+        return (cxs + rr * math.sin(t), cys + rr * math.cos(t))
+    arco = [en_planta(math.radians(a)) for a in np.linspace(-44, 44, 89)]
+    h.poli(arco, "aux_continua", "fondo")
+    tramo = [en_planta(t) for t in np.linspace(ang[0], ang[-1], 80)]
+    h.poli(tramo, "contorno", "cuerpo", w=0.5)
+    h.punto((cxs, cys), 0.5)
+    yplano = cys + R2 + 8
+    for t in ang:
+        p = en_planta(t)
+        h.linea((cxs, cys), p, "aux", "aux")
+        h.linea(p, (p[0], yplano), "aux", "aux")
+    h.linea((en_planta(math.radians(-46))[0], yplano), (en_planta(math.radians(46))[0], yplano), "contorno", "cuerpo",
+            w=0.35)
+    h.texto(cxs, yplano + 14.6, "el plano del dibujo: lo que la lámina muestra de la cabeza", 2.0, "middle", color=GRIS)
+    h.clave((cxs, cys + R2), (cxs + 14, cys + R2 - 9), 2)
+    h.texto(cxs + 3, cys - 1.5, "eje del cilindro", 1.9, color=GRIS)
+    # el ancho proyectado de cada columna, y el medido
+    xs = [en_planta(t)[0] for t in ang]
+    for j in range(8):
+        h.cota((xs[j], yplano), (xs[j + 1], yplano), -4.2, "", tam=1.8, sobra=0.8)
+    for j in range(8):
+        xm = (xs[j] + xs[j + 1]) / 2
+        h.texto(xm, yplano + 10.4, str(j + 1), 1.9, "middle", color=GRIS)
+    h.cota_angular((cxs, cys), R2 * 0.42, 270 + math.degrees(ang[4]), 270 + math.degrees(ang[3]),
+                   f"{coma(math.degrees(dt))}°", tam=2.0)
+    h.texto(cxs, cys + R2 * 0.42 + 9.5, f"cada columna: {coma(math.degrees(dt))}° · las ocho: {coma(math.degrees(8 * dt), 0)}°",
+            2.1, "middle", fondo=True)
+    yl = yplano + 21
+    filas_ = [("ancho de la columna del centro, en el dibujo", f"{coma(max(px))} px"),
+              ("ancho de las del borde, en el dibujo", f"{coma(px[0])} · {coma(px[-1])} px"),
+              ("una columna desenrollada (r · dθ)", f"{coma(r * dt)} px"),
+              ("celda desenrollada (sobre el alto de la fila)", f"{coma(r * dt / pym, 2)}"),
+              ("celda del dibujo (la retícula entera)", f"{coma(R['celda'], 2)}")]
+    for i, (t, v) in enumerate(filas_):
+        yy = yl + i * 5.0
+        h.texto(170, yy, t, 2.1, familia=SERIF, peso=400 if i < 4 else 500)
+        h.texto(276, yy, v, 2.2, "end", peso=700 if i == 4 else 400)
+        h.linea((170, yy + 1.6), (276, yy + 1.6), "fina", "textos")
+
+    # ---- 3. la celda, antes y ahora
+    y3 = 168.0
+    h.llamada(32, y3, 3, titulo="LA CELDA, ANTES Y AHORA", escala="ancho / alto del paso de cada columna")
+    gx_, gy_, gw, gh = 44.0, y3 + 12, 104.0, 40.0
+    v0, v1 = 0.78, 1.00
+    def Q(i, v):
+        return (gx_ + 6 + i * (gw - 12) / 6, gy_ + gh - (v - v0) / (v1 - v0) * gh)
+    for v in (0.80, 0.85, 0.90, 0.95, 1.00):
+        h.linea(Q(-0.4, v), Q(6.4, v), "fina", "fondo")
+        h.texto(gx_ - 1.5, Q(0, v)[1] + 0.7, coma(v, 2), 1.9, "end", color=GRIS)
+    viejo = R["antes"]["ancho_por_alto"]
+    nuevo_ = [a / pym for a in px]
+    h.poli([Q(i, v) for i, v in enumerate(viejo)], "comparar", "cuerpo")
+    for i, v in enumerate(viejo):
+        h.circulo(Q(i, v), 0.55, "aux_continua", "cuerpo", relleno=PAPEL)
+    h.poli([Q(i, v) for i, v in enumerate(nuevo_)], "contorno", "cuerpo", w=0.4)
+    for i, v in enumerate(nuevo_):
+        h.nodo(Q(i, v), "cuerpo")
+    for v, tipo, t, color in ((R["antes"]["celda"], "aux", "la celda de antes: 0,84", GRIS),
+                              (R["celda"], "celda", f"la celda: {coma(R['celda'], 2)}", TINTA),
+                              (r * dt / pym, "linea", f"desenrollada: {coma(r * dt / pym, 2)}", GRIS)):
+        h.linea(Q(-0.4, v), Q(6.4, v), tipo, "cotas")
+        h.texto(Q(6.4, v)[0] + 1.2, Q(6.4, v)[1] + 0.7, t, 1.9, color=color, peso=700 if tipo == "celda" else 400)
+    for i in range(7):
+        h.texto(Q(i, v0)[0], gy_ + gh + 4.2, f"{i + 1}–{i + 2}", 1.8, "middle", color=GRIS)
+    h.texto(gx_ + gw / 2, gy_ + gh + 8.2, "entre las columnas", 1.8, "middle", color=GRIS)
+    h.linea((gx_, gy_ - 4.5), (gx_ + 8, gy_ - 4.5), "contorno", "textos", w=0.4)
+    h.texto(gx_ + 10, gy_ - 3.8, "la lámina enderezada (2026-11-08)", 2.0)
+    h.linea((gx_ + 62, gy_ - 4.5), (gx_ + 70, gy_ - 4.5), "comparar", "textos")
+    h.texto(gx_ + 72, gy_ - 3.8, "la foto de cámara", 2.0, color=GRIS)
+    h.clave(Q(5.2, R["celda"]), (Q(5.2, R["celda"])[0] + 4, Q(5.2, R["celda"])[1] - 7), 1)
+    # la celda en la placa, a 1:3: el alto no cambia, el ancho sí
+    x0c, y0c, x1c, y1c = E["celda"]
+    alto_mm = (y1c - y0c) / 4
+    ox3, oy3 = 112.0, 232.0
+    for razon, tipo in ((R["antes"]["celda"], "comparar"), (R["celda"], "celda")):
+        w3 = razon * alto_mm / 3
+        h.add("cuerpo", f'<rect x="{f(ox3 + (41 - w3) / 2)}" y="{f(oy3)}" width="{f(w3)}" height="{f(alto_mm / 3)}" '
+                        f'{estilo(tipo)}/>')
+    w_old, w_new = R["antes"]["celda"] * alto_mm, R["celda"] * alto_mm
+    U = 1000 / alto_mm
+    h.cota((ox3 + (41 - w_new / 3) / 2, oy3 + alto_mm / 3), (ox3 + (41 + w_new / 3) / 2, oy3 + alto_mm / 3), -4,
+           f"{coma(w_new)} ({int(round(w_new * U))})", tam=1.9)
+    h.cota((ox3 + (41 - w_old / 3) / 2, oy3), (ox3 + (41 + w_old / 3) / 2, oy3), 3.5,
+           f"antes {coma(w_old)} ({int(round(w_old * U))})", tam=1.8, color=GRIS)
+    h.cota((ox3 + 41, oy3 + alto_mm / 3), (ox3 + 41, oy3), -3.5, f"{coma(alto_mm)} (1000)", tam=1.9)
+    h.parrafo(44, oy3 + 2.4, 62, "**La celda en la placa, a 1:3.** El alto no cambia: 136,7 mm, que son 1000 UPM. "
+                                 f"El ancho pasa de {coma(w_old)} a {coma(w_new)} mm, de {int(round(w_old * U))} a "
+                                 f"{int(round(w_new * U))} UPM: es el avance de la fuente. Las cifras, que viven en su "
+                                 "celda, se ensanchan con ella.", 2.25)
+
+    # ---- 4. el pie: las astas a media oscuridad
+    h.llamada(166, y3, 4, titulo="EL PIE: LAS ASTAS A MEDIA OSCURIDAD", escala="las letras de la foto · 1 px = 1,2 mm")
+    letras, _corr = astas_del_pie()
+    fc, fl = P["foto_de_camara"], P["lamina_enderezada"]
+    k4 = 0.4                                              # px del testigo (la foto ampliada tres veces) a mm
+    yf = y3 + 52.0                                        # el fondo
+    niveles = (("afuera", yf - fc["ascendente"] * 3 * k4), ("borde", yf - fc["alto_x"] * 3 * k4), ("fondo", yf),
+               ("desagüe", yf + fc["descendente"] * 3 * k4))
+    xa, xb = 184.0, 254.0
+    for nombre, y in niveles:
+        h.linea((xa, y), (xb, y), "linea", "fondo")
+        h.texto(xa - 1.5, y + 0.8, nombre, 2.0, "end", color=GRIS)
+    for i, L in enumerate(letras):
+        ox4 = xa + 12 + i * 21 - L["asta"] * k4
+        def T4(u, v):
+            return (ox4 + u * k4, yf + (v - L["base"]) * k4)
+        for anillo in L["anillos"]:
+            h.poli([T4(u, v) for u, v in anillo], "contorno", "cuerpo", cerrado=True, w=0.3)
+        h.linea(T4(L["asta"], L["a"] - 3), T4(L["asta"], L["z"] + 3), "eje", "ejes")
+        for v in (L["a"], L["z"]):
+            h.nodo(T4(L["asta"], v))
+        h.texto(T4(L["asta"], 0)[0], yf + fc["descendente"] * 3 * k4 + 5.2, f"{L['signo']} · {L['palabra']}", 1.9,
+                "middle", color=GRIS)
+    xc4 = xb + 5
+    h.cota((xc4, yf), (xc4, niveles[1][1]), -3, coma(fc["alto_x"]), tam=1.9)
+    h.cota((xc4, yf), (xc4, niveles[0][1]), -9.5, coma(fc["ascendente"]), tam=1.9)
+    h.cota((xc4, niveles[3][1]), (xc4, yf), -3, coma(fc["descendente"]), tam=1.9)
+    h.clave((xa + 12, niveles[1][1]), (xa + 4, niveles[1][1] - 9), 3)
+    h.clave((xa + 12 + 2 * 21 + 4, yf + 2), (xa + 12 + 2 * 21 + 12, yf + 10), 4)
+    h.gravedad(272, y3 + 4, 3.6)
+    # la tabla: las dos imágenes, el paso de la medida y la placa
+    yt = yf + fc["descendente"] * 3 * k4 + 13
+    cols = (170, 228, 249, 276)                           # el rótulo empieza; los números terminan
+    for j, t in enumerate(("x", "ascendente", "asc. / x")):
+        h.texto(cols[j + 1], yt, t, 1.9, "end", color=GRIS)
+    filas_t = [("la foto de cámara", coma(fc["alto_x"]), coma(fc["ascendente"]), coma(fc["razon"], 2)),
+               ("la lámina enderezada", coma(fl["alto_x"]), coma(fl["ascendente"]), coma(fl["razon"], 2)),
+               ("el paso de la medida", "⅓ px", "⅓ px", f"± {coma(P['paso']['sobre_la_x'] * 100)} %"),
+               ("el borde en la placa (mm)", coma(P["en_la_placa"]["borde_mm_con_1_71"]),
+                coma(P["en_la_placa"]["borde_mm_con_1_74"]), f"{coma(P['en_la_placa']['diferencia_mm'])} mm")]
+    for i, fila in enumerate(filas_t):
+        yy = yt + 4.6 + i * 4.6
+        h.texto(cols[0], yy, fila[0], 2.1, familia=SERIF)
+        for j, v in enumerate(fila[1:]):
+            h.texto(cols[j + 1], yy, v, 2.1, "end", peso=700 if (i < 2 and j == 2) else 400)
+        h.linea((cols[0], yy + 1.5), (cols[3], yy + 1.5), "fina", "textos")
+    h.texto(cols[0], yt + 4.6 * 4 + 3.6, f"el surco del punzón mide {coma(P['en_la_placa']['surco_del_punzon_mm'], 0)} mm: "
+                                         f"la razón se queda en {coma(P['razon'], 2)}", 2.1, peso=700)
+    h.columna(bloques("P-11", M))
+
+
 # ---------------------------------------------------------------- el DXF
 
 def dxf(D, M, ruta, signos, caja=False):
@@ -1401,7 +1703,7 @@ def main():
     Me = Medidas(D)
     M = Me.tabla()
     M["_"] = Me
-    funciones = [p00, p01, p02, p03, p04, p05, p06, p07, p08, p09, p10]
+    funciones = [p00, p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11]
     SVG, PNG, DXF = AQUI / "svg", AQUI / "png", AQUI / "dxf"
     for d in (SVG, PNG, DXF):
         d.mkdir(exist_ok=True)
@@ -1409,7 +1711,7 @@ def main():
     for i, ((cod, tit, sub, esc), fn, nombre) in enumerate(zip(LAMINAS, funciones, NOMBRES_ARCHIVO)):
         if args.solo and cod != args.solo:
             continue
-        h = Hoja(cod, tit, sub, esc, i + 1, len(LAMINAS))
+        h = Hoja(cod, tit, sub, esc, i + 1, len(LAMINAS), **EXTRA.get(cod, dict(revision=REVISION)))
         fn(h, D, M)
         h.marco()
         (SVG / f"{cod}_{nombre}.svg").write_text(h.svg("../../laminas/fuentes"), encoding="utf8")

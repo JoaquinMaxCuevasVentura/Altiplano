@@ -51,9 +51,10 @@ TEXTOS["P-01"] = [
     ("p", "La celda de la cabeza de la ídolo dentro de la placa de 150 mm, con las cuatro líneas que da el pie. "
           "Abajo, a 1:3, tres signos en su celda y la celda vacía."),
     ("titulo", "Decisiones"),
-    ("decision", (1, "El cuerpo: la celda de la cabeza", "**La decisión.** El cuerpo del tipo es una celda de 0,84 de "
-                  "ancho por alto: {celda_ancho} × {celda_alto} mm, 840 × 1000 UPM. **Por qué.** Es la proporción "
-                  "de las celdas de la cabeza en la lámina: se parte del registro y no de la piedra (D1). Es el único "
+    ("decision", (1, "El cuerpo: la celda de la cabeza", "**La decisión.** El cuerpo del tipo es una celda de "
+                  "{celda_razon} de ancho por alto: {celda_ancho} × {celda_alto} mm, {avance_upm} × 1000 UPM. **Por "
+                  "qué.** Es la proporción de la retícula de la cabeza en la lámina enderezada (P-11): se parte del "
+                  "registro y no de la piedra (D1). Es el único "
                   "préstamo directo del monolito, y entra vacío: también es el .notdef, lo que la fuente muestra "
                   "cuando no tiene la letra. _Retórica:_ metonimia; la celda de la cabeza está por la ídolo entera.",
                   "Quedó el contenedor\nde lo que ya no está.")),
@@ -69,8 +70,9 @@ TEXTOS["P-01"] = [
                   "D9). _Retórica:_ metáfora; la letra es un vaso.", None)),
     ("decision", (4, "La altura de x: {razon}", "**La decisión.** Las ascendentes miden {razon} veces la altura de x: "
                   "una x baja, con ascendentes largas y descendentes cortas. Ninguna altura se redondea a una "
-                  "retícula. **Por qué.** Es la única proporción que se toma de la foto del pie real (07, §3); el "
-                  "testigo sustituto daba 1,52. Las alturas las da el registro, no una norma.", None)),
+                  "retícula. **Por qué.** Es la única proporción que se toma de la foto del pie real (07, §3), y la "
+                  "lámina enderezada la confirma (P-11); el testigo sustituto daba 1,52. Las alturas las da el "
+                  "registro, no una norma.", None)),
     ("titulo", "Para la mano"),
     ("p", "La pauta a 1:1 está en esquemas/pauta_azulejo.svg. Se calca con el fondo de la pauta sobre la base del "
           "pie ampliado (Acción 3). Si algo se sale de la celda, se deja salir y se anota."),
@@ -306,6 +308,43 @@ TEXTOS["P-10"] = [
     ("titulo", "Para la mano"),
     ("p", "La caja física es una bandeja de 8 × 7 compartimentos: cada uno guarda las placas de su signo y sus "
           "fichas. Las placas rotas van en su compartimento, junto a la que se hizo después."),
+]
+
+
+TEXTOS["P-11"] = [
+    ("titulo", "Qué se dibuja"),
+    ("p", "Cómo se midieron las dos proporciones que la letra toma del registro: **la celda**, de la retícula de la "
+          "cabeza, y **la altura de x**, del pie. Primero se midieron en una foto de cámara; después, en la lámina "
+          "enderezada, sin la perspectiva. Las imágenes no se suben: el dibujo es un redibujo de las medidas."),
+    ("titulo", "Decisiones"),
+    ("decision", (1, "La celda: {celda_razon}", "**La decisión.** La celda mide {celda_razon} de ancho por alto: la "
+                  "retícula entera, las ocho columnas sobre las siete filas. **Por qué.** En la foto de cámara la "
+                  "retícula medía 0,86 y la celda usaba 0,84; enderezada, mide 0,90, y el 0,84 queda fuera de todas "
+                  "las columnas. La cámara angostaba la cabeza.", None)),
+    ("decision", (2, "El dibujo, no la piedra", "**La decisión.** No se desenrolla el cilindro. **Por qué.** Las "
+                  "columnas se angostan hacia los bordes (0,86) y se ensanchan al centro (0,97), en las dos imágenes: "
+                  "el dibujo curva la cabeza como un cilindro de unos 65°. Desenrollada, la celda mediría 0,94. Se "
+                  "parte del registro y no de la piedra (D1): la letra toma la proporción del dibujo.", None)),
+    ("decision", (3, "La altura de x: se confirma", "**La decisión.** Las ascendentes siguen midiendo {razon} veces "
+                  "la x. **Por qué.** Con el mismo método, la lámina enderezada da 1,74: la diferencia (1,3 %) es "
+                  "menor que el paso de la medida, un tercio de píxel en una x de 12 px (2,8 %). En la placa son "
+                  "0,6 mm; el surco del punzón mide 3.", None)),
+    ("decision", (4, "Las letras sueltas: las de la foto", "**La decisión.** Los 336 testigos del pie siguen siendo "
+                  "los de la foto de cámara. **Por qué.** La imagen enderezada tiene la misma resolución, y su filtro "
+                  "de nitidez engorda la tinta y deja halos: sus letras no son mejores y su trazo no se puede medir.",
+                  None)),
+    ("titulo", "El proceso"),
+    ("p", "**1.** En la foto de cámara de la lámina, la retícula midió 0,86 y la celda se fijó en 0,84 (P-01). "
+          "**2.** La lámina enderezada quita la perspectiva: es la misma imagen, recta."),
+    ("p", "**3.** En la cabeza, cada hueco que se deja medir da su centro de masa: 54 de 56. **4.** Los centros "
+          "se agrupan en ocho columnas y siete filas; los pasos dan el ancho por alto de cada columna, y la retícula "
+          "entera, la celda (1). **5.** Un cilindro explica por qué los bordes son más angostos (2)."),
+    ("p", "**6.** En el pie, cada línea se endereza y cada palabra se corta en sus letras. **7.** Cada asta se corta "
+          "a la mitad de su oscuridad: dan la altura de x y la de las ascendentes, en las dos imágenes (3, 4)."),
+    ("titulo", "Lo que falta"),
+    ("p", "**Medir con regla el impreso.** El enderezado fija la proporción de la imagen; solo el impreso dice si la "
+          "cabeza mide 0,90. Si mide otra cosa, se cambia esquemas/celda_medida.json y se rehacen la gramática, los "
+          "planos y el libro."),
 ]
 
 

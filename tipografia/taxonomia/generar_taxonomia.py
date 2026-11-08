@@ -1356,7 +1356,7 @@ def mec_13(h, x0, y0, x1, y1):
 def mec_14(h, x0, y0, x1, y1):
     """El gesto como signo: la celda 56, con el ¶ que no se dibuja."""
     alto = min(y1 - y0 - 4, 30.0)
-    ancho = alto * 0.84
+    ancho = alto * 0.90                 # la celda de la cabeza (esquemas/celda_medida.json)
     cx0, cy0 = x0 + 5, y0 + 2
     celda_abierta(h, cx0, cy0, cx0 + ancho, cy0 + alto, "celda", capa="fondo", w=0.4)
     h.texto(cx0 + 1.2, cy0 + 3.0, "56", 1.8, color=GRIS)

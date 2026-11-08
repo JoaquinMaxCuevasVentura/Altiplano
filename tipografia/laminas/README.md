@@ -32,7 +32,7 @@ Diecisiete láminas 4:3 para mostrar *Contenida*: la obra de la que sale, el sis
 
 ## Decisiones
 
-- **La retícula** es de 16 × 12 módulos de 150 px, con uno de margen. La letra, en cambio, vive en su celda: 0,84 de ancho por alto.
+- **La retícula** es de 16 × 12 módulos de 150 px, con uno de margen. La letra, en cambio, vive en su celda: 0,90 de ancho por alto.
 - **La marca de capítulo** son cuatro celdas de la cabeza del ídolo, cada una con su desagüe abajo. La del capítulo en curso lleva el centro violeta.
 - **El color es el del proyecto.** El violeta es tinta: versos, testigos y lo reconstruido. El verde solo aparece como luz, en las fotos del agua.
 - **Las cifras son elzevirianas**, como las de *Contenida*.

@@ -3,11 +3,11 @@
 <defs><style>@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-500-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-700-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-italic.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}</style><pattern id="metal" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#e2e0d9"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#a9a69d" stroke-width="0.16"/></pattern><pattern id="metal_r" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#ebe6ef"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#b9a9c9" stroke-width="0.16"/></pattern><pattern id="blanda" patternUnits="userSpaceOnUse" width="2.2" height="2.2"><rect width="2.2" height="2.2" fill="#f6f4ee"/><circle cx="0.55" cy="0.55" r="0.22" fill="#9a968d"/><circle cx="1.65" cy="1.65" r="0.22" fill="#9a968d"/></pattern><clipPath id="rP-03_1"><rect x="192" y="124" width="40" height="48"/></clipPath><clipPath id="rP-03_2"><rect x="30" y="208" width="32.5" height="33.75"/></clipPath><clipPath id="rP-03_3"><rect x="92" y="208" width="32.5" height="33.75"/></clipPath><clipPath id="rP-03_4"><rect x="154" y="208" width="32.5" height="33.75"/></clipPath><clipPath id="rP-03_5"><rect x="216" y="208" width="32.5" height="33.75"/></clipPath></defs>
 <rect width="420" height="297" fill="#f6f4ee"/>
 
-<rect x="45.596" y="32.037" width="114.807" height="136.675" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="38.25" x2="167.904" y2="38.25" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="77.5" x2="167.904" y2="77.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="132.324" x2="167.904" y2="132.324" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="162.5" x2="167.904" y2="162.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="41.496" y="32.037" width="123.007" height="136.675" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="38.25" x2="172.004" y2="38.25" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="77.5" x2="172.004" y2="77.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="132.324" x2="172.004" y2="132.324" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="162.5" x2="172.004" y2="162.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="192" y="124" width="40" height="48" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="30" y="208" width="32.5" height="33.75" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="92" y="208" width="32.5" height="33.75" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -102,10 +102,10 @@
 <path d="M244.281,224.894 L244.28,225.229 L244.276,225.563 L244.269,225.895 L244.259,226.224 L244.247,226.55 L244.232,226.874 L244.215,227.195 L244.195,227.512 L244.173,227.827 L244.148,228.139 L244.12,228.447 L244.091,228.752 L244.058,229.054 L244.024,229.351 L243.987,229.645 L243.948,229.935 L243.907,230.221 L243.864,230.503 L243.818,230.781 L243.771,231.054 L243.721,231.322 L243.669,231.586 L243.616,231.845 L243.56,232.099 L243.503,232.348 L243.443,232.592 L243.382,232.831 L243.319,233.064 L243.254,233.292 L243.188,233.514 L243.119,233.73 L243.05,233.941 L242.978,234.145 L242.905,234.344 L242.83,234.536 L242.754,234.721 L242.677,234.9 L242.598,235.073 L242.517,235.238 L242.435,235.397 L242.352,235.549 L242.268,235.694 L242.182,235.831 L242.095,235.961 L242.007,236.084 L241.918,236.199 L241.828,236.306 L241.737,236.405 L241.644,236.497 L241.551,236.58 L241.456,236.655 L241.361,236.722 L241.265,236.78 L241.168,236.829 L241.07,236.87 L240.972,236.902 L240.873,236.925 L240.773,236.939 L240.672,236.943" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="223.828" y1="236.943" x2="240.672" y2="236.943" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
 </g>
-<text x="36.596" y="39.02" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">afuera</text>
-<text x="36.596" y="78.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">borde</text>
-<text x="36.596" y="133.094" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">fondo</text>
-<text x="36.596" y="163.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">desagüe</text>
+<text x="32.496" y="39.02" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">afuera</text>
+<text x="32.496" y="78.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">borde</text>
+<text x="32.496" y="133.094" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">fondo</text>
+<text x="32.496" y="163.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">desagüe</text>
 <line x1="86.156" y1="129.087" x2="86.156" y2="138.987" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="119.844" y1="129.087" x2="119.844" y2="138.987" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="84.656" y1="137.387" x2="121.344" y2="137.387" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -143,10 +143,10 @@
 <line x1="134" y1="104.787" x2="137" y2="104.787" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="137.8" y="105.522" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="start">pared 0,55</text>
 <circle cx="85.675" cy="86.917" r="0.5" fill="#1d1c1a"/>
-<line x1="85.675" y1="86.917" x2="70.596" y2="62.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="70.596" y1="62.5" x2="67.596" y2="62.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="66.796" y="63.235" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="end">mitad alta:</text>
-<text x="66.796" y="65.86" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="end">el ojo del pie</text>
+<line x1="85.675" y1="86.917" x2="66.496" y2="62.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="66.496" y1="62.5" x2="63.496" y2="62.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="62.696" y="63.235" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="end">mitad alta:</text>
+<text x="62.696" y="65.86" font-family="Courier Prime" font-size="2.1" font-weight="400" fill="#1d1c1a" text-anchor="end">el ojo del pie</text>
 <circle cx="110.5" cy="75.502" r="0.5" fill="#1d1c1a"/>
 <line x1="110.5" y1="75.502" x2="118.5" y2="68" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="118.5" y1="68" x2="121.5" y2="68" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -354,12 +354,12 @@
 <text x="286.5" y="253.6" font-family="Newsreader" font-size="5" font-weight="400" fill="#1d1c1a" text-anchor="start">o · la cuenca</text>
 <text x="286.5" y="258.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">primer generador</text>
 <text x="397" y="250" font-family="Courier Prime" font-size="1.8" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="middle">HOJA</text>
-<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">4 / 11</text>
+<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">4 / 12</text>
 <text x="285.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">ESCALA</text>
 <text x="285.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">1:1 · 2:1 · 4:1 · 1:2</text>
 <text x="315.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">UNIDADES</text>
 <text x="315.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">mm · (UPM)</text>
-<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA</text>
+<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA · REV. 08.11.2026</text>
 <text x="349.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">17.10.2026</text>
 <text x="381.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FORMATO</text>
 <text x="381.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">A3 · 420 × 297</text>

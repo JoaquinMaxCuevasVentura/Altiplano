@@ -493,8 +493,9 @@ def celda_notdef(rng):
 
     También tiene desagüe: ni la celda vacía retiene. La mano levanta en las esquinas.
     """
+    from gramatica import CELDA
     alto = 0.62 * T
-    ancho = 0.84 * alto
+    ancho = CELDA * alto
     x0, y0 = (T - ancho) / 2, (T - alto) / 2
     fuera = np.array([[x0, y0], [x0 + ancho, y0], [x0 + ancho, y0 + alto], [x0, y0 + alto]])
     ix, iy = 0.18 * ancho, 0.13 * alto

@@ -35,7 +35,7 @@ from comun import (AJUSTES, CELDAS, FUENTE_TESTIGO, GLIFOS, POR_SIGNO, SALIDA, T
 from contener import foto_placa, repujar_placa, reverso, signo_final
 from desenterrar import calco, celda_notdef, desenterrar, dibujar_trazos, frotado, pared, tramos_de
 from devolver import agua, agua_tocada_en_bucle, foto_agua, frotadas, voz_del_verso, voz_en_bucle
-from gramatica import V, celda, encintar, imagen_cuerpo
+from gramatica import CELDA, V, celda, encintar, imagen_cuerpo
 from pulso import OFICIOS, SESION_MIN, Mano, toque
 
 OSCURO = dict(fondo=(0.06, 0.06, 0.08), tinta=(0.85, 0.9, 0.85), junta=(0.12, 0.12, 0.14))
@@ -588,9 +588,11 @@ def informe(D, fichas, pol, legibles):
          "queda para mirar el pie real y para medirlo (más abajo, *Lo que dice la foto*).",
          "- **El cuerpo del pie:** 8,5 puntos.",
          "- **La piscina:** azulejo de 150 mm y junta de 3 mm, hasta que se mida. La pared da el frotado sobre el que se calca.",
-         "- **La celda:** 0,84 de ancho por alto, la proporción de las celdas de la cabeza del ídolo. En la foto cercana de la "
-         "cabeza, el paso de la retícula de 8 × 7 mide 0,81 en los bordes y 0,91 al centro (promedio 0,86): el dibujo curva "
-         "la cabeza como un cilindro. El 0,84 cae dentro.",
+         f"- **La celda:** {coma(CELDA, 2)} de ancho por alto, la proporción de las celdas de la cabeza del ídolo. En la "
+         "lámina enderezada, la retícula de 8 × 7 mide 0,90 entera; su paso mide 0,86 en los bordes y 0,97 al centro: el "
+         "dibujo curva la cabeza como un cilindro, y la letra toma el dibujo, no la piedra. En la foto de cámara medía 0,86 "
+         "y la celda usaba 0,84: la cámara angostaba la cabeza (`esquemas/celda_medida.json`). A confirmar con regla en el "
+         "impreso.",
          "- **El frotado:** cada frotada aplasta entre un 5 y un 9 % del relieve del surco. Es un supuesto: se mide frotando.",
          "- **La voz:** no es la tuya. Es el ritmo silábico del poema, con alturas inventadas entre 110 y 220 Hz.",
          "- **El signo final:** la máquina no tiene dedos. Simula las presiones de un pulgar genérico: dos a cuatro.",
@@ -630,7 +632,13 @@ def informe(D, fichas, pol, legibles):
               f"hay. En {foto['trazos']} trazos aislados, el pico y la tinta total dan el desenfoque; la tinta llena no se puede "
               "despejar, porque todos los trazos son más finos que el desenfoque. Se la toma como negro pleno, y el ancho que "
               "resulta es un mínimo. El pie real tiene ascendentes más largas, descendentes más cortas y un trazo más "
-              "grueso que el sustituto."]
+              "grueso que el sustituto.",
+              "",
+              "La lámina enderezada, sin la perspectiva de la cámara, da con el mismo método una altura de x de 12,0 px y "
+              "ascendentes de 1,74 veces la x. La diferencia con la foto (1,3 %) es menor que el paso de la medida: un tercio "
+              "de píxel en la altura de x, el 2,8 %. En la placa son 0,6 mm, menos que el surco del punzón. La razón queda en "
+              "la de la foto, y las letras sueltas también: la imagen enderezada tiene la misma resolución y su filtro de "
+              "nitidez engorda la tinta."]
     L += ["",
           "## La gramática",
           "",

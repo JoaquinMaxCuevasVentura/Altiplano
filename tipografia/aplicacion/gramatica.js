@@ -321,9 +321,11 @@
     }
   }
 
+  /* La celda de la cabeza del ídolo, de ancho por alto (CELDA en gramatica.py: esquemas/celda_medida.json). */
+  const CELDA = 0.90;
   function celda(e, T) {
     const alto = (e.desague - e.afuera) * 1.1, cy = (e.afuera + e.desague) / 2;
-    return [T / 2 - 0.42 * alto, cy - alto / 2, T / 2 + 0.42 * alto, cy + alto / 2];
+    return [T / 2 - CELDA / 2 * alto, cy - alto / 2, T / 2 + CELDA / 2 * alto, cy + alto / 2];
   }
 
   class Taller {

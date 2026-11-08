@@ -1099,11 +1099,16 @@ def rasterizar(geo):
     return m.astype(bool)
 
 
+# La celda de la cabeza del ídolo, de ancho por alto: la retícula de 8 × 7 medida en la lámina
+# enderezada (esquemas/celda_medida.json). Antes, en la foto de cámara, 0,84.
+CELDA = 0.90
+
+
 def celda(e):
-    """La celda de la cabeza del ídolo: 0,84 de ancho por alto, como el .notdef."""
+    """La celda de la cabeza del ídolo: 0,90 de ancho por alto, como el .notdef."""
     alto = (e["desague"] - e["afuera"]) * 1.1
     cy = (e["afuera"] + e["desague"]) / 2
-    return (T / 2 - 0.42 * alto, cy - alto / 2, T / 2 + 0.42 * alto, cy + alto / 2)
+    return (T / 2 - CELDA / 2 * alto, cy - alto / 2, T / 2 + CELDA / 2 * alto, cy + alto / 2)
 
 
 def a_svg(geo, e, signo):

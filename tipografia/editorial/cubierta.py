@@ -5,13 +5,13 @@ Portada viene de puerta. Con la caja cerrada se ve solo la coma que sigue al nom
 signo hallado». No lleva título: las 56 celdas van en relieve seco, sin tinta, y la celda 1 es un troquel
 por el que se ve la coma de la página 1. El título va en el lomo y en la contratapa.
 
-Escribe dos HTML en .cache/libro/: tapa.html y contratapa.html (210 × 250 mm, para la versión de pantalla) y
+Escribe dos HTML en .cache/libro/: tapa.html y contratapa.html (225 × 250 mm, para la versión de pantalla) y
 cubierta.html (el pliego entero, con lomo, 3 mm de sangre y marcas de corte, para la imprenta).
 """
 
-from libro import ALTO, ANCHO, ARRIBA, ADENTRO, AFUERA, LIBRO, an, al, esc, x, y
+from libro import ALTO, ANCHO, ARRIBA, ADENTRO, AFUERA, LIBRO, PAGINA, an, al, esc, x, y
 
-W, H = 210.0, 250.0
+W, H = PAGINA
 LOMO_POR_HOJA = 0.15     # mm por hoja: un papel ahuesado de 100 g y 1,5 de volumen; a confirmar con la imprenta
 TINTA, GRIS, FILETE = "#1d1c1a", "#6d6a63", "#cfcac0"
 

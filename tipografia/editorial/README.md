@@ -6,8 +6,8 @@ Un solo documento editorial con todo el proyecto: el informe de decisiones, los 
 
 | Archivo | Qué es |
 |---|---|
-| `contenida_libro.pdf` | **El libro, para leer en pantalla:** 210 × 250 mm, sobre el papel del proyecto, con tapa y contratapa (85 páginas, más las tapas) |
-| `contenida_libro_imprenta.pdf` | El libro para la imprenta: papel blanco, 3 mm de sangre y marcas de corte (85 páginas) |
+| `contenida_libro.pdf` | **El libro, para leer en pantalla:** 225 × 250 mm, sobre el papel del proyecto, con tapa y contratapa (83 páginas, más las tapas) |
+| `contenida_libro_imprenta.pdf` | El libro para la imprenta: papel blanco, 3 mm de sangre y marcas de corte (83 páginas) |
 | `contenida_cubierta_imprenta.pdf` | La cubierta para la imprenta: el pliego con el lomo, en dos páginas: lo que va en tinta y las planchas de relieve seco y troquel |
 | `imagenes.md` | Las 73 figuras con su página, de dónde salen en el repositorio y su estado |
 | `muestras/` | Ocho dobles páginas en JPG |
@@ -41,15 +41,15 @@ Lo que tienen en común —papel blanco roto, blanco y negro, retícula estricta
 
 ## El sistema
 
-**Formato.** 210 × 250 mm: la página tiene la proporción de la celda, 0,84. Se encuaderna cosido, con lomo abierto, para que abra plano: dos piezas cruzan el lomo.
+**Formato.** 225 × 250 mm: la página tiene la proporción de la celda, 0,90. Hasta el 8 de noviembre medía 210 × 250, con la celda de 0,84 que daba la foto de cámara; en la lámina enderezada la celda mide 0,90 (`../planos/`, P-11). Se encuaderna cosido, con lomo abierto, para que abra plano: dos piezas cruzan el lomo.
 
-**Retícula.** La caja: 8 columnas × 7 filas de celdas de 19 × 22,619 mm (0,84), con juntas de 4 mm. Ocupa 180 × 182,3 mm; márgenes de 28 mm arriba, 39,7 abajo, 17 adentro y 13 afuera. La retícula no se espeja: todas las páginas son la misma caja. Una fila con su junta son seis líneas de texto (interlínea de 4,4365 mm). Las columnas, desde el borde izquierdo: c1 0 · c2 23 · c3 46 · c4 69 · c5 92 · c6 115 · c7 138 · c8 161 mm.
+**Retícula.** La caja: 8 columnas × 7 filas de celdas de 20,357 × 22,619 mm (0,90), con juntas de 4 mm. Ocupa 190,9 × 182,3 mm; márgenes de 28 mm arriba, 39,7 abajo, 19,3 adentro y 14,8 afuera. La retícula no se espeja: todas las páginas son la misma caja. Una fila con su junta son seis líneas de texto (interlínea de 4,4365 mm). Las columnas, desde el borde izquierdo: c1 0 · c2 24,4 · c3 48,7 · c4 73,1 · c5 97,4 · c6 121,8 · c7 146,1 · c8 170,5 mm. Al pasar de 0,84 a 0,90 se guardó la fila (y con ella la interlínea) y se ensanchó la columna.
 
 | Zona | Columnas | Qué va |
 |---|---|---|
-| Margen de notas | c1–c2 (42 mm) | El número de la sección, colgado; las llamadas a otras páginas; los lugares punteados; los pies |
+| Margen de notas | c1–c2 (44,7 mm) | El número de la sección, colgado; las llamadas a otras páginas; los lugares punteados; los pies |
 | Aire | c3 | Nada; las tablas de tres o más columnas empiezan acá |
-| Texto | c4–c7 (88 mm) | El informe, en Newsreader de 9,4 pt |
+| Texto | c4–c7 (93,4 mm) | El informe, en Newsreader de 9,4 pt |
 | Aire | c8 | Nada; las tablas anchas y las figuras llegan hasta acá |
 
 **Letras.** Dos, con licencia SIL Open Font License, de `../laminas/fuentes/`:
@@ -88,28 +88,28 @@ Todo marco se abre abajo, en su punto más bajo: el desagüe. Las imágenes de l
 | 5 | | Resumen |
 | 6 | intermedio | El pie de la lámina, a máquina y letra por letra |
 | 8 | 1 | Introducción: una tipografía que contiene |
-| 14 | 2 | Marco: de dónde vienen las ideas |
-| 21 | 3 | La obra, decisión por decisión |
-| 25 | 4 | El sistema |
-| 30 | intermedio | La caja, celda por celda |
-| 32 | 5 | La gramática: del pie las medidas, de la obra la forma |
-| 40 | intermedio | Los planos de la anatomía base |
-| 41 | 6 | Los estados: una familia sin pesos |
-| 44 | intermedio | Una letra de punta a punta |
-| 46 | 7 | El taller: trece acciones en tres cuadernos |
-| 48 | intermedio | La ficha y el registro de las 119 placas |
-| 50 | 8 | La propuesta de la máquina |
-| 54 | intermedio | La placa, de cerca; los estados, simulados |
-| 58 | 9 | Retórica y poética |
-| 62 | intermedio | El poema en la caja |
-| 64 | 10 | Lo digital, si cierra |
-| 66 | 11 | Lo que está alrededor |
-| 73 | intermedio | El atlas y la taxonomía de las referencias |
-| 75 | 12 | Ética, fuentes y pendientes |
-| 78 | intermedio | Las láminas de exposición |
-| 80 | | Referencias |
-| 82 | | Las imágenes, con su origen y su estado |
-| 85 | | Colofón |
+| 13 | 2 | Marco: de dónde vienen las ideas |
+| 19 | 3 | La obra, decisión por decisión |
+| 23 | 4 | El sistema |
+| 28 | intermedio | La caja, celda por celda |
+| 30 | 5 | La gramática: del pie las medidas, de la obra la forma |
+| 38 | intermedio | Los planos de la anatomía base |
+| 39 | 6 | Los estados: una familia sin pesos |
+| 42 | intermedio | Una letra de punta a punta |
+| 44 | 7 | El taller: trece acciones en tres cuadernos |
+| 46 | intermedio | La ficha y el registro de las 119 placas |
+| 48 | 8 | La propuesta de la máquina |
+| 52 | intermedio | La placa, de cerca; los estados, simulados |
+| 56 | 9 | Retórica y poética |
+| 60 | intermedio | El poema en la caja |
+| 62 | 10 | Lo digital, si cierra |
+| 64 | 11 | Lo que está alrededor |
+| 71 | intermedio | El atlas y la taxonomía de las referencias |
+| 73 | 12 | Ética, fuentes y pendientes |
+| 76 | intermedio | Las láminas de exposición |
+| 78 | | Referencias |
+| 80 | | Las imágenes, con su origen y su estado |
+| 83 | | Colofón |
 
 El texto de los capítulos es el del informe de decisiones, sin cambios salvo tres frases (ver «Cómo seguir»). Lo nuevo son los intermedios: páginas compuestas que muestran lo que el informe solo cuenta.
 
@@ -118,16 +118,16 @@ El texto de los capítulos es el del informe de decisiones, sin cambios salvo tr
 | Plana | Página | Qué hace |
 |---|---|---|
 | La portadilla | 1 | La celda 1 con la coma de «KOCHAMAMA,», el primer signo hallado, recortada de la foto. Es lo que se ve por la puerta de la tapa |
-| El pie de la lámina | 6–7 | A la izquierda, el pie a máquina, con la primera aparición de cada signo hallado y el número de su celda; a la derecha, las 336 letras de la foto, cada una en su celda de 0,84 |
-| La caja, celda por celda | 30–31 | La caja de 8 × 7 a la escala de la retícula: en las 30 halladas, su primera aparición en el pie; punteado, lo que falta hacer. Al lado, el índice de la caja y la póliza |
-| Los planos | 40 | Los once planos de la anatomía base, de a doce lugares |
-| Una letra de punta a punta | 44–45 | La cadena de la «a» y de la «z» cruza el lomo |
-| La ficha y las 119 placas | 48–49 | La ficha de hallazgo en blanco, para la mano, junto a la que llenó la máquina; y el registro de las 119 placas, con una columna para la mano |
-| La placa, de cerca | 54–55 | La placa de la máquina, a la mitad, ya hecha; la de la mano, a tamaño real, por hacer |
-| Los estados, simulados | 56–57 | Las ocho láminas de la simulación |
-| El poema en la caja | 62–63 | El poema verso a verso, cada signo en su celda: así se compone con las placas. En violeta, los once versos que piden una letra reconstruida |
-| El atlas y la taxonomía | 73–74 | R-09, con las imágenes de dominio público, y las otras nueve láminas |
-| Las láminas de exposición | 78–79 | Las diecisiete láminas, de a doce lugares |
+| El pie de la lámina | 6–7 | A la izquierda, el pie a máquina, con la primera aparición de cada signo hallado y el número de su celda; a la derecha, las 336 letras de la foto, cada una en su celda de 0,90 |
+| La caja, celda por celda | 28–29 | La caja de 8 × 7 a la escala de la retícula: en las 30 halladas, su primera aparición en el pie; punteado, lo que falta hacer. Al lado, el índice de la caja y la póliza |
+| Los planos | 38 | Los doce planos de la anatomía base |
+| Una letra de punta a punta | 42–43 | La cadena de la «a» y de la «z» cruza el lomo |
+| La ficha y las 119 placas | 46–47 | La ficha de hallazgo en blanco, para la mano, junto a la que llenó la máquina; y el registro de las 119 placas, con una columna para la mano |
+| La placa, de cerca | 52–53 | La placa de la máquina, a la mitad, ya hecha; la de la mano, a tamaño real, por hacer |
+| Los estados, simulados | 54–55 | Las ocho láminas de la simulación |
+| El poema en la caja | 60–61 | El poema verso a verso, cada signo en su celda: así se compone con las placas. En violeta, los once versos que piden una letra reconstruida |
+| El atlas y la taxonomía | 71–72 | R-09, con las imágenes de dominio público, y las otras nueve láminas |
+| Las láminas de exposición | 76–77 | Las diecisiete láminas, de a doce lugares |
 
 La tapa es la tapa de la caja (D4): sin título, las 56 celdas en relieve seco, sin tinta, y la celda 1 calada: por esa puerta se ve la coma de la página 1. El título va en el lomo y en la contratapa.
 
@@ -149,8 +149,8 @@ La tapa es la tapa de la caja (D4): sin título, las 56 celdas en relieve seco, 
 
 - **Tintas.** El libro está pensado a dos tintas: negro y un directo violeta, igualado en la imprenta con la tinta del esténcil. Las fotos simuladas del agua y de la voz piden color (el verde de su luz): o van a cuatro colores en esos pliegos, o se aceptan en dos tintas. Lo decide la prueba.
 - **Papel.** Interior ahuesado sin estucar, de 100 a 120 g; tapa de cartulina sin estucar, de unos 300 g, que tome bien el relieve seco.
-- **Cubierta.** Una plancha de relieve seco para las 55 celdas y un troquel de 19 × 22,6 mm en la celda 1, a 17 mm del lomo y 28 mm del borde de arriba (página 2 del PDF de la cubierta).
-- **Lomo.** 7,5 mm para 85 páginas, a 0,15 mm por hoja: se confirma con el papel elegido. `cubierta.py` lo recalcula (`LOMO_POR_HOJA`).
+- **Cubierta.** Una plancha de relieve seco para las 55 celdas y un troquel de 20,4 × 22,6 mm en la celda 1, a 19 mm del lomo y 28 mm del borde de arriba (página 2 del PDF de la cubierta).
+- **Lomo.** 7,3 mm para 83 páginas, a 0,15 mm por hoja: se confirma con el papel elegido. `cubierta.py` lo recalcula (`LOMO_POR_HOJA`).
 - **Encuadernación.** Cosida, con lomo abierto, para que abra plano.
 
 ## Cómo seguir

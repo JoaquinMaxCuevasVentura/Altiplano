@@ -30,6 +30,7 @@ from pathlib import Path
 from PIL import Image
 
 AQUI = Path(__file__).resolve().parent
+CELDA = json.loads((AQUI / "celda_medida.json").read_text(encoding="utf8"))["celda"]   # la celda de la cabeza, de ancho por alto
 CHROME = os.environ.get("CHROME", "/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
 MONO = "'Courier New', Courier, 'Liberation Mono', monospace"
 
@@ -110,10 +111,14 @@ def caja(datos):
     return "\n".join(o), ancho, alto
 
 
+def coma(x, d=2):
+    return f"{x:.{d}f}".replace(".", ",")
+
+
 # ---------------------------------------------------------------- pauta de calco (mm, A4)
 
 def pauta(azulejo, teselas, junta):
-    """La pauta de calco: la placa, la celda de la cabeza del ídolo (0,84) y las cuatro líneas del pie.
+    """La pauta de calco: la placa, la celda de la cabeza del ídolo (0,90) y las cuatro líneas del pie.
 
     Las líneas salen de la gramática (simulacion/salida/gramatica/gramatica.json) si existe;
     si no, de la pauta provisional. La placa mide lo que el azulejo: 150 mm hasta medir.
@@ -134,11 +139,11 @@ def pauta(azulejo, teselas, junta):
         lineas = [(azulejo - v * tes, n) for v, n in ((0.5, "desagüe"), (1.5, "fondo"), (4.0, "borde"), (5.5, "afuera"))]
         alto, cy = azulejo * 0.92, azulejo / 2
         origen = "provisional"
-    ancho = 0.84 * alto
+    ancho = CELDA * alto
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}" font-family="{MONO}">',
          f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
          t(x0, 14, "Contenida · pauta de calco", 5.2, peso="bold"),
-         t(x0, 21, f"1 placa = {azulejo:g} mm = 1 letra · la celda: 0,84 de ancho por alto · líneas: {origen}", 3.1, GRIS),
+         t(x0, 21, f"1 placa = {azulejo:g} mm = 1 letra · la celda: {coma(CELDA)} de ancho por alto · líneas: {origen}", 3.1, GRIS),
          t(x0, 26.5, "Imprimir al 100 %. Comprobar la barra de 100 mm.", 3.1, GRIS),
          f'<rect x="{x0}" y="{y0}" width="{azulejo}" height="{azulejo}" fill="#ffffff" stroke="{JUNTA}" stroke-width="0.3"/>',
          f'<rect x="{x0 + (azulejo - ancho) / 2:.2f}" y="{y0 + cy - alto / 2:.2f}" width="{ancho:.2f}" height="{alto:.2f}" '

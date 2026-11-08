@@ -20,7 +20,7 @@ Todo lo demás lo deciden los parámetros de la §2, que salen de la obra.
 
 **El testigo de las formas sigue siendo el sustituto** (Liberation Serif), hasta que llegue el libro. El código mide el testigo, así que cambiarlo cambia las medidas, no las reglas.
 
-**De la foto del pie, la altura de x.** Una foto cercana de la lámina deja medir el pie real, pero no calcarlo (`07_posnansky.md`, §3). La máquina toma de ella una sola proporción: sus ascendentes miden 1,71 veces la altura de x, más que en el sustituto (1,52). La zona de x de cada testigo se achata hasta esa proporción, sin mover la base, la línea de afuera ni la de desagüe. En la placa, el borde baja de 62 a 55 mm sobre el fondo.
+**De la foto del pie, la altura de x.** Una foto cercana de la lámina deja medir el pie real, pero no calcarlo (`07_posnansky.md`, §3). La máquina toma de ella una sola proporción: sus ascendentes miden 1,71 veces la altura de x, más que en el sustituto (1,52). La zona de x de cada testigo se achata hasta esa proporción, sin mover la base, la línea de afuera ni la de desagüe. En la placa, el borde baja de 62 a 55 mm sobre el fondo. La lámina enderezada, sin la perspectiva de la cámara, da 1,74 con el mismo método: la diferencia es menor que el paso de la medida, y la razón se queda en 1,71 (plano P-11).
 
 ## 2. Los parámetros
 
@@ -162,7 +162,7 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 | La lluvia gasta, más arriba que abajo | La intemperie: corte arriba y asiento abajo, con un radio de desgaste |
 | El asta cae en una línea de media tesela | Sale: la tesela ya no es unidad de medida |
 | La media caña de la piscina en la panza | El radio de la chapa: la curva mínima la pone el aluminio, no el zócalo |
-| El marco de la letra: el azulejo | **La celda de la cabeza del ídolo**, 0,84 de ancho por alto, como el `.notdef` |
+| El marco de la letra: el azulejo | **La celda de la cabeza del ídolo**, 0,90 de ancho por alto, como el `.notdef` (medida en la lámina enderezada: plano P-11) |
 | Las juntas de la pared | Solo en el estado *Azulejo*, cuando la letra llega a la pared (en pausa) |
 
 **Se quedan:**
@@ -181,7 +181,7 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 
 ## 8. Los planos y la página de las decisiones
 
-**Los planos** (`planos/`) dibujan esta gramática como un plano de arquitectura: once láminas A3, con cotas en milímetros de la placa y en unidades de la fuente, ejes, niveles, cortes del repujado y detalles. Cada decisión de anatomía tipográfica (contraste, ojo, apertura, terminales, remates, hombro, sobrepaso…) lleva un número en el dibujo y su porqué en la columna: concepto, retórica y poética. Son la concepción formal; la letra de la caja la calca la mano desde el pie.
+**Los planos** (`planos/`) dibujan esta gramática como un plano de arquitectura: doce láminas A3, con cotas en milímetros de la placa y en unidades de la fuente, ejes, niveles, cortes del repujado y detalles. Cada decisión de anatomía tipográfica (contraste, ojo, apertura, terminales, remates, hombro, sobrepaso…) lleva un número en el dibujo y su porqué en la columna: concepto, retórica y poética. Son la concepción formal; la letra de la caja la calca la mano desde el pie.
 
 **La página** (`aplicacion/`) arma la gramática en JavaScript, en el mismo orden que Python. Se simplificó: una mesa con el plano del signo elegido, la caja y **nueve decisiones** que la mano puede discutir. Cada una se mueve en el plano de detalle de su parte, con las convenciones de los planos y el gesto de su dibujo:
 

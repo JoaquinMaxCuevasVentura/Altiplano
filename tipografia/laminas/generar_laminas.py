@@ -336,9 +336,9 @@ def l05():
         "<p>Sobre el rostro de la Kochamama hay una retícula de celdas iguales: un rectángulo dentro de otro, sin "
         "nada adentro. En la foto de la lámina se cuentan 8 columnas y 7 filas. Es la parte que el pie llama "
         "calendario, la que nadie ha leído.</p>"
-        f"<p>Medida en una foto cercana, la celda no es regular: mide {coma(min(R['ancho_por_alto']), 2)} de ancho por "
-        f"alto en los bordes y {coma(max(R['ancho_por_alto']), 2)} al centro. El dibujo curva la cabeza como un "
-        "cilindro. La celda de la tipografía, 0,84, cae dentro.</p>"
+        f"<p>Medida en la lámina enderezada, la celda no es regular: mide {coma(min(R['ancho_por_alto']), 2)} de ancho "
+        f"por alto en los bordes y {coma(max(R['ancho_por_alto']), 2)} al centro. El dibujo curva la cabeza como un "
+        f"cilindro. La celda de la tipografía es la retícula entera: {coma(R['celda'], 2)}.</p>"
         "<p>Esa retícula es la caja. Cada signo ocupa una celda, en el orden en que aparece en el pie: primero la "
         "coma que sigue al nombre del ídolo. Después vienen los reconstruidos. En la última, el signo que se hace "
         "con los dedos. Lo que no cabe se ve como la celda vacía. No hay mayúsculas ni signos de exclamación: la voz "
@@ -348,7 +348,8 @@ def l05():
         b(5, 1, 6, 10, fig("caja_8x7.png", "<b>fig. 5.1</b> La caja. Continuo, lo hallado; punteado, lo "
                                            "reconstruido. Abajo, la celda vacía y lo que no cabe.")),
         b(11, 1, 4, 6, "<figure>" + reticula_svg() + "<figcaption><b>fig. 5.2</b> La retícula de la cabeza, medida "
-                       "en la foto: cada columna, del ancho que tiene. Las del borde son más angostas.</figcaption></figure>"),
+                       "en la lámina enderezada: cada columna, del ancho que tiene. Las del borde son más angostas."
+                       "</figcaption></figure>"),
         b(11, 7, 4, 4, fig("03b_notdef.jpg", "<b>fig. 5.3</b> La celda vacía, calcada. También tiene desagüe."),
           estilo="align-self:end"),
     ]))
@@ -357,14 +358,14 @@ def l05():
 def l06():
     texto = (
         "<h1>la celda es la pauta</h1>"
-        '<p class="bajada">Una letra, una celda: la de la cabeza del ídolo, 0,84 de ancho por alto.</p>'
+        f'<p class="bajada">Una letra, una celda: la de la cabeza del ídolo, {coma(RETICULA["celda"], 2)} de ancho por alto.</p>'
         "<p>Primero la pauta fue la piscina: una letra por azulejo, la tesela como unidad. Pero la piscina fue "
         "escenario y pantalla, no molde. Ahora la letra vive en la celda de la cabeza del ídolo, un rectángulo dentro "
         "de otro, con la proporción que se mide en la lámina.</p>"
         "<p>Las cuatro líneas las da el pie. Sus nombres son de vasija: afuera, borde, fondo y desagüe.</p>"
         "<p>La altura de x, el borde, sale de la foto del pie: es más baja que la de la letra sustituta. La piscina "
         "queda como escenario: el frotado de su pared es el papel sobre el que se calca.</p>")
-    medidas = fichero([("celda", "0,84 de ancho por alto"), ("placa", "150 × 150 mm, hasta medir la pared"),
+    medidas = fichero([("celda", f"{coma(RETICULA['celda'], 2)} de ancho por alto"), ("placa", "150 × 150 mm, hasta medir la pared"),
                        ("canal", f"{coma(NUM['canal'] / 4)} mm, sin contraste"), ("desagüe", "3 mm, el surco del punzón"),
                        ("afuera", f"{coma(NUM['asc'] / 4)} mm sobre el fondo"),
                        ("borde", f"{coma(NUM['xh'] / 4)} mm sobre el fondo"),

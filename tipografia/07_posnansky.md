@@ -46,6 +46,14 @@ Lo demás que la foto mide (descendentes más cortas, trazo más grueso) queda e
 
 **Qué se guarda en el repositorio:** letras sueltas, no la foto.
 
+**Se volvió a medir en la lámina enderezada.** Una segunda imagen de la misma lámina, enderezada sin la perspectiva de la cámara, dejó medir otra vez las dos proporciones que la letra toma del registro (plano P-11):
+
+- **La celda.** La retícula de la cabeza mide 0,90 de ancho por alto entera: las ocho columnas sobre las siete filas. Su paso mide 0,86 en los bordes y 0,97 al centro, porque el dibujo curva la cabeza como un cilindro (en las dos imágenes). En la foto de cámara la retícula medía 0,86, y la celda usaba 0,84, que en la lámina enderezada queda fuera de todas las columnas: la cámara angostaba la cabeza. **La celda pasa a 0,90** (`esquemas/celda_medida.json`). Desenrollado el cilindro, mediría 0,94; la letra toma el dibujo, no la piedra.
+- **La altura de x.** Con el mismo método, el pie enderezado da una x de 12,0 px y ascendentes de 1,74 veces la x. La diferencia con la foto (1,3 %) es menor que el paso de la medida: un tercio de píxel en la altura de x, el 2,8 %. En la placa son 0,6 mm, menos que el surco del punzón. **La razón queda en 1,71.**
+- **Las letras sueltas** siguen siendo las de la foto. La imagen enderezada tiene la misma resolución, y su filtro de nitidez engorda la tinta y deja halos: sus letras no son mejores y su trazo no se puede medir.
+
+Tampoco esta imagen se sube: quedan las medidas. La proporción absoluta depende del enderezado; se confirma con regla en el impreso.
+
 ## 4. Otros registros de la ruina
 
 Hay registros de dominio público de la misma ruina, por otras manos y en otros años. Sirven para ver cómo se dibujó y se fotografió la piedra, no para sacar motivos:

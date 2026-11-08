@@ -3,11 +3,11 @@
 <defs><style>@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-500-normal.woff2) format("woff2"),url(../fuentes/newsreader-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-300-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic}@font-face{font-family:"Newsreader";src:url(../../laminas/fuentes/newsreader-latin-400-italic.woff2) format("woff2"),url(../fuentes/newsreader-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-700-normal.woff2) format("woff2"),url(../fuentes/courier-prime-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal}@font-face{font-family:"Courier Prime";src:url(../../laminas/fuentes/courier-prime-latin-400-italic.woff2) format("woff2"),url(../fuentes/courier-prime-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic}</style><pattern id="metal" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#e2e0d9"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#a9a69d" stroke-width="0.16"/></pattern><pattern id="metal_r" patternUnits="userSpaceOnUse" width="1.1" height="1.1" patternTransform="rotate(45)"><rect width="1.1" height="1.1" fill="#ebe6ef"/><line x1="0" y1="0" x2="0" y2="1.1" stroke="#b9a9c9" stroke-width="0.16"/></pattern><pattern id="blanda" patternUnits="userSpaceOnUse" width="2.2" height="2.2"><rect width="2.2" height="2.2" fill="#f6f4ee"/><circle cx="0.55" cy="0.55" r="0.22" fill="#9a968d"/><circle cx="1.65" cy="1.65" r="0.22" fill="#9a968d"/></pattern><clipPath id="rP-04_1"><rect x="192" y="158" width="46" height="29"/></clipPath><clipPath id="rP-04_2"><rect x="30" y="208" width="30" height="51.25"/></clipPath><clipPath id="rP-04_3"><rect x="92" y="208" width="30" height="51.25"/></clipPath><clipPath id="rP-04_4"><rect x="154" y="208" width="30" height="51.25"/></clipPath><clipPath id="rP-04_5"><rect x="216" y="208" width="30" height="51.25"/></clipPath></defs>
 <rect width="420" height="297" fill="#f6f4ee"/>
 
-<rect x="45.596" y="32.037" width="114.807" height="136.675" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="38.25" x2="167.904" y2="38.25" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="77.5" x2="167.904" y2="77.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="132.324" x2="167.904" y2="132.324" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="38.096" y1="162.5" x2="167.904" y2="162.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="41.496" y="32.037" width="123.007" height="136.675" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="38.25" x2="172.004" y2="38.25" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="77.5" x2="172.004" y2="77.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="132.324" x2="172.004" y2="132.324" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33.996" y1="162.5" x2="172.004" y2="162.5" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="192" y="158" width="46" height="29" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="30" y="208" width="30" height="51.25" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="92" y="208" width="30" height="51.25" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -93,10 +93,10 @@
 </g>
 <g clip-path="url(#rP-04_5)">
 </g>
-<text x="36.596" y="39.02" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">afuera</text>
-<text x="36.596" y="78.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">borde</text>
-<text x="36.596" y="133.094" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">fondo</text>
-<text x="36.596" y="163.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">desagüe</text>
+<text x="32.496" y="39.02" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">afuera</text>
+<text x="32.496" y="78.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">borde</text>
+<text x="32.496" y="133.094" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">fondo</text>
+<text x="32.496" y="163.27" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">desagüe</text>
 <line x1="97.363" y1="132.324" x2="70.963" y2="132.324" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="97.363" y1="38.75" x2="70.963" y2="38.75" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="72.563" y1="133.824" x2="72.563" y2="37.25" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -318,12 +318,12 @@
 <text x="286.5" y="253.6" font-family="Newsreader" font-size="5" font-weight="400" fill="#1d1c1a" text-anchor="start">l · el fuste</text>
 <text x="286.5" y="258.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">segundo generador</text>
 <text x="397" y="250" font-family="Courier Prime" font-size="1.8" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="middle">HOJA</text>
-<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">5 / 11</text>
+<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">5 / 12</text>
 <text x="285.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">ESCALA</text>
 <text x="285.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">1:1 · 2:1 · 1:2</text>
 <text x="315.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">UNIDADES</text>
 <text x="315.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">mm · (UPM)</text>
-<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA</text>
+<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA · REV. 08.11.2026</text>
 <text x="349.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">17.10.2026</text>
 <text x="381.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FORMATO</text>
 <text x="381.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">A3 · 420 × 297</text>

@@ -8,8 +8,8 @@ from pathlib import Path
 
 from PIL import Image
 
-from libro import (ALTO, ANCHO, CELDAS, CERCA, FICHAS, IMG, LETRAS_PIE, PIE_TEXTO, POEMA, POLIZA, SIM, TIPO, al, an, en,
-                   en_papel, esc, md, pie, plano, primera_aparicion, recorte_testigo, registrar, x, y)
+from libro import (ADENTRO, AFUERA, ALTO, ANCHO, CELDA, CELDAS, CERCA, FICHAS, IMG, LETRAS_PIE, PIE_TEXTO, POEMA, POLIZA, SIM, TIPO, al, an, en,
+                   en_papel, esc, md, PAGINA, pie, plano, primera_aparicion, recorte_testigo, registrar, x, y)
 
 TINTA, VIOLETA, FILETE, GRIS = "#1d1c1a", "#4a2470", "#cfcac0", "#6d6a63"
 MONO = "Courier Prime"
@@ -191,9 +191,9 @@ def pie_a_maquina(lb):
 
 
 def pie_letra_por_letra(lb, columnas=24):
-    """Los 336 testigos del pie, cada uno en su celda de 0,84: el pie hecho monoespaciado con sus propias letras."""
+    """Los 336 testigos del pie, cada uno en su celda de 0,90: el pie hecho monoespaciado con sus propias letras."""
     cw = ANCHO / columnas
-    ch = cw / 0.84
+    ch = cw / CELDA
     ppm = 15.0                                            # px por mm: 381 ppp
     W, filas = int(round(ANCHO * ppm)), -(-len(PIE_TEXTO) // columnas)
     H = int(round(filas * ch * ppm))
@@ -232,7 +232,7 @@ def pie_letra_por_letra(lb, columnas=24):
         svg(dibujo, ANCHO, alto),
         rotulo(f"left:{x(4):.3f}mm;top:{alto + 6:.3f}mm;width:{an(5):.3f}mm",
                f'<span class="fn">fig. {n}</span>{lb_etiqueta("hallada")} El pie, letra por letra: las 336 letras recortadas de '
-               f'la foto de la lámina, cada una en su celda de 0,84, como en una letra monoespaciada. La «i» queda rodeada '
+               f'la foto de la lámina, cada una en su celda de 0,90, como en una letra monoespaciada. La «i» queda rodeada '
                f'de piel; la «m» llena su celda. Entre palabras, una celda vacía. La retícula no mide la letra: la recibe, '
                f'y sus juntas cortan las palabras. En violeta, la primera aparición de cada signo hallado; en gris, las '
                f'mayúsculas, que no tienen celda.'),
@@ -342,6 +342,7 @@ PLANOS = [
     ("P-08_detalles.png", "P-08", "detalles: punto, tilde, onda, sifón, alivio, cifra"),
     ("P-09_dobles_opuestos.png", "P-09", "los dobles opuestos: ? ¿ · 6 9 · « »"),
     ("P-10_caja.png", "P-10", "el plan general de la caja de 8 × 7"),
+    ("P-11_proporciones.png", "P-11", "las proporciones: la celda y la altura de x, medidas en la lámina"),
 ]
 
 
@@ -349,9 +350,9 @@ def galeria_planos(lb):
     lb.entrada("los-planos", "los planos de la anatomía base", 2)
     galeria(lb, "los planos de la anatomía base", "los-planos",
             [(TIPO / "planos" / "png" / a, c, t) for a, c, t in PLANOS],
-            "Once láminas A3 que dibujan la gramática como un plano de arquitectura, con cotas, escalas y, al lado de cada "
+            "Doce láminas A3 que dibujan la gramática como un plano de arquitectura, con cotas, escalas y, al lado de cada "
             "forma, el porqué de cada decisión. Se imprimen al 100 % desde <code>planos/contenida_planos.pdf</code>; aquí, "
-            "a 1:10, son su índice. La celda que sobra queda vacía.")
+            "en miniatura, son su índice.")
 
 
 TAXONOMIA = [
@@ -420,8 +421,7 @@ def galeria_laminas(lb):
 # ------------------------------------------------------------------ una letra de punta a punta (doble página)
 def punta_a_punta(lb):
     """Las cadenas de la «a» y de la «z», de punta a punta de la doble página."""
-    tira_w = ANCHO + ANCHO + 2 * 17.0 - 0.0            # de c1 de la izquierda a c8 de la derecha, pasando por el lomo
-    tira_w = (210 - 13.0) + (17.0 + ANCHO)               # 197 + 197 mm
+    tira_w = (PAGINA[0] - AFUERA) + (ADENTRO + ANCHO)     # de c1 de la izquierda a c8 de la derecha, pasando por el lomo
     izq, der = [], []
     for k, (archivo, que, fila) in enumerate([("12_cadena_08.jpg", "la «a», hallada en «erosionado»", 2),
                                              ("12_cadena_32.jpg", "la «z», que no está en el pie", 5)]):
@@ -639,7 +639,7 @@ def poema(lb):
         filas.extend(v.strip().lower() for v in e)
     largo = max(len(v) for v in filas if v)
     cw = ANCHO / largo
-    ch = cw / 0.84
+    ch = cw / CELDA
     mitad = 25
     nverso = 0
     paginas = []
@@ -726,15 +726,15 @@ def colofon(lb):
     lb.plana([
         rotulo(en(1, 1, 2), "<b>colofón</b>"),
         f'<div class="colofon" style="{en(4, 1, 5)}">'
-        '<p><b>Contenida: acciones para componer una voz.</b> El libro de trabajo del proyecto, armado el 19 de octubre de 2026 '
+        '<p><b>Contenida: acciones para componer una voz.</b> El libro de trabajo del proyecto, armado el 19 de octubre de 2026 y rehecho el 8 de noviembre con la celda medida en la lámina enderezada, '
         'desde <code>tipografia/</code> en el repositorio del proyecto. Homenaje a <em>Contener una ruina: acciones para desenterrar '
         'una voz</em>, de Rebeca Paz Prada con CreaciónxAcuerpamiento (Artefacto Tatuajes, Sopocachi, La Paz, 22 de agosto de 2026). '
         'Proyecto: Joaquin Max Cuevas Ventura.</p>'
         '<p><b>Las letras.</b> Newsreader (Production Type), para leer, y Courier Prime (Alan Dague-Greene), a máquina: lo que ya '
         'estaba escrito y lo que hay que saber. Las dos con licencia SIL Open Font License, incrustadas en este archivo. Un signo, '
         'σ, va en DejaVu Serif. Los mapas usan además La Belle Aurore (Kimberly Geswein, SIL OFL), que es una fuente y no una mano.</p>'
-        '<p><b>La retícula.</b> La página mide 210 × 250 mm: tiene la proporción de la celda, 0,84. Su retícula es la caja: 8 '
-        'columnas por 7 filas de celdas de 19 × 22,6 mm, con juntas de 4 mm; cada fila, con su junta, son seis líneas de texto. '
+        '<p><b>La retícula.</b> La página mide 225 × 250 mm: tiene la proporción de la celda, 0,90. Su retícula es la caja: 8 '
+        'columnas por 7 filas de celdas de 20,4 × 22,6 mm, con juntas de 4 mm; cada fila, con su junta, son seis líneas de texto. '
         'La retícula no se espeja: todas las páginas son la misma caja.</p>'
         '<p><b>El color.</b> Tinta y violeta, la tinta del esténcil y de lo reconstruido. El verde aparece solo como luz, en las '
         'fotos simuladas del agua y de la voz.</p>'
@@ -780,7 +780,7 @@ def componer(lb):
                            "4.3": [lb.al_margen("la-caja", "la caja, celda por celda")],
                            "4.5": [lb.al_margen("la-caja", "las placas de cada signo")]},
                 despues=[lambda: caja(lb), lambda: indice_caja(lb)])
-    lb.capitulo(5, extras={"5.5": [lb.al_margen("los-planos", "los once planos")]}, despues=[lambda: galeria_planos(lb)])
+    lb.capitulo(5, extras={"5.5": [lb.al_margen("los-planos", "los doce planos")]}, despues=[lambda: galeria_planos(lb)])
     lb.capitulo(6, extras={"6.3": [lb.al_margen("punta-a-punta", "una letra de punta a punta")]},
                 despues=[lambda: punta_a_punta(lb)])
     lb.capitulo(7, extras={"inicio": [lb.al_margen("la-ficha", "la ficha y las 119 placas")]},

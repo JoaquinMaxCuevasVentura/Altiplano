@@ -109,7 +109,7 @@ Antes de repujar la primera letra:
 
 **Rima con:** el dibujo reconstructivo de Posnansky, hecho desde fotos viejas.
 
-**La anatomía.** Del pie se calca el esqueleto; el cuerpo de la letra lo dicta la obra. Las reglas y el orden en que se aplican están en `03b_anatomia.md` («Cómo lo hace la mano»): gastar los remates, rehacer la mitad baja de los ojos como bandeja, colgar las gotas, cambiar puntos y tildes, correr la letra hasta la retícula, enmarcar las cifras y abrir el desagüe. Las medidas de cada regla y su porqué están dibujadas en `planos/` (once láminas A3, con un apartado «Para la mano» en cada una). Los planos son la regla, no la pauta: no se calca de ellos.
+**La anatomía.** Del pie se calca el esqueleto; el cuerpo de la letra lo dicta la obra. Las reglas y el orden en que se aplican están en `03b_anatomia.md` («Cómo lo hace la mano»): gastar los remates, rehacer la mitad baja de los ojos como bandeja, colgar las gotas, cambiar puntos y tildes, correr la letra hasta la retícula, enmarcar las cifras y abrir el desagüe. Las medidas de cada regla y su porqué están dibujadas en `planos/` (doce láminas A3, con un apartado «Para la mano» en cada una de las de la forma). Los planos son la regla, no la pauta: no se calca de ellos.
 
 **Materiales:**
 
@@ -171,7 +171,7 @@ Se toma el procedimiento, no las formas.
    - después, el resto de la póliza hasta 119, en sesiones distintas, para que cada «a» sea de otro momento.
 7. **Si se rompe:** la placa no se tira. Va a la ficha («roturas») y a la caja, junto a la que se hizo después.
 
-**Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas. La máquina, con su mano simulada, calcula unas 16 horas sin contar fotografiar ni anotar la ficha (`simulacion/informe.md`): se confronta.
+**Tiempo:** es el grueso del trabajo. A 15-20 minutos por placa, 119 placas son entre 30 y 40 horas. La máquina, con su mano simulada, calcula unas 17 horas sin contar fotografiar ni anotar la ficha (`simulacion/informe.md`): se confronta.
 
 **Registro:** en la ficha, *Placa*, con quién repujó y con qué mano (la derecha, la izquierda o las dos). En *Pulso*, la sesión, el minuto de la sesión en que empezó la placa, cuánto tardó y cuántas veces levantó el punzón (con palotes, sin interrumpir la mano): es lo que se confronta con el pulso de la máquina. Las dudas no se cuentan mientras se trabaja: se ven después en la placa, como hoyuelos. Cada placa se fotografía por las dos caras con luz rasante desde un lado fijo (la misma lámpara, a la misma altura y el mismo ángulo): segundo estilo, *Placa*.
 

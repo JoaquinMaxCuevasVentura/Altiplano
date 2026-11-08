@@ -34,7 +34,7 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
    - La obra cambia el material del monumento por uno doméstico, y la tipografía cambia la letra del monumento por la de la mano.
    - Una mayúscula tecleada se escribe en caja baja.
 5. **Monoespaciada: una letra, una celda.**
-   - Las celdas de la cabeza del ídolo y la máquina de escribir de tu poema son retículas de celdas iguales. La celda mide 0,84 de ancho por alto.
+   - Las celdas de la cabeza del ídolo y la máquina de escribir de tu poema son retículas de celdas iguales. La celda mide 0,90 de ancho por alto.
    - La letra se adapta a su contenedor, y no al revés: la «m» llena su celda y la «i» queda rodeada de piel.
    - Antes la medida era el azulejo. Ya no: la piscina fue escenario y pantalla, no molde. Su pared da el frotado sobre el que se calca.
 6. **No hay Regular.**
@@ -158,14 +158,14 @@ Todo eso, y cualquier otro signo, se ve como el `.notdef`: la celda vacía de la
 
 > **Actualización.** La pauta era el azulejo: una letra por azulejo y la tesela como unidad. Se cambió por la celda de la cabeza del ídolo, y la anatomía pasó a una gramática paramétrica (`03c_gramatica.md`). Lo que sigue es la pauta vigente.
 
-- **Cuerpo:** una celda de 0,84 de ancho por alto, la proporción de las celdas de la cabeza en la lámina (la misma del `.notdef`). A confirmar en el impreso.
+- **Cuerpo:** una celda de 0,90 de ancho por alto, la proporción de la retícula de la cabeza en la lámina (la misma del `.notdef`). En la foto de cámara la retícula medía 0,86 y la celda usaba 0,84; en la lámina enderezada, sin la perspectiva, mide 0,90 (`esquemas/celda_medida.json`; plano P-11). A confirmar con regla en el impreso.
 - **Líneas:** las da el pie: **afuera** (ascendentes), **borde** (altura de x), **fondo** (base) y **desagüe** (descendentes). Los nombres son de vasija. No se redondean a ninguna retícula. El borde sale de la foto del pie: las ascendentes miden 1,71 veces la altura de x.
 - **Ancho:** todas las letras miden una celda. Nada se estira para llenar.
 - **Espacios:** entre palabras, una celda vacía: la piel.
 - **Placa:** la celda cabe en una placa cuadrada de 150 mm. En cuerpo pequeño (fichas), la caja entera cabe en una hoja A4.
 - **La piscina, como escenario.** El frotado de la pared no es pauta: es el papel sobre el que se calca.
 
-**Plantilla:** `esquemas/pauta_azulejo.svg`, a escala 1:1. Ya dibuja la celda de 0,84 dentro de la placa de 150 mm, con las cuatro líneas que da la gramática; el nombre del archivo quedó de cuando la pauta era el azulejo. Si cambia el lado de la placa, se regenera con `esquemas/generar_esquemas.py --azulejo …`.
+**Plantilla:** `esquemas/pauta_azulejo.svg`, a escala 1:1. Ya dibuja la celda de 0,90 dentro de la placa de 150 mm, con las cuatro líneas que da la gramática; el nombre del archivo quedó de cuando la pauta era el azulejo. Si cambia el lado de la placa, se regenera con `esquemas/generar_esquemas.py --azulejo …`.
 
 ## 3.7. La familia: estados, no pesos
 

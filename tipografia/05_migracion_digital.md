@@ -37,7 +37,7 @@
 | Parámetro | Valor | Por qué |
 |---|---|---|
 | Unidades por eme | 1000: el eme es el alto de la celda (136,7 mm en la placa de 150 mm) | La unidad es la celda de la cabeza del ídolo, ya no el azulejo (`03`, §3.6) |
-| Avance | 840: el ancho de la celda, 0,84 de su alto | Monoespaciada: una letra, una celda. Entre palabras, una celda vacía |
+| Avance | 900: el ancho de la celda, 0,90 de su alto | Monoespaciada: una letra, una celda. Entre palabras, una celda vacía |
 | Alto de línea | 1000: ascendente 734 y descendente −266, sin interlínea | Las celdas se apilan como las filas de la retícula |
 | Métricas verticales | Las cuatro líneas de la gramática: afuera 688, borde 401, fondo 0 y desagüe −221 | Las decide el pie, no una norma. Se recalculan si cambia la gramática (`simulacion/salida/gramatica/gramatica.json`) |
 | Glifos | Los 56 de la caja, más `.notdef` | El juego cabe en la retícula |

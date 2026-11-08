@@ -4,7 +4,7 @@
 <rect width="420" height="297" fill="#f6f4ee"/>
 
 <rect x="31" y="46" width="34" height="34" fill="#e2e0d9"  stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M213.433,74 H202.333 V44 H227.533 V74 H216.433" fill="none" stroke="#1d1c1a" stroke-width="0.4" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M214.333,74 H202.333 V44 H229.333 V74 H217.333" fill="none" stroke="#1d1c1a" stroke-width="0.4" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="51" y="106.731" width="11.5" height="11.5" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="51" y="122.231" width="11.5" height="11.5" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <rect x="64.7" y="106.731" width="11.5" height="11.5" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -840,10 +840,10 @@
 <line x1="164.68" y1="76.344" x2="167.68" y2="76.344" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="168.48" y="77.044" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">la cera, 1885;</text>
 <text x="168.48" y="79.544" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">leída en 2013</text>
-<circle cx="217.957" cy="56.6" r="0.5" fill="#1d1c1a"/>
-<line x1="217.957" y1="56.6" x2="232.533" y2="47.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="232.533" y1="47.5" x2="235.533" y2="47.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="236.333" y="48.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">no se dibuja: se hace</text>
+<circle cx="219.073" cy="56.6" r="0.5" fill="#1d1c1a"/>
+<line x1="219.073" y1="56.6" x2="234.333" y2="47.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="234.333" y1="47.5" x2="237.333" y2="47.5" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="238.133" y="48.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#1d1c1a" text-anchor="start">no se dibuja: se hace</text>
 <path d="M30.317,25.4 H28 V19 H33.297 V25.4 H30.979" fill="none" stroke="#9a968d" stroke-width="0.441"/>
 <rect x="29.103" y="20.103" width="3.09" height="4.193" fill="none" stroke="#9a968d" stroke-width="0.331"/>
 <path d="M37.821,25.4 H35.503 V19 H40.8 V25.4 H38.483" fill="none" stroke="#9a968d" stroke-width="0.441"/>
@@ -876,12 +876,12 @@
 <line x1="205.333" y1="35.6" x2="238.943" y2="35.6" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="205.333" y="38.6" font-family="Courier Prime" font-size="1.95" font-weight="400" fill="#6d6a63" text-anchor="start">celda · se suma: el reel no la trae · se suma</text>
 <text x="203.533" y="47" font-family="Courier Prime" font-size="1.8" font-weight="400" fill="#6d6a63" text-anchor="start">56</text>
-<text x="214.933" y="63.8" font-family="Newsreader" font-size="16.5" font-weight="300" fill="#cfcac0" text-anchor="middle">¶</text>
-<text x="234.733" y="52.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">con los dedos, sin punzón</text>
-<text x="234.733" y="55.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">(Acción 7); la forma la decide</text>
-<text x="234.733" y="57.8" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">quien la hace</text>
-<text x="234.733" y="62" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="start">Bulwer, 1644: el gesto es un signo</text>
-<text x="234.733" y="64.8" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="start">Bonet, 1620: un alfabeto de una mano</text>
+<text x="215.833" y="63.8" font-family="Newsreader" font-size="16.5" font-weight="300" fill="#cfcac0" text-anchor="middle">¶</text>
+<text x="236.533" y="52.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">con los dedos, sin punzón</text>
+<text x="236.533" y="55.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">(Acción 7); la forma la decide</text>
+<text x="236.533" y="57.8" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">quien la hace</text>
+<text x="236.533" y="62" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="start">Bulwer, 1644: el gesto es un signo</text>
+<text x="236.533" y="64.8" font-family="Courier Prime" font-size="1.9" font-weight="400" fill="#1d1c1a" text-anchor="start">Bonet, 1620: un alfabeto de una mano</text>
 <rect x="26.169" y="94.431" width="5.462" height="6.6" fill="#f6f4ee"/>
 <path d="M28.559,101.031 H26.169 V94.431 H31.631 V101.031 H29.241" fill="none" stroke="#1d1c1a" stroke-width="0.33" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="28.9" y="98.729" font-family="Courier Prime" font-size="2.772" font-weight="700" fill="#1d1c1a" text-anchor="middle">15</text>

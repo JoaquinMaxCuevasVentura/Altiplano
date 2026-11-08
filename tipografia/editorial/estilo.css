@@ -1,15 +1,15 @@
 /* El libro de Contenida: el sistema editorial en CSS (Vivliostyle, CSS Paged Media).
  *
- * La página mide 210 × 250 mm: 0,84 de ancho por alto, la proporción de la celda.
- * La retícula es la caja: 8 columnas × 7 filas de celdas de 19 × 22,619 mm (0,84),
+ * La página mide 225 × 250 mm: 0,90 de ancho por alto, la proporción de la celda.
+ * La retícula es la caja: 8 columnas × 7 filas de celdas de 20,357 × 22,619 mm (0,90),
  * con juntas de 4 mm. Las columnas, desde el borde izquierdo de la retícula:
- *   c1 0 · c2 23 · c3 46 · c4 69 · c5 92 · c6 115 · c7 138 · c8 161 (mm)
- *   ancho de k columnas = 23k − 4: 19 · 42 · 65 · 88 · 111 · 134 · 157 · 180
+ *   c1 0 · c2 24,357 · c3 48,714 · c4 73,071 · c5 97,428 · c6 121,785 · c7 146,142 · c8 170,499 (mm)
+ *   ancho de k columnas = 24,357k − 4: 20,357 · 44,714 · 69,071 · 93,428 · 117,785 · 142,142 · 166,499 · 190,856
  * Las filas: r1 0 · r2 26,619 · r3 53,238 · r4 79,857 · r5 106,476 · r6 133,095 · r7 159,714
  *   alto de k filas = 26,619k − 4
  * Una fila más su junta son seis líneas de texto: la interlínea es 4,4365 mm (12,58 pt).
  *
- * El texto corrido va en c4–c7 (88 mm); el margen de notas, en c1–c2; c3 y c8 quedan de aire.
+ * El texto corrido va en c4–c7 (93,428 mm); el margen de notas, en c1–c2; c3 y c8 quedan de aire.
  * La retícula no se espeja: todas las páginas son la misma caja.
  */
 
@@ -38,12 +38,12 @@
 /* ------------------------------------------------------------------ las páginas */
 
 @page {
-  size: 210mm 250mm;
-  margin: 28mm 13mm 39.667mm 17mm;
+  size: 225mm 250mm;
+  margin: 28mm 14.8mm 39.667mm 19.344mm;
   background: #f6f4ee;
   @top-left {
     content: string(capitulo, first);
-    width: 65mm;
+    width: 69.071mm;
     font: 400 6.6pt/1 "Courier Prime";
     color: #6d6a63;
     vertical-align: bottom;
@@ -51,7 +51,7 @@
   }
   @top-right {
     content: string(seccion, first);
-    width: 111mm;
+    width: 117.785mm;
     text-align: left;
     font: 400 6.6pt/1 "Courier Prime";
     color: #9a968d;
@@ -60,8 +60,8 @@
   }
 }
 @page :left {
-  margin-left: 13mm;
-  margin-right: 17mm;
+  margin-left: 14.8mm;
+  margin-right: 19.344mm;
   @bottom-left { content: counter(page, decimal-leading-zero); font: 400 6.6pt/1 "Courier Prime"; color: #1d1c1a;
     vertical-align: top; padding-top: 8.4mm; text-align: left; }
 }
@@ -124,8 +124,8 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
 
 .capitulo { break-before: page; }
 .texto {
-  margin-left: 69mm;
-  width: 88mm;
+  margin-left: 73.071mm;
+  width: 93.428mm;
   orphans: 2;
   widows: 2;
 }
@@ -144,8 +144,8 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
 }
 .texto h2 .n {
   position: absolute;
-  left: -69mm;
-  width: 42mm;
+  left: -73.071mm;
+  width: 44.714mm;
   font: 400 6.6pt/var(--linea) "Courier Prime";
   color: var(--tinta);
   top: 0.3mm;
@@ -192,7 +192,7 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
   font-size: 10.6pt;
   line-height: 5mm;
   color: var(--violeta);
-  margin: var(--linea) 0 var(--linea) 23mm;
+  margin: var(--linea) 0 var(--linea) 24.357mm;
   break-inside: avoid;
 }
 .texto .verso .de { display: block; font: 400 6.4pt/var(--linea) "Courier Prime"; color: var(--gris); font-style: normal; }
@@ -216,8 +216,8 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
 .margen {
   float: left;
   clear: left;
-  margin-left: -69mm;
-  width: 42mm;
+  margin-left: -73.071mm;
+  width: 44.714mm;
   font: 400 6.6pt/3.3mm "Courier Prime";
   color: var(--grafito);
   margin-top: 0.6mm;
@@ -235,7 +235,7 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
   position: absolute;
   left: 0;
   top: -1.6mm;
-  width: 42mm;
+  width: 44.714mm;
   font: 400 6.6pt/3.3mm "Courier Prime";
   color: var(--gris);
 }
@@ -249,9 +249,9 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
 }
 .apertura h1 {
   position: absolute;
-  left: 69mm;
+  left: 73.071mm;
   top: -2.3mm;
-  width: 111mm;
+  width: 117.785mm;
   font: 300 25pt/27.5pt "Newsreader";
   letter-spacing: -0.005em;
   string-set: capitulo attr(data-corrida);
@@ -260,7 +260,7 @@ svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: vis
   position: absolute;
   left: 0;
   top: 26.619mm;
-  width: 65mm;
+  width: 69.071mm;
   font: 400 6.4pt/3.2mm "Courier Prime";
   color: var(--grafito);
 }
@@ -324,29 +324,29 @@ figcaption em { font-style: italic; }
 /* anchos de figura en la retícula: desde c1 (ancho), c3 (seis), c4 (cuatro) */
 figure.flota { float: top; float-reference: page; margin-bottom: 7mm; }
 figure.flota.abajo { float: bottom; margin-top: 7mm; margin-bottom: 0; }
-figure.ancho { width: 180mm; }
-figure.seis { width: 134mm; }
-figure.cinco { width: 111mm; }
-figure.cuatro { width: 88mm; }
+figure.ancho { width: 190.856mm; }
+figure.seis { width: 142.142mm; }
+figure.cinco { width: 117.785mm; }
+figure.cuatro { width: 93.428mm; }
 figure.en-texto { margin: var(--linea) 0 var(--linea); }
-figure.en-texto.seis { margin-left: -23mm; }
-figure.en-texto.ancho { margin-left: -69mm; }
+figure.en-texto.seis { margin-left: -24.357mm; }
+figure.en-texto.ancho { margin-left: -73.071mm; }
 /* el pie de una figura ancha va en c1–c2, junto a la imagen, o abajo en c4–c8 */
 figure.pie-al-lado { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-end; }
-figure.pie-al-lado .marco { width: 134mm; flex: none; }
-figure.pie-al-lado figcaption { width: 42mm; margin-top: 0; }
-figure.pie-abajo figcaption { margin-left: 69mm; width: 111mm; }
+figure.pie-al-lado .marco { width: 142.142mm; flex: none; }
+figure.pie-al-lado figcaption { width: 44.714mm; margin-top: 0; }
+figure.pie-abajo figcaption { margin-left: 73.071mm; width: 117.785mm; }
 
 /* ------------------------------------------------------------------ tablas */
 
 .tabla {
-  width: 134mm;
-  margin: var(--linea) 0 var(--linea) -23mm;
+  width: 142.142mm;
+  margin: var(--linea) 0 var(--linea) -24.357mm;
   border-collapse: collapse;
   font-size: 7.6pt;
   line-height: 3.55mm;
 }
-.tabla.ancha { width: 180mm; margin-left: -69mm; }
+.tabla.ancha { width: 190.856mm; margin-left: -73.071mm; }
 .tabla th {
   font: 400 6.2pt/3.2mm "Courier Prime";
   color: var(--gris);
@@ -375,7 +375,7 @@ figure.pie-abajo figcaption { margin-left: 69mm; width: 111mm; }
   break-before: page;
   position: relative;
   height: 182.333mm;
-  width: 180mm;
+  width: 190.856mm;
 }
 .plana { string-set: rotulo attr(data-rotulo); }
 .plana.muda { page: muda; }
@@ -416,9 +416,9 @@ a.pag::before { content: target-counter(attr(href), page, decimal-leading-zero);
 .salto a { color: inherit; text-decoration: none; }
 .texto h2 .salto {
   position: absolute;
-  left: -69mm;
+  left: -73.071mm;
   top: calc(var(--linea) + 0.3mm);
-  width: 42mm;
+  width: 44.714mm;
   font: 400 6.6pt/3.3mm "Courier Prime";
   color: var(--tinta);
 }
@@ -453,16 +453,16 @@ a.pag::before { content: target-counter(attr(href), page, decimal-leading-zero);
 .indice-general { page: plana; break-before: left; }
 .rotulo-indice, .rotulo-seccion {
   font: 300 25pt/27.5pt "Newsreader";
-  margin: -2.3mm 0 0 69mm;
+  margin: -2.3mm 0 0 73.071mm;
   height: 24mm;
 }
-.indice-general .ent { padding-left: 69mm; text-indent: -69mm; }
+.indice-general .ent { padding-left: 73.071mm; text-indent: -73.071mm; }
 .indice-general .ent a { color: inherit; text-decoration: none; }
 .indice-general .ent.cap { font: 400 10.2pt/5mm "Newsreader"; margin-top: 1.3mm; }
 .indice-general .ent.menor { font: 400 6.3pt/3.3mm "Courier Prime"; color: var(--grafito); }
-.indice-general .pag { display: inline-block; width: 46mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; color: var(--tinta); }
-.indice-general .menor .pag { width: 69mm; line-height: 3.3mm; color: var(--grafito); font-size: 6.3pt; }
-.indice-general .nn { display: inline-block; width: 23mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; }
+.indice-general .pag { display: inline-block; width: 48.714mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; color: var(--tinta); }
+.indice-general .menor .pag { width: 73.071mm; line-height: 3.3mm; color: var(--grafito); font-size: 6.3pt; }
+.indice-general .nn { display: inline-block; width: 24.357mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; }
 
 /* ------------------------------------------------------------------ las fichas */
 
@@ -500,10 +500,10 @@ a.pag::before { content: target-counter(attr(href), page, decimal-leading-zero);
 .tabla-caja .d, .registro .d { text-align: right; }
 .tabla-caja tr.violeta td, .registro tr.violeta td { color: var(--violeta); }
 
-.registro { width: 88mm; font-size: 5.5pt; line-height: 2.84mm; }
+.registro { width: 93.428mm; font-size: 5.5pt; line-height: 2.84mm; }
 .registro th { padding: 0 1mm 0.8mm 0; font-size: 5.2pt; line-height: 2.6mm; }
 .registro td { padding: 0 1mm 0 0; border-bottom: 0.1mm solid var(--filete); }
-.registro td.mano { width: 19mm; border-bottom: 0.22mm dotted var(--violeta); }
+.registro td.mano { width: 20.357mm; border-bottom: 0.22mm dotted var(--violeta); }
 
 .referencias, .lista-imagenes { break-before: page; string-set: capitulo "", seccion ""; }
 .refs { string-set: capitulo "referencias"; }
@@ -512,9 +512,9 @@ a.pag::before { content: target-counter(attr(href), page, decimal-leading-zero);
 .refs p { padding-left: 4mm; text-indent: -4mm; margin-bottom: 1.5mm; break-inside: avoid; }
 .refs h3 { font: 400 6.6pt/3.6mm "Courier Prime"; color: var(--gris); margin: 4mm 0 1.2mm; }
 
-.lista-imagenes .intro { margin: 0 0 7mm 69mm; width: 111mm; font-size: 8pt; line-height: 3.9mm; }
+.lista-imagenes .intro { margin: 0 0 7mm 73.071mm; width: 117.785mm; font-size: 8pt; line-height: 3.9mm; }
 .lista-imagenes .intro b { font-weight: 500; }
-.tabla-imagenes { width: 180mm; font-size: 6pt; line-height: 3mm; }
+.tabla-imagenes { width: 190.856mm; font-size: 6pt; line-height: 3mm; }
 .tabla-imagenes th { padding: 0 2mm 1mm 0; }
 .tabla-imagenes td { padding: 0.8mm 2mm 0.8mm 0; border-bottom: 0.12mm solid var(--filete); vertical-align: top; }
 .tabla-imagenes td.ruta { color: var(--grafito); overflow-wrap: anywhere; }

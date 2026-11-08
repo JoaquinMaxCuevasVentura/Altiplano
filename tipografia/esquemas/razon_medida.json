@@ -1,0 +1,36 @@
+{
+ "fuente": "La altura de x del pie, medida por astas a media oscuridad (simulacion/extraer_testigos.py, alturas_por_astas) en dos imágenes de la misma lámina. Las imágenes no se suben: solo estas medidas y las letras sueltas de la primera.",
+ "metodo": "Astas de n, m, u, r para la x; de l, d, b, h, k para las ascendentes; de p y q para las descendentes. Medianas, en px de la imagen.",
+ "foto_de_camara": {
+  "alto_x": 11.67,
+  "ascendente": 20.0,
+  "descendente": 5.0,
+  "razon": 1.7138,
+  "de": "simulacion/testigos/pie.json"
+ },
+ "lamina_enderezada": {
+  "fecha": "2026-11-08",
+  "alto_x": 12.0,
+  "ascendente": 20.83,
+  "descendente": 5.67,
+  "razon": 1.7358,
+  "astas": {
+   "x": 68,
+   "ascendentes": 34,
+   "descendentes": 7
+  }
+ },
+ "paso": {
+  "px": 0.333,
+  "sobre_la_x": 0.028,
+  "nota": "Las astas se miden en la imagen ampliada tres veces: la medida avanza de a un tercio de píxel."
+ },
+ "en_la_placa": {
+  "borde_mm_con_1_71": 54.8,
+  "borde_mm_con_1_74": 54.2,
+  "diferencia_mm": 0.6,
+  "surco_del_punzon_mm": 3.0
+ },
+ "razon": 1.71,
+ "nota": "La razón queda en 1,71: la lámina enderezada da 1,74 con el mismo método, una diferencia (1,3 %) menor que el paso de la medida (2,8 %); en la placa son 0,6 mm. Con otro método, el cruce a media oscuridad interpolado entre píxeles, la imagen enderezada da 1,80 (1,72–1,85 por remuestreo), pero su filtro de nitidez mueve los bordes: a esta resolución la razón depende del método en unas centésimas. Se afina con lupa sobre el impreso."
+}

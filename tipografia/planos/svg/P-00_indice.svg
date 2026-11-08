@@ -82,41 +82,46 @@
 <text x="45" y="128.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">plan general: 8 × 7</text>
 <text x="148" y="125.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="end">1:5</text>
 <line x1="30" y1="129.8" x2="148" y2="129.8" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="30" y="138.6" font-family="Courier Prime" font-size="2.6" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">DÓNDE ESTÁN EN LA CADENA</text>
-<line x1="30" y1="140" x2="148" y2="140" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<circle cx="34" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="34" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">pie</text>
-<circle cx="50.4" cy="147.6" r="2.1" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="50.4" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="700" fill="#4a2470" text-anchor="middle">planos</text>
-<line x1="36.2" y1="147.6" x2="48" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M48.2,147.6 L46.6,147 L46.6,148.2 Z" fill="#1d1c1a"/>
-<circle cx="66.8" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="66.8" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">calco</text>
-<line x1="52.6" y1="147.6" x2="64.4" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M64.6,147.6 L63,147 L63,148.2 Z" fill="#1d1c1a"/>
-<circle cx="83.2" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="83.2" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">placa</text>
-<line x1="69" y1="147.6" x2="80.8" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M81,147.6 L79.4,147 L79.4,148.2 Z" fill="#1d1c1a"/>
-<circle cx="99.6" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="99.6" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">cinta</text>
-<line x1="85.4" y1="147.6" x2="97.2" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M97.4,147.6 L95.8,147 L95.8,148.2 Z" fill="#1d1c1a"/>
-<circle cx="116" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="116" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">frotado</text>
-<line x1="101.8" y1="147.6" x2="113.6" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M113.8,147.6 L112.2,147 L112.2,148.2 Z" fill="#1d1c1a"/>
-<circle cx="132.4" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="132.4" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">agua</text>
-<line x1="118.2" y1="147.6" x2="130" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M130.2,147.6 L128.6,147 L128.6,148.2 Z" fill="#1d1c1a"/>
-<circle cx="148.8" cy="147.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="148.8" y="153.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">voz</text>
-<line x1="134.6" y1="147.6" x2="146.4" y2="147.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M146.6,147.6 L145,147 L145,148.2 Z" fill="#1d1c1a"/>
-<text x="30" y="160.6" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">Del </tspan><tspan font-weight="500">pie</tspan><tspan font-weight="300"> se toman medidas. Los </tspan><tspan font-weight="500">planos</tspan><tspan font-weight="300"> fijan cómo se comporta la forma: la anatomía base. La mano </tspan><tspan font-weight="500">calca</tspan></text>
-<text x="30" y="164.326" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">el esqueleto del pie aplicando estas reglas, y después vienen los estados, en orden. Los planos no son un</tspan></text>
-<text x="30" y="168.052" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">estado: no entran en la caja.</tspan></text>
+<text x="30" y="132.6" font-family="Courier Prime" font-size="2.8" font-weight="700" fill="#1d1c1a" text-anchor="start">P-11</text>
+<text x="45" y="132.6" font-family="Newsreader" font-size="3.3" font-weight="400" fill="#1d1c1a" text-anchor="start">Las proporciones</text>
+<text x="45" y="135.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="start">la celda y la altura de x, medidas en la lámina</text>
+<text x="148" y="132.6" font-family="Courier Prime" font-size="2" font-weight="400" fill="#6d6a63" text-anchor="end">S/E · 1:3</text>
+<line x1="30" y1="136.8" x2="148" y2="136.8" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="30" y="145.6" font-family="Courier Prime" font-size="2.6" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">DÓNDE ESTÁN EN LA CADENA</text>
+<line x1="30" y1="147" x2="148" y2="147" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<circle cx="34" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="34" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">pie</text>
+<circle cx="50.4" cy="154.6" r="2.1" fill="#4a2470" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="50.4" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="700" fill="#4a2470" text-anchor="middle">planos</text>
+<line x1="36.2" y1="154.6" x2="48" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M48.2,154.6 L46.6,154 L46.6,155.2 Z" fill="#1d1c1a"/>
+<circle cx="66.8" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="66.8" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">calco</text>
+<line x1="52.6" y1="154.6" x2="64.4" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M64.6,154.6 L63,154 L63,155.2 Z" fill="#1d1c1a"/>
+<circle cx="83.2" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="83.2" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">placa</text>
+<line x1="69" y1="154.6" x2="80.8" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M81,154.6 L79.4,154 L79.4,155.2 Z" fill="#1d1c1a"/>
+<circle cx="99.6" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="99.6" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">cinta</text>
+<line x1="85.4" y1="154.6" x2="97.2" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M97.4,154.6 L95.8,154 L95.8,155.2 Z" fill="#1d1c1a"/>
+<circle cx="116" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="116" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">frotado</text>
+<line x1="101.8" y1="154.6" x2="113.6" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M113.8,154.6 L112.2,154 L112.2,155.2 Z" fill="#1d1c1a"/>
+<circle cx="132.4" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="132.4" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">agua</text>
+<line x1="118.2" y1="154.6" x2="130" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M130.2,154.6 L128.6,154 L128.6,155.2 Z" fill="#1d1c1a"/>
+<circle cx="148.8" cy="154.6" r="1.4" fill="#f6f4ee" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<text x="148.8" y="160.8" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="middle">voz</text>
+<line x1="134.6" y1="154.6" x2="146.4" y2="154.6" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M146.6,154.6 L145,154 L145,155.2 Z" fill="#1d1c1a"/>
+<text x="30" y="167.6" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">Del </tspan><tspan font-weight="500">pie</tspan><tspan font-weight="300"> se toman medidas. Los </tspan><tspan font-weight="500">planos</tspan><tspan font-weight="300"> fijan cómo se comporta la forma: la anatomía base. La mano </tspan><tspan font-weight="500">calca</tspan></text>
+<text x="30" y="171.326" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">el esqueleto del pie aplicando estas reglas, y después vienen los estados, en orden. Los planos no son un</tspan></text>
+<text x="30" y="175.052" font-family="Newsreader" font-size="2.7" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">estado: no entran en la caja.</tspan></text>
 <text x="162" y="49" font-family="Courier Prime" font-size="2.6" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">CONVENCIONES</text>
 <line x1="162" y1="50.4" x2="274" y2="50.4" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="162" y1="54.6" x2="184" y2="54.6" fill="none" stroke="#1d1c1a" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -128,7 +133,7 @@
 <line x1="162" y1="70.8" x2="184" y2="70.8" fill="none" stroke="#6d6a63" stroke-width="0.25" stroke-dasharray="3 1.6" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="188" y="71.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">líneas de la gramática: afuera, borde, fondo, desagüe</text>
 <line x1="162" y1="76.2" x2="184" y2="76.2" fill="none" stroke="#1d1c1a" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-<text x="188" y="77" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">celda de la cabeza (0,84 : 1)</text>
+<text x="188" y="77" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">celda de la cabeza (0,90 : 1)</text>
 <line x1="162" y1="81.6" x2="184" y2="81.6" fill="none" stroke="#6d6a63" stroke-width="0.35" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="188" y="82.4" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">placa de aluminio, 150 × 150 mm</text>
 <line x1="162" y1="87" x2="184" y2="87" fill="none" stroke="#6d6a63" stroke-width="0.15" stroke-dasharray="0.8 0.9" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -181,8 +186,8 @@
 <text x="30" y="206" font-family="Courier Prime" font-size="2.6" font-weight="700" letter-spacing="0.35" fill="#1d1c1a" text-anchor="start">CUADRO DE LAS DECISIONES ANATÓMICAS</text>
 <line x1="30" y1="207.4" x2="274" y2="207.4" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="30" y="212.2" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">cuerpo</text>
-<text x="57" y="212.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">la celda de la cabeza, 0,84 : 1</text>
-<text x="148" y="212.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="end">P-01</text>
+<text x="57" y="212.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">la celda de la cabeza, 0,90 : 1</text>
+<text x="148" y="212.2" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="end">P-01 · P-11</text>
 <line x1="30" y1="213.9" x2="148" y2="213.9" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="30" y="217.95" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">ancho</text>
 <text x="57" y="217.95" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">monoespaciada: una letra, una celda</text>
@@ -194,7 +199,7 @@
 <line x1="30" y1="225.4" x2="148" y2="225.4" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="30" y="229.45" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">altura de x</text>
 <text x="57" y="229.45" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">1,71 de las ascendentes</text>
-<text x="148" y="229.45" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="end">P-01</text>
+<text x="148" y="229.45" font-family="Courier Prime" font-size="2" font-weight="400" fill="#4a2470" text-anchor="end">P-01 · P-11</text>
 <line x1="30" y1="231.15" x2="148" y2="231.15" fill="none" stroke="#9a968d" stroke-width="0.13" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="30" y="235.2" font-family="Newsreader" font-size="2.5" font-weight="500" fill="#1d1c1a" text-anchor="start">contraste</text>
 <text x="57" y="235.2" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#1d1c1a" text-anchor="start">ninguno: un canal de 8,9 mm</text>
@@ -378,12 +383,12 @@
 <text x="286.5" y="253.6" font-family="Newsreader" font-size="5" font-weight="400" fill="#1d1c1a" text-anchor="start">Índice y convenciones</text>
 <text x="286.5" y="258.6" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">cómo se leen estos planos</text>
 <text x="397" y="250" font-family="Courier Prime" font-size="1.8" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="middle">HOJA</text>
-<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">1 / 11</text>
+<text x="397" y="256.8" font-family="Courier Prime" font-size="3.6" font-weight="400" fill="#1d1c1a" text-anchor="middle">1 / 12</text>
 <text x="285.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">ESCALA</text>
 <text x="285.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">—</text>
 <text x="315.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">UNIDADES</text>
 <text x="315.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">mm · (UPM)</text>
-<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA</text>
+<text x="349.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FECHA · REV. 08.11.2026</text>
 <text x="349.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">17.10.2026</text>
 <text x="381.6" y="264.2" font-family="Courier Prime" font-size="1.7" font-weight="400" letter-spacing="0.2" fill="#6d6a63" text-anchor="start">FORMATO</text>
 <text x="381.6" y="269.4" font-family="Courier Prime" font-size="2.5" font-weight="400" fill="#1d1c1a" text-anchor="start">A3 · 420 × 297</text>
