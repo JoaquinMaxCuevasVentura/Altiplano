@@ -53,6 +53,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `taxonomia/` | **Las referencias, por su mecanismo:** diez láminas A3 que ordenan las imágenes de dominio público de `10` con un método tomado con cuidado de un reel de Jason Murray (operación, dominio, técnica, referencia y dónde cae en el taller). Cada técnica se dibuja como un mecanismo, nunca como la imagen; cada ficha va a puntos hasta que la mires. En SVG, PNG y PDF con enlaces |
 | `aplicacion/` | **Las decisiones de la letra:** una mesa con el plano del signo, siete planos de detalle donde cada decisión de anatomía se mueve con el gesto de su dibujo, y la caja. Exporta `parametros.json` para `gramatica.py --parametros` |
 | `editorial/` | **El libro:** un solo documento editorial con todo el proyecto, 225 × 250 mm (la proporción de la celda) sobre una retícula que es la caja de 8 × 7. El texto del informe, los mapas, los planos, la taxonomía y las láminas, y entre capítulos el pie letra por letra, la caja, la ficha, las 119 placas, la placa de cerca y el poema en la caja. Lo que falta hacer a mano o espera un permiso queda punteado. PDF para pantalla y para la imprenta, con su cubierta; se arma con Vivliostyle |
+| `especimen/` | **El espécimen:** dieciséis páginas de 180 × 200 mm (la proporción de la celda), compuestas en Typst, como los especímenes de una familia. Como la letra todavía no existe, no compone texto con ella: muestra la caja, las letras halladas, la celda a 1:1, los estados en lugar de los pesos, las decisiones, la póliza y, rotulado, lo que propuso la máquina |
 | `repujado/` | **El repujado, ensayado:** una mesa en el navegador donde la mano dibuja con el puntero y la máquina pone el aluminio: el reverso en espejo, el punzón y la base blanda, el calco, el desagüe, la rotura y la luz del registro. La manera viene de un reel de Krftoools (*Vooolume*) y la imagen, de la primera simulación. No entra en la caja |
 
 ## Estado
@@ -66,6 +67,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - el ensayo del repujado (`repujado/`), para probar la Acción 4 antes del aluminio;
   - el informe de decisiones, con sus mapas (`informe/`);
   - el libro, que junta todo en un solo documento (`editorial/`);
+  - el espécimen, que muestra la letra mientras se hace (`especimen/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
@@ -88,7 +90,9 @@ python3 tipografia/taxonomia/generar_taxonomia.py   # las láminas de la taxonom
 python3 tipografia/digital/poliza.py --probar       # la póliza en OpenType, probada verso por verso (uharfbuzz)
 python3 tipografia/informe/mapas.py                 # los mapas del informe
 python3 tipografia/informe/armar.py                 # el informe de decisiones (.docx y PDF; necesita node y docx)
+python3 tipografia/planos/generar_planos.py         # los doce planos (necesitan Chromium: CHROME)
 python3 tipografia/editorial/armar.py              # el libro (necesita `npm install` en editorial/ y Chromium)
+python3 tipografia/especimen/armar.py              # el espécimen (Typst: pip install typst)
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición
 python3 tipografia/laminas/generar_laminas.py       #   (los esquemas y las láminas necesitan Chromium: CHROME)
 ```
