@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `simulacion/gramatica.py`, `simulacion/informe.md`.
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `simulacion/gramatica.py`, `simulacion/informe.md`, `simulacion/salida/gramatica/gramatica.json`.
 - **21 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `simulacion/salida/01_frotado_de_la_pared.jpg`, `simulacion/salida/02_el_pie.jpg`, `simulacion/salida/03_calco.png`, `simulacion/salida/03b_notdef.png`, `simulacion/salida/03c_anatomia.png`, `simulacion/salida/03d_antes_y_despues.png`, `simulacion/salida/04_placa.jpg`, `simulacion/salida/04_placa_reverso.jpg` y 13 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 374 archivos: 2 están en esta carpeta, 24 en carpetas de versiones anteriores y 348 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
+En este commit, la línea tenía 374 archivos: 3 están en esta carpeta, 29 en carpetas de versiones anteriores y 342 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
 
 ## Qué cambió respecto de la anterior
 

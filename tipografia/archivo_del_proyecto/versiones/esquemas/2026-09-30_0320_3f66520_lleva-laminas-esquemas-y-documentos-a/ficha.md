@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **4 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/ficha_de_hallazgo.png`, `esquemas/ficha_de_hallazgo.svg`, `esquemas/generar_esquemas.py`, `esquemas/plantillas_imprimibles.pdf`.
+- **7 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/celda_medida.json`, `esquemas/ficha_de_hallazgo.png`, `esquemas/ficha_de_hallazgo.svg`, `esquemas/generar_esquemas.py`, `esquemas/pauta_azulejo.png`, `esquemas/pauta_azulejo.svg`, `esquemas/plantillas_imprimibles.pdf`.
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 0 en carpetas de versiones anteriores y 10 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
+En este commit, la línea tenía 14 archivos: 7 están en esta carpeta, 0 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
 
 ## Qué cambió respecto de la anterior
 

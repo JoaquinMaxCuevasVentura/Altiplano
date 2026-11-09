@@ -39,7 +39,7 @@ El mensaje del commit `bbe9362`:
 > El documento 10 suma el §10.12; el informe, el §11.5 con dos láminas; y
 > la hoja de los planos acepta otra serie y otro pie en el cajetín.
 
-Y el README de la línea en ese commit: [H-0517](taxonomia/README.md).
+Y el README de la línea en ese commit: [H-0632](taxonomia/README.md).
 
 ## Lo que deduce el archivo
 

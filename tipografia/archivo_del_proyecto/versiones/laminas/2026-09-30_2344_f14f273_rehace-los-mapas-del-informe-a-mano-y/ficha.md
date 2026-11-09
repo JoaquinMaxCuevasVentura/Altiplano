@@ -12,11 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **1 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/README.md`.
+- **1 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/png/01_portada.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 78 archivos: 0 están en esta carpeta, 44 en carpetas de versiones anteriores y 34 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
+En este commit, la línea tenía 78 archivos: 1 están en esta carpeta, 49 en carpetas de versiones anteriores y 28 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
 
 ## Qué cambió respecto de la anterior
 
@@ -48,8 +49,9 @@ El mensaje del commit `f14f273`:
 > Mojada, Tocada, Dicha). El informe suma la sección 6.3 y reescribe cómo
 > leer los mapas, sus pies y el colofón.
 
-Y el README de la línea en ese commit: [V-0439](../../../../laminas/README.md).
+Y el README de la línea en ese commit: [H-0455](laminas/README.md).
 
 ## Lo que deduce el archivo
 
 - «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
+- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

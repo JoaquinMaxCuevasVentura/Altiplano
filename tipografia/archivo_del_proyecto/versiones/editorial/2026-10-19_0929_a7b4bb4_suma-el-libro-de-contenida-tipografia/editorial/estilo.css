@@ -1,0 +1,525 @@
+/* El libro de Contenida: el sistema editorial en CSS (Vivliostyle, CSS Paged Media).
+ *
+ * La página mide 210 × 250 mm: 0,84 de ancho por alto, la proporción de la celda.
+ * La retícula es la caja: 8 columnas × 7 filas de celdas de 19 × 22,619 mm (0,84),
+ * con juntas de 4 mm. Las columnas, desde el borde izquierdo de la retícula:
+ *   c1 0 · c2 23 · c3 46 · c4 69 · c5 92 · c6 115 · c7 138 · c8 161 (mm)
+ *   ancho de k columnas = 23k − 4: 19 · 42 · 65 · 88 · 111 · 134 · 157 · 180
+ * Las filas: r1 0 · r2 26,619 · r3 53,238 · r4 79,857 · r5 106,476 · r6 133,095 · r7 159,714
+ *   alto de k filas = 26,619k − 4
+ * Una fila más su junta son seis líneas de texto: la interlínea es 4,4365 mm (12,58 pt).
+ *
+ * El texto corrido va en c4–c7 (88 mm); el margen de notas, en c1–c2; c3 y c8 quedan de aire.
+ * La retícula no se espeja: todas las páginas son la misma caja.
+ */
+
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-300-normal.woff2); font-weight: 300; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-300-italic.woff2); font-weight: 300; font-style: italic; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-400-normal.woff2); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-400-italic.woff2); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Newsreader"; src: url(fuentes/newsreader-latin-500-normal.woff2); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-400-normal.woff2); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-400-italic.woff2); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Courier Prime"; src: url(fuentes/courier-prime-latin-700-normal.woff2); font-weight: 700; font-style: normal; }
+
+:root {
+  --papel: #f6f4ee;
+  --tinta: #1d1c1a;
+  --grafito: #55534e;
+  --gris: #6d6a63;
+  --gris2: #9a968d;
+  --filete: #cfcac0;
+  --violeta: #4a2470;
+  --plata: #a7a9a6;
+  --linea: 4.4365mm;
+  --media: 2.2183mm;
+}
+
+/* ------------------------------------------------------------------ las páginas */
+
+@page {
+  size: 210mm 250mm;
+  margin: 28mm 13mm 39.667mm 17mm;
+  background: #f6f4ee;
+  @top-left {
+    content: string(capitulo, first);
+    width: 65mm;
+    font: 400 6.6pt/1 "Courier Prime";
+    color: #6d6a63;
+    vertical-align: bottom;
+    padding-bottom: 9mm;
+  }
+  @top-right {
+    content: string(seccion, first);
+    width: 111mm;
+    text-align: left;
+    font: 400 6.6pt/1 "Courier Prime";
+    color: #9a968d;
+    vertical-align: bottom;
+    padding-bottom: 9mm;
+  }
+}
+@page :left {
+  margin-left: 13mm;
+  margin-right: 17mm;
+  @bottom-left { content: counter(page, decimal-leading-zero); font: 400 6.6pt/1 "Courier Prime"; color: #1d1c1a;
+    vertical-align: top; padding-top: 8.4mm; text-align: left; }
+}
+@page :right {
+  @bottom-right { content: counter(page, decimal-leading-zero); font: 400 6.6pt/1 "Courier Prime"; color: #1d1c1a;
+    vertical-align: top; padding-top: 8.4mm; text-align: right; }
+}
+@page :blank {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+/* las planas: páginas compuestas a mano, sin cabeza (el folio queda) */
+@page plana {
+  @top-left { content: none; }
+  @top-right { content: none; }
+}
+/* el rótulo de las planas, vertical, arriba en el margen de afuera (de arriba hacia abajo) */
+@page plana:left {
+  @left-top { content: string(rotulo, first); writing-mode: vertical-rl; font: 400 6.6pt/1 "Courier Prime";
+    color: #55534e; vertical-align: top; }
+}
+@page plana:right {
+  @right-top { content: string(rotulo, first); writing-mode: vertical-rl; font: 400 6.6pt/1 "Courier Prime";
+    color: #55534e; vertical-align: top; }
+}
+@page muda {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+/* ------------------------------------------------------------------ la letra */
+
+html {
+  font-family: "Newsreader", serif;
+  font-size: 9.4pt;
+  line-height: var(--linea);
+  color: var(--tinta);
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+}
+body { margin: 0; }
+p, ul, ol, figure, h1, h2, h3, blockquote, table { margin: 0; padding: 0; }
+em { font-style: italic; }
+strong { font-weight: 500; }
+code, .mono {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.86em;
+  font-variant-numeric: normal;
+}
+.sigma { font-family: "DejaVu Serif", serif; font-size: 0.92em; }
+svg.flecha { width: 0.95em; height: 0.6em; vertical-align: 0.02em; overflow: visible; }
+
+/* ------------------------------------------------------------------ el texto corrido */
+
+.capitulo { break-before: page; }
+.texto {
+  margin-left: 69mm;
+  width: 88mm;
+  orphans: 2;
+  widows: 2;
+}
+.texto p { margin-bottom: var(--media); }
+.texto p.sigue { margin-top: calc(-1 * var(--media)); }
+
+.texto h2 {
+  font-weight: 500;
+  font-size: 9.4pt;
+  line-height: var(--linea);
+  margin-top: calc(2 * var(--linea));
+  margin-bottom: var(--media);
+  break-after: avoid;
+  position: relative;
+  string-set: seccion attr(data-corrida);
+}
+.texto h2 .n {
+  position: absolute;
+  left: -69mm;
+  width: 42mm;
+  font: 400 6.6pt/var(--linea) "Courier Prime";
+  color: var(--tinta);
+  top: 0.3mm;
+}
+.texto h2:first-child { margin-top: 0; }
+.texto h3 {
+  font: 400 7pt/var(--linea) "Courier Prime";
+  color: var(--gris);
+  margin-top: var(--linea);
+  break-after: avoid;
+}
+
+/* listas: la raya en violeta, los números a máquina */
+.texto ul, .texto ol { list-style: none; margin-bottom: var(--media); }
+.texto li { position: relative; padding-left: 5mm; margin-bottom: 0.9mm; }
+.texto ul > li::before {
+  content: "–";
+  position: absolute;
+  left: 0.6mm;
+  color: var(--violeta);
+}
+.texto ol { counter-reset: n; }
+.texto ol > li { counter-increment: n; }
+.texto ol > li::before {
+  content: counter(n);
+  position: absolute;
+  left: 0;
+  font: 400 6.8pt/var(--linea) "Courier Prime";
+  color: var(--violeta);
+}
+
+/* lo que falta: un cuadrado punteado, para tildar a mano */
+.texto ol.pendientes > li::before {
+  content: "";
+  top: 0.9mm;
+  width: 2.3mm;
+  height: 2.3mm;
+  border: 0.25mm dotted var(--violeta);
+}
+
+/* el verso: la voz del poema, en violeta */
+.texto .verso {
+  font-style: italic;
+  font-size: 10.6pt;
+  line-height: 5mm;
+  color: var(--violeta);
+  margin: var(--linea) 0 var(--linea) 23mm;
+  break-inside: avoid;
+}
+.texto .verso .de { display: block; font: 400 6.4pt/var(--linea) "Courier Prime"; color: var(--gris); font-style: normal; }
+
+/* la cita: lo que ya estaba escrito, a máquina */
+.texto .cita {
+  font: 400 7.8pt/var(--linea) "Courier Prime";
+  color: var(--tinta);
+  margin: var(--media) 0 var(--linea) 0;
+  padding-left: 5mm;
+  border-left: 0.25mm solid var(--violeta);
+}
+.texto .cita.cadena { border-left: 0; padding-left: 0; color: var(--grafito); }
+
+.nota, .texto .nota {
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--gris);
+}
+
+/* al margen (c1–c2) */
+.margen {
+  float: left;
+  clear: left;
+  margin-left: -69mm;
+  width: 42mm;
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--grafito);
+  margin-top: 0.6mm;
+}
+.margen em { font-family: "Courier Prime"; }
+
+/* ------------------------------------------------------------------ la apertura de capítulo */
+
+.apertura {
+  position: relative;
+  string-set: capitulo "", seccion "";
+  height: 79.857mm;   /* tres filas y su junta: el texto empieza en la fila 4 */
+}
+.apertura .num {
+  position: absolute;
+  left: 0;
+  top: -1.6mm;
+  width: 42mm;
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--gris);
+}
+.apertura .num b {
+  display: block;
+  font: 300 52pt/1 "Newsreader";
+  color: var(--tinta);
+  margin-left: -0.6mm;
+  margin-top: 1.4mm;
+  font-variant-numeric: lining-nums;
+}
+.apertura h1 {
+  position: absolute;
+  left: 69mm;
+  top: -2.3mm;
+  width: 111mm;
+  font: 300 25pt/27.5pt "Newsreader";
+  letter-spacing: -0.005em;
+  string-set: capitulo attr(data-corrida);
+}
+.apertura .indice {
+  position: absolute;
+  left: 0;
+  top: 26.619mm;
+  width: 65mm;
+  font: 400 6.4pt/3.2mm "Courier Prime";
+  color: var(--grafito);
+}
+.apertura .indice a { display: block; color: inherit; text-decoration: none; margin-bottom: 0.9mm; padding-left: 7.5mm; text-indent: -7.5mm; }
+.apertura .indice a::before {
+  content: target-counter(attr(href), page, decimal-leading-zero);
+  display: inline-block;
+  width: 7.5mm;
+  text-indent: 0;
+  color: var(--tinta);
+}
+.capitulo .texto > h2:first-child { margin-top: 0; }
+
+/* ------------------------------------------------------------------ figuras */
+
+figure { break-inside: avoid; }
+figure img { display: block; width: 100%; height: auto; }
+figure .marco { position: relative; }
+
+/* lo hecho por la máquina va punteado y abierto abajo, como toda forma cerrada (el desagüe) */
+figure.maquina .marco, .vacio {
+  border: 0.3mm dotted var(--tinta);
+  border-bottom: 0;
+  padding: 2.4mm;
+}
+figure.maquina .marco::before, figure.maquina .marco::after,
+.vacio::before, .vacio::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(50% - 2mm);
+  border-bottom: 0.3mm dotted var(--tinta);
+}
+figure.maquina .marco::before, .vacio::before { left: 0; }
+figure.maquina .marco::after, .vacio::after { right: 0; }
+.vacio { position: relative; box-sizing: border-box; }
+.vacio.violeta { border-color: var(--violeta); }
+.vacio.violeta::before, .vacio.violeta::after { border-color: var(--violeta); }
+
+figcaption {
+  font: 400 6.4pt/3.2mm "Courier Prime";
+  color: var(--grafito);
+  margin-top: 2mm;
+}
+figcaption .fn { color: var(--tinta); font-weight: 700; margin-right: 1.2mm; }
+figcaption em { font-style: italic; }
+
+.etiqueta {
+  display: inline-block;
+  font: 400 5.8pt/1 "Courier Prime";
+  letter-spacing: 0.02em;
+  padding: 0.55mm 1mm 0.45mm;
+  margin-right: 1.4mm;
+  border: 0.2mm solid var(--tinta);
+  color: var(--tinta);
+  vertical-align: 0.15mm;
+}
+.etiqueta.maquina, .etiqueta.pendiente { border-style: dotted; }
+.etiqueta.pendiente { color: var(--violeta); border-color: var(--violeta); }
+
+/* anchos de figura en la retícula: desde c1 (ancho), c3 (seis), c4 (cuatro) */
+figure.flota { float: top; float-reference: page; margin-bottom: 7mm; }
+figure.flota.abajo { float: bottom; margin-top: 7mm; margin-bottom: 0; }
+figure.ancho { width: 180mm; }
+figure.seis { width: 134mm; }
+figure.cinco { width: 111mm; }
+figure.cuatro { width: 88mm; }
+figure.en-texto { margin: var(--linea) 0 var(--linea); }
+figure.en-texto.seis { margin-left: -23mm; }
+figure.en-texto.ancho { margin-left: -69mm; }
+/* el pie de una figura ancha va en c1–c2, junto a la imagen, o abajo en c4–c8 */
+figure.pie-al-lado { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-end; }
+figure.pie-al-lado .marco { width: 134mm; flex: none; }
+figure.pie-al-lado figcaption { width: 42mm; margin-top: 0; }
+figure.pie-abajo figcaption { margin-left: 69mm; width: 111mm; }
+
+/* ------------------------------------------------------------------ tablas */
+
+.tabla {
+  width: 134mm;
+  margin: var(--linea) 0 var(--linea) -23mm;
+  border-collapse: collapse;
+  font-size: 7.6pt;
+  line-height: 3.55mm;
+}
+.tabla.ancha { width: 180mm; margin-left: -69mm; }
+.tabla th {
+  font: 400 6.2pt/3.2mm "Courier Prime";
+  color: var(--gris);
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0 2.5mm 1.4mm 0;
+  border-bottom: 0.25mm solid var(--tinta);
+}
+.tabla td {
+  vertical-align: top;
+  padding: 1.3mm 2.5mm 1.5mm 0;
+  border-bottom: 0.2mm solid var(--filete);
+}
+.tabla tr { break-inside: avoid; }
+.tabla td.mono { font: 400 6.8pt/3.55mm "Courier Prime"; }
+.tabla td.violeta { color: var(--violeta); }
+.tabla td.cursiva { font-style: italic; }
+.tabla td strong { font-weight: 500; }
+.tabla td code { font-size: 0.9em; }
+.tabla tr.grupo td { font-weight: 500; padding-top: 3mm; border-bottom-color: var(--tinta); }
+
+/* ------------------------------------------------------------------ las planas: páginas compuestas en la retícula */
+
+.plana {
+  page: plana;
+  break-before: page;
+  position: relative;
+  height: 182.333mm;
+  width: 180mm;
+}
+.plana { string-set: rotulo attr(data-rotulo); }
+.plana.muda { page: muda; }
+.plana.izquierda { break-before: left; }
+.plana.derecha { break-before: right; }
+.plana > * { position: absolute; box-sizing: border-box; }
+.plana .rotulo {
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--grafito);
+}
+.plana .rotulo b { color: var(--tinta); font-weight: 700; }
+.plana .titulo {
+  font: 300 25pt/27.5pt "Newsreader";
+}
+.plana .lead { font-size: 9.4pt; line-height: var(--linea); }
+.plana .lead p + p { margin-top: var(--media); }
+
+/* el rótulo vertical, al borde: se lee de abajo hacia arriba */
+.vertical {
+  writing-mode: sideways-lr;
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--grafito);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ utilidades */
+
+.violeta { color: var(--violeta); }
+.gris { color: var(--gris); }
+.grafito { color: var(--grafito); }
+.pequena { font-size: 7pt; line-height: 3.5mm; }
+
+/* ------------------------------------------------------------------ referencias a otras páginas */
+
+a.pag { color: inherit; text-decoration: none; }
+a.pag::before { content: target-counter(attr(href), page, decimal-leading-zero); }
+/* la llamada a otra página: colgada debajo del número de la sección, en c1–c2 */
+.salto a { color: inherit; text-decoration: none; }
+.texto h2 .salto {
+  position: absolute;
+  left: -69mm;
+  top: calc(var(--linea) + 0.3mm);
+  width: 42mm;
+  font: 400 6.6pt/3.3mm "Courier Prime";
+  color: var(--tinta);
+}
+.margen .salto { color: var(--tinta); }
+
+/* ------------------------------------------------------------------ el pie, a máquina */
+
+.pie-maquina {
+  font: 400 16pt/8.873mm "Courier Prime";
+  color: var(--tinta);
+  font-variant-numeric: normal;
+}
+.pie-maquina .M { color: var(--gris2); }
+.pie-maquina .h { color: var(--violeta); position: relative; }
+.pie-maquina .h::before {
+  content: attr(data-n);
+  position: absolute;
+  left: 0.2mm;
+  top: -3.3mm;
+  font: 400 5.4pt/1 "Courier Prime";
+  color: var(--violeta);
+}
+
+/* ------------------------------------------------------------------ el resumen, como entrada */
+
+.resumen { font-size: 11.2pt; line-height: 5.546mm; }
+.resumen p { text-indent: 0; }
+.resumen p + p { margin-top: 2.773mm; }
+
+/* ------------------------------------------------------------------ el índice general */
+
+.indice-general { page: plana; break-before: left; }
+.rotulo-indice, .rotulo-seccion {
+  font: 300 25pt/27.5pt "Newsreader";
+  margin: -2.3mm 0 0 69mm;
+  height: 24mm;
+}
+.indice-general .ent { padding-left: 69mm; text-indent: -69mm; }
+.indice-general .ent a { color: inherit; text-decoration: none; }
+.indice-general .ent.cap { font: 400 10.2pt/5mm "Newsreader"; margin-top: 1.3mm; }
+.indice-general .ent.menor { font: 400 6.3pt/3.3mm "Courier Prime"; color: var(--grafito); }
+.indice-general .pag { display: inline-block; width: 46mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; color: var(--tinta); }
+.indice-general .menor .pag { width: 69mm; line-height: 3.3mm; color: var(--grafito); font-size: 6.3pt; }
+.indice-general .nn { display: inline-block; width: 23mm; text-indent: 0; font: 400 6.6pt/5mm "Courier Prime"; }
+
+/* ------------------------------------------------------------------ las fichas */
+
+.raya { display: block; border-bottom: 0.25mm dotted var(--violeta); height: 5.6mm; }
+.maquina-texto { color: var(--grafito); }
+.maquina-marco {
+  border: 0.3mm dotted var(--tinta);
+  border-bottom: 0;
+  padding: 2.4mm;
+}
+.maquina-marco::before, .maquina-marco::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(50% - 2mm);
+  border-bottom: 0.3mm dotted var(--tinta);
+}
+.maquina-marco::before { left: 0; }
+.maquina-marco::after { right: 0; }
+
+/* ------------------------------------------------------------------ tablas de datos, a máquina */
+
+.tabla-caja, .registro, .tabla-imagenes { border-collapse: collapse; font-family: "Courier Prime"; font-variant-numeric: normal; }
+.tabla-caja { width: 100%; font-size: 6.2pt; line-height: 3.1mm; }
+.tabla-caja th, .registro th, .tabla-imagenes th {
+  text-align: left;
+  font-weight: 400;
+  color: var(--gris);
+  vertical-align: bottom;
+  border-bottom: 0.25mm solid var(--tinta);
+}
+.tabla-caja th { padding: 0 1.4mm 1.1mm 0; }
+.tabla-caja td { padding: 0.95mm 1.4mm 0.95mm 0; border-bottom: 0.15mm solid var(--filete); vertical-align: baseline; }
+.tabla-caja td.s { font-size: 9.4pt; }
+.tabla-caja .d, .registro .d { text-align: right; }
+.tabla-caja tr.violeta td, .registro tr.violeta td { color: var(--violeta); }
+
+.registro { width: 88mm; font-size: 5.5pt; line-height: 2.84mm; }
+.registro th { padding: 0 1mm 0.8mm 0; font-size: 5.2pt; line-height: 2.6mm; }
+.registro td { padding: 0 1mm 0 0; border-bottom: 0.1mm solid var(--filete); }
+.registro td.mano { width: 19mm; border-bottom: 0.22mm dotted var(--violeta); }
+
+.referencias, .lista-imagenes { break-before: page; string-set: capitulo "", seccion ""; }
+.refs { string-set: capitulo "referencias"; }
+.tabla-imagenes { string-set: capitulo "las imágenes"; }
+.refs { columns: 2; column-gap: 4mm; font-size: 7.6pt; line-height: 3.6mm; }
+.refs p { padding-left: 4mm; text-indent: -4mm; margin-bottom: 1.5mm; break-inside: avoid; }
+.refs h3 { font: 400 6.6pt/3.6mm "Courier Prime"; color: var(--gris); margin: 4mm 0 1.2mm; }
+
+.lista-imagenes .intro { margin: 0 0 7mm 69mm; width: 111mm; font-size: 8pt; line-height: 3.9mm; }
+.lista-imagenes .intro b { font-weight: 500; }
+.tabla-imagenes { width: 180mm; font-size: 6pt; line-height: 3mm; }
+.tabla-imagenes th { padding: 0 2mm 1mm 0; }
+.tabla-imagenes td { padding: 0.8mm 2mm 0.8mm 0; border-bottom: 0.12mm solid var(--filete); vertical-align: top; }
+.tabla-imagenes td.ruta { color: var(--grafito); overflow-wrap: anywhere; }
+.tabla-imagenes tr { break-inside: avoid; }
+
+.colofon { font-size: 8pt; line-height: 3.9mm; }
+.colofon p + p { margin-top: 2.2mm; }
+.colofon b { font-weight: 500; }

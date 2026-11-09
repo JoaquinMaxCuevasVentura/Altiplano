@@ -5,7 +5,7 @@
 | Línea | [El ensayo del repujado](../README.md) |
 | Origen | un artefacto publicado en claude.ai |
 | Fecha | 2026-10-18 16:05 UTC: publicación de esa versión del artefacto (UTC), deducida de su identificador de versión |
-| Estado | versión vigente |
+| Estado | versión anterior |
 | Lo vigente | [`tipografia/repujado/`](../../../../repujado/) |
 
 ## Qué es
@@ -14,8 +14,8 @@ La mesa del repujado como artefacto de una sola página, servida por claude.ai. 
 
 ## Qué contiene esta carpeta
 
-- [`L-003`](artefacto/index.html) · El repujado de Contenida, en línea: la mesa · versión vigente.
-- `L-004` · El repujado de Contenida, duplicado publicado por error · no se copia (duplicado exacto): duplicado exacto de L-003.
+- [`L-004`](artefacto/index.html) · El repujado de Contenida, versión 2 en línea: la mesa · versión anterior.
+- `L-005` · El repujado de Contenida, duplicado publicado por error · no se copia (duplicado exacto): duplicado exacto de L-004.
 
 ## Lo que lo respalda
 
@@ -23,4 +23,4 @@ Las dos páginas descargadas (02.11.2026) son idénticas byte a byte; el resumen
 
 ## Lo que deduce el archivo
 
-«Versión vigente» en línea para AzCijUBf7Grujskuw7qPmE. El duplicado se registra, no se copia dos veces.
+«Versión anterior»: la reemplazó la versión 3 el 08.11.2026, con la celda de 0,90 en la gramática que lleva adentro. El duplicado se registra, no se copia dos veces.

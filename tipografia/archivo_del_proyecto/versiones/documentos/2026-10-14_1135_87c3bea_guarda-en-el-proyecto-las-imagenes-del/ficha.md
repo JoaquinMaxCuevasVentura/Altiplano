@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 2 en carpetas de versiones anteriores y 8 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `87c3bea`.
+En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 4 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `87c3bea`.
 
 ## Qué cambió respecto de la anterior
 
@@ -34,7 +34,7 @@ El mensaje del commit `87c3bea`:
 > sus antecedentes (el fonógrafo, Worthington, Feuillet), y el informe suma
 > la sección 11.4 y las referencias.
 
-Y el README de la línea en ese commit: [H-0070](README.md).
+Y el README de la línea en ese commit: [H-0072](README.md).
 
 ## Lo que deduce el archivo
 

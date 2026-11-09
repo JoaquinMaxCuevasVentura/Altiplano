@@ -47,7 +47,7 @@ El mensaje del commit `0cdccf1`:
 >   de máquina, el surco se estampa cada 0,5 mm (sin estrías) y las muestras
 >   las repuja la mano simulada (repujado/pulso.js).
 
-Y el README de la línea en ese commit: [V-0577](../../../../repujado/README.md).
+Y el README de la línea en ese commit: [V-0581](../../../../repujado/README.md).
 
 ## Lo que deduce el archivo
 

@@ -6,13 +6,13 @@ No es una versión nueva del proyecto ni una selección: guarda también las pru
 
 ## Qué abarca
 
-- **Solo *Contenida*.** Es la carpeta `tipografia/` y sus 41 commits en la rama `claude/fervent-lovelace-exgqzl`, del 29.09 al 30.10.2026 (de `0cabb65` a `02dcb14`). El repositorio guarda también el artículo *Altiplano* (la raíz, `articulo/` y `analisis/`, con su propia rama): es otro proyecto y queda fuera. Por eso este archivo está dentro de `tipografia/` y no en la raíz.
-- **De git:** 562 versiones anteriores de archivos, copiadas tal cual, y los 617 archivos vigentes, registrados en su lugar.
+- **Solo *Contenida*.** Es la carpeta `tipografia/` y sus 43 commits en la rama `claude/fervent-lovelace-exgqzl`, del 29.09 al 08.11.2026 (de `0cabb65` a `a3036cf`). El repositorio guarda también el artículo *Altiplano* (la raíz, `articulo/` y `analisis/`, con su propia rama): es otro proyecto y queda fuera. Por eso este archivo está dentro de `tipografia/` y no en la raíz.
+- **De git:** 698 versiones anteriores de archivos, copiadas tal cual, y los 642 archivos vigentes, registrados en su lugar.
 - **De la conversación:** 138 piezas que no entraron en git como estaban: borradores, una propuesta descartada, pruebas y las imágenes de prueba que se vieron.
-- **En línea:** 5 registros de los artefactos del proyecto en claude.ai, con sus copias.
-- **Copias funcionales:** 273 dependencias copiadas al lado de las páginas y los SVG que las piden, para que abran.
-- **Lo que falta:** 34 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
-- **Peso de lo copiado:** 422 MB. Lo que viene de git no agranda el repositorio: git guarda una sola vez cada contenido.
+- **En línea:** 7 registros de los artefactos del proyecto en claude.ai, con sus copias.
+- **Copias funcionales:** 314 dependencias copiadas al lado de las páginas y los SVG que las piden, para que abran.
+- **Lo que falta:** 35 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
+- **Peso de lo copiado:** 523 MB. Lo que viene de git no agranda el repositorio: git guarda una sola vez cada contenido.
 
 ## Cómo está ordenado
 
@@ -39,18 +39,19 @@ archivo_del_proyecto/
 
 | Línea | Versiones | Lo vigente, en su lugar |
 |---|---|---|
-| [Los documentos](versiones/documentos/README.md) | 37 de git | [`tipografia/`](../) |
+| [Los documentos](versiones/documentos/README.md) | 39 de git | [`tipografia/`](../) |
 | [Los textos de partida](versiones/textos/README.md) | 1 de git | [`tipografia/textos/`](../textos/) |
-| [Los esquemas](versiones/esquemas/README.md) | 5 de git | [`tipografia/esquemas/`](../esquemas/) |
-| [La simulación del taller](versiones/simulacion/README.md) | 11 de git | [`tipografia/simulacion/`](../simulacion/) |
-| [Las láminas de exposición](versiones/laminas/README.md) | 7 de git | [`tipografia/laminas/`](../laminas/) |
-| [La aplicación de las decisiones de la letra](versiones/aplicacion/README.md) | 5 de git, 3 de la conversación, 2 en línea | [`tipografia/aplicacion/`](../aplicacion/) |
-| [El informe de decisiones](versiones/informe/README.md) | 12 de git, 1 de la conversación | [`tipografia/informe/`](../informe/) |
-| [La póliza en OpenType](versiones/digital/README.md) | 2 de git | [`tipografia/digital/`](../digital/) |
-| [Los planos de la anatomía base](versiones/planos/README.md) | 3 de git | [`tipografia/planos/`](../planos/) |
-| [La taxonomía de las referencias](versiones/taxonomia/README.md) | 3 de git | [`tipografia/taxonomia/`](../taxonomia/) |
-| [El ensayo del repujado](versiones/repujado/README.md) | 3 de git, 1 en línea | [`tipografia/repujado/`](../repujado/) |
-| [El libro de Contenida](versiones/editorial/README.md) | 2 de git, 3 de la conversación, 1 en línea | [`tipografia/editorial/`](../editorial/) |
+| [Los esquemas](versiones/esquemas/README.md) | 6 de git | [`tipografia/esquemas/`](../esquemas/) |
+| [La simulación del taller](versiones/simulacion/README.md) | 12 de git | [`tipografia/simulacion/`](../simulacion/) |
+| [Las láminas de exposición](versiones/laminas/README.md) | 8 de git | [`tipografia/laminas/`](../laminas/) |
+| [La aplicación de las decisiones de la letra](versiones/aplicacion/README.md) | 6 de git, 3 de la conversación, 3 en línea | [`tipografia/aplicacion/`](../aplicacion/) |
+| [El informe de decisiones](versiones/informe/README.md) | 13 de git, 1 de la conversación | [`tipografia/informe/`](../informe/) |
+| [La póliza en OpenType](versiones/digital/README.md) | 3 de git | [`tipografia/digital/`](../digital/) |
+| [Los planos de la anatomía base](versiones/planos/README.md) | 4 de git | [`tipografia/planos/`](../planos/) |
+| [La taxonomía de las referencias](versiones/taxonomia/README.md) | 4 de git | [`tipografia/taxonomia/`](../taxonomia/) |
+| [El ensayo del repujado](versiones/repujado/README.md) | 3 de git, 2 en línea | [`tipografia/repujado/`](../repujado/) |
+| [El libro de Contenida](versiones/editorial/README.md) | 3 de git, 3 de la conversación, 1 en línea | [`tipografia/editorial/`](../editorial/) |
+| [El espécimen](versiones/especimen/README.md) | 1 de git | [`tipografia/especimen/`](../especimen/) |
 
 ## Cómo se lee
 
@@ -105,7 +106,7 @@ Las fichas separan lo que respalda cada versión (el mensaje del commit, un mens
 
 ## La versión vigente
 
-Está en su lugar, en [`tipografia/`](../), y no se copia. El inventario la registra con su número `V-`, su hash y el commit en que entró cada archivo. En línea, lo vigente son los artefactos «Gramática de Contenida» (versión 5) y «El repujado de Contenida», copiados en sus líneas.
+Está en su lugar, en [`tipografia/`](../), y no se copia. El inventario la registra con su número `V-`, su hash y el commit en que entró cada archivo. En línea, lo vigente son los artefactos «Gramática de Contenida» (versión 6) y «El repujado de Contenida» (versión 3), copiados en sus líneas.
 
 ## Cómo recuperar una versión
 

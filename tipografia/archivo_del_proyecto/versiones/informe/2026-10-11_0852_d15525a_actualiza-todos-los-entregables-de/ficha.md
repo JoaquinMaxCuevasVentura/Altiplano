@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 22 archivos: 5 están en esta carpeta, 14 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
+En este commit, la línea tenía 22 archivos: 5 están en esta carpeta, 15 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
 
 ## Qué cambió respecto de la anterior
 
@@ -42,7 +42,7 @@ El mensaje del commit `d15525a`:
 >   con HarfBuzz sigue sin repetir placas en los 42 versos.
 > - README de la raíz, de tipografia y del informe, al día.
 
-Y el README de la línea en ese commit: [H-0478](informe/README.md).
+Y el README de la línea en ese commit: [H-0548](informe/README.md).
 
 ## Lo que deduce el archivo
 

@@ -11,11 +11,12 @@
 
 ## Qué contiene esta carpeta
 
-- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `editorial/armar.py`, `editorial/contenida_libro.pdf`, `editorial/contenida_libro_imprenta.pdf`.
+- **18 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `editorial/README.md`, `editorial/armar.py`, `editorial/contenida_cubierta_imprenta.pdf`, `editorial/contenida_libro.pdf`, `editorial/contenida_libro_imprenta.pdf`, `editorial/cubierta.py`, `editorial/estilo.css`, `editorial/imagenes.md`, `editorial/libro.py`, `editorial/muestras/01_tapa.jpg`, `editorial/muestras/02_el_pie.jpg`, `editorial/muestras/03_el_sistema.jpg`, `editorial/muestras/04_la_caja.jpg`, `editorial/muestras/05_la_ficha.jpg` y 4 más.
+- **Referencias que no existían en ese commit:** `fuentes/newsreader-latin-300-normal.woff2` en `editorial/estilo.css`, `fuentes/newsreader-latin-300-italic.woff2` en `editorial/estilo.css`, `fuentes/newsreader-latin-400-normal.woff2` en `editorial/estilo.css`, `fuentes/newsreader-latin-400-italic.woff2` en `editorial/estilo.css`, `fuentes/newsreader-latin-500-normal.woff2` en `editorial/estilo.css`, `fuentes/courier-prime-latin-400-normal.woff2` en `editorial/estilo.css`, `fuentes/courier-prime-latin-400-italic.woff2` en `editorial/estilo.css`, `fuentes/courier-prime-latin-700-normal.woff2` en `editorial/estilo.css`.
 
 ## La versión completa
 
-En este commit, la línea tenía 29 archivos: 3 están en esta carpeta, 0 en carpetas de versiones anteriores y 26 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `a7b4bb4`.
+En este commit, la línea tenía 29 archivos: 18 están en esta carpeta, 0 en carpetas de versiones anteriores y 11 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `a7b4bb4`.
 
 ## Qué cambió respecto de la anterior
 
@@ -49,7 +50,7 @@ El mensaje del commit `a7b4bb4`:
 >
 > Declara la asistencia de IA en el colofón y en 06, §6.3.
 
-Y el README de la línea en ese commit: [V-0590](../../../../editorial/README.md).
+Y el README de la línea en ese commit: [H-0679](editorial/README.md).
 
 ## Lo que deduce el archivo
 

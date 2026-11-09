@@ -5,17 +5,18 @@
 | Línea | [El informe de decisiones](../README.md) |
 | Origen | commit `02dcb14` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-10-30 03:19 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/informe/`](../../../../informe/) |
 | La versión anterior | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](../2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) |
+| La versión siguiente | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](../2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`.
 
 ## La versión completa
 
-En este commit, la línea tenía 23 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 23 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
+En este commit, la línea tenía 23 archivos: 3 están en esta carpeta, 9 en carpetas de versiones anteriores y 11 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
 
 ## Qué cambió respecto de la anterior
 
@@ -55,4 +56,4 @@ El mensaje del commit `02dcb14`:
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

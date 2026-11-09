@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **18 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/README.md`, `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`, `informe/mapas.py`, `informe/mapas/mapa_1_el_proyecto_entero.png`, `informe/mapas/mapa_1_el_proyecto_entero.svg`, `informe/mapas/mapa_2_teoria_y_fuentes.png`, `informe/mapas/mapa_2_teoria_y_fuentes.svg`, `informe/mapas/mapa_3_la_obra_decision_por_decision.png`, `informe/mapas/mapa_3_la_obra_decision_por_decision.svg`, `informe/mapas/mapa_4_del_pie_a_los_55.png`, `informe/mapas/mapa_4_del_pie_a_los_55.svg`, `informe/mapas/mapa_5_la_cadena_de_estados.png` y 4 más.
+- **19 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/README.md`, `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`, `informe/mano.py`, `informe/mapas.py`, `informe/mapas/mapa_1_el_proyecto_entero.png`, `informe/mapas/mapa_1_el_proyecto_entero.svg`, `informe/mapas/mapa_2_teoria_y_fuentes.png`, `informe/mapas/mapa_2_teoria_y_fuentes.svg`, `informe/mapas/mapa_3_la_obra_decision_por_decision.png`, `informe/mapas/mapa_3_la_obra_decision_por_decision.svg`, `informe/mapas/mapa_4_del_pie_a_los_55.png`, `informe/mapas/mapa_4_del_pie_a_los_55.svg` y 5 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 22 archivos: 18 están en esta carpeta, 1 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
+En este commit, la línea tenía 22 archivos: 19 están en esta carpeta, 1 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
 
 ## Qué cambió respecto de la anterior
 
@@ -48,7 +48,7 @@ El mensaje del commit `f14f273`:
 > Mojada, Tocada, Dicha). El informe suma la sección 6.3 y reescribe cómo
 > leer los mapas, sus pies y el colofón.
 
-Y el README de la línea en ese commit: [H-0453](informe/README.md).
+Y el README de la línea en ese commit: [H-0522](informe/README.md).
 
 ## Lo que deduce el archivo
 

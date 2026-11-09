@@ -5,17 +5,18 @@
 | Línea | [La taxonomía de las referencias](../README.md) |
 | Origen | commit `976fbf0` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-10-18 02:41 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/taxonomia/`](../../../../taxonomia/) |
 | La versión anterior | [2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09](../2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09/ficha.md) |
+| La versión siguiente | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](../2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `taxonomia/contenida_taxonomia.pdf`, `taxonomia/generar_taxonomia.py`.
 
 ## La versión completa
 
-En este commit, la línea tenía 26 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 26 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `976fbf0`.
+En este commit, la línea tenía 26 archivos: 2 están en esta carpeta, 2 en carpetas de versiones anteriores y 22 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `976fbf0`.
 
 ## Qué cambió respecto de la anterior
 
@@ -41,8 +42,8 @@ El mensaje del commit `976fbf0`:
 > - Hoefnagel suma el Getty como archivo, en su ficha y en 10.
 > - imagenes/ sigue fuera del repositorio (06, §6.4).
 
-Y el README de la línea en ese commit: [V-0568](../../../../taxonomia/README.md).
+Y el README de la línea en ese commit: [V-0570](../../../../taxonomia/README.md).
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

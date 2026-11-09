@@ -2,8 +2,8 @@
 
 Las láminas 4:3: sus fuentes HTML, las imágenes, las exportaciones en PNG y el PDF.
 
-- **Lo vigente:** [`tipografia/laminas/`](../../../laminas/), el estado de la rama en `02dcb14`. No se copia aquí.
-- **Versiones:** 7 de git.
+- **Lo vigente:** [`tipografia/laminas/`](../../../laminas/), el estado de la rama en `a3036cf`. No se copia aquí.
+- **Versiones:** 8 de git.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -14,4 +14,5 @@ Las láminas 4:3: sus fuentes HTML, las imágenes, las exportaciones en PNG y el
 | 2026-09-30 23:44 | commit `f14f273` | [2026-09-30_2344_f14f273_rehace-los-mapas-del-informe-a-mano-y](2026-09-30_2344_f14f273_rehace-los-mapas-del-informe-a-mano-y/ficha.md) | versión anterior | Rehace los mapas del informe a mano y propone nombres para la familia |
 | 2026-10-11 08:52 | commit `d15525a` | [2026-10-11_0852_d15525a_actualiza-todos-los-entregables-de](2026-10-11_0852_d15525a_actualiza-todos-los-entregables-de/ficha.md) | versión anterior | Actualiza todos los entregables de Contenida |
 | 2026-10-14 11:26 | commit `845851c` | [2026-10-14_1126_845851c_quita-are-na-del-proyecto-contenida](2026-10-14_1126_845851c_quita-are-na-del-proyecto-contenida/ficha.md) | versión anterior | Quita Are.na del proyecto Contenida |
-| 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión vigente | Da a la simulación y a la mesa del repujado el pulso de una mano |
+| 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión anterior | Da a la simulación y a la mesa del repujado el pulso de una mano |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |

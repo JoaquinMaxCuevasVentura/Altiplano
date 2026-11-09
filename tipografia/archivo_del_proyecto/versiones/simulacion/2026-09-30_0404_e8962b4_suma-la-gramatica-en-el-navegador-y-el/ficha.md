@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 374 archivos: 3 están en esta carpeta, 24 en carpetas de versiones anteriores y 347 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
+En este commit, la línea tenía 374 archivos: 3 están en esta carpeta, 29 en carpetas de versiones anteriores y 342 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
 
 ## Qué cambió respecto de la anterior
 

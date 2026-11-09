@@ -2,8 +2,8 @@
 
 El informe en Word y PDF, con seis mapas, y su generador.
 
-- **Lo vigente:** [`tipografia/informe/`](../../../informe/), el estado de la rama en `02dcb14`. No se copia aquí.
-- **Versiones:** 12 de git, 1 de la conversación.
+- **Lo vigente:** [`tipografia/informe/`](../../../informe/), el estado de la rama en `a3036cf`. No se copia aquí.
+- **Versiones:** 13 de git, 1 de la conversación.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -20,4 +20,5 @@ El informe en Word y PDF, con seis mapas, y su generador.
 | 2026-10-17 22:31 | commit `bbe9362` | [2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de](2026-10-17_2231_bbe9362_suma-la-taxonomia-de-las-referencias-de/ficha.md) | versión anterior | Suma la taxonomía de las referencias de dominio público |
 | 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión anterior | Da a la simulación y a la mesa del repujado el pulso de una mano |
 | 2026-10-30 03:13 | conversación | [2026-10-30_0313_conversacion_comprobaciones-del-informe](2026-10-30_0313_conversacion_comprobaciones-del-informe/ficha.md) | prueba o experimento | Las páginas 28 y 29 del informe rehecho, para comprobar el §8.4 y su figura. |
-| 2026-10-30 03:19 | commit `02dcb14` | [2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los](2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los/ficha.md) | versión vigente | Mueve las decisiones de la letra en los planos de detalle |
+| 2026-10-30 03:19 | commit `02dcb14` | [2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los](2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los/ficha.md) | versión anterior | Mueve las decisiones de la letra en los planos de detalle |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |

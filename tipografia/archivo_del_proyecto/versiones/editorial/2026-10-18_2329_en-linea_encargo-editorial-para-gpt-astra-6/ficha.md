@@ -14,7 +14,7 @@ El encargo editorial publicado como artefacto: el prompt para que GPT Astra 6 le
 
 ## Qué contiene esta carpeta
 
-- [`L-005`](artefacto/index.html) · Encargo editorial de Contenida: el prompt para GPT Astra 6 · alternativa.
+- [`L-007`](artefacto/index.html) · Encargo editorial de Contenida: el prompt para GPT Astra 6 · alternativa.
 
 ## Lo que lo respalda
 

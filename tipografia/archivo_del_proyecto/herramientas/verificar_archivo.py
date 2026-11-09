@@ -20,9 +20,9 @@ import sys
 from pathlib import Path
 
 ARCHIVO = "tipografia/archivo_del_proyecto"
-ANTES = "02dcb14"             # el último commit del proyecto antes del archivo: fuera del archivo, nada cambia respecto de él
+ANTES = "a3036cf"             # el último commit del proyecto antes del archivo: fuera del archivo, nada cambia respecto de él
 COPIAS = ("copia exacta", "copia funcional (dependencia)", "copia de la conversación", "copia reducida (de la conversación)",
-          "copia de la versión en línea")
+          "copia de la versión en línea", "copia de la fuente publicada")
 DOCUMENTOS = re.compile(r"^(README\.md|inventario\.csv|pendientes\.md|linea_de_tiempo\.md|verificacion\.md|herramientas/[^/]+\.py|"
                         r"recursos_compartidos/README\.md|versiones/README\.md|versiones/[^/]+/README\.md|versiones/[^/]+/[^/]+/ficha\.md)$")
 CORREO = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}")      # ninguna dirección en lo que escribe el archivo
@@ -99,8 +99,11 @@ def main():
             sin.append(f["id"])
         elif m.group(1) != f["sha256"]:
             malas.append(f["id"])
+    fuentes = [f["id"] for f in filas if f["copia"] == "copia de la fuente publicada"]
     r.append(("Lo que está en línea es lo que sirvió claude.ai", not malas,
-              f"{len(en_linea) - len(sin)} de {len(en_linea)} con el SHA-256 informado al descargarlas" + (f"; la página v4 sale del registro de la conversación ({', '.join(sin)})" if sin else "") + (f"; fallan: {malas}" if malas else "")))
+              f"{len(en_linea) - len(sin)} de {len(en_linea)} con el SHA-256 informado al descargarlas" + (f"; la página v4 sale del registro de la conversación ({', '.join(sin)})" if sin else "")
+              + (f"; de las últimas publicaciones se guarda la fuente que se publicó, sin el envoltorio de la plataforma ({', '.join(fuentes)})" if fuentes else "")
+              + (f"; fallan: {malas}" if malas else "")))
 
     # lo que viene de la conversación
     conv = [f for f in filas if f["copia"] == "copia reducida (de la conversación)"

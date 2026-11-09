@@ -1,0 +1,153 @@
+<title>Gramática de Contenida</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script>document.documentElement.lang = "es";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Las decisiones de la letra, en los planos de la anatomía. Cada decisión se mueve en su propio dibujo de detalle,
+   con las convenciones de los planos (tipografia/planos/): niveles, cortes, cotas, ejes y la gravedad en lugar del
+   norte. En tinta y continuo, la obra; en violeta y a puntos, lo que se aparta de ella. */
+
+:root {
+  --papel: #f6f4ee;
+  --tinta: #1d1c1a;
+  --violeta: #4a2470;
+  --gris: #6d6a63;
+  --gris-2: #9a968d;
+  --filete: #cfcac0;
+  --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--papel); color: var(--tinta); }
+body {
+  margin: 0; padding-block: 0 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  font-family: var(--serif); font-size: 17px; line-height: 1.45; font-weight: 300;
+}
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--violeta); outline-offset: 2px; }
+.mono { font-family: var(--mono); }
+.rotulo { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+
+header.cabeza { max-width: 1480px; margin: 0 auto; padding: 26px 0 16px; border-bottom: 1px solid var(--tinta); }
+.volanta { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; color: var(--gris); }
+h1 { font-weight: 300; font-size: clamp(32px, 4.6vw, 54px); line-height: 1.02; margin: 0; letter-spacing: -.01em; }
+.bajada { font-style: italic; font-weight: 400; color: var(--gris); margin: 10px 0 0; max-width: 78ch; }
+.convencion { font-family: var(--mono); font-size: 13px; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--gris); }
+.convencion i { font-style: normal; display: inline-block; width: 34px; height: 0; vertical-align: 4px; margin-right: 6px; }
+.convencion .obra i { border-top: 2px solid var(--tinta); }
+.convencion .tuya i { border-top: 3px dotted var(--violeta); }
+
+/* ------------------------------------------------------------------ la mesa */
+.mesa { max-width: 1480px; margin: 0 auto; padding-top: 18px; display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 26px; align-items: start; }
+@media (max-width: 1050px) { .mesa { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 1051px) { .plano-col { position: sticky; top: calc(10px + env(safe-area-inset-top, 0px)); } }
+
+.plano-cabeza { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; margin-bottom: 6px; }
+.plano-cabeza .signo { font-size: 44px; line-height: 1; font-weight: 400; }
+.plano-cabeza .estado { font-family: var(--mono); font-size: 13px; }
+.plano-cabeza .estado.r { color: var(--violeta); }
+.plano-cabeza .receta { font-style: italic; color: var(--gris); flex-basis: 100%; margin: 0; font-size: 15px; }
+#plano { width: 100%; height: auto; display: block; background: var(--papel); border: 1px solid var(--filete); }
+.medidas { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 6px 14px; margin: 10px 0 0; padding: 0; list-style: none; font-family: var(--mono); font-size: 13px; }
+.medidas li span { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--gris); }
+.acciones { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.boton { font-family: var(--mono); font-size: 13px; padding: 6px 10px; border: 1px solid var(--tinta); background: var(--papel); cursor: pointer; }
+.boton:hover { background: var(--tinta); color: var(--papel); }
+.nota { font-family: var(--mono); font-size: 12px; color: var(--gris); margin: 8px 0 0; min-height: 1.4em; }
+.salida { margin-top: 8px; display: grid; gap: 6px; }
+.salida p { margin: 0; font-size: 14px; }
+.salida textarea { width: 100%; min-height: 140px; font-family: var(--mono); font-size: 12px; border: 1px solid var(--filete); background: var(--papel); color: var(--tinta); padding: 8px; resize: vertical; }
+
+/* ------------------------------------------------------------------ los planos de detalle */
+.detalles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 720px) { .detalles { grid-template-columns: minmax(0, 1fr); } }
+.detalle { border: 1px solid var(--filete); background: var(--papel); padding: 10px 12px 12px; display: flex; flex-direction: column; }
+.detalle.ajustado { border-color: var(--violeta); }
+.detalle .titulo { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.detalle .rombo { font-family: var(--mono); font-size: 11px; color: var(--violeta); border: 1px solid var(--violeta); padding: 0 4px; white-space: nowrap; }
+.detalle h2 { font-weight: 400; font-size: 21px; line-height: 1.15; margin: 0; }
+.detalle .origen { font-family: var(--mono); font-size: 12px; color: var(--gris); margin-left: auto; }
+.detalle svg.dibujo { width: 100%; height: auto; display: block; margin: 6px 0 4px; touch-action: none; user-select: none; -webkit-user-select: none; }
+.asa { cursor: grab; }
+.asa:active { cursor: grabbing; }
+.asa .golpe { fill: transparent; stroke: none; }
+.asa:focus { outline: none; }
+.asa:focus-visible .golpe { stroke: var(--violeta); stroke-width: 2; stroke-dasharray: 3 3; }
+.decision { border-top: 1px dashed var(--filete); padding-top: 6px; margin-top: 6px; }
+.decision .linea { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.decision .nombre { font-weight: 500; font-size: 15px; }
+.decision .valor { font-family: var(--mono); font-size: 13px; margin-left: auto; white-space: nowrap; }
+.decision.ajustada .valor { color: var(--violeta); }
+.decision .volver { font-family: var(--mono); font-size: 12px; border: 0; background: none; color: var(--violeta); padding: 0; cursor: pointer; text-decoration: underline; }
+.decision .por-que { font-size: 14px; line-height: 1.38; margin: 3px 0 0; }
+.decision .verso { font-style: italic; font-weight: 400; font-size: 14px; margin: 3px 0 0; color: var(--gris); }
+.decision .aviso { font-family: var(--mono); font-size: 12px; color: var(--violeta); margin: 4px 0 0; }
+.fijas { border: 1px dashed var(--filete); padding: 10px 12px; }
+.fijas h2 { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; font-weight: 400; }
+.fijas dl { margin: 0; font-size: 14px; line-height: 1.35; }
+.fijas dt { font-family: var(--mono); font-size: 12px; margin-top: 7px; }
+.fijas dd { margin: 0; }
+
+/* ------------------------------------------------------------------ la caja */
+.caja { max-width: 1480px; margin: 22px auto 0; }
+.caja h2 { margin: 8px 0 6px; }
+#caja { width: 100%; height: auto; display: block; border: 1px solid var(--filete); transition: opacity .2s; }
+#caja .celda { cursor: pointer; }
+#caja .celda:hover rect.fondo { fill: #ebe7dc; }
+footer { max-width: 1480px; margin: 18px auto 0; font-size: 14px; color: var(--gris); }
+footer p { margin: 4px 0; max-width: 96ch; }
+.solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+<header class="cabeza">
+  <p class="volanta">Contenida · la anatomía base</p>
+  <h1>Las decisiones de la letra</h1>
+  <p class="bajada">Cada decisión se mueve en su propio dibujo, como en los planos: el nivel del borde sube y baja, el canal se ensancha, la cuenca se abre y se abomba, el asta se quiebra, el hombro se tensa, la gota se tira hacia abajo y la esquina se gasta. Al soltar, los 55 signos se rehacen. Es la propuesta de la máquina: la letra de la caja la calca la mano, desde el pie.</p>
+  <p class="convencion"><span class="obra"><i></i>la obra: lo que dicen el pie y la obra</span><span class="tuya"><i></i>lo que se aparta de la obra, como lo reconstruido</span></p>
+</header>
+
+<main class="mesa">
+  <section class="plano-col" aria-labelledby="p-signo">
+    <div class="plano-cabeza">
+      <span class="signo" id="p-signo">o</span>
+      <span class="estado mono" id="p-estado"></span>
+      <p class="receta" id="p-receta"></p>
+    </div>
+    <svg id="plano" viewBox="-110 -30 830 700" role="img" aria-label="Plano del signo en su celda"></svg>
+    <ul class="medidas" id="p-medidas"></ul>
+    <div class="acciones">
+      <button class="boton" id="a-obra" type="button">Todo como la obra</button>
+      <button class="boton" id="a-json" type="button">parametros.json</button>
+      <button class="boton" id="a-svg" type="button">El plano en SVG</button>
+    </div>
+    <p class="nota" id="nota" role="status"></p>
+    <div class="salida" id="salida" hidden>
+      <p>Aquí no se puede descargar: copia el texto y guárdalo con ese nombre.</p>
+      <textarea id="salida-texto" readonly spellcheck="false" aria-label="El archivo, como texto"></textarea>
+    </div>
+  </section>
+
+  <section aria-label="Los planos de detalle: cada decisión en su dibujo">
+    <div class="detalles" id="detalles"></div>
+  </section>
+</main>
+
+<section class="caja" aria-labelledby="t-caja">
+  <h2 class="rotulo" id="t-caja">La caja · 8 × 7 · elige un signo</h2>
+  <svg id="caja" viewBox="0 0 1224 1071" role="img" aria-label="La caja de 56 celdas"></svg>
+</section>
+<p class="solo-lectores" id="anuncio" aria-live="polite"></p>
+
+<footer>
+  <p>Con <span class="mono">parametros.json</span>, la simulación en Python se rehace con estos ajustes: <span class="mono">python3 tipografia/simulacion/gramatica.py --parametros parametros.json</span>.</p>
+  <p>No es una fuente variable: las decisiones se discuten aquí y se llevan a la simulación; no se interpolan pesos ni hay un Regular. El ¶ no se dibuja: se hace con los dedos. Hecho con asistencia de IA.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/clipper-lib@6.4.2/clipper.js"></script>
+<script src="datos.js"></script>
+<script src="gramatica.js"></script>
+<script src="app.js"></script>

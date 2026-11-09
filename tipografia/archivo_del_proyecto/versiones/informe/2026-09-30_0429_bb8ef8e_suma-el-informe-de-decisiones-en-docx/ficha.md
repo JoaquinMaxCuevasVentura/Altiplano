@@ -42,7 +42,7 @@ El mensaje del commit `bb8ef8e`:
 > informe.js arma el .docx con docx (npm) e incrusta Newsreader y Courier Prime
 > (SIL OFL); armar.py lo pasa a PDF, pagina el índice y lo vuelve a armar.
 
-Y el README de la línea en ese commit: [H-0434](informe/README.md).
+Y el README de la línea en ese commit: [H-0503](informe/README.md).
 
 ## Lo que deduce el archivo
 

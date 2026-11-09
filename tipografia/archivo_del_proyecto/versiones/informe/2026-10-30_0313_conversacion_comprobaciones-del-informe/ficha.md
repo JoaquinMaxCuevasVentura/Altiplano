@@ -14,7 +14,7 @@ Las páginas 28 y 29 del informe rehecho, para comprobar el §8.4 y su figura.
 
 ## Qué contiene esta carpeta
 
-- `C-068` · Captura de prueba: figura_informe.png · no se copia (duplicado exacto): duplicado exacto de V-0514.
+- `C-068` · Captura de prueba: figura_informe.png · no se copia (duplicado exacto): duplicado exacto de V-0504.
 - [`C-069`](capturas_finales/hoja_informe.png) · Captura de prueba: hoja_informe.png · prueba o experimento.
 - [`C-071`](capturas_finales/informe_84.png) · Captura de prueba: informe_84.png · prueba o experimento.
 - [`C-072`](capturas_finales/informe_84b.png) · Captura de prueba: informe_84b.png · prueba o experimento.

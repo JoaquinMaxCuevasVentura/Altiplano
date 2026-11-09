@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **23 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `simulacion/comun.py`, `simulacion/contener.py`, `simulacion/desenterrar.py`, `simulacion/devolver.py`, `simulacion/informe.md`, `simulacion/salida/03_calco.png`, `simulacion/salida/03c_anatomia.png`, `simulacion/salida/03d_antes_y_despues.png`, `simulacion/salida/04_placa.jpg`, `simulacion/salida/04_placa_reverso.jpg`, `simulacion/salida/04b_placas_rotas.jpg`, `simulacion/salida/07_cinta.jpg`, `simulacion/salida/09_agua_quieta.jpg`, `simulacion/salida/09b_agua_tocada.jpg` y 9 más.
-- **4 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `simulacion/salida/01_frotado_de_la_pared.jpg`, `simulacion/salida/02_el_pie.jpg`, `simulacion/salida/03b_notdef.png`, `simulacion/salida/21_gramatica_caja.png`.
+- **28 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `simulacion/comun.py`, `simulacion/contener.py`, `simulacion/desenterrar.py`, `simulacion/devolver.py`, `simulacion/informe.md`, `simulacion/salida/03_calco.png`, `simulacion/salida/03c_anatomia.png`, `simulacion/salida/03d_antes_y_despues.png`, `simulacion/salida/04_placa.jpg`, `simulacion/salida/04_placa_reverso.jpg`, `simulacion/salida/04b_placas_rotas.jpg`, `simulacion/salida/07_cinta.jpg`, `simulacion/salida/09_agua_quieta.jpg`, `simulacion/salida/09b_agua_tocada.jpg` y 14 más.
+- **3 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `simulacion/salida/01_frotado_de_la_pared.jpg`, `simulacion/salida/02_el_pie.jpg`, `simulacion/salida/03b_notdef.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 372 archivos: 23 están en esta carpeta, 3 en carpetas de versiones anteriores y 346 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbeb653`.
+En este commit, la línea tenía 372 archivos: 28 están en esta carpeta, 3 en carpetas de versiones anteriores y 341 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbeb653`.
 
 ## Qué cambió respecto de la anterior
 

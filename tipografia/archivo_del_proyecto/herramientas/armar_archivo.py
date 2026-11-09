@@ -6,7 +6,8 @@ ruta original debajo de tipografia/ y las dependencias que necesita para abrirse
 la conversación (escrituras, vistas de prueba, pruebas) y en línea (los artefactos de claude.ai). Escribe el
 inventario, las fichas, la línea de tiempo, los pendientes y la guía. Los originales no se tocan.
 
-Se corrió una vez, en la sesión donde se hizo el proyecto, desde la raíz del repositorio y en su rama:
+Se corrió en la sesión donde se hizo el proyecto (el 02.11.2026 y, con la celda corregida, el 09.11.2026), desde la raíz
+del repositorio y en su rama:
     python3 armar_archivo.py --conversacion REGISTRO.jsonl --scratch CARPETA --artefactos CARPETA
 La parte de git se puede rehacer en cualquier copia del repositorio; la de la conversación necesita su registro,
 que no está en el repositorio. Para comprobar el archivo ya armado: verificar_archivo.py.
@@ -45,10 +46,11 @@ LINEAS = {   # el orden es el del índice
     "aplicacion": ("La aplicación de las decisiones de la letra", "La gramática en el navegador: de la aplicación de cuatro vistas a la de los planos de detalle."),
     "informe": ("El informe de decisiones", "El informe en Word y PDF, con seis mapas, y su generador."),
     "digital": ("La póliza en OpenType", "Lo digital: el generador de la póliza."),
-    "planos": ("Los planos de la anatomía base", "Once planos A3 con cotas, niveles, cortes y detalles, en SVG, PNG, DXF y PDF."),
+    "planos": ("Los planos de la anatomía base", "Doce planos A3 con cotas, niveles, cortes y detalles, en SVG, PNG, DXF y PDF; el último, P-11, muestra cómo se midieron las proporciones."),
     "taxonomia": ("La taxonomía de las referencias", "Las láminas de la taxonomía y el atlas de imágenes de dominio público."),
     "repujado": ("El ensayo del repujado", "La mesa del repujado: la placa de aluminio, el punzón y la mano simulada."),
     "editorial": ("El libro de Contenida", "El documento editorial único, compuesto con Vivliostyle: el libro para pantalla e imprenta y la cubierta."),
+    "especimen": ("El espécimen", "El espécimen de la letra, compuesto en Typst: la caja, lo hallado, los estados, las decisiones y la póliza, sin componer texto con la letra."),
 }
 
 ESTADOS = ("versión anterior", "alternativa", "prueba o experimento", "versión vigente", "entregable aprobado",
@@ -83,6 +85,7 @@ GENERADORES = [   # (patrón de la ruta, generador); «deducido» cuando no lo d
     (r"^tipografia/repujado/muestras/", "la mesa de tipografia/repujado/ (repujado.js y pulso.js) (deducido)"),
     (r"^tipografia/editorial/imagenes/placa_", "tipografia/editorial/placas_de_cerca.py"),
     (r"^tipografia/editorial/(contenida_.+\.pdf|imagenes\.md|muestras/)", "tipografia/editorial/armar.py (con libro.py, planas.py, cubierta.py y estilo.css)"),
+    (r"^tipografia/especimen/(contenida_especimen\.pdf|paginas/)", "tipografia/especimen/armar.py (Typst, con especimen.typ)"),
 ]
 
 COLUMNAS = ["id", "nombre", "descripcion", "categoria", "linea", "version_o_etapa", "estado", "formato", "copia",
@@ -286,6 +289,8 @@ def descripcion(ruta, datos):
                  "contenida_cubierta_imprenta.pdf": "La cubierta, para la imprenta"}.get(base, f"Libro: {base}")
         elif "/repujado/muestras/" in ruta:
             t = f"Muestra de la mesa del repujado: {base}"
+        elif "/especimen/" in ruta:
+            t = {"contenida_especimen.pdf": "El espécimen de Contenida"}.get(base, f"Espécimen, página {base}")
         else:
             t = base
     t = re.sub(r"\s*\(?[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}\)?", "", t)    # sin direcciones de correo
@@ -706,9 +711,9 @@ class Archivo:
                        estado="versión anterior", copia="copia de la versión en línea", fecha=fecha_v4, que_fecha=QUE_FECHA["en_linea"],
                        observaciones="Recuperada del registro de la conversación (lectura del 30.10.2026, 03:19 UTC); mide lo mismo que el archivo publicado (9319 bytes).",
                        id_prefijo="L")
-            cabeza = arbol(self.cabeza["h"])
-            for nombre, fuente, nota in (("datos.js", ("tipografia/aplicacion/datos.js", cabeza), "Igual al de la versión 4: se comparó el 30.10.2026."),
-                                         ("gramatica.js", ("tipografia/aplicacion/gramatica.js", cabeza), "Igual al de la versión 4: se comparó el 30.10.2026."),
+            entonces = arbol(git("rev-parse", "02dcb14").strip())       # el repositorio con que se comparó, el 30.10.2026
+            for nombre, fuente, nota in (("datos.js", ("tipografia/aplicacion/datos.js", entonces), "Igual al de la versión 4: se comparó el 30.10.2026."),
+                                         ("gramatica.js", ("tipografia/aplicacion/gramatica.js", entonces), "Igual al de la versión 4: se comparó el 30.10.2026."),
                                          ("app.js", ("tipografia/aplicacion/app.js", arbol(git("rev-parse", "1eaf342").strip())), "Probable: el app.js de la versión 4 mide 21 438 bytes, como este; no se comparó su contenido.")):
                 b = fuente[1][fuente[0]]
                 self.dependencia_extra(v, contenido(b), f"artefacto/{nombre}", fuente[0], b, nota)
@@ -752,34 +757,49 @@ class Archivo:
         # 7 · las pruebas de la aplicación, del informe y del libro (30.10.2026)
         self.pruebas_del_30(scratch, imagenes)
 
-        # 8 · la aplicación en línea, versión 5 (la vigente)
+        # 8 · la aplicación en línea: la versión 5 (30.10) y la 6 (08.11, la vigente)
         g5 = artefactos / "a3a5f96c-3d69-49bf-95d2-508738cb92f7"
         fecha_v5 = dt.datetime.fromtimestamp(1793330424, UTC)
-        v = self.version_extra("aplicacion", fecha_v5, "en-linea", "artefacto gramatica version 5", "versión vigente",
-                               "La página del artefacto «Gramática de Contenida» en su versión 5, la de los planos de detalle, como la sirve claude.ai. Al lado, los tres guiones que carga (iguales a los de tipografia/aplicacion/).",
-                               "La publicación registrada en la conversación (30.10.2026, 03:20 UTC) y la descarga de la versión servida (02.11.2026); su app.js es igual al del repositorio.",
-                               "«Versión vigente» en línea: es la última publicada. No consta una aprobación.")
+        v = self.version_extra("aplicacion", fecha_v5, "en-linea", "artefacto gramatica version 5", "versión anterior",
+                               "La página del artefacto «Gramática de Contenida» en su versión 5, la de los planos de detalle, como la sirve claude.ai. Al lado, los tres guiones que carga (iguales a los de tipografia/aplicacion/ en 02dcb14).",
+                               "La publicación registrada en la conversación (30.10.2026, 03:20 UTC) y la descarga de la versión servida (02.11.2026); sus tres guiones son iguales a los del commit 02dcb14.",
+                               "«Versión anterior»: la reemplazó la versión 6 el 08.11.2026, con la celda de 0,90.")
         self.poner(v, (g5 / "index.html").read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL (versión 5)",
                    descripcion_="Gramática de Contenida, versión 5 en línea: la página", categoria_="aplicación (página en línea)",
-                   estado="versión vigente", copia="copia de la versión en línea", fecha=fecha_v5, que_fecha=QUE_FECHA["en_linea"],
+                   estado="versión anterior", copia="copia de la versión en línea", fecha=fecha_v5, que_fecha=QUE_FECHA["en_linea"],
                    observaciones="Página servida (versión 1793330424-c77f), con el envoltorio de la plataforma. Se armó desde tipografia/aplicacion/index.html: letras de Google Fonts y Clipper de jsDelivr.",
                    id_prefijo="L", fuente=g5 / "index.html")
+        publicada = arbol(git("rev-parse", "02dcb14").strip())
+        for nombre in ("datos.js", "gramatica.js", "app.js"):
+            r = "tipografia/aplicacion/" + nombre
+            self.dependencia_extra(v, contenido(publicada[r]), f"artefacto/{nombre}", r, publicada[r], "Igual al publicado en la versión 5.")
+        fecha_v6 = dt.datetime.fromtimestamp(1794179448, UTC)
+        v = self.version_extra("aplicacion", fecha_v6, "en-linea", "artefacto gramatica version 6", "versión vigente",
+                               "La versión 6 del artefacto «Gramática de Contenida»: la misma página, con el gramatica.js de la celda de 0,90.",
+                               "La publicación en la conversación (08.11.2026, versión 1794179448-6794): se cambió solo gramatica.js, que es el del commit 4f6c7c6.",
+                               "«Versión vigente» en línea: es la última publicada. No consta una aprobación.")
+        fuente_v6 = scratch / "artefacto" / "index.html"
+        self.poner(v, fuente_v6.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL (versión 6)",
+                   descripcion_="Gramática de Contenida, versión 6 en línea: la página", categoria_="aplicación (página en línea)",
+                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_v6, que_fecha=QUE_FECHA["en_linea"],
+                   observaciones="La fuente de la página tal como se publicó, sin el envoltorio que le agrega la plataforma; es la misma de la versión 5.",
+                   id_prefijo="L", fuente=fuente_v6)
         cabeza = arbol(self.cabeza["h"])
         for nombre in ("datos.js", "gramatica.js", "app.js"):
             r = "tipografia/aplicacion/" + nombre
-            self.dependencia_extra(v, contenido(cabeza[r]), f"artefacto/{nombre}", r, cabeza[r], "Igual al publicado en la versión 5.")
+            self.dependencia_extra(v, contenido(cabeza[r]), f"artefacto/{nombre}", r, cabeza[r], "Igual al publicado en la versión 6.")
 
-        # 9 · el repujado en línea (y su duplicado, publicado por error)
+        # 9 · el repujado en línea: la versión 2 (y su duplicado, publicado por error) y la 3, la vigente
         rep = artefactos / "50dedd80-74bd-4a12-a67f-012ea81e773d" / "index.html"
         dup = artefactos / "fb5c04c9-af76-48dd-bd7c-3216a11d35b5" / "index.html"
         fecha_r = dt.datetime.fromtimestamp(1792339544, UTC)
-        v = self.version_extra("repujado", fecha_r, "en-linea", "artefacto el repujado de contenida", "versión vigente",
+        v = self.version_extra("repujado", fecha_r, "en-linea", "artefacto el repujado de contenida", "versión anterior",
                                "La mesa del repujado como artefacto de una sola página, servida por claude.ai. Hay dos direcciones con la misma página: la buena y un duplicado publicado por error 23 segundos antes.",
                                "Las dos páginas descargadas (02.11.2026) son idénticas byte a byte; el resumen de la conversación anota: «Artifact published as a new URL by mistake: read and republished to AzCijUBf7Grujskuw7qPmE».",
-                               "«Versión vigente» en línea para AzCijUBf7Grujskuw7qPmE. El duplicado se registra, no se copia dos veces.")
+                               "«Versión anterior»: la reemplazó la versión 3 el 08.11.2026, con la celda de 0,90 en la gramática que lleva adentro. El duplicado se registra, no se copia dos veces.")
         f = self.poner(v, rep.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/AzCijUBf7Grujskuw7qPmE",
-                       descripcion_="El repujado de Contenida, en línea: la mesa", categoria_="aplicación (página en línea)",
-                       estado="versión vigente", copia="copia de la versión en línea", fecha=fecha_r, que_fecha=QUE_FECHA["en_linea"],
+                       descripcion_="El repujado de Contenida, versión 2 en línea: la mesa", categoria_="aplicación (página en línea)",
+                       estado="versión anterior", copia="copia de la versión en línea", fecha=fecha_r, que_fecha=QUE_FECHA["en_linea"],
                        observaciones="Página servida (versión 1792339544-dfa2), con el envoltorio de la plataforma. El repositorio guarda su fuente en tipografia/repujado/.",
                        id_prefijo="L", fuente=rep)
         datos_dup = dup.read_bytes()
@@ -789,9 +809,20 @@ class Archivo:
                       ruta_original="https://claude.ai/artifact/Y3FyvuU5q3hZjo9TW8qKor", ruta_archivada=f["ruta_archivada"],
                       fecha=fecha_txt(dt.datetime.fromtimestamp(1792339521, UTC)), que_representa_la_fecha=QUE_FECHA["en_linea"],
                       relacion=f"duplicado exacto de @{id(f)}", sha256=sha256(datos_dup), bytes=len(datos_dup), blob_git=blob_git(datos_dup),
-                      observaciones="Sigue publicado: borrarlo quedó pendiente de que se pida." + (f" SHA-256 informado por claude.ai al descargarla: {self.informados[str(dup)]}." if str(dup) in self.informados else ""))
+                      observaciones="Sigue publicado, con la versión 2 (la celda de 0,84): borrarlo quedó pendiente de que se pida." + (f" SHA-256 informado por claude.ai al descargarla: {self.informados[str(dup)]}." if str(dup) in self.informados else ""))
         g["_prefijo"], g["_dup"] = "L", f
         v["registrados"].append(g)
+        fecha_r3 = dt.datetime.fromtimestamp(1794179506, UTC)
+        v = self.version_extra("repujado", fecha_r3, "en-linea", "artefacto el repujado de contenida version 3", "versión vigente",
+                               "La mesa del repujado, versión 3: la misma página, con la celda de 0,90 en la gramática que lleva adentro.",
+                               "La publicación en la conversación (08.11.2026, versión 1794179506-8366): se reemplazó solo la función de la celda, como en tipografia/aplicacion/gramatica.js (4f6c7c6).",
+                               "«Versión vigente» en línea para AzCijUBf7Grujskuw7qPmE. El duplicado sigue con la versión 2.")
+        fuente_r3 = scratch / "repujado_artefacto" / "index.html"
+        self.poner(v, fuente_r3.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/AzCijUBf7Grujskuw7qPmE (versión 3)",
+                   descripcion_="El repujado de Contenida, versión 3 en línea: la mesa", categoria_="aplicación (página en línea)",
+                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_r3, que_fecha=QUE_FECHA["en_linea"],
+                   observaciones="La fuente de la página tal como se publicó, sin el envoltorio de la plataforma. El repositorio guarda su fuente en tipografia/repujado/.",
+                   id_prefijo="L", fuente=fuente_r3)
 
     def dependencia_extra(self, v, datos, rel, ruta_original, blob, nota):
         dest = self.copiar(datos, f"versiones/{v['linea']}/{v['carpeta']}/{rel}")
@@ -916,7 +947,7 @@ class Archivo:
              "No está en este contenedor. Quedan los commits, los documentos y el resumen con que sigue la conversación (19.10.2026), del que salen los pedidos sin fecha de la línea de tiempo."),
             ("Las versiones 1 a 3 del artefacto «Gramática de Contenida»", "aplicación (página en línea)", "aplicacion", "HTML",
              "https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL", "", "",
-             "No se pudieron leer: se archivan la versión 4 (del registro de la conversación) y la 5 (la vigente)."),
+             "No se pudieron leer: se archivan la versión 4 (del registro de la conversación), la 5 y la 6 (la vigente)."),
             ("La primera versión del artefacto «El repujado de Contenida»", "aplicación (página en línea)", "repujado", "HTML",
              "https://claude.ai/artifact/AzCijUBf7Grujskuw7qPmE", "", "",
              "El resumen de la conversación la nombra «v2»: la anterior no se pudo leer."),
@@ -1265,14 +1296,19 @@ class Archivo:
               "pero mezclan los dos proyectos: no se copian. Cada fila dice cómo recuperarlos con `git show`.",
               f"- **{len(dups)} duplicados exactos** de materiales que ya están archivados o vigentes: se anotan con el número del original. "
               + ", ".join(f"`{f['id']}` ({f['descripcion']})" for f in dups[:6]) + ("…" if len(dups) > 6 else "") + ".",
-              "- **La caché de Python que se subió por error** el 30.09 y se borró en `deb0435`: se anota, no se copia.", "",
+              "- **La caché de Python que se subió por error** el 30.09 y se borró en `deb0435`: se anota, no se copia.",
+              "- **La lámina enderezada y el pie aparte** (8.11.2026), las dos imágenes en que se volvieron a medir las proporciones: "
+              "no se suben, como la foto del pie (07, §3). Quedan sus medidas (`esquemas/celda_medida.json` y `razon_medida.json`) y "
+              "P-11A, la lámina con capturas, que se arma desde ellas con `planos/proporciones_sobre_la_lamina.py` y queda en `planos/privado/`, "
+              "fuera del repositorio.", "",
               "## Dudas que solo puedes resolver tú", "",
               "1. **«Contenedor» y «Vasijas».** Son dos artefactos de claude.ai del 27 y el 28 de septiembre, anteriores a esta conversación. "
               "Por su texto parecen el primer y el segundo intento de esta tipografía. ¿Son parte del proyecto? Si lo son, entran como antecedentes.",
               "2. **¿Hay algún entregable aprobado?** Ningún registro lo dice, así que nada figura como «entregable aprobado». Lo vigente es el estado actual de la rama.",
               "3. **¿Se usó el encargo para GPT Astra 6?** Figura como «alternativa» porque no consta.",
-              "4. **¿Se borra el duplicado del artefacto del repujado** (`Y3FyvuU5q3hZjo9TW8qKor`)? Sigue publicado.",
-              "5. **¿Cuándo se escribieron los textos de partida** (el poema, el pie de la lámina)? El archivo solo tiene la fecha del commit en que entraron.", "",
+              "4. **¿Se borra el duplicado del artefacto del repujado** (`Y3FyvuU5q3hZjo9TW8qKor`)? Sigue publicado, con la celda de 0,84.",
+              "5. **¿Cuándo se escribieron los textos de partida** (el poema, el pie de la lámina)? El archivo solo tiene la fecha del commit en que entraron.",
+              "6. **¿Mide 0,90 la retícula de la cabeza en el impreso?** La celda sale de la lámina enderezada (8.11.2026); falta medirla con regla.", "",
               "## Lo que el archivo deduce y conviene revisar", "",
               "- **El `app.js` de la versión 4 en línea** se toma del commit `1eaf342` porque mide lo mismo (21 438 bytes); no se comparó su contenido.",
               "- **Las fechas de las versiones en línea** salen de su identificador de versión, que es una marca de tiempo: con la versión 5 coincide con la publicación registrada (03:20 UTC del 30.10.2026).",
@@ -1419,8 +1455,8 @@ class Archivo:
               "que deduce el archivo, como el estado. Ninguna decisión se atribuye al autor sin un registro, y lo que es deducción se dice.", "",
               "## La versión vigente", "",
               f"Está en su lugar, en [`tipografia/`]({self.enlace(doc, 'tipografia')}/), y no se copia. El inventario la registra con su número "
-              "`V-`, su hash y el commit en que entró cada archivo. En línea, lo vigente son los artefactos «Gramática de Contenida» (versión 5) "
-              "y «El repujado de Contenida», copiados en sus líneas.", "",
+              "`V-`, su hash y el commit en que entró cada archivo. En línea, lo vigente son los artefactos «Gramática de Contenida» (versión 6) "
+              "y «El repujado de Contenida» (versión 3), copiados en sus líneas.", "",
               "## Cómo recuperar una versión", "",
               "- **Un archivo:** copia el de su carpeta de versión. Es idéntico al de git: tiene el mismo hash.",
               "- **Desde git, sin pasar por el archivo:** `git show <commit>:<ruta>`. Por ejemplo, "

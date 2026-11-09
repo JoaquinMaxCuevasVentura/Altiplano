@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 23 archivos: 3 están en esta carpeta, 3 en carpetas de versiones anteriores y 17 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbe9362`.
+En este commit, la línea tenía 23 archivos: 3 están en esta carpeta, 10 en carpetas de versiones anteriores y 10 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbe9362`.
 
 ## Qué cambió respecto de la anterior
 
@@ -39,7 +39,7 @@ El mensaje del commit `bbe9362`:
 > El documento 10 suma el §10.12; el informe, el §11.5 con dos láminas; y
 > la hoja de los planos acepta otra serie y otro pie en el cajetín.
 
-Y el README de la línea en ese commit: [V-0508](../../../../informe/README.md).
+Y el README de la línea en ese commit: [V-0502](../../../../informe/README.md).
 
 ## Lo que deduce el archivo
 

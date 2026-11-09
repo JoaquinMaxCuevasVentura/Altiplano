@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 3 en carpetas de versiones anteriores y 9 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
+En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 5 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
 
 ## Qué cambió respecto de la anterior
 
@@ -47,7 +47,7 @@ El mensaje del commit `0cdccf1`:
 >   de máquina, el surco se estampa cada 0,5 mm (sin estrías) y las muestras
 >   las repuja la mano simulada (repujado/pulso.js).
 
-Y el README de la línea en ese commit: [H-0089](README.md).
+Y el README de la línea en ese commit: [H-0091](README.md).
 
 ## Lo que deduce el archivo
 

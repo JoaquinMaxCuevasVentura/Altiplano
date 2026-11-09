@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`.
+- **5 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`, `informe/mapas/mapa_5_la_cadena_de_estados.png`, `informe/mapas/mapa_5_la_cadena_de_estados.svg`.
 
 ## La versión completa
 
-En este commit, la línea tenía 23 archivos: 3 están en esta carpeta, 1 en carpetas de versiones anteriores y 19 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
+En este commit, la línea tenía 23 archivos: 5 están en esta carpeta, 8 en carpetas de versiones anteriores y 10 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
 
 ## Qué cambió respecto de la anterior
 

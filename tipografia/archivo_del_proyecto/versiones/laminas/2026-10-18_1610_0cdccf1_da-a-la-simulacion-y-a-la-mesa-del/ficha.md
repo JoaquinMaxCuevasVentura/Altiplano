@@ -5,17 +5,19 @@
 | Línea | [Las láminas de exposición](../README.md) |
 | Origen | commit `0cdccf1` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-10-18 16:10 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/laminas/`](../../../../laminas/) |
 | La versión anterior | [2026-10-14_1126_845851c_quita-are-na-del-proyecto-contenida](../2026-10-14_1126_845851c_quita-are-na-del-proyecto-contenida/ficha.md) |
+| La versión siguiente | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](../2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **25 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/11_placa.html`, `laminas/html/13_frotado.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/todas.html`, `laminas/img/03_calco_reticula.jpg`, `laminas/img/03b_notdef.jpg`, `laminas/img/04_placa_reticula.jpg`, `laminas/img/04_placa_reverso_reticula.jpg`, `laminas/img/04b_placas_rotas.jpg`, `laminas/img/07_cinta_reticula.jpg`, `laminas/img/08_frotado_reticula.jpg`, `laminas/img/12_cadena_08.jpg` y 11 más.
+- **22 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 14 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 78 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 78 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
+En este commit, la línea tenía 78 archivos: 25 están en esta carpeta, 6 en carpetas de versiones anteriores y 47 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
 
 ## Qué cambió respecto de la anterior
 
@@ -47,4 +49,5 @@ El mensaje del commit `0cdccf1`:
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
+- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

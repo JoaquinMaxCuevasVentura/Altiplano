@@ -18,7 +18,7 @@ El primer borrador de la interfaz de los planos de detalle, antes de probarlo; l
 - [`C-005`](aplicacion/app.js) · Las decisiones de la letra, en los planos de la anatomía. · versión anterior.
 - [`C-053`](aplicacion/README.md) · Las decisiones de la letra · versión anterior.
 - [`C-015`](trabajo/dibujos.js) · Los siete dibujos reescritos, antes de empalmarlos en app.js · versión anterior.
-- Y 9 copias de dependencias, para que abra: `D-0147`, `D-0171`, `D-0183`, `D-0159`, `D-0116`, `D-0128`, `D-0257`, `D-0263`, `D-0251`.
+- Y 9 copias de dependencias, para que abra: `D-0167`, `D-0195`, `D-0209`, `D-0181`, `D-0130`, `D-0144`, `D-0295`, `D-0301`, `D-0289`.
 
 ## Lo que lo respalda
 

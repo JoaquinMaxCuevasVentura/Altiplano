@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **6 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `04_taller_analogico.md`, `05_migracion_digital.md`, `06_etica_fuentes_y_pendientes.md`, `07_posnansky.md`, `10_arena.md`, `README.md`.
-- **1 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `esquemas/caja_8x7.png`.
+- **7 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `03_sistema_contenida.md`, `04_taller_analogico.md`, `05_migracion_digital.md`, `06_etica_fuentes_y_pendientes.md`, `07_posnansky.md`, `10_arena.md`, `README.md`.
+- **2 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `esquemas/cadena_de_estados.png`, `esquemas/caja_8x7.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 6 están en esta carpeta, 1 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
+En este commit, la línea tenía 14 archivos: 7 están en esta carpeta, 1 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
 
 ## Qué cambió respecto de la anterior
 
@@ -43,7 +43,7 @@ El mensaje del commit `d15525a`:
 >   con HarfBuzz sigue sin repetir placas en los 42 versos.
 > - README de la raíz, de tipografia y del informe, al día.
 
-Y el README de la línea en ese commit: [H-0060](README.md).
+Y el README de la línea en ese commit: [H-0061](README.md).
 
 ## Lo que deduce el archivo
 

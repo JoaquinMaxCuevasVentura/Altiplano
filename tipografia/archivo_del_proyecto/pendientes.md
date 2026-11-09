@@ -20,7 +20,7 @@ Lo que falta en el archivo y por qué, lo que se registra sin copiarlo y lo que 
 
 | Id | Qué | Qué pasó |
 |---|---|---|
-| `N-002` | Las versiones 1 a 3 del artefacto «Gramática de Contenida» | No se pudieron leer: se archivan la versión 4 (del registro de la conversación) y la 5 (la vigente). |
+| `N-002` | Las versiones 1 a 3 del artefacto «Gramática de Contenida» | No se pudieron leer: se archivan la versión 4 (del registro de la conversación), la 5 y la 6 (la vigente). |
 | `N-007` | La primera versión del artefacto «El repujado de Contenida» | El resumen de la conversación la nombra «v2»: la anterior no se pudo leer. |
 | `N-009` | El armado intermedio del libro (.cache/) | libro.html, el texto del informe en JSON y las vistas de las páginas. Se rehace con armar.py: «Todo lo que se arma va a .cache/, que no entra en el repositorio» (README del libro). |
 | `N-010` | Las dependencias de Node del libro (node_modules/) | Vivliostyle CLI 11.3.3 y lo que necesita. Se reinstalan con «npm ci» desde package-lock.json, que es vigente. |
@@ -28,22 +28,24 @@ Lo que falta en el archivo y por qué, lo que se registra sin copiarlo y lo que 
 | `N-014` | El entorno de la sesión | Las herramientas con que se armó, se probó y se rehízo todo: no son material del proyecto. |
 | `N-015` | Archivos generados e ignorados | Los ignora .gitignore; se rehacen con sus generadores (informe/armar.py, digital/poliza.py). |
 | `N-021` | El registro de la conversación del 29.09 al 18.10 | No está en este contenedor. Quedan los commits, los documentos y el resumen con que sigue la conversación (19.10.2026), del que salen los pedidos sin fecha de la línea de tiempo. |
-| `N-033` | Los dos zips de entregables (documentos e imágenes) | Se armaron con armar_entregables.sh y se enviaron en la conversación (uno de 32 MB). No están en este contenedor; su contenido sale del repositorio de entonces (commit sin confirmar). |
-| `N-034` | Herramientas de trabajo de contenedores anteriores | Se perdieron con sus contenedores. Del encargo queda la página publicada (en versiones/editorial/). |
+| `N-034` | Los dos zips de entregables (documentos e imágenes) | Se armaron con armar_entregables.sh y se enviaron en la conversación (uno de 32 MB). No están en este contenedor; su contenido sale del repositorio de entonces (commit sin confirmar). |
+| `N-035` | Herramientas de trabajo de contenedores anteriores | Se perdieron con sus contenedores. Del encargo queda la página publicada (en versiones/editorial/). |
 
 ## Lo que se registra sin copiarlo
 
-- **Los archivos de la raíz del repositorio** (`README.md` y `.gitignore`) cambiaron 14 veces con commits de *Contenida*, pero mezclan los dos proyectos: no se copian. Cada fila dice cómo recuperarlos con `git show`.
+- **Los archivos de la raíz del repositorio** (`README.md` y `.gitignore`) cambiaron 15 veces con commits de *Contenida*, pero mezclan los dos proyectos: no se copian. Cada fila dice cómo recuperarlos con `git show`.
 - **10 duplicados exactos** de materiales que ya están archivados o vigentes: se anotan con el número del original. `C-025` (captura vista en la conversación: hoja1.png), `C-031` (captura vista en la conversación: hoja3.png), `C-037` (captura vista en la conversación: hoja4.png), `C-048` (captura vista en la conversación: hoja_movil.png), `C-068` (Captura de prueba: figura_informe.png), `C-070` (captura vista en la conversación: hoja_informe.png)….
 - **La caché de Python que se subió por error** el 30.09 y se borró en `deb0435`: se anota, no se copia.
+- **La lámina enderezada y el pie aparte** (8.11.2026), las dos imágenes en que se volvieron a medir las proporciones: no se suben, como la foto del pie (07, §3). Quedan sus medidas (`esquemas/celda_medida.json` y `razon_medida.json`) y P-11A, la lámina con capturas, que se arma desde ellas con `planos/proporciones_sobre_la_lamina.py` y queda en `planos/privado/`, fuera del repositorio.
 
 ## Dudas que solo puedes resolver tú
 
 1. **«Contenedor» y «Vasijas».** Son dos artefactos de claude.ai del 27 y el 28 de septiembre, anteriores a esta conversación. Por su texto parecen el primer y el segundo intento de esta tipografía. ¿Son parte del proyecto? Si lo son, entran como antecedentes.
 2. **¿Hay algún entregable aprobado?** Ningún registro lo dice, así que nada figura como «entregable aprobado». Lo vigente es el estado actual de la rama.
 3. **¿Se usó el encargo para GPT Astra 6?** Figura como «alternativa» porque no consta.
-4. **¿Se borra el duplicado del artefacto del repujado** (`Y3FyvuU5q3hZjo9TW8qKor`)? Sigue publicado.
+4. **¿Se borra el duplicado del artefacto del repujado** (`Y3FyvuU5q3hZjo9TW8qKor`)? Sigue publicado, con la celda de 0,84.
 5. **¿Cuándo se escribieron los textos de partida** (el poema, el pie de la lámina)? El archivo solo tiene la fecha del commit en que entraron.
+6. **¿Mide 0,90 la retícula de la cabeza en el impreso?** La celda sale de la lámina enderezada (8.11.2026); falta medirla con regla.
 
 ## Lo que el archivo deduce y conviene revisar
 

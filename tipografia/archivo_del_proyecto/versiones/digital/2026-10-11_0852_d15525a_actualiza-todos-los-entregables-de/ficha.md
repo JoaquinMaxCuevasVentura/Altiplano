@@ -5,17 +5,18 @@
 | Línea | [La póliza en OpenType](../README.md) |
 | Origen | commit `d15525a` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-10-11 08:52 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/digital/`](../../../../digital/) |
 | La versión anterior | [2026-10-10_1055_277ed69_propone-el-atlas-en-are-na-y-hace-exacta](../2026-10-10_1055_277ed69_propone-el-atlas-en-are-na-y-hace-exacta/ficha.md) |
+| La versión siguiente | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](../2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **1 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `digital/poliza.py`.
 
 ## La versión completa
 
-En este commit, la línea tenía 1 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
+En este commit, la línea tenía 1 archivos: 1 están en esta carpeta, 0 en carpetas de versiones anteriores y 0 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
 
 ## Qué cambió respecto de la anterior
 
@@ -43,4 +44,4 @@ El mensaje del commit `d15525a`:
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

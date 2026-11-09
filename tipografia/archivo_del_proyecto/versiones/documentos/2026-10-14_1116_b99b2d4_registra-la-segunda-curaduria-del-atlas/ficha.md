@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 4 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b99b2d4`.
+En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 5 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b99b2d4`.
 
 ## Qué cambió respecto de la anterior
 
@@ -32,7 +32,7 @@ El mensaje del commit `b99b2d4`:
 > Doce bloques nuevos en contener, devolver y vecinas, con su ficha y un
 > pendiente: la máquina no pudo ver las imágenes desde su entorno.
 
-Y el README de la línea en ese commit: [H-0063](README.md).
+Y el README de la línea en ese commit: [H-0064](README.md).
 
 ## Lo que deduce el archivo
 

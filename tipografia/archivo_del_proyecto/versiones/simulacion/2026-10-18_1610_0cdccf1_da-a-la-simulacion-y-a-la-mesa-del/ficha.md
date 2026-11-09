@@ -5,17 +5,19 @@
 | Línea | [La simulación del taller](../README.md) |
 | Origen | commit `0cdccf1` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-10-18 16:10 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/simulacion/`](../../../../simulacion/) |
 | La versión anterior | [2026-10-17_1524_e5cca9f_suma-los-planos-de-la-anatomia-base-y](../2026-10-17_1524_e5cca9f_suma-los-planos-de-la-anatomia-base-y/ficha.md) |
+| La versión siguiente | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](../2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **19 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `simulacion/desenterrar.py`, `simulacion/gramatica.py`, `simulacion/informe.md`, `simulacion/salida/03_calco.png`, `simulacion/salida/03b_notdef.png`, `simulacion/salida/03c_anatomia.png`, `simulacion/salida/04_placa.jpg`, `simulacion/salida/04_placa_reverso.jpg`, `simulacion/salida/04b_placas_rotas.jpg`, `simulacion/salida/07_cinta.jpg`, `simulacion/salida/08_frotado.jpg`, `simulacion/salida/09_agua_quieta.jpg`, `simulacion/salida/09b_agua_tocada.jpg`, `simulacion/salida/10_voz.jpg` y 5 más.
+- **8 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `simulacion/salida/01_frotado_de_la_pared.jpg`, `simulacion/salida/02_el_pie.jpg`, `simulacion/salida/03d_antes_y_despues.png`, `simulacion/salida/05_pulso.png`, `simulacion/salida/08b_frotadas_de_la_a.jpg`, `simulacion/salida/21_gramatica_caja.png`, `simulacion/salida/agua.gif`, `simulacion/salida/voz.gif`.
 
 ## La versión completa
 
-En este commit, la línea tenía 376 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 376 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
+En este commit, la línea tenía 376 archivos: 19 están en esta carpeta, 6 en carpetas de versiones anteriores y 351 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
 
 ## Qué cambió respecto de la anterior
 
@@ -48,4 +50,5 @@ El mensaje del commit `0cdccf1`:
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
+- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

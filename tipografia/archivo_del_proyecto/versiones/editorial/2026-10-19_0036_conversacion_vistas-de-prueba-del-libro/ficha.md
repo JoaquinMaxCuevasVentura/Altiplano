@@ -67,8 +67,8 @@
 - [`C-129`](vistas_del_armado/091832_hoja_06.png) · vista de prueba del libro: hoja_06.png · prueba o experimento.
 - [`C-130`](vistas_del_armado/091832_hoja_07.png) · vista de prueba del libro: hoja_07.png · prueba o experimento.
 - [`C-131`](vistas_del_armado/092030_saltos.png) · vista de prueba del libro: saltos.png · prueba o experimento.
-- `C-133` · vista de prueba del libro: 02_el_pie.jpg · no se copia (duplicado exacto): duplicado exacto de V-0604.
-- `C-134` · vista de prueba del libro: 05_la_ficha.jpg · no se copia (duplicado exacto): duplicado exacto de V-0607.
+- `C-133` · vista de prueba del libro: 02_el_pie.jpg · no se copia (duplicado exacto): duplicado exacto de H-0689.
+- `C-134` · vista de prueba del libro: 05_la_ficha.jpg · no se copia (duplicado exacto): duplicado exacto de H-0692.
 
 ## Lo que lo respalda
 

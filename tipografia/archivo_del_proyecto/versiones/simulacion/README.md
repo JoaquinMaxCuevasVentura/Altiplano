@@ -2,8 +2,8 @@
 
 La propuesta de la máquina: los testigos del pie, la gramática en Python y los estados simulados, con sus salidas.
 
-- **Lo vigente:** [`tipografia/simulacion/`](../../../simulacion/), el estado de la rama en `02dcb14`. No se copia aquí.
-- **Versiones:** 11 de git.
+- **Lo vigente:** [`tipografia/simulacion/`](../../../simulacion/), el estado de la rama en `a3036cf`. No se copia aquí.
+- **Versiones:** 12 de git.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -18,4 +18,5 @@ La propuesta de la máquina: los testigos del pie, la gramática en Python y los
 | 2026-09-30 03:20 | commit `3f66520` | [2026-09-30_0320_3f66520_lleva-laminas-esquemas-y-documentos-a](2026-09-30_0320_3f66520_lleva-laminas-esquemas-y-documentos-a/ficha.md) | versión anterior | Lleva láminas, esquemas y documentos a los seis estados |
 | 2026-09-30 04:04 | commit `e8962b4` | [2026-09-30_0404_e8962b4_suma-la-gramatica-en-el-navegador-y-el](2026-09-30_0404_e8962b4_suma-la-gramatica-en-el-navegador-y-el/ficha.md) | versión anterior | Suma la gramática en el navegador y el ida y vuelta de parámetros con Python |
 | 2026-10-17 15:24 | commit `e5cca9f` | [2026-10-17_1524_e5cca9f_suma-los-planos-de-la-anatomia-base-y](2026-10-17_1524_e5cca9f_suma-los-planos-de-la-anatomia-base-y/ficha.md) | versión anterior | Suma los planos de la anatomía base y simplifica la aplicación |
-| 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión vigente | Da a la simulación y a la mesa del repujado el pulso de una mano |
+| 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión anterior | Da a la simulación y a la mesa del repujado el pulso de una mano |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |

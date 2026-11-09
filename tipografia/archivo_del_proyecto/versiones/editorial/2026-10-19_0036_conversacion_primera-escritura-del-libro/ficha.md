@@ -21,7 +21,7 @@ La primera escritura de siete archivos del libro, tal como quedaron en la conver
 - [`C-102`](editorial/placas_de_cerca.py) · Las placas de la simulación, de cerca, para el libro: la «a» (celda 8), la «z» (celda 32) y el signo final. · versión anterior.
 - [`C-119`](editorial/cubierta.py) · La cubierta del libro de Contenida: tapa, lomo y contratapa. · versión anterior.
 - [`C-132`](editorial/README.md) · El libro de *Contenida* · versión anterior.
-- Y 7 copias de dependencias, para que abra: `D-0267`, `D-0268`, `D-0269`, `D-0270`, `D-0271`, `D-0272`, `D-0273`.
+- Y 7 copias de dependencias, para que abra: `D-0308`, `D-0309`, `D-0310`, `D-0311`, `D-0312`, `D-0313`, `D-0314`.
 
 ## Lo que lo respalda
 

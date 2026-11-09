@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 2 en carpetas de versiones anteriores y 8 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `885073e`.
+En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 4 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `885073e`.
 
 ## Qué cambió respecto de la anterior
 
@@ -34,7 +34,7 @@ El mensaje del commit `885073e`:
 > buscando. Las Acciones 4 y 10 suman sus antecedentes, y el informe
 > amplía la sección 11.4 y las referencias.
 
-Y el README de la línea en ese commit: [H-0074](README.md).
+Y el README de la línea en ese commit: [H-0076](README.md).
 
 ## Lo que deduce el archivo
 

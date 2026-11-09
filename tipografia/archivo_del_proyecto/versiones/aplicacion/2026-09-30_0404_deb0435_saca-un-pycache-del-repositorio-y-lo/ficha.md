@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 7 archivos: 0 están en esta carpeta, 5 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `deb0435`.
+En este commit, la línea tenía 7 archivos: 0 están en esta carpeta, 6 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `deb0435`.
 
 ## Qué cambió respecto de la anterior
 

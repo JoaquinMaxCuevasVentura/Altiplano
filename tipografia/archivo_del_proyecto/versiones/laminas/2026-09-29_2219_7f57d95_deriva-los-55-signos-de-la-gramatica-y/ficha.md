@@ -57,7 +57,7 @@ El mensaje del commit `7f57d95`:
 > - Diecisiete láminas: la celda, la gramática, los 55 signos, piel y
 >   cinta, copia.
 
-Y el README de la línea en ese commit: [H-0316](laminas/README.md).
+Y el README de la línea en ese commit: [H-0353](laminas/README.md).
 
 ## Lo que deduce el archivo
 

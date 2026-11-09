@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **9 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `taxonomia/README.md`, `taxonomia/contenida_taxonomia.pdf`, `taxonomia/descargar_imagenes.py`, `taxonomia/generar_taxonomia.py`, `taxonomia/png/R-04_agrupar.png`, `taxonomia/png/R-09_atlas.png`, `taxonomia/svg/R-04_agrupar.svg`, `taxonomia/svg/R-09_atlas.svg`, `taxonomia/taxonomia.py`.
+- **11 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `taxonomia/README.md`, `taxonomia/contenida_taxonomia.pdf`, `taxonomia/descargar_imagenes.py`, `taxonomia/generar_taxonomia.py`, `taxonomia/png/R-04_agrupar.png`, `taxonomia/png/R-06_inferir.png`, `taxonomia/png/R-09_atlas.png`, `taxonomia/svg/R-04_agrupar.svg`, `taxonomia/svg/R-06_inferir.svg`, `taxonomia/svg/R-09_atlas.svg`, `taxonomia/taxonomia.py`.
 - **8 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2`.
 
 ## La versión completa
 
-En este commit, la línea tenía 26 archivos: 9 están en esta carpeta, 0 en carpetas de versiones anteriores y 17 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b84984e`.
+En este commit, la línea tenía 26 archivos: 11 están en esta carpeta, 0 en carpetas de versiones anteriores y 15 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b84984e`.
 
 ## Qué cambió respecto de la anterior
 
@@ -42,7 +42,7 @@ El mensaje del commit `b84984e`:
 > bloqueó los archivos: las celdas quedan vacías, con el nombre de la
 > imagen que esperan. La hoja de los planos puede ir sin la columna.
 
-Y el README de la línea en ese commit: [H-0540](taxonomia/README.md).
+Y el README de la línea en ese commit: [H-0655](taxonomia/README.md).
 
 ## Lo que deduce el archivo
 

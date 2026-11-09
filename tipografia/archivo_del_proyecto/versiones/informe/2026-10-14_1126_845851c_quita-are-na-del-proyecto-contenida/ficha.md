@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 22 archivos: 5 están en esta carpeta, 14 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `845851c`.
+En este commit, la línea tenía 22 archivos: 5 están en esta carpeta, 15 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `845851c`.
 
 ## Qué cambió respecto de la anterior
 
@@ -33,7 +33,7 @@ El mensaje del commit `845851c`:
 > normales; el capítulo 11 del informe pasa a llamarse «Lo que está
 > alrededor».
 
-Y el README de la línea en ese commit: [H-0483](informe/README.md).
+Y el README de la línea en ese commit: [H-0553](informe/README.md).
 
 ## Lo que deduce el archivo
 

@@ -11,12 +11,11 @@
 
 ## Qué contiene esta carpeta
 
-- **5 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `aplicacion/README.md`, `aplicacion/app.js`, `aplicacion/datos.js`, `aplicacion/index.html`, `aplicacion/simuladores.js`.
-- **1 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `aplicacion/gramatica.js`.
+- **6 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `aplicacion/README.md`, `aplicacion/app.js`, `aplicacion/datos.js`, `aplicacion/gramatica.js`, `aplicacion/index.html`, `aplicacion/simuladores.js`.
 
 ## La versión completa
 
-En este commit, la línea tenía 8 archivos: 5 están en esta carpeta, 0 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
+En este commit, la línea tenía 8 archivos: 6 están en esta carpeta, 0 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,9 +43,8 @@ El mensaje del commit `e8962b4`:
 > leen con --parametros (comun.usar_parametros); sin ajustes, la salida no cambia.
 > exportar.py regenera datos.js desde el pie.
 
-Y el README de la línea en ese commit: [H-0423](aplicacion/README.md).
+Y el README de la línea en ese commit: [H-0491](aplicacion/README.md).
 
 ## Lo que deduce el archivo
 
 - «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
-- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

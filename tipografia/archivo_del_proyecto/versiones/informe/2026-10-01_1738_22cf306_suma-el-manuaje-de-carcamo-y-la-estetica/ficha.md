@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 22 archivos: 7 están en esta carpeta, 12 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `22cf306`.
+En este commit, la línea tenía 22 archivos: 7 están en esta carpeta, 13 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `22cf306`.
 
 ## Qué cambió respecto de la anterior
 

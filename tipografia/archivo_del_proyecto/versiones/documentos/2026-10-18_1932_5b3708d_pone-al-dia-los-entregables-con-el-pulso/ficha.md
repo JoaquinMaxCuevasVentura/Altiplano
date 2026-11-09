@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **1 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `06_etica_fuentes_y_pendientes.md`.
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `04_taller_analogico.md`, `05_migracion_digital.md`, `06_etica_fuentes_y_pendientes.md`.
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 1 están en esta carpeta, 2 en carpetas de versiones anteriores y 11 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `5b3708d`.
+En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 4 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `5b3708d`.
 
 ## Qué cambió respecto de la anterior
 
