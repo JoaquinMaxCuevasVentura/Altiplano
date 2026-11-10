@@ -50,6 +50,7 @@ Ninguna lámina cumple los cinco caminos. Las más cercanas a la referencia son 
 | `catalogo.md` | La misma ficha en tablas legibles, con el comentario de cada lámina. La escribe el generador: no se edita |
 | `hoja_1_casa.jpg` a `hoja_6_pueblo.jpg` | Una hoja de contactos por familia, para ver las láminas juntas |
 | `generar_hojas.py` | Rehace las hojas y `catalogo.md` |
+| `recursos_por_conseguir.md` | La lista de lo que apareció en la búsqueda y no se pudo abrir, con su enlace, lo que pasó y qué buscar en cada sitio |
 
 ## Las seis familias
 
