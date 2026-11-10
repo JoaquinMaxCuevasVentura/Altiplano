@@ -4,7 +4,7 @@ Para «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* 
 
 ## Para qué sirve esta guía
 
-El artículo analiza seis pasteles al óleo como herramientas de lectura. Hoy publica, en las figuras 1 a 6, el **esquema de encaje** de cada uno: el trazado que fija la composición. Los pasteles están por hacer, y sus escaneos reemplazarán a los esquemas.
+El artículo analiza seis pasteles al óleo como herramientas de lectura. Desde el 10 de noviembre el texto los describe como hechos, pero las figuras 1 a 6 todavía muestran el **esquema de encaje** de cada uno, el trazado que fija la composición. Los escaneos de los pasteles reemplazarán a los esquemas, y el artículo no se envía antes.
 
 Esta guía deriva cada pastel del texto de la novela, con el mismo método del artículo, para que no partas de cero:
 
@@ -282,7 +282,7 @@ Si un pastel desmiente la lectura, **no lo escondas**: un desmentido honesto val
 2. **Edición.** Recorta al borde del dibujo, corrige la perspectiva y exporta en JPG de alta calidad, de 2.000 a 3.000 píxeles de lado mayor. Si la revista pide TIF, exporta también en TIF.
 3. **Archivo.** Guarda las imágenes como `articulo/figuras/figura_1.jpg` … `figura_6.jpg`, con la numeración del artículo.
 4. **Inserción.** En `articulo/articulo_cosecha_de_piedras.md`, dentro de cada bloque de figura, cambia `figuras/figura_N.png` por `figuras/figura_N.jpg` y conserva el ancho. Para las figuras verticales usa `{height=18cm}`.
-5. **Pie.** Sustituye «Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA.» por el soporte, las medidas y el año. Por ejemplo: «Pastel al óleo sobre papel, 29,7 × 42 cm, 2026. Fuente: elaboración propia.»
+5. **Pie.** Cada pie dice ya «Pastel al óleo sobre papel, [medidas, año]. Fuente: elaboración propia.». Completa las medidas y el año, y cambia el soporte si no es papel. Por ejemplo: «Pastel al óleo sobre papel, 29,7 × 42 cm, 2026. Fuente: elaboración propia.»
 6. **Regenerar.** Ejecuta `python3 articulo/generar_docx.py`.
 
 Sube también los escaneos al canal `altiplano · pasteles` del atlas de Are.na, con el soporte, las medidas y el año.
@@ -291,4 +291,4 @@ Sube también los escaneos al canal `altiplano · pasteles` del atlas de Are.na,
 
 - **Serie exprés, en un día.** Seis pasteles A4 de 60 a 75 minutos cada uno, con 20 minutos previos de miniaturas por figura: unas 8 horas en total. Es una escala coherente con Lundberg, que dibujaba de 30 a 60 minutos por imagen.
 - **Prioridad.** Si no llegan las seis, las que más sostienen el argumento son la 2 (el signo frente al mapa), la 4 (la mina como doble del ayllu) y la 1 (la chujlla). Con cuatro figuras habría que ajustar el texto y el Cuadro 1.
-- **Plazo.** La decisión tomada es que el artículo lleve los escaneos de tus pasteles. Si los pasteles no llegan a tiempo, el artículo puede enviarse con los esquemas, como investigación en desarrollo. En ese caso, si la revista lo acepta, pregunta si podrás sustituirlos por las fotografías antes de la maquetación.
+- **Plazo.** La decisión tomada es que el artículo lleve los escaneos de tus pasteles, y el texto ya está escrito así. Si los pasteles no llegan a tiempo, hay que volver a la versión que hablaba de esquemas (commit f784ab3) antes de enviar. En ese caso, si la revista lo acepta, pregunta si podrás sustituirlos por las fotografías antes de la maquetación.

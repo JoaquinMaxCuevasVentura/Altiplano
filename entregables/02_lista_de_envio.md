@@ -8,11 +8,11 @@ Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca
 
 | Dato | Valor |
 |---|---|
-| Extensión | 75.240 caracteres con espacios y 12.755 palabras, con notas y bibliografía. En Word, 37 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
+| Extensión | 75.409 caracteres con espacios y 12.784 palabras, con notas y bibliografía. En Word, 38 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
 | Resúmenes | 122 palabras en español y 118 en inglés |
 | Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
 | Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
-| Figuras | Ocho. Las figuras 1 a 6 son los esquemas de encaje de los seis pasteles; la 7 y la 8, diagramas. Va además el Cuadro 1 |
+| Figuras | Ocho. Las figuras 1 a 6 son los seis pasteles: el texto ya los describe como hechos, pero hasta que lleguen los escaneos se ven sus esquemas de encaje y los pies dicen «[medidas, año]». La 7 y la 8 son diagramas. Va además el Cuadro 1 |
 | Imágenes | Cinco de dominio público, en serie aparte (imágenes 1-5): tres dibujos de Guaman Poma, un grabado de Squier y una foto de la mina Siglo XX de la Library of Congress |
 | Citas de la novela | 145 entre comillas y 4 en bloque. Todas se cotejaron el 10 de noviembre con la edición digital de la UMSA: existen tal cual y están en la página indicada (`analisis/35` y `36`) |
 | Bibliografía | 36 obras |
@@ -30,6 +30,7 @@ Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca
 - [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
 - [x] Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y cambia la redacción para que no se lea como un texto de IA (`analisis/33_version_final_sin_patrones_de_ia.md`).
 - [x] Word regenerado con la versión final.
+- [x] Cursivas para las voces aymaras, texto escrito con los pasteles hechos y las mejores reescrituras de Codex, el 10 de noviembre (`analisis/37`).
 - [x] Citas cotejadas otra vez con las fuentes que reuniste, el 10 de noviembre: todas existen en su fuente. Las correcciones de página y de forma se aplicaron ese mismo día, y el artículo varió sus tipos de cita: más paráfrasis de las fuentes teóricas, citas narrativas y tres citas en bloque nuevas (`analisis/36`).
 
 ## Lo que te toca, en orden
@@ -70,23 +71,25 @@ Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice 
 
 Así figura hoy en el artículo:
 
-> a\) *Herramientas*: Claude (Anthropic), ChatGPT y Codex (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño y trazado de los esquemas de encaje (figuras 1-6) y de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
+> a\) *Herramientas*: Claude (Anthropic), ChatGPT y Codex (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño de los esquemas de encaje con que se compusieron los pasteles de las figuras 1 a 6, el trazado de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
 
 - **Describe lo que se hizo.** El alcance incluye la redacción de borradores, el trazado de las ocho figuras y la búsqueda de las cinco imágenes porque así se preparó el texto. Las imágenes son históricas: ninguna se hizo con IA.
 - **Si reescribes el artículo con tus palabras** antes de enviarlo, puedes decirlo en el rol. Si no lo reescribes, la declaración tiene que decir que la versión final la redactó una IA a partir de tus decisiones.
 - **Codex (OpenAI)** está en la declaración porque hizo el primer análisis de Churata (`analisis/32`, en la rama `codex/analisis-churata`).
-- **Cuando entren los escaneos de los pasteles,** quita del alcance «el diseño y trazado de los esquemas de encaje (figuras 1-6)». Si las exploraciones con GPT Image 2 influyeron en los pasteles, dilo.
+- **Los pasteles.** La declaración dice que la IA ayudó a diseñar los esquemas de encaje con que se compusieron los pasteles. Déjalo así si los pasteles siguen esos esquemas; si los hiciste por otro camino, quítalo. Si las exploraciones con GPT Image 2 influyeron en los pasteles, dilo.
 - **Si redibujas a mano los diagramas 7 y 8,** quítalos también del alcance y cambia sus pies.
 - **Lee la política de IA de la revista elegida.** Al menos una de primera línea, la *Revista Hispánica Moderna*, prohíbe redactar con IA generativa.
 
 ### 4. Hacer los pasteles y cambiar las figuras
 
+Desde el 10 de noviembre el texto está escrito como si los pasteles estuvieran hechos (`analisis/37`). El cuerpo y los planos (2) y (3) de cada figura hablan del pastel, y los pies dicen «Pastel al óleo sobre papel, [medidas, año]». Hasta que lleguen los escaneos, las figuras 1 a 6 muestran los esquemas de encaje, así que **no envíes el artículo antes de cambiarlas**. Si los pasteles no llegan a tiempo, vuelve a la versión con esquemas (commit f784ab3).
+
 La guía está en `03_guia_de_los_seis_pasteles`. Cuando tengas los escaneos:
 
 - reemplaza los esquemas de las figuras 1 a 6 (la guía explica cómo, paso a paso);
-- escribe en cada pie el soporte, las medidas y el año, en lugar de «Esquema de encaje del pastel al óleo. Fuente: elaboración propia con asistencia de IA»;
-- reescribe el plano (3), *Contraste*, de cada figura con lo que hizo el pastel;
-- ajusta la declaración de IA (paso 3).
+- completa en cada pie las medidas y el año;
+- comprueba que los planos (2) y (3) de cada figura digan lo que hizo el pastel terminado, y corrígelos si hizo otra cosa;
+- revisa la declaración de IA (paso 3).
 
 Revisa también las notaciones de las figuras 1 a 6 (rótulos y decisiones marcadas con asterisco) y los diagramas 7 y 8 (rótulos y páginas). Decide si los diagramas entran.
 
@@ -145,7 +148,6 @@ Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada 
   - Las cinco imágenes, con sus frases, sus pies y la nota, suman unas 680 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 1) y la Puerta del Sol (Imagen 2).
   - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.
   - El marco teórico y la bibliografía deben quedar completos. Si una obra deja de citarse, sácala de la bibliografía.
-- **La frase «Se trata de una investigación en desarrollo»** (final de la sección 1) respondía a una norma de *Estudios Bolivianos*. Decide si la mantienes.
 - **Las figuras, aparte.** *Atenea* las pide en JPG o TIF, a 300 ppp o más y con 12 cm de ancho como mínimo, con su pie y su fuente. Lo mismo vale para las imágenes: las de Guaman Poma necesitan la alta resolución del paso 5.
 - **Filiación.** No tienes una institucional. La salida habitual es «Investigador independiente, La Paz (Bolivia)». Si la revista pide filiación, pregúntale si la acepta.
 - **ORCID.** Créalo antes del primer envío: es gratis y muchas plataformas lo exigen.
@@ -168,7 +170,6 @@ Envía a una sola revista por vez: casi todas lo exigen. Anota la fecha de enví
 |---|---|
 | Línea de autoría | Joaquin Max Cuevas Ventura |
 | Nota 1 (80 palabras) | Licenciatura en Arquitectura (UMSA); técnico superior en Diseño Gráfico (Instituto Técnico Atenea); estudios de posgrado en Gestión BIM (Universidad Católica Boliviana); coordinación de Arquicinema (FAADU-UMSA); ocupación actual; áreas de trabajo; correo electrónico; La Paz, Bolivia |
-| Final de la sección 1 | «Se trata de una investigación en desarrollo» |
 | Conflicto de intereses | «El autor declara no tener conflictos de intereses» |
 
 La nota no trae adscripción institucional ni publicaciones. Si tienes alguna, cabe. *Kipus* pide, además, una nota biobibliográfica de 100 a 150 palabras.

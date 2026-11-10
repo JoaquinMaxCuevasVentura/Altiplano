@@ -45,12 +45,12 @@ Quedan como reservas *Letras* (UNMSM), *Diálogo Andino* (acepta textos en aymar
 
 ## Cuánto hay que recortar
 
-El texto final tiene 12.755 palabras y 75.240 caracteres con bibliografía y notas. Las cifras de esta sección son estimaciones a partir de esos totales; hay que medirlas en el Word real.
+El texto final tiene 12.784 palabras y 75.409 caracteres con bibliografía y notas. Las cifras de esta sección son estimaciones a partir de esos totales; hay que medirlas en el Word real.
 
 | Recorte | Revistas |
 |---|---|
 | **Cabe sin cortes** | *Riva-Agüero* (16.000), *Revista de Filología y Lingüística* (15.000) y el *Anuario de Estudios Americanos* (9.000 a 13.000) |
-| **Poda leve, hasta un 10 %** | *Aisthesis* y *A Contracorriente* (12.000: unas 800 palabras), *Procesos*, sección Estudios (10.000 a 12.000), *Yachay* e *Iberoamericana* (70.000 caracteres: unos 5.200) |
+| **Poda leve, hasta un 10 %** | *Aisthesis* y *A Contracorriente* (12.000: unas 800 palabras), *Procesos*, sección Estudios (10.000 a 12.000), *Yachay* e *Iberoamericana* (70.000 caracteres: unos 5.400) |
 | **Recorte moderado, del 10 al 25 %** | *Revista de Literatura* del CSIC (11.000: unas 1.800), *Chasqui* y la *Latin American Literary Review* (10.000: unas 2.800) |
 | **Recorte fuerte, del 25 al 45 %** | *Kipus* (unas 3.300), *Literatura y Lingüística* y *Estudios Filológicos* (unas 3.800), *Atenea* (unas 4.300), *Calle 14* |
 | **Más del 45 %: otra versión** | *Alpha*, el *Bolivian Studies Journal*, *Revista 180*, *452ºF*, *EGA*, *VLC* y otras revistas de arquitectura con textos muy cortos |

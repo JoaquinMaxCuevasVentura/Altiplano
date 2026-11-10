@@ -102,7 +102,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 29 | «bonita urdimbre de surcos» | §4 | ☐ |
 | 30 | «en los linderos» | §2 | ☐ |
 | 30 | «renegridas por el hollín» | §3 | ☐ |
-| 30 | «Las chujllas no tienen cuartos ni mucho menos» | §3 | ☐ |
+| 30 | «las chujllas no tienen cuartos ni mucho menos» | §3 | ☐ |
 | 30 | «tres chujllas de adobe y paja brava que rodean al patio» | §3 | ☐ |
 | 31 | «apenas la altura de un adobe» | §3 | ☐ |
 | 31 | «mal unidas con lazos de paja trenzada» | §3 | ☐ |
