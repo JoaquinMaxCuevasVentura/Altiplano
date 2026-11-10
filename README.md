@@ -10,10 +10,10 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 
 | Entregable | Archivo final | Estado |
 |---|---|---|
-| **El artículo** | `entregables/01_articulo_cosecha_de_piedras.docx` y `.pdf` (fuente: `articulo/articulo_cosecha_de_piedras.md`) | Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y evita los patrones de escritura de la IA (`analisis/33`). El autor la reescribirá con su voz. 74.594 caracteres, 12.609 palabras, 38 páginas en Word; 157 citas de la novela; 36 entradas de bibliografía; ocho figuras y cinco imágenes de dominio público |
+| **El artículo** | `entregables/01_articulo_cosecha_de_piedras.docx` y `.pdf` (fuente: `articulo/articulo_cosecha_de_piedras.md`) | Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y evita los patrones de escritura de la IA (`analisis/33`). El autor la reescribirá con su voz. El 10 de noviembre se aplicaron las correcciones del cotejo y se variaron los tipos de cita (`analisis/36`). 75.240 caracteres, 12.755 palabras, 37 páginas en Word; 145 citas de la novela entre comillas y 4 en bloque; 36 entradas de bibliografía; ocho figuras y cinco imágenes de dominio público |
 | **La lista de envío** | `entregables/02_lista_de_envio` | Lo hecho y lo que falta, en orden: epígrafe, declaración de IA, pasteles, cotejo, datos por confirmar, revista, versión anónima y envío. Sale de `analisis/04_verificaciones_y_pendientes.md` |
 | **La guía de los seis pasteles** | `entregables/03_guia_de_los_seis_pasteles` | Versión final de `analisis/05b_guia_seis_pasteles.md`, con sus citas de la novela comprobadas otra vez |
-| **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 157 citas y las 2 en bloque, por página, para cotejarlas con el impreso |
+| **El fichero de pasajes** | `entregables/04_fichero_de_pasajes` | Versión final de `analisis/06_fichero_de_pasajes.md`: las 145 citas y las 4 en bloque, por página, para cotejarlas con el impreso |
 | **Las revistas candidatas** | `entregables/05_revistas_candidatas` | Resumen final de `reports/Convocatorias abiertas para el artículo.md`: diez revistas, recortes, barreras y qué hacer antes de enviar |
 | **El atlas de Are.na** | 11 canales privados de la cuenta joaquin-cuevas; resumen en `entregables/06_atlas_de_arena`; registro en `analisis/29_atlas_arena.md` | 38 bloques; el canal de pasteles espera tus escaneos |
 | **Las fuentes para cotejar** | `entregables/07_fuentes_para_cotejar` | Los libros que faltan, con sus páginas y por orden de urgencia. Van a un repositorio privado aparte, no a este, que es público |
@@ -24,7 +24,7 @@ Artículo, análisis de fuentes y protocolo gráfico. Nació para el dossier «N
 | **Los generadores** | `articulo/generar_docx.py`, `articulo/generar_figuras.py` y `entregables/generar_entregables.py` | Funcionan. Los Word que hacen pasan la validación de esquema |
 | *La versión 3 (alternativa)* | `articulo/articulo_altiplano.md` y `.docx` | Archivada desde el 25 de septiembre; no se actualiza |
 
-Los análisis `01` a `35` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
+Los análisis `01` a `36` y el informe de `reports/` son el registro de cada etapa, cada uno con su fecha: no se reescriben cuando el artículo cambia. Lo vigente está en `entregables/`.
 
 ## Artículo definitivo
 
@@ -77,15 +77,15 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 
 **Estado:**
 
-- **Extensión:** 74.594 caracteres con espacios, bibliografía y notas incluidas; unas 12.600 palabras; el Word tiene 38 páginas. Desde el 2 de noviembre no hay límite: el artículo no responde a ninguna convocatoria. Ya no va a *Estudios Bolivianos*, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
+- **Extensión:** 75.240 caracteres con espacios, bibliografía y notas incluidas; unas 12.800 palabras; el Word tiene 37 páginas. Desde el 2 de noviembre no hay límite: el artículo no responde a ninguna convocatoria. Ya no va a *Estudios Bolivianos*, y cada revista pone el suyo (`reports/Convocatorias abiertas para el artículo.md`; qué revistas lo admiten tal cual y cuánto pide recortar cada una, en su apartado «Cuánto hay que cortar», recalculado el 11 de octubre).
 - **Resúmenes:** resumen de 122 palabras y abstract de 118.
 - **Palabras clave:** cinco en cada lengua (norma 4d).
 - **Autoría y declaraciones:**
   - Autoría y nota 1 completas (80 palabras; límite, 100).
   - Investigación «en desarrollo».
   - Conflicto de intereses y declaración de IA, en las declaraciones finales.
-- **Citas de la novela:** las 157 entre comillas y las dos en bloque se comprobaron automáticamente contra la transcripción (las cuatro que entraron el 2 de noviembre, en etapas anteriores; `analisis/33`); existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas. El fichero `analisis/06_fichero_de_pasajes.md` las ordena por página para el cotejo con el impreso.
-- **Citas de las demás fuentes:** se cotejaron con el texto de cada una.
+- **Citas de la novela:** las 145 entre comillas y las cuatro en bloque se cotejaron el 10 de noviembre con la edición digital de la UMSA, que trae el número de cada página (`analisis/35` y `36`); existen literalmente y están en la página indicada. Las cadenas de «ibid.», revisadas. El fichero `analisis/06_fichero_de_pasajes.md` las ordena por página para el cotejo con el impreso.
+- **Citas de las demás fuentes:** se cotejaron el 10 de noviembre con las 25 fuentes que reunió el autor (`analisis/35`).
 - **Faltan:**
   - leer el texto en voz alta y hacerlo propio;
   - confirmar el epígrafe;
@@ -138,6 +138,7 @@ Lee *Altiplano* (1945; citado por la 7.ª ed., La Paz, Juventud, 1982) desde la 
 | `analisis/33_version_final_sin_patrones_de_ia.md` | La versión final del 2 de noviembre. Qué dicen las fuentes sobre los patrones de escritura de la IA y cuánto aparecían en el texto anterior; lo que se recuperó de lo quitado por extensión, con la fuente y el registro de cada cita; lo que aportó Gamaliel Churata; la verificación de cada cita con su página. El análisis 32, de Codex sobre Churata, está en la rama `codex/analisis-churata`, sin unir |
 | `analisis/34_auditoria_de_la_version_final.md` | Auditoría de Codex del 2 de noviembre: escritura, estructura, citas y referencias de la versión final, con 64 hallazgos. Traída de la rama `codex/auditoria-version-final` como registro; sus propuestas no se han aplicado |
 | `analisis/35_cotejo_con_las_fuentes.md` | Cotejo del 10 de noviembre con las 25 fuentes que el autor reunió en una carpeta privada: todas las citas existen en su fuente. Resuelve la mayor parte de las dudas de la auditoría de Codex y propone unas pocas correcciones de página y de forma, sin aplicarlas |
+| `analisis/36_tipos_de_cita_y_correcciones.md` | Las correcciones del cotejo aplicadas el 10 de noviembre y la variación de los tipos de cita: cuánto citaba el artículo y cómo, el criterio (cita textual cuando importan las palabras, paráfrasis para lo demás, referencias narrativas y tres citas en bloque nuevas), la lista de cambios y su verificación |
 | `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
 | `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |

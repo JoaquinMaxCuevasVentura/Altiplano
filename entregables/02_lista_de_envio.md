@@ -8,13 +8,13 @@ Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca
 
 | Dato | Valor |
 |---|---|
-| Extensión | 74.594 caracteres con espacios y 12.609 palabras, con notas y bibliografía. En Word, 38 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
+| Extensión | 75.240 caracteres con espacios y 12.755 palabras, con notas y bibliografía. En Word, 37 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
 | Resúmenes | 122 palabras en español y 118 en inglés |
 | Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
 | Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
 | Figuras | Ocho. Las figuras 1 a 6 son los esquemas de encaje de los seis pasteles; la 7 y la 8, diagramas. Va además el Cuadro 1 |
 | Imágenes | Cinco de dominio público, en serie aparte (imágenes 1-5): tres dibujos de Guaman Poma, un grabado de Squier y una foto de la mina Siglo XX de la Library of Congress |
-| Citas de la novela | 157 entre comillas y 2 en bloque. Todas se comprobaron contra la transcripción: existen tal cual y están en la página indicada. Las cuatro que entraron el 2 de noviembre se habían comprobado en etapas anteriores (`analisis/33`) |
+| Citas de la novela | 145 entre comillas y 4 en bloque. Todas se cotejaron el 10 de noviembre con la edición digital de la UMSA: existen tal cual y están en la página indicada (`analisis/35` y `36`) |
 | Bibliografía | 36 obras |
 | Destino | Sin elegir. La primera candidata es *Atenea* (véase `05_revistas_candidatas`) |
 
@@ -30,7 +30,7 @@ Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca
 - [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
 - [x] Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y cambia la redacción para que no se lea como un texto de IA (`analisis/33_version_final_sin_patrones_de_ia.md`).
 - [x] Word regenerado con la versión final.
-- [x] Citas cotejadas otra vez con las fuentes que reuniste, el 10 de noviembre: todas existen en su fuente. Quedan unas pocas correcciones de página y de forma por aprobar (`analisis/35`, §8).
+- [x] Citas cotejadas otra vez con las fuentes que reuniste, el 10 de noviembre: todas existen en su fuente. Las correcciones de página y de forma se aplicaron ese mismo día, y el artículo varió sus tipos de cita: más paráfrasis de las fuentes teóricas, citas narrativas y tres citas en bloque nuevas (`analisis/36`).
 
 ## Lo que te toca, en orden
 
@@ -64,7 +64,7 @@ Si prefieres que el epígrafe nombre la piedra o la cosecha, hay tres alternativ
 | B. El capataz de la mina | «Aquí cosecharás miles de cargas de estaño... Las papas de estaño las siembra el diablo ¿sabes?» (Botelho Gosálvez, 1982 [1945]: 142) | La cosecha del título vuelta mina | Da la primera palabra a quien se burla de Condori. La primera frase ya está en la sección 5 |
 | C. Le Guin | «[…] antes de la herramienta que expulsa energía hacia fuera, creamos la herramienta que lleva energía a casa» (Le Guin, 2021 [1986]: 6) | Anuncia la oposición entre el arma y el recipiente de las conclusiones | Es una voz ajena a los Andes, ya citada dos veces, y no nombra la piedra |
 
-Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice «Es lo contrario del lema del epígrafe: los comunarios de la novela no caminan mirando al pasado; lo esconden en un foso», puede decir: «Al revés del lema del Taller de Historia Oral Andina (Rivera Cusicanqui, 2010 [1984]: 17), los comunarios no caminan mirando al pasado: lo esconden en un foso».
+Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice «Es lo contrario de lo que pide el lema del epígrafe. Los comunarios de la novela, en vez de caminar mirando al pasado, lo esconden en un foso», puede decir: «Al revés del lema del Taller de Historia Oral Andina (Rivera Cusicanqui, 2010 [1984]: 17), los comunarios de la novela, en vez de caminar mirando al pasado, lo esconden en un foso».
 
 ### 3. Revisar la declaración de uso de IA
 
@@ -140,7 +140,7 @@ Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada 
 ### 10. Adaptar el texto a la revista
 
 - **Formato y citas.** El Word sigue hoy la plantilla de *Estudios Bolivianos*. Según la revista, hará falta APA 7, MLA o Chicago.
-- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 4.100. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
+- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 4.300. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
   - La palanca principal son los pies de figura analíticos y el Cuadro 1, unas 1.850 palabras: acórtalos o pasa parte de su análisis al texto.
   - Las cinco imágenes, con sus frases, sus pies y la nota, suman unas 680 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 1) y la Puerta del Sol (Imagen 2).
   - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.

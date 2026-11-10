@@ -146,3 +146,7 @@ En el fichero de pasajes (`entregables/04`) se añaden las dos erratas nuevas de
 - **Le Guin:** la dirección exacta del texto.
 - **«Father Electricity»:** el cotejo con la letra oficial.
 - **Cornejo Polar:** solo si se decide citar la 1.ª edición.
+
+## Nota del 10 de noviembre, por la tarde
+
+El autor aprobó las correcciones de la §8 y se aplicaron todas menos la 8: en Barnadas la circular sigue en la p. 47, así que la referencia queda en pp. 46-47. Con ellas el artículo varió sus tipos de cita. El detalle está en `analisis/36`.

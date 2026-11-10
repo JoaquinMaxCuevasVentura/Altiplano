@@ -4,10 +4,11 @@ Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. D
 
 ## Cómo usarlo
 
-- **Qué trae.** Las 157 citas entre comillas y las 2 citas en bloque del artículo, en 158 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
+- **Qué trae.** Las 145 citas entre comillas y las 4 citas en bloque del artículo, en 148 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
 - **Qué está comprobado.** Cada cita se comprobó contra una transcripción digital de la novela: existe tal cual, con las correcciones de la sección 2, y está en la página indicada. Las cinco citas breves del Cuadro 1 y los datos parafraseados (cifras, orden de los hechos, quién dice qué) se revisaron aparte.
 - **Las cuatro citas que entraron el 2 de noviembre** (pp. 4, 33 y 34) y la de la p. 155, que volvió a su forma completa, se habían comprobado contra la transcripción en etapas anteriores (`analisis/06`, `13`, `16`, `29` y `30`; el detalle, en `analisis/33`). La transcripción ya no estaba en el entorno de trabajo el 2 de noviembre, así que no se volvieron a comprobar ese día.
 - **El 10 de noviembre** se volvieron a cotejar todas, las 157, las 2 en bloque y las 5 del Cuadro 1, con la edición digital de la Biblioteca Central de la UMSA, que trae al pie el número de cada página (`analisis/35`). Todas están en la página indicada. Ese PDF es el mismo texto que la transcripción, con las mismas erratas, así que no reemplaza al libro impreso.
+- **Después del cotejo**, el mismo 10 de noviembre, el artículo varió sus tipos de cita: cinco citas breves de la novela pasaron a paráfrasis, con su página, y otras ocho quedaron dentro de dos citas en bloque nuevas, de las pp. 36-37 y 132 (`analisis/36`). Las citas en bloque se cotejaron con el PDF de la UMSA.
 - **Qué falta.** Compararlas con el libro impreso. Marca la casilla ☐ de cada fila cuando lo hagas. Empieza por las pp. 88-107 (sección 1).
 - **Si encuentras una diferencia,** corrige la cita en `articulo/articulo_cosecha_de_piedras.md` y regenera el Word con `python3 articulo/generar_docx.py`.
 
@@ -103,14 +104,12 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 30 | «renegridas por el hollín» | §3 | ☐ |
 | 30 | «Las chujllas no tienen cuartos ni mucho menos» | §3 | ☐ |
 | 30 | «tres chujllas de adobe y paja brava que rodean al patio» | §3 | ☐ |
-| 30 | «en el centro del cuarto» | §3 | ☐ |
 | 31 | «apenas la altura de un adobe» | §3 | ☐ |
 | 31 | «mal unidas con lazos de paja trenzada» | §3 | ☐ |
 | 31 | «las hoces, el arado, el yugo de madera» | §3 | ☐ |
 | 31 | «los ponchos y rebozos para los días de fiesta» | §3 | ☐ |
 | 31 | «la mano que les acaricie» | §3 | ☐ |
 | 31 | «morada de piojos y pulgas» | §3 | ☐ |
-| 32 | «cerca del fuego» | §3 | ☐ |
 | 33 | «Que Dios les alumbre el camino y que en las apachetas no les detenga el Supaya» | §5 | ☐ |
 | 34 | «con la madera del arado en un hombro y las correas del yugo en las manos» | §2 | ☐ |
 | 34 | «desde el portal de su chujlla» | §3 | ☐ |
@@ -118,9 +117,7 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 35 | «una chujlla que estaba abandonada cerro arriba» | §3 | ☐ |
 | 36 | «amparados por las Cédulas Reales» | §3 | ☐ |
 | 36 | «los doctores alto-peruanos les birlaron la tierra» | §3 | ☐ |
-| 36 | «una gran cuestión de títulos, papel sellado y pago de impuestos» | §3 | ☐ |
-| 37 | «así lo declaraban los papeles del Gobierno» | §3 | ☐ |
-| 37 | «La religión y la propiedad quedaron frente a frente, guiñándose con sus ventanucos empolvados» | §3 | ☐ |
+| 36-37 | Hubo una gran cuestión de títulos, papel sellado y pago de impuestos […] La tierra era de él, pues así lo declaraban los papeles del Gobierno. […] guiñándose con sus ventanucos empolvados (cita en bloque) | §3 | ☐ |
 | 38 | «Así los Villca, Huanca y Condori, son las generaciones del Signo Escalonado» | §3 | ☐ |
 | 56 | «se agrietan como paredes envejecidas» | §6 | ☐ |
 | 57 | «Ni una pincelada enturbió el papel celeste y deslumbrador del cielo» | §6 | ☐ |
@@ -132,14 +129,12 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 66 | «piedra bezoar» | §6 | ☐ |
 | 66 | «La Pacha Mama, sorda, vieja, extenuada, recibía el cuerpo de sus más fieles hijos para encerrarlos en su vientre de sequedad inexorable» | §6 | ☐ |
 | 66 | «abortó en plena gestación» | §6 | ☐ |
-| 67 | «dos muñequitos de lana» | §6 | ☐ |
 | 68 | «como la fiera y brava hembra del puma» | §6 | ☐ |
 | 68 | «los indios le descuartizaron» | §6 | ☐ |
 | 69 | «un ardor bestial» | §6 | ☐ |
 | 69 | «cada cual se llevó un miembro» | §6 | ☐ |
 | 69 | «sintiendo en lo íntimo de su conciencia de hembra» | §6 | ☐ |
 | 69 | «en muchos sitios enterraron los pedazos del cuerpo» | §6 | ☐ |
-| 75 | «apoyándose con dificultad en el cayado de palo» | §6 | ☐ |
 | 75 | «tres vigilantes al cuidado del ayllu» | §6 | ☐ |
 | 79 | «solar histérico, infecundo» | §6 | ☐ |
 | 79 | «en la chujlla de los Villca, la más amplia y cómoda» | §6 | ☐ |
@@ -183,13 +178,9 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 | 121 | «una cadena cogiéndose de manos» | §5 | ☐ |
 | 123 | «derritiéndose como muñeco de cera» | §5 | ☐ |
 | 125 | «ver sus nacientes senos» | §5 | ☐ |
-| 129 | «se ha cercenado una mano en la sierra» | §5 | ☐ |
-| 132 | «había sido desflorada por el patrón» | §5 | ☐ |
-| 132 | «en seguida vinieron los capataces y peones: le daban dinero» | §5 | ☐ |
-| 132 | «obligó a venderse» | §5 | ☐ |
-| 132 | «con su propia mano se quitó la vida» | §5 | ☐ |
 | 132 | «vieja historia» | §5 | ☐ |
-| 132 | «las pruebas eran irrefutables» | §5 | ☐ |
+| 132 | La hija mayor —vieja historia— había sido desflorada por el patrón […] con su propia mano se quitó la vida (cita en bloque) | §5 | ☐ |
+| 132 | «irrefutables» | §5 | ☐ |
 | 133 | «organismo de piedra del Kollasuyo» | §2 | ☐ |
 | 133 | «despedazado» | §2 | ☐ |
 | 134 | «el encaje de acero de la torre de un andarivel» | §5 | ☐ |

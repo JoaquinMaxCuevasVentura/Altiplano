@@ -5,12 +5,12 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 ## El proyecto
 
 - **El artículo.** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura. Lee la novela *Altiplano* (1945) desde la arquitectura y el dibujo.
-- **Su estado** (2 de noviembre de 2026):
-  - versión final de 74.594 caracteres y 12.609 palabras, 38 páginas en Word, reescrita el 2 de noviembre (`analisis/33`). El autor la reescribirá con su voz;
-  - 157 citas de la novela entre comillas y 2 en bloque;
+- **Su estado** (10 de noviembre de 2026):
+  - versión final de 75.240 caracteres y 12.755 palabras, 37 páginas en Word, reescrita el 2 de noviembre (`analisis/33`) y corregida el 10 de noviembre tras el cotejo con las fuentes y la variación de los tipos de cita (`analisis/35` y `36`). El autor la reescribirá con su voz;
+  - 145 citas de la novela entre comillas y 4 en bloque;
   - 36 obras en la bibliografía;
   - ocho figuras y, en serie aparte, cinco imágenes de dominio público.
-- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 4.100 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
+- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 4.300 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
 - **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
 - **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
 
@@ -23,7 +23,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
 | `articulo/figuras/` | Las ocho figuras, las cinco imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/35_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/36_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
