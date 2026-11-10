@@ -23,7 +23,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
 | `articulo/figuras/` | Las ocho figuras, las cinco imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/33_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/35_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
@@ -33,7 +33,7 @@ La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la ra
 ## Reglas de contenido
 
 1. **No inventes citas, páginas, fuentes ni hallazgos.** Cada cita tiene que existir tal cual en su fuente y en la página indicada. Si no puedes comprobarla, no la añadas: déjala como pendiente y dilo.
-2. **Las fuentes no están en el repositorio.** Faltan la transcripción paginada de la novela y los OCR de los libros, y el repositorio es público, así que no los subas. Sin ellas no se pueden volver a comprobar las citas. No cambies una cita salvo que el autor te dé la fuente. Qué fuentes faltan, con sus páginas, está en `entregables/07_fuentes_para_cotejar.md`; si el autor las sube a un repositorio privado aparte, léelas allí y no copies su contenido a este.
+2. **Las fuentes no están en el repositorio.** El repositorio es público, así que no las subas. El autor las guarda en una carpeta privada de su Drive, y con ellas se cotejaron todas las citas el 10 de noviembre (`analisis/35`). No cambies una cita salvo que el autor te dé la fuente. Qué fuentes faltan, con sus páginas, está en `entregables/07_fuentes_para_cotejar.md`; si tienes acceso a esa carpeta o el autor te las adjunta, léelas allí y no copies su contenido a este.
 3. **Las letras de canciones no se copian enteras.** Se citan uno o dos versos con su referencia. La de «Pyramid of Bones» sigue el librillo de la edición japonesa de *Virtue*. La de «Father Electricity» está pendiente de cotejo.
 4. **Lenguaje llano, en español, que no suene a IA.**
    - Los términos técnicos se explican.

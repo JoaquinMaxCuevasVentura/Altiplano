@@ -7,6 +7,7 @@ Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. D
 - **Qué trae.** Las 157 citas entre comillas y las 2 citas en bloque del artículo, en 158 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
 - **Qué está comprobado.** Cada cita se comprobó contra una transcripción digital de la novela: existe tal cual, con las correcciones de la sección 2, y está en la página indicada. Las cinco citas breves del Cuadro 1 y los datos parafraseados (cifras, orden de los hechos, quién dice qué) se revisaron aparte.
 - **Las cuatro citas que entraron el 2 de noviembre** (pp. 4, 33 y 34) y la de la p. 155, que volvió a su forma completa, se habían comprobado contra la transcripción en etapas anteriores (`analisis/06`, `13`, `16`, `29` y `30`; el detalle, en `analisis/33`). La transcripción ya no estaba en el entorno de trabajo el 2 de noviembre, así que no se volvieron a comprobar ese día.
+- **El 10 de noviembre** se volvieron a cotejar todas, las 157, las 2 en bloque y las 5 del Cuadro 1, con la edición digital de la Biblioteca Central de la UMSA, que trae al pie el número de cada página (`analisis/35`). Todas están en la página indicada. Ese PDF es el mismo texto que la transcripción, con las mismas erratas, así que no reemplaza al libro impreso.
 - **Qué falta.** Compararlas con el libro impreso. Marca la casilla ☐ de cada fila cuando lo hagas. Empieza por las pp. 88-107 (sección 1).
 - **Si encuentras una diferencia,** corrige la cita en `articulo/articulo_cosecha_de_piedras.md` y regenera el Word con `python3 articulo/generar_docx.py`.
 
@@ -39,8 +40,10 @@ El índice del propio libro conserva las páginas de inicio de cada capítulo, y
 |---|---|---|
 | 20 | «empotré en el suelo» | «empotró en el suelo» |
 | 28 | «aquel, blasón» | «aquel blasón» |
+| 66 | «aborté en plena gestación» | «abortó en plena gestación» |
 | 86 | «bajo e] brazo» | «bajo el brazo» |
 | 87 | «caligrafía tara los indios» | «caligrafía para los indios» |
+| 102 | «no les Alcanzaba la Ordenanza» | «no les alcanzaba la Ordenanza» |
 | 106 | «evitar el pagó al cura» | «evitar el pago al cura» |
 | 136 | «la noche del subsuelo -es eterna» | (no se cita en el artículo; sí en la guía de los pasteles, sin el guion) |
 | 157 | «hoyo de ha escasez pretérita» | «hoyo de la escasez pretérita» (cita en bloque) |

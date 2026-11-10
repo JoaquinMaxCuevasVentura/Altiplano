@@ -1,6 +1,14 @@
 # Fuentes para cotejar
 
-Los libros y artículos que hacen falta para volver a comprobar las citas de «Cosecha de piedras», con las páginas que cita el artículo de cada uno. Estado al 2 de noviembre de 2026.
+Los libros y artículos que hacen falta para volver a comprobar las citas de «Cosecha de piedras», con las páginas que cita el artículo de cada uno. Lista del 2 de noviembre de 2026.
+
+**Al 10 de noviembre.** El autor reunió 25 archivos en una carpeta privada de Drive y con ellos se cotejaron todas las citas (`analisis/35`). Todas existen en su fuente. Siguen faltando:
+
+- el libro impreso de la novela, sobre todo las pp. 88-107, porque el PDF de la UMSA es el mismo texto que la transcripción;
+- la portada y los créditos de Frampton (1995);
+- el colofón de *Susto al susto* y las pp. XV y 55 en imagen;
+- la dirección exacta del texto de Le Guin;
+- el librillo de *Tyranny*, para «Father Electricity».
 
 Las citas se comprobaron entre septiembre y octubre con transcripciones y OCR que nunca entraron al repositorio, y que se perdieron cuando se reinició el entorno de trabajo. Por eso la auditoría de Codex del 2 de noviembre (`analisis/34`, en la rama `codex/auditoria-version-final`) no pudo verlas, y algunas citas quedaron sin un respaldo que hoy se pueda mostrar. Con estas fuentes se pueden cerrar.
 

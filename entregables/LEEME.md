@@ -24,7 +24,7 @@ Esta carpeta reúne los archivos finales del proyecto: el artículo y los seis d
 
 - **Las figuras y las imágenes sueltas.** Están en `articulo/figuras/`: ocho PNG, los esquemas de encaje de las figuras 1 a 6 y los diagramas 7 y 8, y cinco JPG, las imágenes de dominio público 1 a 5. Algunas revistas, como *Atenea*, las piden aparte. Las tres de Guaman Poma no alcanzan para imprimir: hay que pedirlas en alta resolución (lista de envío, paso 5). Los pasos para cambiarlas por los escaneos de los pasteles están en la guía (03, sección 6) y en `articulo/figuras/LEEME.md`.
 - **El Word con cambios marcados.** Está en `articulo/articulo_cosecha_de_piedras_cambios.docx`, por si quieres revisar uno por uno los cambios de la versión final respecto de la anterior. Son muchos, porque la redacción es nueva.
-- **El registro de trabajo.** Los análisis de `analisis/` (del 01 al 33) y el informe completo de convocatorias, en `reports/`. De ahí salen estos documentos; no hace falta leerlos para enviar.
+- **El registro de trabajo.** Los análisis de `analisis/` (del 01 al 35) y el informe completo de convocatorias, en `reports/`. De ahí salen estos documentos; no hace falta leerlos para enviar.
 
 ## Cómo rehacer los archivos
 

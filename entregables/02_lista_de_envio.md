@@ -30,6 +30,7 @@ Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca
 - [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
 - [x] Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y cambia la redacción para que no se lea como un texto de IA (`analisis/33_version_final_sin_patrones_de_ia.md`).
 - [x] Word regenerado con la versión final.
+- [x] Citas cotejadas otra vez con las fuentes que reuniste, el 10 de noviembre: todas existen en su fuente. Quedan unas pocas correcciones de página y de forma por aprobar (`analisis/35`, §8).
 
 ## Lo que te toca, en orden
 
@@ -100,29 +101,26 @@ Las cinco imágenes de dominio público ya están en el artículo (`articulo/fig
 
 ### 6. Cotejar las citas con el libro impreso
 
-Para eso hacen falta las fuentes, que no están en el repositorio. Qué libros subir, con qué páginas y dónde guardarlos está en `07_fuentes_para_cotejar`.
+Para eso hacen falta las fuentes, que no están en el repositorio. Qué libros subir, con qué páginas y dónde guardarlos está en `07_fuentes_para_cotejar`. El 10 de noviembre se cotejaron todas las citas con los archivos que reuniste (`analisis/35`). Falta sobre todo el libro impreso de la novela, porque el PDF de la UMSA es el mismo texto que la transcripción.
 
 Usa `04_fichero_de_pasajes`: trae las citas de la novela por página, con una casilla para marcar. Empieza por las pp. 88-107, donde la transcripción repite texto y alguna cita puede estar corrida una página.
 
-Coteja también estas citas, tomadas de fuentes escaneadas o de copias digitales:
+Las demás fuentes ya se cotejaron el 10 de noviembre, incluidas Barnadas, Zavaleta, las páginas de Churata y las citas recuperadas el 2 de noviembre. Quedan:
 
-- Barnadas (1978 [1975]: 84 y 46-47), cuyo OCR estaba muy dañado;
 - Churata, *El pez de oro*, p. 20: la página es la de una versión digital de 2007 y no la de la edición de 1957; conviene citar una edición de referencia;
-- Churata, *Textos esenciales*, pp. 109-110, 123 y 129: las páginas se tomaron del índice del libro y de una copia en Word, así que conviene confirmarlas en el PDF;
-- las citas recuperadas el 2 de noviembre de versiones anteriores (tabla de `analisis/33`), que no se pudieron volver a comprobar ese día;
-- Zavaleta Mercado (1986: 21, n. 1);
+- Spedding (2025: XV) y Rodríguez y Rodríguez (2025: 55): el texto está, pero el extracto en Word no tiene números de página;
 - Cornejo Polar, si decides citar la 1.ª edición (véase el paso 7).
 
 ### 7. Revisar los datos que no se pudieron comprobar del todo
 
 | Fuente | Qué falta |
 |---|---|
-| Cárcamo Pino (2019) | El artículo pone «Cham: Springer», que publicó las actas de EGA 2018. Cárcamo Pino (2025b) las cita como «Alicante: EGA, 2019». Elige una forma |
-| Frampton (1995) | Confirmar en la portada el editor (John Cava) y la ciudad |
-| Le Guin (2021 [1986]) | Completar la dirección exacta del texto en es.theanarchistlibrary.org |
-| Alexander *et al.* (1977) | Las páginas citadas (xiii, xliii, 395, 405, 610-611, 621 y 1166) salen del OCR del libro. Cotejarlas con el impreso. Si consigues la edición castellana (Gustavo Gili), conviene citarla |
-| Martin (2014: 85) y Scott (2020 [1998]: 3) | Paginaciones reconstruidas. Cotejar con el impreso si puedes |
-| Spedding (2025) | Confirmar en el libro el año, el ISBN y las páginas de la sección (XIII-XXIII) |
+| Cárcamo Pino (2019) | Resuelto el 10 de noviembre: la página de créditos del libro dice Springer, Cham, 2019, y el capítulo ocupa las pp. 1411-1423, como pone el artículo. Si quieres, se añade el DOI: 10.1007/978-3-319-93749-6_117 |
+| Frampton (1995) | Confirmar en la portada el editor (John Cava) y la ciudad. La cita de la p. 5 ya se cotejó; el archivo que reuniste trae solo la introducción |
+| Le Guin (2021 [1986]) | Completar la dirección exacta del texto en es.theanarchistlibrary.org. El colofón del PDF no la trae |
+| Alexander *et al.* (1977) | Las páginas citadas (xiii, xliii, 395, 405, 610-611, 621 y 1166) se confirmaron el 10 de noviembre con su número impreso. Si consigues la edición castellana (Gustavo Gili), conviene citarla |
+| Martin (2014: 85) y Scott (2020 [1998]: 3) | Confirmadas el 10 de noviembre. Las palabras de Martin son suyas, no de Deleuze |
+| Spedding (2025) | Confirmar en el libro el año, el ISBN y las páginas de la sección (XIII-XXIII). El extracto que reuniste no trae colofón ni números de página |
 | Rodríguez y Rodríguez (2025) | Confirmar la última página del capítulo (61) |
 | Cornejo Polar (2003 [1994]: 41, 180) | Se cita la 2.ª edición (2003). Si prefieres la 1.ª (Horizonte, 1994), comprobar las páginas |
 | Bertonio (2011 [1612]) | Se cita la transcripción digital. Si un evaluador lo pide, cotejar con el facsímil de 1612 |
