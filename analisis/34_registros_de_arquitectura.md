@@ -53,3 +53,14 @@ Está en la sección «Lo que falta o decides tú» de `registros_de_arquitectur
 - confirmar los derechos de las tres láminas de Posnansky de 1914;
 - decidir si se queda el lado peruano del lago;
 - las fuentes que faltan (Stübel y Uhle, Angrand, Métraux).
+
+## Nota del 11 de noviembre: la carpeta del autor
+
+El autor pidió la lista de lo que no se había podido abrir (`registros_de_arquitectura/recursos_por_conseguir.md`), reunió en su Drive 53 PDF y 12 imágenes y pidió incluir también lo que no es de dominio público.
+
+- **El acceso.** La carpeta se leyó con el conector de Drive y los archivos se bajaron por su enlace público. Se bajaron 27 PDF y 5 imágenes; quince se hojearon enteros.
+- **Lo que entró.** 34 láminas nuevas, que llevan el catálogo a 95. Dieciséis forman una familia nueva, «La casa medida», con las plantas, los cortes y los alzados de la casa aymara y del putuco que faltaban en la primera tanda. Las demás son de Stübel y Uhle (1892), de Angrand (1848) y de Wiener.
+- **Lo que cambia en las conclusiones.** La primera tanda decía que la casa común no tenía levantamiento. Lo tiene, pero en estudios de 1935 a 2025, casi todos con derechos. En las fuentes libres sigue sin aparecer.
+- **Los derechos.** Catorce láminas tienen derechos, dos tienen licencia abierta con condiciones y cinco más quedan por confirmar. El catálogo marca el estado de cada una y el `LEEME.md` lo avisa al principio. Los PDF completos no se subieron.
+- **Cómo se comprobó.** Los títulos se leyeron en el pie de cada figura, con el texto del PDF o con Tesseract. Los números de lámina de Stübel y Uhle salen de su lista de láminas y de la cifra impresa en cada una.
+- **Lo que no se hizo.** Quedan diez PDF bajados sin abrir y veintiséis sin bajar. La lista está en `recursos_por_conseguir.md`.

@@ -6,6 +6,50 @@ Cada entrada dice qué es, dónde está, qué pasó al intentar abrirla y qué c
 
 Los bloqueos son del entorno de trabajo, que consulta con programas y no con un navegador. Casi todos estos enlaces deberían abrir sin problema desde un teléfono o una computadora.
 
+## Estado al 11 de noviembre: lo que el autor consiguió
+
+El autor reunió en su Drive 53 PDF y 12 imágenes a partir de esta lista, con una nota propia de fuentes y pendientes. La carpeta se pudo leer y bajar. Lo que sigue dice en qué quedó cada cosa; las secciones 1 a 10 se dejan como estaban, para el registro.
+
+**Revisados página por página, con láminas que entraron al catálogo:**
+
+- Stübel y Uhle, 1892: diez láminas (n.os 46, 47 y 64 a 71).
+- Prümers, 1993, con los dibujos de Angrand de 1848: cinco (n.os 59 a 63).
+- Vitulas-Quille y Reynoso-Machaca, 2025: cuatro (n.os 9 a 12).
+- Suárez Jordán, 1990: tres (n.os 14 a 16).
+- Chui Betancur y otros, 2022: dos (n.os 18 y 19).
+- Chávez, 1998 (n.º 8); Gamio, 2017 (n.º 13); Yampara, 2019 (n.º 17); González Carrasco, 2016 (n.º 20); Alfaro y otros, 2023 (n.º 21); Šolc, 1975 (n.º 22); Métraux, 1935 (n.º 23).
+- De las imágenes sueltas: la chullpa de Wiener (n.º 35), los Baños del Inca (n.º 93) y el grabado de *Le Tour du monde* (n.º 36).
+
+**Revisados sin láminas que sirvan:**
+
+- Bennett, 1934: cortes de excavación, cerámica y un plano del sitio.
+- Muñoz Cardozo y Lázaro Mollo, 2014: fotografías.
+- Chui Betancur y otros, 2025: fotografías.
+- Šolc, reedición de 2011: las mismas fotos y el mismo plano que la edición de 1975.
+- Bandelier, 1911: el PDF de la American Antiquarian Society tampoco trae las láminas.
+- De las imágenes sueltas quedaron fuera el Tribunal del Inca y la Horca de Copacabana, que son rocas talladas; la calle de Arequipa; las fotos pequeñas de Bennett y de Posnansky, y el croquis de Tiwanaku, que es la foto de una maqueta del sitio.
+
+**Bajados y todavía sin abrir:**
+
+- Kesseli y Pärssinen, 2005, y Gangui, 2024, sobre chullpas.
+- El álbum de la misión francesa de 1903, que son fotografías.
+- Peña Cheneaux, 2022, sobre la vivienda de Coporaque. Es del valle del Colca y no del altiplano, pero es una tesis de tipologías y puede traer levantamientos.
+- Cajavilca, 2019; Moscoso, 2012; Sandoval, 2015; Torres, 2017; Yépez, 2010; Lucano y Quispe, 2022.
+
+**Sin bajar todavía,** por tamaño o porque ya se habían revisado en Internet Archive:
+
+- Tschudi, *Reisen durch Südamerika*, t. V (260 MB). Es el tomo del altiplano y falta hojearlo.
+- Posnansky, *Antropología y sociología de las razas interandinas*, 1938 (155 MB). Puede traer casas chipayas.
+- Posnansky de 1910 y los dos folletos de 1938; Díaz Romero de 1906 y de 1920; Wright, Markham, Marcoy, Neveu-Lemaire; Middendorf, t. I y II; el tomo IV de d'Orbigny; el tomo de Castelnau de 1850; Bandelier de 1905; Orlandi, 2025, y el plan de manejo de Tiwanaku de 2016.
+- Ya revisados en la primera tanda desde Internet Archive: Bandelier de 1910, Inwards, Middendorf t. III, el atlas de d'Orbigny, las *Antiquités* de Castelnau, Posnansky de 1914, el *Rapport* de Créqui-Montfort y el *Handbook* de 1946.
+
+**Dos datos de la nota del autor que corrigen esta lista:**
+
+- La hoja n572 de Wiener (p. 539) es el corte y la planta de una chullpa a cinco leguas al suroeste de Puno.
+- La hoja n479 de Wiener es una calle de Arequipa, así que no interesa.
+
+**Lo que sigue pendiente,** según la nota del autor: el atlas de Rivero y Tschudi, la *Lettre* de Angrand de 1866, el capítulo de Vilca Barrantes y Marín Mamani (2024), el libro de Marussi (1999), la tesis de Gamarra Lazo (2019), el trabajo de CORE sobre la vivienda uru chipaya, La Barre y Tschopik, Rydén (1947), González Rodríguez y Sillar sobre Carangas, un ejemplar mejor de Castelnau, el PDF completo de Wiener y las imágenes de Wikimedia Commons que no se dejaron bajar, entre ellas la página 252 de *Le Tour du monde* con el interior de una chullpa.
+
 ## 1. Repositorios que rechazaron la consulta
 
 | Repositorio | Qué pasó | Qué buscar allí |

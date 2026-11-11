@@ -25,7 +25,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
 | `analisis/01_…` a `analisis/34_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
-| `registros_de_arquitectura/` | 61 láminas de dominio público con dibujos de arquitectura del altiplano, su catálogo y seis hojas de contactos | `catalogo.json` y `LEEME.md`, sí; las hojas y `catalogo.md` se regeneran con `generar_hojas.py` |
+| `registros_de_arquitectura/` | 95 láminas con dibujos de arquitectura del altiplano, su catálogo y siete hojas de contactos. Algunas tienen derechos: el catálogo lo marca y no pasan al artículo | `catalogo.json` y `LEEME.md`, sí; las hojas y `catalogo.md` se regeneran con `generar_hojas.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
 

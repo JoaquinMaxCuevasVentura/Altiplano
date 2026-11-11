@@ -1,12 +1,19 @@
 # Registros de arquitectura del altiplano
 
-61 láminas de dominio público con dibujos de arquitectura del altiplano boliviano y de la cuenca del lago Titicaca, publicadas entre 1847 y 1914. Cada una lleva su fuente, su página y un comentario que dice por qué entra. 10 de noviembre de 2026.
+95 láminas con dibujos de arquitectura del altiplano boliviano y de la cuenca del lago Titicaca, de 1847 a 2025. Cada una lleva su fuente, su página y un comentario que dice por qué entra.
+
+Se hizo en dos tandas:
+
+- **10 de noviembre de 2026:** 61 láminas de dominio público, tomadas de libros de Internet Archive.
+- **11 de noviembre de 2026:** 34 láminas más, sacadas de los 53 PDF y las 12 imágenes que el autor reunió en su Drive a partir de `recursos_por_conseguir.md`. Por decisión suya, esta tanda incluye obras con derechos.
 
 Es solo una recopilación. No toca el artículo ni sus figuras.
 
+> **Aviso sobre los derechos.** Este repositorio es público. Dieciséis láminas vienen de estudios con derechos de autor o con licencias que ponen condiciones, y otras ocho tienen los derechos por confirmar. Están aquí para estudio, cada una con su cita. Ninguna debe pasar al artículo ni a otra publicación sin permiso. El detalle está en «Fuentes y derechos».
+
 ## La lámina de referencia
 
-El pedido parte de una imagen que el autor guardó de la cuenta *vernacularology*: «Bohío», de F. Leon, 1995, tinta sobre Mylar, publicada según esa cuenta en *Black and White: Journal of Architecture and Ideas*, vol. 0, n.º 3, «Mile Zero». La imagen no está en el repositorio porque no es de uso libre.
+El pedido parte de una imagen que el autor guardó de la cuenta *vernacularology*: «Bohío», de F. Leon, 1995, tinta sobre Mylar, publicada según esa cuenta en *Black and White: Journal of Architecture and Ideas*, vol. 0, n.º 3, «Mile Zero». Esa imagen no está en el repositorio.
 
 Lo que se ve en ella:
 
@@ -26,55 +33,60 @@ De esa lectura salen cinco criterios. Cada lámina del catálogo dice por cuále
 
 | Camino | Qué pide | Láminas |
 |---|---|---|
-| **La medida** | Planta, corte o alzado en proyección recta, con escala o cotas | 26 |
-| **El material** | Que el dibujo distinga pieza por pieza de qué está hecho el edificio | 25 |
-| **El tipo común** | Un edificio corriente y sin autor, no un monumento | 17 |
-| **La leyenda** | Letras, números o nombres que explican las partes dentro de la misma lámina | 22 |
-| **El objeto solo** | El edificio aislado y de frente, sin escena ni paisaje | 30 |
+| **La medida** | Planta, corte o alzado en proyección recta, con escala o cotas | 48 |
+| **El material** | Que el dibujo distinga pieza por pieza de qué está hecho el edificio | 38 |
+| **El tipo común** | Un edificio corriente y sin autor, no un monumento | 35 |
+| **La leyenda** | Letras, números o nombres que explican las partes dentro de la misma lámina | 42 |
+| **El objeto solo** | El edificio aislado y de frente, sin escena ni paisaje | 50 |
 
 Dos láminas no cumplen ninguno y entran como contraste; su comentario lo dice.
 
-Ninguna lámina cumple los cinco caminos. Las más cercanas a la referencia son estas:
+Las más cercanas a la referencia:
 
-- **N.º 28,** el pórtico de Tiwanaku de d'Orbigny (1847): dos alzados de frente, sin paisaje y con escala.
-- **N.º 8,** la tumba aymara de Carangas, también de d'Orbigny: planta y corte con escala.
-- **N.º 51,** una lámina de Bandelier (1910) con los muros de Pilco-Kayma en alzado y cada piedra dibujada.
-- **N.º 2,** la casa de un agricultor cerca de Tiwanaku, de Inwards (1884): la única casa dibujada por sí misma.
+- **N.º 8,** el putuku de champa de Chávez (1998): una casa sola, casi de frente, con cada bloque dibujado y un hombre al lado. Es el bohío del altiplano.
+- **N.os 9 y 10,** la planta, los cortes y el corte con materiales de un putuco de Taraco (2025): tienen cotas, escala y los materiales nombrados.
+- **N.º 17,** la planta de una casa en Jalsuri (2019), con cada recinto rotulado en aymara.
+- **N.º 59,** la Puerta del Sol de Angrand (1848): un alzado a la aguada, de frente, con escala y sin paisaje.
+- **N.º 64,** la misma portada en Stübel y Uhle (1892), acotada a escala 1:15.
+- **N.º 48,** el pórtico de d'Orbigny (1847), con sus dos caras en alzado.
 
 ## Qué hay
 
 | Archivo | Qué es |
 |---|---|
-| `imagenes/` | Las 61 láminas, a 1.300 px de lado como máximo. El nombre empieza con el número del catálogo |
+| `imagenes/` | Las 95 láminas, a 1.300 px de lado como máximo. El nombre empieza con el número del catálogo |
 | `catalogo.json` | La fuente de datos: la ficha de cada lámina, las familias y los caminos. Se edita a mano |
 | `catalogo.md` | La misma ficha en tablas legibles, con el comentario de cada lámina. La escribe el generador: no se edita |
-| `hoja_1_casa.jpg` a `hoja_6_pueblo.jpg` | Una hoja de contactos por familia, para ver las láminas juntas |
+| `hoja_1_casa.jpg` a `hoja_7_pueblo.jpg` | Una hoja de contactos por familia. Las láminas con derechos van marcadas |
 | `generar_hojas.py` | Rehace las hojas y `catalogo.md` |
-| `recursos_por_conseguir.md` | La lista de lo que apareció en la búsqueda y no se pudo abrir, con su enlace, lo que pasó y qué buscar en cada sitio |
+| `recursos_por_conseguir.md` | Lo que no se pudo abrir en la primera tanda y en qué quedó después de la carpeta del autor |
 
-## Las seis familias
+## Las siete familias
 
 | Familia | Láminas | Qué reúne |
 |---|---|---|
-| La casa común | 7 | Chozas, casas de pueblo y tambos. Todas son vistas |
-| La torre funeraria | 11 | La chullpa aymara y las tumbas de cista, con tres plantas y cortes |
-| Tiwanaku en planta y en perfil | 9 | Planos de conjunto, plantas piedra por piedra y un perfil |
-| Tiwanaku: portadas y piedra labrada | 11 | La portada monolítica en alzado y en vista, y los bloques dibujados como piezas |
-| Las islas del lago | 21 | La arquitectura inca de las islas del Sol y de la Luna |
+| La casa común | 7 | Chozas, casas de pueblo y tambos vistos por viajeros del siglo XIX. Todas son vistas |
+| La casa medida | 16 | Plantas, cortes y alzados de la casa aymara, del putuco y de dos pueblos, en estudios de 1935 a 2025 |
+| La torre funeraria | 13 | La chullpa aymara y las tumbas de cista, con cuatro plantas y cortes |
+| Tiwanaku en planta y en perfil | 11 | Planos de conjunto, plantas piedra por piedra y un perfil |
+| Tiwanaku: portadas y piedra labrada | 24 | La portada monolítica en alzado y en vista, y los bloques dibujados como piezas |
+| Las islas y la orilla del lago | 22 | La arquitectura inca de las islas del Sol y de la Luna y de Copacabana |
 | El pueblo y la iglesia | 2 | La entrada de la iglesia de Tiwanaku y el santuario de Copacabana |
 
 ## Lo que muestra la recopilación
 
 Son observaciones sobre lo que se encontró, no sobre la historia del dibujo.
 
-1. **La casa común del altiplano no tiene levantamiento en estas fuentes.**
-   - Las siete láminas de casas son vistas de viajeros.
-   - Las plantas, los cortes y los alzados existen desde 1847, pero se hicieron para tumbas, templos y palacios.
-   - El equivalente altiplánico del bohío, una casa de adobe, piedra o champa con techo de paja dibujada en alzado y con sus materiales nombrados, no apareció en ninguna fuente de dominio público.
-2. **La chullpa es el tipo mejor medido.** Tiene planta y corte en d'Orbigny (n.º 8) y en Squier (n.os 10, 11 y 12).
-3. **Los dos interiores.** Solo dos láminas muestran un edificio por dentro: la choza de Uchusuma (n.º 5) y las cámaras del palacio de la isla del Sol (n.º 42). En la primera se ven los palos del techo y la paja.
-4. **La piedra que cambia de edificio.** Inwards dibuja la casa del n.º 2 para mostrar que sus pilares, su escalera y su portada salieron de las ruinas. Wiener dibuja la entrada de la iglesia de Tiwanaku con dos monolitos antiguos a los lados (n.º 60).
-5. **El mismo edificio, dibujado tres veces.** El palacio de la isla del Sol aparece en vista en d'Orbigny (n.º 39), en planta en Squier (n.os 43 y 44) y en detalle en Bandelier (n.os 50 a 54). Sirve para comparar qué registra cada manera de dibujar.
+1. **La casa común tardó un siglo en ser medida.**
+   - En los libros del siglo XIX, las casas son vistas de viajeros (n.os 1 a 7). Las plantas y los cortes se reservaban para tumbas, templos y palacios.
+   - Los levantamientos de la casa aparecen después: el pueblo de Chipaya en 1935 (n.º 23), Enquelga en 1975 (n.º 22), la vivienda aymara en 1990 (n.os 14 a 16) y los putucos desde 1998 (n.os 8 a 13).
+   - Por eso casi todo lo que hay de la casa medida tiene derechos, y lo que está libre es de monumentos.
+2. **El putuco es la casa mejor dibujada.** Tiene vista de frente (n.º 8), planta y cortes (n.º 9), corte con materiales (n.º 10), planta de conjunto (n.º 11) y dos perspectivas rotuladas (n.os 12 y 13).
+3. **Sigue faltando el alzado con leyenda.** Ningún dibujo junta, como el bohío, el alzado de frente, la escala y la lista de materiales con su nombre local. El n.º 8 tiene lo primero; el n.º 10, los materiales en inglés; el n.º 17, los nombres en aymara sobre una planta. Reunirlos es trabajo de dibujo.
+4. **La Puerta del Sol, dibujada por cuatro manos.** D'Orbigny (n.º 48, 1847), Angrand (n.º 59, 1848), Wiener (n.os 52 y 53, 1880) y Stübel y Uhle (n.os 64 y 65, 1892) dibujan la misma pieza. Sirve para comparar qué registra cada manera: la aguada, el grabado, la vista y el alzado acotado.
+5. **La piedra como pieza suelta.** Inwards (n.os 55 a 58), Angrand (n.os 61 a 63) y Stübel y Uhle (n.os 68 a 71) dibujan los bloques de Tiwanaku uno por uno, en isométrica o en alzado y planta. Es el mismo trato que el bohío da a cada tabla.
+6. **Los dos interiores.** Solo dos láminas muestran un edificio por dentro: la choza de Uchusuma (n.º 5) y las cámaras del palacio de la isla del Sol (n.º 75).
+7. **La piedra que cambia de edificio.** Inwards dibuja la casa del n.º 2 para mostrar que sus pilares, su escalera y su portada salieron de las ruinas. Wiener dibuja la entrada de la iglesia de Tiwanaku con dos monolitos antiguos a los lados (n.º 94).
 
 ## Una nota sobre el nombre
 
@@ -82,79 +94,74 @@ El pedido habla de culturas «mesoamericanas» de Bolivia. Mesoamérica es el á
 
 ## Fuentes y derechos
 
-| Fuente | Láminas | Derechos |
+Cada ficha del catálogo lleva su estado. Son cinco.
+
+| Estado | Láminas | Qué significa |
 |---|---|---|
-| E. G. Squier, *Peru: Incidents of Travel and Exploration in the Land of the Incas*, 1877. Internet Archive, escaneo del Getty Research Institute | 21 | `NOT_IN_COPYRIGHT` en los metadatos del ejemplar |
-| A. F. Bandelier, *The Islands of Titicaca and Koati*, 1910. Internet Archive, escaneo del Getty Research Institute | 12 | `NOT_IN_COPYRIGHT` en los metadatos del ejemplar |
-| Alcide d'Orbigny, *Voyage dans l'Amérique méridionale*, atlas de la parte histórica, 1847. Internet Archive, escaneo de Smithsonian Libraries para la Biodiversity Heritage Library | 8 | «Not in copyright», según la ficha |
-| Richard Inwards, *The Temple of the Andes*, 1884. Internet Archive, escaneo del Getty Research Institute | 8 | `NOT_IN_COPYRIGHT` en los metadatos del ejemplar |
-| Charles Wiener, *Pérou et Bolivie*, 1880. Internet Archive, escaneo de la Universidad de Carolina del Norte | 7 | Dominio público por fecha: el autor murió en 1913. La ficha no trae declaración |
-| Arthur Posnansky, *Guía general ilustrada…*, La Paz, 1912. Internet Archive, escaneo de la Universidad de Carolina del Norte | 1 | Dominio público por fecha: el autor murió en 1946. La ficha no trae declaración |
-| E. W. Middendorf, *Peru*, t. III, 1895. Internet Archive, escaneo de la Universidad de Toronto | 1 | Dominio público por fecha: el autor murió en 1908. La ficha no trae declaración |
-| Arthur Posnansky, *Una metrópoli prehistórica en la América del Sud*, t. I, Berlín, 1914. Internet Archive, escaneo de Wellcome Collection | 3 | **Por confirmar.** La obra es de 1914 y el autor murió en 1946, pero la ficha de Wellcome dice que el ejemplar podría tener derechos |
+| Comprobado | 50 | La institución que guarda el ejemplar dice que está en dominio público |
+| Por fecha | 21 | El autor murió hace más de setenta años, pero la ficha del escaneo no trae declaración |
+| Por confirmar | 8 | Hay un motivo concreto de duda. No conviene publicarlas |
+| Licencia abierta | 2 | Se pueden reproducir citando al autor y sin uso comercial |
+| Con derechos | 14 | Solo para estudio. Reproducirlas fuera de aquí pide permiso |
 
-- **Las páginas.** Las de Squier, Wiener y Middendorf son las páginas impresas. Las de Bandelier salen de su lista de láminas. En Inwards, el número es el de la lámina.
-- **Lo que no se pudo leer.** Tres láminas de d'Orbigny y una de Posnansky no dejan leer su número o su título en el escaneo. La ficha lo dice y da el enlace a la hoja.
+**Primera tanda, de Internet Archive:**
+
+| Fuente | Láminas | Estado |
+|---|---|---|
+| E. G. Squier, *Peru: Incidents of Travel and Exploration in the Land of the Incas*, 1877. Escaneo del Getty Research Institute | 21 | Comprobado: `NOT_IN_COPYRIGHT` |
+| A. F. Bandelier, *The Islands of Titicaca and Koati*, 1910. Escaneo del Getty Research Institute | 12 | Comprobado: `NOT_IN_COPYRIGHT` |
+| Alcide d'Orbigny, *Voyage dans l'Amérique méridionale*, atlas de la parte histórica, 1847. Escaneo de Smithsonian Libraries | 8 | Comprobado: «Not in copyright» |
+| Richard Inwards, *The Temple of the Andes*, 1884. Escaneo del Getty Research Institute | 8 | Comprobado: `NOT_IN_COPYRIGHT` |
+| Charles Wiener, *Pérou et Bolivie*, 1880. Escaneo de la Universidad de Carolina del Norte | 9 | Por fecha: el autor murió en 1913 |
+| Arthur Posnansky, *Guía general ilustrada…*, La Paz, 1912 | 1 | Por fecha: el autor murió en 1946 |
+| E. W. Middendorf, *Peru*, t. III, 1895 | 1 | Por fecha: el autor murió en 1908 |
+| Arthur Posnansky, *Una metrópoli prehistórica en la América del Sud*, 1914. Escaneo de Wellcome Collection | 3 | **Por confirmar:** la ficha de Wellcome dice que el ejemplar podría tener derechos |
+
+Dos de las nueve láminas de Wiener (n.os 35 y 93) son hojas que el autor ubicó y leyó.
+
+**Segunda tanda, de la carpeta del autor:**
+
+| Fuente | Láminas | Estado |
+|---|---|---|
+| Alphons Stübel y Max Uhle, *Die Ruinenstätte von Tiahuanaco*, 1892. Digitalización de la Universidad de Heidelberg | 10 | Por fecha: Stübel murió en 1904 y Uhle en 1944. Las condiciones de Heidelberg no se pudieron leer |
+| Léonce Angrand, dibujos de 1848, publicados por Heiko Prümers en *Beiträge zur Allgemeinen und Vergleichenden Archäologie*, 13, 1993 | 5 | **Por confirmar:** los dibujos son de 1848 y Angrand murió en 1886, pero la reproducción viene de un artículo de 1993. Los originales están en la Biblioteca Nacional de Francia |
+| Édouard Riou, grabado de *Le Tour du monde*, t. 6, 1862. Wikimedia Commons | 1 | Comprobado: dominio público, según la ficha |
+| Yasmani Vitulas-Quille y Karina Reynoso-Machaca, capítulo de IntechOpen, 2025 | 4 | Con derechos. La licencia no consta en el PDF |
+| Marina Suárez Jordán, *Ciudad y Territorio*, 85, 1990 | 3 | Con derechos |
+| Heber Chui Betancur y otros, *Cuadernos de Vivienda y Urbanismo*, 15, 2022 | 2 | Con derechos. Licencia sin comprobar |
+| Sergio J. Chávez, *Andean Past*, 5, 1998 | 1 | Con derechos |
+| Andrea Gamio Felipa, *Anales de Edificación*, 3 (2), 2017. El dibujo es de Marussi (1999) | 1 | Con derechos |
+| Pacha Yapucha Yampara Blanco, *Revista Nodo*, 14 (27), 2019 | 1 | Con derechos. Licencia sin comprobar |
+| Václav Šolc, *Annals of the Náprstek Museum*, 8, 1975 | 1 | Con derechos |
+| Alfred Métraux, *Journal de la Société des Américanistes*, 27 (1), 1935 | 1 | Con derechos: el autor murió en 1963 |
+| Diego González Carrasco, tesis de la Universidad de Sheffield, 2016 | 1 | Licencia abierta: CC BY-NC-ND 2.5 |
+| Sergio Alfaro Malatesta y otros, *Maskana*, 14 (2), 2023. El croquis es de Contreras Álvarez (1974) | 1 | Licencia abierta: CC BY-NC-SA 4.0 |
+
+Notas:
+
+- **Varias de esas revistas publican hoy con licencias Creative Commons.** No se comprobó la de cada artículo, así que la ficha dice «con derechos» mientras no conste otra cosa. Vale la pena mirarlo: algunas pasarían a «licencia abierta».
+- **Los PDF completos no están en el repositorio.** Siguen en el Drive del autor. Aquí solo va el recorte de cada figura.
+- **Las páginas.** Las de Squier, Wiener y Middendorf son las páginas impresas. Las de Bandelier salen de su lista de láminas. En Inwards y en Stübel y Uhle, el número es el de la lámina. En Angrand, el número es el de la figura del artículo de Prümers.
+- **Lo que no se pudo leer.** Tres láminas de d'Orbigny y una de Posnansky no dejan leer su número o su título en el escaneo. La ficha lo dice.
 - **Los títulos de Inwards.** Sus láminas no llevan título impreso. La ficha cita la frase con que el propio autor las describe en el texto.
-- **Lo que se tocó.** Cada lámina es un recorte de la página escaneada. Las que venían de costado se giraron. A las tres de Posnansky de 1914 se les subió el contraste, porque el escaneo es oscuro.
-
-## Lo que se buscó y no entró
-
-**Libros revisados sin dibujos de arquitectura que sirvan:**
-
-- David Forbes, *On the Aymara Indians of Bolivia and Peru*, 1870: retratos y objetos.
-- Arthur Chervin, *Anthropologie bolivienne*, 1907: fotografías antropométricas.
-- Créqui-Montfort y Sénéchal de la Grange, *Rapport sur une mission scientifique en Amérique du Sud*, 1904: mapas.
-- A. F. Bandelier, *The Ruins at Tiahuanaco*, 1911: el escaneo disponible no conserva las láminas.
-- Francis de Castelnau, *Antiquités des Incas*, 1854: la lámina de Tiwanaku es de iconografía, y el escaneo está muy lavado.
-- Posnansky (1912) y Middendorf (1895) traen sobre todo fotografías. De cada uno entró una sola lámina.
-
-**Con derechos o con derechos dudosos.** Sirven para consultar; no se copiaron al repositorio.
-
-- *Handbook of South American Indians*, vol. 2, Smithsonian, 1946 ([Internet Archive](https://archive.org/details/bulletin14321946smit)). Son fotografías cedidas por Alfred Métraux y Harry Tschopik:
-  - lámina 101, chullpas en territorio aymara ([hoja n716](https://archive.org/details/bulletin14321946smit/page/n716/mode/1up));
-  - lámina 114, el techado de una casa chipaya en Carangas ([hoja n737](https://archive.org/details/bulletin14321946smit/page/n737/mode/1up));
-  - las láminas vecinas (hojas n719 y n736) muestran casas, pero no se cotejaron sus pies.
-- Alfred Métraux, *Les Indiens Uro-Čipaya de Carangas*, 1935 ([Internet Archive](https://archive.org/details/les-indiens-uro-cypaya-de-carangas-1935)). El autor murió en 1963. No se revisó.
-- Arthur Posnansky, *Antropología y sociología de las razas interandinas*, 1938 ([Internet Archive](https://archive.org/details/antropologia-y-sociologia-de-las-razas-interandinas-y-de-las-regiones-adyacentes)). No se revisó.
-- Weston La Barre, *The Aymara Indians of the Lake Titicaca Plateau*, 1948, y Harry Tschopik, *The Aymara of Chucuito*, 1951. No se revisaron.
-
-**ResearchGate y revistas académicas.** ResearchGate rechaza las consultas automáticas, así que sus figuras no se revisaron una por una. Las figuras de estos trabajos son de sus autores, salvo que la revista diga otra cosa.
-
-- [«Comparación del sistema constructivo de Putucos con otros sistemas constructivos en tierra»](https://www.researchgate.net/publication/319967004_Comparacion_del_sistema_constructivo_de_Putucos_con_otros_sistemas_constructivos_en_tierra_Comparison_of_the_construction_system_of_Putucos_with_other_construction_systems_in_earth).
-- [«Prototype of a Putuco-Type Vernacular House Based on Ch'ampa…»](https://www.researchgate.net/publication/383319494_Prototype_of_a_Putuco-Type_Vernacular_House_Based_on_Ch'ampa_to_Improve_Thermal_Comfort_in_a_Cold_and_Dry_Climate_in_Southern_Peru), de 2024.
-- [«Arquitectura de los pueblos milenarios del altiplano: una configuración femenina y masculina, Jaqi Andino»](https://www.researchgate.net/publication/355992328_arquitectura_de_los_pueblos_milenarios_del_altiplano_una_configuracion_femenina_y_masculina_Jaqi_Andino). Según su resumen, levanta 15 viviendas del altiplano boliviano y peruano.
-- [«Características de la arquitectura vernácula en zonas altoandinas de Perú»](https://www.researchgate.net/publication/362614435_Caracteristicas_de_la_arquitectura_vernacula_en_zonas_altoandinas_de_Peru_Una_contribucion_al_estudio_del_mundo_rural).
-- Sergio Alfaro Malatesta, Beatriz Yuste Miguel y Massimo Palme, [«Los cielos de paja y barro aligerado: respuesta adaptativa al clima extremo en contexto andino»](https://publicaciones.ucuenca.edu.ec/ojs/index.php/maskana/article/view/4900), *Maskana*, 14 (2), 2023. Licencia CC BY-NC-SA 4.0.
-- Risto Kesseli y Martti Pärssinen, [«Identidad étnica y muerte: torres funerarias (chullpas) como símbolos de poder étnico en el altiplano boliviano de Pakasa»](https://journals.openedition.org/bifea/4936), *Bulletin de l'IFEA*, 34 (3), 2005. En la parte revisada trae mapas y fotografías, sin plantas.
-- Un artículo de *Andean Past* sobre el putuku y un trabajo sobre la casa uru chipaya en el repositorio CORE aparecieron en la búsqueda, pero sus servidores no dejaron leerlos.
-- Dos obras impresas que estos trabajos citan como fuente de planos: Marussi Castellán, *Arquitectura vernacular: los putucos de Puno* (Universidad Ricardo Palma, 1999), y Šolc, *Casa aymara en Enquelga* (1975).
-
-**Repositorios que no respondieron desde el entorno de trabajo:**
-
-- Gallica, HathiTrust, Europeana y el sitio de la Biodiversity Heritage Library dieron el error 403. De la BHL se usó la copia que está en Internet Archive.
-- La New York Public Library no conectó.
-- Wikimedia Commons limita las consultas. Solo se pudieron listar categorías.
-- La Library of Congress respondió. No se buscó en ella porque su fondo de Bolivia es de fotografías.
+- **Lo que se tocó.** Cada lámina es un recorte de la página. Las que venían de costado se giraron. A las tres de Posnansky de 1914 se les subió el contraste.
 
 ## Lo que falta o decides tú
 
-1. **Las familias y los caminos** son una propuesta. Se cambian en `catalogo.json`.
-2. **Las tres láminas de Posnansky de 1914** (n.os 25, 26 y 27) tienen los derechos por confirmar. Hasta entonces, no conviene publicarlas.
-3. **El lado peruano del lago.** Entraron nueve láminas de Puno, de la puna de Tacna y de Tacora, que hoy está en Chile, porque son el mismo altiplano. La ficha lo dice en el lugar. Si la serie debe ser solo de Bolivia, salen los n.os 1, 4, 5, 6, 10, 11, 14, 15 y 16; el n.º 12 no nombra su sitio.
-4. **Las cuatro que se repiten.** Los n.os 1, 3, 11 y 20 ya están en la taxonomía visual (`taxonomia/`, n.os 2, 11, 32 y 31). Aquí van recortadas de nuevo y más grandes.
-5. **Fuentes que faltan:**
-   - Stübel y Uhle, *Die Ruinenstaette von Tiahuanaco*, 1892, con los levantamientos más exactos de Tiwanaku. No apareció en Internet Archive.
-   - Los dibujos de Léonce Angrand de 1848, en la Biblioteca Nacional de Francia.
-   - El álbum de la misión francesa de 1903 en Tiwanaku, que está en Wikimedia Commons.
-   - Las casas chipayas de Métraux, cuando se aclaren sus derechos.
-6. **El dibujo que no existe.** Si la casa común del altiplano no tiene un alzado como el del bohío, hacerlo es trabajo de dibujo y no de archivo. Las láminas de la primera familia y las fotografías de 1946 son el material de partida.
-7. **Si alguna lámina pasa al artículo,** vale la regla de `AGENTS.md`: necesita un pasaje que la pida, y la declaración de uso de IA tiene que nombrar esta búsqueda, que se hizo con Claude.
+1. **Las láminas con derechos en un repositorio público.** Entraron porque lo pediste. Si prefieres que no estén a la vista, se pueden quitar de esta rama antes de unirla, y dejar solo sus fichas con el enlace a la fuente.
+2. **Las ocho por confirmar:** las tres de Posnansky de 1914 (n.os 43, 44 y 45) y las cinco de Angrand (n.os 59 a 63).
+3. **Las licencias sin comprobar.** IntechOpen, *Cuadernos de Vivienda y Urbanismo*, *Revista Nodo*, *Anales de Edificación*, *Andean Past* y *Ciudad y Territorio* dicen la licencia en la página de cada artículo.
+4. **Lo que no es de Bolivia.** Catorce láminas son del lado peruano del lago y cuatro del altiplano chileno. La ficha lo dice en el lugar. Si la serie debe ser solo boliviana, salen los n.os 1, 4, 5, 6, 9 a 13, 18 a 22, 26, 27, 30, 31, 32 y 35. Los n.os 8, 28 y 36 no nombran su sitio.
+5. **Las cuatro que se repiten.** Los n.os 1, 3, 27 y 38 ya están en la taxonomía visual (`taxonomia/`, n.os 2, 11, 32 y 31).
+6. **Las familias y los caminos** son una propuesta. Se cambian en `catalogo.json`.
+7. **Lo que queda por revisar de tu carpeta** está en `recursos_por_conseguir.md`.
+8. **El dibujo que no existe.** El alzado de una casa del altiplano con su escala y su lista de materiales en aymara está por hacer. Los n.os 8, 9, 10 y 17 dan casi todos los datos.
+9. **Si alguna lámina pasa al artículo,** vale la regla de `AGENTS.md`: necesita un pasaje que la pida y un dominio público comprobado, y la declaración de uso de IA tiene que nombrar esta búsqueda, que se hizo con Claude.
 
 ## Cómo regenerar
 
 ```bash
-python3 registros_de_arquitectura/generar_hojas.py   # las seis hojas de contactos y catalogo.md
+python3 registros_de_arquitectura/generar_hojas.py   # las siete hojas de contactos y catalogo.md
 ```
 
 Necesita Pillow.
@@ -162,5 +169,5 @@ Necesita Pillow.
 Para añadir una lámina:
 
 1. Ponla en `imagenes/`, a 1.300 px de lado como máximo.
-2. Añade su ficha a `catalogo.json`, con la fuente, el enlace a la página, los derechos, la familia, los caminos y el comentario.
+2. Añade su ficha a `catalogo.json`, con la fuente, el enlace, los derechos y su estado, la familia, los caminos y el comentario.
 3. Regenera.

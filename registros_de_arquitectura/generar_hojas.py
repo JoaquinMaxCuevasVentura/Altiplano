@@ -18,6 +18,13 @@ FUENTES = [
 ]
 
 
+AVISOS = {
+    'con derechos': 'Con derechos',
+    'licencia abierta': 'Licencia abierta, con condiciones',
+    'por confirmar': 'Derechos por confirmar',
+}
+
+
 def fuente(tam):
     for ruta in FUENTES:
         if os.path.exists(ruta):
@@ -42,7 +49,7 @@ def partir(texto, letra, ancho, dibujo):
 
 def hoja(familia, fichas, salida):
     """Una hoja de contactos por familia: cada lámina con su número, su fuente y su tipo de dibujo."""
-    columnas, lado, margen, pie = 4, 420, 28, 74
+    columnas, lado, margen, pie = 4, 420, 28, 92
     filas = (len(fichas) + columnas - 1) // columnas
     cabeza = 120
     ancho = margen + columnas * (lado + margen)
@@ -62,8 +69,11 @@ def hoja(familia, fichas, salida):
         titulo = partir('%d. %s' % (f['id'], f['titulo']), media, lado, d)[:2]
         for k, renglon in enumerate(titulo):
             d.text((x, y + lado + 8 + k * 20), renglon, font=media, fill='#1c1a17')
-        linea = '%s, %d · %s' % (f['autor'], f['anio'], f['tipo_de_dibujo'])
-        d.text((x, y + lado + 8 + len(titulo) * 20 + 2), linea, font=chica, fill='#7a7263')
+        linea = '%s, %d · %s' % (f.get('autor_breve', f['autor']), f['anio'], f['tipo_de_dibujo'])
+        d.text((x, y + lado + 8 + len(titulo) * 20 + 2), partir(linea, chica, lado, d)[0], font=chica, fill='#7a7263')
+        aviso = AVISOS.get(f['estado_derechos'])
+        if aviso:
+            d.text((x, y + lado + 8 + len(titulo) * 20 + 20), aviso, font=chica, fill='#9a4a00')
     lienzo.save(salida, quality=86)
     return salida
 
@@ -82,9 +92,11 @@ def tabla(cat):
             caminos = ', '.join(nombres[c].lower() for c in i['caminos']) or 'contraste'
             porque = i['comentario'] + (' ' + i['nota'] if i['nota'] else '')
             porque += ' *Caminos: %s.*' % caminos
-            fuente_ = '%s, %d, %s. [Página](%s)' % (i['autor'], i['anio'], i['ubicacion'], i['pagina'])
-            if i['estado_derechos'] == 'por confirmar':
-                fuente_ += ' **Derechos por confirmar.**'
+            fuente_ = '%s, %d, %s.' % (i['autor'], i['anio'], i['ubicacion'])
+            if i['pagina']:
+                fuente_ += ' [Fuente](%s).' % i['pagina']
+            if i['estado_derechos'] in AVISOS:
+                fuente_ += ' **%s.**' % AVISOS[i['estado_derechos']]
             titulo = '**%s**<br>«%s»<br>%s' % (i['titulo'], i['titulo_original'], i['lugar'])
             out.append('| %d | %s | %s | %s | %s |' % (i['id'], titulo, fuente_, i['tipo_de_dibujo'], porque))
         out.append('')
