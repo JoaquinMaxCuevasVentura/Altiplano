@@ -54,9 +54,9 @@
     { clave: "hombro_caida", termino: "Dónde arranca", min: 0.15, max: 0.7, paso: 0.01, debil: true,
       obra: () => PARAM.hombro_caida.fijo, ver: (v) => coma(v, 2) + " del borde al fondo",
       por: "Dónde el arco se vuelve vertical. Se tomó a ojo del testigo de la n: es la medida más débil, y falta medirla en el libro." },
-    { clave: "gota_masa", termino: "La masa de la gota", min: 0.6, max: 2.0, paso: 0.05, canales: true,
+    { clave: "gota_masa", termino: "La masa de la gota", min: 1.0, max: 2.0, paso: 0.05, canales: true,
       obra: () => PARAM.gota_masa.canales, ver: (v, b) => `${coma(v, 2)} c · ${coma(v * b.c / 4)} mm`,
-      por: "Solo gotea lo que mira abajo: una masa que cae a plomada, por su peso. El líquido que chorrea de la boca (D16).",
+      por: "Solo gotea lo que mira abajo. La gota es el mismo trazo: engorda hacia su final y hacia abajo, por su peso, como el terminal en gota de las letras de máquina de escribir. El líquido que chorrea de la boca (D16).",
       verso: "La tierra se dio de beber a sí misma" },
     { clave: "intemperie", termino: "El desgaste", min: 0, max: 0.3, paso: 0.005, canales: true,
       obra: () => PARAM.intemperie.canales, ver: (v, b) => `${coma(v, 3)} c · ${coma(v * b.c / 4)} mm`,
@@ -69,8 +69,8 @@
     ["alivio · 0,28 c", "Un rebaje en cada rincón agudo, para que el metal no se desgarre (P-08 · 5)."],
     ["asiento · 2 × 0,9 c", "El pie del asta: de un canal a dos, en una curva cóncava (P-04 · 3)."],
     ["planos · 3", "Tres planos por asta (P-04 · 1)."],
-    ["gancho · 105°", "Para que la gota cuelgue libre (P-06 · 1)."],
-    ["gota · caída 0,3 c, cuello 0,55 c", "La gota cae por su peso (P-06 · 2)."],
+    ["gancho · 105°", "Termina mirando abajo: ahí se junta la gota (P-06 · 1)."],
+    ["gota · largo 2,4 c, aire 0,5 c", "En cuánto trazo se junta, y el aire que deja abajo (P-06 · 2)."],
     ["sifón · 0,6 c", "El enlace de la g y del 8: el único trazo más fino (P-08 · 4)."],
     ["cinta y punto · 1 c", "El punto es un trozo cuadrado de cinta (P-08 · 1)."],
   ];
@@ -343,19 +343,20 @@
 
     { id: "gota", rombo: "P-06 · 2", nombre: "la gota", origen: "forma de la obra", claves: ["gota_masa"],
       dibujo() {
-        const { px, py, R } = GO, c = base.c * escalaGota(), o = [];
-        // el gancho: termina mirando abajo
-        const a0 = rad(200), en = (r, a) => `${f(px - R + r * Math.cos(a))},${f(py - r * Math.sin(a))}`;
-        const gancho = `M${en(R, a0)} A${R},${R} 0 1 1 ${en(R, 0)}`, ri = R - c / 2, re = R + c / 2;
-        o.push(`<path d="${gancho}" stroke="${METAL}" stroke-width="${f(c)}" fill="none"/>`);
-        o.push(`<path d="${gancho}" ${EJE}/>`);
-        o.push(`<path d="M${en(ri, 0)} A${f(ri)},${f(ri)} 0 1 0 ${en(ri, a0)} L${en(re, a0)} A${f(re)},${f(re)} 0 1 1 ${en(re, 0)}" ${OBRA} stroke-width="1.2"/>`);
+        const { px } = GO, c = base.c * escalaGota(), o = [];
+        // el gancho termina mirando abajo; el trazo llega hasta el centro de la masa
+        const eje = ganchoGota(), l = lagrimaDe(valor("gota_masa"), c);
+        const paso = Math.hypot(eje[1][0] - eje[0][0], eje[1][1] - eje[0][1]);
+        const hasta = eje.slice(0, eje.length - Math.ceil(l.corta / paso));
+        const dEje = (pts) => "M" + pts.map((q) => `${f(q[0])},${f(q[1])}`).join("L");
+        o.push(`<path d="${dEje(hasta)}" stroke="${METAL}" stroke-width="${f(c)}" fill="none"/>`);
         o.push(`<path d="${dGota(valor("gota_masa"), c)}Z" fill="${METAL}"/>`);
-        o.push(dosVeces(["gota_masa"], (v, estilo) => `<path d="${dGota(v.gota_masa, c)}" ${estilo}/>`, 2));
-        // la masa es el ancho de la gota: el estirón es hacia abajo
-        const m = valor("gota_masa") * c, oy = py + 0.3 * c, medio = oy + 1.15 * m / 2, abajo = oy + 1.15 * m, yc = abajo + 28;
-        o.push(`<path d="M${f(px - m / 2)},${f(medio + 4)} V${f(yc + 4)} M${f(px + m / 2)},${f(medio + 4)} V${f(yc + 4)}" stroke="${GRIS}" stroke-width="0.6"/>`);
-        o.push(cota(px - m / 2, yc, px + m / 2, yc, `${coma(valor("gota_masa"), 2)} c`));
+        o.push(`<path d="${dEje(eje)}" ${EJE}/>`);
+        o.push(dosVeces(["gota_masa"], (v, estilo) => `<path d="${dGota(v.gota_masa, c)}Z" ${estilo}/>`, 2));
+        // la masa es el ancho al que llega el trazo
+        const xs = l.frente.map((q) => q[0]), x0 = Math.min(...xs), x1 = Math.max(...xs), abajo = l.fin[1], yc = abajo + 28;
+        o.push(`<path d="M${f(x0)},${f(abajo - 6)} V${f(yc + 4)} M${f(x1)},${f(abajo - 6)} V${f(yc + 4)}" stroke="${GRIS}" stroke-width="0.6"/>`);
+        o.push(cota(x0, yc, x1, yc, `${coma(valor("gota_masa"), 2)} c`));
         // la gravedad, en lugar del norte
         const gx = 360, gy = 40;
         o.push(`<circle cx="${gx}" cy="${gy}" r="14" fill="none" stroke="${TINTA}" stroke-width="1"/>` +
@@ -363,10 +364,10 @@
           `<path d="M${gx},${gy + 18} l-5,-12 h10 z" fill="${TINTA}"/>` + texto(gx, gy + 32, "GRAVEDAD", { ancla: "middle", tam: 10, color: TINTA }));
         o.push(texto(16, 258, "solo gotea lo que mira abajo"));
         o.push(miniatura("a", 330, 196, 58));
-        o.push(asa("gota_masa", px, abajo));
+        o.push(asa("gota_masa", x1, abajo - valor("gota_masa") * c / 2));
         return o.join("");
       },
-      mover: { gota_masa(p) { const c = base.c * escalaGota(); return (p[1] - GO.py - 0.3 * c) / (1.15 * c); } } },
+      mover: { gota_masa(p) { const c = base.c * escalaGota(); return 1 + (p[0] - GO.px - c / 2) / (0.75 * c); } } },
 
     { id: "intemperie", rombo: "P-02 · 3", nombre: "la intemperie", origen: "forma de la obra", claves: ["intemperie"],
       dibujo() {
@@ -438,26 +439,19 @@
   const dAsiento = (x, F, c, ancho, alto) =>
     `M${f(x - c / 2)},${f(F - alto)} Q${f(x - c / 2)},${f(F)} ${f(x - ancho / 2)},${f(F)} H${f(x + ancho / 2)} ` +
     `Q${f(x + c / 2)},${f(F)} ${f(x + c / 2)},${f(F - alto)}Z`;
-  /* A 1,15, salvo que con un canal grueso la gota más pesada no quepa: la escala depende del canal, no de la masa. */
-  const escalaGota = () => Math.min(GO.S, GO.baja / (base.c * (0.3 + 1.15 * DD.gota_masa.max)));
-  /* La gota de la gramática: un círculo del diámetro de la masa, estirado 1,15 hacia abajo desde su tope, y el cuello
-   * que la cuelga del gancho, de un canal a 0,55. El contorno queda abierto arriba, donde se une al gancho. */
-  function dGota(masa, c) {
-    const { px, py } = GO, m = masa * c, cuello = 0.55 * c;
-    const oy = py + 0.3 * c, rx = m / 2, ry = 1.15 * m / 2, ecy = oy + ry, cyc = oy + m / 2;
-    const dentro = (x, y) => ((x - px) / rx) ** 2 + ((y - ecy) / ry) ** 2 < 1;
-    const entra = (lado) => {                       // el cuello baja de afuera hacia adentro: dónde cruza el cuerpo
-      const A = [px + lado * c / 2, py], B = [px + lado * cuello / 2, cyc];
-      let t0 = 0, t1 = 1;
-      for (let i = 0; i < 30; i++) {
-        const t = (t0 + t1) / 2;
-        if (dentro(A[0] + t * (B[0] - A[0]), A[1] + t * (B[1] - A[1]))) t1 = t; else t0 = t;
-      }
-      return [A[0] + t1 * (B[0] - A[0]), A[1] + t1 * (B[1] - A[1])];
-    };
-    const I = entra(-1), Dr = entra(1);
-    return `M${f(px - c / 2)},${f(py)} L${f(I[0])},${f(I[1])} A${f(rx)},${f(ry)} 0 1 0 ${f(Dr[0])},${f(Dr[1])} L${f(px + c / 2)},${f(py)}`;
+  /* A 1,15, salvo que con un canal grueso la gota más ancha no quepa: la escala depende del canal, no de la masa. */
+  const escalaGota = () => Math.min(GO.S, GO.baja / (base.c * DD.gota_masa.max));
+  /* El gancho de la a, en poligonal: termina en (px, py) mirando abajo, 15° pasado de la plomada, como en la gramática. */
+  function ganchoGota() {
+    const { px, py, R } = GO, fin = rad(-15), cx = px - R * Math.cos(fin), cy = py + R * Math.sin(fin), pts = [];
+    for (let i = 0; i <= 120; i++) { const a = rad(200) + (fin - rad(200)) * i / 120; pts.push([cx + R * Math.cos(a), cy - R * Math.sin(a)]); }
+    return pts;
   }
+  /* El terminal en gota, con la fórmula de la gramática (Gramatica.lagrima): el trazo engorda hacia su final y hacia abajo. */
+  function lagrimaDe(masa, c) {
+    return G.lagrima(ganchoGota(), c, { gota_masa: { valor: masa * c }, gota_largo: { valor: PARAM.gota_largo.canales * c } }, 1);
+  }
+  const dGota = (masa, c) => "M" + lagrimaDe(masa, c).contorno.map((q) => `${f(q[0])},${f(q[1])}`).join("L");
 
   // ------------------------------------------------------------------ armar los dibujos y sus decisiones
   function armarDetalles() {

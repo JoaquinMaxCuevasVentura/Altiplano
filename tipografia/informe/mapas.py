@@ -890,7 +890,7 @@ def mapa_4():
     H.trazo([(gx - 30, gy + 4), (gx, gy)], GRAFITO, 0.6, temblor=0.05, deriva=0)
     H.trazo(elipse_pts(gx, gy, 18, 18, 0, math.radians(150), math.radians(255)), TINTA, 0.7)
     H.maquina(gx - 32, gy - 14, "gancho 105°", 12, TINTA, "end")
-    nota(H, 1000, 800, ["cuello 4,9 mm", "sifón 0,6", "cinta y punto 8,9 mm"], P(384, 330))
+    nota(H, 1000, 800, ["gota 12,4 mm", "sifón 0,6", "cinta y punto 8,9 mm"], P(384, 330))
     gx, gy = P(299, 432)
     X.gota_que_cae(H, gx, gy + 18, 6)
 

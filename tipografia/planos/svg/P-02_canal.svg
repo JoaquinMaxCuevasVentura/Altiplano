@@ -51,13 +51,13 @@
 <path d="M121.741,68.401 L119.43,68.651 L120.064,70.01 Z" fill="#1d1c1a"/>
 <line x1="101.802" y1="77.698" x2="95.802" y2="77.698" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="95.002" y="78.538" font-family="Courier Prime" font-size="2.4" font-weight="400" fill="#1d1c1a" text-anchor="end">R 0,9 interior</text>
-<line x1="79" y1="37.126" x2="79" y2="76.874" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="79" y1="37.126" x2="79" y2="42.126" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="79" y1="37.126" x2="83" y2="37.126" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M83.6,37.126 L81.4,36.376 L81.4,37.876 Z" fill="#1d1c1a"/>
-<line x1="79" y1="76.874" x2="79" y2="71.874" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
-<line x1="79" y1="76.874" x2="83" y2="76.874" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M83.6,76.874 L81.4,76.124 L81.4,77.624 Z" fill="#1d1c1a"/>
+<line x1="63" y1="37.126" x2="63" y2="76.874" fill="none" stroke="#1d1c1a" stroke-width="0.18" stroke-dasharray="7 1.2 0.6 1.2" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="63" y1="37.126" x2="63" y2="42.126" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="63" y1="37.126" x2="67" y2="37.126" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M67.6,37.126 L65.4,36.376 L65.4,37.876 Z" fill="#1d1c1a"/>
+<line x1="63" y1="76.874" x2="63" y2="71.874" fill="none" stroke="#1d1c1a" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="63" y1="76.874" x2="67" y2="76.874" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M67.6,76.874 L65.4,76.124 L65.4,77.624 Z" fill="#1d1c1a"/>
 <circle cx="74" cy="48.126" r="0.45" fill="#4a2470"/>
 <line x1="74" y1="48.126" x2="72.49" y2="40.577" fill="none" stroke="#4a2470" stroke-width="0.2" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M72,35.626 L74.5,38.126 L72,40.626 L69.5,38.126 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
@@ -141,8 +141,8 @@
 <text x="38.7" y="21.4" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">EL CANAL Y EL RADIO DE LA CHAPA</text>
 <line x1="38.7" y1="22.8" x2="99.114" y2="22.8" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="38.7" y="26.2" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">2:1</text>
-<text x="79" y="35.726" font-family="Courier Prime" font-size="3.2" font-weight="700" fill="#1d1c1a" text-anchor="middle">A</text>
-<text x="79" y="80.274" font-family="Courier Prime" font-size="3.2" font-weight="700" fill="#1d1c1a" text-anchor="middle">A</text>
+<text x="63" y="35.726" font-family="Courier Prime" font-size="3.2" font-weight="700" fill="#1d1c1a" text-anchor="middle">A</text>
+<text x="63" y="80.274" font-family="Courier Prime" font-size="3.2" font-weight="700" fill="#1d1c1a" text-anchor="middle">A</text>
 <text x="45" y="107" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">r ≥ 0,6 c: el contorno interior</text>
 <text x="45" y="110.1" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#1d1c1a" text-anchor="start">no se cruza; la chapa se dobla</text>
 <circle cx="162" cy="22" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -159,7 +159,7 @@
 <text x="38.7" y="123.4" font-family="Courier Prime" font-size="3" font-weight="700" letter-spacing="0.15" fill="#1d1c1a" text-anchor="start">CORTE A–A · EL CANAL EN LA PLACA</text>
 <line x1="38.7" y1="124.8" x2="101.062" y2="124.8" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <text x="38.7" y="128.2" font-family="Courier Prime" font-size="2.3" font-weight="400" fill="#6d6a63" text-anchor="start">5:1 · espesor exagerado</text>
-<text x="48.957" y="155" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="start">reverso: se trabaja</text>
+<text x="46.957" y="155" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="end">reverso: se trabaja</text>
 <text x="48.957" y="181.5" font-family="Courier Prime" font-size="2.2" font-weight="400" fill="#6d6a63" text-anchor="start">anverso (abajo): la letra sale en relieve</text>
 <circle cx="162" cy="124" r="4.2" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>
 <line x1="157.8" y1="124" x2="166.2" y2="124" fill="none" stroke="#1d1c1a" stroke-width="0.25" stroke-linecap="butt" stroke-linejoin="round"/>

@@ -50,7 +50,7 @@ LAMINAS = [
     ("P-03", "o · la cuenca", "primer generador", "1:1 · 2:1 · 4:1 · 1:2"),
     ("P-04", "l · el fuste", "segundo generador", "1:1 · 2:1 · 1:2"),
     ("P-05", "n · el hombro", "tercer generador", "1:1 · 2:1 · 1:2"),
-    ("P-06", "a · el gancho y la gota", "cuarto generador: la suma", "1:1 · 5:1 · 1:2"),
+    ("P-06", "a · el gancho y la gota", "cuarto generador: la suma", "1:1 · 3:1 · 1:2"),
     ("P-07", "Las partes", "cuadro de partes y reglas de derivación", "1:4"),
     ("P-08", "Detalles", "punto, tilde, onda, sifón, alivio y celda", "2:1 · 1:2"),
     ("P-09", "Los dobles opuestos", "? ¿ · 6 9 · « »", "1:2"),
@@ -104,14 +104,16 @@ class Medidas:
         return "±0" if u == 0 else f"{u:+d}".replace("-", "−")
 
     def libre_gota(self):
-        """Lo que queda de verdad entre la gota de la a y su cuenca, medido sobre el cuerpo."""
+        """El aire que queda de verdad debajo de la gota de la a, medido sobre el cuerpo, a plomo desde su punto más bajo."""
         from shapely.geometry import LineString
-        geo = cuerpo_base(self.D, "a")
-        x = self.D["generadores"]["a"]["gota_centro"][0]
-        corte = geo.intersection(LineString([(x, 0), (x, 600)]))
-        tramos = sorted((min(p[1] for p in g.coords), max(p[1] for p in g.coords))
-                        for g in (corte.geoms if hasattr(corte, "geoms") else [corte]))
-        return tramos[1][0] - tramos[0][1]
+        g = self.D["generadores"]["a"]["gota"]
+        if not g:
+            return 0.0
+        x, y = g["fin"]
+        corte = cuerpo_base(self.D, "a").intersection(LineString([(x, y + 1.0), (x, 600)]))
+        if corte.is_empty:
+            return 0.0
+        return min(q[1] for geo in (corte.geoms if hasattr(corte, "geoms") else [corte]) for q in geo.coords) - y
 
     def tabla(self):
         E, c, U = self.E, self.c, self.U
@@ -141,7 +143,7 @@ class Medidas:
         M["interior_mm"], M["interior_upm"] = coma((r - c / 2) / 4), str(round((r - c / 2) * U))
         d = self.v("desague")
         M["desague_corte_mm"], M["desague_corte_upm"] = coma(d / 4), str(round(d * U))
-        for k in ("intemperie", "alivio", "asiento_ancho", "asiento_alto", "gota_masa", "gota_caida", "gota_cuello",
+        for k in ("intemperie", "alivio", "asiento_ancho", "asiento_alto", "gota_masa", "gota_largo", "gota_aire",
                   "punto"):
             M[k + "_mm"], M[k + "_upm"] = coma(self.v(k) / 4), str(round(self.v(k) * U))
         M["sifon_mm"] = coma(self.v("sifon") * c / 4)
@@ -157,7 +159,7 @@ class Medidas:
         par("n_caida", n["yh"] - n["yt"])
         par("n_resto", self.F - n["yh"])
         par("a_libre", self.libre_gota())
-        par("a_libre_regla", a["libre"])
+        par("a_libre_regla", self.v("gota_aire"))
         par("o_sobre", E["borde"] - self.D["signos"]["o"]["caja"][1])
         M["caja_m"] = "1,22 × 1,07 m"
         return M
@@ -506,7 +508,7 @@ def p02(h, D, M):
     h.cota_radio(cen, v.mm(rch), 50, f"{Me.cota(rch)} eje", largo=16)
     h.cota_radio(cen, v.mm(rch + c / 2), 18, f"{Me.mm(rch + c / 2)} exterior", largo=8)
     h.cota_radio(cen, v.mm(rch - c / 2), 205, f"{Me.mm(rch - c / 2)} interior", largo=22)
-    cortar_linea(h, v.p(40, -c / 2 - 22), v.p(40, c / 2 + 22), "A")
+    cortar_linea(h, v.p(8, -c / 2 - 22), v.p(8, c / 2 + 22), "A")
     h.texto(v.p(-28, 100)[0], v.p(-28, 100)[1], "r ≥ 0,6 c: el contorno interior", 2.3)
     h.texto(v.p(-28, 100)[0], v.p(-28, 100)[1] + 3.1, "no se cruza; la chapa se dobla", 2.3)
     h.clave(v.p(30, -c / 2), (v.p(30, -c / 2)[0] - 2, v.p(30, -c / 2)[1] - 10), 1)
@@ -547,7 +549,7 @@ def p02(h, D, M):
                     f'L{f(pb[0] + 13)},{f(pb[1] - 18.5)} L{f(pb[0] + 2.4)},{f(pb[1] - 0.9)}" fill="#d9d6cf" '
                     f'stroke="{TINTA}" stroke-width="0.35"/>')
     h.cota((x0 - cw / 2, y0), (x0 + cw / 2, y0), 9, f"canal {Me.cota(c)}", tam=2.2)
-    h.texto(x0 - 1.85 * cw / 2, y0 - 3.0, "reverso: se trabaja", 2.2, color=GRIS)
+    h.texto(x0 - 1.85 * cw / 2 - 2, y0 - 3.0, "reverso: se trabaja", 2.2, "end", color=GRIS)
     h.texto(x0 - 1.85 * cw / 2, y0 + 23.5, "anverso (abajo): la letra sale en relieve", 2.2, color=GRIS)
     h.nota((x0 - 8, y0 + prof * 0.75), (x0 - 30, y0 + 16), "h: la decide la mano", ancla="end", tam=2.1)
     h.nota((x0 + 1.85 * cw / 2 - 5, y0 + 8), (x0 + 1.85 * cw / 2 + 3, y0 + 12), "base blanda", tam=2.1)
@@ -934,57 +936,47 @@ def p06(h, D, M):
     gp = v.p(*G["gota_p"])
     h.linea(cen, gp, "aux", "aux")
     h.cota_angular(cen, 9, 0, G["gancho_fin"], "105°", tam=2.1)
-    gc = G["gota_centro"]
-    h.linea(v.p(gc[0], G["gota_p"][1] - 34), v.p(gc[0], G["cuenca_arriba"] + 6), "eje", "ejes", w=0.13)
-    h.nota(v.p(gc[0], G["gota_p"][1] - 30), v.p(gc[0] - 50, G["gota_p"][1] - 52), "plomada", tam=2.1, ancla="end")
+    g = G["gota"]
+    gc, masa = g["centro"], g["masa"]
     libre = Me.libre_gota()
-    yl0 = gc[1] + 0.65 * Me.v("gota_masa")
-    h.cota(v.p(gc[0], yl0 + libre), v.p(gc[0], yl0), 0.01, "", ext=False)
-    h.nota(v.p(gc[0], yl0 + libre / 2), v.p(G["cuenca_izq"] - 50, yl0 + 14), "", tam=2.1, ancla="end",
-           lineas=[f"libre {Me.cota(libre)}", f"(la regla pide {Me.mm(G['libre'])})"])
+    fin = g["fin"]
+    h.cota(v.p(fin[0], fin[1] + libre), v.p(*fin), 0.01, "", ext=False)
+    h.nota(v.p(fin[0], fin[1] + libre / 2), v.p(G["cuenca_izq"] - 50, fin[1] + 14), "", tam=2.1, ancla="end",
+           lineas=[f"libre {Me.cota(libre)}", f"(la regla pide {Me.mm(Me.v('gota_aire'))} o más)"])
     h.nota(v.p(G["xs"] + c / 2, G["yh"] + 40), v.p(G["xs"] + 66, G["yh"] + 22), "fuste (l)", tam=2.1)
     h.nota(v.p(G["xs"] - 6, G["yt"] - c / 2 + 2), v.p(G["xs"] + 50, G["yt"] - 30), "gancho (n)", tam=2.1)
     h.nota(v.p(G["cuenca_izq"] + 3, F - 40), v.p(G["cuenca_izq"] - 50, F + 26), "cuenca (o)", tam=2.1, ancla="end")
     h.gravedad(OX + 145, OY + 34)
-    h.clave(v.p(*G["gota_p"]), v.p(G["gota_p"][0] - 40, G["gota_p"][1] - 70), 1)
-    h.clave(v.p(gc[0] - Me.v("gota_masa") / 2, gc[1]), v.p(gc[0] - 64, gc[1] - 18), 2)
+    h.clave(v.p(G["cxg"] - 0.5 * G["rx"], G["yt"] - c / 2), v.p(G["cxg"] - 0.5 * G["rx"] - 30, G["yt"] - 42), 1)
+    h.clave(v.p(gc[0] - masa / 2, gc[1]), v.p(gc[0] - 64, gc[1] - 18), 2)
     h.clave(v.p(G["cuenca_izq"] + c / 2 + 2, F - 34), v.p(G["cuenca_izq"] + 48, F - 52), 3)
     h.clave(v.p(G["xs"] + c / 2, F - 70), v.p(G["xs"] + 48, F - 52), 4)
 
-    # 2 · la gota, 5:1
-    h.llamada(182, 22, 2, titulo="LA GOTA", escala="5:1")
-    gp_ = G["gota_p"]
-    fin = G["gota_fin"]
-    ventana = (gc[0] - 24, gp_[1] - 18, gc[0] + 24, gc[1] + 0.65 * Me.v("gota_masa") + 6)
-    z = Vista(h, 214, 34, 5.0, px0=ventana[0], py0=ventana[1])
+    # 2 · el terminal en gota, 3:1
+    h.llamada(182, 22, 2, titulo="EL TERMINAL EN GOTA", escala="3:1")
+    xs_, ys_ = [q[0] for q in g["contorno"]], [q[1] for q in g["contorno"]]
+    ventana = (min(xs_) - 10, min(ys_) - 8, min(xs_) + 78, max(ys_) + 10)      # la masa y el tramo que engorda
+    z = Vista(h, 214, 40, 3.0, px0=ventana[0], py0=ventana[1])
     a, b = z.p(ventana[0], ventana[1]), z.p(ventana[2], ventana[3])
     h.recorte(a[0], a[1], b[0], b[1])
     z.signo(S, nodos=False)
+    # la construcción: el eje del gancho, el contorno del terminal y el círculo de la masa
+    h.poli([z.p(*q) for q in g["eje"]], "eje", "ejes")
+    h.poli([z.p(*q) for q in g["contorno"]], "aux", "ejes", cerrado=True)
+    cz = z.p(*g["circulo"])
+    h.add("ejes", f'<circle cx="{f(cz[0])}" cy="{f(cz[1])}" r="{f(z.mm(masa / 2))}" {estilo("aux")}/>')
     h.fin_recorte()
     marco_vista(h, a[0], a[1], b[0], b[1])
-    masa, caida, cuello = Me.v("gota_masa"), Me.v("gota_caida"), Me.v("gota_cuello")
-    yc = gc[1]
-    # la construcción: un trapecio del terminal al centro de la masa, y un círculo estirado 1,15 hacia abajo
-    trap = [(gp_[0] - c / 2, gp_[1]), (gp_[0] + c / 2, gp_[1]), (gc[0] + cuello / 2, yc), (gc[0] - cuello / 2, yc)]
-    h.poli([z.p(*q) for q in trap], "aux", "ejes", cerrado=True)
-    h.add("ejes", f'<circle cx="{f(z.p(*gc)[0])}" cy="{f(z.p(*gc)[1])}" r="{f(z.mm(masa / 2))}" {estilo("aux")}/>')
-    ye = yc + 0.075 * masa
-    h.add("ejes", f'<ellipse cx="{f(z.p(gc[0], ye)[0])}" cy="{f(z.p(gc[0], ye)[1])}" rx="{f(z.mm(masa / 2))}" '
-                  f'ry="{f(z.mm(1.15 * masa / 2))}" {estilo("aux")}/>')
-    h.linea(z.p(gc[0], ventana[1]), z.p(gc[0], ventana[3]), "eje", "ejes", w=0.13)
-    h.cota(z.p(gc[0] - masa / 2, ye), z.p(gc[0] + masa / 2, ye), 0.01, "", ext=False)
-    h.nota(z.p(gc[0] - masa / 2 + 1, ye), (a[0] - 3, z.p(0, ye)[1] + 10), f"masa Ø {Me.cota(masa)}", tam=2.1,
-           ancla="end")
-    h.cota(z.p(gc[0] - cuello / 2, yc), z.p(gc[0] + cuello / 2, yc), 0.01, "", ext=False, ticks=True)
-    h.nota(z.p(gc[0] - cuello / 2, yc), (a[0] - 3, z.p(0, yc)[1] - 4), "", tam=2.1, ancla="end",
-           lineas=[f"cuello {Me.cota(cuello)}", "(en el centro de la masa)"])
-    h.cota(z.p(gc[0] - masa / 2 - 4, gp_[1] + caida), z.p(gc[0] - masa / 2 - 4, gp_[1]), 0.01, "", ext=False)
-    h.nota(z.p(gc[0] - masa / 2 - 4, gp_[1] + caida / 2), (a[0] - 3, z.p(0, gp_[1])[1] - 8),
-           f"caída {Me.cota(caida)}", tam=2.1, ancla="end")
-    h.texto(a[0], b[1] + 4.2, "en línea de construcción: un trapecio de c a 0,55 c,", 2.1, color=GRIS)
-    h.texto(a[0], b[1] + 7.2, "del terminal al centro de la masa, y un círculo de", 2.1, color=GRIS)
-    h.texto(a[0], b[1] + 10.2, "1,25 c estirado 1,15 hacia abajo, por su peso", 2.1, color=GRIS)
-    h.clave(z.p(gc[0] + masa / 2, ye + 8), (b[0] - 6, z.p(0, ye)[1] + 22), 2)
+    pa, pb = g["ancho"]
+    h.cota(z.p(*pa), z.p(*pb), 0.01, "", ext=False, ticks=True)
+    h.nota(z.p(*pa), (a[0] - 3, z.p(*pa)[1] + 8), f"masa {Me.cota(masa)}", tam=2.1, ancla="end")
+    viene = next(q for q in g["contorno"][:24] if q[0] < ventana[2] - 4)             # el borde de abajo, ya en la vista
+    h.nota(z.p(*viene), (a[0] - 3, z.p(*viene)[1] + 2), "", tam=2.1, ancla="end",
+           lineas=["el trazo viene del canal:", f"engorda en {Me.cota(Me.v('gota_largo'))}"])
+    h.texto(a[0], b[1] + 4.2, "en línea de construcción: el trazo engorda del canal a la", 2.1, color=GRIS)
+    h.texto(a[0], b[1] + 7.2, "masa; lo que crece cae del lado de abajo (el peso), y el", 2.1, color=GRIS)
+    h.texto(a[0], b[1] + 10.2, "final se cierra en redondo. No es una pieza colgada", 2.1, color=GRIS)
+    h.clave(z.p(*pb), (b[0] - 6, z.p(*pb)[1] + 14), 2)
 
     # 3 · pasos
     T = D["testigos"]["a"]
@@ -1210,10 +1202,14 @@ def p09(h, D, M):
             x = 34 + j * 76
             v = Vista(h, x, y + 1, 0.5, px0=cel[0], py0=cel[1])
             for n, mx, my in S["marcas"]:
-                if n == "gota" or n.startswith("sin gota") or n.startswith("corte"):
+                if n.startswith("gota") or n.startswith("sin gota") or n.startswith("corte"):
                     p = v.p(mx, my)
-                    txt = "gotea" if n == "gota" else "no gotea: mira arriba"
-                    h.nota(p, (p[0] + 12, p[1] + (-8 if n == "gota" else 8)), txt, tam=2.0)
+                    txt = "gotea" if n.startswith("gota") else "no gotea"     # el porqué va en la columna
+                    dx_, dy_ = (6, -5) if s.isdigit() else (15, -13)                    # en las cifras, dentro del marco
+                    if s.isdigit() and not n.startswith("gota"):
+                        h.nota(p, (p[0] - 5, p[1] - 9), txt, tam=2.0, ancla="end")
+                    else:
+                        h.nota(p, (p[0] + dx_, p[1] + (dy_ if n.startswith("gota") else 7)), txt, tam=2.0)
                     if j == 1:
                         h.clave(p, (p[0] - 10, p[1] + 10), i + 1)
                     break

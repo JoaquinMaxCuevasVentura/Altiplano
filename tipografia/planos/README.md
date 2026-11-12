@@ -20,7 +20,7 @@ Doce láminas A3 que dibujan la concepción formal de *Contenida* con la precisi
 | [P-03](png/P-03_o_cuenca.png) | **o · la cuenca**, con la pared, el desagüe y cómo se construye | 1:1 · 2:1 · 4:1 · 1:2 | el ojo, arriba; la panza, abajo; el sobrepaso; la apertura; el eje |
 | [P-04](png/P-04_l_fuste.png) | **l · el fuste**, con el quiebre y el asiento | 1:1 · 2:1 · 1:2 | el asta en tres planos; arriba, un corte; abajo, el asiento |
 | [P-05](png/P-05_n_hombro.png) | **n · el hombro**, con la familia de arcos y el encuentro tangente | 1:1 · 2:1 · 1:2 | la superelipse; el arranque tangente; la altura del arranque; la bajada |
-| [P-06](png/P-06_a_gancho_y_gota.png) | **a · el gancho y la gota**, con la construcción de la gota | 1:1 · 5:1 · 1:2 | el gancho a 105°; la gota; el ojo que se abre; la a de dos pisos |
+| [P-06](png/P-06_a_gancho_y_gota.png) | **a · el gancho y la gota**, con la construcción del terminal en gota | 1:1 · 3:1 · 1:2 | el gancho a 105°; el terminal en gota; el ojo que se abre; la a de dos pisos |
 | [P-07](png/P-07_partes.png) | El cuadro de las doce partes, como el cuadro de aberturas de un plano | 1:4 | las cinco reglas de la derivación |
 | [P-08](png/P-08_detalles.png) | Detalles: punto, tilde, onda, sifón, alivio y la celda de la cifra | 2:1 · 1:2 | seis decisiones de detalle |
 | [P-09](png/P-09_dobles_opuestos.png) | Los dobles opuestos: ? ¿ · 6 9 · « », cada par con su comparación | 1:2 | ninguno es el reflejo del otro |
@@ -38,7 +38,7 @@ Doce láminas A3 que dibujan la concepción formal de *Contenida* con la precisi
 
 Medir es también discutir. Al acotar sobre el cuerpo, y no sobre las reglas, aparecieron dos cosas; al volver a medir la lámina, una tercera:
 
-1. **La gota de la a deja 2,2 mm libres, no 3,5.** La regla pide 0,4 canal entre la gota y la cuenca, pero lo mide desde la gota sin estirar; estirada 1,15 por su peso, quedan 2,2 mm. Está acotado en P-06 y anotado en `../03c_gramatica.md`, §7. La placa dirá si alcanza.
+1. **La gota de la a dejaba 2,2 mm libres, no 3,5.** La regla pedía 0,4 canal entre la gota y la cuenca, pero lo medía desde la gota sin estirar. Los planos lo encontraron al acotarla. Se resolvió al rehacer la gota como terminal: ahora la gota se adapta al lugar, deja 5,1 mm, y el ojo de la a no se corre (`../03c_gramatica.md`, §4c).
 2. **El quiebre se describía mal.** Cada plano del asta se aparta 1,6° del eje: entre el primero y el segundo hay 3,2°, y entre el segundo y el tercero, 1,6°. Se corrigió la descripción en `gramatica.py` y en `03c`; la forma no cambió.
 3. **La celda medía 0,90, no 0,84.** En la lámina enderezada, sin la perspectiva de la cámara, la retícula de la cabeza mide 0,90 de ancho por alto; la foto de cámara la angostaba (0,86), y el 0,84 quedaba fuera de todas las columnas. La celda pasó a 0,90 el 8 de noviembre: se rehicieron las doce láminas (en el cajetín, «REV. 08.11.2026»), la gramática y el libro. Está en P-11; con las capturas de la lámina, en P-11A, que no se sube.
 
@@ -79,6 +79,6 @@ Antes de dibujar se buscó si ya existía una herramienta para esto:
 | [drawbot-skia](https://github.com/justvanrossum/drawbot-skia) | Dibujo con Python a PDF y SVG | Habría servido para las láminas; se prefirió SVG directo para no sumar dependencias |
 | [ezdxf](https://github.com/mozman/ezdxf) | Lee y escribe DXF desde Python, con cotas | **Se usa** para los DXF |
 
-Ninguna herramienta trae las reglas de esta obra: el desagüe, la gota a plomada, la superelipse de la chapa, el alivio del aluminio. Por eso los planos salen de la gramática misma.
+Ninguna herramienta trae las reglas de esta obra: el desagüe, el terminal en gota que pesa, la superelipse de la chapa, el alivio del aluminio. Por eso los planos salen de la gramática misma.
 
 Hecho con asistencia de IA: la máquina dibujó los planos y redactó los textos desde los documentos del proyecto.

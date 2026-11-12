@@ -115,11 +115,16 @@ def parametros(e):
                    "Para que el aluminio no se desgarre bajo el punzón (D2)"),
         "gancho_fin": (105, "°", "Dónde termina el gancho alto antes de dejar caer la gota.",
                        "Que la gota cuelgue libre, sin tocar la cuenca"),
-        "gota_masa": (round(1.25 * c, 1), "px", "Diámetro de la gota que cuelga de un terminal que mira abajo. "
+        "gota_masa": (round(1.4 * c, 1), "px", "El ancho al que llega el trazo en un terminal que mira abajo: la gota. "
                       "Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta.",
-                      "El líquido que chorrea de la boca (D16)"),
-        "gota_caida": (round(0.3 * c, 1), "px", "Cuánto baja la gota antes de juntar peso.", "Ídem: la gravedad"),
-        "gota_cuello": (round(0.55 * c, 1), "px", "Ancho del cuello de la gota.", "Ídem"),
+                      "El líquido que se vierte en la boca y chorrea: corre por el cuerpo y se junta abajo (D16)"),
+        "gota_largo": (round(2.4 * c, 1), "px", "En cuánto trazo se junta la gota: el ancho crece de a poco, y crece "
+                       "hacia abajo.", "Chorrear es correr por una superficie: la gota es el mismo trazo, no una pieza colgada. "
+                       "El poema de la obra está en letra de máquina de escribir, con la tinta corrida"),
+        "gota_aire": (round(0.5 * c, 1), "px", "El aire que la gota deja hasta el trazo de abajo. Si entera no lo deja, "
+                      "se achica.", "Lo que chorrea necesita por dónde correr. Tapar es cosa de la cinta (D12), no de la gota"),
+        "gota_min": (0.5, "×", "Hasta cuánto se achica la gota antes de no formarse. Sin lugar para caer, "
+                     "el terminal queda en un corte.", "Una gota necesita caída"),
         "sifon": (0.6, "", "Ancho del cuello que une dos cuencas (g, 8), sobre el canal: el único trazo más fino.",
                   "Vasos comunicantes: el agua que pasa de una cuenca a otra"),
         "cinta": (round(c, 1), "px", "Ancho de la cinta, a la escala en que iguala al canal. Masking blanca, "
@@ -199,14 +204,82 @@ def asiento(x, fondo, c, ancho, alto, pasos=18):
     return Polygon(np.vstack([izq, der[::-1]]))
 
 
-def gota(p, c, P):
-    """La gota que cuelga: un cuello y una masa que cae por su peso."""
-    masa, caida, cuello = V(P, "gota_masa"), V(P, "gota_caida"), V(P, "gota_cuello")
-    centro = (p[0], p[1] + caida + masa / 2)
+def _aire(contorno, p, c, trazos, propio):
+    """Cuánto aire queda entre la gota y los trazos ya puestos, sin contar el tramo del que cuelga."""
+    q = np.asarray(contorno, float)
+    menor = np.inf
+    for pts, w in trazos:
+        if len(pts) < 2:
+            continue
+        a, b = pts[:-1], pts[1:]
+        largo = np.concatenate([[0], np.cumsum(np.hypot(*(b - a).T))])
+        vale = np.ones(len(a), bool)
+        if np.hypot(*(pts[0] - p)) < 1e-6:                    # cuelga del principio de este trazo
+            vale &= largo[:-1] > propio
+        if np.hypot(*(pts[-1] - p)) < 1e-6:                   # o del final
+            vale &= (largo[-1] - largo[1:]) > propio
+        a, b = a[vale], b[vale]
+        if not len(a):
+            continue
+        d = b - a
+        t = np.clip(((q[:, None, :] - a[None]) * d[None]).sum(2) / np.maximum((d * d).sum(1), 1e-9)[None], 0, 1)
+        dist = np.hypot(*np.moveaxis(q[:, None, :] - (a[None] + t[..., None] * d[None]), 2, 0))
+        menor = min(menor, float(dist.min()) - (c if w is None else w) / 2)
+    return menor
+
+
+def gota_que_cae(p, c, P):
+    """La gota que ya se soltó: un cuello y una masa que cae por su peso. Solo la coma: cae de un punto de cinta."""
+    masa, cuello = V(P, "gota_masa"), 0.55 * c
+    centro = (p[0], p[1] + 0.3 * c + masa / 2)
     cuerpo = affinity.scale(Point(centro).buffer(masa / 2, 48), 1.0, 1.15, origin=(centro[0], centro[1] - masa / 2))
     cuello_p = Polygon([(p[0] - c / 2, p[1]), (p[0] + c / 2, p[1]), (centro[0] + cuello / 2, centro[1]),
                         (centro[0] - cuello / 2, centro[1])])
-    return unary_union([cuerpo, cuello_p]), (centro[0], centro[1] + masa / 2)
+    return unary_union([cuerpo, cuello_p]), (centro[0], centro[1] - masa / 2 + 1.15 * masa)
+
+
+def _por_largo(pts, largos):
+    """Puntos y tangentes de una poligonal, a ciertos largos medidos desde su principio."""
+    d = np.diff(pts, axis=0)
+    seg = np.hypot(*d.T)
+    acum = np.concatenate([[0], np.cumsum(seg)])
+    i = np.clip(np.searchsorted(acum, largos, side="right") - 1, 0, len(seg) - 1)
+    f = (np.asarray(largos) - acum[i]) / np.maximum(seg[i], 1e-9)
+    return pts[i] + d[i] * f[:, None], d[i] / np.maximum(seg[i], 1e-9)[:, None]
+
+
+def lagrima(pts, c, P, k=1.0, pasos=24, arco=24):
+    """El terminal en gota: el trazo engorda hacia su final, y engorda hacia abajo.
+
+    No es una pieza colgada: es el mismo trazo. En el último `gota_largo` el ancho pasa del canal a
+    `gota_masa`; lo que crece cae del lado de abajo del trazo (el peso), y el final se cierra en
+    redondo. Es el terminal lacrimal de las letras de máquina de escribir, medido en tres fuentes de
+    licencia abierta (03c, §4c). `pts` termina en el terminal; `k` achica la gota (1 es entera).
+    Devuelve el contorno, su frente (la masa: lo que tiene que caber), el largo que se le quita
+    al trazo y el punto más bajo.
+    """
+    masa = c + (V(P, "gota_masa") - c) * k
+    largo = V(P, "gota_largo")
+    total = float(np.hypot(*np.diff(pts, axis=0).T).sum())
+    largo = min(largo, total - 1e-6)
+    u = np.linspace(total - largo, total - masa / 2, pasos)       # del arranque al centro de la masa
+    q, tg = _por_largo(pts, u)
+    n = np.stack([-tg[:, 1], tg[:, 0]], axis=1)                    # la normal a la izquierda del avance
+    lado = 1.0 if n[-1, 1] >= 0 else -1.0                          # el lado de abajo (y crece hacia abajo)
+    peso = abs(n[-1, 1])                                           # 1 si el trazo va horizontal; 0 si cae a plomo
+    g = (u - u[0]) / max(u[-1] - u[0], 1e-9)
+    g = g * g * (3 - 2 * g)
+    abajo = c / 2 + g * (masa - c) * (1 + peso) / 2
+    arriba = c / 2 + g * (masa - c) * (1 - peso) / 2
+    borde_abajo = q + lado * n * abajo[:, None]
+    borde_arriba = q - lado * n * arriba[:, None]
+    centro = q[-1] + lado * n[-1] * (masa - c) * peso / 2
+    a0 = np.arctan2(*(borde_abajo[-1] - centro)[::-1])
+    giro = -lado * np.linspace(0, np.pi, arco)[1:-1]               # por delante, del borde de abajo al de arriba
+    cierre = centro + (masa / 2) * np.stack([np.cos(a0 + giro), np.sin(a0 + giro)], axis=1)
+    contorno = np.vstack([borde_abajo, cierre, borde_arriba[::-1]])
+    frente = np.vstack([borde_abajo[g >= 0.9], cierre, borde_arriba[g >= 0.9][::-1]])
+    return contorno, frente, masa / 2, (float(contorno[contorno[:, 1].argmax(), 0]), float(contorno[:, 1].max()))
 
 
 def cuenca_lado(x_medio, cy, x_fondo, ybot, pared, pasos=60):
@@ -257,7 +330,7 @@ class Glifo:
 
     def __init__(self, signo):
         self.signo = signo
-        self.trazos, self.mas, self.menos, self.marcas, self.nodos = [], [], [], [], []
+        self.trazos, self.mas, self.menos, self.marcas, self.nodos, self.gotas = [], [], [], [], [], []
 
     def trazo(self, pts, ancho=None):
         self.trazos.append((np.asarray(pts, float), ancho))
@@ -343,9 +416,34 @@ class Taller:
 
     # -- el gancho: un arco alto que termina mirando abajo; de ahí cuelga la gota
     def gota(self, G, p):
-        g, fin = gota(p, self.c, self.P)
+        """El terminal en gota del trazo que termina en p. Se adapta al lugar: si entera no deja
+        `gota_aire` hasta lo que tiene abajo, se achica; si ni a `gota_min` cabe, queda el corte."""
+        c, p = self.c, np.asarray(p, float)
+        i, alreves = next(((i, al) for i in range(len(G.trazos) - 1, -1, -1)
+                           for al, q in ((False, G.trazos[i][0][-1]), (True, G.trazos[i][0][0]))
+                           if np.hypot(*(q - p)) < 1e-6), (None, None))
+        pts, ancho = G.trazos[i]
+        eje = pts[::-1] if alreves else pts
+        for k in np.arange(1.0, self.v("gota_min") - 1e-9, -0.1):
+            contorno, frente, corta, fin = lagrima(eje, c, self.P, k)
+            if _aire(frente, p, c, G.trazos, self.v("gota_largo") + 1.5 * c) >= self.v("gota_aire"):
+                break
+        else:
+            G.marca("sin gota: no tiene dónde caer", p)
+            return (float(p[0]), float(p[1]))
+        total = np.concatenate([[0], np.cumsum(np.hypot(*np.diff(eje, axis=0).T))])
+        hasta, _ = _por_largo(eje, np.array([total[-1] - corta]))
+        eje = np.vstack([eje[total < total[-1] - corta], hasta])   # el trazo llega hasta el centro de la masa
+        G.trazos[i] = (eje[::-1] if alreves else eje, ancho)
+        G.mas.append(Polygon(contorno))
+        G.marca("gota" if k > 0.95 else "gota achicada", fin)
+        G.gotas.append(round(float(k), 1))
+        return fin
+
+    def gota_que_cae(self, G, p):
+        g, fin = gota_que_cae(p, self.c, self.P)
         G.mas.append(g)
-        G.marca("gota", fin)
+        G.marca("gota que cae", fin)
         return fin
 
     def arco(self, cx, cy, rx, ry, a0, a1, exp=None):
@@ -476,11 +574,10 @@ def r_a(t, G, rng):
     yh = yt + t.v("hombro_caida") * (t.F - yt)
     gancho = t.arco((xg + xs) / 2, yh, (xs - xg) / 2, yh - yt, t.v("gancho_fin"), 0)
     G.trazo(gancho)
-    fin = t.gota(G, gancho[0])
     t.fuste(G, rng, xs, yh)
     hx0, hy0, hx1, hy1 = e["ojo_a"]
-    arriba = max(hy0 - c / 2, fin[1] + 0.4 * c + c / 2)      # la gota cae libre: la cuenca le deja lugar
-    t.cuenca(G, hx0 - c / 2, xs, arriba, t.F - c / 2, fuste="der")
+    t.cuenca(G, hx0 - c / 2, xs, hy0 - c / 2, t.F - c / 2, fuste="der")   # el ojo es el del pie: no se corre
+    t.gota(G, gancho[0])                                     # la gota es la que se adapta al lugar
     return (xg + xs) / 2
 
 
@@ -612,7 +709,7 @@ def r_y(t, G, rng):
     V = np.array([cx, t.F - c / 2])
     P2 = np.array([x1 - c / 2 - 2, t.B + 0.1 * c])
     d = u(P2, V)
-    cola = V + d * ((y1 - 2.2 * c - V[1]) / d[1])
+    cola = V + d * ((y1 - 0.75 * c - V[1]) / d[1])          # la gota ya no cuelga: la cola llega al desagüe
     t.recta(G, rng, P0, V, 1)
     t.recta(G, rng, P2, cola, 2)
     t.gota(G, cola)
@@ -719,7 +816,7 @@ def r_coma(t, G, rng, cx=None):
     if cx is None:
         cx = _cx(t.caja(","))
     t.punto(G, cx, t.F - t.v("punto") / 2)
-    t.gota(G, (cx, t.F))
+    t.gota_que_cae(G, (cx, t.F))
 
 
 def r_punto(t, G, rng):

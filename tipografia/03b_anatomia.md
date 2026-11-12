@@ -24,7 +24,7 @@ Es lo que hizo Rebeca con la lámina: no copió los relieves, los llevó a otro 
 | 3 | **El ojo** (contraforma cerrada) | Su mitad de arriba es la del pie. Su mitad de abajo es la **bandeja**: paredes rectas que se cierran hacia abajo en la proporción del trapecio de la proyección (0,70) y fondo plano con media caña | La bandeja con un dedo de agua (D8). El trapecio (`01`, §1.4) |
 | 4 | **La panza**, por fuera | Se **asienta plana**, como el fondo de la piscina, con las esquinas redondeadas de la media caña. La letra queda como un vaso: arco arriba, fondo abajo | La piscina (D6). La ficha del monolito que lo llama vaso (a verificar) |
 | 5 | **Los remates** | Los **gasta la lluvia**, que corre de arriba hacia abajo: se redondea todo, los remates altos casi desaparecen y los del pie quedan como muñones | La piedra erosionada: «casi no se ven esos detalles» (el pie) |
-| 6 | **Los terminales** | Donde un trazo termina en el aire mirando hacia abajo, cuelga una **gota** que cae (la a, la c, la f, la s) | El líquido que se vierte en la boca y chorrea (D16) |
+| 6 | **Los terminales** | Donde un trazo termina en el aire mirando hacia abajo, termina en **gota**: el propio trazo engorda hacia su final y hacia abajo (la a, la c, la f, la s). No es una pieza colgada (`03c`, §4c) | El líquido que se vierte en la boca y chorrea (D16) |
 | 7 | **Los puntos** (de la i, la j, la ü, el punto, los dos puntos, el punto y coma, los puntos suspensivos, el de ¿?) | Son **cuadrados de media tesela** (12,5 mm), planos | La cinta color piel que tapó ojos y boca (D12). La tesela del piso. El punto de luz que no se mueve en los videos |
 | 8 | **Las tildes** | Son **gotas**: la punta arriba y el peso abajo | La tilde marca dónde carga la voz. La voz de la obra no se entiende (D14) y el líquido cae de la boca (D16) |
 | 9 | **La virgulilla de la ñ** | Es una **onda**: la del agua tocada | Tocar el agua (D15) |
@@ -49,7 +49,7 @@ Se aplica en el calco (Acción 3), en este orden, sobre la ampliación del pie:
 1. **Calcar el esqueleto:** el contorno de la letra hallada, con la base y el borde de la pauta.
 2. **Gastar los remates.** Los de arriba no se calcan; los de abajo, a la mitad y redondeados. Las esquinas, redondeadas.
 3. **Rehacer la mitad baja de cada ojo** como bandeja. Poner la regla desde el punto más ancho del ojo, cerrar hacia abajo hasta dejar el fondo en siete décimas de ese ancho y redondear las esquinas. Por fuera, asentar plana la panza.
-4. **Colgar las gotas** de los terminales que miran hacia abajo: una línea corta y una gota del grueso del trazo.
+4. **Hacer las gotas** en los terminales que miran hacia abajo: el trazo no se corta, engorda en su último tramo, del lado de abajo. Si la gota tapa el ojo de la letra, se achica.
 5. **Cambiar puntos y tildes.** Los puntos, por cuadrados de 12,5 mm; las tildes, por gotas.
 6. **Correr la letra** hasta que su asta caiga en una línea de media tesela de la pauta.
 7. **Enmarcar las cifras.** Dibujar la celda alrededor de cada una.

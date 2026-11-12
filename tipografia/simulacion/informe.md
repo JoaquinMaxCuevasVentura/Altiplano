@@ -100,9 +100,10 @@ La anatomía base se construye antes de los estados, en vectores (`03c_gramatica
 | `intemperie` | 4,3 px | Radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte. | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |
 | `alivio` | 9,9 px | Radio del rebaje en cada encuentro interior en ángulo agudo (k, v, w, x, y, z, 1, 2, 4, 7, « »). Donde el encuentro es tangente no hace falta. | Para que el aluminio no se desgarre bajo el punzón (D2) |
 | `gancho_fin` | 105 ° | Dónde termina el gancho alto antes de dejar caer la gota. | Que la gota cuelgue libre, sin tocar la cuenca |
-| `gota_masa` | 44,4 px | Diámetro de la gota que cuelga de un terminal que mira abajo. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta. | El líquido que chorrea de la boca (D16) |
-| `gota_caida` | 10,6 px | Cuánto baja la gota antes de juntar peso. | Ídem: la gravedad |
-| `gota_cuello` | 19,5 px | Ancho del cuello de la gota. | Ídem |
+| `gota_masa` | 49,7 px | El ancho al que llega el trazo en un terminal que mira abajo: la gota. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta. | El líquido que se vierte en la boca y chorrea: corre por el cuerpo y se junta abajo (D16) |
+| `gota_largo` | 85,2 px | En cuánto trazo se junta la gota: el ancho crece de a poco, y crece hacia abajo. | Chorrear es correr por una superficie: la gota es el mismo trazo, no una pieza colgada. El poema de la obra está en letra de máquina de escribir, con la tinta corrida |
+| `gota_aire` | 17,7 px | El aire que la gota deja hasta el trazo de abajo. Si entera no lo deja, se achica. | Lo que chorrea necesita por dónde correr. Tapar es cosa de la cinta (D12), no de la gota |
+| `gota_min` | 0,5 × | Hasta cuánto se achica la gota antes de no formarse. Sin lugar para caer, el terminal queda en un corte. | Una gota necesita caída |
 | `sifon` | 0,6  | Ancho del cuello que une dos cuencas (g, 8), sobre el canal: el único trazo más fino. | Vasos comunicantes: el agua que pasa de una cuenca a otra |
 | `cinta` | 35,5 px | Ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro. | La cinta que tapó ojos y boca (D12) |
 | `punto` | 35,5 px | Lado del punto: un trozo cuadrado de cinta, tan ancho como la cinta. | La cinta sobre ojos y boca (D12): un parche, no una gota de tinta |
@@ -174,7 +175,7 @@ Las manos de la simulación no son las de una máquina (`pulso.py`). Una mano qu
 
 ![El pulso](salida/05_pulso.png)
 
-En los 55 calcos, la mano levantó el lápiz 509 veces y dudó 68: 606 tramos. En las placas repujadas levantó el punzón 1745 veces, dudó 1177 y la otra mano leyó el anverso 429, en 14 sesiones. Todo es sutil, como en una mano cuidadosa: se ve de cerca, no a primera vista. El cansancio también: en las halladas, el punzón recorre 38 mm entre una levantada y la siguiente en la primera media hora de la sesión, y 32 mm en la segunda hora.
+En los 55 calcos, la mano levantó el lápiz 501 veces y dudó 58: 596 tramos. En las placas repujadas levantó el punzón 1732 veces, dudó 1200 y la otra mano leyó el anverso 472, en 14 sesiones. Todo es sutil, como en una mano cuidadosa: se ve de cerca, no a primera vista. El cansancio también: en las halladas, el punzón recorre 38 mm entre una levantada y la siguiente en la primera media hora de la sesión, y 32 mm en la segunda hora.
 
 La cinta también se pone a mano: cada vértice queda un poco corrido, y las puntas, cortadas con la mano, se quedan cortas o se pasan. El frotado va y viene en diagonal, por parches, cada pasada con su presión. El dedo nunca toca el agua en el mismo punto ni con la misma fuerza, y a veces toca dos veces. La voz no es un metrónomo: cada sílaba dura distinto, se detiene al final del verso, la altura baja a lo largo de la frase y tiembla un poco.
 
@@ -186,7 +187,7 @@ Un paño de 8 × 7 azulejos con juntas torcidas, craquelado, manchas y desportil
 
 ![Calco](salida/03_calco.png)
 
-Se calca el cuerpo de la gramática, en vectores: su contorno, abierto en su punto más bajo y recorrido a mano (*El pulso*). 97 desagües en 55 signos. La pauta (la celda y las líneas de fondo y de borde) va con regla y en lápiz muy suave, y se pasa en las puntas. **La escala la decidió el pie:** la letra más alta y la más baja caben en la placa con aire. Medidas desde el fondo:
+Se calca el cuerpo de la gramática, en vectores: su contorno, abierto en su punto más bajo y recorrido a mano (*El pulso*). 95 desagües en 55 signos. La pauta (la celda y las líneas de fondo y de borde) va con regla y en lápiz muy suave, y se pasa en las puntas. **La escala la decidió el pie:** la letra más alta y la más baja caben en la placa con aire. Medidas desde el fondo:
 
 | Línea | Desde el fondo |
 |---|---|
@@ -208,9 +209,9 @@ El `.notdef`, la celda de la lámina calcada: ![notdef](salida/03b_notdef.png)
 Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, con un escalón donde la tijera se retoma y, a veces, una esquina cortada en diagonal. El calco se da vuelta y se repasa por el reverso con un punzón de bola de 1 mm sobre una base blanda. Por el reverso la letra queda al revés y hundida: una canaleta con dos lomas bajas, un canal. Por el anverso se lee, en relieve. El punzón sigue la línea de grafito del calco, no el contorno de la gramática, con su propio pulso: donde arranca, duda o termina, hunde un poco más; donde retoma, deja un hoyuelo chico; cerca del surco, las arrugas de la hoja se alisan. Lo reconstruido va a puntos: cada punto, una presión, a un paso que no es parejo.
 
 - **119 placas** (93 de signos hallados, 25 reconstruidos y 1 signo final).
-- **Tiempo simulado:** 16,8 horas de repujado en 14 sesiones de hasta dos horas, contando las placas que se rompieron. El plan estimaba entre 30 y 40 (de 15 a 20 minutos por placa). El tiempo sale de la mano: 5,7 horas con el punzón en la hoja, más 4 minutos por intento para cortar la hoja y pegar el calco, y 1 para retirarlo. La máquina no cuenta fotografiar las dos caras ni anotar la ficha.
+- **Tiempo simulado:** 17,2 horas de repujado en 14 sesiones de hasta dos horas, contando las placas que se rompieron. El plan estimaba entre 30 y 40 (de 15 a 20 minutos por placa). El tiempo sale de la mano: 5,8 horas con el punzón en la hoja, más 4 minutos por intento para cortar la hoja y pegar el calco, y 1 para retirarlo. La máquina no cuenta fotografiar las dos caras ni anotar la ficha.
 - **El orden:** primero una placa por celda; después, el resto de la póliza, cada vuelta en otra sesión, para que cada «a» sea de otro momento (04, acción 4).
-- **Roturas:** 8 en 93 placas halladas y 8 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %), un poco más con la mano cansada, y se rompe donde la mano más apretó.
+- **Roturas:** 6 en 93 placas halladas y 12 en 25 reconstruidas. La máquina supuso que el punteado perfora: una placa punteada se rompe con más probabilidad (16 % por intento contra 6 %), un poco más con la mano cansada, y se rompe donde la mano más apretó.
 
 ![Rotas](salida/04b_placas_rotas.jpg)
 
@@ -218,7 +219,7 @@ Papel de aluminio de cocina, cortado a tijera: cada lado en dos o tres cortes, c
 
 ![Cinta](salida/07_cinta.jpg)
 
-La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta 444 tramos y 303 pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.
+La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico negro de la plataforma: la cinta que tapó ojos y boca. Va recta; para girar se pliega o se superpone. Hicieron falta 438 tramos y 297 pliegues para los 55 signos. No hace gotas ni asientos: en la cinta, la letra pierde lo que le daba la gravedad.
 
 ## Frotado
 
@@ -226,9 +227,9 @@ La letra puesta con masking blanca, tirando a hueso claro, sobre el plástico ne
 
 ![Frotadas de la a](salida/08b_frotadas_de_la_a.jpg)
 
-Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acción 1, ahora sobre la letra. El papel no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Frota una mano, en diagonal, cada pasada con su presión y, con los minutos de la sesión, más suave. Se frota hasta que la letra no se lee: **el peso de una letra se mide en frotadas.** Las halladas se leen, en promedio, hasta la frotada 24,6; las reconstruidas, hasta la 15,4. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, tienen menos relieve que tomar el grafito y se borran antes.
+Un papel sobre la placa, por el anverso, frotado con grafito: el gesto de la acción 1, ahora sobre la letra. El papel no entra en los valles finos; toca toda la hoja y se carga donde la placa sube por encima de su entorno. Frota una mano, en diagonal, cada pasada con su presión y, con los minutos de la sesión, más suave. Se frota hasta que la letra no se lee: **el peso de una letra se mide en frotadas.** Las halladas se leen, en promedio, hasta la frotada 24,6; las reconstruidas, hasta la 15,2. **Lo que la máquina no diseñó y apareció:** las hipótesis, hechas a puntos, tienen menos relieve que tomar el grafito y se borran antes.
 
-**Las primeras en borrarse:** «4» (13), «…» (13), «ü» (14), «2» (14), «7» (14), «»» (14), «z» (15), «?» (15).
+**Las primeras en borrarse:** «7» (12), «:» (12), «z» (14), «é» (14), «ü» (14), «2» (14), «6» (14), ««» (14).
 
 **Las últimas:** «n» (26), «j» (26), «f» (26), «(» (26), «h» (26), «)» (26), «q» (26), «s» (27).
 
@@ -242,7 +243,7 @@ El signo final, las presiones de un pulgar, da 0 frotadas legibles: el domo es l
 
 ![agua](salida/agua.gif)
 
-La placa, por el anverso, en el fondo de una bandeja con un dedo de agua. Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 3,72 en las halladas y 1,30 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos. El dedo que toca el agua nunca toca en el mismo punto ni con la misma fuerza; en 13 de las 56 fotos tocó dos veces.
+La placa, por el anverso, en el fondo de una bandeja con un dedo de agua. Contraste de la letra en el agua quieta (cuánto se aparta la luz donde cae la letra, contra el resto de la placa): 3,73 en las halladas y 1,28 en las reconstruidas. **Lo que la máquina no diseñó y apareció:** las reconstruidas, hechas a puntos, llegan más débiles al agua. El punteado tiene menos relieve que el surco y desvía menos luz: en el agua, las hipótesis se ven menos. El dedo que toca el agua nunca toca en el mismo punto ni con la misma fuerza; en 13 de las 56 fotos tocó dos veces.
 
 ## Voz
 

@@ -708,8 +708,8 @@ def pagina(secciones, imprimir=False):
 
 
 def chrome():
-    for c in (os.environ.get("CHROME"), "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
-              "/opt/pw-browsers/chromium-1194/chrome-linux/chrome", shutil.which("chromium"),
+    instalados = sorted(Path("/opt/pw-browsers").glob("chromium-*/chrome-linux*/chrome"), reverse=True)   # el que haya
+    for c in (os.environ.get("CHROME"), *map(str, instalados), shutil.which("chromium"),
               shutil.which("chromium-browser"), shutil.which("google-chrome")):
         if c and Path(c).exists():
             return c

@@ -235,8 +235,8 @@
 <text x="295.6" y="78.401" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">EL ANCHO: MONOESPACIADA</text>
 <text x="295.6" y="83.201" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="500">La decisión.</tspan><tspan font-weight="300"> Todas las letras miden una celda y nada se estira para llenar. Entre palabras queda</tspan></text>
 <text x="295.6" y="86.996" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">una celda vacía. </tspan><tspan font-weight="500">Por qué.</tspan><tspan font-weight="300"> Las celdas de la cabeza y la máquina de escribir del poema son retículas</tspan></text>
-<text x="295.6" y="90.791" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">de celdas iguales. La letra se adapta a su contenedor, y no al revés: la m llena su celda y la i queda</tspan></text>
-<text x="295.6" y="94.586" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">rodeada de piel, la que se ve entre placa y placa sobre el cuerpo (D3).</tspan></text>
+<text x="295.6" y="90.791" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">de celdas iguales. La letra no se estira para llenar su contenedor: la m ocupa dos tercios de su</tspan></text>
+<text x="295.6" y="94.586" font-family="Newsreader" font-size="2.75" fill="#1d1c1a" xml:space="preserve"><tspan font-weight="300">celda y la i, un décimo. El resto es piel, la que se ve entre placa y placa sobre el cuerpo (D3).</tspan></text>
 <path d="M291.5,98.881 L294,101.381 L291.5,103.881 L289,101.381 Z" fill="#f6f4ee" stroke="#4a2470" stroke-width="0.3"/>
 <text x="291.5" y="102.231" font-family="Courier Prime" font-size="2.35" font-weight="700" fill="#4a2470" text-anchor="middle">3</text>
 <text x="295.6" y="102.181" font-family="Courier Prime" font-size="2.3" font-weight="700" letter-spacing="0.1" fill="#1d1c1a" text-anchor="start">LAS LÍNEAS: NOMBRES DE VASIJA</text>

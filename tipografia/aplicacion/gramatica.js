@@ -256,14 +256,83 @@
     return out;
   }
 
-  function gota(p, c, P) {
-    const masa = V(P, "gota_masa"), caida = V(P, "gota_caida"), cuello = V(P, "gota_cuello");
-    const centro = [p[0], p[1] + caida + masa / 2];
+  /* La gota que ya se soltó: un cuello y una masa que cae. Solo la coma: cae de un punto de cinta. */
+  function gotaQueCae(p, c, P) {
+    const masa = V(P, "gota_masa"), cuello = 0.55 * c;
+    const centro = [p[0], p[1] + 0.3 * c + masa / 2];
     const oy = centro[1] - masa / 2;
     const cuerpo = circulo(centro[0], centro[1], masa / 2, 192).map(([x, y]) => [x, oy + (y - oy) * 1.15]);
     const cuelloP = [[p[0] - c / 2, p[1]], [p[0] + c / 2, p[1]], [centro[0] + cuello / 2, centro[1]],
       [centro[0] - cuello / 2, centro[1]]];
-    return { formas: [cuerpo, cuelloP], fin: [centro[0], centro[1] + masa / 2] };
+    return { formas: [cuerpo, cuelloP], fin: [centro[0], centro[1] - masa / 2 + 1.15 * masa] };
+  }
+
+  /* Los largos acumulados de una poligonal. */
+  function largos(pts) {
+    const out = [0];
+    for (let i = 1; i < pts.length; i++) out.push(out[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    return out;
+  }
+
+  /* Punto y tangente de una poligonal a un largo medido desde su principio. */
+  function porLargo(pts, acum, l) {
+    let i = 0;
+    while (i < acum.length - 2 && acum[i + 1] <= l) i++;
+    const seg = Math.max(acum[i + 1] - acum[i], 1e-9), f = (l - acum[i]) / seg;
+    const dx = pts[i + 1][0] - pts[i][0], dy = pts[i + 1][1] - pts[i][1];
+    return { p: [pts[i][0] + dx * f, pts[i][1] + dy * f], t: [dx / seg, dy / seg] };
+  }
+
+  /* El terminal en gota: el trazo engorda hacia su final, y engorda hacia abajo. Como lagrima() en gramatica.py. */
+  function lagrima(pts, c, P, k = 1, pasos = 24, arco = 24) {
+    const masa = c + (V(P, "gota_masa") - c) * k;
+    const acum = largos(pts), total = ultimo(acum);
+    const largo = Math.min(V(P, "gota_largo"), total - 1e-6);
+    const us = linspace(total - largo, total - masa / 2, pasos);
+    const q = us.map((l) => porLargo(pts, acum, l));
+    const n = q.map(({ t }) => [-t[1], t[0]]);
+    const nf = ultimo(n);
+    const lado = nf[1] >= 0 ? 1 : -1, peso = Math.abs(nf[1]);
+    const g = us.map((l) => { const x = (l - us[0]) / Math.max(ultimo(us) - us[0], 1e-9); return x * x * (3 - 2 * x); });
+    const abajo = [], arriba = [];
+    q.forEach(({ p }, i) => {
+      const ab = c / 2 + g[i] * (masa - c) * (1 + peso) / 2, ar = c / 2 + g[i] * (masa - c) * (1 - peso) / 2;
+      abajo.push([p[0] + lado * n[i][0] * ab, p[1] + lado * n[i][1] * ab]);
+      arriba.push([p[0] - lado * n[i][0] * ar, p[1] - lado * n[i][1] * ar]);
+    });
+    const pf = ultimo(q).p, corr = lado * (masa - c) * peso / 2;
+    const centro = [pf[0] + nf[0] * corr, pf[1] + nf[1] * corr];
+    const fa = ultimo(abajo), a0 = Math.atan2(fa[1] - centro[1], fa[0] - centro[0]);
+    const cierre = linspace(0, Math.PI, arco).slice(1, -1).map((a) =>
+      [centro[0] + masa / 2 * Math.cos(a0 - lado * a), centro[1] + masa / 2 * Math.sin(a0 - lado * a)]);
+    const contorno = [...abajo, ...cierre, ...arriba.slice().reverse()];
+    const frente = [...abajo.filter((_, i) => g[i] >= 0.9), ...cierre, ...arriba.filter((_, i) => g[i] >= 0.9).reverse()];
+    let fin = contorno[0];
+    for (const pt of contorno) if (pt[1] > fin[1]) fin = pt;
+    return { contorno, frente, corta: masa / 2, fin: [fin[0], fin[1]] };
+  }
+
+  /* Cuánto aire queda entre la gota y los trazos ya puestos, sin contar el tramo del que cuelga. */
+  function aireDe(contorno, p, c, trazos, propio) {
+    let menor = Infinity;
+    for (const [pts, w] of trazos) {
+      if (pts.length < 2) continue;
+      const acum = largos(pts), total = ultimo(acum);
+      const delPrincipio = Math.hypot(pts[0][0] - p[0], pts[0][1] - p[1]) < 1e-6;
+      const delFinal = Math.hypot(ultimo(pts)[0] - p[0], ultimo(pts)[1] - p[1]) < 1e-6;
+      for (let i = 0; i < pts.length - 1; i++) {
+        if (delPrincipio && !(acum[i] > propio)) continue;
+        if (delFinal && !(total - acum[i + 1] > propio)) continue;
+        const ax = pts[i][0], ay = pts[i][1], dx = pts[i + 1][0] - ax, dy = pts[i + 1][1] - ay;
+        const dd = Math.max(dx * dx + dy * dy, 1e-9);
+        for (const [x, y] of contorno) {
+          const t = Math.min(1, Math.max(0, ((x - ax) * dx + (y - ay) * dy) / dd));
+          const dist = Math.hypot(x - ax - t * dx, y - ay - t * dy) - (w === null ? c : w) / 2;
+          if (dist < menor) menor = dist;
+        }
+      }
+    }
+    return menor;
   }
 
   function cuencaLado(xMedio, cy, xFondo, ybot, pared, pasos = 60) {
@@ -392,10 +461,37 @@
       return ya;
     }
 
+    /* El terminal en gota del trazo que termina en p; se adapta al lugar (como Taller.gota en gramatica.py). */
     gota(G, p) {
-      const g = gota(p, this.c, this.P);
+      const c = this.c;
+      let i = -1, alreves = false;
+      for (let j = G.trazos.length - 1; j >= 0 && i < 0; j--) {
+        const pts = G.trazos[j][0];
+        if (Math.hypot(ultimo(pts)[0] - p[0], ultimo(pts)[1] - p[1]) < 1e-6) { i = j; alreves = false; }
+        else if (Math.hypot(pts[0][0] - p[0], pts[0][1] - p[1]) < 1e-6) { i = j; alreves = true; }
+      }
+      const [pts, ancho] = G.trazos[i];
+      let eje = alreves ? pts.slice().reverse() : pts;
+      let hecha = null, k = 1;
+      for (let paso = 0; ; paso++) {
+        k = 1 - 0.1 * paso;
+        if (k < this.v("gota_min") - 1e-9) break;
+        const l = lagrima(eje, c, this.P, k);
+        if (aireDe(l.frente, p, c, G.trazos, this.v("gota_largo") + 1.5 * c) >= this.v("gota_aire")) { hecha = l; break; }
+      }
+      if (!hecha) { G.marca("sin gota: no tiene dónde caer", p); return [p[0], p[1]]; }
+      const acum = largos(eje), tope = ultimo(acum) - hecha.corta;
+      eje = [...eje.filter((_, j) => acum[j] < tope), porLargo(eje, acum, tope).p];
+      G.trazos[i] = [alreves ? eje.reverse() : eje, ancho];
+      G.mas.push(hecha.contorno);
+      G.marca(k > 0.95 ? "gota" : "gota achicada", hecha.fin);
+      return hecha.fin;
+    }
+
+    gotaQueCae(G, p) {
+      const g = gotaQueCae(p, this.c, this.P);
       G.mas.push(...g.formas);
-      G.marca("gota", g.fin);
+      G.marca("gota que cae", g.fin);
       return g.fin;
     }
 
@@ -505,11 +601,10 @@
     const yh = yt + t.v("hombro_caida") * (t.F - yt);
     const gancho = t.arco((xg + xs) / 2, yh, (xs - xg) / 2, yh - yt, t.v("gancho_fin"), 0);
     G.trazo(gancho);
-    const fin = t.gota(G, gancho[0]);
     t.fuste(G, rng, xs, yh);
     const [hx0, hy0] = e.ojo_a;
-    const arriba = Math.max(hy0 - c / 2, fin[1] + 0.4 * c + c / 2);
-    t.cuenca(G, hx0 - c / 2, xs, arriba, t.F - c / 2, { fuste: "der" });
+    t.cuenca(G, hx0 - c / 2, xs, hy0 - c / 2, t.F - c / 2, { fuste: "der" });   // el ojo es el del pie: no se corre
+    t.gota(G, gancho[0]);                                                         // la gota es la que se adapta
     return (xg + xs) / 2;
   }
   function _u(t, G, rng, s = "u") {
@@ -612,7 +707,7 @@
     const cx = (x0 + x1) / 2;
     const P0 = [x0 + c / 2 + 2, t.B + 0.1 * c], Vv = [cx, t.F - c / 2], P2 = [x1 - c / 2 - 2, t.B + 0.1 * c];
     const d = u(P2, Vv);
-    const cola = add(Vv, mul(d, (y1 - 2.2 * c - Vv[1]) / d[1]));
+    const cola = add(Vv, mul(d, (y1 - 0.75 * c - Vv[1]) / d[1]));
     t.recta(G, rng, P0, Vv, 1);
     t.recta(G, rng, P2, cola, 2);
     t.gota(G, cola);
@@ -702,7 +797,7 @@
   function r_coma(t, G, rng, cx = null) {
     if (cx === null) cx = cxDe(t.caja(","));
     t.punto(G, cx, t.F - t.v("punto") / 2);
-    t.gota(G, [cx, t.F]);
+    t.gotaQueCae(G, [cx, t.F]);
   }
   function r_punto(t, G) { t.punto(G, cxDe(t.caja(".")), t.F - t.v("punto") / 2); }
   function _parentesis(t, G, s, izq) {
@@ -1083,6 +1178,6 @@
 
   raiz.Gramatica = {
     construirTodo, preparar, construir, rasterizar, cajaTinta, celda, aSvg, limites, decodificar, achatar, medidas,
-    esqueleto, parametros, RECETAS, V, superelipse, filetear, circulo, remuestrear, corridas,
+    esqueleto, parametros, RECETAS, V, superelipse, filetear, circulo, remuestrear, corridas, lagrima,
   };
 })(typeof window !== "undefined" ? window : globalThis);

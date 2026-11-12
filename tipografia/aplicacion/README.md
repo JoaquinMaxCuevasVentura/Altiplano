@@ -49,7 +49,7 @@ La idea de hacer el control a la medida del proyecto viene de un reel de Aimeric
 - el alivio y el asiento;
 - los tres planos;
 - el gancho a 105°;
-- la caída y el cuello de la gota;
+- el largo de la gota y el aire que deja;
 - el sifón y la cinta.
 
 ## Por qué es más simple que la de septiembre
@@ -91,7 +91,12 @@ Los ajustes quedan guardados solo en ese navegador.
 
 El botón *El plano en SVG* descarga el plano del signo a escala: 4 px del lienzo son 1 mm de la placa.
 
-**La gramática de la página es la de Python.** `gramatica.js` es `simulacion/gramatica.py` portada a JavaScript, con el mismo azar de las recetas. Con los mismos ajustes, los contornos de los 55 signos coinciden con los de Python: la diferencia es de 0,16 % del área en la mediana, y de 0,8 % en el peor caso (los paréntesis).
+**La gramática de la página es la de Python.** `gramatica.js` es `simulacion/gramatica.py` portada a JavaScript, con el mismo azar de las recetas. Con los mismos ajustes, los contornos de los 55 signos coinciden con los de Python: sin contar el píxel del borde, que cada lenguaje pinta a su modo, la mayor diferencia es de 0,07 % del área de un signo (la «f»). Se comprueba con `comparar.js`:
+
+```bash
+python3 tipografia/aplicacion/exportar.py --prueba /tmp/prueba.json
+node tipografia/aplicacion/comparar.js tipografia/aplicacion /tmp/prueba.json
+```
 
 ## Archivos
 
@@ -103,6 +108,7 @@ El botón *El plano en SVG* descarga el plano del signo a escala: 4 px del lienz
 | `clipper.js` | Clipper 6.4.2 (Angus Johnson; traducción a JavaScript de Timo), para unir y engrosar polígonos. Licencia Boost 1.0, en la cabecera del archivo |
 | `datos.js` | Generado: los 30 testigos del pie, sus medidas, la razón de la foto, la caja, las recetas, los parámetros y el azar de cada receta |
 | `exportar.py` | Regenera `datos.js`. Con `--prueba RUTA` escribe también los cuerpos de Python, para comparar |
+| `comparar.js` | Compara los cuerpos de la página con los de Python, signo por signo |
 
 Si cambia el pie o la gramática en Python:
 

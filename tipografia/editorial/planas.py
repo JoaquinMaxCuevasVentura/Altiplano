@@ -233,7 +233,7 @@ def pie_letra_por_letra(lb, columnas=24):
         rotulo(f"left:{x(4):.3f}mm;top:{alto + 6:.3f}mm;width:{an(5):.3f}mm",
                f'<span class="fn">fig. {n}</span>{lb_etiqueta("hallada")} El pie, letra por letra: las 336 letras recortadas de '
                f'la foto de la lámina, cada una en su celda de 0,90, como en una letra monoespaciada. La «i» queda rodeada '
-               f'de piel; la «m» llena su celda. Entre palabras, una celda vacía. La retícula no mide la letra: la recibe, '
+               f'de piel; la «m» no llega a llenar su celda. Entre palabras, una celda vacía. La retícula no mide la letra: la recibe, '
                f'y sus juntas cortan las palabras. En violeta, la primera aparición de cada signo hallado; en gris, las '
                f'mayúsculas, que no tienen celda.'),
     ], clase="derecha", pid=fid)

@@ -25,6 +25,7 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
    - Lo hallado va en línea continua; lo reconstruido, en punteado.
    - Vale para el calco, el repujado (punteado con el punzón) y todos los estados que siguen.
    - Es la convención del dibujo arqueológico, y la que la lámina no cumple: su pie confiesa que el dibujo es reconstructivo, pero el dibujo no distingue qué parte lo es.
+   - En el texto a máquina de estos documentos, lo reconstruido va en violeta. Donde no hay color (una fotocopia, una sola tinta), lleva un punto debajo: es la marca de la letra dudosa en las convenciones de Leiden, con las que la epigrafía edita inscripciones dañadas (`11`, §11.1).
 3. **La forma la decide el material.**
    - El punzón sobre papel de aluminio no permite ángulos agudos sin romper, ni contraformas diminutas sin aplastarlas: esas son las reglas del dibujo.
    - Una placa rota no se corrige: se registra en su ficha y se guarda en la caja junto a la que se hizo después.
@@ -35,7 +36,8 @@ Las láminas de `esquemas/` son planos: la caja, la pauta, la ficha, la cadena y
    - Una mayúscula tecleada se escribe en caja baja.
 5. **Monoespaciada: una letra, una celda.**
    - Las celdas de la cabeza del ídolo y la máquina de escribir de tu poema son retículas de celdas iguales. La celda mide 0,90 de ancho por alto.
-   - La letra se adapta a su contenedor, y no al revés: la «m» llena su celda y la «i» queda rodeada de piel.
+   - La letra no se estira para llenar su contenedor: conserva el ancho que tiene en el pie. En la propuesta de la máquina, la «w» ocupa el 73 % del ancho de su celda; la «m», el 67 %; una letra mediana, el 39 %, y la «i», el 10 %. El resto es piel.
+   - Por eso un verso se lee como placas sueltas sobre un cuerpo (D3), y no como una palabra corrida. Es una letra para componer versos y rótulos, no texto largo (`12_auditoria_de_decisiones.md`, §2).
    - Antes la medida era el azulejo. Ya no: la piscina fue escenario y pantalla, no molde. Su pared da el frotado sobre el que se calca.
 6. **No hay Regular.**
    - La figura de la obra no tiene rostro distinguible: la cinta color piel le tapa los ojos y la boca.
@@ -114,6 +116,8 @@ El pie es la única escritura del objeto de origen, la voz del archivo sobre la 
 - …: de tres puntos.
 
 Las cifras son lo más hipotético: se arman con partes de letras (el 0 de la o, el 1 de la l).
+
+**Un antecedente.** La inscripción de la columna de Trajano no tiene H, J, K, U, W, Y ni Z. Cuando Carol Twombly hizo *Trajan* (1989), las derivó de las letras que sí están y dejó dicho de cuáles; y no trabajó sobre la piedra, sino sobre el frotado de Edward Catich (`11`, §11.1). Es el mismo método. La diferencia es que *Trajan* no deja ver cuáles son las derivadas, y *Contenida* sí.
 
 **La fuente real es el libro.** La foto que tenemos sirve para contar, no para calcar. Hay que fotografiar el pie en el ejemplar con luz rasante, que es como se leen las piedras erosionadas y la huella del tipo de plomo en el papel. Después, volver a correr el inventario con la transcripción corregida.
 

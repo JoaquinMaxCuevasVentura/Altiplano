@@ -27,8 +27,8 @@ from comun import CELDAS, POEMA, T, TES, caja_tinta  # noqa: E402
 from desenterrar import TESTIGOS, desenterrar, escalar_y_colocar, medidas  # noqa: E402
 
 # los parámetros que se miden en canales: el factor con que salen del canal
-EN_CANALES = dict(radio_chapa=0.6, asiento_ancho=2.0, asiento_alto=0.9, intemperie=0.12, alivio=0.28, gota_masa=1.25,
-                  gota_caida=0.3, gota_cuello=0.55, cinta=1.0, punto=1.0)
+EN_CANALES = dict(radio_chapa=0.6, asiento_ancho=2.0, asiento_alto=0.9, intemperie=0.12, alivio=0.28, gota_masa=1.4,
+                  gota_largo=2.4, gota_aire=0.5, cinta=1.0, punto=1.0)
 
 
 class Grabadora:

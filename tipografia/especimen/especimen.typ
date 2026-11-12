@@ -351,10 +351,32 @@
     #v(1mm)
     #text(size: 8.4pt)[La gramática arma los 55 cuerpos base desde cuatro generadores (o, l, n, a): del pie, las medidas; de la obra, la forma. *No es la letra:* no entra en la caja ni en la fuente, y no se usa para componer. Es una hipótesis, para confrontarla con la mano.]
   ])
-  place(top + left, dx: 22mm, dy: y(2) + 4mm, block([
-    #image("/simulacion/salida/21_gramatica_caja.png", width: 120mm)
-    #v(0mm)
-    #etiqueta("maquina") #h(1.5mm) #m([en tinta, lo hallado; en violeta, lo reconstruido], t: 5.8pt, c: gris)
+  // la caja de la máquina: los 55 cuerpos en vectores, cada uno en su celda
+  let cw = 14mm
+  let ch = cw / 0.9
+  let cj = 2.4mm
+  for c in D.caja {
+    let px = (c.columna - 1) * (cw + cj)
+    let py = y(2) + 3mm + (c.fila - 1) * (ch + cj)
+    let hallada = c.estado == "hallada"
+    marco(px, py, cw, ch, if hallada { fino(c: filete, w: 0.4pt) } else { punteado(c: lila, w: 0.5pt) }, hueco: 1.4mm)
+    place(top + left, dx: px + 0.6mm, dy: py + 0.4mm, m(str(c.celda), t: 3.6pt, c: gris2))
+    if "cuerpo" in c {
+      place(top + left, dx: px, dy: py, image(c.cuerpo, width: cw, height: ch))
+    } else {
+      place(top + left, dx: px, dy: py + ch * 0.4, block(width: cw, align(center, m([los dedos], t: 4pt, c: gris2))))
+    }
+  }
+  place(top + left, dx: 8 * (cw + cj) + 1mm, dy: y(2) + 3mm, block(width: 165mm - 8 * (cw + cj) - 1mm, [
+    #set text(hyphenate: false)
+    #set par(justify: false)
+    #etiqueta("maquina")
+    #v(1.5mm)
+    #m([en tinta, lo hallado; en violeta y a puntos, lo reconstruido], t: 5.8pt, c: gris)
+    #v(2mm)
+    #m([la celda 56 no es de la máquina: el signo final se hace con los dedos], t: 5.8pt, c: gris)
+    #v(2mm)
+    #m([el terminal en gota: el trazo engorda hacia su final y hacia abajo, como chorrea el líquido en la obra], t: 5.8pt, c: gris)
   ]))
 })
 
@@ -368,13 +390,14 @@
   let gens = (("o", "la cuenca"), ("l", "el fuste"), ("n", "el hombro"), ("a", "el gancho y la gota"))
   for (i, (g, nombre)) in gens.enumerate() {
     let px = x(1 + 2 * i)
+    marco(px, y(2) + 2mm, an(2), an(2) / 0.9, fino(c: filete, w: 0.4pt), hueco: 2.4mm)
     place(top + left, dx: px, dy: y(2) + 2mm, block(width: an(2), [
-      #box(width: an(2), height: an(2), clip: true, image("/simulacion/salida/gramatica/" + g + ".svg", width: an(2)))
-      #v(-1.6mm)
+      #box(width: an(2), height: an(2) / 0.9, image(D.caja.find(c => c.signo == g).cuerpo, width: an(2), height: an(2) / 0.9))
+      #v(-0.6mm)
       #m([#g · #nombre], t: 6pt)
     ]))
   }
-  place(top + left, dx: 0mm, dy: y(2) + 2mm + an(2) + 6mm, etiqueta("maquina"))
+  place(top + left, dx: 0mm, dy: y(2) + 2mm + an(2) / 0.9 + 6mm, etiqueta("maquina"))
   let cuadro = (
     ("cuerpo", [la celda de la cabeza, #coma(M.celda_razon, d: 2) : 1]), ("ancho", [monoespaciada: una letra, una celda]),
     ("líneas", [fondo, borde, afuera, desagüe]), ("altura de x", [#coma(P.razon, d: 2) de las ascendentes]),
@@ -383,13 +406,13 @@
     ("ojo", [arriba, el del pie; abajo, una vasija]), ("sobrepaso", [arriba sí; abajo no]),
     ("eje", [vertical: sin pluma]), ("asta", [un fuste en tres planos]),
     ("pie del asta", [un asiento cóncavo, sin serifa]), ("hombro", [superelipse n = 3, arranque tangente]),
-    ("terminales", [gota si mira abajo; corte si mira arriba]), ("a", [de dos pisos: la suma de las partes]),
+    ("terminales", [en gota si mira abajo; corte si mira arriba]), ("a", [de dos pisos: la suma de las partes]),
     ("punto", [un cuadrado de cinta]), ("tilde", [una gota]),
     ("virgulilla", [una onda]), ("enlace de la g", [un sifón]),
     ("rincones agudos", [un alivio]), ("cifras", [elzevirianas, cada una en su celda]),
     ("dobles opuestos", [varían: ? ¿ · 6 9 · « »]), ("mayúsculas", [ninguna: solo caja baja]),
   )
-  place(top + left, dx: 0mm, dy: y(5) - 2mm, block(width: 165mm, {
+  place(top + left, dx: 0mm, dy: y(5) + 4mm, block(width: 165mm, {
     set text(size: 7.2pt)
     grid(columns: (an(4), an(4)), column-gutter: J,
       ..range(2).map(col => grid(columns: (an(1) + 6mm, 1fr), row-gutter: 0mm,
@@ -443,11 +466,12 @@
       let s = if e == "hallada" { fino(w: 0.4pt) } else { punteado(w: 0.55pt) }
       marco(px + 0.4mm, py, w - 0.8mm, h, s, hueco: 1mm)
       place(top + left, dx: px, dy: py + h * 0.22, block(width: w, align(center, text(font: mono, size: 9pt, fill: if e == "hallada" { tinta } else { violeta }, c.s))))
+      if e != "hallada" { place(top + left, dx: px + w / 2 - 0.3mm, dy: py + h * 0.22 + 4.3mm, circle(radius: 0.3mm, fill: violeta)) }
       place(top + left, dx: px, dy: py + h + 0.8mm, block(width: w, align(center, m([#c.placa/#c.de], t: 4.6pt, c: gris))))
     }
   }
   place(top + left, dx: 0mm, dy: y(7) + 2mm, block(width: 165mm, [
-    #m([cada celda: el signo y su placa (la que le toca / las que tiene). En tinta, hallado; en violeta, reconstruido. No es la letra: es el orden de las placas], t: 5.8pt, c: gris)
+    #m([cada celda: el signo y su placa (la que le toca / las que tiene). En tinta, hallado; en violeta y con un punto debajo, reconstruido: es la marca de la letra dudosa en epigrafía, y se lee también sin color. No es la letra: es el orden de las placas], t: 5.8pt, c: gris)
   ]))
 })
 

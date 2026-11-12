@@ -282,22 +282,28 @@
    "de_donde": "Que la gota cuelgue libre, sin tocar la cuenca"
   },
   "gota_masa": {
-   "valor": 44.4,
+   "valor": 49.7,
    "unidad": "px",
-   "que": "Diámetro de la gota que cuelga de un terminal que mira abajo. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta.",
-   "de_donde": "El líquido que chorrea de la boca (D16)"
+   "que": "El ancho al que llega el trazo en un terminal que mira abajo: la gota. Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta.",
+   "de_donde": "El líquido que se vierte en la boca y chorrea: corre por el cuerpo y se junta abajo (D16)"
   },
-  "gota_caida": {
-   "valor": 10.6,
+  "gota_largo": {
+   "valor": 85.2,
    "unidad": "px",
-   "que": "Cuánto baja la gota antes de juntar peso.",
-   "de_donde": "Ídem: la gravedad"
+   "que": "En cuánto trazo se junta la gota: el ancho crece de a poco, y crece hacia abajo.",
+   "de_donde": "Chorrear es correr por una superficie: la gota es el mismo trazo, no una pieza colgada. El poema de la obra está en letra de máquina de escribir, con la tinta corrida"
   },
-  "gota_cuello": {
-   "valor": 19.5,
+  "gota_aire": {
+   "valor": 17.7,
    "unidad": "px",
-   "que": "Ancho del cuello de la gota.",
-   "de_donde": "Ídem"
+   "que": "El aire que la gota deja hasta el trazo de abajo. Si entera no lo deja, se achica.",
+   "de_donde": "Lo que chorrea necesita por dónde correr. Tapar es cosa de la cinta (D12), no de la gota"
+  },
+  "gota_min": {
+   "valor": 0.5,
+   "unidad": "×",
+   "que": "Hasta cuánto se achica la gota antes de no formarse. Sin lugar para caer, el terminal queda en un corte.",
+   "de_donde": "Una gota necesita caída"
   },
   "sifon": {
    "valor": 0.6,
@@ -322,10 +328,10 @@
   ",": {
    "receta": "un punto de cinta del que cae una gota",
    "partes": [
-    "gota",
+    "gota que cae",
     "punto"
    ],
-   "area_px": 3593,
+   "area_px": 4047,
    "alivios": 0
   },
   "s": {
@@ -334,7 +340,7 @@
     "corte: mira arriba",
     "gota"
    ],
-   "area_px": 19627,
+   "area_px": 18117,
    "alivios": 0
   },
   "e": {
@@ -389,7 +395,7 @@
     "desagüe",
     "gota"
    ],
-   "area_px": 21904,
+   "area_px": 20904,
    "alivios": 0
   },
   "k": {
@@ -407,7 +413,7 @@
     "alivio",
     "gota"
    ],
-   "area_px": 19692,
+   "area_px": 20314,
    "alivios": 1
   },
   "p": {
@@ -424,7 +430,7 @@
     "asiento",
     "gota"
    ],
-   "area_px": 12524,
+   "area_px": 10821,
    "alivios": 0
   },
   "t": {
@@ -476,7 +482,7 @@
    "partes": [
     "gota"
    ],
-   "area_px": 18157,
+   "area_px": 16384,
    "alivios": 0
   },
   "u": {
@@ -511,7 +517,7 @@
     "asiento",
     "gota"
    ],
-   "area_px": 19727,
+   "area_px": 17777,
    "alivios": 0
   },
   "í": {
@@ -546,7 +552,7 @@
     "gota",
     "tilde"
    ],
-   "area_px": 23399,
+   "area_px": 22408,
    "alivios": 0
   },
   ")": {
@@ -603,7 +609,7 @@
     "gota",
     "punto"
    ],
-   "area_px": 19234,
+   "area_px": 17356,
    "alivios": 0
   },
   "é": {
@@ -619,10 +625,10 @@
   ";": {
    "receta": "un punto de cinta sobre la coma: un punto del que cae una gota",
    "partes": [
-    "gota",
+    "gota que cae",
     "punto"
    ],
-   "area_px": 4939,
+   "area_px": 5393,
    "alivios": 0
   },
   "ñ": {
@@ -687,7 +693,7 @@
     "celda",
     "gota"
    ],
-   "area_px": 67188,
+   "area_px": 65391,
    "alivios": 1
   },
   "3": {
@@ -697,7 +703,7 @@
     "corte: mira arriba",
     "gota"
    ],
-   "area_px": 70145,
+   "area_px": 68360,
    "alivios": 0
   },
   "4": {
@@ -725,7 +731,7 @@
     "desagüe",
     "gota"
    ],
-   "area_px": 78206,
+   "area_px": 76670,
    "alivios": 0
   },
   "7": {

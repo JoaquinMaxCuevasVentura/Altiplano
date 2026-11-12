@@ -2,12 +2,13 @@
 """Arma el espécimen de Contenida con Typst: contenida_especimen.pdf y sus vistas.
 
 Uso (desde la raíz del repositorio):
-    pip install typst fonttools brotli pillow numpy pymupdf
+    pip install typst fonttools brotli pillow numpy pymupdf opencv-python-headless scikit-image scipy shapely
     python3 tipografia/especimen/armar.py
 
 Prepara en tipografia/especimen/.cache/, que no entra en el repositorio:
   fuentes/   Newsreader y Courier Prime en TTF (Typst no lee WOFF2), de ../laminas/fuentes/;
   img/       las letras halladas del pie, recortadas de los testigos (simulacion/testigos/),
+             los 55 cuerpos de la gramática en vectores (la propuesta de la máquina),
              y los estados de la «a» y de la «z», recortados de sus cadenas (simulacion/salida/);
   datos.json la caja con sus testigos, los estados, la póliza y los versos que se componen.
 
@@ -97,6 +98,32 @@ def testigos(caja):
         c["ancho"] = round(recorte.width / recorte.height, 3)
 
 
+def cuerpos(caja, celda_px):
+    """Los 55 cuerpos base de la gramática, en vectores: un SVG por signo, con la celda por lienzo.
+    Son la propuesta de la máquina: en tinta lo hallado, en violeta lo reconstruido."""
+    sys.path.insert(0, str(TIPO / "simulacion"))
+    import contextlib, io
+    with contextlib.redirect_stdout(io.StringIO()):
+        from desenterrar import desenterrar
+        todo = desenterrar()["gramatica"]
+    x0, y0, x1, y1 = celda_px
+    destino = CACHE / "img"
+    for c in caja:
+        if c["signo"] not in todo:
+            continue
+        geo = todo[c["signo"]]["geo"].simplify(0.12)
+        d = ""
+        for pol in (geo.geoms if hasattr(geo, "geoms") else [geo]):
+            for anillo in [pol.exterior, *pol.interiors]:
+                pts = list(anillo.coords)[:-1]
+                d += "M" + "L".join(f"{x - x0:.1f},{y - y0:.1f}" for x, y in pts) + "Z"
+        color = "#1d1c1a" if c["estado"] == "hallada" else "#4a2470"
+        ruta = destino / f"cuerpo_{c['celda']:02d}.svg"
+        ruta.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {x1 - x0:.1f} {y1 - y0:.1f}">'
+                        f'<path d="{d}" fill="{color}" fill-rule="evenodd"/></svg>\n', encoding="utf8")
+        c["cuerpo"] = f"/especimen/.cache/img/{ruta.name}"
+
+
 def paneles(ruta, prefijo):
     """Los diez estados de una cadena (simulacion/salida/12_cadena_*.jpg), cada uno en su archivo."""
     im = Image.open(ruta).convert("RGB")
@@ -155,6 +182,7 @@ def datos():
     alto, cy = (e["desague"] - e["afuera"]) * 1.1, (e["afuera"] + e["desague"]) / 2      # como gramatica.celda()
     x0, y0, x1, y1 = 300 - razon_celda / 2 * alto, cy - alto / 2, 300 + razon_celda / 2 * alto, cy + alto / 2
     U = 1000 / (y1 - y0)
+    cuerpos(caja, (x0, y0, x1, y1))
     medidas = dict(celda=dict(x0=x0 / 4, y0=y0 / 4, ancho=(x1 - x0) / 4, alto=(y1 - y0) / 4, avance=round((x1 - x0) * U)),
                    lineas={k: dict(mm=e[k] / 4, upm=round((e["fondo"] - e[k]) * U)) for k in ("afuera", "borde", "fondo", "desague")},
                    canal=dict(mm=round(e["canal"] / 4, 1), upm=round(e["canal"] * U)), celda_razon=razon_celda)

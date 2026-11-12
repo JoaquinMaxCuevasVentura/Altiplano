@@ -60,9 +60,9 @@ TEXTOS["P-01"] = [
                   "Quedó el contenedor\nde lo que ya no está.")),
     ("decision", (2, "El ancho: monoespaciada", "**La decisión.** Todas las letras miden una celda y nada se estira "
                   "para llenar. Entre palabras queda una celda vacía. **Por qué.** Las celdas de la cabeza y la "
-                  "máquina de escribir del poema son retículas de celdas iguales. La letra se adapta a su "
-                  "contenedor, y no al revés: la m llena su celda y la i queda rodeada de piel, la que se ve entre "
-                  "placa y placa sobre el cuerpo (D3).", None)),
+                  "máquina de escribir del poema son retículas de celdas iguales. La letra no se estira "
+                  "para llenar su contenedor: la m ocupa dos tercios de su celda y la i, un décimo. El resto es "
+                  "piel, la que se ve entre placa y placa sobre el cuerpo (D3).", None)),
     ("decision", (3, "Las líneas: nombres de vasija", "**La decisión.** La base se llama fondo (±0); la altura de x, "
                   "borde (+{borde_upm}); las ascendentes llegan afuera (+{afuera_upm}); las descendentes caen al "
                   "desagüe ({desague_upm}). **Por qué.** En la obra todo es un continente, y la letra también se "
@@ -196,26 +196,30 @@ TEXTOS["P-06"] = [
     ("p", "El cuarto generador, a 1:1: la a de dos pisos, que es la suma de las otras tres partes."),
     ("titulo", "Decisiones"),
     ("decision", (1, "El gancho: termina a 105°", "**La decisión.** El gancho es un hombro que no baja: termina a los "
-                  "105°, mirando abajo. **Por qué.** Solo gotea lo que mira abajo, y a 105° la gota cuelga libre, "
-                  "sin tocar la cuenca.", None)),
-    ("decision", (2, "El terminal: una gota", "**La decisión.** Del gancho cuelga una gota: un cuello de "
-                  "{gota_cuello_mm} mm y una masa de {gota_masa_mm} mm que cae {gota_caida_mm} mm a plomada. "
-                  "**Por qué.** En las romanas, la gota remata el giro del trazo; aquí cae por su peso, a plomada, "
-                  "sin seguir la dirección del gancho. Es el líquido que se vierte en la boca y chorrea (D16). _Retórica:_ sinécdoque; una gota por todo el "
+                  "105°, mirando abajo. **Por qué.** Solo gotea lo que mira abajo: a 105° el trazo ya mira al fondo, y "
+                  "la gota se junta en su punta.", None)),
+    ("decision", (2, "El terminal: una gota", "**La decisión.** El terminal es una gota, y la gota es el mismo trazo: "
+                  "en sus últimos {gota_largo_mm} mm, el canal engorda hasta {gota_masa_mm} mm. Lo que crece cae del "
+                  "lado de abajo del trazo, y el final se cierra en redondo. **Por qué.** Es el terminal en gota (o "
+                  "lágrima) de las romanas y de las letras de máquina de escribir, donde la gota remata el giro del "
+                  "trazo; aquí además pesa: engorda hacia abajo. En la obra, el líquido que se vierte en la boca no "
+                  "queda colgando: chorrea, corre por el cuerpo y se junta abajo (D16). Y el poema de la obra está "
+                  "compuesto en una letra de máquina de escribir, con el borde corrido como tinta que se expande "
+                  "(01). **Lo que se cambió.** Antes era un disco con cuello, colgado a plomada de un corte: una "
+                  "pieza puesta sobre la letra, no una parte de ella. _Retórica:_ sinécdoque; una gota por todo el "
                   "líquido vertido.", "La tierra se dio de beber a sí misma")),
     ("decision", (3, "El ojo: una cuenca que se abre", "**La decisión.** El ojo de la a es una cuenca: arriba, el del "
-                  "pie; abajo, pared y fondo que siguen hasta el fuste. Se abre en su punto más bajo y se corre hacia "
-                  "abajo para que la gota caiga libre. **Por qué.** Todo lo cerrado se abre abajo, y la gota no toca "
-                  "nada: cuelga sobre su propia cuenca, y la letra se da de beber a sí misma. **Una discrepancia.** La "
-                  "regla pide 0,4 canal ({a_libre_regla} mm), pero mide desde la gota sin estirar: en el cuerpo "
-                  "quedan {a_libre} mm. Se anota; la placa dirá si alcanza.", None)),
+                  "pie; abajo, pared y fondo que siguen hasta el fuste. Se abre en su punto más bajo. El ojo no se "
+                  "corre: es el que se midió en el pie. La que se adapta es la gota. **Por qué.** Todo lo cerrado se "
+                  "abre abajo, y la gota no tapa: tapar es cosa de la cinta (D12). Si entera no deja {a_libre_regla} mm de aire, "
+                  "se achica; si no tiene dónde caer, no se forma y queda el corte. Aquí deja {a_libre} mm.", None)),
     ("decision", (4, "La suma: dos pisos", "**La decisión.** La a es de dos pisos, como la del pie: gancho (n), fuste "
                   "(l) y cuenca (o). **Por qué.** Prueba que las partes se combinan. Es el método con que Agüero, "
                   "Uribe y Berenguer (2003) leen la litoescultura de Tiwanaku: elementos que se combinan en motivos, "
                   "y motivos en figuras.", None)),
     ("titulo", "Para la mano"),
-    ("p", "La gota se calca a plomada: vertical, aunque el gancho venga inclinado. Si la gota toca la cuenca, se "
-          "corre la cuenca, no la gota."),
+    ("p", "La gota no se agrega: se calca de un solo gesto, con el trazo. El lápiz llega al final del gancho y "
+          "engorda hacia abajo. Si la gota toca la cuenca, se achica la gota: el ojo es el del pie."),
 ]
 
 TEXTOS["P-07"] = [
@@ -226,8 +230,9 @@ TEXTOS["P-07"] = [
     ("decision", (1, "Todo lo cerrado se abre abajo", "Las contraformas de b, d, p, q, a, e, g, 0, 6, 8 y 9 son "
                   "cuencas con desagüe. El ojo de la e se abre en su barra; el del 8, en el ojo de abajo (D16).", None)),
     ("decision", (2, "Solo gotea lo que mira abajo", "Los terminales que miran abajo llevan gota: a, c, f, r, s, y, 2, "
-                  "3, 6, ? y la coma. Los que miran arriba terminan en un corte: e, j, la s abajo, 3, 5, 9 y ¿. La "
-                  "gravedad no se da vuelta.", None)),
+                  "3, 6, ? y la coma. La gota es el trazo mismo, que engorda hacia abajo; si no tiene lugar para caer, "
+                  "se achica o no se forma. Los que miran arriba terminan en un corte: e, j, la s abajo, 3, 5, 9 y ¿. "
+                  "La gravedad no se da vuelta.", None)),
     ("decision", (3, "La coma: un punto que gotea", "Un punto de cinta del que cae una gota: la puntuación también "
                   "obedece a la gravedad.", None)),
     ("decision", (4, "Las cifras: elzevirianas, en su celda", "El pie no trae ninguna cifra: las diez se "

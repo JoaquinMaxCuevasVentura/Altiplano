@@ -88,15 +88,21 @@ def construcciones(t, todo):
     yh = yt + t.v("hombro_caida") * (F - yt)
     gancho = t.arco((xg + xs) / 2, yh, (xs - xg) / 2, yh - yt, t.v("gancho_fin"), 0)
     p = gancho[0]
-    masa, caida = t.v("gota_masa"), t.v("gota_caida")
-    centro = (p[0], p[1] + caida + masa / 2)
-    fin = (centro[0], centro[1] + masa / 2)
     hx0, hy0, hx1, hy1 = e["ojo_a"]
-    arriba = max(hy0 - c / 2, fin[1] + 0.4 * c + c / 2)
     out["a"] = dict(xs=xs + dx, xg=xg + dx, cxg=(xg + xs) / 2 + dx, yt=yt, yh=yh, rx=(xs - xg) / 2, ry=yh - yt,
-                    gancho_fin=t.v("gancho_fin"), gota_p=[p[0] + dx, p[1]], gota_centro=[centro[0] + dx, centro[1]],
-                    gota_fin=[fin[0] + dx, fin[1]], cuenca_arriba=arriba, cuenca_izq=hx0 - c / 2 + dx,
-                    libre=arriba - c / 2 - fin[1], ojo_arriba=hy0)
+                    gancho_fin=t.v("gancho_fin"), gota_p=[p[0] + dx, p[1]], cuenca_arriba=hy0 - c / 2,
+                    cuenca_izq=hx0 - c / 2 + dx, ojo_arriba=hy0, gota=None)
+    gotas = todo["a"]["glifo"].gotas
+    if gotas:                                                # el terminal en gota, con la fórmula de la gramática
+        from gramatica import lagrima
+        from shapely.geometry import Polygon
+        contorno, frente, corta, fin = lagrima(gancho[::-1], c, t.P, gotas[0])
+        centro = Polygon(frente).centroid
+        mover = lambda q: [float(q[0]) + dx, float(q[1])]
+        out["a"]["gota"] = dict(contorno=[mover(q) for q in contorno], centro=[centro.x + dx, centro.y], fin=mover(fin),
+                                masa=c + (t.v("gota_masa") - c) * gotas[0], k=gotas[0],
+                                ancho=[mover(contorno[23]), mover(contorno[46])], arranque=mover(contorno[0]),
+                                circulo=mover((contorno[23] + contorno[46]) / 2), eje=[mover(q) for q in gancho])
     return out
 
 

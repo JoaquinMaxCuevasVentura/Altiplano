@@ -46,6 +46,8 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
 | `08_nombres.md` | **Propuesta** de nombres: por qué seguir con *Contenida*, qué otras candidatas hay y los estilos como participios (*Calcada*, *Repujada*, *Tapada*, *Frotada 01*…) |
 | `09_las_manos_no_tienen_lengua.md` | Lo que se toma de Cárcamo (el *manuaje*: las manos no tienen lengua) y de Johnson (la segunda vida de los árboles), y lo que cambia en el taller |
 | `10_imagenes_de_dominio_publico.md` | Imágenes y libros de dominio público, con su ficha y su enlace: el primer libro en relieve para ciegos (Haüy, 1786), el fonógrafo y el fonautógrafo (la voz que repuja y la voz escrita), las manos de Bulwer y Bonet, las gotas de Worthington, alfabetos vecinos y dónde seguir buscando. Para mirar, no para calcar |
+| `11_proyectos_afines.md` | Trabajos parecidos (Trajan, las convenciones de Leiden, Beowolf, las letras de máquina de escribir, Tinkuy) y qué se trae de cada uno |
+| `12_auditoria_de_decisiones.md` | La revisión de todas las decisiones, con la obra de Rebeca como primer criterio: qué se sostiene, qué se mejoró y qué se cambió (la gota) |
 | `digital/poliza.py` | La póliza en OpenType: reparte las placas para que ninguna se repita dentro de un verso; la prueba con HarfBuzz |
 | `laminas/` | **Las láminas de exposición:** diecisiete láminas 4:3 (PNG y PDF), al modo de las dos tesis: la obra, el sistema, el taller simulado y lo que queda |
 | `informe/` | **El informe de decisiones** (.docx y PDF), con seis mapas dibujados a mano (con código) que conectan conceptos, teoría, retórica y poética en cada etapa |
@@ -70,6 +72,7 @@ Proyecto tipográfico en homenaje a *Contener una ruina: acciones para desenterr
   - el espécimen, que muestra la letra mientras se hace (`especimen/`);
   - las láminas para exponerlo (`laminas/`);
   - la póliza en OpenType, probada con HarfBuzz (`digital/poliza.py`).
+  - la revisión de todas las decisiones (`12`), que cambió la gota de la gramática, y la de proyectos afines (`11`).
 - **Sin hacer:** las letras de la caja. Las hace la mano, desde la Acción 3.
 - **Lo primero:** la Acción 0, hablar con Rebeca (`04`).
 
@@ -91,6 +94,8 @@ python3 tipografia/digital/poliza.py --probar       # la póliza en OpenType, pr
 python3 tipografia/informe/mapas.py                 # los mapas del informe
 python3 tipografia/informe/armar.py                 # el informe de decisiones (.docx y PDF; necesita node y docx)
 python3 tipografia/planos/generar_planos.py         # los doce planos (necesitan Chromium: CHROME)
+python3 tipografia/planos/revisar_encimados.py \
+  tipografia/planos/svg/*.svg                       # revisa que ningún rótulo quede encimado
 python3 tipografia/editorial/armar.py              # el libro (necesita `npm install` en editorial/ y Chromium)
 python3 tipografia/especimen/armar.py              # el espécimen (Typst: pip install typst)
 python3 tipografia/laminas/imagenes.py              # las láminas de exposición

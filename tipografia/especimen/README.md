@@ -41,10 +41,10 @@ Lo propio sale del proyecto:
 | 5 | Estados, no pesos | La «a» en cada estado: la de la máquina, ya hecha; la de la mano, por hacer. Con el nombre propuesto de cada estilo |
 | 6 | El peso: frotadas | La «a» frotada una y otra vez; cuántas frotadas resisten las halladas y las reconstruidas |
 | 7 | La caja: lo hallado | Las 30 letras halladas en su celda, recortadas de la foto; a puntos, las 25 que faltan; el ¶ |
-| 8 | La propuesta de la máquina | Los 55 cuerpos base de la gramática, rotulados: no es la letra |
+| 8 | La propuesta de la máquina | Los 55 cuerpos base de la gramática, en vectores y cada uno en su celda, rotulados: no es la letra |
 | 9 | Anatomía | Los cuatro generadores y las 24 decisiones |
 | 10 | De punta a punta | La «a» y la «z» por todos sus estados |
-| 11 | Componer con placas | Tres versos del poema, celda por celda, con la placa que le toca a cada signo |
+| 11 | Componer con placas | Tres versos del poema, celda por celda, con la placa que le toca a cada signo. Lo reconstruido, en violeta y con un punto debajo |
 | 12 | La póliza | Las 119 placas: cuántas tiene cada signo |
 | 13 | Las proporciones | La celda (0,90) y la altura de x (1,71): la foto de cámara y la lámina enderezada (plano P-11) |
 | 14 | Las reglas | Lo que la letra no hace |
@@ -56,7 +56,7 @@ Lo propio sale del proyecto:
 Con [Typst](https://typst.app), que controla la página al milímetro y lee los datos del proyecto (la caja, la gramática, la póliza) tal como están:
 
 ```bash
-pip install typst fonttools brotli pillow numpy pymupdf
+pip install typst fonttools brotli pillow numpy pymupdf opencv-python-headless scikit-image scipy shapely
 python3 tipografia/especimen/armar.py
 ```
 
@@ -65,6 +65,7 @@ python3 tipografia/especimen/armar.py
 - las fuentes en TTF, porque Typst no lee WOFF2;
 - las letras halladas, recortadas de los testigos;
 - los estados de la «a» y de la «z», recortados de sus cadenas;
+- los 55 cuerpos de la gramática, en vectores (un SVG por signo);
 - los datos.
 
 Después compila `especimen.typ` con la raíz en `tipografia/` y deja el PDF y las vistas. La fecha del PDF es fija: rehacerlo con los mismos datos da el mismo archivo.

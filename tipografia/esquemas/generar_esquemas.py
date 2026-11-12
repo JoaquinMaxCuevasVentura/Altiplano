@@ -31,7 +31,19 @@ from PIL import Image
 
 AQUI = Path(__file__).resolve().parent
 CELDA = json.loads((AQUI / "celda_medida.json").read_text(encoding="utf8"))["celda"]   # la celda de la cabeza, de ancho por alto
-CHROME = os.environ.get("CHROME", "/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+def _chrome():
+    """El Chromium que haya: el de la variable CHROME, el de Playwright (la versión instalada) o el del sistema."""
+    import shutil
+    from pathlib import Path as _P
+    instalados = sorted(_P("/opt/pw-browsers").glob("chromium-*/chrome-linux*/chrome"), reverse=True)
+    for c in (os.environ.get("CHROME"), *map(str, instalados), shutil.which("chromium"),
+              shutil.which("chromium-browser"), shutil.which("google-chrome")):
+        if c and _P(c).exists():
+            return c
+    return "chromium"
+
+
+CHROME = _chrome()
 MONO = "'Courier New', Courier, 'Liberation Mono', monospace"
 
 # Paleta de la obra: el aluminio, la piel, la luz verde (solo luz, nunca tinta),

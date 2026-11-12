@@ -39,8 +39,9 @@ Cada parámetro tiene un valor, controla una sola cosa y viene de una decisión 
 | `asiento_ancho`, `asiento_alto` | 2 y 0,9 canales | El pie de cada fuste se ensancha hacia el fondo en una curva cóncava | El peso se asienta en la tierra |
 | `intemperie` | 0,12 canal | El radio con que se gastan todas las esquinas. Arriba no hay remates: el fuste termina en un corte | «Hoy está muy erosionado y casi no se ven esos detalles» (el pie) |
 | `alivio` | 0,28 canal | El rebaje en cada encuentro interior en ángulo | Para que el aluminio no se desgarre (D2) |
-| `gancho_fin` | 105° | Dónde termina el gancho alto antes de soltar la gota | Que la gota cuelgue libre |
-| `gota_masa`, `gota_caida`, `gota_cuello` | 1,25, 0,3 y 0,55 canales | La gota: un cuello y una masa que cae vertical, por su peso. Solo gotea el terminal que mira abajo | El líquido que chorrea de la boca (D16) |
+| `gancho_fin` | 105° | Dónde termina el gancho alto: ya mirando abajo | Solo gotea lo que mira abajo |
+| `gota_masa`, `gota_largo` | 1,4 y 2,4 canales | El terminal en gota: en su último tramo, el trazo engorda del canal a la masa. Lo que crece cae del lado de abajo, y el final se cierra en redondo. Solo gotea el terminal que mira abajo | El líquido que chorrea de la boca (D16). La forma es la del terminal en gota de las letras de máquina de escribir (§4c) |
+| `gota_aire`, `gota_min` | 0,5 canal; 0,5 | El aire que la gota deja hasta el trazo de abajo. Si entera no lo deja, se achica de a un décimo; si ni a la mitad cabe, no se forma y queda el corte | Lo que chorrea necesita por dónde correr. Tapar es cosa de la cinta (D12), no de la gota |
 | `sifon` | 0,6 canal | El cuello que une dos cuencas (g): el único trazo más fino | Vasos comunicantes |
 | `cinta` | 1 canal | El ancho de la cinta, a la escala en que iguala al canal. Masking blanca, tirando a hueso claro | La cinta que tapó ojos y boca (D12) |
 | `punto` | 1 canal | El punto: un trozo cuadrado de cinta, tan ancho como la cinta | Ídem: un parche, no una gota de tinta |
@@ -53,7 +54,7 @@ Cada parámetro tiene un valor, controla una sola cosa y viene de una decisión 
 |---|---|---|
 | 1. **La cuenca** (o, d, p, b, e) | Arriba, el ojo del pie. Abajo, la pared baja abombada (`pared`) hasta un fondo plano (`trapecio`), y el fondo se abre (`desague`) | Nada |
 | 2. **La banda facetada** (l, i, t, h) | Fustes en tres planos, con quiebres de 1,6° | La cinta no entra aquí: tiene su propio estado (§5). Si el fuste fuera cinta, las curvas también serían facetas, y eso contradice al punzón |
-| 3. **El desborde gravitacional** (a, c, f, r) | Una gota con cuello, que cae vertical y no sigue la dirección del trazo | Nada |
+| 3. **El desborde gravitacional** (a, c, f, r) | Un terminal en gota: el trazo mismo engorda hacia su final y hacia abajo | Primero fue un disco con cuello, colgado a plomada de un corte. Se cambió: era una pieza puesta sobre la letra, no una parte de su anatomía (§4c) |
 | 4. **El pliegue dermometálico** (n, m, h) | El arco es una superelipse de exponente 3: tenso, achatado | Nada |
 | 5. **La asimetría de la intemperie** | Arriba, corte sin remate. Abajo, asiento | Sin «siglos de viento en Akapana»: no sabemos dónde estuvo el ídolo (el pie supone Pumapuncu). La fuente es el pie: «muy erosionado» |
 | 6. **El sifón** (g) | Se define al derivar la g: dos cuencas unidas por un canal estrangulado, como vasos comunicantes | Sin la *challa* invertida. Las lecturas rituales no se vuelven operaciones del proyecto (`01`, §1.6). Queda la física del sifón |
@@ -83,8 +84,9 @@ Cada generador es una lista de **trazos**: ejes (poligonales densas) que se engr
 
 **a: todo junto.** Es la suma de los otros tres.
 1. Del pie: el asta, el ojo y el extremo del gancho.
-2. **El gancho** es un hombro que baja por el fuste hasta el asiento. Del otro lado termina a los 105° y suelta la gota.
-3. **La cuenca** tiene arriba el ojo del pie. Abajo, pared abombada y fondo plano. Se abre en el punto más bajo del ojo, y el fondo sigue hasta el fuste.
+2. **El gancho** es un hombro que baja por el fuste hasta el asiento. Del otro lado termina a los 105°, mirando abajo, y ahí el trazo engorda en gota.
+3. **La cuenca** tiene arriba el ojo del pie, sin correrlo: es una medida. Abajo, pared abombada y fondo plano. Se abre en el punto más bajo del ojo, y el fondo sigue hasta el fuste.
+4. **La gota se adapta a la cuenca**, y no al revés: si no deja medio canal de aire, se achica.
 
 Así la o, la l y la n dan las piezas de las demás letras: la cuenca, el fuste y el hombro. La a prueba que se pueden combinar.
 
@@ -119,16 +121,44 @@ Los otros 51 signos no se dibujan uno por uno: se arman con las partes de los ge
 **Las reglas de la derivación:**
 
 1. **Todo lo cerrado es una cuenca y se abre abajo.** El ojo de la e se abre en su barra; el del 8, en el ojo de abajo.
-2. **Solo gotea lo que mira abajo.** Un terminal que mira arriba termina en un corte. La gravedad no se da vuelta.
+2. **Solo gotea lo que mira abajo, y tiene dónde caer.** Un terminal que mira arriba termina en un corte: la gravedad no se da vuelta. La gota es el trazo mismo, no una pieza colgada. Si no tiene lugar, se achica; si ni así cabe, queda el corte.
 3. **Los dobles opuestos varían.** En la litoescultura de Tiwanaku, las figuras enfrentadas casi nunca son idénticas (Agüero, Uribe y Berenguer 2003).
    - La ¿ no es la ? dada vuelta: su gancho está abajo y no gotea.
    - El 9 no es el 6: su trazo baja y termina en un corte.
    - Las » se arman con su propio azar.
-4. **La coma es un punto de cinta del que cae una gota.**
+4. **La coma es un punto de cinta del que cae una gota.** Es la única gota suelta, con cuello: la cinta no es un trazo, y lo que cae de ella ya se soltó.
 5. **Las cifras son elzevirianas**, cada una en su celda: el 6 y el 8 suben; el 3, el 4, el 5, el 7 y el 9 bajan del fondo.
 6. **Lo reconstruido usa las mismas partes.** Solo cambia la ejecución: se calca y se repuja a puntos.
 
 La receta de cada signo está en `simulacion/salida/gramatica/gramatica.json` y en `simulacion/informe.md`. Los 55 cuerpos base están en `simulacion/salida/21_gramatica_caja.png`.
+
+## 4c. El terminal en gota: de dónde sale
+
+La primera gota de la gramática era un disco de 1,25 canales con un cuello de 0,55, colgado a plomada de un corte plano, sin seguir la dirección del trazo. Tenía dos defectos:
+
+- **No era anatomía.** Era una pieza puesta sobre la letra. Ningún terminal tipográfico tiene un cuello más fino que su trazo.
+- **No cabía.** Medía 1,74 canales de alto y el ojo de arriba de la «s» mide 1,6: lo tapaba, y también el del «2» y el del «3».
+
+La tipografía ya tiene esta parte, y se llama igual: el **terminal en gota** o lágrima. Se midió en tres fuentes de licencia abierta, con el grueso mayor del terminal sobre el grueso mediano del trazo, en letras de 400 px:
+
+| Fuente | Qué es | El terminal sobre el trazo |
+|---|---|---|
+| Courier Prime (SIL OFL) | De máquina de escribir, de trazo único y monoespaciada | a 1,11 · r 1,14 · c 1,23 |
+| Newsreader (SIL OFL) | Romana con contraste | a 1,28 · r 1,36 · c 1,56 · f 1,58 (sobre el asta) |
+| Liberation Serif (SIL OFL), la sustituta del pie | Romana de periódico | No tiene gota: termina en pico |
+
+**Lo que pide la obra.** En la acción, el líquido que se vierte en la boca no queda colgando: *chorrea* (D16). Corre por el cuerpo y se junta en el borde de abajo. Y el poema de la obra está compuesto en una letra monoespaciada de máquina de escribir, «con el borde corrido como tinta que se expande» (`01`). Las dos cosas piden lo mismo: una gota que sea el propio trazo, engordado, y no una pieza colgada. La tradición tipográfica solo da la manera de dibujarla.
+
+En las tres fuentes, el terminal es el trazo mismo, que engorda hacia su final. Así es también en las letras «Remington Typewriter» del catálogo de American Type Founders de 1912 (*American Specimen Book of Type Styles*, en Internet Archive, `americanspecimen00amerrich`, hoja 866): trazo único, una letra por celda y gotas en la a, la c, la f, la r y la y. Es la clase de letra en que está compuesto el poema de la obra.
+
+**La regla nueva:**
+
+1. En los últimos 2,4 canales, el ancho del trazo pasa del canal a 1,4 canales, de a poco.
+2. Lo que crece cae del lado de abajo del trazo: si el trazo va horizontal, todo abajo; si cae a plomo, parejo. Es lo que chorrea: se junta abajo.
+3. El final se cierra en redondo.
+4. Si la masa no deja medio canal de aire hasta el trazo que tiene abajo, se achica. Si a la mitad tampoco cabe, no hay gota. La gota no tapa: tapar es cosa de la cinta (D12).
+
+La sustituta no tiene gotas, así que la gota no es una medida del pie: es forma de la obra. Queda por ver en el libro cómo terminan la a, la c, la f y la r del pie real.
 
 ## 5. Un estado nuevo: *Cinta*
 
@@ -177,7 +207,7 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 1. **Medir en el libro** lo que hoy es a ojo: `hombro_caida`, el grueso y el fino, y la proporción de la celda. El artículo de Agüero, Uribe y Berenguer da la pista: Posnansky 1945, vol. 2, figs. 100, 101a, 101b y 102a.
 2. **Regenerar la pauta de calco** de `esquemas/` con la celda en lugar del azulejo.
 3. **Confrontar con la mano:** la mano puede discutir cada decisión en la aplicación (§8). Lo que cambia viaja en `parametros.json`, y todo el juego se rehace.
-4. **La gota de la a.** La regla pide 0,4 canal entre la gota y la cuenca, pero lo mide desde la gota sin estirar: estirada 1,15 por su peso, quedan 2,2 mm en lugar de 3,5. Lo encontraron los planos (`planos/`, P-06). Si la placa muestra que no alcanza, se corrige la receta `r_a` y se rehace todo.
+4. **Los terminales del pie.** La sustituta termina en pico, sin gota. Falta ver en el libro cómo terminan la a, la c, la f y la r del pie: si tienen gota, se mide; si no, la gota sigue siendo de la obra (§4c). La discrepancia de la gota de la a que encontraron los planos (2,2 mm libres en lugar de 3,5) se resolvió al rehacer la gota: ahora la gota se adapta y el ojo no se corre.
 
 ## 8. Los planos y la página de las decisiones
 
@@ -191,13 +221,13 @@ En la simulación, la cinta corre sobre los 55 signos: `simulacion/salida/07_cin
 - la tensión del hombro y dónde arranca: el arco se tensa entre la elipse y n = 5, y el arranque baja por la pata;
 - el quiebre del asta: el primer plano se aparta del eje;
 - la intemperie (los remates): el radio se acota desde su centro;
-- la gota: se estira hacia abajo, por su peso.
+- la gota: el trazo engorda hacia su final, del lado de abajo.
 
 Cada dibujo usa las fórmulas de la gramática: la obra va en tinta y continua; lo que se aparta, en violeta y a puntos, como lo reconstruido. No es un panel de deslizadores: la interfaz se hizo a la medida de esta letra, que es el método de un reel de Aimeric sobre *Ultravaria* (una tipografía paramétrica con una interfaz inventada para ella). Se toma el método, no la interfaz.
 
-Lo que fija el material (el radio de la chapa, el desagüe del punzón, el alivio, el asiento, el gancho a 105°, el sifón, la cinta) no se mueve: se dice por qué. Los simuladores de los estados se sacaron; los estados los hace la mano.
+Lo que fija el material (el radio de la chapa, el desagüe del punzón, el alivio, el asiento, el gancho a 105°, el largo y el aire de la gota, el sifón, la cinta) no se mueve: se dice por qué. Los simuladores de los estados se sacaron; los estados los hace la mano.
 
-- **Cómo vuelve a Python:** como `parametros.json`, con solo los ajustes. Se usa con `gramatica.py --parametros` y `simular.py --parametros`. Con los mismos ajustes, los contornos de los 55 signos coinciden con los de Python: la página repite el azar de las recetas, y la diferencia entre los dos contornos es de 0,16 % del área en la mediana.
+- **Cómo vuelve a Python:** como `parametros.json`, con solo los ajustes. Se usa con `gramatica.py --parametros` y `simular.py --parametros`. Con los mismos ajustes, los contornos de los 55 signos coinciden con los de Python: la página repite el azar de las recetas. Sin contar el píxel del borde, que cada lenguaje pinta a su modo, la mayor diferencia es de 0,07 % del área de un signo (`aplicacion/comparar.js`).
 
 **Lo que aparece al mover:**
 
