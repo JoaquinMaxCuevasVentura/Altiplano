@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 7 archivos: 3 están en esta carpeta, 1 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `1eaf342`.
+En este commit, la línea tenía 7 archivos: 3 están en esta carpeta, 3 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `1eaf342`.
 
 ## Qué cambió respecto de la anterior
 
@@ -33,7 +33,7 @@ El mensaje del commit `1eaf342`:
 > abre en claude.ai; si no está, el texto se copia y queda a la vista.
 > El título vuelve a ser «Gramática de Contenida», el del artefacto.
 
-Y el README de la línea en ese commit: [H-0500](aplicacion/README.md).
+Y el README de la línea en ese commit: [H-0576](aplicacion/README.md).
 
 ## Lo que deduce el archivo
 

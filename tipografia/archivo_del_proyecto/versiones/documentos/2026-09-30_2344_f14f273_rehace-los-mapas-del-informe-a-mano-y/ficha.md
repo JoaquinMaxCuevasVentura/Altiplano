@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 12 archivos: 2 están en esta carpeta, 7 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
+En este commit, la línea tenía 12 archivos: 2 están en esta carpeta, 8 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f14f273`.
 
 ## Qué cambió respecto de la anterior
 
@@ -49,7 +49,7 @@ El mensaje del commit `f14f273`:
 > Mojada, Tocada, Dicha). El informe suma la sección 6.3 y reescribe cómo
 > leer los mapas, sus pies y el colofón.
 
-Y el README de la línea en ese commit: [H-0036](README.md).
+Y el README de la línea en ese commit: [H-0037](README.md).
 
 ## Lo que deduce el archivo
 

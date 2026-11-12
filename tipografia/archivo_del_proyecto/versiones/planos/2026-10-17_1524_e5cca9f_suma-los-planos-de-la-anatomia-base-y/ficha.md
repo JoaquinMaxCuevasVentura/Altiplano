@@ -11,12 +11,12 @@
 
 ## Qué contiene esta carpeta
 
-- **33 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `planos/README.md`, `planos/contenida_planos.pdf`, `planos/dibujo.py`, `planos/dxf/P-01_celda.dxf`, `planos/dxf/P-03_o_cuenca.dxf`, `planos/dxf/P-04_l_fuste.dxf`, `planos/dxf/P-05_n_hombro.dxf`, `planos/dxf/P-06_a_gancho_y_gota.dxf`, `planos/dxf/P-10_caja.dxf`, `planos/generar_planos.py`, `planos/png/P-00_indice.png`, `planos/png/P-01_celda.png`, `planos/png/P-02_canal.png`, `planos/png/P-03_o_cuenca.png` y 19 más.
+- **34 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `planos/README.md`, `planos/contenida_planos.pdf`, `planos/dibujo.py`, `planos/dxf/P-01_celda.dxf`, `planos/dxf/P-03_o_cuenca.dxf`, `planos/dxf/P-04_l_fuste.dxf`, `planos/dxf/P-05_n_hombro.dxf`, `planos/dxf/P-06_a_gancho_y_gota.dxf`, `planos/dxf/P-10_caja.dxf`, `planos/generar_planos.py`, `planos/geometria.py`, `planos/png/P-00_indice.png`, `planos/png/P-01_celda.png`, `planos/png/P-02_canal.png` y 20 más.
 - **8 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2`.
 
 ## La versión completa
 
-En este commit, la línea tenía 34 archivos: 33 están en esta carpeta, 0 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
+En este commit, la línea tenía 34 archivos: 34 están en esta carpeta, 0 en carpetas de versiones anteriores y 0 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `e5cca9f`:
 > 3,5: queda anotado en 03c. Se corrige la descripción del quiebre y
 > el ángulo del gancho en 03c. Informe, documentos y README al día.
 
-Y el README de la línea en ese commit: [H-0597](planos/README.md).
+Y el README de la línea en ese commit: [H-0692](planos/README.md).
 
 ## Lo que deduce el archivo
 

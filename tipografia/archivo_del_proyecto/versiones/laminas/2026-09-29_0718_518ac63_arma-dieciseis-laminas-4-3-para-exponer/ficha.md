@@ -44,7 +44,7 @@ El mensaje del commit `518ac63`:
 > - Newsreader y Courier Prime, con licencia SIL OFL.
 > - fila_de_paneles ya no corta los títulos largos (la gelatina, 08b).
 
-Y el README de la línea en ese commit: [H-0287](laminas/README.md).
+Y el README de la línea en ese commit: [H-0321](laminas/README.md).
 
 ## Lo que deduce el archivo
 

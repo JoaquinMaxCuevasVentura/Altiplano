@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **54 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/README.md`, `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/05_56_celdas.html`, `laminas/html/06_la_celda.html`, `laminas/html/07_la_gramatica.html`, `laminas/html/09_no_hay_regular.html`, `laminas/html/10_la_propuesta_de_la_maquina.html`, `laminas/html/11_piel_y_cinta.html`, `laminas/html/12_copia.html`, `laminas/html/13_agua_y_voz.html`, `laminas/html/14_la_pared.html`, `laminas/html/15_de_punta_a_punta.html`, `laminas/html/16_lo_que_aparecio.html` y 40 más.
+- **57 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/README.md`, `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/05_56_celdas.html`, `laminas/html/06_la_celda.html`, `laminas/html/07_la_gramatica.html`, `laminas/html/09_no_hay_regular.html`, `laminas/html/10_la_propuesta_de_la_maquina.html`, `laminas/html/11_piel_y_cinta.html`, `laminas/html/12_copia.html`, `laminas/html/13_agua_y_voz.html`, `laminas/html/14_la_pared.html`, `laminas/html/15_de_punta_a_punta.html`, `laminas/html/16_lo_que_aparecio.html` y 43 más.
 - **12 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 4 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 82 archivos: 54 están en esta carpeta, 9 en carpetas de versiones anteriores y 19 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `7f57d95`.
+En este commit, la línea tenía 82 archivos: 57 están en esta carpeta, 9 en carpetas de versiones anteriores y 16 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `7f57d95`.
 
 ## Qué cambió respecto de la anterior
 
@@ -57,7 +57,7 @@ El mensaje del commit `7f57d95`:
 > - Diecisiete láminas: la celda, la gramática, los 55 signos, piel y
 >   cinta, copia.
 
-Y el README de la línea en ese commit: [H-0353](laminas/README.md).
+Y el README de la línea en ese commit: [H-0387](laminas/README.md).
 
 ## Lo que deduce el archivo
 

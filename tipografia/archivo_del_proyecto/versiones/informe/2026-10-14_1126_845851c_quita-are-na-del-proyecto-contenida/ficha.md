@@ -33,7 +33,7 @@ El mensaje del commit `845851c`:
 > normales; el capítulo 11 del informe pasa a llamarse «Lo que está
 > alrededor».
 
-Y el README de la línea en ese commit: [H-0553](informe/README.md).
+Y el README de la línea en ese commit: [H-0632](informe/README.md).
 
 ## Lo que deduce el archivo
 

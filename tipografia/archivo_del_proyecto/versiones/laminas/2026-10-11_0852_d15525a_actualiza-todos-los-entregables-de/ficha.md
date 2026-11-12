@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **5 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/17_lo_que_sigue.html`, `laminas/html/todas.html`, `laminas/png/17_lo_que_sigue.png`.
+- **6 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/17_lo_que_sigue.html`, `laminas/html/todas.html`, `laminas/png/09_no_hay_regular.png`, `laminas/png/17_lo_que_sigue.png`.
 - **32 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 24 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 78 archivos: 5 están en esta carpeta, 42 en carpetas de versiones anteriores y 31 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
+En este commit, la línea tenía 78 archivos: 6 están en esta carpeta, 47 en carpetas de versiones anteriores y 25 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d15525a`.
 
 ## Qué cambió respecto de la anterior
 

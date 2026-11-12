@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 11 archivos: 1 están en esta carpeta, 7 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bb8ef8e`.
+En este commit, la línea tenía 11 archivos: 1 están en esta carpeta, 8 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bb8ef8e`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `bb8ef8e`:
 > informe.js arma el .docx con docx (npm) e incrusta Newsreader y Courier Prime
 > (SIL OFL); armar.py lo pasa a PDF, pagina el índice y lo vuelve a armar.
 
-Y el README de la línea en ese commit: [H-0034](README.md).
+Y el README de la línea en ese commit: [H-0035](README.md).
 
 ## Lo que deduce el archivo
 

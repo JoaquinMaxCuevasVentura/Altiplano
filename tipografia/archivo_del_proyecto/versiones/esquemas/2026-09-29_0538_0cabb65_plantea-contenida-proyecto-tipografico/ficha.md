@@ -11,11 +11,11 @@
 
 ## Qué contiene esta carpeta
 
-- **10 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/cadena_de_estados.png`, `esquemas/cadena_de_estados.svg`, `esquemas/ficha_de_hallazgo.png`, `esquemas/ficha_de_hallazgo.svg`, `esquemas/generar_esquemas.py`, `esquemas/montajes_con_agua.png`, `esquemas/montajes_con_agua.svg`, `esquemas/pauta_azulejo.png`, `esquemas/pauta_azulejo.svg`, `esquemas/plantillas_imprimibles.pdf`.
+- **11 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/cadena_de_estados.png`, `esquemas/cadena_de_estados.svg`, `esquemas/caja_8x7.png`, `esquemas/ficha_de_hallazgo.png`, `esquemas/ficha_de_hallazgo.svg`, `esquemas/generar_esquemas.py`, `esquemas/montajes_con_agua.png`, `esquemas/montajes_con_agua.svg`, `esquemas/pauta_azulejo.png`, `esquemas/pauta_azulejo.svg`, `esquemas/plantillas_imprimibles.pdf`.
 
 ## La versión completa
 
-En este commit, la línea tenía 13 archivos: 10 están en esta carpeta, 0 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cabb65`.
+En este commit, la línea tenía 13 archivos: 11 están en esta carpeta, 0 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cabb65`.
 
 ## Qué cambió respecto de la anterior
 

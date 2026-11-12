@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/generar_esquemas.py`, `esquemas/plantillas_imprimibles.pdf`.
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/ficha_de_hallazgo.png`, `esquemas/generar_esquemas.py`, `esquemas/plantillas_imprimibles.pdf`.
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 3 en carpetas de versiones anteriores y 9 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `5b3708d`.
+En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 5 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `5b3708d`.
 
 ## Qué cambió respecto de la anterior
 

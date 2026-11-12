@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 ARCHIVO = "tipografia/archivo_del_proyecto"
-ANTES = "a3036cf"             # el último commit del proyecto antes del archivo: fuera del archivo, nada cambia respecto de él
+ANTES = "8d8fc7b"             # el último commit del proyecto antes del archivo: fuera del archivo, nada cambia respecto de él
 COPIAS = ("copia exacta", "copia funcional (dependencia)", "copia de la conversación", "copia reducida (de la conversación)",
           "copia de la versión en línea", "copia de la fuente publicada")
 DOCUMENTOS = re.compile(r"^(README\.md|inventario\.csv|pendientes\.md|linea_de_tiempo\.md|verificacion\.md|herramientas/[^/]+\.py|"

@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 11 archivos: 2 están en esta carpeta, 6 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
+En este commit, la línea tenía 11 archivos: 2 están en esta carpeta, 7 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e8962b4`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `e8962b4`:
 > leen con --parametros (comun.usar_parametros); sin ajustes, la salida no cambia.
 > exportar.py regenera datos.js desde el pie.
 
-Y el README de la línea en ese commit: [H-0033](README.md).
+Y el README de la línea en ese commit: [H-0034](README.md).
 
 ## Lo que deduce el archivo
 

@@ -19,9 +19,9 @@ Las pruebas de la interfaz de los planos de detalle en un navegador sin pantalla
 - [`C-062`](capturas_finales/det_cuenca.png) · Captura de prueba: det_cuenca.png · prueba o experimento.
 - [`C-063`](capturas_finales/det_fuste.png) · Captura de prueba: det_fuste.png · prueba o experimento.
 - [`C-064`](capturas_finales/det_gota.png) · Captura de prueba: det_gota.png · prueba o experimento.
-- [`C-065`](capturas_finales/det_hombro.png) · Captura de prueba: det_hombro.png · prueba o experimento.
-- [`C-066`](capturas_finales/det_intemperie.png) · Captura de prueba: det_intemperie.png · prueba o experimento.
-- [`C-067`](capturas_finales/entera_1440.png) · Captura de prueba: entera_1440.png · prueba o experimento.
+- [`C-066`](capturas_finales/det_hombro.png) · Captura de prueba: det_hombro.png · prueba o experimento.
+- [`C-067`](capturas_finales/det_intemperie.png) · Captura de prueba: det_intemperie.png · prueba o experimento.
+- [`C-068`](capturas_finales/entera_1440.png) · Captura de prueba: entera_1440.png · prueba o experimento.
 - [`C-046`](capturas_finales/entera_390.png) · Captura de prueba: entera_390.png · prueba o experimento.
 - [`C-016`](capturas_finales/hoja1.png) · Captura de prueba: hoja1.png · prueba o experimento.
 - [`C-019`](capturas_finales/hoja2.png) · Captura de prueba: hoja2.png · prueba o experimento.
@@ -60,6 +60,7 @@ Las pruebas de la interfaz de los planos de detalle en un navegador sin pantalla
 - [`C-045`](capturas_vistas_en_la_conversacion/031004_entera_1440.jpg) · captura vista en la conversación: entera_1440.png · prueba o experimento.
 - `C-048` · captura vista en la conversación: hoja_movil.png · no se copia (duplicado exacto): duplicado exacto de C-047.
 - [`C-058`](capturas_vistas_en_la_conversacion/031400_figura_informe.jpg) · captura vista en la conversación: figura_informe.png · prueba o experimento.
+- `C-065` · captura vista en la conversación: det_gota.png · no se copia (duplicado exacto): duplicado exacto de C-064.
 - [`C-009`](herramientas_de_prueba/probar.js) · Abre la aplicación, junta los errores, saca capturas y prueba unas asas. · prueba o experimento.
 - [`C-029`](herramientas_de_prueba/arrastrar.js) · Prueba las asas: arrastre con el ratón, teclado, «volver a la obra» y la caja. · prueba o experimento.
 - [`C-028`](herramientas_de_prueba/zoom.js) · Capturas de los dibujos a 2×: node zoom.js id1 id2 ... · prueba o experimento.

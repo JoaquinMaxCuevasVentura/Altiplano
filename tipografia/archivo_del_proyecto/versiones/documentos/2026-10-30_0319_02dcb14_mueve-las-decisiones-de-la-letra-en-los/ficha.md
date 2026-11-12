@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 4 en carpetas de versiones anteriores y 8 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
+En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 5 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
 
 ## Qué cambió respecto de la anterior
 
@@ -55,7 +55,7 @@ El mensaje del commit `02dcb14`:
 > imprenta), que cambian solo en esas páginas. El armado del libro encuentra
 > el Chromium de Playwright de cualquier versión.
 
-Y el README de la línea en ese commit: [H-0097](README.md).
+Y el README de la línea en ese commit: [H-0098](README.md).
 
 ## Lo que deduce el archivo
 

@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 5 en carpetas de versiones anteriores y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `508401d`.
+En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 6 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `508401d`.
 
 ## Qué cambió respecto de la anterior
 
@@ -43,7 +43,7 @@ El mensaje del commit `508401d`:
 >   las muestras.
 > - No entra en la caja ni en la fuente (06, §6.3).
 
-Y el README de la línea en ese commit: [H-0089](README.md).
+Y el README de la línea en ese commit: [H-0090](README.md).
 
 ## Lo que deduce el archivo
 

@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 11 archivos: 6 están en esta carpeta, 2 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
+En este commit, la línea tenía 11 archivos: 6 están en esta carpeta, 3 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
 
 ## Qué cambió respecto de la anterior
 
@@ -41,7 +41,7 @@ El mensaje del commit `3f66520`:
 > - 03, 03c, 05, 06 y README: el testigo de las formas y la altura de x de
 >   la foto; el violeta, del esténcil de tatuaje.
 
-Y el README de la línea en ese commit: [H-0031](README.md).
+Y el README de la línea en ese commit: [H-0032](README.md).
 
 ## Lo que deduce el archivo
 

@@ -5,17 +5,19 @@
 | Línea | [Las láminas de exposición](../README.md) |
 | Origen | commit `4f6c7c6` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-11-08 22:58 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/laminas/`](../../../../laminas/) |
 | La versión anterior | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](../2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) |
+| La versión siguiente | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](../2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **24 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/11_placa.html`, `laminas/html/13_frotado.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/todas.html`, `laminas/img/03_calco_reticula.jpg`, `laminas/img/04_placa_reticula.jpg`, `laminas/img/04_placa_reverso_reticula.jpg`, `laminas/img/04b_placas_rotas.jpg`, `laminas/img/07_cinta_reticula.jpg`, `laminas/img/08_frotado_reticula.jpg`, `laminas/img/12_cadena_08.jpg`, `laminas/img/12_cadena_32.jpg` y 10 más.
+- **22 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 14 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 78 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 78 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
+En este commit, la línea tenía 78 archivos: 24 están en esta carpeta, 16 en carpetas de versiones anteriores y 38 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
 
 ## Qué cambió respecto de la anterior
 
@@ -47,8 +49,9 @@ El mensaje del commit `4f6c7c6`:
 > proporciones_sobre_la_lamina.py, que arma P-11A con capturas de la lámina en
 > planos/privado/, fuera del repositorio: la foto no se sube (07, §3).
 
-Y el README de la línea en ese commit: [V-0456](../../../../laminas/README.md).
+Y el README de la línea en ese commit: [V-0442](../../../../laminas/README.md).
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
+- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

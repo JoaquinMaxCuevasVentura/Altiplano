@@ -2,7 +2,7 @@
 
 El poema, el pie de la lámina y el inventario de letras halladas y por reconstruir.
 
-- **Lo vigente:** [`tipografia/textos/`](../../../textos/), el estado de la rama en `a3036cf`. No se copia aquí.
+- **Lo vigente:** [`tipografia/textos/`](../../../textos/), el estado de la rama en `8d8fc7b`. No se copia aquí.
 - **Versiones:** 1 de git.
 - **Volver:** [al índice del archivo](../../README.md).
 

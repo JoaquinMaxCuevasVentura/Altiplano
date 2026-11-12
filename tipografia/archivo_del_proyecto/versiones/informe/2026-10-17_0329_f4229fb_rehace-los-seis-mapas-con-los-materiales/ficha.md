@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **12 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/README.md`, `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`, `informe/mapas/mapa_3_la_obra_decision_por_decision.png`, `informe/mapas/mapa_3_la_obra_decision_por_decision.svg`, `informe/mapas/mapa_4_del_pie_a_los_55.png`, `informe/mapas/mapa_4_del_pie_a_los_55.svg`, `informe/mapas/mapa_5_la_cadena_de_estados.png`, `informe/mapas/mapa_5_la_cadena_de_estados.svg`, `informe/mapas/mapa_6_retorica_y_poetica.png`, `informe/mapas/mapa_6_retorica_y_poetica.svg`.
+- **17 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `informe/README.md`, `informe/contenida_informe_de_decisiones.docx`, `informe/contenida_informe_de_decisiones.pdf`, `informe/informe.js`, `informe/mapas.py`, `informe/mapas/mapa_1_el_proyecto_entero.png`, `informe/mapas/mapa_1_el_proyecto_entero.svg`, `informe/mapas/mapa_2_teoria_y_fuentes.png`, `informe/mapas/mapa_2_teoria_y_fuentes.svg`, `informe/mapas/mapa_3_la_obra_decision_por_decision.png`, `informe/mapas/mapa_3_la_obra_decision_por_decision.svg`, `informe/mapas/mapa_4_del_pie_a_los_55.png`, `informe/mapas/mapa_4_del_pie_a_los_55.svg`, `informe/mapas/mapa_5_la_cadena_de_estados.png` y 3 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 23 archivos: 12 están en esta carpeta, 3 en carpetas de versiones anteriores y 8 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f4229fb`.
+En este commit, la línea tenía 23 archivos: 17 están en esta carpeta, 3 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `f4229fb`.
 
 ## Qué cambió respecto de la anterior
 
@@ -36,7 +36,7 @@ El mensaje del commit `f4229fb`:
 > la gramática; el mapa 6 usa el texto exacto del poema. El informe
 > actualiza los pies de figura, «Cómo leer los mapas» y el colofón.
 
-Y el README de la línea en ese commit: [H-0566](informe/README.md).
+Y el README de la línea en ese commit: [H-0645](informe/README.md).
 
 ## Lo que deduce el archivo
 

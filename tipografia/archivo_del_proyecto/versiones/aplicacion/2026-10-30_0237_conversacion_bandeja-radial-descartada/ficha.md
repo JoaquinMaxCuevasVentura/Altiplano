@@ -16,7 +16,7 @@ La primera respuesta al video de referencia: una «bandeja» radial con las deci
 
 - [`C-002`](aplicacion/index.html) · Gramática de Contenida · material descartado.
 - [`C-003`](aplicacion/app.js) · Las decisiones de la letra: la mesa. · material descartado.
-- Y 9 copias de dependencias, para que abra: `D-0166`, `D-0194`, `D-0208`, `D-0180`, `D-0129`, `D-0143`, `D-0294`, `D-0300`, `D-0288`.
+- Y 9 copias de dependencias, para que abra: `D-0179`, `D-0211`, `D-0227`, `D-0195`, `D-0136`, `D-0152`, `D-0323`, `D-0328`, `D-0317`.
 
 ## Lo que lo respalda
 

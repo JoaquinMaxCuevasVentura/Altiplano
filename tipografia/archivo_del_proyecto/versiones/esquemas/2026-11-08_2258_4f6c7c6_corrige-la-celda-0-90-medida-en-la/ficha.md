@@ -5,17 +5,18 @@
 | Línea | [Los esquemas](../README.md) |
 | Origen | commit `4f6c7c6` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-11-08 22:58 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/esquemas/`](../../../../esquemas/) |
 | La versión anterior | [2026-10-18_1932_5b3708d_pone-al-dia-los-entregables-con-el-pulso](../2026-10-18_1932_5b3708d_pone-al-dia-los-entregables-con-el-pulso/ficha.md) |
+| La versión siguiente | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](../2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `esquemas/generar_esquemas.py`, `esquemas/plantillas_imprimibles.pdf`.
 
 ## La versión completa
 
-En este commit, la línea tenía 15 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 15 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
+En este commit, la línea tenía 15 archivos: 2 están en esta carpeta, 3 en carpetas de versiones anteriores y 10 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
 
 ## Qué cambió respecto de la anterior
 
@@ -50,4 +51,4 @@ El mensaje del commit `4f6c7c6`:
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

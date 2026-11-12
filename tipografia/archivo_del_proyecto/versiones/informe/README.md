@@ -2,8 +2,8 @@
 
 El informe en Word y PDF, con seis mapas, y su generador.
 
-- **Lo vigente:** [`tipografia/informe/`](../../../informe/), el estado de la rama en `a3036cf`. No se copia aquí.
-- **Versiones:** 13 de git, 1 de la conversación.
+- **Lo vigente:** [`tipografia/informe/`](../../../informe/), el estado de la rama en `8d8fc7b`. No se copia aquí.
+- **Versiones:** 14 de git, 1 de la conversación.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -21,4 +21,5 @@ El informe en Word y PDF, con seis mapas, y su generador.
 | 2026-10-18 16:10 | commit `0cdccf1` | [2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del](2026-10-18_1610_0cdccf1_da-a-la-simulacion-y-a-la-mesa-del/ficha.md) | versión anterior | Da a la simulación y a la mesa del repujado el pulso de una mano |
 | 2026-10-30 03:13 | conversación | [2026-10-30_0313_conversacion_comprobaciones-del-informe](2026-10-30_0313_conversacion_comprobaciones-del-informe/ficha.md) | prueba o experimento | Las páginas 28 y 29 del informe rehecho, para comprobar el §8.4 y su figura. |
 | 2026-10-30 03:19 | commit `02dcb14` | [2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los](2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los/ficha.md) | versión anterior | Mueve las decisiones de la letra en los planos de detalle |
-| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión anterior | Corrige la celda: 0,90, medida en la lámina enderezada |
+| 2026-11-12 17:20 | commit `8d8fc7b` | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) | versión vigente | Revisa todas las decisiones: la gota pasa a ser un terminal del trazo |

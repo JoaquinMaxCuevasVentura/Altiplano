@@ -15,7 +15,7 @@ La página del artefacto «Gramática de Contenida» en su versión 5, la de los
 ## Qué contiene esta carpeta
 
 - [`L-002`](artefacto/index.html) · Gramática de Contenida, versión 5 en línea: la página · versión anterior.
-- Y 3 copias de dependencias, para que abra: `D-0302`, `D-0290`, `D-0305`.
+- Y 3 copias de dependencias, para que abra: `D-0330`, `D-0319`, `D-0333`.
 
 ## Lo que lo respalda
 

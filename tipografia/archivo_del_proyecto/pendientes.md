@@ -34,7 +34,7 @@ Lo que falta en el archivo y por qué, lo que se registra sin copiarlo y lo que 
 ## Lo que se registra sin copiarlo
 
 - **Los archivos de la raíz del repositorio** (`README.md` y `.gitignore`) cambiaron 15 veces con commits de *Contenida*, pero mezclan los dos proyectos: no se copian. Cada fila dice cómo recuperarlos con `git show`.
-- **10 duplicados exactos** de materiales que ya están archivados o vigentes: se anotan con el número del original. `C-025` (captura vista en la conversación: hoja1.png), `C-031` (captura vista en la conversación: hoja3.png), `C-037` (captura vista en la conversación: hoja4.png), `C-048` (captura vista en la conversación: hoja_movil.png), `C-068` (Captura de prueba: figura_informe.png), `C-070` (captura vista en la conversación: hoja_informe.png)….
+- **11 duplicados exactos** de materiales que ya están archivados o vigentes: se anotan con el número del original. `C-025` (captura vista en la conversación: hoja1.png), `C-031` (captura vista en la conversación: hoja3.png), `C-037` (captura vista en la conversación: hoja4.png), `C-048` (captura vista en la conversación: hoja_movil.png), `C-065` (captura vista en la conversación: det_gota.png), `C-069` (Captura de prueba: figura_informe.png)….
 - **La caché de Python que se subió por error** el 30.09 y se borró en `deb0435`: se anota, no se copia.
 - **La lámina enderezada y el pie aparte** (8.11.2026), las dos imágenes en que se volvieron a medir las proporciones: no se suben, como la foto del pie (07, §3). Quedan sus medidas (`esquemas/celda_medida.json` y `razon_medida.json`) y P-11A, la lámina con capturas, que se arma desde ellas con `planos/proporciones_sobre_la_lamina.py` y queda en `planos/privado/`, fuera del repositorio.
 

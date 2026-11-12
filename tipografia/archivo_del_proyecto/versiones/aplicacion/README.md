@@ -2,8 +2,8 @@
 
 La gramática en el navegador: de la aplicación de cuatro vistas a la de los planos de detalle.
 
-- **Lo vigente:** [`tipografia/aplicacion/`](../../../aplicacion/), el estado de la rama en `a3036cf`. No se copia aquí.
-- **Versiones:** 6 de git, 3 de la conversación y 3 en línea.
+- **Lo vigente:** [`tipografia/aplicacion/`](../../../aplicacion/), el estado de la rama en `8d8fc7b`. No se copia aquí.
+- **Versiones:** 7 de git, 3 de la conversación y 4 en línea.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -18,5 +18,7 @@ La gramática en el navegador: de la aplicación de cuatro vistas a la de los pl
 | 2026-10-30 02:45 | conversación | [2026-10-30_0245_conversacion_planos-de-detalle-primer-borrador](2026-10-30_0245_conversacion_planos-de-detalle-primer-borrador/ficha.md) | versión anterior | El primer borrador de la interfaz de los planos de detalle, antes de probarlo; la sección de los dibujos reescrita después de la primera prueba; y la primera escritura del README nuevo. |
 | 2026-10-30 03:19 | commit `02dcb14` | [2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los](2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los/ficha.md) | versión anterior | Mueve las decisiones de la letra en los planos de detalle |
 | 2026-10-30 03:20 | en línea | [2026-10-30_0320_en-linea_artefacto-gramatica-version-5](2026-10-30_0320_en-linea_artefacto-gramatica-version-5/ficha.md) | versión anterior | La página del artefacto «Gramática de Contenida» en su versión 5, la de los planos de detalle, como la sirve claude.ai. |
-| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |
-| 2026-11-08 23:10 | en línea | [2026-11-08_2310_en-linea_artefacto-gramatica-version-6](2026-11-08_2310_en-linea_artefacto-gramatica-version-6/ficha.md) | versión vigente | La versión 6 del artefacto «Gramática de Contenida»: la misma página, con el gramatica.js de la celda de 0,90. |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión anterior | Corrige la celda: 0,90, medida en la lámina enderezada |
+| 2026-11-08 23:10 | en línea | [2026-11-08_2310_en-linea_artefacto-gramatica-version-6](2026-11-08_2310_en-linea_artefacto-gramatica-version-6/ficha.md) | versión anterior | La versión 6 del artefacto «Gramática de Contenida»: la misma página, con el gramatica.js de la celda de 0,90. |
+| 2026-11-12 17:18 | en línea | [2026-11-12_1718_en-linea_artefacto-gramatica-version-7](2026-11-12_1718_en-linea_artefacto-gramatica-version-7/ficha.md) | versión vigente | La versión 7 del artefacto «Gramática de Contenida»: la misma página, con la gota rehecha como terminal en gota. |
+| 2026-11-12 17:20 | commit `8d8fc7b` | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) | versión vigente | Revisa todas las decisiones: la gota pasa a ser un terminal del trazo |

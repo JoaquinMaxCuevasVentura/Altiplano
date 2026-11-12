@@ -12,11 +12,11 @@
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `aplicacion/README.md`, `aplicacion/app.js`.
 
 ## La versión completa
 
-En este commit, la línea tenía 7 archivos: 0 están en esta carpeta, 1 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
+En este commit, la línea tenía 7 archivos: 2 están en esta carpeta, 3 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `02dcb14`.
 
 ## Qué cambió respecto de la anterior
 
@@ -54,7 +54,7 @@ El mensaje del commit `02dcb14`:
 > imprenta), que cambian solo en esas páginas. El armado del libro encuentra
 > el Chromium de Playwright de cualquier versión.
 
-Y el README de la línea en ese commit: [V-0490](../../../../aplicacion/README.md).
+Y el README de la línea en ese commit: [H-0579](aplicacion/README.md).
 
 ## Lo que deduce el archivo
 

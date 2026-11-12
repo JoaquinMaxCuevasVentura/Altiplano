@@ -5,16 +5,17 @@
 | Línea | [El espécimen](../README.md) |
 | Origen | commit `a3036cf` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-11-08 23:09 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/especimen/`](../../../../especimen/) |
+| La versión siguiente | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](../2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **10 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `especimen/README.md`, `especimen/armar.py`, `especimen/contenida_especimen.pdf`, `especimen/especimen.typ`, `especimen/paginas/05.png`, `especimen/paginas/06.png`, `especimen/paginas/08.png`, `especimen/paginas/09.png`, `especimen/paginas/10.png`, `especimen/paginas/11.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 21 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 21 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `a3036cf`.
+En este commit, la línea tenía 21 archivos: 10 están en esta carpeta, 0 en carpetas de versiones anteriores y 11 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `a3036cf`.
 
 ## Qué cambió respecto de la anterior
 
@@ -39,8 +40,8 @@ El mensaje del commit `a3036cf`:
 > TTF, recortes, datos) y compila especimen.typ; el PDF sale idéntico al
 > rehacerlo. El README del proyecto lo suma a sus entregables.
 
-Y el README de la línea en ese commit: [V-0623](../../../../especimen/README.md).
+Y el README de la línea en ese commit: [H-0827](especimen/README.md).
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.

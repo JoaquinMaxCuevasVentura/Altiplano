@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 11 archivos: 2 están en esta carpeta, 7 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbeb653`.
+En este commit, la línea tenía 11 archivos: 2 están en esta carpeta, 8 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `bbeb653`.
 
 ## Qué cambió respecto de la anterior
 
@@ -45,7 +45,7 @@ El mensaje del commit `bbeb653`:
 > - Fuera de la simulación: piel, caja, hectógrafo, azulejo y estrofa.
 > - 07_posnansky.md: lo que se rescata del libro y cómo quedó el testigo.
 
-Y el README de la línea en ese commit: [H-0025](README.md).
+Y el README de la línea en ese commit: [H-0026](README.md).
 
 ## Lo que deduce el archivo
 

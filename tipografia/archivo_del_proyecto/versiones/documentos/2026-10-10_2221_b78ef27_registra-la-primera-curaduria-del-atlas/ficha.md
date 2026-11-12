@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 8 en carpetas de versiones anteriores y 4 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b78ef27`.
+En este commit, la línea tenía 14 archivos: 2 están en esta carpeta, 9 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b78ef27`.
 
 ## Qué cambió respecto de la anterior
 
@@ -34,7 +34,7 @@ El mensaje del commit `b78ef27`:
 > conexiones a material ajeno. Los motivos tiwanacotas y las tipografías
 > «étnicas» entran como referencia visual, nunca en las letras.
 
-Y el README de la línea en ese commit: [H-0054](README.md).
+Y el README de la línea en ese commit: [H-0055](README.md).
 
 ## Lo que deduce el archivo
 

@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **25 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/11_placa.html`, `laminas/html/13_frotado.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/todas.html`, `laminas/img/03_calco_reticula.jpg`, `laminas/img/03b_notdef.jpg`, `laminas/img/04_placa_reticula.jpg`, `laminas/img/04_placa_reverso_reticula.jpg`, `laminas/img/04b_placas_rotas.jpg`, `laminas/img/07_cinta_reticula.jpg`, `laminas/img/08_frotado_reticula.jpg`, `laminas/img/12_cadena_08.jpg` y 11 más.
-- **22 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 14 más.
+- **35 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/11_placa.html`, `laminas/html/13_frotado.html`, `laminas/html/15_de_punta_a_punta.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/todas.html`, `laminas/img/03_calco_reticula.jpg`, `laminas/img/03b_notdef.jpg`, `laminas/img/03d_antes_y_despues.jpg`, `laminas/img/04_placa_reticula.jpg`, `laminas/img/04_placa_reverso_reticula.jpg`, `laminas/img/04b_placas_rotas.jpg`, `laminas/img/07_cinta_reticula.jpg` y 21 más.
+- **17 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 9 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 78 archivos: 25 están en esta carpeta, 6 en carpetas de versiones anteriores y 47 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
+En este commit, la línea tenía 78 archivos: 35 están en esta carpeta, 12 en carpetas de versiones anteriores y 31 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `0cdccf1`.
 
 ## Qué cambió respecto de la anterior
 

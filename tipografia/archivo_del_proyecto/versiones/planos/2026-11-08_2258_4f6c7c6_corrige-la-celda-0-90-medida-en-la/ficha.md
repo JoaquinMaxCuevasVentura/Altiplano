@@ -5,17 +5,19 @@
 | Línea | [Los planos de la anatomía base](../README.md) |
 | Origen | commit `4f6c7c6` de la rama `claude/fervent-lovelace-exgqzl` |
 | Fecha | 2026-11-08 22:58 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`tipografia/planos/`](../../../../planos/) |
 | La versión anterior | [2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09](../2026-10-17_2315_b84984e_suma-el-atlas-de-las-referencias-r-09/ficha.md) |
+| La versión siguiente | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](../2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **Ningún archivo propio:** todo lo que cambió en este commit sigue vigente, en su lugar.
+- **23 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `planos/README.md`, `planos/contenida_planos.pdf`, `planos/dxf/P-01_celda.dxf`, `planos/dxf/P-03_o_cuenca.dxf`, `planos/dxf/P-04_l_fuste.dxf`, `planos/dxf/P-05_n_hombro.dxf`, `planos/dxf/P-06_a_gancho_y_gota.dxf`, `planos/dxf/P-10_caja.dxf`, `planos/generar_planos.py`, `planos/png/P-01_celda.png`, `planos/png/P-02_canal.png`, `planos/png/P-06_a_gancho_y_gota.png`, `planos/png/P-07_partes.png`, `planos/png/P-09_dobles_opuestos.png` y 9 más.
+- **8 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2`.
 
 ## La versión completa
 
-En este commit, la línea tenía 37 archivos: 0 están en esta carpeta, 0 en carpetas de versiones anteriores y 37 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
+En este commit, la línea tenía 37 archivos: 23 están en esta carpeta, 1 en carpetas de versiones anteriores y 13 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
 
 ## Qué cambió respecto de la anterior
 
@@ -48,8 +50,9 @@ El mensaje del commit `4f6c7c6`:
 > proporciones_sobre_la_lamina.py, que arma P-11A con capturas de la lámina en
 > planos/privado/, fuera del repositorio: la foto no se sube (07, §3).
 
-Y el README de la línea en ese commit: [V-0519](../../../../planos/README.md).
+Y el README de la línea en ese commit: [H-0728](planos/README.md).
 
 ## Lo que deduce el archivo
 
-- «Versión vigente»: es la última versión de la línea en la rama. Que sea la más reciente no la vuelve aprobada; no consta una aprobación.
+- «Versión anterior»: la reemplazan las versiones siguientes de la línea. No consta que se haya aprobado.
+- Las dependencias son copias del estado de la rama en ese mismo commit; no cambian nada de lo que se archivó.

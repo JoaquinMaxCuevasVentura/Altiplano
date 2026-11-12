@@ -14,10 +14,10 @@ Las páginas 52 y 53 del libro rehecho (por folio), para comprobar el §8.4 y su
 
 ## Qué contiene esta carpeta
 
-- [`C-135`](capturas_finales/hoja_libro.png) · Captura de prueba: hoja_libro.png · prueba o experimento.
-- [`C-137`](capturas_finales/libro_53.png) · Captura de prueba: libro_53.png · prueba o experimento.
-- [`C-138`](capturas_finales/libro_54.png) · Captura de prueba: libro_54.png · prueba o experimento.
-- `C-136` · captura vista en la conversación: hoja_libro.png · no se copia (duplicado exacto): duplicado exacto de C-135.
+- [`C-136`](capturas_finales/hoja_libro.png) · Captura de prueba: hoja_libro.png · prueba o experimento.
+- [`C-138`](capturas_finales/libro_53.png) · Captura de prueba: libro_53.png · prueba o experimento.
+- [`C-139`](capturas_finales/libro_54.png) · Captura de prueba: libro_54.png · prueba o experimento.
+- `C-137` · captura vista en la conversación: hoja_libro.png · no se copia (duplicado exacto): duplicado exacto de C-136.
 
 ## Lo que lo respalda
 

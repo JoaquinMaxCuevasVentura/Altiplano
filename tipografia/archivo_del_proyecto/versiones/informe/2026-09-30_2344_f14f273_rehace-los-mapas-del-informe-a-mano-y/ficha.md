@@ -48,7 +48,7 @@ El mensaje del commit `f14f273`:
 > Mojada, Tocada, Dicha). El informe suma la sección 6.3 y reescribe cómo
 > leer los mapas, sus pies y el colofón.
 
-Y el README de la línea en ese commit: [H-0522](informe/README.md).
+Y el README de la línea en ese commit: [H-0601](informe/README.md).
 
 ## Lo que deduce el archivo
 

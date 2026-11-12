@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 13 archivos: 3 están en esta carpeta, 6 en carpetas de versiones anteriores y 4 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `22cf306`.
+En este commit, la línea tenía 13 archivos: 3 están en esta carpeta, 7 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `22cf306`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `22cf306`:
 > pie de la lámina. El mapa 2 suma un lápiz (Cárcamo) y los anillos de un
 > tronco (Johnson); el informe, la sección 2.6 y cuatro referencias.
 
-Y el README de la línea en ese commit: [H-0039](README.md).
+Y el README de la línea en ese commit: [H-0040](README.md).
 
 ## Lo que deduce el archivo
 

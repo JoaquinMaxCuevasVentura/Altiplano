@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 6 en carpetas de versiones anteriores y 4 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `277ed69`.
+En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 7 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `277ed69`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `277ed69`:
 > discrepancias con placas reales, y dice qué no se toma (ejes variables,
 > variantes fabricadas, cuatro variantes por letra).
 
-Y el README de la línea en ese commit: [H-0043](README.md).
+Y el README de la línea en ese commit: [H-0044](README.md).
 
 ## Lo que deduce el archivo
 

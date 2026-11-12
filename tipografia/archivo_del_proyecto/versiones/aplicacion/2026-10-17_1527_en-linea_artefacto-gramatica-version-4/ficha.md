@@ -15,7 +15,7 @@ La página del artefacto «Gramática de Contenida» en su versión 4: la aplica
 ## Qué contiene esta carpeta
 
 - [`L-001`](artefacto/index.html) · Gramática de Contenida, versión 4 en línea: la página · versión anterior.
-- Y 3 copias de dependencias, para que abra: `D-0298`, `D-0286`, `D-0304`.
+- Y 3 copias de dependencias, para que abra: `D-0326`, `D-0315`, `D-0332`.
 
 ## Lo que lo respalda
 

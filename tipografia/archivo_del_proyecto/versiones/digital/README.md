@@ -2,7 +2,7 @@
 
 Lo digital: el generador de la póliza.
 
-- **Lo vigente:** [`tipografia/digital/`](../../../digital/), el estado de la rama en `a3036cf`. No se copia aquí.
+- **Lo vigente:** [`tipografia/digital/`](../../../digital/), el estado de la rama en `8d8fc7b`. No se copia aquí.
 - **Versiones:** 3 de git.
 - **Volver:** [al índice del archivo](../../README.md).
 

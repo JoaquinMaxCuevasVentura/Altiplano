@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **48 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/README.md`, `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/05_56_celdas.html`, `laminas/html/06_la_celda.html`, `laminas/html/09_no_hay_regular.html`, `laminas/html/10_la_propuesta_de_la_maquina.html`, `laminas/html/11_placa.html`, `laminas/html/13_frotado.html`, `laminas/html/14_agua_y_voz.html`, `laminas/html/15_de_punta_a_punta.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/17_lo_que_sigue.html`, `laminas/html/todas.html` y 34 más.
-- **14 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 6 más.
+- **50 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `laminas/README.md`, `laminas/contenida_laminas.pdf`, `laminas/generar_laminas.py`, `laminas/html/05_56_celdas.html`, `laminas/html/06_la_celda.html`, `laminas/html/09_no_hay_regular.html`, `laminas/html/10_la_propuesta_de_la_maquina.html`, `laminas/html/11_placa.html`, `laminas/html/12_cinta.html`, `laminas/html/13_frotado.html`, `laminas/html/14_agua_y_voz.html`, `laminas/html/15_de_punta_a_punta.html`, `laminas/html/16_lo_que_aparecio.html`, `laminas/html/17_lo_que_sigue.html` y 36 más.
+- **13 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `laminas/fuentes/courier-prime-latin-400-italic.woff2`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-italic.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2` y 5 más.
 
 ## La versión completa
 
-En este commit, la línea tenía 76 archivos: 48 están en esta carpeta, 2 en carpetas de versiones anteriores y 26 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
+En este commit, la línea tenía 76 archivos: 50 están en esta carpeta, 5 en carpetas de versiones anteriores y 21 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `3f66520`.
 
 ## Qué cambió respecto de la anterior
 
@@ -46,7 +46,7 @@ El mensaje del commit `3f66520`:
 > - 03, 03c, 05, 06 y README: el testigo de las formas y la altura de x de
 >   la foto; el violeta, del esténcil de tatuaje.
 
-Y el README de la línea en ese commit: [H-0407](laminas/README.md).
+Y el README de la línea en ese commit: [H-0444](laminas/README.md).
 
 ## Lo que deduce el archivo
 

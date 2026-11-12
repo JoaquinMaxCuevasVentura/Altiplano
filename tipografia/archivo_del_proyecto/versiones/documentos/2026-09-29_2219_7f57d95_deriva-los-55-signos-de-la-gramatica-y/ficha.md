@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 10 archivos: 5 están en esta carpeta, 3 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `7f57d95`.
+En este commit, la línea tenía 10 archivos: 5 están en esta carpeta, 4 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `7f57d95`.
 
 ## Qué cambió respecto de la anterior
 
@@ -50,7 +50,7 @@ El mensaje del commit `7f57d95`:
 > - Diecisiete láminas: la celda, la gramática, los 55 signos, piel y
 >   cinta, copia.
 
-Y el README de la línea en ese commit: [H-0023](README.md).
+Y el README de la línea en ese commit: [H-0024](README.md).
 
 ## Lo que deduce el archivo
 

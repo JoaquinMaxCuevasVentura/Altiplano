@@ -42,7 +42,7 @@ El mensaje del commit `976fbf0`:
 > - Hoefnagel suma el Getty como archivo, en su ficha y en 10.
 > - imagenes/ sigue fuera del repositorio (06, §6.4).
 
-Y el README de la línea en ese commit: [V-0570](../../../../taxonomia/README.md).
+Y el README de la línea en ese commit: [V-0574](../../../../taxonomia/README.md).
 
 ## Lo que deduce el archivo
 

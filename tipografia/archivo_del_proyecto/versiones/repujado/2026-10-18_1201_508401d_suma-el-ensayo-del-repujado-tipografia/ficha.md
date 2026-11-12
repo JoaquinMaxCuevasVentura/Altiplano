@@ -42,7 +42,7 @@ El mensaje del commit `508401d`:
 >   las muestras.
 > - No entra en la caja ni en la fuente (06, §6.3).
 
-Y el README de la línea en ese commit: [H-0668](repujado/README.md).
+Y el README de la línea en ese commit: [H-0788](repujado/README.md).
 
 ## Lo que deduce el archivo
 

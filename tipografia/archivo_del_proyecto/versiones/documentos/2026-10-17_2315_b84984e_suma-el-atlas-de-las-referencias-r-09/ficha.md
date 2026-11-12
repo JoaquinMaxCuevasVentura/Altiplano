@@ -17,7 +17,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 5 en carpetas de versiones anteriores y 6 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b84984e`.
+En este commit, la línea tenía 14 archivos: 3 están en esta carpeta, 6 en carpetas de versiones anteriores y 5 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b84984e`.
 
 ## Qué cambió respecto de la anterior
 
@@ -41,7 +41,7 @@ El mensaje del commit `b84984e`:
 > bloqueó los archivos: las celdas quedan vacías, con el nombre de la
 > imagen que esperan. La hoja de los planos puede ir sin la columna.
 
-Y el README de la línea en ese commit: [H-0087](README.md).
+Y el README de la línea en ese commit: [H-0088](README.md).
 
 ## Lo que deduce el archivo
 

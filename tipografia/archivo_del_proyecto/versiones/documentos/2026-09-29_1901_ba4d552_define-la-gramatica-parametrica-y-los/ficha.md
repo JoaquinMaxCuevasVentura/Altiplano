@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `03c_gramatica.md`, `README.md`.
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `03b_anatomia.md`, `03c_gramatica.md`, `README.md`.
 - **1 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `esquemas/caja_8x7.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 10 archivos: 2 están en esta carpeta, 6 en carpetas de versiones anteriores y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `ba4d552`.
+En este commit, la línea tenía 10 archivos: 3 están en esta carpeta, 6 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `ba4d552`.
 
 ## Qué cambió respecto de la anterior
 
@@ -45,7 +45,7 @@ El mensaje del commit `ba4d552`:
 > - 03c_gramatica.md explica cada parámetro, cómo entran las siete partes
 >   propuestas y qué cambia respecto de 03b.
 
-Y el README de la línea en ese commit: [H-0018](README.md).
+Y el README de la línea en ese commit: [H-0019](README.md).
 
 ## Lo que deduce el archivo
 

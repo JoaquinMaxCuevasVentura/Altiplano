@@ -42,7 +42,7 @@ El mensaje del commit `b84984e`:
 > bloqueó los archivos: las celdas quedan vacías, con el nombre de la
 > imagen que esperan. La hoja de los planos puede ir sin la columna.
 
-Y el README de la línea en ese commit: [H-0655](taxonomia/README.md).
+Y el README de la línea en ese commit: [H-0774](taxonomia/README.md).
 
 ## Lo que deduce el archivo
 

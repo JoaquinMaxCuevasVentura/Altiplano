@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **1 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `README.md`.
-- **1 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `esquemas/caja_8x7.png`.
+- **4 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `03_sistema_contenida.md`, `03c_gramatica.md`, `05_migracion_digital.md`, `README.md`.
+- **2 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `esquemas/cadena_de_estados.png`, `esquemas/caja_8x7.png`.
 
 ## La versión completa
 
-En este commit, la línea tenía 14 archivos: 1 están en esta carpeta, 0 en carpetas de versiones anteriores y 13 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
+En este commit, la línea tenía 14 archivos: 4 están en esta carpeta, 1 en carpetas de versiones anteriores y 9 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `4f6c7c6`.
 
 ## Qué cambió respecto de la anterior
 
@@ -49,7 +49,7 @@ El mensaje del commit `4f6c7c6`:
 > proporciones_sobre_la_lamina.py, que arma P-11A con capturas de la lámina en
 > planos/privado/, fuera del repositorio: la foto no se sube (07, §3).
 
-Y el README de la línea en ese commit: [H-0098](README.md).
+Y el README de la línea en ese commit: [H-0102](README.md).
 
 ## Lo que deduce el archivo
 

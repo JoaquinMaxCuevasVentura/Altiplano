@@ -16,7 +16,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 23 archivos: 6 están en esta carpeta, 9 en carpetas de versiones anteriores y 8 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
+En este commit, la línea tenía 23 archivos: 6 están en esta carpeta, 14 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
 
 ## Qué cambió respecto de la anterior
 
@@ -44,7 +44,7 @@ El mensaje del commit `e5cca9f`:
 > 3,5: queda anotado en 03c. Se corrige la descripción del quiebre y
 > el ángulo del gancho en 03c. Informe, documentos y README al día.
 
-Y el README de la línea en ese commit: [H-0578](informe/README.md).
+Y el README de la línea en ese commit: [H-0662](informe/README.md).
 
 ## Lo que deduce el archivo
 

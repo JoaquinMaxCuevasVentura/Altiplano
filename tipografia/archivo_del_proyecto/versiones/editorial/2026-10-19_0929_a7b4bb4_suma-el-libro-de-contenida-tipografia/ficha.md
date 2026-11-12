@@ -50,7 +50,7 @@ El mensaje del commit `a7b4bb4`:
 >
 > Declara la asistencia de IA en el colofón y en 06, §6.3.
 
-Y el README de la línea en ese commit: [H-0679](editorial/README.md).
+Y el README de la línea en ese commit: [H-0799](editorial/README.md).
 
 ## Lo que deduce el archivo
 

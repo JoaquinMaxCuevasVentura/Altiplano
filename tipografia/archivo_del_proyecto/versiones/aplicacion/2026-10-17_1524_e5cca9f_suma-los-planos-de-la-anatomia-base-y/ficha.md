@@ -12,12 +12,12 @@
 
 ## Qué contiene esta carpeta
 
-- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `aplicacion/README.md`, `aplicacion/app.js`, `aplicacion/index.html`.
-- **9 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `aplicacion/clipper.js`, `aplicacion/datos.js`, `aplicacion/gramatica.js`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2` y 1 más.
+- **4 archivos de esta versión que ya no son los vigentes,** con su ruta original debajo de `tipografia/`: `aplicacion/README.md`, `aplicacion/app.js`, `aplicacion/datos.js`, `aplicacion/index.html`.
+- **8 copias de dependencias**, lo que piden sus HTML, CSS o SVG, para que abran como entonces: `aplicacion/clipper.js`, `aplicacion/gramatica.js`, `laminas/fuentes/courier-prime-latin-400-normal.woff2`, `laminas/fuentes/courier-prime-latin-700-normal.woff2`, `laminas/fuentes/newsreader-latin-300-normal.woff2`, `laminas/fuentes/newsreader-latin-400-italic.woff2`, `laminas/fuentes/newsreader-latin-400-normal.woff2`, `laminas/fuentes/newsreader-latin-500-normal.woff2`.
 
 ## La versión completa
 
-En este commit, la línea tenía 7 archivos: 3 están en esta carpeta, 1 en carpetas de versiones anteriores y 3 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
+En este commit, la línea tenía 7 archivos: 4 están en esta carpeta, 2 en carpetas de versiones anteriores y 1 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `e5cca9f`.
 
 ## Qué cambió respecto de la anterior
 
@@ -48,7 +48,7 @@ El mensaje del commit `e5cca9f`:
 > 3,5: queda anotado en 03c. Se corrige la descripción del quiebre y
 > el ángulo del gancho en 03c. Informe, documentos y README al día.
 
-Y el README de la línea en ese commit: [H-0497](aplicacion/README.md).
+Y el README de la línea en ese commit: [H-0572](aplicacion/README.md).
 
 ## Lo que deduce el archivo
 

@@ -14,8 +14,8 @@ La mesa del repujado como artefacto de una sola página, servida por claude.ai. 
 
 ## Qué contiene esta carpeta
 
-- [`L-004`](artefacto/index.html) · El repujado de Contenida, versión 2 en línea: la mesa · versión anterior.
-- `L-005` · El repujado de Contenida, duplicado publicado por error · no se copia (duplicado exacto): duplicado exacto de L-004.
+- [`L-005`](artefacto/index.html) · El repujado de Contenida, versión 2 en línea: la mesa · versión anterior.
+- `L-006` · El repujado de Contenida, duplicado publicado por error · no se copia (duplicado exacto): duplicado exacto de L-005.
 
 ## Lo que lo respalda
 

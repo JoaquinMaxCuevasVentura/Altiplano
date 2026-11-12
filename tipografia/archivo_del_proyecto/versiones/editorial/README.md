@@ -2,8 +2,8 @@
 
 El documento editorial único, compuesto con Vivliostyle: el libro para pantalla e imprenta y la cubierta.
 
-- **Lo vigente:** [`tipografia/editorial/`](../../../editorial/), el estado de la rama en `a3036cf`. No se copia aquí.
-- **Versiones:** 3 de git, 3 de la conversación y 1 en línea.
+- **Lo vigente:** [`tipografia/editorial/`](../../../editorial/), el estado de la rama en `8d8fc7b`. No se copia aquí.
+- **Versiones:** 4 de git, 3 de la conversación y 1 en línea.
 - **Volver:** [al índice del archivo](../../README.md).
 
 | Fecha (UTC) | Origen | Versión | Estado | Qué cambió o qué es |
@@ -14,4 +14,5 @@ El documento editorial único, compuesto con Vivliostyle: el libro para pantalla
 | 2026-10-19 09:29 | commit `a7b4bb4` | [2026-10-19_0929_a7b4bb4_suma-el-libro-de-contenida-tipografia](2026-10-19_0929_a7b4bb4_suma-el-libro-de-contenida-tipografia/ficha.md) | versión anterior | Suma el libro de Contenida (tipografia/editorial) |
 | 2026-10-30 03:17 | conversación | [2026-10-30_0317_conversacion_comprobaciones-del-libro](2026-10-30_0317_conversacion_comprobaciones-del-libro/ficha.md) | prueba o experimento | Las páginas 52 y 53 del libro rehecho (por folio), para comprobar el §8.4 y su figura. |
 | 2026-10-30 03:19 | commit `02dcb14` | [2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los](2026-10-30_0319_02dcb14_mueve-las-decisiones-de-la-letra-en-los/ficha.md) | versión anterior | Mueve las decisiones de la letra en los planos de detalle |
-| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión vigente | Corrige la celda: 0,90, medida en la lámina enderezada |
+| 2026-11-08 22:58 | commit `4f6c7c6` | [2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la](2026-11-08_2258_4f6c7c6_corrige-la-celda-0-90-medida-en-la/ficha.md) | versión anterior | Corrige la celda: 0,90, medida en la lámina enderezada |
+| 2026-11-12 17:20 | commit `8d8fc7b` | [2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa](2026-11-12_1720_8d8fc7b_revisa-todas-las-decisiones-la-gota-pasa/ficha.md) | versión vigente | Revisa todas las decisiones: la gota pasa a ser un terminal del trazo |

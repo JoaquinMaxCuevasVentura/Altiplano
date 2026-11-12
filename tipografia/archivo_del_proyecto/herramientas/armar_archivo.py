@@ -774,20 +774,34 @@ class Archivo:
             r = "tipografia/aplicacion/" + nombre
             self.dependencia_extra(v, contenido(publicada[r]), f"artefacto/{nombre}", r, publicada[r], "Igual al publicado en la versión 5.")
         fecha_v6 = dt.datetime.fromtimestamp(1794179448, UTC)
-        v = self.version_extra("aplicacion", fecha_v6, "en-linea", "artefacto gramatica version 6", "versión vigente",
+        v = self.version_extra("aplicacion", fecha_v6, "en-linea", "artefacto gramatica version 6", "versión anterior",
                                "La versión 6 del artefacto «Gramática de Contenida»: la misma página, con el gramatica.js de la celda de 0,90.",
                                "La publicación en la conversación (08.11.2026, versión 1794179448-6794): se cambió solo gramatica.js, que es el del commit 4f6c7c6.",
-                               "«Versión vigente» en línea: es la última publicada. No consta una aprobación.")
+                               "«Versión anterior»: la reemplazó la versión 7 el 12.11.2026, con la gota rehecha como terminal.")
         fuente_v6 = scratch / "artefacto" / "index.html"
         self.poner(v, fuente_v6.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL (versión 6)",
                    descripcion_="Gramática de Contenida, versión 6 en línea: la página", categoria_="aplicación (página en línea)",
-                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_v6, que_fecha=QUE_FECHA["en_linea"],
+                   estado="versión anterior", copia="copia de la fuente publicada", fecha=fecha_v6, que_fecha=QUE_FECHA["en_linea"],
                    observaciones="La fuente de la página tal como se publicó, sin el envoltorio que le agrega la plataforma; es la misma de la versión 5.",
+                   id_prefijo="L", fuente=fuente_v6)
+        de_v6 = arbol(git("rev-parse", "741b844").strip())          # el repositorio cuando la versión 6 era la vigente
+        for nombre in ("datos.js", "gramatica.js", "app.js"):
+            r = "tipografia/aplicacion/" + nombre
+            self.dependencia_extra(v, contenido(de_v6[r]), f"artefacto/{nombre}", r, de_v6[r], "Igual al publicado en la versión 6.")
+        fecha_v7 = dt.datetime.fromtimestamp(1794503934, UTC)
+        v = self.version_extra("aplicacion", fecha_v7, "en-linea", "artefacto gramatica version 7", "versión vigente",
+                               "La versión 7 del artefacto «Gramática de Contenida»: la misma página, con la gota rehecha como terminal en gota.",
+                               "La publicación en la conversación (12.11.2026, versión 1794503934-c9f4): cambiaron datos.js, gramatica.js y app.js, que son los de la cabeza del repositorio.",
+                               "«Versión vigente» en línea: es la última publicada. No consta una aprobación.")
+        self.poner(v, fuente_v6.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/MD4hC81MMftYgHHB1RT9bL (versión 7)",
+                   descripcion_="Gramática de Contenida, versión 7 en línea: la página", categoria_="aplicación (página en línea)",
+                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_v7, que_fecha=QUE_FECHA["en_linea"],
+                   observaciones="La fuente de la página tal como se publicó, sin el envoltorio que le agrega la plataforma; es la misma de las versiones 5 y 6.",
                    id_prefijo="L", fuente=fuente_v6)
         cabeza = arbol(self.cabeza["h"])
         for nombre in ("datos.js", "gramatica.js", "app.js"):
             r = "tipografia/aplicacion/" + nombre
-            self.dependencia_extra(v, contenido(cabeza[r]), f"artefacto/{nombre}", r, cabeza[r], "Igual al publicado en la versión 6.")
+            self.dependencia_extra(v, contenido(cabeza[r]), f"artefacto/{nombre}", r, cabeza[r], "Igual al publicado en la versión 7.")
 
         # 9 · el repujado en línea: la versión 2 (y su duplicado, publicado por error) y la 3, la vigente
         rep = artefactos / "50dedd80-74bd-4a12-a67f-012ea81e773d" / "index.html"
@@ -813,16 +827,27 @@ class Archivo:
         g["_prefijo"], g["_dup"] = "L", f
         v["registrados"].append(g)
         fecha_r3 = dt.datetime.fromtimestamp(1794179506, UTC)
-        v = self.version_extra("repujado", fecha_r3, "en-linea", "artefacto el repujado de contenida version 3", "versión vigente",
+        v = self.version_extra("repujado", fecha_r3, "en-linea", "artefacto el repujado de contenida version 3", "versión anterior",
                                "La mesa del repujado, versión 3: la misma página, con la celda de 0,90 en la gramática que lleva adentro.",
                                "La publicación en la conversación (08.11.2026, versión 1794179506-8366): se reemplazó solo la función de la celda, como en tipografia/aplicacion/gramatica.js (4f6c7c6).",
-                               "«Versión vigente» en línea para AzCijUBf7Grujskuw7qPmE. El duplicado sigue con la versión 2.")
-        fuente_r3 = scratch / "repujado_artefacto" / "index.html"
+                               "«Versión anterior»: la reemplazó la versión 4 el 12.11.2026. El duplicado sigue con la versión 2.")
+        fuente_r3 = scratch / "repujado_artefacto" / "index_v3.html"
         self.poner(v, fuente_r3.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/AzCijUBf7Grujskuw7qPmE (versión 3)",
                    descripcion_="El repujado de Contenida, versión 3 en línea: la mesa", categoria_="aplicación (página en línea)",
-                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_r3, que_fecha=QUE_FECHA["en_linea"],
+                   estado="versión anterior", copia="copia de la fuente publicada", fecha=fecha_r3, que_fecha=QUE_FECHA["en_linea"],
                    observaciones="La fuente de la página tal como se publicó, sin el envoltorio de la plataforma. El repositorio guarda su fuente en tipografia/repujado/.",
                    id_prefijo="L", fuente=fuente_r3)
+        fecha_r4 = dt.datetime.fromtimestamp(1794503925, UTC)
+        v = self.version_extra("repujado", fecha_r4, "en-linea", "artefacto el repujado de contenida version 4", "versión vigente",
+                               "La mesa del repujado, versión 4: la misma página, con la gramática de la gota rehecha como terminal.",
+                               "La publicación en la conversación (12.11.2026, versión 1794503925-04ed): se reemplazaron los datos y la gramática que lleva adentro por los de tipografia/aplicacion/.",
+                               "«Versión vigente» en línea para AzCijUBf7Grujskuw7qPmE. El duplicado sigue con la versión 2.")
+        fuente_r4 = scratch / "repujado_artefacto" / "index.html"
+        self.poner(v, fuente_r4.read_bytes(), "artefacto/index.html", ruta_original="https://claude.ai/artifact/AzCijUBf7Grujskuw7qPmE (versión 4)",
+                   descripcion_="El repujado de Contenida, versión 4 en línea: la mesa", categoria_="aplicación (página en línea)",
+                   estado="versión vigente", copia="copia de la fuente publicada", fecha=fecha_r4, que_fecha=QUE_FECHA["en_linea"],
+                   observaciones="La fuente de la página tal como se publicó, sin el envoltorio de la plataforma. El repositorio guarda su fuente en tipografia/repujado/.",
+                   id_prefijo="L", fuente=fuente_r4)
 
     def dependencia_extra(self, v, datos, rel, ruta_original, blob, nota):
         dest = self.copiar(datos, f"versiones/{v['linea']}/{v['carpeta']}/{rel}")

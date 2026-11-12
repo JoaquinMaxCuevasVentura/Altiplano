@@ -42,7 +42,7 @@ El mensaje del commit `d15525a`:
 >   con HarfBuzz sigue sin repetir placas en los 42 versos.
 > - README de la raíz, de tipografia y del informe, al día.
 
-Y el README de la línea en ese commit: [H-0548](informe/README.md).
+Y el README de la línea en ese commit: [H-0627](informe/README.md).
 
 ## Lo que deduce el archivo
 
