@@ -84,7 +84,7 @@ Son observaciones sobre esta selección, no sobre la historia de la imagen.
    - la apacheta (hay un dibujo con licencia CC0, «Apacheta, monticule votif»);
    - el Potosí de Cieza de León;
    - las láminas de d'Orbigny y de Wiener.
-6. **Las imágenes que pasaron al artículo.** El 18 de octubre entraron seis, como imágenes 1-5 en serie aparte (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md`):
+6. **Las imágenes que pasaron al artículo.** El 18 de octubre entraron seis, en cinco imágenes de una serie aparte (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md`). Desde el 14 de noviembre la serie tiene siete y otra numeración, que está en `articulo/figuras/LEEME.md`. De esta taxonomía salieron:
    - el escribano (n.º 27);
    - la Puerta del Sol (n.º 29);
    - la tejedora y el contador, en un díptico (n.os 20 y 25);

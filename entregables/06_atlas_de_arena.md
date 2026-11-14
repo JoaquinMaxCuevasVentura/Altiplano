@@ -1,6 +1,6 @@
 # El atlas de Are.na
 
-Las fuentes visuales y las pistas de lectura de «Cosecha de piedras», reunidas en Are.na. Versión final, 11 de octubre de 2026.
+Las fuentes visuales y las pistas de lectura de «Cosecha de piedras», reunidas en Are.na. Hecho el 10 y el 11 de octubre de 2026; no ha cambiado desde entonces.
 
 ## Qué es
 

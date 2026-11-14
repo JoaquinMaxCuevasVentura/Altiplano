@@ -1,21 +1,19 @@
 # Fichero de pasajes de *Altiplano*
 
-Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», ordenadas por página, para cotejarlas con el libro impreso. Versión final, 11 de octubre de 2026; puesta al día el 2 de noviembre con la versión final reescrita del artículo.
+Las citas de la novela en «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», ordenadas por página, para cotejarlas con el libro impreso. Hecho el 11 de octubre de 2026 y al día con el artículo del 14 de noviembre.
 
 ## Cómo usarlo
 
 - **Qué trae.** Las 145 citas entre comillas y las 4 citas en bloque del artículo, en 148 filas: una cita se repite en dos secciones y va en una sola fila. La columna «Dónde» dice en qué sección del artículo aparece cada una.
-- **Qué está comprobado.** Cada cita se comprobó contra una transcripción digital de la novela: existe tal cual, con las correcciones de la sección 2, y está en la página indicada. Las cinco citas breves del Cuadro 1 y los datos parafraseados (cifras, orden de los hechos, quién dice qué) se revisaron aparte.
-- **Las cuatro citas que entraron el 2 de noviembre** (pp. 4, 33 y 34) y la de la p. 155, que volvió a su forma completa, se habían comprobado contra la transcripción en etapas anteriores (`analisis/06`, `13`, `16`, `29` y `30`; el detalle, en `analisis/33`). La transcripción ya no estaba en el entorno de trabajo el 2 de noviembre, así que no se volvieron a comprobar ese día.
-- **El 10 de noviembre** se volvieron a cotejar todas, las 157, las 2 en bloque y las 5 del Cuadro 1, con la edición digital de la Biblioteca Central de la UMSA, que trae al pie el número de cada página (`analisis/35`). Todas están en la página indicada. Ese PDF es el mismo texto que la transcripción, con las mismas erratas, así que no reemplaza al libro impreso.
-- **Después del cotejo**, el mismo 10 de noviembre, el artículo varió sus tipos de cita: cinco citas breves de la novela pasaron a paráfrasis, con su página, y otras ocho quedaron dentro de dos citas en bloque nuevas, de las pp. 36-37 y 132 (`analisis/36`). Las citas en bloque se cotejaron con el PDF de la UMSA.
+- **Qué está comprobado.** El 10 de noviembre se cotejaron todas, con las 5 citas breves del Cuadro 1, en la edición digital de la Biblioteca Central de la UMSA, que trae al pie el número de cada página (`analisis/35` y `36`). Existen tal cual, con las correcciones de la sección 2, y están en la página indicada. Antes, entre septiembre y octubre, se habían comprobado contra una transcripción de la misma edición. Los datos parafraseados (cifras, orden de los hechos, quién dice qué) se revisaron aparte, la última vez el 14 de noviembre (`analisis/38`).
+- **Qué no está comprobado.** Ese PDF es el mismo texto que la transcripción, con las mismas erratas, así que no reemplaza al libro impreso.
 - **Qué falta.** Compararlas con el libro impreso. Marca la casilla ☐ de cada fila cuando lo hagas. Empieza por las pp. 88-107 (sección 1).
 - **Si encuentras una diferencia,** corrige la cita en `articulo/articulo_cosecha_de_piedras.md` y regenera el Word con `python3 articulo/generar_docx.py`.
 
 ## 1. La edición citada y su paginación
 
 - **Edición citada.** Raúl Botelho Gosálvez, *Altiplano*, 7.ª ed., La Paz, Librería Editorial Juventud, 1982. La nota «Al lector» (pp. 4-5) presenta la edición de Juventud como «la primera edición boliviana»; antes hubo una en Buenos Aires (Editorial Ayacucho, 1945) y otra en Lima (Ediciones Mundo Nuevo, 1967). La novela se escribió entre junio y agosto de 1940 (p. 4). El artículo cita «1982 [1945]» y no llama «primera boliviana» a la 7.ª edición.
-- **Fuente de trabajo.** Una transcripción digital de esa edición. Las páginas se reconstruyeron a partir de sus saltos de sección.
+- **Fuente de trabajo.** Hasta octubre, una transcripción digital de esa edición, cuyas páginas se reconstruyeron a partir de sus saltos de sección. Desde el 10 de noviembre, la edición digital de la Biblioteca Central de la UMSA, que es el mismo texto y trae al pie el número de cada página.
 
 El índice del propio libro conserva las páginas de inicio de cada capítulo, y la paginación reconstruida coincide con todas:
 

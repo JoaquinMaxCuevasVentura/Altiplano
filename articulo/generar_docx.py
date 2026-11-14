@@ -6,7 +6,12 @@ interlineado 1,5 (notas al pie en 10 pt, interlineado sencillo).
 
 Uso (desde la raíz del repositorio):
     pip install pypandoc_binary python-docx
-    python3 articulo/generar_docx.py [archivo.md]
+    python3 articulo/generar_docx.py [archivo.md] [--plantilla]
+
+La plantilla de estilos se arma cada vez en una carpeta temporal, a partir de
+este mismo guion. La copia guardada, plantilla_estudios_bolivianos.docx, solo
+se reescribe con --plantilla. El .docx tampoco se toca si su contenido no
+cambia, para que git no muestre diferencias donde no las hay.
 
 Sin argumento lee articulo/articulo_cosecha_de_piedras.md (versión definitiva)
 y escribe el .docx del mismo nombre; con un argumento convierte ese archivo
@@ -22,8 +27,10 @@ epígrafe va en un bloque ::: {custom-style="Epígrafe"}.
 """
 
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
@@ -35,7 +42,8 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Inches, Pt
 
 BASE = Path(__file__).resolve().parent
-MD = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else BASE / "articulo_cosecha_de_piedras.md"
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+MD = Path(ARGS[0]).resolve() if ARGS else BASE / "articulo_cosecha_de_piedras.md"
 DOCX = MD.with_suffix(".docx")
 REF = BASE / "plantilla_estudios_bolivianos.docx"
 FONT = "Times New Roman"
@@ -72,13 +80,33 @@ def set_spacing(style, line=1.5, before=0, after=6):
     pf.space_after = Pt(after)
 
 
-def build_reference():
+def partes(docx):
+    """El contenido de un .docx sin las fechas de creación y de guardado."""
+    with zipfile.ZipFile(docx) as z:
+        out = {}
+        for name in sorted(z.namelist()):
+            data = z.read(name)
+            if name == "docProps/core.xml":
+                data = re.sub(rb"<dcterms:(created|modified)[^>]*>[^<]*</dcterms:\1>", b"", data)
+            out[name] = data
+        return out
+
+
+def reemplazar_si_cambia(nuevo, destino):
+    """Copia nuevo sobre destino solo si su contenido es distinto. Dice si lo copió."""
+    if destino.exists() and partes(nuevo) == partes(destino):
+        return False
+    shutil.copyfile(nuevo, destino)
+    return True
+
+
+def build_reference(ref):
     data = subprocess.run(
         [pypandoc.get_pandoc_path(), "--print-default-data-file", "reference.docx"],
         check=True, capture_output=True,
     ).stdout
-    REF.write_bytes(data)
-    doc = Document(str(REF))
+    ref.write_bytes(data)
+    doc = Document(str(ref))
     styles = {s.name: s for s in doc.styles}
     for name in ("Normal", "Body Text", "First Paragraph", "Compact", "Block Text",
                  "Abstract", "Author", "Date", "Bibliography", "Table", "Definition",
@@ -122,15 +150,15 @@ def build_reference():
         section.page_height = Inches(11)
         for side in ("left_margin", "right_margin", "top_margin", "bottom_margin"):
             setattr(section, side, Cm(2.5))
-    doc.save(str(REF))
+    doc.save(str(ref))
 
 
-def convert():
+def convert(ref, salida):
     pypandoc.convert_file(
-        str(MD), "docx", outputfile=str(DOCX),
-        extra_args=[f"--reference-doc={REF}", f"--resource-path={BASE}"],
+        str(MD), "docx", outputfile=str(salida),
+        extra_args=[f"--reference-doc={ref}", f"--resource-path={BASE}"],
     )
-    doc = Document(str(DOCX))
+    doc = Document(str(salida))
     for section in doc.sections:
         section.page_width = Inches(8.5)
         section.page_height = Inches(11)
@@ -150,7 +178,7 @@ def convert():
                     for run in par.runs:
                         run.font.size = Pt(10)
                         run.font.name = FONT
-    doc.save(str(DOCX))
+    doc.save(str(salida))
 
 
 def report():
@@ -176,7 +204,13 @@ def report():
 
 
 if __name__ == "__main__":
-    build_reference()
-    convert()
+    with tempfile.TemporaryDirectory() as tmp:
+        ref = Path(tmp) / "plantilla.docx"
+        build_reference(ref)
+        if "--plantilla" in sys.argv and reemplazar_si_cambia(ref, REF):
+            print(f"Escrita la plantilla: {REF}")
+        salida = Path(tmp) / DOCX.name
+        convert(ref, salida)
+        cambio = reemplazar_si_cambia(salida, DOCX)
     report()
-    print(f"Escrito: {DOCX}")
+    print(f"{'Escrito' if cambio else 'Sin cambios'}: {DOCX}")

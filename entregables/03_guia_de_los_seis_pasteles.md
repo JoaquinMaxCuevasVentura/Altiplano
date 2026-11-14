@@ -1,6 +1,6 @@
 # Guía de los seis pasteles
 
-Para «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez». Versión final, 11 de octubre de 2026.
+Para «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez». Hecha el 11 de octubre de 2026 y al día con el artículo del 14 de noviembre.
 
 ## Para qué sirve esta guía
 

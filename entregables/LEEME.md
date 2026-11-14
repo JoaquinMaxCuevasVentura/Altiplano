@@ -1,30 +1,31 @@
 # Entregables finales de «Cosecha de piedras»
 
-**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura. Versión final del 2 de noviembre de 2026, reescrita a partir de todo lo acumulado (`analisis/33`). El autor la reescribirá con su voz.
+**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura. Versión final del 2 de noviembre de 2026, reescrita a partir de todo lo acumulado (`analisis/33`), y corregida el 10 y el 14 de noviembre (`analisis/35` a `38`). El autor la reescribirá con su voz.
 
 Esta carpeta reúne los archivos finales del proyecto: el artículo y los seis documentos que acompañan su envío. Cada documento va en Markdown (`.md`), para leerlo aquí, y en Word (`.docx`), para imprimirlo o editarlo. El artículo va en Word y en PDF.
 
 | N.º | Archivo | Qué es | Para qué sirve |
 |---|---|---|---|
-| 01 | `01_articulo_cosecha_de_piedras.docx` y `.pdf` | El artículo final: 75.409 caracteres y 12.784 palabras, 38 páginas, 8 figuras, 5 imágenes de dominio público, el Cuadro 1 y 36 obras en la bibliografía | Leerlo, hacerlo tuyo y adaptarlo a la revista que elijas |
+| 01 | `01_articulo_cosecha_de_piedras.docx` y `.pdf` | El artículo final: 76.939 caracteres y 13.039 palabras, 40 páginas, 8 figuras, 7 imágenes de dominio público, el Cuadro 1 y 37 obras en la bibliografía | Leerlo, hacerlo tuyo y adaptarlo a la revista que elijas |
 | 02 | `02_lista_de_envio` | Lo que está hecho y lo que falta, en orden, con el epígrafe, la declaración de IA, los datos por confirmar y la lista para marcar | Saber qué hacer antes de enviar |
 | 03 | `03_guia_de_los_seis_pasteles` | Materiales, técnicas, el ciclo de trabajo y una ficha por figura | Hacer los pasteles que reemplazarán a los esquemas de las figuras 1 a 6 |
 | 04 | `04_fichero_de_pasajes` | Las citas de la novela por página, con una casilla para marcar, y las cautelas de lectura | Cotejar las citas con el libro impreso |
 | 05 | `05_revistas_candidatas` | Diez revistas ordenadas, lo que pide cada una, cuánto hay que recortar y qué hacer antes de enviar | Elegir adónde enviar el artículo |
 | 06 | `06_atlas_de_arena` | Qué hay en los once canales privados de Are.na y qué falta | Volver a las fuentes visuales y a las pistas de lectura |
-| 07 | `07_fuentes_para_cotejar` | Los libros y artículos que faltan, con las páginas que cita el artículo de cada uno, por orden de urgencia | Saber qué subir, y dónde, para cotejar las citas |
+| 07 | `07_fuentes_para_cotejar` | Dónde están las fuentes, cuáles se cotejaron, qué páginas cita el artículo de cada una y qué falta conseguir | Saber qué falta para cerrar el cotejo |
 
 ## Por dónde empezar
 
 1. Lee el artículo (01) en voz alta.
-2. Sigue la lista de envío (02). Te manda, en su momento, a la guía de los pasteles (03), al fichero de pasajes (04), a la lista de fuentes por subir (07) y a las revistas (05).
+2. Sigue la lista de envío (02). Te manda, en su momento, a la guía de los pasteles (03), al fichero de pasajes (04), a la lista de fuentes (07) y a las revistas (05).
 3. Cuando tengas los escaneos de los pasteles, súbelos también al atlas (06).
 
 ## Lo que no está en esta carpeta
 
-- **Las figuras y las imágenes sueltas.** Están en `articulo/figuras/`: ocho PNG, los esquemas de encaje de las figuras 1 a 6 y los diagramas 7 y 8, y cinco JPG, las imágenes de dominio público 1 a 5. Algunas revistas, como *Atenea*, las piden aparte. Las tres de Guaman Poma no alcanzan para imprimir: hay que pedirlas en alta resolución (lista de envío, paso 5). Los pasos para cambiarlas por los escaneos de los pasteles están en la guía (03, sección 6) y en `articulo/figuras/LEEME.md`.
-- **El Word con cambios marcados.** Está en `articulo/articulo_cosecha_de_piedras_cambios.docx`, por si quieres revisar uno por uno los cambios de la versión final respecto de la anterior. Son muchos, porque la redacción es nueva.
-- **El registro de trabajo.** Los análisis de `analisis/` (del 01 al 37) y el informe completo de convocatorias, en `reports/`. De ahí salen estos documentos; no hace falta leerlos para enviar.
+- **Las figuras y las imágenes sueltas.** Están en `articulo/figuras/`: ocho PNG, los esquemas de encaje de las figuras 1 a 6 y los diagramas 7 y 8, y siete JPG, las imágenes de dominio público 1 a 7. Algunas revistas, como *Atenea*, las piden aparte. Las tres de Guaman Poma no alcanzan para imprimir: hay que pedirlas en alta resolución (lista de envío, paso 5). Los pasos para cambiarlas por los escaneos de los pasteles están en la guía (03, sección 6) y en `articulo/figuras/LEEME.md`.
+- **El Word con cambios marcados.** Está en `articulo/articulo_cosecha_de_piedras_cambios.docx`, por si quieres revisar uno por uno los cambios respecto de la versión anterior al 2 de noviembre. Son muchos, porque la redacción es nueva.
+- **Las versiones anteriores.** Están en `archivo_del_proyecto/`, con su inventario y su línea de tiempo.
+- **El registro de trabajo.** Los análisis de `analisis/` (del 01 al 38) y el informe completo de convocatorias, en `reports/`. De ahí salen estos documentos; no hace falta leerlos para enviar.
 
 ## Cómo rehacer los archivos
 

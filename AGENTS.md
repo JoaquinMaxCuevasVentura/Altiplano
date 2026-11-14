@@ -5,12 +5,12 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 ## El proyecto
 
 - **El artículo.** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura. Lee la novela *Altiplano* (1945) desde la arquitectura y el dibujo.
-- **Su estado** (10 de noviembre de 2026):
-  - versión final de 75.409 caracteres y 12.784 palabras, 38 páginas en Word, reescrita el 2 de noviembre (`analisis/33`) y corregida el 10 de noviembre tras el cotejo con las fuentes, la variación de los tipos de cita, las cursivas aymaras y la escritura con los pasteles hechos (`analisis/35` a `37`). El autor la reescribirá con su voz;
+- **Su estado** (14 de noviembre de 2026):
+  - versión final de 76.939 caracteres y 13.039 palabras, 40 páginas en Word, reescrita el 2 de noviembre (`analisis/33`) y corregida el 10 de noviembre tras el cotejo con las fuentes, la variación de los tipos de cita, las cursivas aymaras y la escritura con los pasteles hechos (`analisis/35` a `37`), y auditada el 14 de noviembre (`analisis/38`). El autor la reescribirá con su voz;
   - 145 citas de la novela entre comillas y 4 en bloque;
-  - 36 obras en la bibliografía;
-  - ocho figuras y, en serie aparte, cinco imágenes de dominio público.
-- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 4.300 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
+  - 37 obras en la bibliografía;
+  - ocho figuras y, en serie aparte, siete imágenes de dominio público.
+- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 4.500 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
 - **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
 - **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
 
@@ -21,14 +21,15 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras.md` | El texto fuente del artículo | Sí, solo con cambios aprobados por el autor |
 | `articulo/articulo_cosecha_de_piedras.docx` | El Word, generado desde el `.md` | No a mano: se regenera |
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
-| `articulo/figuras/` | Las ocho figuras, las cinco imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
+| `articulo/figuras/` | Las ocho figuras, las siete imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/37_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/38_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
+| `archivo_del_proyecto/` | El archivo del desarrollo: versiones anteriores, inventario, línea de tiempo y pendientes | No a mano: lo arman y lo verifican los guiones de `archivo_del_proyecto/herramientas/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
 
-La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la rama por defecto. Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otros proyectos: no las toques.
+La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la rama por defecto. La rama `claude/eager-bohr-mx9420` guarda los registros de arquitectura del altiplano (`registros_de_arquitectura/`), de donde salieron dos imágenes del artículo; no está unida, y su `analisis/34_registros_de_arquitectura.md` choca en número con el `34` de esta rama, así que habrá que renumerarlo si se une. Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otros proyectos: no las toques.
 
 ## Reglas de contenido
 
@@ -44,7 +45,7 @@ La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la ra
    - Coma decimal y punto en los millares (61.705).
 5. **Formato de las citas.** Autor y año con página: «(Botelho Gosálvez, 1982 [1945]: 96)», y luego «(ibid.: 102)». Las omisiones dentro de una cita van como «[...]». Mantén las cadenas de *ibid.* correctas si mueves texto.
 6. **Las figuras y las imágenes.** La numeración es la del artículo: el Castillete es la 4, la Pelvis la 5 y el Centinela la 6. Las figuras 1 a 6 son esquemas que se reemplazarán por los escaneos de los pasteles del autor. Desde el 10 de noviembre el texto los describe como pasteles hechos y sus pies dicen «[medidas, año]»: el artículo no se envía hasta cambiar las figuras. Las imágenes hechas con generadores de IA son solo exploración y no se publican.
-   - Las cinco imágenes de dominio público van en serie aparte, «Imagen 1-5», para no mover la numeración de las figuras. Cada una necesita un pasaje del artículo que la pida, una fuente con su página y un dominio público comprobado en la ficha de la institución.
+   - Las siete imágenes de dominio público van en serie aparte, «Imagen 1-7», para no mover la numeración de las figuras. Cada una necesita un pasaje del artículo que la pida, una fuente con su página y un dominio público comprobado en la ficha de la institución.
    - Si quitas o añades una, ajusta la cifra de la sección 2, la declaración de IA y el *ibid.* siguiente (`articulo/figuras/LEEME.md`).
 7. **La declaración de uso de IA.** Está al final del artículo y tiene que decir la verdad. Si redactas o corriges texto del artículo, avísale al autor y propón añadir la herramienta que usaste a la declaración.
 8. **Datos personales.** El repositorio es público. No añadas datos personales del autor más allá de los que ya figuran en el artículo.
@@ -54,12 +55,13 @@ La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la ra
 ```bash
 pip install pypandoc_binary python-docx pillow
 python3 articulo/generar_docx.py                        # el Word del artículo; informa caracteres y palabras
-git checkout -- articulo/plantilla_estudios_bolivianos.docx   # el generador reescribe la plantilla: devuélvela
 python3 entregables/generar_entregables.py              # copia el artículo, hace su PDF (necesita LibreOffice) y los Word de entregables/
 node analisis/esquemas/diagramas/generar_diagramas.js   # las notaciones SVG de las figuras 1 a 8
 python3 articulo/generar_figuras.py                     # los PNG de las figuras (necesita Chromium; variable CHROME)
 python3 taxonomia/generar_tableros.py                   # los tableros de la taxonomía visual y su catálogo (Chromium)
 ```
+
+Los dos generadores de Word escriben un archivo solo si su contenido cambia, y la plantilla de estilos solo se rehace con `--plantilla`. Si `git status` muestra un Word que no tocaste, algo cambió de verdad.
 
 Cada vez que cambie el artículo:
 
@@ -71,7 +73,6 @@ Cada vez que cambie el artículo:
 
 - [ ] `git diff --check`: sin espacios sobrantes.
 - [ ] El Word regenerado y la extensión informada por `generar_docx.py`.
-- [ ] La plantilla devuelta a su estado (`git status` no la muestra).
 - [ ] Sin archivos de paso: `__pycache__`, PDF de prueba, fotos o letras completas.
 - [ ] Ninguna cita, página ni fuente nueva sin comprobar.
 

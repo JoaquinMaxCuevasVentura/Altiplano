@@ -6,15 +6,21 @@
    tablas con bordes y cabecera repetida, imágenes ajustadas a la caja y número
    de página al pie.
 
+Un archivo solo se reescribe si su contenido cambia, y el PDF solo se rehace
+si cambió el Word del artículo, para que git no muestre diferencias donde no
+las hay.
+
 Uso (desde la raíz del repositorio), después de python3 articulo/generar_docx.py:
     pip install pypandoc_binary python-docx
     python3 entregables/generar_entregables.py
 """
 
+import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import zipfile
 from pathlib import Path
 
 import pypandoc
@@ -235,8 +241,30 @@ def numero_de_pagina(seccion):
     run.font.name = FONT
 
 
-def convertir(md, ref):
-    docx = md.with_suffix(".docx")
+def partes(docx):
+    """El contenido de un .docx sin las fechas de creación y de guardado."""
+    with zipfile.ZipFile(docx) as z:
+        out = {}
+        for name in sorted(z.namelist()):
+            data = z.read(name)
+            if name == "docProps/core.xml":
+                data = re.sub(rb"<dcterms:(created|modified)[^>]*>[^<]*</dcterms:\1>", b"", data)
+            out[name] = data
+        return out
+
+
+def reemplazar_si_cambia(nuevo, destino):
+    """Copia nuevo sobre destino solo si su contenido es distinto. Dice si lo copió."""
+    if destino.exists() and partes(nuevo) == partes(destino):
+        return False
+    shutil.copyfile(nuevo, destino)
+    return True
+
+
+def convertir(md, ref, tmp):
+    """Convierte md a Word en tmp y lo pone junto al .md si cambió."""
+    destino = md.with_suffix(".docx")
+    docx = Path(tmp) / destino.name
     pypandoc.convert_file(
         str(md), "docx", outputfile=str(docx), format="markdown",
         extra_args=[f"--reference-doc={ref}", f"--resource-path={BASE}",
@@ -275,7 +303,7 @@ def convertir(md, ref):
     props.author = "Joaquin Max Cuevas Ventura"
     props.title = md.stem.split("_", 1)[1].replace("_", " ").capitalize()
     doc.save(str(docx))
-    return docx
+    return destino, reemplazar_si_cambia(docx, destino)
 
 
 def pdf_del_articulo(docx):
@@ -296,16 +324,20 @@ def main():
     if not ARTICULO.exists():
         sys.exit(f"Falta {ARTICULO}: primero ejecuta python3 articulo/generar_docx.py")
     copia = BASE / "01_articulo_cosecha_de_piedras.docx"
-    shutil.copyfile(ARTICULO, copia)
-    print(f"Copiado: {copia.name}")
-    pdf = pdf_del_articulo(copia)
-    if pdf:
-        print(f"Escrito: {pdf.name}")
+    cambio = reemplazar_si_cambia(ARTICULO, copia)
+    print(f"{'Copiado' if cambio else 'Sin cambios'}: {copia.name}")
+    if cambio or not copia.with_suffix(".pdf").exists():
+        pdf = pdf_del_articulo(copia)
+        if pdf:
+            print(f"Escrito: {pdf.name}")
+    else:
+        print(f"Sin cambios: {copia.with_suffix('.pdf').name}")
     with tempfile.TemporaryDirectory() as tmp:
         ref = Path(tmp) / "referencia.docx"
         plantilla(ref)
         for md in sorted(BASE.glob("0[2-9]_*.md")):
-            print(f"Escrito: {convertir(md, ref).name}")
+            destino, cambio = convertir(md, ref, tmp)
+            print(f"{'Escrito' if cambio else 'Sin cambios'}: {destino.name}")
 
 
 if __name__ == "__main__":
