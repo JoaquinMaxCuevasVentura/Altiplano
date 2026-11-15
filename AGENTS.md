@@ -23,7 +23,7 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
 | `articulo/figuras/` | Las ocho figuras, las siete imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/38_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/39_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `archivo_del_proyecto/` | El archivo del desarrollo: versiones anteriores, inventario, línea de tiempo y pendientes | No a mano: lo arman y lo verifican los guiones de `archivo_del_proyecto/herramientas/` |
@@ -59,7 +59,11 @@ python3 entregables/generar_entregables.py              # copia el artículo, ha
 node analisis/esquemas/diagramas/generar_diagramas.js   # las notaciones SVG de las figuras 1 a 8
 python3 articulo/generar_figuras.py                     # los PNG de las figuras (necesita Chromium; variable CHROME)
 python3 taxonomia/generar_tableros.py                   # los tableros de la taxonomía visual y su catálogo (Chromium)
+python3 archivo_del_proyecto/herramientas/armar_archivo.py      # el archivo del proyecto; lee la rama, así que va después del commit
+python3 archivo_del_proyecto/herramientas/verificar_archivo.py  # comprueba el archivo y escribe su verificacion.md
 ```
+
+El archivo del proyecto se arma con lo que ya está en la rama: primero va el commit con los cambios y después, en otro commit, el archivo rehecho (`analisis/39`).
 
 Los dos generadores de Word escriben un archivo solo si su contenido cambia, y la plantilla de estilos solo se rehace con `--plantilla`. Si `git status` muestra un Word que no tocaste, algo cambió de verdad.
 
