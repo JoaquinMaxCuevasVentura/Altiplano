@@ -6,14 +6,14 @@ No es una versión nueva del proyecto ni una selección: guarda también los bor
 
 ## Qué abarca
 
-- **La rama del artículo,** `claude/altiplano-botelho-article-jm2nlr`: 52 commits, del 25.09.2026 al 15.11.2026 (de `903f43e` a `3d57d31`).
-- **De git:** 430 versiones anteriores de archivos (416 copiadas tal cual y 14 que repiten un contenido ya guardado) y los 207 archivos vigentes, registrados en su lugar.
-- **De la conversación:** 114 piezas de la carpeta de trabajo (104 copiadas): borradores, dos Word de cambios que se enviaron al autor, guiones de comprobación y vistas de página.
-- **Copias funcionales:** 304 imágenes copiadas junto a las páginas que las piden, para que se vean como entonces.
+- **La rama del artículo,** `claude/altiplano-botelho-article-jm2nlr`: 53 commits, del 25.09.2026 al 15.11.2026 (de `903f43e` a `91bc40e`).
+- **De git:** 444 versiones anteriores de archivos (429 copiadas tal cual y 15 que repiten un contenido ya guardado) y los 208 archivos vigentes, registrados en su lugar.
+- **De la conversación:** 123 piezas de la carpeta de trabajo (111 copiadas): borradores, dos Word de cambios que se enviaron al autor, guiones de comprobación y vistas de página.
+- **Copias funcionales:** 319 imágenes copiadas junto a las páginas que las piden, para que se vean como entonces.
 - **Otras ramas:** 181 registros. Las dos ramas de Codex entregaron su archivo a la rama del artículo. La de los registros de arquitectura (`claude/eager-bohr-mx9420`) es otro trabajo, que sale de esta rama; se registra y no se copia.
 - **En línea:** 11 canales del atlas de Are.na, descritos y no copiados.
-- **Lo que falta:** 12 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
-- **Peso de lo copiado:** 176 MB de git, 75 MB de copias funcionales y 24 MB de la conversación. Lo que viene de git no agranda el repositorio, porque git guarda una sola vez cada contenido.
+- **Lo que falta:** 13 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
+- **Peso de lo copiado:** 197 MB de git, 82 MB de copias funcionales y 32 MB de la conversación. Lo que viene de git no agranda el repositorio, porque git guarda una sola vez cada contenido.
 - **Fuera del archivo:** las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otro proyecto (la tipografía *Contenida*) y no se tocan.
 
 ## Cómo está ordenado
@@ -41,15 +41,15 @@ archivo_del_proyecto/
 
 | Línea | Versiones | Lo vigente, en su lugar |
 |---|---|---|
-| [El artículo](versiones/articulo/README.md) | 34 de git, 4 de la conversación | [`articulo/`](../articulo/) |
+| [El artículo](versiones/articulo/README.md) | 35 de git, 5 de la conversación | [`articulo/`](../articulo/) |
 | [Las figuras y las imágenes del artículo](versiones/figuras/README.md) | 26 de git, 1 de la conversación | [`articulo/figuras/`](../articulo/figuras/) |
 | [Los esquemas, las notaciones y las guías](versiones/esquemas/README.md) | 10 de git | [`analisis/esquemas/`](../analisis/esquemas/) |
-| [El registro de análisis](versiones/analisis/README.md) | 49 de git | [`analisis/`](../analisis/) |
-| [Los entregables](versiones/entregables/README.md) | 8 de git | [`entregables/`](../entregables/) |
+| [El registro de análisis](versiones/analisis/README.md) | 50 de git | [`analisis/`](../analisis/) |
+| [Los entregables](versiones/entregables/README.md) | 9 de git | [`entregables/`](../entregables/) |
 | [La taxonomía visual](versiones/taxonomia/README.md) | 5 de git | [`taxonomia/`](../taxonomia/) |
 | [El informe de convocatorias](versiones/convocatorias/README.md) | 6 de git | [`reports/`](../reports/) |
-| [El índice y las reglas del repositorio](versiones/repositorio/README.md) | 47 de git | [`README.md y AGENTS.md`](../) |
-| [Las comprobaciones de la conversación](versiones/comprobaciones/README.md) | 7 de la conversación | no entraron en git |
+| [El índice y las reglas del repositorio](versiones/repositorio/README.md) | 48 de git | [`README.md y AGENTS.md`](../) |
+| [Las comprobaciones de la conversación](versiones/comprobaciones/README.md) | 8 de la conversación | no entraron en git |
 | [Los registros de arquitectura (rama relacionada, sin unir)](versiones/registros/README.md) | 3 de la rama relacionada | no está en esta rama |
 
 ## Cómo se lee
@@ -106,7 +106,7 @@ Las fichas citan el mensaje del commit y el documento de `analisis/` que respald
 
 ## La versión vigente
 
-Es el estado de la rama en el commit `3d57d31` (15.11.2026): el artículo en [`articulo/articulo_cosecha_de_piedras.md`](../articulo/articulo_cosecha_de_piedras.md), sus Word y los archivos de [`entregables/`](../entregables/). Qué es cada cosa: el [`README.md`](../README.md) de la raíz. Lo que falta para enviar el artículo: [`entregables/02_lista_de_envio.md`](../entregables/02_lista_de_envio.md).
+Es el estado de la rama en el commit `91bc40e` (15.11.2026): el artículo en [`articulo/articulo_cosecha_de_piedras.md`](../articulo/articulo_cosecha_de_piedras.md), sus Word y los archivos de [`entregables/`](../entregables/). Qué es cada cosa: el [`README.md`](../README.md) de la raíz. Lo que falta para enviar el artículo: [`entregables/02_lista_de_envio.md`](../entregables/02_lista_de_envio.md).
 
 ## Cómo recuperar una versión
 

@@ -128,6 +128,11 @@ CONVERSACION = [
          que="Un Word con los cambios de la tarde del 10 de noviembre marcados (74), comparado con el artículo del commit f784ab3. Se le envió al autor en la conversación.",
          respaldo="`analisis/37_cursivas_pasteles_y_reescrituras.md`. El envío consta en la conversación (10 de noviembre, 09:59 UTC).",
          archivos=["cambios/cambios_cursivas_pasteles_codex.docx", "cambios/vf784.docx"]),
+    dict(linea="articulo", nombre="word-con-los-cambios-del-15-de-noviembre", estado="alternativa",
+         titulo="Word con los cambios del 15 de noviembre",
+         que="Un Word con solo los cambios de la versión casi final marcados (56), comparado con el artículo del commit 3d57d31. Se le envió al autor en la conversación.",
+         respaldo="`analisis/40_version_casi_final.md` describe los cambios que marca.",
+         archivos=["cambios15/cambios_del_15_de_noviembre.docx", "cambios15/v3d57.docx", "antes_casa.md"]),
     dict(linea="figuras", nombre="paginas-de-origen-de-las-imagenes-1-y-3", estado="prueba o experimento",
          titulo="Páginas de origen de las imágenes 1 y 3",
          que="Las páginas completas de Internet Archive de donde salen la Imagen 1 (d'Orbigny, 1847) y la Imagen 3 (Squier, 1877), sus recortes y dos hojas de contacto con que se eligieron. Son de dominio público.",
@@ -171,6 +176,11 @@ CONVERSACION = [
          que="El guion que puso las cursivas, el que aplicó las reescrituras de Codex y los pasteles hechos, y las listas de citas de antes y de después.",
          respaldo="`analisis/37_cursivas_pasteles_y_reescrituras.md`.",
          archivos=["lista/cursivas.py", "lista/editar2.py", "lista/antes2.json", "lista/despues2.json"]),
+    dict(linea="comprobaciones", nombre="guiones-de-la-version-casi-final", estado="prueba o experimento",
+         titulo="Guiones de la versión casi final",
+         que="El guion que incorporó a Suárez Jordán y a Yampara Blanco, el de la pasada de pulido, las listas de citas de antes y de después y el guion de las citas con los dos autores nuevos.",
+         respaldo="`analisis/40_version_casi_final.md`.",
+         archivos=["lista/citas3.py", "lista/editar3.py", "lista/editar4.py", "lista/antes5.json", "lista/despues5.json", "lista/despues6.json"]),
     dict(linea="comprobaciones", nombre="vistas-y-listas-de-la-auditoria-del-proyecto", estado="prueba o experimento",
          titulo="Vistas y listas de la auditoría del proyecto",
          que="Las páginas del PDF del artículo en imagen, como se miraron en la auditoría del 14 de noviembre (versión del commit 7b44456), y las listas de citas de antes y de después de sus cambios.",
@@ -189,6 +199,9 @@ NO_ARCHIVADO = [
     ("Los dos libros de Churata", "Textos esenciales y El pez de oro, en Word, adjuntados por el autor el 2 de noviembre",
      "fuente bibliográfica", "analisis", "", "adjuntos de la conversación",
      "No se archivan: tienen derechos de autor. Lo que se usó de ellos está en analisis/32 y analisis/33."),
+    ("Las fuentes de la carpeta de los registros de arquitectura", "Los PDF de vivienda, chullpas y Tiwanaku que el autor reunió para los registros; de ellos se leyeron cinco para el artículo el 15 de noviembre",
+     "fuente bibliográfica", "analisis", "", "carpeta del Drive del autor (la de los registros de arquitectura)",
+     "No se archivan: casi todos tienen derechos de autor. Qué se leyó y qué entró en el artículo: analisis/40."),
     ("Las transcripciones y el OCR de septiembre y octubre", "Las transcripciones con que se comprobaron las citas por primera vez",
      "fuente bibliográfica", "analisis", "", "",
      "No recuperable: «nunca entraron al repositorio y […] se perdieron cuando se reinició el entorno de trabajo» (entregables/07). Las citas se cotejaron otra vez el 10 de noviembre."),
@@ -439,6 +452,7 @@ DESCRIPCIONES_CONVERSACION = [
     (r"antes_cursivas\.md$", "El artículo del 10 de noviembre, antes de las cursivas"),
     (r"cambios_del_10_de_noviembre\.docx$", "Word con los cambios del 10 de noviembre marcados, respecto del commit 0a2c4ba"),
     (r"cambios_cursivas_pasteles_codex\.docx$", "Word con los cambios de cursivas, pasteles y Codex marcados, respecto del commit f784ab3"),
+    (r"cambios_del_15_de_noviembre\.docx$", "Word con los cambios del 15 de noviembre marcados, respecto del commit 3d57d31"),
     (r"\.docx$", "Word del artículo, copia de trabajo para comparar"),
     (r"aud/pg-(\d+)\.jpg$", "Vista de la página {0} del PDF del artículo, en la auditoría"),
     (r"final_render/", "Vista de página de la versión final, para revisarla"),
@@ -453,6 +467,9 @@ DESCRIPCIONES_CONVERSACION = [
     (r"lista/ver\.py$", "Muestra una frase en la página de una fuente, para leerla en su contexto"),
     (r"lista/buscar\.py$", "Busca una frase en el texto de una fuente y dice en qué página está"),
     (r"lista/editar\.py$", "Aplica al artículo las correcciones del cotejo y las variaciones de los tipos de cita"),
+    (r"lista/editar3\.py$", "Incorpora al artículo a Suárez Jordán (1990) y a Yampara Blanco (2019)"),
+    (r"lista/editar4\.py$", "Aplica al artículo la pasada de pulido de la versión casi final"),
+    (r"^antes_casa\.md$", "El artículo antes de la versión casi final, copia de trabajo"),
     (r"lista/editar2\.py$", "Aplica al artículo las reescrituras de Codex y la escritura con los pasteles hechos"),
     (r"lista/orden_rpr\.py$", "Ordena las marcas de cambio del Word para que pase la validación"),
     (r"ia/tumba_full\.jpg$", "Página completa del atlas de d'Orbigny (1847) en Internet Archive"),
@@ -744,9 +761,9 @@ class Archivo:
                         datos = contenido(manifiesto[rel]["blob_git"])
                 else:
                     continue
-                nuevo[rel] = {"fecha": fecha, "sha256": manifiesto.get(rel, {}).get("sha256") or sha256(datos),
-                              "bytes": manifiesto.get(rel, {}).get("bytes") or len(datos),
-                              "blob_git": manifiesto.get(rel, {}).get("blob_git") or blob_git(datos)}
+                previo = manifiesto.get(rel, {}) if not (self.scratch and (self.scratch / rel).exists()) else {}
+                nuevo[rel] = {"fecha": previo.get("fecha", fecha), "sha256": previo.get("sha256") or sha256(datos),
+                              "bytes": previo.get("bytes") or len(datos), "blob_git": previo.get("blob_git") or blob_git(datos)}
                 piezas.append((rel, fecha, datos))
             if not piezas:
                 continue

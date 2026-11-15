@@ -7,17 +7,20 @@
 | Línea | [Los entregables](../README.md) |
 | Origen | commit `93a80af` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-14 22:35 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`entregables/`](../../../../entregables/) |
 | La versión anterior | [2026-11-10_0958_7b44456_pone-en-cursiva-las-voces](../2026-11-10_0958_7b44456_pone-en-cursiva-las-voces/ficha.md) |
+| La versión siguiente | [2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi](../2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **16 que siguen vigentes en su lugar,** sin cambios desde este commit: [`entregables/01_articulo_cosecha_de_piedras.docx`](../../../../entregables/01_articulo_cosecha_de_piedras.docx), [`entregables/01_articulo_cosecha_de_piedras.pdf`](../../../../entregables/01_articulo_cosecha_de_piedras.pdf), [`entregables/02_lista_de_envio.docx`](../../../../entregables/02_lista_de_envio.docx), [`entregables/02_lista_de_envio.md`](../../../../entregables/02_lista_de_envio.md), [`entregables/03_guia_de_los_seis_pasteles.docx`](../../../../entregables/03_guia_de_los_seis_pasteles.docx), [`entregables/03_guia_de_los_seis_pasteles.md`](../../../../entregables/03_guia_de_los_seis_pasteles.md), [`entregables/04_fichero_de_pasajes.docx`](../../../../entregables/04_fichero_de_pasajes.docx), [`entregables/04_fichero_de_pasajes.md`](../../../../entregables/04_fichero_de_pasajes.md), [`entregables/05_revistas_candidatas.docx`](../../../../entregables/05_revistas_candidatas.docx), [`entregables/05_revistas_candidatas.md`](../../../../entregables/05_revistas_candidatas.md), [`entregables/06_atlas_de_arena.docx`](../../../../entregables/06_atlas_de_arena.docx), [`entregables/06_atlas_de_arena.md`](../../../../entregables/06_atlas_de_arena.md), [`entregables/07_fuentes_para_cotejar.docx`](../../../../entregables/07_fuentes_para_cotejar.docx), [`entregables/07_fuentes_para_cotejar.md`](../../../../entregables/07_fuentes_para_cotejar.md), [`entregables/LEEME.md`](../../../../entregables/LEEME.md), [`entregables/generar_entregables.py`](../../../../entregables/generar_entregables.py).
+- **8 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`entregables/01_articulo_cosecha_de_piedras.pdf`](entregables/01_articulo_cosecha_de_piedras.pdf), [`entregables/02_lista_de_envio.docx`](entregables/02_lista_de_envio.docx), [`entregables/02_lista_de_envio.md`](entregables/02_lista_de_envio.md), [`entregables/05_revistas_candidatas.docx`](entregables/05_revistas_candidatas.docx), [`entregables/05_revistas_candidatas.md`](entregables/05_revistas_candidatas.md), [`entregables/07_fuentes_para_cotejar.docx`](entregables/07_fuentes_para_cotejar.docx), [`entregables/07_fuentes_para_cotejar.md`](entregables/07_fuentes_para_cotejar.md), [`entregables/LEEME.md`](entregables/LEEME.md).
+- **1 que no se copia** porque su contenido ya está guardado en otra parte: `entregables/01_articulo_cosecha_de_piedras.docx` (mismo contenido que H-0429: [ver](../../../../archivo_del_proyecto/versiones/articulo/2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/articulo/articulo_cosecha_de_piedras.docx)).
+- **7 que siguen vigentes en su lugar,** sin cambios desde este commit: [`entregables/03_guia_de_los_seis_pasteles.docx`](../../../../entregables/03_guia_de_los_seis_pasteles.docx), [`entregables/03_guia_de_los_seis_pasteles.md`](../../../../entregables/03_guia_de_los_seis_pasteles.md), [`entregables/04_fichero_de_pasajes.docx`](../../../../entregables/04_fichero_de_pasajes.docx), [`entregables/04_fichero_de_pasajes.md`](../../../../entregables/04_fichero_de_pasajes.md), [`entregables/06_atlas_de_arena.docx`](../../../../entregables/06_atlas_de_arena.docx), [`entregables/06_atlas_de_arena.md`](../../../../entregables/06_atlas_de_arena.md), [`entregables/generar_entregables.py`](../../../../entregables/generar_entregables.py).
 
 ## La versión completa
 
-En este commit, la línea tenía 16 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 16 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `93a80af`. Para tenerla entera: `git worktree add ../altiplano_93a80af 93a80af`.
+En este commit, la línea tenía 16 archivos: 8 están en esta carpeta, 1 en carpetas de otras versiones y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `93a80af`. Para tenerla entera: `git worktree add ../altiplano_93a80af 93a80af`.
 
 ## Qué cambió respecto de la anterior
 

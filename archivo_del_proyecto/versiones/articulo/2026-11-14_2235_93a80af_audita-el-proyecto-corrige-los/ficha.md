@@ -7,17 +7,20 @@
 | Línea | [El artículo](../README.md) |
 | Origen | commit `93a80af` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-14 22:35 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`articulo/`](../../../../articulo/) |
 | La versión anterior | [2026-11-10_0958_7b44456_pone-en-cursiva-las-voces](../2026-11-10_0958_7b44456_pone-en-cursiva-las-voces/ficha.md) |
+| La versión siguiente | [2026-11-15_0307_conversacion_word-con-los-cambios-del-15-de-noviembre](../2026-11-15_0307_conversacion_word-con-los-cambios-del-15-de-noviembre/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **4 que siguen vigentes en su lugar,** sin cambios desde este commit: [`articulo/articulo_cosecha_de_piedras.docx`](../../../../articulo/articulo_cosecha_de_piedras.docx), [`articulo/articulo_cosecha_de_piedras.md`](../../../../articulo/articulo_cosecha_de_piedras.md), [`articulo/articulo_cosecha_de_piedras_cambios.docx`](../../../../articulo/articulo_cosecha_de_piedras_cambios.docx), [`articulo/generar_docx.py`](../../../../articulo/generar_docx.py).
+- **3 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`articulo/articulo_cosecha_de_piedras.docx`](articulo/articulo_cosecha_de_piedras.docx), [`articulo/articulo_cosecha_de_piedras.md`](articulo/articulo_cosecha_de_piedras.md), [`articulo/articulo_cosecha_de_piedras_cambios.docx`](articulo/articulo_cosecha_de_piedras_cambios.docx).
+- **15 copias de imágenes o recursos** que piden esas páginas, tal como estaban en ese commit, para que se vean como entonces.
+- **1 que sigue vigente en su lugar,** sin cambios desde este commit: [`articulo/generar_docx.py`](../../../../articulo/generar_docx.py).
 
 ## La versión completa
 
-En este commit, la línea tenía 7 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 7 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `93a80af`. Para tenerla entera: `git worktree add ../altiplano_93a80af 93a80af`.
+En este commit, la línea tenía 7 archivos: 3 están en esta carpeta, 0 en carpetas de otras versiones y 4 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `93a80af`. Para tenerla entera: `git worktree add ../altiplano_93a80af 93a80af`.
 
 ## Qué cambió respecto de la anterior
 

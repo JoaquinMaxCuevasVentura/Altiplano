@@ -7,9 +7,10 @@
 | Línea | [El registro de análisis](../README.md) |
 | Origen | commit `3d57d31` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-15 02:56 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`analisis/`](../../../../analisis/) |
 | La versión anterior | [2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los](../2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) |
+| La versión siguiente | [2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi](../2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) |
 
 ## Qué contiene esta carpeta
 

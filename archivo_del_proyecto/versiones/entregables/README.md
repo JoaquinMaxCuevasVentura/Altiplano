@@ -13,4 +13,5 @@ Lo vigente está en su lugar: [`entregables/`](../../../entregables/). Cada carp
 | 2026-11-10 03:58 | `0a2c4ba` | [Coteja todas las citas con las fuentes que reunió el autor](2026-11-10_0358_0a2c4ba_coteja-todas-las-citas-con-las/ficha.md) | versión anterior | 7 |
 | 2026-11-10 09:25 | `f784ab3` | [Aplica las correcciones del cotejo y varía los tipos de cita](2026-11-10_0925_f784ab3_aplica-las-correcciones-del/ficha.md) | versión anterior | 8 |
 | 2026-11-10 09:58 | `7b44456` | [Pone en cursiva las voces aymaras y escribe el texto con los pasteles hechos](2026-11-10_0958_7b44456_pone-en-cursiva-las-voces/ficha.md) | versión anterior | 16 |
-| 2026-11-14 22:35 | `93a80af` | [Audita el proyecto, corrige los archivos finales y suma dos imágenes](2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) | versión vigente | 0 |
+| 2026-11-14 22:35 | `93a80af` | [Audita el proyecto, corrige los archivos finales y suma dos imágenes](2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) | versión anterior | 8 |
+| 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión vigente | 0 |

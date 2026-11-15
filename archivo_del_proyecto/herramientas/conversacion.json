@@ -1,4 +1,10 @@
 {
+ "antes_casa.md": {
+  "blob_git": "2b951bb0f349901a22ba03b05532c870f08449b5",
+  "bytes": 81229,
+  "fecha": "2026-11-15 03:07",
+  "sha256": "03571d0cf05e08f1753087f0127f7e937d1a410f479eb81d21db8f5aa504c647"
+ },
  "aud/pg-01.jpg": {
   "blob_git": "1fc1341dfdfb2b23f14fba5da03cc9fdbe532759",
   "bytes": 36056,
@@ -263,6 +269,18 @@
   "fecha": "2026-11-10 09:58",
   "sha256": "7ee9ff06d4af7459ae84342d17fadc57a601c333cb3038e97242910afca5f972"
  },
+ "cambios15/cambios_del_15_de_noviembre.docx": {
+  "blob_git": "0ba1b38bd9054e7d82b1244103721f6a13b8bf2f",
+  "bytes": 7629161,
+  "fecha": "2026-11-15 03:22",
+  "sha256": "8b08a128092b6ef200d13c03985eccc5a57e615b43d60d447be587a706aa7ac1"
+ },
+ "cambios15/v3d57.docx": {
+  "blob_git": "76d757173a07d1c231ff9966f3c1a99b81501c36",
+  "bytes": 7627671,
+  "fecha": "2026-11-15 03:12",
+  "sha256": "b64c9ebb44ed8be4d9b1b69de5cd7add70e1b75941dcaf7d0da20238edec065a"
+ },
  "churata_scripts/secciones.py": {
   "blob_git": "3ec01e6d44fee012721348a7d96fb71b7ce41aae",
   "bytes": 2071,
@@ -431,6 +449,12 @@
   "fecha": "2026-11-14 17:33",
   "sha256": "cc48afb6596574dd02ebeea0400d1e55fd428490867b3ad31a5a96c5d3e72469"
  },
+ "lista/antes5.json": {
+  "blob_git": "45656da2ce22ef6b6225ca127e83f8adb0e35a1b",
+  "bytes": 32482,
+  "fecha": "2026-11-15 03:07",
+  "sha256": "9250dd92ca0feae6d3015795bd41fc9961c0aae8095bff60b08667a06c4a8128"
+ },
  "lista/antes_cursivas.md": {
   "blob_git": "d8e6a341c95957e769e3e63c1b1d026c5c03f15d",
   "bytes": 79315,
@@ -454,6 +478,12 @@
   "bytes": 4701,
   "fecha": "2026-11-10 04:20",
   "sha256": "54d7bbf8edd4d90b24f44c3a06f9498dff086f16fb8c011cbe1ab9a309aa4ef8"
+ },
+ "lista/citas3.py": {
+  "blob_git": "9ffefa056cf5ca37c28a20a683dc678d621eefc9",
+  "bytes": 4771,
+  "fecha": "2026-11-15 03:23",
+  "sha256": "9f278bf367bdd591a7cdb47890adb4d1a42a140d7c544a94b7198232a9915fd5"
  },
  "lista/citas_hoy.json": {
   "blob_git": "e51d48a6f83d82cab89ccb9d9f20ed842469baf5",
@@ -497,6 +527,18 @@
   "fecha": "2026-11-14 22:35",
   "sha256": "9250dd92ca0feae6d3015795bd41fc9961c0aae8095bff60b08667a06c4a8128"
  },
+ "lista/despues5.json": {
+  "blob_git": "fa3be594cfa24ce809ebc8d1327ee5d73c7d8c3f",
+  "bytes": 33939,
+  "fecha": "2026-11-15 03:07",
+  "sha256": "a2b3ed743e7c1083c0b675759f23cec19ccd2b4bbc65af80f560f9e96ae87df3"
+ },
+ "lista/despues6.json": {
+  "blob_git": "2d777b6bf3a411c05bb6bf8a56dddb018f1b912a",
+  "bytes": 33939,
+  "fecha": "2026-11-15 03:10",
+  "sha256": "6523d99e40d7b1b58dd46431d09a9928fdfd1c3b888a61ef605291b372284241"
+ },
  "lista/editar.py": {
   "blob_git": "b43f032306306aa735ea8cd23e6a8d161d918d20",
   "bytes": 22018,
@@ -508,6 +550,18 @@
   "bytes": 4700,
   "fecha": "2026-11-10 09:55",
   "sha256": "4e35a3efe5bb4ce64e9fa53f0ce9d3148dd7fb91022162efa00bff502ed0427b"
+ },
+ "lista/editar3.py": {
+  "blob_git": "e1b981769e467518efa9a8b6ee360ce12b7118cd",
+  "bytes": 4159,
+  "fecha": "2026-11-15 03:07",
+  "sha256": "419c261ef8c8af73693582efc9c38cfd04129b1beb25f4eda5c1aa5fb13fe450"
+ },
+ "lista/editar4.py": {
+  "blob_git": "6ff1fe8772f6c7cc0c6f2b2e9b5c71434650b6b6",
+  "bytes": 5307,
+  "fecha": "2026-11-15 03:10",
+  "sha256": "668338a439bb8d815493f4aa6376080b0088ffcf37c52224e116065951c1a537"
  },
  "lista/map_04_alexander.json": {
   "blob_git": "63661a89e022e94ce96939af00faf91a892674c2",

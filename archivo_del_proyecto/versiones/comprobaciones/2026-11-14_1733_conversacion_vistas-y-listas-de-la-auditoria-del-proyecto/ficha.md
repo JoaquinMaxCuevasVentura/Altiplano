@@ -9,6 +9,7 @@
 | Fecha | 2026-11-14 17:33 UTC: la del archivo más antiguo de la carpeta de trabajo, no la de creación de lo que contiene |
 | Estado de la versión | prueba o experimento |
 | La versión anterior | [2026-11-10_0955_conversacion_guiones-de-las-cursivas-y-las-reescrituras](../2026-11-10_0955_conversacion_guiones-de-las-cursivas-y-las-reescrituras/ficha.md) |
+| La versión siguiente | [2026-11-15_0307_conversacion_guiones-de-la-version-casi-final](../2026-11-15_0307_conversacion_guiones-de-la-version-casi-final/ficha.md) |
 
 ## Qué contiene esta carpeta
 

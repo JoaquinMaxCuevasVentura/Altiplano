@@ -43,4 +43,6 @@ Lo vigente está en su lugar: [`articulo/`](../../../articulo/). Cada carpeta gu
 | 2026-11-10 09:55 | conversación | [El artículo antes de las cursivas](2026-11-10_0955_conversacion_articulo-antes-de-las-cursivas/ficha.md) | versión anterior | 1 |
 | 2026-11-10 09:58 | conversación | [Word con los cambios de cursivas, pasteles y Codex](2026-11-10_0958_conversacion_word-con-los-cambios-de-cursivas-pasteles-y-codex/ficha.md) | alternativa | 1 |
 | 2026-11-10 09:58 | `7b44456` | [Pone en cursiva las voces aymaras y escribe el texto con los pasteles hechos](2026-11-10_0958_7b44456_pone-en-cursiva-las-voces/ficha.md) | versión anterior | 16 |
-| 2026-11-14 22:35 | `93a80af` | [Audita el proyecto, corrige los archivos finales y suma dos imágenes](2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) | versión vigente | 0 |
+| 2026-11-14 22:35 | `93a80af` | [Audita el proyecto, corrige los archivos finales y suma dos imágenes](2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) | versión anterior | 18 |
+| 2026-11-15 03:07 | conversación | [Word con los cambios del 15 de noviembre](2026-11-15_0307_conversacion_word-con-los-cambios-del-15-de-noviembre/ficha.md) | alternativa | 1 |
+| 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión vigente | 0 |
