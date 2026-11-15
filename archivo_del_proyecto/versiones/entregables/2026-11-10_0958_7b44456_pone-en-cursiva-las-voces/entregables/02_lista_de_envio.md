@@ -1,0 +1,200 @@
+# Lista de envío
+
+**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura.
+
+Estado al 2 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
+
+## El artículo hoy
+
+| Dato | Valor |
+|---|---|
+| Extensión | 75.409 caracteres con espacios y 12.784 palabras, con notas y bibliografía. En Word, 38 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
+| Resúmenes | 122 palabras en español y 118 en inglés |
+| Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
+| Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
+| Figuras | Ocho. Las figuras 1 a 6 son los seis pasteles: el texto ya los describe como hechos, pero hasta que lleguen los escaneos se ven sus esquemas de encaje y los pies dicen «[medidas, año]». La 7 y la 8 son diagramas. Va además el Cuadro 1 |
+| Imágenes | Cinco de dominio público, en serie aparte (imágenes 1-5): tres dibujos de Guaman Poma, un grabado de Squier y una foto de la mina Siglo XX de la Library of Congress |
+| Citas de la novela | 145 entre comillas y 4 en bloque. Todas se cotejaron el 10 de noviembre con la edición digital de la UMSA: existen tal cual y están en la página indicada (`analisis/35` y `36`) |
+| Bibliografía | 36 obras |
+| Destino | Sin elegir. La primera candidata es *Atenea* (véase `05_revistas_candidatas`) |
+
+## Lo que ya está hecho
+
+- [x] Texto final revisado, sin marcas pendientes ni erratas a la vista.
+- [x] Línea de autoría y nota 1, de 80 palabras.
+- [x] Resumen, abstract, palabras clave y títulos en las dos lenguas.
+- [x] Declaración de conflicto de intereses y declaración de uso de IA.
+- [x] Citas de la novela comprobadas contra la transcripción, una por una. Cadenas de *ibid.* revisadas.
+- [x] Citas de las demás fuentes cotejadas con el texto de cada una, con su página.
+- [x] El pasaje de «Pyramid of Bones» sigue la letra oficial, la del librillo de la edición japonesa de *Virtue*.
+- [x] Cinco imágenes de dominio público, en serie aparte, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución (18 de octubre).
+- [x] Versión final reescrita el 2 de noviembre: recupera lo que se había quitado por extensión, suma a Gamaliel Churata y cambia la redacción para que no se lea como un texto de IA (`analisis/33_version_final_sin_patrones_de_ia.md`).
+- [x] Word regenerado con la versión final.
+- [x] Cursivas para las voces aymaras, texto escrito con los pasteles hechos y las mejores reescrituras de Codex, el 10 de noviembre (`analisis/37`).
+- [x] Citas cotejadas otra vez con las fuentes que reuniste, el 10 de noviembre: todas existen en su fuente. Las correcciones de página y de forma se aplicaron ese mismo día, y el artículo varió sus tipos de cita: más paráfrasis de las fuentes teóricas, citas narrativas y tres citas en bloque nuevas (`analisis/36`).
+
+## Lo que te toca, en orden
+
+### 1. Leer el artículo en voz alta y hacerlo tuyo
+
+La versión del 2 de noviembre la redactó Claude a partir de todo lo acumulado, cuidando no caer en los patrones de escritura de la IA. Es una base: reescríbela con tu voz y cambia lo que no suene a ti. Antes de firmar, decide si sostienes cada interpretación. Las que más conviene mirar:
+
+- la escuela de Warisata, que la novela calla (sección 2);
+- los tinterillos, que en la historia también asesoraron a las comunidades (sección 4);
+- los vigías leídos como mojones, con el *achachi* y la *saywa* de Bertonio (Figura 6);
+- la apacheta sin montón (Figura 3);
+- los dos agarres de la mano y la huella dactilar «como un sello» (secciones 2 y 5);
+- las dos analogías: el esgrafiado (sección 1) y la pirca de doble cara (sección 7);
+- el cierre de la Figura 1: el narrador declara cerrada el alma de los comunarios y los ve como estatuas;
+- el *qalachuyma*, que el artículo presenta como parte de un relato de Spedding (sección 7);
+- los cruces con la cultura popular: el apodo «el lobo» del Alcalde y las tres canciones de The Voidz (secciones 2, 3, 4 y 7);
+- las frases que acompañan a las imágenes, sobre todo dos: el anciano que labraba una piedra al pie de la Puerta del Sol y que Squier llegó a ver «como parte integrante de los monumentos» (sección 3), y el arado de pie de Guaman Poma, hecho para el cuerpo, frente al arado de buey de la chujlla (sección 7);
+- lo nuevo del 2 de noviembre: Warisata en el ayllu y no en la aldea, con Churata y Rivera Cusicanqui (sección 2); el abecedario en la pared de una chuklla de *El pez de oro*, frente a las paredes sin letras de los Huanca, y la casa de Konkachi (sección 3); el título como «mojón que cabe en un bolsillo» (sección 3); el horizonte que en aymara es también cimiento, *thaxsi* (Figura 3); el final que «restaura el ciclo» (sección 7), y Churata en el primer límite de las conclusiones.
+
+Si cambias algo, regenera el Word con `python3 articulo/generar_docx.py` y después los entregables con `python3 entregables/generar_entregables.py`.
+
+### 2. Confirmar el epígrafe
+
+Hoy el artículo abre con el lema del Taller de Historia Oral Andina: «Mirando al pasado para caminar por el presente y el futuro (*qhip nayr uñtasis sarnaqapxañani*)» (Rivera Cusicanqui, 2010 [1984]: 17). Habla de la memoria, da la primera palabra a una voz aymara colectiva y prepara la crítica de la sección 7.
+
+Si prefieres que el epígrafe nombre la piedra o la cosecha, hay tres alternativas ya comprobadas en su fuente:
+
+| Opción | Texto | Qué hace | Cuidado |
+|---|---|---|---|
+| A. Bertonio | «Montón de papa cubierto de ichu. *Qäna* vel *phina*. Montón de piedras como las que suele haber por las chácaras. *Qala chaxwa*, *pünqu*, *qutu*» (Bertonio, 2011 [1612]: 220) | Junta el montón de la cosecha y el de las piedras: la «cosecha de piedras» dicha en aymara | Habla un vocabulario jesuita, no un aymara. Esta entrada escribe *chaxwa*; la de la sección 1, *chhaxwa*: se respeta cada una |
+| B. El capataz de la mina | «Aquí cosecharás miles de cargas de estaño... Las papas de estaño las siembra el diablo ¿sabes?» (Botelho Gosálvez, 1982 [1945]: 142) | La cosecha del título vuelta mina | Da la primera palabra a quien se burla de Condori. La primera frase ya está en la sección 5 |
+| C. Le Guin | «[…] antes de la herramienta que expulsa energía hacia fuera, creamos la herramienta que lleva energía a casa» (Le Guin, 2021 [1986]: 6) | Anuncia la oposición entre el arma y el recipiente de las conclusiones | Es una voz ajena a los Andes, ya citada dos veces, y no nombra la piedra |
+
+Si cambias el epígrafe, cambia también una frase de la sección 7. Donde dice «Es lo contrario de lo que pide el lema del epígrafe. Los comunarios de la novela, en vez de caminar mirando al pasado, lo esconden en un foso», puede decir: «Al revés del lema del Taller de Historia Oral Andina (Rivera Cusicanqui, 2010 [1984]: 17), los comunarios de la novela, en vez de caminar mirando al pasado, lo esconden en un foso».
+
+### 3. Revisar la declaración de uso de IA
+
+Así figura hoy en el artículo:
+
+> a\) *Herramientas*: Claude (Anthropic), ChatGPT y Codex (OpenAI), asistentes de IA generativa. b) *Alcance*: se emplearon en la exploración bibliográfica, la transcripción y paginación de fuentes digitalizadas, la localización y el cotejo de citas con su página, el contraste de pasajes de la novela, la revisión conceptual y la redacción de borradores, el diseño de los esquemas de encaje con que se compusieron los pasteles de las figuras 1 a 6, el trazado de los diagramas (figuras 7 y 8), y la búsqueda, el cotejo con sus fuentes y la preparación de las imágenes de dominio público (imágenes 1-5). c) *Rol*: el autor concibió la hipótesis original, diseñó la metodología de lectura tectónica, seleccionó las fuentes, decidió las interpretaciones, dirigió y revisó la redacción y es autor exclusivo de los pasteles al óleo que sustentan la investigación; asume la plena responsabilidad intelectual por la versión final del manuscrito.
+
+- **Describe lo que se hizo.** El alcance incluye la redacción de borradores, el trazado de las ocho figuras y la búsqueda de las cinco imágenes porque así se preparó el texto. Las imágenes son históricas: ninguna se hizo con IA.
+- **Si reescribes el artículo con tus palabras** antes de enviarlo, puedes decirlo en el rol. Si no lo reescribes, la declaración tiene que decir que la versión final la redactó una IA a partir de tus decisiones.
+- **Codex (OpenAI)** está en la declaración porque hizo el primer análisis de Churata (`analisis/32`, en la rama `codex/analisis-churata`).
+- **Los pasteles.** La declaración dice que la IA ayudó a diseñar los esquemas de encaje con que se compusieron los pasteles. Déjalo así si los pasteles siguen esos esquemas; si los hiciste por otro camino, quítalo. Si las exploraciones con GPT Image 2 influyeron en los pasteles, dilo.
+- **Si redibujas a mano los diagramas 7 y 8,** quítalos también del alcance y cambia sus pies.
+- **Lee la política de IA de la revista elegida.** Al menos una de primera línea, la *Revista Hispánica Moderna*, prohíbe redactar con IA generativa.
+
+### 4. Hacer los pasteles y cambiar las figuras
+
+Desde el 10 de noviembre el texto está escrito como si los pasteles estuvieran hechos (`analisis/37`). El cuerpo y los planos (2) y (3) de cada figura hablan del pastel, y los pies dicen «Pastel al óleo sobre papel, [medidas, año]». Hasta que lleguen los escaneos, las figuras 1 a 6 muestran los esquemas de encaje, así que **no envíes el artículo antes de cambiarlas**. Si los pasteles no llegan a tiempo, vuelve a la versión con esquemas (commit f784ab3).
+
+La guía está en `03_guia_de_los_seis_pasteles`. Cuando tengas los escaneos:
+
+- reemplaza los esquemas de las figuras 1 a 6 (la guía explica cómo, paso a paso);
+- completa en cada pie las medidas y el año;
+- comprueba que los planos (2) y (3) de cada figura digan lo que hizo el pastel terminado, y corrígelos si hizo otra cosa;
+- revisa la declaración de IA (paso 3).
+
+Revisa también las notaciones de las figuras 1 a 6 (rótulos y decisiones marcadas con asterisco) y los diagramas 7 y 8 (rótulos y páginas). Decide si los diagramas entran.
+
+### 5. Pedir las imágenes de Guaman Poma en alta resolución
+
+Las cinco imágenes de dominio público ya están en el artículo (`articulo/figuras/imagen_1.jpg` a `imagen_5.jpg`). Dos alcanzan para imprimir: el grabado de Squier (Imagen 2) y la foto de la mina Siglo XX (Imagen 4). Las tres de Guaman Poma, no: la Biblioteca Real de Dinamarca solo da 550 px de alto en su web.
+
+- **Pide a la biblioteca** (kb@kb.dk) los cuatro dibujos del manuscrito GKS 2232 4º, con su paginación: 814 [828], 215 [217], 360 [362] y 1153 [1163]. Pregunta el costo, si lo tiene, y qué línea de crédito piden.
+- **Cuando lleguen,** guárdalos con el mismo nombre en `articulo/figuras/` y regenera el Word (`articulo/figuras/LEEME.md` explica el díptico de la Imagen 3).
+- **Decide la numeración.** Las imágenes van en serie aparte para no mover las figuras. Si la revista pide una sola serie, hay que renumerar todo por orden de aparición.
+- **Una imagen más, si la consigues.** La apacheta entre Pelechuco y Queara, de la expedición de Erland Nordenskiöld (1904-1905), está en Wikimedia Commons («Bolivia - SMVK - 002387»). Desde el entorno de trabajo no se pudo bajar. Si la bajas desde tu navegador y su ficha confirma una licencia libre, entraría junto a la Figura 3 (`analisis/31_proyecto_de_imagenes_de_dominio_publico.md` trae la frase y el pie).
+
+### 6. Cotejar las citas con el libro impreso
+
+Para eso hacen falta las fuentes, que no están en el repositorio. Qué libros subir, con qué páginas y dónde guardarlos está en `07_fuentes_para_cotejar`. El 10 de noviembre se cotejaron todas las citas con los archivos que reuniste (`analisis/35`). Falta sobre todo el libro impreso de la novela, porque el PDF de la UMSA es el mismo texto que la transcripción.
+
+Usa `04_fichero_de_pasajes`: trae las citas de la novela por página, con una casilla para marcar. Empieza por las pp. 88-107, donde la transcripción repite texto y alguna cita puede estar corrida una página.
+
+Las demás fuentes ya se cotejaron el 10 de noviembre, incluidas Barnadas, Zavaleta, las páginas de Churata y las citas recuperadas el 2 de noviembre. Quedan:
+
+- Churata, *El pez de oro*, p. 20: la página es la de una versión digital de 2007 y no la de la edición de 1957; conviene citar una edición de referencia;
+- Spedding (2025: XV) y Rodríguez y Rodríguez (2025: 55): el texto está, pero el extracto en Word no tiene números de página;
+- Cornejo Polar, si decides citar la 1.ª edición (véase el paso 7).
+
+### 7. Revisar los datos que no se pudieron comprobar del todo
+
+| Fuente | Qué falta |
+|---|---|
+| Cárcamo Pino (2019) | Resuelto el 10 de noviembre: la página de créditos del libro dice Springer, Cham, 2019, y el capítulo ocupa las pp. 1411-1423, como pone el artículo. Si quieres, se añade el DOI: 10.1007/978-3-319-93749-6_117 |
+| Frampton (1995) | Confirmar en la portada el editor (John Cava) y la ciudad. La cita de la p. 5 ya se cotejó; el archivo que reuniste trae solo la introducción |
+| Le Guin (2021 [1986]) | Completar la dirección exacta del texto en es.theanarchistlibrary.org. El colofón del PDF no la trae |
+| Alexander *et al.* (1977) | Las páginas citadas (xiii, xliii, 395, 405, 610-611, 621 y 1166) se confirmaron el 10 de noviembre con su número impreso. Si consigues la edición castellana (Gustavo Gili), conviene citarla |
+| Martin (2014: 85) y Scott (2020 [1998]: 3) | Confirmadas el 10 de noviembre. Las palabras de Martin son suyas, no de Deleuze |
+| Spedding (2025) | Confirmar en el libro el año, el ISBN y las páginas de la sección (XIII-XXIII). El extracto que reuniste no trae colofón ni números de página |
+| Rodríguez y Rodríguez (2025) | Confirmar la última página del capítulo (61) |
+| Cornejo Polar (2003 [1994]: 41, 180) | Se cita la 2.ª edición (2003). Si prefieres la 1.ª (Horizonte, 1994), comprobar las páginas |
+| Bertonio (2011 [1612]) | Se cita la transcripción digital. Si un evaluador lo pide, cotejar con el facsímil de 1612 |
+
+### 8. Cotejar «Father Electricity»
+
+El pasaje de la sección 7 («I do not want to see the whole mess / I wish I could live in retrospect») sale de la letra que aportaste. Es de *Tyranny* (2014), y el librillo de *Virtue* no lo trae.
+
+- Cotéjalo con la letra oficial: el librillo de *Tyranny* o un servicio de *streaming* con letras con licencia.
+- Si cambia algo (palabras, corte de verso, mayúsculas), dale al artículo la forma de esa fuente y di de dónde sale en la bibliografía, como ya se hizo con *Virtue*.
+- Mientras tanto, si la revista pregunta, la cita es de la grabación y la transcripción es tuya.
+
+### 9. Elegir la revista
+
+Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada revista y confirma la recepción, la extensión, el trato de las figuras, los cobros y la política de IA. Esos datos salen de extractos del buscador, no de una lectura directa.
+
+### 10. Adaptar el texto a la revista
+
+- **Formato y citas.** El Word sigue hoy la plantilla de *Estudios Bolivianos*. Según la revista, hará falta APA 7, MLA o Chicago.
+- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 4.300. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
+  - La palanca principal son los pies de figura analíticos y el Cuadro 1, unas 1.850 palabras: acórtalos o pasa parte de su análisis al texto.
+  - Las cinco imágenes, con sus frases, sus pies y la nota, suman unas 680 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 1) y la Puerta del Sol (Imagen 2).
+  - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.
+  - El marco teórico y la bibliografía deben quedar completos. Si una obra deja de citarse, sácala de la bibliografía.
+- **Las figuras, aparte.** *Atenea* las pide en JPG o TIF, a 300 ppp o más y con 12 cm de ancho como mínimo, con su pie y su fuente. Lo mismo vale para las imágenes: las de Guaman Poma necesitan la alta resolución del paso 5.
+- **Filiación.** No tienes una institucional. La salida habitual es «Investigador independiente, La Paz (Bolivia)». Si la revista pide filiación, pregúntale si la acepta.
+- **ORCID.** Créalo antes del primer envío: es gratis y muchas plataformas lo exigen.
+
+### 11. Preparar la versión anónima, si la piden
+
+Para el arbitraje a doble ciego:
+
+- quita tu nombre y la nota 1;
+- deja «El autor» en las declaraciones, porque no identifica a nadie;
+- borra tu nombre de las propiedades del archivo (en Word: Archivo → Información → Inspeccionar documento).
+
+### 12. Enviar
+
+Envía a una sola revista por vez: casi todas lo exigen. Anota la fecha de envío para reclamar respuesta según el plazo que declare la revista.
+
+## Datos de autoría
+
+| Dónde | Qué dice |
+|---|---|
+| Línea de autoría | Joaquin Max Cuevas Ventura |
+| Nota 1 (80 palabras) | Licenciatura en Arquitectura (UMSA); técnico superior en Diseño Gráfico (Instituto Técnico Atenea); estudios de posgrado en Gestión BIM (Universidad Católica Boliviana); coordinación de Arquicinema (FAADU-UMSA); ocupación actual; áreas de trabajo; correo electrónico; La Paz, Bolivia |
+| Conflicto de intereses | «El autor declara no tener conflictos de intereses» |
+
+La nota no trae adscripción institucional ni publicaciones. Si tienes alguna, cabe. *Kipus* pide, además, una nota biobibliográfica de 100 a 150 palabras.
+
+## Mejoras opcionales
+
+No hacen falta para enviar. Cada una tiene su fuente:
+
+1. **El concurso de 1940 (sección 1).** La nota «Al lector» de la edición citada dice que la novela se escribió «entre junio y agosto de 1940» para el Concurso de Novelas Latinoamericanas de la Unión Panamericana; que el jurado boliviano no la mencionó y envió la novela de Augusto Céspedes, *Metal del diablo*; y que ganó *El mundo es ancho y ajeno*, de Ciro Alegría, «cuyo argumento tiene un sorprendente parecido al de “Altiplano”» (Botelho Gosálvez, 1982 [1945]: 4). Una frase situaría la novela en su tiempo.
+2. **Crítica previa por leer.** La tesis de Jacqueline M. O'Sullivan sobre Botelho Gosálvez (Universidad de Texas en El Paso, 1951), el estudio de Rodolfo A. Borello sobre *Raza de bronce* (1985) y Arriarán (2021: 29-31). Solo entran si los lees.
+3. **Las fechas del autor.** Si la revista las pide: Raúl Botelho Gosálvez (La Paz, 1917-2004), según la ficha de autoridad de la Biblioteca Nacional de Francia.
+
+## Lista final para marcar
+
+- [ ] Artículo leído en voz alta y hecho propio
+- [ ] Epígrafe confirmado o cambiado
+- [ ] Declaración de IA revisada
+- [ ] Pasteles hechos y escaneados; figuras, pies, plano (3) y declaración ajustados
+- [ ] Notaciones de las figuras 1 a 6 y diagramas 7 y 8 revisados
+- [ ] Imágenes de Guaman Poma pedidas en alta resolución; numeración de las imágenes decidida
+- [ ] Citas de la novela cotejadas con el impreso
+- [ ] Datos por confirmar revisados
+- [ ] «Father Electricity» cotejado con la letra oficial
+- [ ] Revista elegida y sus normas leídas en su web
+- [ ] Texto adaptado: formato, citas, extensión y figuras aparte
+- [ ] ORCID creado y filiación decidida
+- [ ] Versión anónima, si la piden
+- [ ] Envío, a una sola revista
