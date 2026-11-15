@@ -7,16 +7,16 @@ El artículo nació para el dossier «Narrativas, lenguajes y representaciones: 
 - **Si trabajas con un asistente de IA** (Codex u otro), sus instrucciones están en `AGENTS.md`.
 - **Si buscas una versión anterior** o quieres ver cómo cambió el proyecto, está en `archivo_del_proyecto/`.
 
-## Estado (14 de noviembre de 2026)
+## Estado (15 de noviembre de 2026)
 
 | Dato | Valor |
 |---|---|
-| Texto | Versión final reescrita el 2 de noviembre (`analisis/33`), corregida el 10 de noviembre tras el cotejo con las fuentes (`analisis/35` a `37`) y auditada el 14 (`analisis/38`). El autor la reescribirá con su voz |
-| Extensión | 76.939 caracteres con espacios y 13.039 palabras, con notas y bibliografía; 40 páginas en Word. Para *Atenea* habría que quitar unas 4.500 palabras |
-| Resúmenes | 122 palabras en español y 118 en inglés; cinco palabras clave en cada lengua |
+| Texto | Versión final reescrita el 2 de noviembre (`analisis/33`), corregida el 10 de noviembre tras el cotejo con las fuentes (`analisis/35` a `37`) auditada el 14 (`analisis/38`) y llevada a versión casi final el 15, con dos estudios sobre la casa aymara y una pasada de pulido (`analisis/40`). El autor la reescribirá con su voz |
+| Extensión | 79.665 caracteres con espacios y 13.476 palabras, con notas y bibliografía; 40 páginas en Word. Para *Atenea* habría que quitar unas 5.000 palabras |
+| Resúmenes | 122 palabras en español y 119 en inglés; cinco palabras clave en cada lengua |
 | Citas de la novela | 145 entre comillas y 4 en bloque, cotejadas el 10 de noviembre con la edición digital de la UMSA. Falta el cotejo con el libro impreso |
-| Citas de las demás fuentes | Cotejadas el 10 de noviembre con las 25 fuentes que reunió el autor |
-| Bibliografía | 37 obras |
+| Citas de las demás fuentes | Cotejadas el 10 de noviembre con las 25 fuentes que reunió el autor; las de Suárez Jordán y Yampara Blanco, el 15 de noviembre |
+| Bibliografía | 39 obras |
 | Figuras | Ocho. El texto describe las seis primeras como pasteles hechos, pero todavía se ven sus esquemas de encaje, y los pies esperan medidas y año. **El artículo no se envía hasta cambiarlas por los escaneos.** La 7 y la 8 son diagramas |
 | Imágenes | Siete de dominio público, en serie aparte: d'Orbigny, Squier (dos), Guaman Poma (tres) y la Library of Congress. Las de Guaman Poma no alcanzan para imprimir |
 
@@ -99,6 +99,7 @@ Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de o
 | `analisis/37_cursivas_pasteles_y_reescrituras.md` | Decisiones del autor del 10 de noviembre: cursiva para las voces aymaras, el texto escrito como si los pasteles estuvieran hechos (los pies esperan medidas y año, y las figuras, los escaneos) y las reescrituras de Codex que se incorporaron y las que no, con el porqué |
 | `analisis/38_auditoria_del_proyecto.md` | Auditoría del 14 de noviembre: las decisiones tomadas hasta entonces, lo que se corrigió en el artículo, en los documentos finales y en los generadores, las dos imágenes que entraron de los registros de arquitectura y lo que queda como propuesta para el autor |
 | `analisis/39_archivo_del_proyecto.md` | El archivo del proyecto, del 15 de noviembre: de dónde se reconstruyó cada cosa, cómo se ordenó, qué quedó fuera y cómo se rehace y se comprueba |
+| `analisis/40_version_casi_final.md` | La versión casi final del 15 de noviembre: los dos estudios sobre la casa aymara que entran en la sección 3, lo que se leyó y no entró, y la pasada de pulido contra los patrones de redacción de la IA |
 | `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
 | `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |

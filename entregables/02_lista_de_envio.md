@@ -2,20 +2,20 @@
 
 **«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura.
 
-Estado al 14 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
+Estado al 15 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toca hacer antes de enviar el artículo, en orden.
 
 ## El artículo hoy
 
 | Dato | Valor |
 |---|---|
-| Extensión | 76.939 caracteres con espacios y 13.039 palabras, con notas y bibliografía. En Word, 40 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
-| Resúmenes | 122 palabras en español y 118 en inglés |
+| Extensión | 79.665 caracteres con espacios y 13.476 palabras, con notas y bibliografía. En Word, 40 páginas (tamaño carta, Times New Roman 12, interlineado 1,5). Desde el 2 de noviembre no hay límite de extensión: el artículo no responde a ninguna convocatoria |
+| Resúmenes | 122 palabras en español y 119 en inglés |
 | Palabras clave | Botelho Gosálvez; ayllu; despojo; manuaje; dibujo como investigación. En inglés: Botelho Gosálvez; ayllu; dispossession; manuage; drawing as research |
 | Títulos | 16 palabras en español y 15 en inglés. Si la revista pide 12 como máximo: «Cosecha de piedras: el ayllu, el Estado y la mina en *Altiplano*» |
 | Figuras | Ocho. Las figuras 1 a 6 son los seis pasteles: el texto ya los describe como hechos, pero hasta que lleguen los escaneos se ven sus esquemas de encaje y los pies dicen «[medidas, año]». La 7 y la 8 son diagramas. Va además el Cuadro 1 |
 | Imágenes | Siete de dominio público, en serie aparte (imágenes 1-7): una litografía de d'Orbigny, dos grabados de Squier, tres con dibujos de Guaman Poma (cuatro dibujos, porque la Imagen 5 junta dos) y una foto de la mina Siglo XX de la Library of Congress |
 | Citas de la novela | 145 entre comillas y 4 en bloque. Todas se cotejaron el 10 de noviembre con la edición digital de la UMSA: existen tal cual y están en la página indicada (`analisis/35` y `36`) |
-| Bibliografía | 37 obras |
+| Bibliografía | 39 obras |
 | Destino | Sin elegir. La primera candidata es *Atenea* (véase `05_revistas_candidatas`) |
 
 ## Lo que ya está hecho
@@ -27,6 +27,7 @@ Estado al 14 de noviembre de 2026. Aquí está lo que ya se hizo y lo que te toc
 - [x] **Los pasteles en el texto.** El artículo los describe como hechos; las figuras esperan los escaneos (paso 4).
 - [x] **La auditoría de Codex.** Se incorporaron sus mejores sugerencias (`analisis/34` y `37`).
 - [x] **La auditoría del 14 de noviembre.** Se revisaron el artículo y todos los archivos finales; corrigió un dato de la Figura 1 y cuatro referencias, y puso al día estos documentos (`analisis/38`).
+- [x] **La versión casi final del 15 de noviembre.** Entran en la sección 3 dos estudios sobre la casa aymara, los de Suárez Jordán (1990) y Yampara Blanco (2019), cotejados en los PDF de tu carpeta de registros, y se hizo una pasada de pulido contra los patrones de redacción de la IA (`analisis/40`).
 - [x] **Las canciones.** El pasaje de «Pyramid of Bones» sigue la letra oficial, la del librillo de la edición japonesa de *Virtue*.
 - [x] **Las imágenes.** Siete de dominio público, con su pie, su fuente y sus derechos comprobados en la ficha de cada institución: cinco del 18 de octubre y dos del 14 de noviembre, tomadas de tus registros de arquitectura (`analisis/38`).
 - [x] **Lo demás.** Autoría y nota 1 (80 palabras), resumen, abstract, palabras clave, títulos, declaración de conflicto de intereses y declaración de uso de IA.
@@ -142,7 +143,7 @@ Usa `05_revistas_candidatas`. Antes de decidir, abre la página oficial de cada 
 ### 10. Adaptar el texto a la revista
 
 - **Formato y citas.** El Word sigue hoy la plantilla de *Estudios Bolivianos*. Según la revista, hará falta APA 7, MLA o Chicago.
-- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 4.500. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
+- **Extensión.** Por ahora no importa: el artículo no responde a ninguna convocatoria. Si eliges *Atenea* (8.500 palabras con resumen y referencias), habrá que quitar unas 5.000. La versión del 2 de noviembre recuperó material que se había quitado solo por extensión (`analisis/33`): al recortar, empieza por lo que menos sostenga el argumento, no por lo recuperado.
   - La palanca principal son los pies de figura analíticos y el Cuadro 1, unas 1.850 palabras: acórtalos o pasa parte de su análisis al texto.
   - Las siete imágenes, con sus frases, sus pies y la nota, suman unas 880 palabras. Si hay que elegir, las que más sostienen el argumento son el escribano (Imagen 2), la choza de Uchusuma (Imagen 3) y la Puerta del Sol (Imagen 4).
   - Después vienen los cruces más alejados de la novela (Alexander en la sección 3, la casa difusa de la sección 5, las canciones) y los pasajes de trama que no llevan cita.

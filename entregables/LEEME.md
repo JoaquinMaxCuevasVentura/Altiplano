@@ -1,12 +1,12 @@
 # Entregables finales de «Cosecha de piedras»
 
-**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura. Versión final del 2 de noviembre de 2026, reescrita a partir de todo lo acumulado (`analisis/33`), y corregida el 10 y el 14 de noviembre (`analisis/35` a `38`). El autor la reescribirá con su voz.
+**«Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez»**, de Joaquin Max Cuevas Ventura. Versión final del 2 de noviembre de 2026, reescrita a partir de todo lo acumulado (`analisis/33`), corregida el 10 y el 14 de noviembre (`analisis/35` a `38`) y llevada a versión casi final el 15 (`analisis/40`). El autor la reescribirá con su voz.
 
 Esta carpeta reúne los archivos finales del proyecto: el artículo y los seis documentos que acompañan su envío. Cada documento va en Markdown (`.md`), para leerlo aquí, y en Word (`.docx`), para imprimirlo o editarlo. El artículo va en Word y en PDF.
 
 | N.º | Archivo | Qué es | Para qué sirve |
 |---|---|---|---|
-| 01 | `01_articulo_cosecha_de_piedras.docx` y `.pdf` | El artículo final: 76.939 caracteres y 13.039 palabras, 40 páginas, 8 figuras, 7 imágenes de dominio público, el Cuadro 1 y 37 obras en la bibliografía | Leerlo, hacerlo tuyo y adaptarlo a la revista que elijas |
+| 01 | `01_articulo_cosecha_de_piedras.docx` y `.pdf` | El artículo final: 79.665 caracteres y 13.476 palabras, 40 páginas, 8 figuras, 7 imágenes de dominio público, el Cuadro 1 y 39 obras en la bibliografía | Leerlo, hacerlo tuyo y adaptarlo a la revista que elijas |
 | 02 | `02_lista_de_envio` | Lo que está hecho y lo que falta, en orden, con el epígrafe, la declaración de IA, los datos por confirmar y la lista para marcar | Saber qué hacer antes de enviar |
 | 03 | `03_guia_de_los_seis_pasteles` | Materiales, técnicas, el ciclo de trabajo y una ficha por figura | Hacer los pasteles que reemplazarán a los esquemas de las figuras 1 a 6 |
 | 04 | `04_fichero_de_pasajes` | Las citas de la novela por página, con una casilla para marcar, y las cautelas de lectura | Cotejar las citas con el libro impreso |

@@ -1,10 +1,10 @@
 # Fuentes para cotejar
 
-Las fuentes de «Cosecha de piedras»: dónde están, cuáles se cotejaron y qué falta conseguir. Estado al 14 de noviembre de 2026.
+Las fuentes de «Cosecha de piedras»: dónde están, cuáles se cotejaron y qué falta conseguir. Estado al 15 de noviembre de 2026.
 
 ## En qué quedó
 
-El 10 de noviembre reuniste 25 archivos en una carpeta privada de tu Drive, y con ellos se cotejaron todas las citas del artículo, cada una en su página (`analisis/35`). Todas existen en su fuente. Las tablas de abajo quedan como referencia de las páginas que cita el artículo de cada obra.
+El 10 de noviembre reuniste 25 archivos en una carpeta privada de tu Drive, y con ellos se cotejaron todas las citas del artículo, cada una en su página (`analisis/35`). Todas existen en su fuente. El 15 de noviembre entraron dos obras más, cotejadas en los PDF de tu carpeta de los registros de arquitectura (`analisis/40`). Las tablas de abajo quedan como referencia de las páginas que cita el artículo de cada obra.
 
 **Lo que todavía falta conseguir:**
 
@@ -77,6 +77,8 @@ Cotejadas el 10 de noviembre.
 | Pallasmaa (2014 [2011]), *La imagen corpórea* | 53, 158 y 159 |
 | Seguí de la Riva (2010), *Ser dibujo* | 13, 23, 93 y 97 |
 | Vázquez Ramos *et al.* (2023), «Reflexões sobre a construção histórica do conceito de espaço», *Risco*, en línea | 3 y 4 |
+| Suárez Jordán (1990), «Permanencia y cambio: el caso de la vivienda aymara...», *Ciudad y Territorio*, 85. Cotejada el 15 de noviembre | 128, 130 y 131. La revista lleva dos numeraciones; se cita la del número (127-135), que es la que da su sitio, y no la del año (395-403) |
+| Yampara Blanco (2019), «La arquitectura de los pueblos milenarios del altiplano...», *Revista Nodo*, 14(27). Cotejada el 15 de noviembre | 9, 10, 12 y 13 |
 
 ## Lo que no estaba en la carpeta, ni hacía falta
 
