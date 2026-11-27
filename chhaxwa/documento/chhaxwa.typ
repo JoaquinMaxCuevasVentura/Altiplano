@@ -118,7 +118,7 @@
     stroke: (x, y) => if y == 0 { (bottom: 0.6pt) } else { (bottom: 0.3pt + gris) },
     [], [*Exploración*], [*1. La cosecha*], [*2. El relleno*], [*3. El dintel*], [*4. La _p'ira_*], [*5. El fogón*],
     [*E1*], [La montaña habitada], c("●", [toda la piedra]), [], c("●", [la cámara volada]), [], c("○", [se entra en cuclillas]),
-    [*E2*], [El corral techado], c("○", [la piedra de la pirca]), c("●", [la pirca de doble cara]), [], c("○", [el techo de ichu]), [],
+    [*E2*], [El corral techado], c("○", [la piedra de la pirca]), c("●", [la pirca de doble cara]), [], c("●", [la _p'ira_ bajo el ichu]), [],
     [*E3*], [La casa redonda], c("○", [la piedra de la pirca]), c("●", [la pirca de doble cara]), c("●", [el paso y la cúpula volados]), c("●", [las fajas y la _chhaxwa_]), c("●", [el fogón, el óculo y el _t'uju_]),
     [*E4*], [La chullpa], c("●", [las pilas de piedra]), [], c("●", [las pilas y la cámara]), c("○", [la cornisa de ichu]), [],
     [*E5*], [La casa de la bóveda], [], c("●", [los muros de doble cara]), c("●", [la bóveda volada]), [], c("●", [el fogón, el humo y el _t'uju_]),
@@ -131,7 +131,7 @@
 #grid(columns: (1fr, 1fr, 1fr), column-gutter: 6mm,
   [*Una sola cosecha.* Las seis usan la misma piedra, la angulosa que sale de despedregar el campo; la tierra del lugar y el ichu de la puna. La madera se reduce a palos cortos de queñua: «The absence of wood and timber has led the people of the Sierra to adopt a great many novel and striking devices» (Squier, 1877: 313).],
   [*Lo que cierra arriba se vuela.* Sin vigas, lo que cubre un espacio se hace volando hiladas: la cámara de E1, el paso y la cúpula de E3, las pilas y la cámara de E4, la bóveda de E5 y la V de E6. En la chullpa de Acora, «the stones begin to overlap, forming a kind of pointed arch» (ibid.: 353).],
-  [*Del campo al troje.* Se entra en cuclillas a E1, de rodillas a E3 y de lado a E5. El orden va de una cosecha a otra: el montón, la pirca, la casa redonda, la tumba, la casa rectangular y el troje. E3 y E5 son la pareja de casas que describe Yampara Blanco, y E6, una de sus _pirwas_ (2019: 9 y 14).])
+  [*Del campo al troje.* Los pasajes salen del artículo «Cosecha de piedras» y se leen de a pares: el montón en que se habita y el que entierra (E1 y E4), las dos casas (E3 y E5), el lindero y el troje (E2 y E6). El orden va de una cosecha a otra: el montón, la pirca, la casa redonda, la tumba, la casa rectangular y el troje. E3 y E5 son la pareja de casas que describe Yampara Blanco, y E6, una de sus _pirwas_ (2019: 9 y 14).])
 #v(1fr)
 #block(width: 100%, breakable: false, {
   image("../renders/diagramas/diagrama_serie.png", width: 100%)
@@ -186,22 +186,22 @@
 )
 
 #exploracion("E2", "El corral techado",
-  [*La pirca y el techo, separados.* Un corral redondo de pirca de doble cara, de 6 m, abierto al sur, con la mitad del corte llena de piedra menuda. Encima, sin tocarlo, un cono de ichu sobre ocho palos de queñua y un anillo atado. Entre la piedra y la paja queda una franja de cielo de 90 cm.
+  [*La pirca y el techo, rehechos.* Un corral redondo de pirca de doble cara, de 6 m, abierto al sur, con la mitad del corte llena de piedra menuda. Encima, un cono de ichu con _p'ira_ debajo, como en Enquelga (Šolc, 2011 [1975]: 105-107). Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
-   El cerramiento es la pirca de la prueba 2 y el techo es el de la forma 5C. El autor eligió el cono; la versión con techo de pirámide queda como registro.
+   El techo se apoya en palos de queñua de 1,7 m parados sobre la pirca y en dos más largos que flanquean la entrada. Sobre ellos va un anillo atado, del anillo a la punta suben dieciséis pares, y sobre los pares van las fajas de _p'ira_ y el ichu en capas.
 
    #pasos((
      [Asentar las dos caras de la pirca y llenar el centro al mismo tiempo.],
-     [Hincar ocho palos y atar el anillo.],
-     [Atar los pares al anillo y techar con ichu en capas.],
+     [Parar los palos sobre la pirca y atar el anillo.],
+     [Atar los pares, subir las fajas de _p'ira_ y techar con ichu en capas.],
      [Dejar arriba la salida del humo.],
    ))
 
-   Falta decidir si bajo el ichu va una capa de _p'ira_, como en Enquelga (Šolc, 2011 [1975]: 105-109).],
-  [«Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156).],
-  (("●", "2. El relleno", [la pirca de doble cara]), ("○", "1. La cosecha", [la piedra de la pirca]), ("○", [4\. La _p'ira_], [el techo de ichu])),
-  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [ocho, de 2,3 m, proyecto]), ([techo], [cono de 6,8 × 3,4 m, proyecto])),
-  4, "../renders/diagramas/diagrama_x2.png", [*Corte por la entrada.* Las dos caras de la pirca y el relleno de piedra menuda; los palos, el anillo y los pares.],
+   El autor eligió el cono y pidió la _p'ira_; la versión con techo de pirámide queda como registro.],
+  [«Las pircas derruidas; desfondados los techos de las casas» (p. 79). Al volver, «las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156).],
+  (("●", "2. El relleno", [la pirca de doble cara]), ("●", [4\. La _p'ira_], [las fajas bajo el ichu]), ("○", "1. La cosecha", [la piedra de la pirca])),
+  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [1,7 m, sobre la pirca, proyecto]), ([techo], [6,8 × 3,4 m; fajas de 0,7 m, Šolc (2011 [1975]: 105)])),
+  4, "../renders/diagramas/diagrama_x2.png", [*Corte por la entrada.* La pirca y su relleno; los palos sobre la pirca, el anillo, los pares, la _p'ira_ y el ichu.],
   5, "../renders/render_forma_E2C.jpg", [*El corral techado.* Maqueta 1:20.]
 )
 
@@ -211,7 +211,7 @@
    Se entra de rodillas por un paso de piedra de 1,2 m, con jambas de 60 cm y tres hiladas que vuelan 10 cm hasta cerrarse a 96 cm. La tierra se cubre con fajas de _p'ira_ de 0,7 m traslapadas como tejuelas, que escurren el agua. El óculo queda abierto bajo un sombrero de ichu, cuyos palos se atan a tres piedras hincadas, la _chhaxwa_. Unas lajas hincadas sirven de escalones para subir a quitarlo.
 
    Sale de una imagen del autor, corregida: la piedra de río pasó a ser la de la cosecha, y el ichu que tapaba el humo, un sombrero. Con E5 forma la pareja de la casa redonda y la cuadrada, que juntas «representan simbólica y culturalmente la feminidad y la masculinidad» (ibid.: 9).],
-  [«En el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror de la mala época» (p. 155).],
+  [«Desde el portal de su chujlla el Paulo Huanca, rodeado de su mujer e hijos, miró irse a los desterrados» (p. 34). Al volver, «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror de la mala época» (p. 155).],
   (("●", "2, 3, 4 y 5", [la pirca, el paso y la cúpula volados, las fajas y la _chhaxwa_, el fogón y el _t'uju_]), ("○", "1. La cosecha", [la piedra de la pirca])),
   (([exploración], [E3]), ([escala], [1:20]), ([cuarto], [4,0 m; pirca de 0,6 × 1,2 m, proyecto]), ([paso], [0,6 × 0,96 m, la regla de la prueba 3]), ([cubierta], [fajas de 0,7 m, Šolc (2011 [1975]: 105)]), ([alto], [3,2 m hasta el óculo, cálculo])),
   6, "../renders/diagramas/diagrama_x3.png", [*Corte por el paso de entrada.* Las hiladas voladas del paso y de la cámara, la tierra que las carga y las fajas de _p'ira_.],
@@ -226,7 +226,7 @@
    Los adobitos van como libros en un estante, «en posición vertical, con la argamasa sólo en la parte superior e inferior» (Flores, cit. en Agüero Benites et al., 2015: 3), con 1,5 cm entre uno y otro (ibid.: 6). Es una técnica de la costa, de la Huaca Pucllana: aquí el adobe de la costa va sobre la piedra del altiplano, por decisión del autor.
 
    «Chulpa is the Aymara word for tomb» (Squier, 1877: 354). Sería la tumba que les faltó a los muertos de la novela.],
-  [Condori queda bajo «la tumba agreste y anónima» de la mina (p. 154). Los que murieron en el éxodo, «abandonados en el cobijo de las tumbas de otras tierras, se pudrieron sin culto y sin recuerdo» (p. 156).],
+  [Juan Condori, a su compañera muerta, «amontonó piedras sobre el cadáver» (p. 35). A él, en la mina, lo cubre «un informe montón de rocas, lodo y maderos astillados» (p. 154).],
   (("●", "1. La cosecha", [las pilas de piedra]), ("●", "3. El dintel", [las pilas y la cámara voladas]), ("○", [4\. La _p'ira_], [la cornisa de ichu])),
   (([exploración], [E4]), ([escala], [1:20]), ([base], [3,3 m; cuatro pilas, proyecto]), ([alto], [4,9 m, Squier (1877: 243)]), ([adobito], [19 × 14 × 6 cm, proyecto; 1,5 cm entre uno y otro]), ([boca y cornisa], [48 × 42 cm al este; 15 cm, Squier])),
   8, "../renders/diagramas/diagrama_x4.png", [*Corte por la boca.* La cámara vuela cuatro hiladas; abajo, el paso entre las pilas.],
@@ -234,14 +234,14 @@
 )
 
 #exploracion("E5", "La casa de la bóveda",
-  [*La casa de Enquelga bajo una bóveda volada.* El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94), dentro de un bloque de pirca de doble cara en talud. Hasta 80 cm los muros son verticales por dentro; de ahí arranca una bóveda de adobe por aproximación de hiladas, que vuela poco al principio y más cerca de la clave, hasta que las dos mitades quedan a 30 cm y se cierran con lajas. Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones se rellenan con tierra para cargar las colas de las hiladas, y la pirca sigue arriba como un parapeto, con la bóveda adentro, como en la referencia R16.
+  [*La casa de Enquelga bajo una bóveda volada, en dos metros.* El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94), dentro de un bloque de pirca de doble cara en talud que no pasa de los dos metros de la novela. Los muros son verticales por dentro solo hasta 35 cm, la altura de los camastros; de ahí arranca una bóveda de adobe por aproximación de hiladas, empinada como el arco apuntado de la chullpa de Acora (Squier, 1877: 353), hasta que las dos mitades quedan a 30 cm y se cierran con lajas, a 1,9 m. Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones se rellenan con tierra para cargar las colas de las hiladas, y la pirca sigue arriba como un parapeto, con la bóveda adentro, como en la referencia R16.
 
    Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo, hacia donde mira la puerta de la casa grande (Suárez Jordán, 1990: 130). El _t'uju_ atraviesa la esquina noreste, apuntado al sol del 21 de junio a las 10 (prueba 5).
 
-   La novela dice que las _chujllas_ «apenas se alzan dos metros del suelo». Una bóveda volada de 3,30 m de luz necesita casi dos metros de alto, y el bloque llega a 2,6 m. Si se quiere la casa chata, hay que bajar el arranque o angostar el cuarto.],
-  [«Las chujllas no tienen cuartos ni mucho menos. Rectangulares y chatas, apenas se alzan dos metros del suelo» (p. 30). «En cuclillas, cerca del fuego, tenía la mirada en la sombra del suelo» (p. 32).],
+   Adentro se está de pie solo al centro, y junto a los muros, en cuclillas o acostado. Para que quepa en dos metros, cada hilada vuela de 11 a 13 cm, un tercio de su largo: es lo primero que hay que probar.],
+  [«Rectangulares y chatas, apenas se alzan dos metros del suelo» (p. 30). «De las vigas toscas y mal unidas con lazos de paja trenzada, cuelgan las hoces, el arado, el yugo de madera» (p. 31).],
   (("●", "5. El fogón", [el fogón, el humo y el _t'uju_]), ("●", "3. El dintel", [la bóveda volada]), ("●", "2. El relleno", [los muros de doble cara])),
-  (([exploración], [E5]), ([escala], [1:20]), ([cuarto], [5,75 × 3,30 m, Šolc (2011 [1975]: 93-94)]), ([bloque], [7,55 × 5,10 × 2,6 m, proyecto]), ([bóveda], [arranque a 0,8 m; vuelos de 7 a 13 cm]), ([ranura y _t'uju_], [50 cm al este; 15 cm al noreste])),
+  (([exploración], [E5]), ([escala], [1:20]), ([cuarto], [5,75 × 3,30 m, Šolc (2011 [1975]: 93-94)]), ([bloque], [7,55 × 5,10 × 2 m, la novela (p. 30)]), ([bóveda], [arranque a 0,35 m; clave a 1,9 m]), ([ranura y _t'uju_], [50 cm al este; 15 cm al noreste])),
   10, "../renders/diagramas/diagrama_x5.png", [*Corte por el fogón.* La bóveda volada, el relleno de los riñones, el humo y el sol que entra por el _t'uju_.],
   11, "../renders/render_forma_E5.jpg", [*La casa de la bóveda.* Maqueta 1:20.]
 )
@@ -254,7 +254,7 @@
    El techo es de un agua, de fajas de _p'ira_ sobre seis palos de queñua. Cada palo se ata a una piedra hincada bajo su extremo, la _chhaxwa_ «hincada en la pared para atar en ella los palos del techo» (Bertonio, 2011 [1612]: 330).
 
    Era la torre de champa, que fue E3. Se bajó un metro; aun así, lo primero que hay que probar es si se sostiene llena.],
-  [«Todo era pronóstico de abundancia, de trojes altos y almiares llenos» (p. 157).],
+  [«Todo era pronóstico de abundancia, de trojes altos y almiares llenos». Del hambre no se hablaba: «los comunarios, desde la atalaya de la esperanza, sólo miraban el horizonte» (p. 157).],
   (("●", "3. El dintel", [la V volada]), ("●", [4\. La _p'ira_], [las fajas y la _chhaxwa_]), ("○", "1 y 2", [un apoyo es un montón y el otro una pirca])),
   (([exploración], [E6]), ([escala], [1:20]), ([planta], [3,0 × 1,6 m; de 3,6 a 4,6 m, proyecto]), ([champa], [40 × 25 × 12 cm, proyecto]), ([bocas], [unos 30 × 35 cm, Yampara Blanco (2019: 14)]), ([fajas], [2,5 × 0,7 m, Šolc (2011 [1975]: 105)])),
   12, "../renders/diagramas/diagrama_x6.png", [*Corte a lo largo.* La V volada con la trampa en su clave, lo guardado y el techo sobre palos atados a las piedras hincadas.],
@@ -333,7 +333,7 @@
 
    *La regla.* El techo se dibuja primero en el suelo, a tamaño real. Se pisa, queda la huella del tejido, se corta y se sube.
 
-   En las exploraciones, las fajas cubren la casa redonda (E3), traslapadas como tejuelas, y el techo de la _pirwa_ (E6).],
+   En las exploraciones, las fajas van bajo el ichu del corral (E2), cubren la casa redonda (E3), traslapadas como tejuelas, y el techo de la _pirwa_ (E6).],
   [Sin gente, los techos quedan «desfondados» (p. 79).],
   ([La paja y el barro por metro cuadrado.], [El peso húmedo y seco.], [La huella de cada tejido, con luz rasante.]),
   (([prueba], [4]), ([escala], [tamaño natural]), ([faja], [2,5 × 0,7 m]), ([fuentes], [Šolc (2011 [1975]: 102-109)])),

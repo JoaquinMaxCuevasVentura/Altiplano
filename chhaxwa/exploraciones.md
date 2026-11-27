@@ -5,26 +5,41 @@
 | N.º | Exploración | Viene de | Pasaje de la novela |
 |---|---|---|---|
 | E1 | La montaña habitada | Las formas 1B y 1C | La «montaña de piedras» (p. 9) |
-| E2 | El corral techado | Las formas 2C y 5C | Las pircas «compuestas» (p. 156) |
-| E3 | La casa redonda | Una imagen del autor, corregida | El «dintel de Jatun-Kolla» (p. 155) |
-| E4 | La chullpa | La pieza 3h, con la nota del autor | La «tumba agreste y anónima» (p. 154) |
-| E5 | La casa de la bóveda | La referencia R16 | Las *chujllas* «rectangulares y chatas» (p. 30) |
-| E6 | La *pirwa* | La referencia R8 y la pieza 3h | Los «trojes altos» (p. 157) |
+| E2 | El corral techado | Las formas 2C y 5C | Las pircas «derruidas» y los techos «desfondados» (p. 79), y las pircas «compuestas» (p. 156) |
+| E3 | La casa redonda | Una imagen del autor, corregida | El «portal de su chujlla» (p. 34) y el «dintel de Jatun-Kolla» (p. 155) |
+| E4 | La chullpa | La pieza 3h, con la nota del autor | Las piedras amontonadas sobre el cadáver (p. 35) y el «informe montón» de la mina (p. 154) |
+| E5 | La casa de la bóveda | La referencia R16 | Las *chujllas* «rectangulares y chatas» (p. 30) y las herramientas colgadas de las vigas (p. 31) |
+| E6 | La *pirwa* | La referencia R8 y la pieza 3h | Los «trojes altos» y la «atalaya de la esperanza» (p. 157) |
 
-Las páginas son de la novela (Botelho Gosálvez, 1982 [1945]). Los pasajes de E3 a E6 los propuso Claude y los decide el autor.
+Las páginas son de la novela (Botelho Gosálvez, 1982 [1945]). Los pasajes salen de la lectura del artículo «Cosecha de piedras», que se explica abajo.
 
 ## Cómo se cruzan con las pruebas
 
 | | 1. La cosecha | 2. El relleno | 3. El dintel | 4. La *p'ira* | 5. El fogón |
 |---|---|---|---|---|---|
 | E1 | ● toda la piedra | | ● la cámara volada | | ○ se entra en cuclillas |
-| E2 | ○ la piedra de la pirca | ● la pirca de doble cara | | ○ el techo de ichu | |
+| E2 | ○ la piedra de la pirca | ● la pirca de doble cara | | ● la *p'ira* bajo el ichu | |
 | E3 | ○ la piedra de la pirca | ● la pirca de doble cara | ● el paso y la cúpula volados | ● las fajas y la *chhaxwa* | ● el fogón, el óculo y el *t'uju* |
 | E4 | ● las pilas de piedra | | ● las pilas y la cámara voladas | ○ la cornisa de ichu | |
 | E5 | | ● los muros de doble cara | ● la bóveda volada | | ● el fogón, el humo y el *t'uju* |
 | E6 | ○ un apoyo es un montón | ○ el otro es una pirca | ● la V volada | ● las fajas y la *chhaxwa* | |
 
 ● es la técnica principal de la obra; ○, una que también usa.
+
+## Los pasajes, desde el artículo
+
+El autor pidió elegir los pasajes a partir del artículo, que lee la novela siguiendo sus piedras. Cada obra toma un pasaje que el artículo ya lee en términos de construcción, y la lectura del artículo dice por qué.
+
+| | Pasajes | Cómo los lee el artículo |
+|---|---|---|
+| E1 | «quizá un día la montaña de piedras sobrepase la altura del cerro; entonces será buena la tierra rescatada» (p. 9) | El montón es «la arquitectura mínima de la novela», una «masa sin edificio» que no se construye sino que crece con cada cosecha |
+| E2 | «Las pircas derruidas; desfondados los techos de las casas» (p. 79); «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156) | Volver es reparar con las manos. *Uta* es la casa y también su techo, así que rehacer el techo es rehacer la casa; componer la pirca es volver a amojonar |
+| E3 | «Desde el portal de su chujlla el Paulo Huanca, rodeado de su mujer e hijos, miró irse a los desterrados» (p. 34); «En el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo» (p. 155) | La casa tiene su umbral, y «el *ayllu* tiene dintel, como una casa». Por el mismo umbral se van los hijos y vuelven los comunarios. En ese lugar de la puerta, cuenta Yampara Blanco, se enterraba la placenta para que los hijos no se fueran lejos |
+| E4 | «amontonó piedras sobre el cadáver» (p. 35); «un informe montón de rocas, lodo y maderos astillados» (p. 154) | Con piedras amontonadas cubre Condori a Melchora, y bajo un montón de escombro queda él en la mina. El montón hace «de tumba y de escombro», y en él «habitar y enterrar casi no se distinguen» |
+| E5 | «Rectangulares y chatas, apenas se alzan dos metros del suelo» (p. 30); «De las vigas toscas y mal unidas con lazos de paja trenzada, cuelgan las hoces, el arado, el yugo de madera» (p. 31) | La *chujlla* de los Huanca es una casa a la medida del cuerpo que funciona como caja de herramientas. El artículo la acerca al *taru uta*, la casa cuadrada que sirve de «despensa y depósito de herramientas» |
+| E6 | «Todo era pronóstico de abundancia, de trojes altos y almiares llenos»; «los comunarios, desde la atalaya de la esperanza, sólo miraban el horizonte» (p. 157) | La casa del retorno es un recipiente que «vuelve a guardar la cosecha». La memoria se levanta como un edificio, con un foso, que es el hambre, y una atalaya desde la que solo se mira adelante. El troje alto es esa atalaya: guarda la cosecha y, con ella, el olvido |
+
+Leídas de a pares, las seis repiten la tesis del artículo. E1 y E4 son el montón en que se habita y el montón en que se entierra. E3 y E5 son las dos casas, la del fuego y la de las herramientas. E2 y E6 son el lindero que se recompone y el troje que se llena. Las lecturas son del artículo; elegirlas para estas obras es una propuesta que el autor puede cambiar.
 
 Tres cosas atan las seis obras.
 
@@ -54,17 +69,17 @@ La prueba 1 dice cuánta piedra da una parcela de 2 × 2 m, y con eso se sabrá 
 
 ## E2. El corral techado
 
-Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, sin tocarlo, un cono de ichu sobre ocho palos de queñua. Entre la piedra y la paja queda una franja de cielo de 90 cm.
+Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, un cono de ichu con *p'ira* debajo. El techo se apoya en palos de queñua parados sobre la pirca, de 1,7 m, y en dos más largos que flanquean la entrada; sobre ellos va un anillo atado y, del anillo a la punta, dieciséis pares. Sobre los pares van las fajas de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-107), y encima el ichu en capas. Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
 | Medida | Valor | Origen |
 |---|---|---|
 | Corral | 6 m de diámetro; pirca de 0,7 m de espesor y 1,4 m de alto | Proyecto |
 | Relleno | La mitad del corte | La regla de la prueba 2 |
 | Entrada | Un cuarto de la vuelta, al sur | Proyecto |
-| Palos | Ocho, de 2,3 m | Proyecto |
-| Techo | Cono de ichu de 6,8 m de diámetro y 3,4 m de alto | Proyecto (el techo de 5C) |
+| Palos | Siete sobre la pirca, de 1,7 m, y dos en la entrada | Proyecto |
+| Techo | Cono de 6,8 m de diámetro y 3,4 m de alto: pares, fajas de *p'ira* e ichu | Proyecto (el techo de 5C); las fajas, Šolc (2011 [1975]: 105) |
 
-El autor eligió el cono. La versión con techo de pirámide (`renders/render_forma_E2P.jpg`) queda como registro. Falta decidir si bajo el ichu va una capa de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-109), lo que pondría la prueba 4 en esta obra.
+El autor eligió el cono y pidió la *p'ira* bajo el ichu. Antes, los ocho palos estaban dentro del corral y no llegaban al techo, que quedaba en el aire; para poner pares y *p'ira* hacía falta un apoyo, y los palos pasaron a la pirca. La versión con techo de pirámide (`renders/render_forma_E2P.jpg`) queda como registro.
 
 ## E3. La casa redonda
 
@@ -127,21 +142,21 @@ Squier también vio que las casas de champa del Ramis tenían «a kind of cornic
 
 ## E5. La casa de la bóveda
 
-La casa de Enquelga dentro de un bloque de pirca en talud. El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94). Los muros son de pirca de doble cara, como en la prueba 2, y hasta 80 cm de alto son verticales por dentro. Desde ahí arranca una bóveda de adobe por aproximación de hiladas, que vuela poco al principio y más cerca de la clave, hasta que las dos mitades quedan a 30 cm y se cierran con lajas. Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones de la bóveda se rellenan con tierra hasta 2,1 m, para cargar las colas de las hiladas. La pirca sigue hasta 2,6 m como un parapeto, y la bóveda queda adentro, como en la referencia R16.
+La casa de Enquelga dentro de un bloque de pirca en talud de dos metros, los que da la novela. El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94). Los muros son de pirca de doble cara, como en la prueba 2, y solo hasta 35 cm de alto son verticales por dentro, la altura de los camastros de «apenas la altura de un adobe» (pp. 30-31). Desde ahí arranca una bóveda de adobe por aproximación de hiladas, empinada, en la que cada hilada vuela de 11 a 13 cm hasta que las dos mitades quedan a 30 cm y se cierran con lajas, a 1,9 m. Es el arco apuntado que Squier vio en la cámara de la chullpa de Acora (1877: 353). Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones de la bóveda se rellenan con tierra hasta 1,7 m, para cargar las colas de las hiladas. La pirca sigue hasta 2 m como un parapeto, y la bóveda queda adentro, como en la referencia R16. Adentro se está de pie solo al centro; junto a los muros, en cuclillas o acostado.
 
-Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo. La puerta mide 1,30 m de alto, y sobre ella la ranura se cierra con un tímpano de adobe. La puerta al este sigue a la casa grande que describe Suárez Jordán (1990: 130). El *t'uju*, un tubo de 15 cm, atraviesa la esquina noreste apuntado al sol del 21 de junio a las 10, cuando está a 35° de altura y 44° de acimut (prueba 5).
+Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo. La puerta mide 1,10 m de alto, y sobre ella la ranura se cierra con un tímpano de adobe. La puerta al este sigue a la casa grande que describe Suárez Jordán (1990: 130). El *t'uju*, un tubo de 15 cm, atraviesa la esquina noreste apuntado al sol del 21 de junio a las 10, cuando está a 35° de altura y 44° de acimut (prueba 5).
 
 | Medida | Valor | Origen |
 |---|---|---|
 | Cuarto | 5,75 × 3,30 m | Cálculo: mediana de 17 dormitorios de Šolc (2011 [1975]: 93-94) |
-| Bloque | 7,55 × 5,10 m al pie y 2,6 m de alto | Proyecto |
+| Bloque | 7,55 × 5,10 m al pie y 2 m de alto | La novela (p. 30) |
 | Muros | 0,9 m al pie, en talud de 10° por fuera | Proyecto |
-| Bóveda | Arranca a 0,8 m; cada hilada de 11 cm vuela de 7 a 13 cm; la clave queda a unos 2,6 m | Proyecto y cálculo |
+| Bóveda | Arranca a 0,35 m; cada hilada de 11 cm vuela de 11 a 13 cm; la clave queda a 1,9 m | Proyecto y cálculo |
 | Adobe | 40 × 20 × 10 cm, a tizón | Proyecto |
-| Ranura y puerta | 50 cm de ancho; la puerta, 1,30 m de alto | Proyecto |
+| Ranura y puerta | 50 cm de ancho; la puerta, 1,10 m de alto | Proyecto |
 | *T'uju* | 15 cm, al noreste | Yampara Blanco (2019: 13); tabla del sol de la prueba 5 |
 
-La novela dice que las *chujllas* «apenas se alzan dos metros del suelo» (p. 30). Esta casa los pasa, porque una bóveda volada sobre 3,30 m de luz necesita casi dos metros de alto, y el bloque llega a 2,6 m. Si se quiere la casa chata, hay que bajar el arranque o angostar el cuarto, y eso lo decide el autor.
+El autor pidió que la casa se ajustara a los dos metros de la novela. Antes el bloque llegaba a 2,6 m, porque la bóveda arrancaba a 80 cm y volaba poco al principio. Para que quepa, la bóveda arranca casi en el suelo y vuela más desde la primera hilada. Hay que probar que el adobe aguante un vuelo de 13 cm, un tercio de su largo, con la cola bien cargada.
 
 ## E6. La *pirwa*
 
@@ -176,8 +191,6 @@ La champa se deja secar unos veinte días antes de usarla (Vitulas-Quille y Reyn
 
 ## Lo que decide el autor
 
-- Los pasajes de E3 a E6, y la lectura de la chullpa como tumba.
-- Si el techo de E2 lleva *p'ira* bajo el ichu.
-- Si la casa de E5 se baja hasta los dos metros de la novela.
+- Si los pasajes que salen del artículo son los que quiere para cada obra.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

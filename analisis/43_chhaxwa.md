@@ -184,3 +184,32 @@ Las citas de Yampara Blanco (pp. 9, 13 y 14) y de la novela (pp. 16, 155 y 157) 
 - los renders y los cortes de E3 y E6 se reemplazaron, y los de la torre y de la candidata quedan en la historia de la rama.
 
 **Uso de IA.** Claude (Anthropic) modeló los cambios, buscó y cotejó las fuentes de la *pirwa* y redactó los textos. Las decisiones son del autor.
+
+## 15. Más tarde, el mismo día: los pasajes desde el artículo, la *p'ira* de E2 y E5 a dos metros
+
+El autor pidió tres cambios.
+
+**Los pasajes, desde el artículo.** Se leyó el artículo «Cosecha de piedras» para elegir el pasaje de cada exploración entre los que el artículo ya lee en términos de construcción:
+
+| | Pasajes de la novela | Lo que el artículo lee en ellos |
+|---|---|---|
+| E1 | La «montaña de piedras» (p. 9) | El montón como arquitectura mínima |
+| E2 | Las pircas «derruidas» y los techos «desfondados» (p. 79); las pircas «compuestas» (p. 156) | Reparar el techo y el lindero |
+| E3 | El «portal de su chujlla» (p. 34); el «dintel de Jatun-Kolla» (p. 155) | El umbral de la casa y del *ayllu* |
+| E4 | Las piedras amontonadas sobre el cadáver (p. 35); el «informe montón» de la mina (p. 154) | Habitar y enterrar casi no se distinguen |
+| E5 | Las *chujllas* «rectangulares y chatas» (p. 30); las herramientas colgadas (p. 31) | La casa como caja de herramientas, cerca del *taru uta* |
+| E6 | Los «trojes altos» y la «atalaya de la esperanza» (p. 157) | La casa como recipiente que guarda la cosecha, y la memoria del retorno |
+
+Leídas de a pares repiten la tesis del artículo:
+
+- E1 y E4 son el montón en que se habita y el montón en que se entierra;
+- E3 y E5 son las dos casas;
+- E2 y E6 son el lindero y el troje.
+
+Los pasajes se cotejaron en el texto de la novela. Las lecturas son del artículo, y asignarlas a las obras es una propuesta.
+
+**La *p'ira* bajo el ichu de E2.** Al modelarla apareció un error del modelo anterior. Los ocho palos estaban dentro del corral y terminaban a 2,3 m, mientras el cono, a ese radio, estaba a 3,8 m, así que el techo quedaba en el aire. Para poner pares y *p'ira* los palos pasaron a la pirca, donde miden 1,7 m. En la entrada hay dos palos que bajan hasta el suelo. Sobre los palos van un anillo atado, dieciséis pares, las fajas de *p'ira* y el ichu. La franja de cielo de 90 cm se mantiene.
+
+**E5 a dos metros.** El bloque baja de 2,6 a 2 m, los de la novela (p. 30). Para que la bóveda quepa, arranca a 35 cm, la altura de los camastros, y cada hilada vuela de 11 a 13 cm desde el principio, de modo que la clave queda a 1,9 m. La sección se vuelve apuntada, como la cámara de la chullpa de Acora (Squier, 1877: 353). Un vuelo de 13 cm es un tercio del largo del adobe, y hay que probar que se sostiene.
+
+**Uso de IA.** Claude (Anthropic) leyó el artículo, propuso los pasajes, cotejó las citas y cambió los modelos, los cortes, los textos y el documento.

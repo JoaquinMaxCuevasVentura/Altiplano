@@ -14,7 +14,9 @@ Todas las citas de esta carpeta se cotejaron en su página el 27 de noviembre de
 | Vitulas-Quille, Yasmani y Reynoso-Machaca, Karina (2025). «Putuco as a Pre-Hispanic Construction Technology and Ch'ampa as Traditional Masonry Blocks». En *Modern Masonry Construction – The Fusion of Tradition, Technology, and Sustainability*. IntechOpen. https://doi.org/10.5772/intechopen.1009877 | La planta del putuco, el secado de la champa, la jornada del putuco en *ayni*, sus ritos y la puerta hacia los puntos intermedios | 5, 9-11 | 3 y 5 |
 | Yampara Blanco, Pacha Yapucha (2019). «La arquitectura de los pueblos milenarios del altiplano». *Revista Nodo*, 14(27): 8-23 | El *t'uju*, la puerta al este y el uso de la casa redonda en la época de heladas; la pareja de la casa redonda y la cuadrada; las *pirwas*, silos aéreos | 9, 13 y 14 | 5, E3 y E6 |
 
-**La novela.** Botelho Gosálvez, Raúl (1982 [1945]). *Altiplano*. 7.ª ed. La Paz: Juventud. Se citan las pp. 8, 9, 10, 16, 30, 31, 32, 41, 72, 79, 154, 155, 156 y 157.
+**La novela.** Botelho Gosálvez, Raúl (1982 [1945]). *Altiplano*. 7.ª ed. La Paz: Juventud. Se citan las pp. 8, 9, 10, 16, 30, 31, 32, 34, 35, 41, 72, 79, 154, 155, 156 y 157.
+
+**El artículo.** Cuevas Ventura, Joaquin Max. «Cosecha de piedras: el *ayllu*, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez» (`articulo/`), inédito. De su lectura salen los pasajes de las exploraciones (`exploraciones.md`).
 
 ## Las referencias del método
 

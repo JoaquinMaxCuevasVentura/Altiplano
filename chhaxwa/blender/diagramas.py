@@ -129,22 +129,29 @@ def x2(corte=True):
         sector(R, R, R - 0.2, R - 0.2, 0, alto, a0, a1, D["piedra"])
         sector(R - 0.5, R - 0.5, R - 0.7, R - 0.7, 0, alto, a0, a1, D["piedra"])
         sector(R - 0.2, R - 0.2, R - 0.5, R - 0.5, 0, alto * 0.98, a0, a1, D["menuda"])
-    z_al = 2.3
-    for i in range(8):
-        a = 2 * math.pi * i / 8 + math.pi / 8
-        if corte and math.cos(a) < 0:
-            continue
-        C.palo((2.0 * math.cos(a), 2.0 * math.sin(a), 0), (2.0 * math.cos(a), 2.0 * math.sin(a), z_al - 0.06), 0.06,
-               D["madera"])
-    a0, a1 = (-math.pi / 2, math.pi / 2) if corte else (0, 2 * math.pi)
-    sector(2.07, 2.07, 1.93, 1.93, z_al - 0.12, 0.12, a0, a1, D["madera"])              # el anillo sobre los palos
-    for i in range(12):                                                                 # los pares, bajo la paja
-        a = 2 * math.pi * i / 12
+    z_al, Rb, Ra, Hc = 2.3, 3.4, 0.3, 3.4
+
+    def z_cono(r):
+        return z_al + (Rb - r) / (Rb - Ra) * Hc
+    rp = R - 0.35
+    z_an = z_cono(rp) - 0.24
+    angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
+    for g in angulos:                                                   # palos sobre la pirca y el anillo atado
+        a = math.radians(g)
         if corte and math.cos(a) < -1e-6:
             continue
-        C.palo((3.05 * math.cos(a), 3.05 * math.sin(a), z_al + 0.02), (0.12 * math.cos(a), 0.12 * math.sin(a), z_al + 3.15),
-               0.045, D["madera"])
-    sector(3.4, 0.3, 3.05, 0.05, z_al, 3.4, a0, a1, D["paja"])                          # el cono de ichu
+        z_pie = 0.0 if 225 < g < 315 else alto
+        C.palo((rp * math.cos(a), rp * math.sin(a), z_pie), (rp * math.cos(a), rp * math.sin(a), z_an + 0.05), 0.06, D["madera"])
+    a0, a1 = (-math.pi / 2, math.pi / 2) if corte else (0, 2 * math.pi)
+    sector(rp + 0.06, rp + 0.06, rp - 0.06, rp - 0.06, z_an - 0.06, 0.12, a0, a1, D["madera"])
+    for i in range(16):                                                 # los pares, bajo la p'ira
+        a = 2 * math.pi * i / 16 + 0.1
+        if corte and math.cos(a) < -1e-6:
+            continue
+        C.palo(((Rb - 0.08) * math.cos(a), (Rb - 0.08) * math.sin(a), z_cono(Rb - 0.08) - 0.12),
+               ((Ra + 0.1) * math.cos(a), (Ra + 0.1) * math.sin(a), z_cono(Ra + 0.1) - 0.12), 0.045, D["madera"])
+    sector(Rb, Ra, Rb - 0.08, Ra - 0.06, z_al, Hc, a0, a1, D["pira"])            # la p'ira
+    sector(Rb + 0.3, Ra + 0.2, Rb, Ra, z_al - 0.05, Hc + 0.05, a0, a1, D["paja"])   # el ichu, encima
     figura((0.8, -0.6, 0), giro=2.2)
 
 
@@ -325,10 +332,10 @@ def x4(corte=True):
 # ----------------------------------------------------------------------------------------------------------------
 
 def x5(corte=True):
-    Li, Wi, E0, Hw, zr, cara = 5.75, 3.30, 0.9, 2.6, 0.8, 0.32
+    Li, Wi, E0, Hw, zr, cara = 5.75, 3.30, 0.9, 2.0, 0.35, 0.32
     Lo, Wo = Li + 2 * E0, Wi + 2 * E0
     tal = math.tan(math.radians(10))
-    hh, b = 0.11, 0.07 / 0.11
+    hh, b = 0.11, 0.11 / 0.11
     a2H = (0.13 / 0.11 - b) / 2
     H = (Wi / 2 - 0.15) / (b + a2H)
     a2 = a2H / H
@@ -338,7 +345,7 @@ def x5(corte=True):
         return max(0.15, Wi / 2 - b * h - a2 * h * h)
     x0 = 0 if corte else -Lo / 2 + tal * Hw / 2
     xi0 = 0 if corte else -Li / 2
-    zf = 2.1
+    zf = 1.7
     for sg in (-1, 1):                                                  # los muros largos: dos caras y el relleno
         def esp(u):
             return sg * u
@@ -357,7 +364,7 @@ def x5(corte=True):
         tramos = ((0.25, Wo / 2 - 0.1), (-Wo / 2 + 0.1, -0.25)) if sg > 0 else ((-Wo / 2 + 0.1, Wo / 2 - 0.1),)
         for (y0, y1) in tramos:
             extruir(perfil, "y", y0, y1, D["piedra"], "testero")
-    caja(Li / 2, Li / 2 + 0.24, -0.28, 0.28, 1.3, Hw - 0.1, D["adobe"], "timpano")
+    caja(Li / 2, Li / 2 + 0.24, -0.28, 0.28, 1.1, Hw - 0.1, D["adobe"], "timpano")
     for i in range(n):                                                  # la bóveda volada
         h = i * hh
         for sg in (-1, 1):

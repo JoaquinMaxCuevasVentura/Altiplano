@@ -538,14 +538,40 @@ def corral_techado(ctx, techo):
         C.caja(sobre(ctx, c * math.cos(a) * k, c * math.sin(a) * k, alto / 2 * k), (base * k, 0.06 * k, alto * k),
                ctx.m.tierra, "corte", rot=(0, 0, a + math.pi / 2))
     z_alero = 2.3                                  # el techo flota 90 cm sobre la pirca
-    for i in range(8):
-        a = 2 * math.pi * i / 8 + math.pi / 8
-        x, y = 2.0 * math.cos(a), 2.0 * math.sin(a)
-        C.palo(sobre(ctx, x * k, y * k), sobre(ctx, x * k, y * k, z_alero * k), 0.06 * k, ctx.m.palo)
-    if techo == "piramide":
+    if techo == "piramide":                        # la versión que quedó como registro
+        for i in range(8):
+            a = 2 * math.pi * i / 8 + math.pi / 8
+            x, y = 2.0 * math.cos(a), 2.0 * math.sin(a)
+            C.palo(sobre(ctx, x * k, y * k), sobre(ctx, x * k, y * k, z_alero * k), 0.06 * k, ctx.m.palo)
         t = C.tronco(sobre(ctx, 0, 0, z_alero * k), 3.3 * k, 0.35 * k, 3.2 * k, ctx.m.adobe, lados=4, abierto_arriba=True)
     else:
-        t = C.tronco(sobre(ctx, 0, 0, z_alero * k), 3.4 * k, 0.3 * k, 3.4 * k, ctx.m.adobe, lados=40, abierto_arriba=True)
+        # el cono, con p'ira bajo el ichu: palos de queñua parados sobre la pirca, un anillo atado, pares hasta la
+        # punta, fajas de p'ira sobre los pares (Šolc, 2011 [1975]: 105-107) y el ichu encima en capas
+        Rb, Ra, Hc = 3.4, 0.3, 3.4
+
+        def z_cono(r):
+            return z_alero + (Rb - r) / (Rb - Ra) * Hc
+        rp = R - base / 2
+        angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
+        z_anillo = z_cono(rp) - 0.24
+        for g in angulos:
+            a = math.radians(g)
+            z_pie = 0.0 if 225 < g < 315 else alto  # en la entrada, los dos palos bajan hasta el suelo
+            C.palo(sobre(ctx, rp * math.cos(a) * k, rp * math.sin(a) * k, z_pie * k),
+                   sobre(ctx, rp * math.cos(a) * k, rp * math.sin(a) * k, (z_anillo + 0.05) * k), 0.06 * k, ctx.m.palo)
+        for g0, g1 in zip(angulos, angulos[1:] + [360]):
+            a0, a1 = math.radians(g0), math.radians(g1)
+            C.palo(sobre(ctx, rp * math.cos(a0) * k, rp * math.sin(a0) * k, z_anillo * k),
+                   sobre(ctx, rp * math.cos(a1) * k, rp * math.sin(a1) * k, z_anillo * k), 0.055 * k, ctx.m.palo, nombre="anillo")
+        for i in range(16):
+            a = 2 * math.pi * i / 16 + 0.1
+            r0, r1 = Rb - 0.08, Ra + 0.1
+            C.palo(sobre(ctx, r0 * math.cos(a) * k, r0 * math.sin(a) * k, (z_cono(r0) - 0.12) * k),
+                   sobre(ctx, r1 * math.cos(a) * k, r1 * math.sin(a) * k, (z_cono(r1) - 0.12) * k), 0.045 * k, ctx.m.palo,
+                   nombre="par")
+        t = C.tronco(sobre(ctx, 0, 0, z_alero * k), Rb * k, Ra * k, Hc * k, ctx.m.barro, lados=40, abierto_arriba=True,
+                     nombre="pira")
+        md = t.modifiers.new("espesor", 'SOLIDIFY'); md.thickness = 0.06 * k; md.offset = -1
     C.paja_sobre(t, ctx.m.paja, densidad=900000, largo=(0.022, 0.034), ancho=0.0007, semilla=17, capa=0.2 * k)
     C.figura_madera(sobre(ctx, 0.2 * k, -3.6 * k), ctx.m.figura, giro=0.1)
     return k
@@ -786,18 +812,19 @@ def forma_E4(ctx):
 
 
 def forma_E5(ctx):
-    """La casa de la bóveda: la planta de la chujlla de Enquelga (5,75 × 3,30 m) dentro de un bloque de pirca en talud,
-    cubierta por una bóveda de adobe por aproximación de hiladas, con una ranura al este y el t'uju al noreste."""
+    """La casa de la bóveda: la planta de la chujlla de Enquelga (5,75 × 3,30 m) dentro de un bloque de pirca en talud de
+    dos metros, la altura de la novela, cubierta por una bóveda de adobe por aproximación de hiladas que arranca a 35 cm,
+    con una ranura al este y el t'uju al noreste."""
     k = 1 / 20
     ped = ctx.pedrera()
     ado = C.Adobera(ctx.m.adobe, n=12, semilla=31)
     ctx.sombra = C.mat_liso("sombra", (0.035, 0.03, 0.026))
     Li, Wi = 5.75, 3.30                              # el cuarto: la mediana de Šolc (2011 [1975]: 93-94)
-    E0, Hw, cara = 0.9, 2.6, 0.32                    # espesor del muro al pie y alto del bloque: proyecto
+    E0, Hw, cara = 0.9, 2.0, 0.32                    # espesor del muro al pie; el bloque, los dos metros de la novela (p. 30)
     Lo, Wo = Li + 2 * E0, Wi + 2 * E0
     tal = math.tan(math.radians(10))
-    ranura, puerta = 0.25, 1.3                       # la ranura: 50 cm, lo justo para un cuerpo; la puerta, 1,30 m
-    zr, hz = 0.8, 0.2                                # arranque de la bóveda
+    ranura, puerta = 0.25, 1.1                       # la ranura: 50 cm, lo justo para un cuerpo; la puerta, 1,10 m
+    zr, hz = 0.35, 0.2                               # arranque de la bóveda: a la altura de los camastros
     for i in range(int(round(Hw / hz))):
         z = i * hz
         d = tal * (z + hz / 2)
@@ -806,15 +833,15 @@ def forma_E5(ctx):
             caras_de_piedra(ctx, ped, -Li / 2 - cara, Li / 2 + cara, -Wi / 2 - cara, Wi / 2 + cara, z, hz, cara, k,
                             sin=[("e", -ranura, ranura)])
     # el relleno del muro y de los riñones de la bóveda, que carga las colas de las hiladas
-    zf = 2.1
+    zf = 1.7
     A_ = (Lo - 2 * tal * Hw - 2 * cara - 0.1, Wo - 2 * tal * Hw - 2 * cara - 0.1)
     relleno = C.caja(sobre(ctx, 0, 0, zf / 2 * k), (A_[0] * k, A_[1] * k, zf * k), ctx.m.tierra, "relleno")
     cuarto = C.caja(sobre(ctx, 0, 0, Hw / 2 * k), ((Li - 0.02) * k, (Wi - 0.02) * k, (Hw + 1) * k), ctx.m.tierra, "cuarto")
     hueco = C.caja(sobre(ctx, Lo / 2 * k, 0, Hw / 2 * k), (Lo * k, 2 * ranura * k, (Hw + 1) * k), ctx.m.tierra, "ranura")
     for cort in (cuarto, hueco):
         md = relleno.modifiers.new("hueco", 'BOOLEAN'); md.object = cort; md.operation = 'DIFFERENCE'; cort.hide_render = True
-    # la bóveda volada: cada hilada entra un poco más que la de abajo, de 7 cm al arranque a 13 cm junto a la clave
-    hh, b = 0.11, 0.07 / 0.11
+    # la bóveda volada: cada hilada entra un poco más que la de abajo, de 11 cm al arranque a 13 cm junto a la clave
+    hh, b = 0.11, 0.11 / 0.11
     a2H = (0.13 / 0.11 - b) / 2
     H = (Wi / 2 - 0.15) / (b + a2H)
     a2 = a2H / H
