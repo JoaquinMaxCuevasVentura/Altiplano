@@ -18,7 +18,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 82 archivos: 8 están en esta carpeta, 6 en carpetas de otras versiones y 68 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `39faf3a`. Para tenerla entera: `git worktree add ../altiplano_39faf3a 39faf3a`.
+En este commit, la línea tenía 82 archivos: 8 están en esta carpeta, 10 en carpetas de otras versiones y 64 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `39faf3a`. Para tenerla entera: `git worktree add ../altiplano_39faf3a 39faf3a`.
 
 ## Qué cambió respecto de la anterior
 

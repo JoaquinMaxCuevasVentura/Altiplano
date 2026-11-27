@@ -7,17 +7,19 @@
 | Línea | [Chhaxwa. Cinco pruebas de construcción](../README.md) |
 | Origen | commit `b7027f7` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 20:56 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`chhaxwa/`](../../../../chhaxwa/) |
 | La versión anterior | [2026-11-27_2025_39faf3a_suma-la-casa-redonda-como](../2026-11-27_2025_39faf3a_suma-la-casa-redonda-como/ficha.md) |
+| La versión siguiente | [2026-11-27_2118_465b091_elige-los-pasajes-desde-el](../2026-11-27_2118_465b091_elige-los-pasajes-desde-el/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **14 que siguen vigentes en su lugar,** sin cambios desde este commit: [`chhaxwa/LEEME.md`](../../../../chhaxwa/LEEME.md), [`chhaxwa/blender/diagramas.py`](../../../../chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](../../../../chhaxwa/blender/formas.py), [`chhaxwa/blender/renderizar.py`](../../../../chhaxwa/blender/renderizar.py), [`chhaxwa/documento/chhaxwa.pdf`](../../../../chhaxwa/documento/chhaxwa.pdf), [`chhaxwa/documento/chhaxwa.typ`](../../../../chhaxwa/documento/chhaxwa.typ), [`chhaxwa/exploracion_formal.md`](../../../../chhaxwa/exploracion_formal.md), [`chhaxwa/exploraciones.md`](../../../../chhaxwa/exploraciones.md), [`chhaxwa/fuentes.md`](../../../../chhaxwa/fuentes.md), [`chhaxwa/renders/diagramas/diagrama_serie.png`](../../../../chhaxwa/renders/diagramas/diagrama_serie.png), [`chhaxwa/renders/diagramas/diagrama_x3.png`](../../../../chhaxwa/renders/diagramas/diagrama_x3.png), [`chhaxwa/renders/diagramas/diagrama_x6.png`](../../../../chhaxwa/renders/diagramas/diagrama_x6.png), [`chhaxwa/renders/render_forma_E3.jpg`](../../../../chhaxwa/renders/render_forma_E3.jpg), [`chhaxwa/renders/render_forma_E6.jpg`](../../../../chhaxwa/renders/render_forma_E6.jpg).
+- **7 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`chhaxwa/blender/diagramas.py`](chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](chhaxwa/blender/formas.py), [`chhaxwa/documento/chhaxwa.pdf`](chhaxwa/documento/chhaxwa.pdf), [`chhaxwa/documento/chhaxwa.typ`](chhaxwa/documento/chhaxwa.typ), [`chhaxwa/exploraciones.md`](chhaxwa/exploraciones.md), [`chhaxwa/fuentes.md`](chhaxwa/fuentes.md), [`chhaxwa/renders/diagramas/diagrama_serie.png`](chhaxwa/renders/diagramas/diagrama_serie.png).
+- **7 que siguen vigentes en su lugar,** sin cambios desde este commit: [`chhaxwa/LEEME.md`](../../../../chhaxwa/LEEME.md), [`chhaxwa/blender/renderizar.py`](../../../../chhaxwa/blender/renderizar.py), [`chhaxwa/exploracion_formal.md`](../../../../chhaxwa/exploracion_formal.md), [`chhaxwa/renders/diagramas/diagrama_x3.png`](../../../../chhaxwa/renders/diagramas/diagrama_x3.png), [`chhaxwa/renders/diagramas/diagrama_x6.png`](../../../../chhaxwa/renders/diagramas/diagrama_x6.png), [`chhaxwa/renders/render_forma_E3.jpg`](../../../../chhaxwa/renders/render_forma_E3.jpg), [`chhaxwa/renders/render_forma_E6.jpg`](../../../../chhaxwa/renders/render_forma_E6.jpg).
 
 ## La versión completa
 
-En este commit, la línea tenía 82 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 82 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b7027f7`. Para tenerla entera: `git worktree add ../altiplano_b7027f7 b7027f7`.
+En este commit, la línea tenía 82 archivos: 7 están en esta carpeta, 4 en carpetas de otras versiones y 71 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `b7027f7`. Para tenerla entera: `git worktree add ../altiplano_b7027f7 b7027f7`.
 
 ## Qué cambió respecto de la anterior
 
