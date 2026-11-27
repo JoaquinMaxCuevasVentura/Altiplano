@@ -7,9 +7,10 @@
 | Línea | [El registro de análisis](../README.md) |
 | Origen | commit `3cf90c6` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 14:25 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`analisis/`](../../../../analisis/) |
 | La versión anterior | [2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el](../2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md) |
+| La versión siguiente | [2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como](../2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como/ficha.md) |
 
 ## Qué contiene esta carpeta
 

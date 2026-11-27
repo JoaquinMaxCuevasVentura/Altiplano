@@ -57,4 +57,6 @@ Lo vigente está en su lugar: [`analisis/`](../../../analisis/). Cada carpeta gu
 | 2026-11-15 02:56 | `3d57d31` | [Registra cómo se armó el archivo del proyecto](2026-11-15_0256_3d57d31_registra-como-se-armo-el-archivo/ficha.md) | versión anterior | 0 |
 | 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión anterior | 0 |
 | 2026-11-27 03:40 | `c5c9288` | [Audita «La tierra que queda», el proyecto paralelo de GPT](2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md) | versión anterior | 1 |
-| 2026-11-27 14:25 | `3cf90c6` | [Replantea el proyecto paralelo como cinco pruebas de construcción](2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo/ficha.md) | versión vigente | 0 |
+| 2026-11-27 14:25 | `3cf90c6` | [Replantea el proyecto paralelo como cinco pruebas de construcción](2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo/ficha.md) | versión anterior | 0 |
+| 2026-11-27 15:50 | `346e912` | [Rehace el proyecto paralelo como Chhaxwa, con su investigación y sus formas](2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como/ficha.md) | versión anterior | 1 |
+| 2026-11-27 16:08 | `2ea6eaa` | [Suma las dos formas elegidas por el autor y las piezas para recomponer](2026-11-27_1608_2ea6eaa_suma-las-dos-formas-elegidas-por/ficha.md) | versión vigente | 0 |
