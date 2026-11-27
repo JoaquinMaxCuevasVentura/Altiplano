@@ -69,6 +69,7 @@ LINEAS = {   # el orden es el del índice
     "entregables": ("Los entregables", "El artículo en Word y PDF y los documentos que lo acompañan, con su generador.", "entregables/"),
     "taxonomia": ("La taxonomía visual", "Las 51 imágenes de dominio público, su catálogo y los tableros.", "taxonomia/"),
     "convocatorias": ("El informe de convocatorias", "El informe de convocatorias abiertas y las notas de la búsqueda.", "reports/"),
+    "chhaxwa": ("Chhaxwa. Cinco pruebas de construcción", "El proyecto paralelo que reemplaza a La tierra que queda: las cinco pruebas, la exploración formal, los modelos de Blender y sus renders.", "chhaxwa/"),
     "repositorio": ("El índice y las reglas del repositorio", "README.md y AGENTS.md.", ""),
     "comprobaciones": ("Las comprobaciones de la conversación", "Guiones, listas de citas y vistas de página con que se comprobó el artículo. Nunca entraron en git.", None),
     "tierra": ("La tierra que queda (rama de GPT, sin unir)", "Tres estudios de arquitectura que GPT hizo en paralelo a partir del artículo, con lo que pudo recuperar de ellos.", None),
@@ -109,6 +110,9 @@ GENERADORES = [   # (patrón de la ruta, generador)
     (r"^entregables/.+\.docx$", "entregables/generar_entregables.py, desde el .md del mismo nombre"),
     (r"^taxonomia/(tablero_.+|catalogo\.md)$", "taxonomia/generar_tableros.py, desde catalogo.json"),
     (r"^registros_de_arquitectura/(hoja_.+|catalogo\.md)$", "registros_de_arquitectura/generar_hojas.py, desde catalogo.json"),
+    (r"^chhaxwa/renders/render_forma_", "chhaxwa/blender/renderizar.py (Blender 5.0.1)"),
+    (r"^chhaxwa/renders/render_prototipo_", "chhaxwa/blender/prototipo_pirca_paisaje.py (Blender 5.0.1)"),
+    (r"^chhaxwa/documento/chhaxwa\.pdf$", "chhaxwa/documento/compilar.py (Typst), desde chhaxwa.typ"),
 ]
 
 COLUMNAS = ["id", "nombre", "descripcion", "categoria", "linea", "version_o_etapa", "estado", "formato", "copia",
@@ -256,6 +260,15 @@ NO_ARCHIVADO = [
     ("El PDF de Obra gruesa, de Smiljan Radić", "El extracto del libro (Ediciones Puro Chile, 2017) del que salen los precedentes del proyecto paralelo",
      "fuente bibliográfica", "tierra", "", "conversación con GPT y adjuntos de esta conversación (27 de noviembre)",
      "No se archiva: tiene todos los derechos reservados. analisis/42 cita sus páginas."),
+    ("Las cinco referencias de la exploración formal", "Dos maquetas de studio_cifuentes_ethz, una pirámide truncada sobre caballetes, un granito partido y forrado de madera y un cono sobre palos",
+     "recurso: referencia visual", "chhaxwa", "", "adjuntos de esta conversación (27 de noviembre)",
+     "No se archivan: son obra de terceros. chhaxwa/exploracion_formal.md las describe y dice qué se tomó de cada una."),
+    ("El primer intento de láminas en SVG", "Seis láminas A3 con axonometrías de proceso trazadas en SVG con un guion propio",
+     "prueba", "chhaxwa", "material descartado", "carpeta de trabajo de la sesión (laminas_svg/)",
+     "Se dejó cuando el autor pidió modelar en Blender: los dibujos tenían errores de orden de las caras (analisis/43). Las axonometrías de proceso saldrán de los modelos de Blender."),
+    ("Blender como módulo de Python", "bpy 5.0.1, instalado en un entorno virtual de la sesión",
+     "herramienta: generador o guion", "chhaxwa", "", "carpeta de trabajo de la sesión (venv_bpy/)",
+     "No se archiva: se instala con pip install bpy==5.0.1 (chhaxwa/LEEME.md)."),
     ("Los identificadores de los archivos de Drive", "La lista de los 25 archivos con su identificador en Drive",
      "datos", "comprobaciones", "", "carpeta de trabajo de la sesión (lista/ids.txt)",
      "No se archiva: el enlace de la carpeta del autor no entra en el repositorio."),
@@ -380,6 +393,8 @@ def linea_de(ruta):
         return "registros"
     if ruta.startswith("proyectos/la-tierra-que-queda/"):
         return "tierra"
+    if ruta.startswith("chhaxwa/"):
+        return "chhaxwa"
     return "repositorio"
 
 
@@ -470,6 +485,8 @@ def descripcion(ruta, datos):
             (r"^proyectos/la-tierra-que-queda/guiones_recuperados/", "Guion recuperado de La tierra que queda"),
             (r"^proyectos/la-tierra-que-queda/comprobaciones/", "Comprobación de la geometría de la chujlla de La tierra que queda"),
             (r"^registros_de_arquitectura/hoja_", "Hoja de contacto de los registros de arquitectura"),
+            (r"^chhaxwa/renders/render_forma_(\w+)\.jpg$", "Render de la maqueta de forma {0} de Chhaxwa (no es una foto)"),
+            (r"^chhaxwa/renders/render_prototipo_", "Render de prueba de Chhaxwa: una pirca en el altiplano (no es una foto)"),
         ]
         for patron, texto in reglas:
             m = re.search(patron, ruta)
