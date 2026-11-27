@@ -854,7 +854,122 @@ def forma_E5(ctx):
     return k, "La casa de la bóveda", dict(acimut=62, elevacion=22)
 
 
+
+# ----------------------------------------------------------------------------------------------------------------
+# Una candidata (27 de noviembre): la imagen que mandó el autor, con cuatro correcciones
+# ----------------------------------------------------------------------------------------------------------------
+
+def revolver(ctx, puntos, mat, k, lados=72, espesor=0.04, nombre="revoque"):
+    """Una superficie de revolución abierta a partir de un perfil [(radio, z), ...] en metros reales, con espesor."""
+    import bmesh
+    bm = bmesh.new()
+    anillos = []
+    for (r, z) in puntos:
+        anillos.append([bm.verts.new((r * math.cos(2 * math.pi * j / lados) * k, r * math.sin(2 * math.pi * j / lados) * k,
+                                      ctx.zc + z * k)) for j in range(lados)])
+    for a, b in zip(anillos, anillos[1:]):
+        for j in range(lados):
+            j2 = (j + 1) % lados
+            bm.faces.new((a[j], a[j2], b[j2], b[j]))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces[:])
+    ob = C.objeto(nombre, C.malla_de_bm(bm, nombre, mat))
+    md = ob.modifiers.new("espesor", 'SOLIDIFY'); md.thickness = espesor * k; md.offset = -1
+    return ob
+
+
+def cupula_perfil(Ri=2.0, hh=0.12, v0=0.08, v1=0.13, r_oculo=0.3):
+    """El radio de adentro de cada hilada de una cúpula volada: cada una entra v0 al arranque y v1 junto al óculo."""
+    b = v0 / hh
+    a2H = (v1 / hh - b) / 2
+    H = (Ri - r_oculo) / (b + a2H)
+    a2 = a2H / H
+    n = int(round(H / hh)) + 1
+    return [max(r_oculo, Ri - b * i * hh - a2 * (i * hh) ** 2) for i in range(n)]
+
+
+def forma_E6(ctx):
+    """Candidata: la casa redonda (muruqu uta). Una pirca redonda de piedra de cosecha y, encima, una cúpula de champa
+    por aproximación de hiladas, cubierta de tierra en anillos que escurren el agua, con el óculo abierto bajo un sombrero
+    de ichu, la puerta al este con un dintel de laja y el t'uju al noreste. Corrige la imagen que mandó el autor."""
+    k = 1 / 20
+    ped, fina = ctx.pedrera(), ctx.pedrera("fina")
+    ctx.sombra = C.mat_liso("sombra", (0.035, 0.03, 0.026))
+    ctx.m.champa = C.mat_tierra("champa_oscura", capas=False, escala_obj=14, claro=(0.10, 0.083, 0.06),
+                                oscuro=(0.035, 0.03, 0.022), paja=True)
+    revoque = C.mat_tierra("revoque", capas=False, escala_obj=10, claro=(0.42, 0.33, 0.22), oscuro=(0.24, 0.18, 0.12),
+                           paja=True)
+    Ri, e, Hb, cara = 2.0, 0.6, 1.2, 0.2             # cuarto de 4 m, pirca de 60 cm y 1,20 m de alto (proyecto)
+    R = Ri + e
+    tal = math.tan(math.radians(5))
+    medio, h_puerta = 0.3, 1.0                       # la puerta: 60 cm × 1 m, al este
+    hz = 0.2
+    for i in range(int(round(Hb / hz))):
+        z = i * hz
+        for radio in (R - cara / 2 - tal * (z + hz / 2), Ri + cara / 2):
+            n = int(2 * math.pi * radio / 0.34)
+            for j in range(n):
+                a = 2 * math.pi * (j + 0.5 * (i % 2)) / n
+                if math.cos(a) > 0 and abs(radio * math.sin(a)) < medio + 0.12 and z < h_puerta:
+                    continue
+                if math.cos(a) > 0 and abs(radio * math.sin(a)) < medio + 0.25 and z >= h_puerta:
+                    continue                         # aquí va el dintel
+                ped.poner(sobre(ctx, radio * math.cos(a) * k, radio * math.sin(a) * k, (z + hz / 2) * k), 0.34 * k,
+                          rot=(0, 0, a + math.pi / 2), aplanar=hz / 0.3)
+        for _ in range(110):                         # el relleno de piedra menuda
+            a = ctx.r.uniform(0, 2 * math.pi)
+            rr = ctx.r.uniform(Ri + cara, R - cara - tal * z)
+            if math.cos(a) > 0 and abs(rr * math.sin(a)) < medio + 0.3:
+                continue
+            fina.poner(sobre(ctx, rr * math.cos(a) * k, rr * math.sin(a) * k, (z + ctx.r.uniform(0, hz)) * k), 0.07 * k)
+    C.caja(sobre(ctx, (Ri + e / 2) * k, 0, (h_puerta + 0.09) * k), ((e + 0.1) * k, 1.05 * k, 0.18 * k), ctx.m.piedra,
+           "dintel", rot=(0, 0, ctx.r.uniform(-0.03, 0.03)), bisel=0.01 * k)
+    # la cúpula de champa, volada hilada sobre hilada
+    hh = 0.12
+    radios = cupula_perfil(Ri, hh, v0=0.10)
+    for i, r in enumerate(radios):
+        rc = r + 0.2
+        m = max(6, int(2 * math.pi * rc / 0.27))
+        for j in range(m):
+            a = 2 * math.pi * (j + 0.5 * (i % 2)) / m
+            bloque_champa(ctx, sobre(ctx, rc * math.cos(a) * k, rc * math.sin(a) * k, (Hb + i * hh + hh / 2) * k),
+                          (0.40 * k, (2 * math.pi * rc / m - 0.012) * k, (hh - 0.01) * k), rot_z=a)
+    z_tope = Hb + len(radios) * hh
+    # por fuera, un relleno de tierra con forma de cúpula baja, en cinco anillos revocados con barro; cada anillo entra
+    # 10 cm respecto del de abajo y su borde sube hacia adentro para que escurra el agua. Carga las colas de las hiladas.
+    Hd, r_ocu, d = z_tope - Hb + 0.1, radios[-1] + 0.15, 0.16
+    A = R - tal * Hb + 0.02 - r_ocu
+    puntos = []
+    for kb in range(5):
+        for q in range(9):
+            t = math.pi / 2 * (kb + q / 8) / 5
+            puntos.append((r_ocu + (A - d * kb) * math.cos(t), Hb - 0.02 + Hd * math.sin(t) + (0.05 if q == 0 and kb else 0)))
+    z_tope = Hb - 0.02 + Hd
+    puntos += [(radios[-1], z_tope), (radios[-1], z_tope - 0.12)]
+    revolver(ctx, puntos, revoque, k, espesor=0.05)
+    # el sombrero de ichu: un cono de paja sobre tres palos, levantado 30 cm sobre el óculo
+    zs = z_tope + 0.3
+    for j in range(3):
+        a = 2 * math.pi * j / 3 + 0.4
+        C.palo(sobre(ctx, 0.42 * math.cos(a) * k, 0.42 * math.sin(a) * k, (z_tope + 0.02) * k),
+               sobre(ctx, 0.36 * math.cos(a) * k, 0.36 * math.sin(a) * k, (zs + 0.06) * k), 0.035 * k, ctx.m.palo)
+    gorro = C.tronco(sobre(ctx, 0, 0, zs * k), 0.62 * k, 0.04 * k, 0.4 * k, ctx.m.adobe, lados=32, abierto_arriba=True)
+    C.paja_sobre(gorro, ctx.m.paja, densidad=900000, largo=(0.02, 0.03), ancho=0.0007, semilla=23, capa=0.1 * k)
+    for dx in (-0.16, 0.16):                         # el fogón al centro, bajo el óculo
+        for j in range(3):
+            ped.poner(sobre(ctx, (j - 1) * 0.2 * k, dx * k, 0.09 * k), 0.17 * k, aplanar=0.8)
+    # el t'uju: un tubo de 15 cm por la pirca del noreste, apuntado al sol del 21 de junio a las 10 (Yampara Blanco, 2019: 13)
+    s_ = C.vector_sol()
+    p_in = Vector((Ri * math.cos(math.radians(45)), Ri * math.sin(math.radians(45)), 0.65))
+    t = 0.0
+    while t < 3.0 and (p_in + s_ * t).xy.length < R - tal * (p_in + s_ * t).z:
+        t += 0.02
+    C.palo((p_in - s_ * 0.1) * k + Vector((0, 0, ctx.zc)), (p_in + s_ * (t + 0.03)) * k + Vector((0, 0, ctx.zc)), 0.075 * k,
+           ctx.sombra, lados=12, nombre="tuju")
+    C.figura_madera(sobre(ctx, 0.9 * k, -(R + 0.7) * k), ctx.m.figura, alto=1.65 * k, giro=2.0)
+    return k, "La casa redonda (candidata)", dict(girar=-90, acimut=-14, elevacion=14)
+
+
 FORMAS = {f.__name__.split("_")[1]: f for f in (forma_1A, forma_1B, forma_1C, forma_2A, forma_2B, forma_2C, forma_3A,
                                                   forma_3B, forma_3C, forma_4A, forma_4B, forma_4C, forma_5A, forma_5B,
                                                   forma_5C, forma_E1, forma_E2P, forma_E2C, forma_E3, forma_E4,
-                                                  forma_E5)}
+                                                  forma_E5, forma_E6)}

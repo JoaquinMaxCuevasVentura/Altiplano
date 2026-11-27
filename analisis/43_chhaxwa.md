@@ -130,3 +130,29 @@ En Squier (1877: 352) aparece además Hatuncolla, el señorío del lago Umayo al
 **Pendiente.** El autor sugirió QCAD para los dibujos de detalle. QCAD no está en los paquetes de este entorno. Su formato es DXF, que puede escribir la biblioteca libre `ezdxf` desde Python, así que se propone dibujar los detalles en DXF, editables en QCAD.
 
 **Uso de IA.** Claude (Anthropic) buscó y cotejó las fuentes nuevas, redactó `exploraciones.md` y los textos del documento, y escribió el código de los modelos, de los diagramas y del documento. Las formas y las decisiones son del autor. Ninguna imagen del proyecto viene de un generador de imágenes.
+
+## 13. Más tarde, el mismo día: una candidata, la casa redonda
+
+El autor volvió a preguntar qué opinaba de la imagen de la cúpula de tierra sobre una base de piedra (§12). Se le respondió con cuatro correcciones, y pidió hacerlas y analizar a cuál de las cinco exploraciones podría reemplazar.
+
+**Lo que se hizo.** La forma E6 en `chhaxwa/blender/formas.py`, su render (`renders/render_forma_E6.jpg`) y su corte (`renders/diagramas/diagrama_x6.png`), y la sección «Una candidata: la casa redonda» en `chhaxwa/exploraciones.md`. Las correcciones:
+
+- la piedra de la cosecha en lugar de la de río;
+- un dintel de laja sobre la puerta;
+- el óculo abierto bajo un sombrero de ichu;
+- la tierra revocada en anillos que escurren el agua;
+- el *t'uju* al noreste.
+
+Al modelarla apareció una sexta: una cúpula por aproximación de hiladas se cierra en cono, así que la forma baja de la imagen solo puede ser un relleno de tierra sobre una cámara volada.
+
+**Una fuente que cambia el análisis.** Yampara Blanco describe el *muruqu uta*, la casa redonda de todos los días, con la puerta al este, el fogón y el *t'uju* al noreste (2019: 13), y la pareja que forma con la casa cuadrada o rectangular, el *taru uta* (ibid.: 9). La candidata es esa casa redonda. El putuco, en cambio, suele ser cuadrado (Vitulas-Quille y Reynoso-Machaca, 2025: 5). Las citas se cotejaron en su página.
+
+**El análisis.** Se propone que reemplace a E2, el corral techado. Las razones:
+
+- comparte con E2 la pirca redonda de doble cara;
+- con E5 forma la pareja de casas que describe Yampara Blanco;
+- E1, que lleva el título, queda intacta.
+
+Reemplazar a E1 o a E5 también es posible, con lo que pierde cada caso (`exploraciones.md`). El documento no se cambió: se rehace cuando el autor elija.
+
+**Uso de IA.** Claude (Anthropic) modeló la candidata, buscó y cotejó la fuente de la casa redonda y redactó el análisis. La imagen del autor no se subió al repositorio.

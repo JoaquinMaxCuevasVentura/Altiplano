@@ -53,8 +53,17 @@ def renderizar(clave, salida, rapido=False, semilla=1):
     ctx = F.Ctx(mats, zc, semilla)
     res = F.FORMAS[clave](ctx)
     k, nombre = res[0], res[1]
-    vista = res[2] if len(res) > 2 else {}
+    vista = dict(res[2]) if len(res) > 2 else {}
     nuevos = [o for o in bpy.data.objects if o not in antes]
+    giro = vista.pop("girar", 0)
+    if giro:                                         # se gira la maqueta sobre la mesa, como se haría con una real
+        vacio = C.ligar(bpy.data.objects.new("giro", None))
+        vacio.location = (0, 0, zc)
+        bpy.context.view_layer.update()
+        for ob in nuevos:
+            ob.parent = vacio
+            ob.matrix_parent_inverse = vacio.matrix_world.inverted()
+        vacio.rotation_euler.z = math.radians(giro)
     encuadrar(nuevos, **vista)
     ancho, alto, muestras = {"rapido": (480, 600, 16), "medio": (640, 800, 28)}.get(rapido, (1000, 1250, 80))
     destino = Path(salida) / f"render_forma_{clave}.jpg"

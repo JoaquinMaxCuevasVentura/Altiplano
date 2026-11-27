@@ -52,7 +52,7 @@ Además de medir una técnica, cada prueba explora formas. `exploracion_formal.m
 
 Se necesita Blender como módulo de Python, instalado con `pip install bpy==5.0.1` en Python 3.11. Desde la raíz del repositorio, `venv_bpy/bin/python chhaxwa/blender/renderizar.py todas` rehace las quince imágenes.
 
-**Las cinco exploraciones.** De las quince formas, de 27 piezas en diagrama y de dieciséis referencias, el autor eligió cinco obras que juntan las técnicas de las pruebas: E1, *La montaña habitada*; E2, *El corral techado*; E3, *La torre de champa*; E4, *La chullpa*, y E5, *La casa de la bóveda*. Están en `exploraciones.md`, con sus medidas, sus fuentes y una tabla que cruza cada obra con las cinco pruebas. Cómo se llegó a ellas está en `exploracion_formal.md` (§6 a §9).
+**Las cinco exploraciones.** De las quince formas, de 27 piezas en diagrama y de dieciséis referencias, el autor eligió cinco obras que juntan las técnicas de las pruebas: E1, *La montaña habitada*; E2, *El corral techado*; E3, *La torre de champa*; E4, *La chullpa*, y E5, *La casa de la bóveda*. Están en `exploraciones.md`, con sus medidas, sus fuentes y una tabla que cruza cada obra con las cinco pruebas. Allí está también una candidata, la casa redonda (E6), con el análisis de a cuál podría reemplazar; el autor decide. Cómo se llegó a ellas está en `exploracion_formal.md` (§6 a §9).
 
 **Los renders son predicciones, no fotos.** Cada archivo se llama `render_…`, y su pie tiene que decirlo. Cuando se construya una maqueta, su foto se pone junto al render, tomada desde el mismo punto de vista. La regla 3 todavía dice que el modelo en el computador solo mide y planifica. `investigacion_blender.md` (§1) propone reescribirla, y lo decide el autor.
 

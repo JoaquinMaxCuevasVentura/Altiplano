@@ -337,6 +337,64 @@ DIAGRAMAS = {"x1": x1, "x2": x2, "x3": x3, "x4": x4, "x5": x5, "serie": serie}
 VISTAS = {"serie": dict(acimut=0, elevacion=0, ancho=2400, alto=560, aire=1.03, suelo=-0.005)}
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# La candidata: la casa redonda, cortada por la puerta del este
+# ----------------------------------------------------------------------------------------------------------------
+
+def x6(corte=True):
+    import formas as F
+    Ri, e, Hb, hh, tal = 2.0, 0.6, 1.2, 0.12, math.tan(math.radians(5))
+    R = Ri + e
+    radios = F.cupula_perfil(Ri, hh, v0=0.10)
+    full = 2 * math.pi
+    for (z0, z1, medio) in ((0, 1.0, 0.3), (1.0, 1.2, 0.55)):          # la pirca: dos caras y el relleno, con la puerta
+        for (ro0, ro1, ri, mat) in ((R - tal * z0, R - tal * z1, R - 0.2, D["piedra"]), (R - 0.2, R - 0.2, Ri + 0.2, D["menuda"]),
+                                    (Ri + 0.2, Ri + 0.2, Ri, D["piedra"])):
+            d = math.asin(min(1.0, medio / ri))
+            a0, a1 = (d, math.pi) if corte else (d, full - d)
+            sector(ro0, ro1, ri, ri, z0, z1 - z0, a0, a1, mat)
+    caja(Ri, R, 0 if corte else -0.55, 0.55, 1.0, 1.18, D["laja"], "dintel")
+    a0, a1 = (0, math.pi) if corte else (0, full)
+    for i, r in enumerate(radios):                                     # la cúpula de champa, volada
+        sector(r + 0.4, r + 0.4, r, r, Hb + i * hh, hh - 0.005, a0, a1, D["champa"])
+    z_top = Hb + len(radios) * hh
+    Hd, r_ocu, dd = z_top - Hb + 0.1, radios[-1] + 0.15, 0.16
+    A = R - tal * Hb + 0.02 - r_ocu
+    for kb in range(5):                                                # el relleno de tierra en cinco anillos
+        t0, t1 = math.pi / 2 * kb / 5, math.pi / 2 * (kb + 1) / 5
+        pasos = 6
+        for q in range(pasos):
+            ta, tb = t0 + (t1 - t0) * q / pasos, t0 + (t1 - t0) * (q + 1) / pasos
+            za, zb = Hb + Hd * math.sin(ta), Hb + Hd * math.sin(tb)
+            ra, rb = r_ocu + (A - dd * kb) * math.cos(ta), r_ocu + (A - dd * kb) * math.cos(tb)
+            h_ = zb - za
+            ri_a = max(radios[min(len(radios) - 1, int((za - Hb) / hh))] + 0.4, r_ocu - 0.15)
+            sector(ra, rb, ri_a, ri_a, za, h_, a0, a1, D["tierra"])
+    for j in range(3):                                                 # el sombrero de ichu
+        a = 2 * math.pi * j / 3 + 0.4
+        if corte and math.sin(a) < 0:
+            continue
+        C.palo((0.42 * math.cos(a), 0.42 * math.sin(a), z_top), (0.36 * math.cos(a), 0.36 * math.sin(a), z_top + 0.36), 0.035,
+               D["madera"])
+    sector(0.62, 0.04, 0.5, 0.02, z_top + 0.3, 0.4, a0, a1, D["paja"])
+    for dx in (-0.16, 0.16):                                           # el fogón
+        caja(-0.3, 0.3, dx - 0.07 if not corte or dx > 0 else 0, dx + 0.07, 0, 0.16, D["piedra"], "fogon")
+    if FIGURAS:
+        C.palo((0, 0.1, 0.2), (0, 0.1, z_top + 0.5), 0.07, D["humo"], lados=10)
+        s = C.vector_sol()                                              # el t'uju y el sol del 21 de junio a las 10
+        p_in = Vector((Ri * math.cos(math.radians(45)), Ri * math.sin(math.radians(45)), 0.65))
+        t = 0.0
+        while t < 3.0 and (p_in + s * t).xy.length < R - tal * (p_in + s * t).z:
+            t += 0.02
+        C.palo(p_in - s * 0.05, p_in + s * (t + 0.05), 0.09, D["vacio"], lados=12)
+        C.palo(p_in - s * (p_in.z / s.z), p_in + s * (t + 1.4), 0.03, D["sol"], lados=8)
+    figura((-0.9, 0.6, 0), giro=0.4, pose="cuclillas")
+    figura((R + 0.8, 0.4, 0), giro=2.8)
+
+
+DIAGRAMAS["x6"] = x6
+
+
 def renderizar(clave, salida, muestras=16):
     C.escena_nueva()
     colores()

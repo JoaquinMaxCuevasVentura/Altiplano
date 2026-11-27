@@ -131,6 +131,55 @@ Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo. La 
 
 La novela dice que las *chujllas* «apenas se alzan dos metros del suelo» (p. 30). Esta casa los pasa, porque una bóveda volada sobre 3,30 m de luz necesita casi dos metros de alto, y el bloque llega a 2,6 m. Si se quiere la casa chata, hay que bajar el arranque o angostar el cuarto, y eso lo decide el autor.
 
+## Una candidata: la casa redonda
+
+El autor mandó una imagen de una casa redonda: una base de piedra, una cúpula de tierra en anillos escalonados, ichu arriba y una puerta angosta. Preguntó qué opinaba. Se le respondió que la técnica tiene fuentes, pero que tenía cuatro problemas: la piedra era de río, la puerta no tenía dintel, el ichu tapaba la salida del humo y las gradas de tierra juntaban el agua de la lluvia. Pidió corregirla y analizar a cuál de las cinco podría reemplazar. La imagen no está en el repositorio, porque no se sabe de dónde viene. Si es de un generador de imágenes, sirve solo como boceto (regla 5).
+
+**Es la casa redonda aymara.** Yampara Blanco describe el *muruqu uta*, la «casa de base de forma circular usada cotidianamente», que se usa sobre todo en las épocas de heladas y de lluvia. Su puerta mira al este, tiene un fogón de arcilla al centro y un *t'uju* al noreste, «por donde penetran los rayos solares» y por donde sale el humo (2019: 13). Forma pareja con el *taru uta*, la casa de base cuadrada o rectangular: juntas, «representan simbólica y culturalmente la feminidad y la masculinidad» (ibid.: 9). El putuco de champa, en cambio, suele ser de planta cuadrada (Vitulas-Quille y Reynoso-Machaca, 2025: 5), así que esta casa es redonda como el *muruqu uta*, no como el putuco.
+
+**Las correcciones.** Se modeló en Blender (`blender/formas.py`, forma E6) con estos cambios:
+
+1. **La piedra es la de la cosecha.** La base es una pirca redonda de doble cara, de piedra angulosa, con relleno de piedra menuda (prueba 2).
+2. **La puerta lleva dintel.** Mide 60 cm × 1 m, mira al este y la cubre una laja que atraviesa el muro (prueba 3).
+3. **El óculo queda abierto.** El ichu se vuelve un sombrero levantado 30 cm sobre tres palos de queñua. El humo sale por los costados y la lluvia no cae de lleno sobre el fogón.
+4. **El agua escurre.** La tierra se revoca con barro, y el borde de cada anillo sube hacia adentro para que el agua corra hacia afuera.
+5. **La cúpula volada es un cono por dentro.** Esto apareció al modelar. Cada hilada solo puede volar una parte de su largo, así que una cúpula por aproximación de hiladas se cierra en punta, como la cámara de E1. La forma baja y redonda de la imagen es, entonces, un relleno de tierra sobre la cámara volada. Además carga las colas de las hiladas, que es lo que las sostiene.
+6. **Se suma el *t'uju*** al noreste, apuntado al sol del 21 de junio a las 10, como en E5.
+
+| Medida | Valor | Origen |
+|---|---|---|
+| Cuarto | 4,0 m de diámetro | Proyecto |
+| Pirca | 0,6 m de espesor y 1,2 m de alto, con un talud de 5° | Proyecto |
+| Puerta | 0,6 × 1,0 m, al este, con dintel de laja | Proyecto; la puerta al este, Yampara Blanco (2019: 13) |
+| Cúpula | Dieciséis hiladas de champa de 12 cm, que vuelan de 10 a 13 cm | Proyecto; el bloque, el de la prueba 3 |
+| Óculo | 60 cm, con un sombrero de ichu de 1,2 m de diámetro | Proyecto |
+| Relleno | Cinco anillos de tierra revocada; cada uno entra 16 cm | Proyecto |
+| Alto | 3,2 m hasta el óculo | Cálculo |
+| *T'uju* | 15 cm, al noreste | Yampara Blanco (2019: 13); tabla del sol de la prueba 5 |
+
+Es la única de las seis que usa las cinco pruebas: la piedra de la cosecha y la pirca de doble cara en la base, la cúpula y el dintel volados, el ichu del sombrero y el fogón con el *t'uju*.
+
+### A cuál podría reemplazar
+
+| | En qué se parece | Qué se pierde si sale | Juicio |
+|---|---|---|---|
+| E1. La montaña habitada | En la forma: redonda, baja, volada por dentro, con óculo y entrada baja. Es la más parecida | La única obra hecha solo con la piedra de la cosecha, la «montaña de piedras» de la p. 9, que es también el título del artículo, y la primera *chhaxwa* del título. La serie pierde su comienzo | Posible, pero cuesta mucho |
+| E2. El corral techado | En la base: la misma pirca redonda de doble cara, de unos 5 a 6 m; y el ichu arriba | El único techo liviano, la franja de cielo entre la piedra y la paja y la serie del tiempo, que está hecha sobre E2. La pirca de doble cara sigue en la base de la candidata y en E5 | La mejor opción |
+| E3. La torre de champa | Solo en la champa | La V volada del umbral, el techo de *p'ira* y la *chhaxwa* atada | No |
+| E4. La chullpa | En la cámara volada y la piedra de la base | La tumba, la cornisa de ichu y los adobitos | No |
+| E5. La casa de la bóveda | En el uso: las dos son casas con fogón, *t'uju* y puerta al este | La casa rectangular de la novela («rectangulares y chatas», p. 30), la planta medida de Šolc y la referencia R16 | Posible, pero rompe la pareja |
+
+**La propuesta es que reemplace a E2.** La candidata junta lo que E2 y E1 tienen de redondo, la pirca de E2 y la cámara volada de E1. Si entra en lugar de E2, la serie queda así:
+
+- empieza con la cosecha (E1), sigue con el umbral (E3) y la tumba (E4);
+- termina con la casa doble que describe Yampara Blanco, la redonda para todos los días y la rectangular (E5).
+
+Al pasar de E2 a la casa redonda, el pasaje de la p. 156 sigue sirviendo, y mejor, porque nombra las dos cosas: «Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas».
+
+Reemplazar E5 daría una casa más estable, porque en una cúpula volada cada hilada es un anillo cerrado, mientras que en una bóveda volada cada hilada depende solo del peso que carga su cola. Pero la serie se quedaría sin la casa rectangular de la novela y sin la pareja de las dos casas. Reemplazar E1 conserva la pareja, pero quita la obra que lleva el título.
+
+Lo decide el autor. Si elige, se rehace la serie a la misma escala, la tabla de las pruebas y el documento.
+
 ## Lo que se descartó
 
 El autor descartó una tercera exploración que se modeló el mismo día, *La A de piedra y tierra*. Eran dos muros de piedra amontonada que se tocaban arriba, con tierra apisonada entre los dos, sobre una base de pirca atravesada por un paso volado, a partir de la referencia R6. La reemplaza la torre de champa. No se renderizó a resolución completa ni entra al documento.
@@ -142,3 +191,4 @@ El autor descartó una tercera exploración que se modeló el mismo día, *La A 
 - Si la casa de E5 se baja hasta los dos metros de la novela.
 - Si las cinco van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.
+- Si la casa redonda reemplaza a E2, a E1 o a E5, o si queda fuera.
