@@ -41,8 +41,25 @@ OTRAS_RAMAS = [
     ("codex/auditoria-version-final", "a244367",
      "Rama de Codex con la auditoría de la versión final. Su archivo se trajo a la rama del artículo el 10 de noviembre (commit 0a2c4ba)."),
 ]
-# Rama relacionada: otro trabajo, que sale de esta rama y del que el artículo tomó dos imágenes. Se registra, no se copia.
-RELACIONADA = ("claude/eager-bohr-mx9420", "41afd36")
+# Ramas relacionadas: trabajos que salen de esta rama y no están unidos. Se registran archivo por archivo, no se copian.
+# (rama, último commit, línea de trabajo, qué decir en la ficha)
+RELACIONADAS = [
+    ("claude/eager-bohr-mx9420", "41afd36", "registros",
+     "El artículo tomó de ella dos imágenes ({analisis38})."),
+    ("proyecto/la-tierra-que-queda", "d2591eb", "tierra",
+     "La hizo GPT en paralelo al artículo y tiene abierto el pull request en borrador n.º 1. La auditoría está en {analisis41}."),
+]
+# Notas para archivos de las ramas relacionadas, cuando un registro del proyecto dice algo de ellos.
+NOTAS_RELACIONADAS = [
+    (r"^proyectos/la-tierra-que-queda/Serie_seleccionada/El_claro_de_la_piedra\.png$",
+     "Render directo de Blender: conserva sus metadatos (analisis/41, §5)."),
+    (r"^proyectos/la-tierra-que-queda/Serie_seleccionada/.+\.png$",
+     "Sin metadatos de Blender. Según analisis/41 (F3 y F10), todo indica que es una versión tratada con GPT Image o un recorte ampliado de una: solo exploración (regla 6 de AGENTS.md)."),
+    (r"^proyectos/la-tierra-que-queda/guiones_recuperados/(altiplano-serie-selection/lamina|anteproyecto/nudos)\.py$",
+     "Corre con lo que hay en la rama, cambiando su ruta de salida (analisis/41, §5)."),
+    (r"^proyectos/la-tierra-que-queda/guiones_recuperados/.+\.py$",
+     "No corre: depende del .blend o de archivos de la sesión de GPT que se perdieron (analisis/41, F1)."),
+]
 
 LINEAS = {   # el orden es el del índice
     "articulo": ("El artículo", "El texto fuente del artículo, sus Word, el Word con los cambios marcados, la plantilla de estilos y el generador.", "articulo/"),
@@ -54,6 +71,7 @@ LINEAS = {   # el orden es el del índice
     "convocatorias": ("El informe de convocatorias", "El informe de convocatorias abiertas y las notas de la búsqueda.", "reports/"),
     "repositorio": ("El índice y las reglas del repositorio", "README.md y AGENTS.md.", ""),
     "comprobaciones": ("Las comprobaciones de la conversación", "Guiones, listas de citas y vistas de página con que se comprobó el artículo. Nunca entraron en git.", None),
+    "tierra": ("La tierra que queda (rama de GPT, sin unir)", "Tres estudios de arquitectura que GPT hizo en paralelo a partir del artículo, con lo que pudo recuperar de ellos.", None),
     "registros": ("Los registros de arquitectura (rama relacionada, sin unir)", "El catálogo de láminas de arquitectura del altiplano, hecho en otra conversación sobre una rama que sale de esta.", None),
 }
 
@@ -226,6 +244,15 @@ NO_ARCHIVADO = [
     ("Las fotos del librillo de Virtue y las letras completas", "Las fotos del librillo japonés con que se cotejó «Pyramid of Bones»",
      "fuente bibliográfica", "analisis", "", "",
      "No se archivan: «Las fotos no se suben al repositorio y las letras no se copian completas» (analisis/27)."),
+    ("Lo que se perdió de La tierra que queda", "El archivo de Blender de la revisión final (seis escenas), sus siete renders y dos comparaciones, el dossier de cinco páginas en Typst, la lámina A3 en PDF y el ZIP para Windows",
+     "resultado exportado", "tierra", "", "",
+     "Quedaron en el espacio de trabajo de la conversación con GPT, al que el autor no tiene acceso (analisis/41, F1 y F2). Si el enlace de descarga de esa conversación todavía funciona, el ZIP va a la carpeta privada de Drive."),
+    ("Las cinco maquetas del autor", "Las maquetas que los guiones de La tierra que queda nombran como base del estudio 02",
+     "obra", "tierra", "estado sin confirmar", "",
+     "Solo constan en los guiones de GPT («Ensayo basado en las cinco maquetas de Joaquin Cuevas»). No están en el repositorio ni en otro registro."),
+    ("El PDF de Obra gruesa, de Smiljan Radić", "El libro que el autor le adjuntó a GPT y del que sale el precedente de Corral (p. 204)",
+     "fuente bibliográfica", "tierra", "", "conversación con GPT",
+     "No se archiva: tiene derechos de autor."),
     ("Los identificadores de los archivos de Drive", "La lista de los 25 archivos con su identificador en Drive",
      "datos", "comprobaciones", "", "carpeta de trabajo de la sesión (lista/ids.txt)",
      "No se archiva: el enlace de la carpeta del autor no entra en el repositorio."),
@@ -348,6 +375,8 @@ def linea_de(ruta):
         return "convocatorias"
     if ruta.startswith("registros_de_arquitectura/"):
         return "registros"
+    if ruta.startswith("proyectos/la-tierra-que-queda/"):
+        return "tierra"
     return "repositorio"
 
 
@@ -434,6 +463,9 @@ def descripcion(ruta, datos):
             (r"^taxonomia/imagenes/", "Imagen de la taxonomía visual"),
             (r"^taxonomia/tablero_", "Tablero de la taxonomía visual"),
             (r"^registros_de_arquitectura/imagenes/", "Lámina de los registros de arquitectura"),
+            (r"^proyectos/la-tierra-que-queda/Serie_seleccionada/", "Imagen de la serie de La tierra que queda"),
+            (r"^proyectos/la-tierra-que-queda/guiones_recuperados/", "Guion recuperado de La tierra que queda"),
+            (r"^proyectos/la-tierra-que-queda/comprobaciones/", "Comprobación de la geometría de la chujlla de La tierra que queda"),
             (r"^registros_de_arquitectura/hoja_", "Hoja de contacto de los registros de arquitectura"),
         ]
         for patron, texto in reglas:
@@ -712,17 +744,19 @@ class Archivo:
                 f["relacion"] = f"mismo contenido que {v['id']}"
                 v["relacion"] = f"apareció antes en la rama {f['rama']} ({f['commit']}, {f['fecha']})"
 
-    # -- la rama relacionada
-    def rama_relacionada(self):
-        rama, punta = RELACIONADA
+    # -- las ramas relacionadas
+    def ramas_relacionadas(self):
+        for rama, punta, linea, nota in RELACIONADAS:
+            self.rama_relacionada(rama, punta, linea, nota)
+
+    def rama_relacionada(self, rama, punta, linea, nota):
         if subprocess.run(["git", "cat-file", "-e", punta], capture_output=True).returncode:
             sys.exit(f"Falta el commit {punta} de la rama {rama}: git fetch origin {rama}")
         base = git("merge-base", "HEAD", punta).strip()
-        self.base_relacionada = base[:7]
         for c in lista_commits(f"{base}..{punta}"):
             carpeta = f"{c['fecha']:%Y-%m-%d_%H%M}_{c['c']}_{slug(c['asunto'])}"
-            c["rama"] = rama
-            v = dict(linea="registros", origen="relacionada", c=c, carpeta=carpeta, rel=f"versiones/registros/{carpeta}",
+            c["rama"], c["base"], c["nota_relacionada"] = rama, base[:7], nota
+            v = dict(linea=linea, origen="relacionada", c=c, carpeta=carpeta, rel=f"versiones/{linea}/{carpeta}",
                      fecha=c["fecha"], titulo=c["asunto"], aqui=[], vigentes=[], repetidos=[], duplicados=[], deps=[],
                      rotos=[], anadidos=[], modificados=[], retirados=[], renombrados=[], en_rama=[])
             for x in sorted(cambios(c["h"]), key=lambda x: x["nuevo"]):
@@ -733,13 +767,14 @@ class Archivo:
                 datos = contenido(x["bb"])
                 es_ultima = arbol(punta).get(x["nuevo"]) == x["bb"]
                 f = self.fila("R", nombre=posixpath.basename(x["nuevo"]), descripcion=descripcion(x["nuevo"], datos),
-                              categoria=categoria(x["nuevo"]), linea="registros", version_o_etapa=carpeta,
+                              categoria=categoria(x["nuevo"]), linea=linea, version_o_etapa=carpeta,
                               estado="estado sin confirmar", formato=formato(x["nuevo"]),
                               copia="en su rama (no se copia)", ruta_original=x["nuevo"], ruta_archivada="",
                               rama=rama, commit=c["c"], fecha=fecha_txt(c["fecha"]), que_representa_la_fecha=QUE_FECHA["git"],
                               fuente_o_generador=generador(x["nuevo"]), sha256=sha256(datos), bytes=len(datos), blob_git=x["bb"],
                               observaciones=("Es el estado más reciente de su rama. " if es_ultima else "Lo reemplazó un commit posterior de su rama. ")
-                              + f"La rama no está unida a la del artículo y no consta una decisión de unirla. Se recupera con: git show {c['c']}:\"{x['nuevo']}\"")
+                              + f"La rama no está unida a la del artículo y no consta una decisión de unirla. Se recupera con: git show {c['c']}:\"{x['nuevo']}\""
+                              + next((" " + t for patron, t in NOTAS_RELACIONADAS if re.search(patron, x["nuevo"])), ""))
                 v["en_rama"].append(f)
             self.versiones.append(v)
 
@@ -935,8 +970,9 @@ class Archivo:
             if v["c"].get("nota_rama"):
                 L += ["", v["c"]["nota_rama"]]
             if v["origen"] == "relacionada":
-                L += ["", f"Esta rama sale del commit `{self.base_relacionada}` de la rama del artículo y no está unida. El artículo tomó de ella dos imágenes "
-                      "(" + enlace("`analisis/38_auditoria_del_proyecto.md`", arriba + "analisis/38_auditoria_del_proyecto.md") + ")."]
+                L += ["", f"Esta rama sale del commit `{v['c']['base']}` de la rama del artículo y no está unida. " + v["c"]["nota_relacionada"].format(
+                      analisis38=enlace("`analisis/38_auditoria_del_proyecto.md`", arriba + "analisis/38_auditoria_del_proyecto.md"),
+                      analisis41=enlace("`analisis/41_auditoria_de_la_tierra_que_queda.md`", arriba + "analisis/41_auditoria_de_la_tierra_que_queda.md"))]
         self.escribir_md(f"{v['rel']}/ficha.md", L)
 
     def origen_txt(self, v):
@@ -1008,6 +1044,8 @@ class Archivo:
               "Además, `AGENTS.md` dice que reescribirá el artículo con su voz. Por eso lo más reciente figura como «versión vigente».",
               "- **La rama `claude/eager-bohr-mx9420`** (los registros de arquitectura) no está unida. Si se une, su `analisis/34_registros_de_arquitectura.md` "
               "choca en número con el `34` de esta rama. Unirla o no es decisión del autor.",
+              "- **La rama `proyecto/la-tierra-que-queda`** (el proyecto paralelo de GPT) no está unida y tiene un *pull request* en borrador. "
+              "Qué hacer con ella y con sus imágenes, que según `analisis/41` están tratadas con GPT Image, es decisión del autor.",
               "- **Las ramas de Codex** (`codex/analisis-churata` y `codex/auditoria-version-final`) ya entregaron su único archivo a la rama del artículo. "
               "No consta si el autor quiere conservarlas o borrarlas.",
               "- **La conversación anterior al 18 de octubre** solo quedó resumida. Sus archivos de trabajo (transcripciones, OCR, pruebas) no se pueden recuperar. "
@@ -1063,7 +1101,7 @@ class Archivo:
              f"- **De git:** {n('H-')} versiones anteriores de archivos ({copiadas('H-')} copiadas tal cual y {n('H-') - copiadas('H-')} que repiten un contenido ya guardado) y los {n('V-')} archivos vigentes, registrados en su lugar.",
              f"- **De la conversación:** {n('C-')} piezas de la carpeta de trabajo ({copiadas('C-')} copiadas): borradores, dos Word de cambios que se enviaron al autor, guiones de comprobación y vistas de página.",
              f"- **Copias funcionales:** {n('D-')} imágenes copiadas junto a las páginas que las piden, para que se vean como entonces.",
-             f"- **Otras ramas:** {n('R-')} registros. Las dos ramas de Codex entregaron su archivo a la rama del artículo. La de los registros de arquitectura (`{RELACIONADA[0]}`) es otro trabajo, que sale de esta rama; se registra y no se copia.",
+             f"- **Otras ramas:** {n('R-')} registros. Las dos ramas de Codex entregaron su archivo a la rama del artículo. La de los registros de arquitectura (`{RELACIONADAS[0][0]}`) y la de *La tierra que queda* (`{RELACIONADAS[1][0]}`), que hizo GPT, son otros trabajos que salen de esta rama; se registran y no se copian.",
              f"- **En línea:** {n('L-')} canales del atlas de Are.na, descritos y no copiados.",
              f"- **Lo que falta:** {n('N-')} registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).",
              f"- **Peso de lo copiado:** {mb('git')} MB de git, {mb('dependencias')} MB de copias funcionales y {mb('conversacion')} MB de la conversación. "
@@ -1172,7 +1210,7 @@ def main():
         shutil.rmtree(destino / nombre, ignore_errors=True)
     a = Archivo(raiz, args.scratch)
     a.desde_git()
-    a.rama_relacionada()
+    a.ramas_relacionadas()
     a.desde_conversacion(previos)
     a.lo_demas()
     a.escribir()

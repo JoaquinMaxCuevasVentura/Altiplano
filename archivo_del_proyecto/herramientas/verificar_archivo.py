@@ -115,7 +115,7 @@ def main():
     # 8. cada versión tiene su ficha
     carpetas = [p for p in (arch / "versiones").glob("*/*") if p.is_dir()]
     prueba("Cada carpeta de versión tiene su ficha", len(carpetas), [p.name for p in carpetas if not (p / "ficha.md").is_file()])
-    etapas = {f["version_o_etapa"] for f in filas if f["id"][0] in "HDC" or (f["id"][0] == "R" and f["linea"] == "registros")}
+    etapas = {f["version_o_etapa"] for f in filas if f["id"][0] in "HDC" or (f["id"][0] == "R" and f["linea"] in ("registros", "tierra"))}
     prueba("Cada versión que nombra el inventario tiene su carpeta", len(etapas),
            sorted(e for e in etapas if not any(p.name == e for p in carpetas)))
 

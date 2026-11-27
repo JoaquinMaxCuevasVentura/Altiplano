@@ -53,4 +53,5 @@ Lo vigente está en su lugar: [`la raíz del repositorio`](../../../). Cada carp
 | 2026-11-10 09:58 | `7b44456` | [Pone en cursiva las voces aymaras y escribe el texto con los pasteles hechos](2026-11-10_0958_7b44456_pone-en-cursiva-las-voces/ficha.md) | versión anterior | 2 |
 | 2026-11-14 22:35 | `93a80af` | [Audita el proyecto, corrige los archivos finales y suma dos imágenes](2026-11-14_2235_93a80af_audita-el-proyecto-corrige-los/ficha.md) | versión anterior | 2 |
 | 2026-11-15 02:56 | `3d57d31` | [Registra cómo se armó el archivo del proyecto](2026-11-15_0256_3d57d31_registra-como-se-armo-el-archivo/ficha.md) | versión anterior | 2 |
-| 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión vigente | 0 |
+| 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión anterior | 2 |
+| 2026-11-27 03:40 | `c5c9288` | [Audita «La tierra que queda», el proyecto paralelo de GPT](2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md) | versión vigente | 0 |

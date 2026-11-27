@@ -76,6 +76,8 @@ Todo lo que tiene fecha, en orden. Las fechas de los commits dicen cuándo entr�
 | 2026-11-15 03:07 | conversación | Guiones de la versión casi final | [Las comprobaciones de la conversación](versiones/comprobaciones/2026-11-15_0307_conversacion_guiones-de-la-version-casi-final/ficha.md) |
 | 2026-11-15 03:07 | conversación | Word con los cambios del 15 de noviembre | [El artículo](versiones/articulo/2026-11-15_0307_conversacion_word-con-los-cambios-del-15-de-noviembre/ficha.md) |
 | 2026-11-15 03:23 | `91bc40e` | Deja el artículo en versión casi final, con dos estudios sobre la casa aymara | [El artículo](versiones/articulo/2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md), [El registro de análisis](versiones/analisis/2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md), [Los entregables](versiones/entregables/2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md), [El índice y las reglas del repositorio](versiones/repositorio/2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) |
+| 2026-11-27 03:31 | `d2591eb` (rama `proyecto/la-tierra-que-queda`) | Conserva los originales recuperados de La tierra que queda | [La tierra que queda (rama de GPT, sin unir)](versiones/tierra/2026-11-27_0331_d2591eb_conserva-los-originales/ficha.md) |
+| 2026-11-27 03:40 | `c5c9288` | Audita «La tierra que queda», el proyecto paralelo de GPT | [El registro de análisis](versiones/analisis/2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md), [El índice y las reglas del repositorio](versiones/repositorio/2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md) |
 
 ## Lo que tiene fecha y no es un commit
 
