@@ -1,0 +1,7 @@
+Oeste desviación máxima / m 0.0034 altura en cumbrera 4.2159
+Este desviación máxima / m 0.0032 altura en cumbrera 4.2117
+-2.5 desviación máxima / m 0.0085 altura en cumbrera 4.2176
+-1.2 desviación máxima / m 0.0088 altura en cumbrera 4.2174
+0 desviación máxima / m 0.0085 altura en cumbrera 4.2175
+1.1 desviación máxima / m 0.0109 altura en cumbrera 4.217
+2.55 desviación máxima / m 0.0098 altura en cumbrera 4.2079
