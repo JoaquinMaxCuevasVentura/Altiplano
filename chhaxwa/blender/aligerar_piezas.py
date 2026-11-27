@@ -1,7 +1,7 @@
-"""Aligera los PNG de las piezas en diagrama: los pasa a una paleta de 64 colores, sin tramado.
+"""Aligera los PNG de las piezas y de los diagramas: los pasa a una paleta de 64 colores, sin tramado.
 
 Los diagramas son blancos con contornos y pocos tonos, así que no pierden nada visible. Se corre con el Python del
-sistema (necesita Pillow), después de piezas.py:
+sistema (necesita Pillow), después de piezas.py o de diagramas.py:
     python3 chhaxwa/blender/aligerar_piezas.py
 """
 import sys
@@ -10,10 +10,10 @@ from pathlib import Path
 from PIL import Image
 
 sys.dont_write_bytecode = True
-CARPETA = Path(__file__).resolve().parent.parent / "renders" / "piezas"
+RENDERS = Path(__file__).resolve().parent.parent / "renders"
 
 antes = despues = 0
-for p in sorted(CARPETA.glob("pieza_*.png")):
+for p in sorted(list(RENDERS.glob("piezas/pieza_*.png")) + list(RENDERS.glob("diagramas/diagrama_*.png"))):
     im = Image.open(p)
     if im.mode == "P":
         continue

@@ -61,6 +61,7 @@ node analisis/esquemas/diagramas/generar_diagramas.js   # las notaciones SVG de 
 python3 articulo/generar_figuras.py                     # los PNG de las figuras (necesita Chromium; variable CHROME)
 python3 taxonomia/generar_tableros.py                   # los tableros de la taxonomía visual y su catálogo (Chromium)
 venv_bpy/bin/python chhaxwa/blender/renderizar.py todas    # los renders de Chhaxwa (pip install bpy==5.0.1, Python 3.11)
+venv_bpy/bin/python chhaxwa/blender/diagramas.py           # los cortes de las cinco exploraciones; después, aligerar_piezas.py
 python3 chhaxwa/documento/compilar.py                   # el documento de Chhaxwa (pip install typst; letra Inter)
 python3 archivo_del_proyecto/herramientas/armar_archivo.py      # el archivo del proyecto; lee la rama, así que va después del commit
 python3 archivo_del_proyecto/herramientas/verificar_archivo.py  # comprueba el archivo y escribe su verificacion.md

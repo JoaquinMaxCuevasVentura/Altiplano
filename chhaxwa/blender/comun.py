@@ -343,6 +343,30 @@ class Pedrera:
         return objeto(nombre, me, centro, rot, (k, k, k * aplanar))
 
 
+class Adobera:
+    """Adobes hechos a mano: cajas de tamaño unitario con aristas gastadas y caras un poco irregulares, que se reutilizan
+    como instancias, igual que las piedras de la Pedrera. poner() las escala a la medida real."""
+
+    def __init__(self, mat, n=10, semilla=1, desorden=0.035):
+        r = random.Random(semilla)
+        self.mallas = []
+        for i in range(n):
+            bm = bmesh.new()
+            bmesh.ops.create_cube(bm, size=1.0)
+            bmesh.ops.subdivide_edges(bm, edges=bm.edges[:], cuts=2, use_grid_fill=True)
+            for v in bm.verts:
+                v.co += Vector((r.uniform(-1, 1), r.uniform(-1, 1), r.uniform(-1, 1))) * desorden
+            bmesh.ops.bevel(bm, geom=[e for e in bm.edges if not e.is_boundary], offset=0.06, segments=1,
+                            affect='EDGES', clamp_overlap=True)
+            self.mallas.append(malla_de_bm(bm, f"adobe_{i}", mat, suave=False))
+        self.r = r
+
+    def poner(self, centro, dims, giro=0.0, inclinar=0.01, nombre="adobe"):
+        me = self.r.choice(self.mallas)
+        rot = (self.r.uniform(-inclinar, inclinar), self.r.uniform(-inclinar, inclinar), giro + self.r.uniform(-0.02, 0.02))
+        return objeto(nombre, me, centro, rot, dims)
+
+
 def sigmoide(t):
     return 1 / (1 + math.exp(-t))
 
@@ -379,17 +403,20 @@ def monton(pedrera, centro, radio, alto, tam, r, hueco=None, z0=0.0):
     return puestas
 
 
-def hilada_recta(pedrera, p0, p1, z, alto, prof, r, lado_y=0.0, largo=(0.7, 1.5)):
-    """Una hilada de piedras de cara entre dos puntos (en planta), a la altura z."""
+def hilada_recta(pedrera, p0, p1, z, alto, prof, r, lado_y=0.0, largo=(0.7, 1.5), exacto=False):
+    """Una hilada de piedras de cara entre dos puntos (en planta), a la altura z.
+    Con exacto, la hilada empieza y termina en los puntos dados, para no tapar vanos ni rendijas."""
     p0, p1 = Vector(p0), Vector(p1)
     d = (p1 - p0)
     L = d.length
     u = d.normalized()
     nrm = Vector((-u.y, u.x))
-    t = -r.uniform(0, 0.4) * alto
+    t = 0.0 if exacto else -r.uniform(0, 0.4) * alto
     ang = math.atan2(u.y, u.x)
     while t < L:
         lx = alto * r.uniform(*largo)
+        if exacto and L - t - lx < alto * largo[0] * 0.6:
+            lx = L - t
         c = p0 + u * (t + lx / 2) + nrm * lado_y
         me, dims = r.choice(pedrera.mallas)
         objeto("piedra", me, (c.x, c.y, z + alto / 2 + r.uniform(-0.05, 0.05) * alto),

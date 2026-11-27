@@ -560,6 +560,301 @@ def forma_E2C(ctx):
     """El corral techado, con el techo de cono de 5C."""
     return corral_techado(ctx, "cono"), "El corral techado (cono)", dict(elevacion=11, acimut=-28)
 
+
+# ----------------------------------------------------------------------------------------------------------------
+# Las otras tres exploraciones (27 de noviembre): E3, la torre de champa; E4, la chullpa; E5, la casa de la bóveda
+# ----------------------------------------------------------------------------------------------------------------
+
+def caras_de_piedra(ctx, ped, x0, x1, y0, y1, z, hz, cara, k, sin=(), largo=(1.1, 2.2)):
+    """Una hilada de piedra en las cuatro caras de un rectángulo en planta [x0, x1] × [y0, y1], en metros reales.
+    sin: tramos sin piedra, como (lado, t0, t1), con lado en «s», «n», «o» o «e» y t medido a lo largo de esa cara."""
+    lados = {"s": ((x0, y0 + cara / 2), (x1, y0 + cara / 2)), "n": ((x0, y1 - cara / 2), (x1, y1 - cara / 2)),
+             "o": ((x0 + cara / 2, y0 + cara), (x0 + cara / 2, y1 - cara)),
+             "e": ((x1 - cara / 2, y0 + cara), (x1 - cara / 2, y1 - cara))}
+    for lado, (p0, p1) in lados.items():
+        horizontal = lado in "sn"
+        a, b = (p0[0], p1[0]) if horizontal else (p0[1], p1[1])
+        tramos, cur = [], a
+        for (t0, t1) in sorted((t0, t1) for (l, t0, t1) in sin if l == lado):
+            if t0 > cur:
+                tramos.append((cur, min(t0, b)))
+            cur = max(cur, t1)
+        if cur < b:
+            tramos.append((cur, b))
+        for (ta, tb) in tramos:
+            if tb - ta < 0.1:
+                continue
+            q0, q1 = ((ta, p0[1]), (tb, p0[1])) if horizontal else ((p0[0], ta), (p0[0], tb))
+            C.hilada_recta(ped, (q0[0] * k, q0[1] * k), (q1[0] * k, q1[1] * k), ctx.zc + z * k, hz * k, cara * k * 1.05,
+                           ctx.r, largo=largo, exacto=True)
+
+
+def nucleo(ctx, x0, x1, y0, y1, z0, z1, k, mat=None):
+    """El relleno oculto de un muro o una pila, para que no se vea a través de las juntas."""
+    return C.caja(sobre(ctx, (x0 + x1) / 2 * k, (y0 + y1) / 2 * k, (z0 + z1) / 2 * k),
+                  ((x1 - x0) * k, (y1 - y0) * k, (z1 - z0) * k), mat or ctx.sombra, "nucleo")
+
+
+def hilera_champa(ctx, a, b, fijo, z, eje, k, fase, sin=()):
+    """Una hilera de bloques de champa a soga entre a y b, a lo largo de x (eje «x», con y = fijo) o de y (eje «y»).
+    Los bloques se cortan en los extremos; sin: lista de valores de la coordenada donde falta un bloque."""
+    t = a - fase * (BL + 0.012) / 2
+    while t < b - 0.03:
+        paso = ctx.r.uniform(0.3, 0.5) + 0.012          # la champa se corta a pala: ningún bloque es igual
+        t0, t1 = max(t, a), min(t + paso, b)
+        c = (t0 + t1) / 2
+        if t1 - t0 > 0.06 and not any(abs(c - u) < paso / 2 for u in sin):
+            dims = ((t1 - t0 - 0.012) * k, BA * k, (BH * ctx.r.uniform(0.85, 1.0) - 0.008) * k)
+            f = fijo + ctx.r.uniform(-0.015, 0.015)
+            if eje == "x":
+                bloque_champa(ctx, (c * k, f * k, ctx.zc + (z + BH / 2) * k), dims)
+            else:
+                bloque_champa(ctx, (f * k, c * k, ctx.zc + (z + BH / 2) * k), dims, rot_z=math.pi / 2)
+        t += paso
+
+
+def forma_E3(ctx):
+    """La torre de champa: un cuerpo de champa en hiladas delgadas sobre dos apoyos, una pirca y un montón; entre los dos,
+    una V invertida de hiladas voladas por la que se pasa; lajas pasantes que asoman, y un techo de un agua de fajas de
+    p'ira sobre palos de queñua atados a piedras hincadas en el muro (la chhaxwa de Bertonio)."""
+    k = 1 / 20
+    ped = ctx.pedrera()
+    ctx.sombra = C.mat_liso("sombra", (0.035, 0.03, 0.026))
+    X, Y = 1.5, 0.8                                  # medio largo y medio ancho de la torre (proyecto)
+    ctx.m.champa = C.mat_tierra("champa_oscura", capas=False, escala_obj=14, claro=(0.10, 0.083, 0.06),
+                                oscuro=(0.035, 0.03, 0.022), paja=True)
+    Hp, g = 0.9, 0.5                                 # alto de los apoyos y medio paso entre ellos, arriba
+    Hl, Hh = 4.2, 5.4                                # alto de la torre en el lado bajo y en el alto
+    def tope(x):
+        return Hl + (x + X) / (2 * X) * (Hh - Hl)
+    # el apoyo oeste: una pirca de cuatro caras, con una cama de lajas
+    for i in range(5):
+        z = i * 0.18
+        caras_de_piedra(ctx, ped, -X - 0.1, -g, -Y - 0.1, Y + 0.1, z, 0.18, 0.3, k, largo=(1.2, 2.4))
+        nucleo(ctx, -X + 0.2, -g - 0.3, -Y + 0.2, Y - 0.2, z, z + 0.18, k)
+    # el apoyo este: un montón de piedra suelta, ancho al pie, con la cima aplanada
+    cx = (g + X) / 2
+    for i in range(6):
+        z = i * 0.15
+        f = 1 - z / Hp
+        rx, ry = (X - g) / 2 + 0.05 + 0.45 * f, Y + 0.1 + 0.45 * f
+        m = int(2 * math.pi * math.sqrt((rx * rx + ry * ry) / 2) / 0.3)
+        for j in range(m):
+            a = 2 * math.pi * (j + ctx.r.uniform(-0.25, 0.25)) / m
+            ped.poner(sobre(ctx, (cx + rx * math.cos(a)) * k, ry * math.sin(a) * k, (z + 0.08) * k), ctx.r.uniform(0.24, 0.36) * k,
+                      rot=(ctx.r.uniform(-0.5, 0.5), ctx.r.uniform(-0.5, 0.5), ctx.r.uniform(0, 6.3)), aplanar=0.7)
+    C.tronco(sobre(ctx, cx * k, 0), (X - g) / 2 * k * 1.25, (X - g) / 2 * k, Hp * 0.95 * k, ctx.sombra, lados=24).scale.y = 1.6
+    for (x0, x1) in ((-X - 0.1, -g), (g, X + 0.1)):          # las camas de lajas
+        for yy in (-0.6, 0.0, 0.6):
+            C.hilada_recta(ped, (x0 * k, yy * k), (x1 * k, yy * k), ctx.zc + (Hp - 0.02) * k, 0.07 * k, 0.6 * k, ctx.r,
+                           largo=(6.0, 9.0), exacto=True)
+    # el cuerpo de champa: bloques de 40 × 25 × 12 cm a soga; abajo, dos patas con la V de hiladas voladas
+    z0 = Hp + 0.05
+    i = 0
+    huecos_r = random.Random(41)
+    while True:
+        z = z0 + i * BH
+        if z > Hh - 0.02:
+            break
+        w = g - 0.06 * (i + 1)
+        fase = i % 2
+        tramos = [(-X, -w), (w, X)] if w > 0.03 else [(-X, X)]
+        sin = [huecos_r.uniform(-X, X) for _ in range(2)] if i > 12 and huecos_r.random() < 0.6 else []
+        for (xa, xb) in tramos:
+            xb_t = xb
+            # los muros largos se acaban donde los corta el techo
+            xs_ok = [x for x in (xa, xb) if tope(x) > z + BH * 0.5]
+            if not xs_ok:
+                continue
+            x_ini = xa if tope(xa) > z + BH * 0.5 else -X + (z + BH * 0.5 - Hl) / (Hh - Hl) * 2 * X
+            for yy in (-Y + BA / 2, Y - BA / 2):
+                hilera_champa(ctx, max(xa, x_ini), xb_t, yy, z, "x", k, fase, sin=sin if yy < 0 else [])
+            for xx in (xa + BA / 2, xb - BA / 2):
+                if tope(xx) > z + BH * 0.5 and (xx < -X + 0.3 or xx > X - 0.3 or w > 0.03):
+                    hilera_champa(ctx, -Y + BA, Y - BA, xx, z, "y", k, fase)
+        i += 1
+    nucleo(ctx, -X + BA, X - BA, -Y + BA, Y - BA, z0 + 8 * BH, Hl - 0.1, k)
+    # lajas pasantes que asoman de la cara sur y de la norte
+    for _ in range(26):
+        xl = ctx.r.uniform(-X + 0.25, X - 0.25)
+        zl = ctx.r.uniform(z0 + 1.4, tope(xl) - 0.5)
+        zl = z0 + round((zl - z0) / BH) * BH
+        for yy in ((-Y - 0.12,) if ctx.r.random() < 0.6 else (Y + 0.12,)):
+            ped.poner(sobre(ctx, xl * k, yy * k, zl * k), ctx.r.uniform(0.4, 0.55) * k, rot=(0, 0, math.pi / 2 + ctx.r.uniform(-0.15, 0.15)),
+                      aplanar=0.17)
+    # el techo: palos de queñua de lado a lado, atados a piedras hincadas bajo cada extremo, y dos hileras de fajas
+    th = math.atan((Hh - Hl) / (2 * X))
+    for j in range(6):
+        x = -X + 0.25 + j * 0.5
+        zt = tope(x) + 0.06
+        C.palo(sobre(ctx, x * k, -(Y + 0.28) * k, zt * k), sobre(ctx, x * k, (Y + 0.28) * k, zt * k), 0.06 * k, ctx.m.palo)
+        for yy in (-Y - 0.1, Y + 0.1):
+            ped.poner(sobre(ctx, x * k, yy * k, (zt - 0.42) * k), 0.34 * k, rot=(0, 0, math.pi / 2), aplanar=0.4)
+    largo_t = (2 * X + 0.5) / math.cos(th)
+    for fila, (s0, alza) in enumerate(((0.0, 0.0), (largo_t - 2.5, 0.05))):
+        for yy in (-0.7, 0.0, 0.7):
+            sm = s0 + 1.25
+            xm = -X - 0.25 + sm * math.cos(th)
+            zm = tope(-X - 0.25) + 0.12 + 0.03 + alza + sm * math.sin(th)
+            C.caja(sobre(ctx, xm * k, yy * k, zm * k), (2.5 * k, 0.72 * k, 0.05 * k), ctx.m.barro, "faja",
+                   rot=(ctx.r.uniform(-0.01, 0.01), -th, ctx.r.uniform(-0.012, 0.012)), bisel=0.01 * k)
+    C.figura_madera(sobre(ctx, -0.15 * k, -0.2 * k), ctx.m.figura, alto=1.65 * k, giro=math.pi / 2)
+    C.figura_madera(sobre(ctx, -(X + 0.9) * k, 0.3 * k), ctx.m.figura, alto=1.65 * k, giro=0.4)
+    return k, "La torre de champa", dict(acimut=-24, elevacion=9, aire=1.06)
+
+
+def forma_E4(ctx):
+    """La chullpa: cuatro pilas de pirca que vuelan hacia los pasos, una cama de lajas, una hilada de piedra y una pirámide
+    de adobitos de pie, en aparejo de librero, con una cornisa de ichu prensado y una boca baja al este."""
+    k = 1 / 20
+    ped = ctx.pedrera()
+    ado = C.Adobera(ctx.m.adobe, n=12, semilla=21)
+    ctx.sombra = C.mat_liso("sombra", (0.035, 0.03, 0.026))
+    c, P, Hp, cara = 1.05, 1.2, 1.2, 0.3
+    hz = 0.2
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            for i in range(int(Hp / hz)):
+                vuelo = 0.1 * max(0, i - 3)        # las dos últimas hiladas vuelan 10 cm hacia los pasos
+                xs = sorted((sx * c - sx * (P / 2 + vuelo), sx * c + sx * P / 2))
+                ys = sorted((sy * c - sy * (P / 2 + vuelo), sy * c + sy * P / 2))
+                caras_de_piedra(ctx, ped, xs[0], xs[1], ys[0], ys[1], i * hz, hz, cara, k, largo=(1.0, 2.0))
+                nucleo(ctx, xs[0] + cara, xs[1] - cara, ys[0] + cara, ys[1] - cara, i * hz, (i + 1) * hz, k)
+    S = 2 * c + P
+    z = Hp
+    for j in range(6):                               # la cama de lajas, que cruza los pasos
+        y = -S / 2 + (j + 0.5) * S / 6
+        C.hilada_recta(ped, (-S / 2 * k, y * k), (S / 2 * k, y * k), ctx.zc + z * k, 0.1 * k, S / 6 * k * 0.98, ctx.r,
+                       largo=(5.0, 8.0), exacto=True)
+    z += 0.1
+    caras_de_piedra(ctx, ped, -1.55, 1.55, -1.55, 1.55, z, 0.18, 0.3, k)   # la hilada de piedra bajo el adobe
+    nucleo(ctx, -1.25, 1.25, -1.25, 1.25, z, z + 0.18, k)
+    z += 0.18
+    # la pirámide de adobitos de pie (Agüero Benites et al., 2015: 3 y 6); medidas del adobito: proyecto
+    ha, mj, t, pr, g = 0.19, 0.02, 0.06, 0.14, 0.015
+    S0, ret = 3.0, 0.062
+    mortero = C.mat_tierra("mortero", capas=False, escala_obj=14, claro=(0.33, 0.27, 0.19), oscuro=(0.2, 0.16, 0.11))
+    ichu = C.mat_tierra("ichu_prensado", capas=True, escala_obj=90, claro=(0.64, 0.55, 0.34), oscuro=(0.34, 0.27, 0.15))
+    hiladas = 15
+    for i in range(hiladas):
+        s = S0 - 2 * i * ret
+        C.caja(sobre(ctx, 0, 0, (z + mj / 2) * k), ((s + 0.01) * k, (s + 0.01) * k, mj * k), mortero, "mortero")
+        z += mj
+        zc = z + ha / 2
+        nucleo(ctx, -s / 2 + pr * 0.9, s / 2 - pr * 0.9, -s / 2 + pr * 0.9, s / 2 - pr * 0.9, z, z + ha, k)
+        for lado in ("s", "n", "o", "e"):
+            largo_cara = s if lado in "sn" else s - 2 * pr
+            m = int((largo_cara + g) / (t + g))
+            paso = largo_cara / m
+            for j in range(m):
+                u = -largo_cara / 2 + (j + 0.5) * paso
+                if lado == "e" and i < 2 and abs(u) < 0.24:
+                    continue                         # la boca, al este y al nivel de la cama (Squier, 1877: 244)
+                if lado == "e" and i == 2 and abs(u) < 0.36:
+                    continue                         # aquí va el dintel
+                if lado in "sn":
+                    y = (-1 if lado == "s" else 1) * (s / 2 - pr / 2)
+                    ado.poner(sobre(ctx, u * k, y * k, zc * k), (t * k, pr * k, ha * k))
+                else:
+                    x = (-1 if lado == "o" else 1) * (s / 2 - pr / 2)
+                    ado.poner(sobre(ctx, x * k, u * k, zc * k), (pr * k, t * k, ha * k))
+        if i == 2:                                   # el dintel de la boca, una laja
+            C.caja(sobre(ctx, (s / 2 - pr / 2) * k, 0, zc * k), ((pr + 0.02) * k, 0.72 * k, ha * k), ctx.m.piedra,
+                   "dintel", bisel=0.008 * k)
+        z += ha
+        if i == hiladas - 3:                         # la cornisa de ichu prensado (Squier, 1877: 243)
+            C.caja(sobre(ctx, 0, 0, (z + 0.075) * k), ((s + 0.2) * k, (s + 0.2) * k, 0.15 * k), ichu, "cornisa",
+                   bisel=0.01 * k)
+            z += 0.15
+    s = S0 - 2 * hiladas * ret
+    C.caja(sobre(ctx, 0, 0, (z + 0.04) * k), ((s + 0.04) * k, (s + 0.04) * k, 0.08 * k), mortero, "tapa", bisel=0.01 * k)
+    C.figura_madera(sobre(ctx, -2.3 * k, -2.2 * k), ctx.m.figura, alto=1.65 * k, giro=-0.3)
+    C.figura_madera(sobre(ctx, 0.0, -1.2 * k), ctx.m.figura, alto=1.65 * k, giro=math.pi / 2, pose="cuclillas")
+    return k, "La chullpa", dict(acimut=48, elevacion=12, aire=1.08)
+
+
+def forma_E5(ctx):
+    """La casa de la bóveda: la planta de la chujlla de Enquelga (5,75 × 3,30 m) dentro de un bloque de pirca en talud,
+    cubierta por una bóveda de adobe por aproximación de hiladas, con una ranura al este y el t'uju al noreste."""
+    k = 1 / 20
+    ped = ctx.pedrera()
+    ado = C.Adobera(ctx.m.adobe, n=12, semilla=31)
+    ctx.sombra = C.mat_liso("sombra", (0.035, 0.03, 0.026))
+    Li, Wi = 5.75, 3.30                              # el cuarto: la mediana de Šolc (2011 [1975]: 93-94)
+    E0, Hw, cara = 0.9, 2.6, 0.32                    # espesor del muro al pie y alto del bloque: proyecto
+    Lo, Wo = Li + 2 * E0, Wi + 2 * E0
+    tal = math.tan(math.radians(10))
+    ranura, puerta = 0.25, 1.3                       # la ranura: 50 cm, lo justo para un cuerpo; la puerta, 1,30 m
+    zr, hz = 0.8, 0.2                                # arranque de la bóveda
+    for i in range(int(round(Hw / hz))):
+        z = i * hz
+        d = tal * (z + hz / 2)
+        caras_de_piedra(ctx, ped, -Lo / 2 + d, Lo / 2 - d, -Wo / 2 + d, Wo / 2 - d, z, hz, cara, k, sin=[("e", -ranura, ranura)])
+        if z < zr:                                   # la cara de adentro, hasta el arranque
+            caras_de_piedra(ctx, ped, -Li / 2 - cara, Li / 2 + cara, -Wi / 2 - cara, Wi / 2 + cara, z, hz, cara, k,
+                            sin=[("e", -ranura, ranura)])
+    # el relleno del muro y de los riñones de la bóveda, que carga las colas de las hiladas
+    zf = 2.1
+    A_ = (Lo - 2 * tal * Hw - 2 * cara - 0.1, Wo - 2 * tal * Hw - 2 * cara - 0.1)
+    relleno = C.caja(sobre(ctx, 0, 0, zf / 2 * k), (A_[0] * k, A_[1] * k, zf * k), ctx.m.tierra, "relleno")
+    cuarto = C.caja(sobre(ctx, 0, 0, Hw / 2 * k), ((Li - 0.02) * k, (Wi - 0.02) * k, (Hw + 1) * k), ctx.m.tierra, "cuarto")
+    hueco = C.caja(sobre(ctx, Lo / 2 * k, 0, Hw / 2 * k), (Lo * k, 2 * ranura * k, (Hw + 1) * k), ctx.m.tierra, "ranura")
+    for cort in (cuarto, hueco):
+        md = relleno.modifiers.new("hueco", 'BOOLEAN'); md.object = cort; md.operation = 'DIFFERENCE'; cort.hide_render = True
+    # la bóveda volada: cada hilada entra un poco más que la de abajo, de 7 cm al arranque a 13 cm junto a la clave
+    hh, b = 0.11, 0.07 / 0.11
+    a2H = (0.13 / 0.11 - b) / 2
+    H = (Wi / 2 - 0.15) / (b + a2H)
+    a2 = a2H / H
+    n = int(round(H / hh)) + 1
+    for i in range(n):
+        h = i * hh
+        r = max(0.15, Wi / 2 - b * h - a2 * h * h)
+        m = int(Li / 0.205)
+        paso = Li / m
+        for j in range(m + 1):
+            x = -Li / 2 + (j + 0.5 * (i % 2)) * paso
+            ancho = paso - 0.012
+            if x - paso / 2 < -Li / 2:
+                x, ancho = -Li / 2 + paso / 4, paso / 2 - 0.012
+            if x + paso / 2 > Li / 2 + 1e-6:
+                if i % 2 == 0:
+                    continue
+                x, ancho = Li / 2 - paso / 4, paso / 2 - 0.012
+            for lado in (-1, 1):
+                ado.poner(sobre(ctx, x * k, lado * (r + 0.2) * k, (zr + h + hh / 2) * k),
+                          (ancho * k, 0.40 * k, (hh - 0.01) * k), inclinar=0.006)
+    zc_ = zr + n * hh
+    # la clave: lajas que cierran la rendija de arriba; falta una sobre el fogón, por donde sale el humo
+    x = -Li / 2 + 0.25
+    while x < Li / 2 - 0.2:
+        if abs(x) > 0.32:
+            C.caja(sobre(ctx, x * k, 0, (zc_ + 0.04) * k), (0.44 * k, 0.75 * k, 0.08 * k), ctx.m.piedra, "laja",
+                   rot=(ctx.r.uniform(-0.03, 0.03), ctx.r.uniform(-0.03, 0.03), ctx.r.uniform(-0.06, 0.06)), bisel=0.01 * k)
+        x += 0.48
+    # el tímpano de adobe que cierra la ranura sobre la puerta
+    C.caja(sobre(ctx, (Li / 2 + 0.12) * k, 0, (puerta + (Hw - 0.1 - puerta) / 2) * k), (0.24 * k, (2 * ranura + 0.06) * k,
+           (Hw - 0.1 - puerta) * k), ctx.m.adobe, "timpano")
+    # el fogón al centro, bajo la laja que falta
+    for dx in (-0.16, 0.16):
+        for j in range(3):
+            ped.poner(sobre(ctx, (j - 1) * 0.2 * k, dx * k, 0.09 * k), 0.17 * k, aplanar=0.8)
+    # el t'uju: un tubo de 15 cm por la esquina noreste, apuntado al sol del 21 de junio a las 10
+    s = C.vector_sol()
+    p_in = Vector((Li / 2 - 0.3, Wi / 2 - 0.02, 0.55))
+    t = 0.0
+    while t < 5.0:
+        q = p_in + s * t
+        if abs(q.x) > Lo / 2 - tal * q.z - 0.02 or abs(q.y) > Wo / 2 - tal * q.z - 0.02:
+            break
+        t += 0.02
+    C.palo((p_in - s * 0.1) * k + Vector((0, 0, ctx.zc)), (p_in + s * (t + 0.03)) * k + Vector((0, 0, ctx.zc)), 0.075 * k,
+           ctx.sombra, lados=12, nombre="tuju")
+    C.figura_madera(sobre(ctx, (Lo / 2 + 0.45) * k, -1.75 * k), ctx.m.figura, alto=1.65 * k, giro=2.6)
+    return k, "La casa de la bóveda", dict(acimut=62, elevacion=22)
+
+
 FORMAS = {f.__name__.split("_")[1]: f for f in (forma_1A, forma_1B, forma_1C, forma_2A, forma_2B, forma_2C, forma_3A,
                                                   forma_3B, forma_3C, forma_4A, forma_4B, forma_4C, forma_5A, forma_5B,
-                                                  forma_5C, forma_E1, forma_E2P, forma_E2C)}
+                                                  forma_5C, forma_E1, forma_E2P, forma_E2C, forma_E3, forma_E4,
+                                                  forma_E5)}

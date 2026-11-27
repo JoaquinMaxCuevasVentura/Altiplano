@@ -130,14 +130,29 @@ Con esta tanda, el autor mandó cinco referencias más y tres fotos suyas:
 | R15 | Una serie de maquetas: una pirámide invertida revestida de placas sobre un bastidor con patas en V, delante de una masa de lajas en estratos; en la última foto solo queda el bastidor |
 | Fotos del autor | La Huaca Pucllana, en Lima, de la cultura Lima: muros de adobitos hechos a mano, puestos de pie, con espacios entre ellos y camas de barro entre las hiladas, y horcones de madera clavados en el suelo |
 
-**Sobre los adobitos.** Es una técnica de la costa, no del altiplano. Para que entre al proyecto con la regla 1 hace falta una fuente publicada, con su página, que describa cómo se hacían y se ponían. Mientras tanto, 5i es solo una pieza formal. Las fotos son del autor y no se suben al repositorio sin que él lo pida.
+**Sobre los adobitos.** Es una técnica de la costa, no del altiplano. Para que entre al proyecto con la regla 1 hace falta una fuente publicada, con su página, que describa cómo se hacían y se ponían. Mientras tanto, 5i es solo una pieza formal. Las fotos son del autor y no se suben al repositorio sin que él lo pida. Más tarde se encontró la fuente: el aparejo de librero que describen Agüero Benites y otros (2015: 3 y 6), que usa la chullpa de E4 (`exploraciones.md`).
 
 **Una idea que sale de cruzar R10 con la tabla del sol.** El espesor de un muro elige qué sol pasa por una rendija, como en el *t'uju* (prueba 5). En un anillo de tierra grueso, cada rendija recibe el sol en una sola época del año. En 5g, las rendijas están en los acimuts de la salida del sol el 21 de junio (65,5°), en los equinoccios (90,6°) y el 21 de diciembre (114,5°), y en el del sol de junio a las 10 (44,3°). Es un calendario que funciona con el cuerpo en cuclillas junto al fuego.
 
 ## 8. Lo que decide el autor
 
-- Si E2 lleva la pirámide o el cono.
-- Qué piezas recompone para las pruebas 3, 4 y 5.
 - Quiénes son los autores de R1, R5 y R6 a R15, y si R4 es *El Niño Escondido en un Pez*.
-- Si las fotos de la Huaca Pucllana entran al repositorio, y qué fuente se usa para los adobitos.
+- Si las fotos de la Huaca Pucllana entran al repositorio.
 - Si se pide permiso a `studio_cifuentes_ethz` antes de mostrar R2 y R3 junto a estas maquetas.
+
+## 9. Las cinco exploraciones (más tarde, el 27 de noviembre)
+
+El autor cerró la exploración formal con cinco obras, que están en `exploraciones.md`:
+
+- **E1** y **E2**, las dos que ya había elegido. E2 lleva el techo de cono.
+- **E3**, *La torre de champa*: su interpretación de R8, una torre de tablas apiladas sobre dos apoyos de piedra, hecha con los materiales del proyecto.
+- **E4**, *La chullpa*: de la pieza 3h, con su nota: «cuatro bases de piedra, una base de madera y encima una cama de piedra para mampostería de adobe, una forma de pirámide tipo chullpas». Después pidió que la base fuera también de piedra y que la pirámide fuera de adobitos de pie.
+- **E5**, *La casa de la bóveda*: de una referencia nueva, R16, con muros de piedra y una bóveda de adobe por aproximación de hiladas. Primero se modeló con cúpula, y el autor aclaró que en la referencia es una bóveda.
+
+Antes de la torre se modeló y se descartó *La A de piedra y tierra*, a partir de R6.
+
+| N.º | Qué muestra |
+|---|---|
+| R16 | Una maqueta: un bloque macizo de planta rectangular y muros en talud, partido en el frente por una ranura de arriba abajo, con una bóveda oscura dentro de los muros |
+
+La autoría de R16 hay que acreditarla antes de mostrarla junto a estas maquetas. La imagen no se reproduce.

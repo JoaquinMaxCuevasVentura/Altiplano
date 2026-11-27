@@ -91,3 +91,42 @@ El documento en Typst suma las formas elegidas, la serie del tiempo y tres pági
 ## 11. Uso de IA
 
 Claude (Anthropic) redactó los textos de `chhaxwa/` y este registro, leyó las fuentes, hizo la investigación, calculó las medidas y escribió el código de Blender y del documento. Los renders son elaboración propia con asistencia de IA. Ninguna imagen viene de un generador de imágenes. El artículo no cambia y su declaración de IA sigue siendo cierta.
+
+## 12. Más tarde, el mismo día: las cinco exploraciones
+
+El autor cerró la exploración con cinco obras y pidió rehacer el documento alrededor de ellas. En el camino tomó estas decisiones:
+
+- **E1 y E2** quedan como estaban. E2 lleva el techo de cono.
+- **La tercera** iba a ser una A de piedra amontonada con tierra apisonada entre los dos muros, sobre una base de pirca, a partir de la referencia R6. Se modeló y el autor la descartó. La reemplaza *La torre de champa*, su interpretación de R8 con los materiales del proyecto: hiladas de champa, una V volada entre dos apoyos que son una pirca y un montón, lajas pasantes y un techo de un agua de fajas de *p'ira* atado a piedras hincadas en el muro, la segunda *chhaxwa* de Bertonio.
+- **La chullpa (E4)** lleva la base de piedra, y no de madera, y una pirámide de adobitos de pie, como se le propuso.
+- **La casa (E5)** lleva una bóveda de adobe por aproximación de hiladas. Primero se modeló con cúpula, y el autor aclaró que en su referencia (R16) es una bóveda.
+
+**Las fuentes nuevas.** Se buscaron y se cotejaron en su página:
+
+- en Squier (1877), las chullpas de Palca (pp. 243-244), de Acora (pp. 352-354) y la cornisa de las casas de champa del Ramis (pp. 391-392). Dan la cámara cubierta por hiladas voladas, la plataforma de piedra, la boca al este de dieciocho pulgadas, la cornisa de ichu prensado y la altura de 16 pies que tiene E4;
+- para el aparejo de librero de la Huaca Pucllana, la ponencia de Agüero Benites y otros (2015: 3 y 6), que es la fuente que faltaba para los adobitos (§10). Allí también se recuerda que en la sierra se construía casi solo con piedra, y E4 lo dice.
+
+En Squier (1877: 352) aparece además Hatuncolla, el señorío del lago Umayo al que pertenecían las chullpas de Sillustani. Es el mismo nombre que el *ayllu* de la novela, Jatun-Kolla. No se usa en el proyecto. Queda anotado por si el autor lo quiere.
+
+**Lo que se hizo:**
+
+| Archivo | Qué es |
+|---|---|
+| `chhaxwa/exploraciones.md` | Las cinco exploraciones, con sus medidas y su origen, la tabla que las cruza con las pruebas y lo que decide el autor |
+| `chhaxwa/blender/formas.py` | E3, E4 y E5 (y `comun.py`, con los adobes como instancias y la hilada que se corta en los vanos) |
+| `chhaxwa/blender/diagramas.py` | Un corte de cada exploración y las cinco a la misma escala, en masas con contornos |
+| `chhaxwa/renders/render_forma_E3.jpg` a `E5.jpg` y `renders/diagramas/` | Los renders a resolución completa y los seis diagramas |
+| `chhaxwa/documento/` | El documento rehecho, en 22 páginas |
+
+**Las medidas.** Las que no tienen fuente están marcadas como proyecto en `exploraciones.md`. Dos tienen consecuencias que el autor debe ver:
+
+- la torre de champa tiene de 4,2 a 5,4 m, y hay que probar primero si se sostiene;
+- la casa de la bóveda llega a 2,6 m, más que los dos metros de la novela, porque una bóveda volada sobre 3,30 m necesita casi dos metros de alto.
+
+**Una imagen de exploración.** El autor preguntó qué opinaba de una imagen de una cúpula de anillos de tierra sobre una base de piedra redonda, con ichu arriba. Se le respondió que tiene fuentes (el putuco y la cámara de la chullpa de Palca), pero que repite la figura de E1, que el ichu tapa la salida del humo y que la piedra es de río y no de cosecha. Se le propuso usarla para repensar E1 o dejarla fuera. Si la imagen viene de un generador, no entra al documento (regla 5). Lo decide el autor.
+
+**Verificación.** Las citas nuevas de la novela (pp. 30, 32, 154, 155 y 156), de Squier y de Agüero Benites y otros se cotejaron en su texto. El documento se compiló sin errores y se revisó página por página. Los diagramas se pasaron a 64 colores.
+
+**Pendiente.** El autor sugirió QCAD para los dibujos de detalle. QCAD no está en los paquetes de este entorno. Su formato es DXF, que puede escribir la biblioteca libre `ezdxf` desde Python, así que se propone dibujar los detalles en DXF, editables en QCAD.
+
+**Uso de IA.** Claude (Anthropic) buscó y cotejó las fuentes nuevas, redactó `exploraciones.md` y los textos del documento, y escribió el código de los modelos, de los diagramas y del documento. Las formas y las decisiones son del autor. Ninguna imagen del proyecto viene de un generador de imágenes.
