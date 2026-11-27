@@ -7,17 +7,18 @@
 | Línea | [El registro de análisis](../README.md) |
 | Origen | commit `c5c9288` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 03:40 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`analisis/`](../../../../analisis/) |
 | La versión anterior | [2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi](../2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) |
+| La versión siguiente | [2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo](../2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **1 que sigue vigente en su lugar,** sin cambios desde este commit: [`analisis/41_auditoria_de_la_tierra_que_queda.md`](../../../../analisis/41_auditoria_de_la_tierra_que_queda.md).
+- **1 archivo de esta versión que ya no es el vigente,** con su ruta original: [`analisis/41_auditoria_de_la_tierra_que_queda.md`](analisis/41_auditoria_de_la_tierra_que_queda.md).
 
 ## La versión completa
 
-En este commit, la línea tenía 42 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 42 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `c5c9288`. Para tenerla entera: `git worktree add ../altiplano_c5c9288 c5c9288`.
+En este commit, la línea tenía 42 archivos: 1 están en esta carpeta, 0 en carpetas de otras versiones y 41 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `c5c9288`. Para tenerla entera: `git worktree add ../altiplano_c5c9288 c5c9288`.
 
 ## Qué cambió respecto de la anterior
 

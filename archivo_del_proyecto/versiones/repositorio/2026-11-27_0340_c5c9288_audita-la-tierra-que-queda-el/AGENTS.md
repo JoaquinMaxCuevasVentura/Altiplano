@@ -1,0 +1,86 @@
+# Instrucciones para agentes de IA
+
+Este archivo es para cualquier asistente que trabaje en el repositorio, como Codex u otros. Léelo entero antes de cambiar nada.
+
+## El proyecto
+
+- **El artículo.** «Cosecha de piedras: el ayllu, el Estado y la mina. Dibujando *Altiplano* de Raúl Botelho Gosálvez», de Joaquin Max Cuevas Ventura. Lee la novela *Altiplano* (1945) desde la arquitectura y el dibujo.
+- **Su estado** (15 de noviembre de 2026):
+  - versión casi final de 79.665 caracteres y 13.476 palabras, 40 páginas en Word, reescrita el 2 de noviembre (`analisis/33`) y corregida el 10 de noviembre tras el cotejo con las fuentes, la variación de los tipos de cita, las cursivas aymaras y la escritura con los pasteles hechos (`analisis/35` a `37`), auditada el 14 de noviembre (`analisis/38`) y pulida el 15, con dos estudios sobre la casa aymara (`analisis/40`). El autor la reescribirá con su voz;
+  - 145 citas de la novela entre comillas y 4 en bloque;
+  - 39 obras en la bibliografía;
+  - ocho figuras y, en serie aparte, siete imágenes de dominio público.
+- **El destino.** Sin elegir, y por ahora sin límite de extensión: el artículo no responde a ninguna convocatoria. La primera candidata es la revista *Atenea*, que pediría recortar unas 5.000 palabras. No vuelvas a quitar por extensión lo que se recuperó el 2 de noviembre sin que el autor lo pida.
+- **El autor decide.** Las interpretaciones, el título, el epígrafe, la tesis y la revista son suyos. Propón, explica y espera su respuesta; no cambies nada de eso por tu cuenta.
+- **Lo que falta, en orden:** `entregables/02_lista_de_envio.md`.
+
+## Dónde está cada cosa
+
+| Ruta | Qué es | ¿Se edita? |
+|---|---|---|
+| `articulo/articulo_cosecha_de_piedras.md` | El texto fuente del artículo | Sí, solo con cambios aprobados por el autor |
+| `articulo/articulo_cosecha_de_piedras.docx` | El Word, generado desde el `.md` | No a mano: se regenera |
+| `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
+| `articulo/figuras/` | Las ocho figuras, las siete imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
+| `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
+| `analisis/01_…` a `analisis/41_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
+| `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
+| `archivo_del_proyecto/` | El archivo del desarrollo: versiones anteriores, inventario, línea de tiempo y pendientes | No a mano: lo arman y lo verifican los guiones de `archivo_del_proyecto/herramientas/` |
+| `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
+
+La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la rama por defecto. La rama `claude/eager-bohr-mx9420` guarda los registros de arquitectura del altiplano (`registros_de_arquitectura/`), de donde salieron dos imágenes del artículo; no está unida, y su `analisis/34_registros_de_arquitectura.md` choca en número con el `34` de esta rama, así que habrá que renumerarlo si se une. La rama `proyecto/la-tierra-que-queda` guarda *La tierra que queda*, tres estudios de arquitectura que GPT hizo en paralelo a partir del artículo; no está unida, tiene un *pull request* en borrador y su auditoría está en `analisis/41`. Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otros proyectos: no las toques.
+
+## Reglas de contenido
+
+1. **No inventes citas, páginas, fuentes ni hallazgos.** Cada cita tiene que existir tal cual en su fuente y en la página indicada. Si no puedes comprobarla, no la añadas: déjala como pendiente y dilo.
+2. **Las fuentes no están en el repositorio.** El repositorio es público, así que no las subas. El autor las guarda en una carpeta privada de su Drive, y con ellas se cotejaron todas las citas el 10 de noviembre (`analisis/35`). No cambies una cita salvo que el autor te dé la fuente. Qué fuentes faltan, con sus páginas, está en `entregables/07_fuentes_para_cotejar.md`; si tienes acceso a esa carpeta o el autor te las adjunta, léelas allí y no copies su contenido a este.
+3. **Las letras de canciones no se copian enteras.** Se citan uno o dos versos con su referencia. La de «Pyramid of Bones» sigue el librillo de la edición japonesa de *Virtue*. La de «Father Electricity» está pendiente de cotejo.
+4. **Lenguaje llano, en español, que no suene a IA.**
+   - Los términos técnicos se explican.
+   - Oraciones de largo variado. No encadenes frases cortas.
+   - Evita los patrones de redacción de la IA que se corrigieron el 2 de noviembre (`analisis/33`): los dos puntos que «revelan» algo, el «no es X, sino Y», la frase redonda al final de cada párrafo, las series de tres y el vocabulario inflado (*crucial*, *clave*, *subrayar*).
+   - Cursiva para las voces aymaras que nombran cosas del mundo andino (*ayllu*, *chujlla*, *apacheta*, *huaca*, *yatiri*, *achachi*, *pututu*, *Jilakata*), fuera de las citas; dentro de un título en cursiva van en redonda. Los préstamos de uso general en el castellano andino (puna, pirca, chácara, yunga, coca) van en redonda.
+   - Comillas latinas «», y “ ” dentro de ellas.
+   - Coma decimal y punto en los millares (61.705).
+5. **Formato de las citas.** Autor y año con página: «(Botelho Gosálvez, 1982 [1945]: 96)», y luego «(ibid.: 102)». Las omisiones dentro de una cita van como «[...]». Mantén las cadenas de *ibid.* correctas si mueves texto.
+6. **Las figuras y las imágenes.** La numeración es la del artículo: el Castillete es la 4, la Pelvis la 5 y el Centinela la 6. Las figuras 1 a 6 son esquemas que se reemplazarán por los escaneos de los pasteles del autor. Desde el 10 de noviembre el texto los describe como pasteles hechos y sus pies dicen «[medidas, año]»: el artículo no se envía hasta cambiar las figuras. Las imágenes hechas con generadores de IA son solo exploración y no se publican.
+   - Las siete imágenes de dominio público van en serie aparte, «Imagen 1-7», para no mover la numeración de las figuras. Cada una necesita un pasaje del artículo que la pida, una fuente con su página y un dominio público comprobado en la ficha de la institución.
+   - Si quitas o añades una, ajusta la cifra de la sección 2, la declaración de IA y el *ibid.* siguiente (`articulo/figuras/LEEME.md`).
+7. **La declaración de uso de IA.** Está al final del artículo y tiene que decir la verdad. Si redactas o corriges texto del artículo, avísale al autor y propón añadir la herramienta que usaste a la declaración.
+8. **Datos personales.** El repositorio es público. No añadas datos personales del autor más allá de los que ya figuran en el artículo.
+
+## Cómo regenerar los archivos
+
+```bash
+pip install pypandoc_binary python-docx pillow
+python3 articulo/generar_docx.py                        # el Word del artículo; informa caracteres y palabras
+python3 entregables/generar_entregables.py              # copia el artículo, hace su PDF (necesita LibreOffice) y los Word de entregables/
+node analisis/esquemas/diagramas/generar_diagramas.js   # las notaciones SVG de las figuras 1 a 8
+python3 articulo/generar_figuras.py                     # los PNG de las figuras (necesita Chromium; variable CHROME)
+python3 taxonomia/generar_tableros.py                   # los tableros de la taxonomía visual y su catálogo (Chromium)
+python3 archivo_del_proyecto/herramientas/armar_archivo.py      # el archivo del proyecto; lee la rama, así que va después del commit
+python3 archivo_del_proyecto/herramientas/verificar_archivo.py  # comprueba el archivo y escribe su verificacion.md
+```
+
+El archivo del proyecto se arma con lo que ya está en la rama: primero va el commit con los cambios y después, en otro commit, el archivo rehecho (`analisis/39`).
+
+Los dos generadores de Word escriben un archivo solo si su contenido cambia, y la plantilla de estilos solo se rehace con `--plantilla`. Si `git status` muestra un Word que no tocaste, algo cambió de verdad.
+
+Cada vez que cambie el artículo:
+
+- regenera los dos Word y el PDF con los comandos de arriba;
+- pon al día las cifras de extensión (caracteres, palabras, páginas) donde aparecen: `README.md`, `entregables/LEEME.md`, `entregables/02_lista_de_envio.md` y `entregables/05_revistas_candidatas.md`;
+- si cambia una cita de la novela, pon al día también la tabla de `entregables/04_fichero_de_pasajes.md`.
+
+## Antes de proponer cambios
+
+- [ ] `git diff --check`: sin espacios sobrantes.
+- [ ] El Word regenerado y la extensión informada por `generar_docx.py`.
+- [ ] Sin archivos de paso: `__pycache__`, PDF de prueba, fotos o letras completas.
+- [ ] Ninguna cita, página ni fuente nueva sin comprobar.
+
+## Ramas y commits
+
+- **No escribas directamente en `claude/altiplano-botelho-article-jm2nlr`.** Trabaja en una rama propia y propone los cambios con un *pull request* hacia esa rama. Así el autor los revisa antes de unirlos, y no chocan con otros asistentes que trabajan en el mismo proyecto.
+- **Commits en español,** con un título que diga qué cambia, como los del historial: `Coteja «Pyramid of Bones» con el librillo japonés de Virtue`. En el cuerpo, explica qué cambió y por qué.
