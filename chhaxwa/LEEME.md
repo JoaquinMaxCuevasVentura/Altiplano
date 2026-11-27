@@ -45,17 +45,20 @@ Además de medir una técnica, cada prueba explora formas. `exploracion_formal.m
 `investigacion_blender.md` reúne la investigación previa al modelado (proyectos de código abierto, materiales procedurales, la luz del altiplano y la simulación), lo que se probó y lo que se propone. El código está en `blender/`:
 
 - `comun.py`, con los materiales procedurales, los generadores de piedra, tierra, paja y madera, el estudio de fotografía y el sol de La Paz;
-- `formas.py`, con las quince maquetas;
+- `formas.py`, con las quince maquetas y las dos formas elegidas;
+- `piezas.py`, con las piezas en diagrama para recomponer, y `aligerar_piezas.py`, que aligera sus PNG;
 - `renderizar.py`, que las renderiza;
 - `prototipo_pirca_paisaje.py`, la primera prueba del flujo, con una pirca en el altiplano.
 
 Se necesita Blender como módulo de Python, instalado con `pip install bpy==5.0.1` en Python 3.11. Desde la raíz del repositorio, `venv_bpy/bin/python chhaxwa/blender/renderizar.py todas` rehace las quince imágenes.
 
+**La elección del autor.** De las quince formas, el autor eligió dos, recomponiéndolas: E1, *La montaña habitada*, para la prueba 1, y E2, *El corral techado*, para la prueba 2, con techo de pirámide o de cono. Para las pruebas 3, 4 y 5 hay 27 piezas en diagrama para recomponer (`renders/piezas/`, hechas con `blender/piezas.py`), y una serie que muestra E2 en el tiempo. Todo está explicado en `exploracion_formal.md` (§6 y §7).
+
 **Los renders son predicciones, no fotos.** Cada archivo se llama `render_…`, y su pie tiene que decirlo. Cuando se construya una maqueta, su foto se pone junto al render, tomada desde el mismo punto de vista. La regla 3 todavía dice que el modelo en el computador solo mide y planifica. `investigacion_blender.md` (§1) propone reescribirla, y lo decide el autor.
 
 ## El documento
 
-`documento/chhaxwa.pdf` reúne el proyecto en dieciséis páginas de 23 × 24 cm. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada prueba ocupa dos páginas enfrentadas, el texto a la izquierda y los renders de sus tres formas a la derecha.
+`documento/chhaxwa.pdf` reúne el proyecto en veintidós páginas de 23 × 24 cm. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada prueba ocupa dos páginas enfrentadas, el texto a la izquierda y los renders de sus tres formas a la derecha.
 
 Se compone en Typst (`documento/chhaxwa.typ`), con la letra Inter, que es libre. Para rehacerlo: `pip install typst` y, desde la raíz, `python3 chhaxwa/documento/compilar.py`.
 

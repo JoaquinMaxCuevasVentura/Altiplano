@@ -6,6 +6,7 @@ Se corre desde la raíz del repositorio:
     venv_bpy/bin/python chhaxwa/blender/renderizar.py 1A 2B        # algunas
     venv_bpy/bin/python chhaxwa/blender/renderizar.py todas         # las quince
     ... --rapido                                                   # 480 px y pocas muestras, para probar
+    ... --medio                                                    # 640 px, para las hojas de contacto
     ... --salida CARPETA                                           # por omisión, chhaxwa/renders/
 
 Cada imagen se llama render_forma_XX.jpg. Son renders de Blender, no fotos de maquetas: así hay que presentarlas.
@@ -55,7 +56,7 @@ def renderizar(clave, salida, rapido=False, semilla=1):
     vista = res[2] if len(res) > 2 else {}
     nuevos = [o for o in bpy.data.objects if o not in antes]
     encuadrar(nuevos, **vista)
-    ancho, alto, muestras = (480, 600, 16) if rapido else (1000, 1250, 80)
+    ancho, alto, muestras = {"rapido": (480, 600, 16), "medio": (640, 800, 28)}.get(rapido, (1000, 1250, 80))
     destino = Path(salida) / f"render_forma_{clave}.jpg"
     C.ajustes_render(ancho, alto, muestras, str(destino), exposicion=-1.5)
     print(f"{clave} · {nombre} · escala 1:{round(1 / k)} · {len(nuevos)} objetos · armada en {time.time() - t0:.0f} s")
@@ -66,11 +67,14 @@ def renderizar(clave, salida, rapido=False, semilla=1):
 
 def main():
     args = [a for a in sys.argv[1:] if a != "--"]
-    rapido = "--rapido" in args
+    rapido = "rapido" if "--rapido" in args else ("medio" if "--medio" in args else None)
     salida = AQUI.parent / "renders"
     if "--salida" in args:
         salida = Path(args[args.index("--salida") + 1])
-    claves = [a for a in args if a in F.FORMAS] or (list(F.FORMAS) if "todas" in args else [])
+    exploracion = [c for c in F.FORMAS if not c.startswith("E")]
+    elegidas = [c for c in F.FORMAS if c.startswith("E")]
+    claves = ([a for a in args if a in F.FORMAS] or (exploracion if "exploracion" in args else [])
+              + (elegidas if "elegidas" in args else []) or (list(F.FORMAS) if "todas" in args else []))
     if not claves:
         sys.exit("Indica qué formas: 1A, 1B, ... 5C, o «todas».")
     salida.mkdir(parents=True, exist_ok=True)

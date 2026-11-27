@@ -62,8 +62,82 @@ Las páginas de la novela son de Botelho Gosálvez (1982 [1945]).
 
 Las maquetas se harían con material real, como las de R2 y R3. Para la piedra, grava angulosa de 1 a 3 cm, que a 1:20 equivale a piedras de 20 a 60 cm. La tierra se tamiza y se apisona en capas dentro de un encofrado de cartón o madera, y la paja es ichu cortado. Los palos, de madera de 2 a 5 mm. La figura de madera mide 8,25 cm a 1:20 y 16,5 cm a 1:10. Cada maqueta se registra con la ficha de `ficha_de_registro.md` y se fotografía como su render, desde el mismo punto de vista, para compararlas.
 
-## 6. Lo que decide el autor
+## 6. La elección del autor
 
-- Cuáles de las quince formas se desarrollan y cuáles se dejan.
-- Quiénes son los autores de R1 y R5, y si R4 es *El Niño Escondido en un Pez*.
+El mismo 27 de noviembre, el autor miró las quince formas y eligió dos, recomponiéndolas:
+
+- **E1. La montaña habitada,** para la prueba 1. Es el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C. En la maqueta tiene 7,2 m de diámetro y 2,6 m de alto, en lugar de 6 y 4, con un óculo arriba y una boca baja al sur, por la que se entra en cuclillas.
+- **E2. El corral techado,** para la prueba 2. Es el cerramiento de 2C, un corral redondo de pirca de doble cara al que le falta un cuarto, por donde se entra, con un techo de ichu que flota 90 cm por encima de la pirca, sobre ocho palos de queñua. El autor propuso el techo cónico de 5C, «pero tal vez en vez de cono» el de la forma de al lado, la pirámide de 4C. Por eso hay dos versiones, E2P con pirámide y E2C con cono, y el autor elige.
+
+Las demás formas quedan como registro de la exploración. Sus renders, a media resolución, están en `renders/`.
+
+## 7. Piezas para recomponer las pruebas 3, 4 y 5
+
+Para las tres pruebas que faltan, el autor pidió más opciones en diagrama, para recomponerlas como hizo con las dos primeras. Cada opción es una pieza: un modelo de masas blanco, con contornos y una figura de 1,65 m, en `renders/piezas/`. Se hacen con `blender/piezas.py`. Las medidas de las piezas son del proyecto y se ajustan al recomponer.
+
+Junto con el pedido, el autor mandó cinco referencias más:
+
+| N.º | Qué muestra |
+|---|---|
+| R6 | Una maqueta de dos planos de madera inclinados, apoyados uno en otro, con paja entre ellos, sobre una plataforma de zancos cortos, con una escalera |
+| R7 | Una maqueta de una masa alta de paja sobre zancos de madera con diagonales, atravesada por una caja de madera abierta |
+| R8 | Una torre de maderos apilados en hiladas, con piezas que sobresalen, sobre dos bases de piedra seca; abajo, entre las bases, una V invertida |
+| R9 y R10 | Un anillo de tierra muy rugosa, con talud por fuera, cortado por rendijas triangulares que lo atraviesan, en una plaza de Londres |
+
+El autor no indicó sus autorías, que hay que anotar antes de mostrar. De ellas salen las piezas 3g, 3h, 4g, 4h y 5g.
+
+| Pieza | Prueba | Qué es | Técnica o dato |
+|---|---|---|---|
+| 3a | 3. El dintel | Paso volado en un muro | Hiladas voladas (Squier, 1877: 313) |
+| 3b | 3 | Corredor volado: el paso se alarga y se recorre de rodillas | Ibid. |
+| 3c | 3 | Paso hundido: se baja por una zanja hasta el paso | Ibid. |
+| 3d | 3 | Celda volada de planta cuadrada, con óculo | Ibid.; el putuco (Vitulas-Quille y Reynoso-Machaca, 2025: 5) |
+| 3e | 3 | Celda volada redonda, con óculo | Ibid. |
+| 3f | 3 | Paso a través de un montón | Ibid.; el montón de la prueba 1 |
+| 3g | 3 | Anillo de tierra con pasos volados, que dan una rendija escalonada (R9, R10) | Ibid. |
+| 3h | 3 | Torre de hiladas voladas sobre dos pircas: la V invertida es un paso volado (R8) | Ibid. |
+| 4a | 4. La *p'ira* | Dos aguas de fajas sobre pares, sin muros | Šolc (2011 [1975]: 105-107) |
+| 4b | 4 | Mesa de fajas: un techo plano sobre palos bajos | Ibid.: 105 |
+| 4c | 4 | Pirámide de ichu sobre palos, con óculo | Ibid.: 107-109 |
+| 4d | 4 | Cono de ichu sobre palos, con óculo | Ibid. |
+| 4e | 4 | Un agua: el techo se apoya en una pirca y en palos | Ibid. |
+| 4f | 4 | Tienda de fajas: el techo llega al suelo y no hay muros | Ibid. |
+| 4g | 4 | Dos planos inclinados con ichu entre ellos, sobre zancos, con una escalera (R6) | Ibid. |
+| 4h | 4 | Masa de ichu sobre zancos, atravesada por una caja de madera (R7) | Ibid.; la caja de E1 |
+| 5a | 5. El fogón | Fogón al centro, en un piso plano | La novela (p. 30) |
+| 5b | 5 | Fogón hundido, con una zanja para bajar | — |
+| 5c | 5 | Plataformas en U alrededor del fogón | Šolc (2011 [1975]: 110-111) |
+| 5d | 5 | *T'uju* en la esquina noreste, apuntado al sol del 21 de junio a las 10 | Yampara Blanco (2019: 13); tabla del sol |
+| 5e | 5 | Óculo de humo en la cumbre de un techo de ichu | Ibid. |
+| 5f | 5 | Casa en cuclillas: un bloque con un hueco de 1,25 m | La novela (p. 32) |
+| 5g | 5 | El anillo del sol: un fogón dentro de un anillo de tierra con rendijas que miran a la salida del sol el 21 de junio, en los equinoccios y el 21 de diciembre, y al sol de junio a las 10 (R9, R10) | Tabla del sol de la prueba 5 |
+
+| 4i | 4 | Torre de fajas: las fajas se traslapan como tejuelas y el muro, en espiral, deja la entrada (R12) | Šolc (2011 [1975]: 105-107) |
+| 4j | 4 | Pirámide invertida de fajas sobre patas en V, delante de una masa de lajas en estratos (R15) | Ibid. |
+| 5h | 5 | Torre de humo: una corona de lamas de ichu sobre patas, encima de una base escalonada de pirca con el fogón (R13, R14) | Yampara Blanco (2019: 13), el humo |
+| 5i | 5 | Muro que deja pasar: adobitos de pie con una separación entre uno y otro, alrededor del fogón (fotos del autor en la Huaca Pucllana) | Falta la fuente: ver abajo |
+
+**La serie del tiempo** (R11, R15). El corral techado de E2 en cuatro estados, en diagrama: recién hecho (t1), con el techo «desfondado» (t2), como quedaron los techos del *ayllu* vacío (Botelho Gosálvez, 1982 [1945]: 79), con solo los palos (t3) y con la pirca a medio caer y su piedra en montones (t4). Un techo de paja dura de diez a doce años (Šolc, 2011 [1975]: 109), y la novela cuenta cómo se caen y cómo se componen (pp. 72 y 156). La serie muestra la obra como algo que se hace y se deshace.
+
+Con esta tanda, el autor mandó cinco referencias más y tres fotos suyas:
+
+| N.º | Qué muestra |
+|---|---|
+| R11 | Una torre redonda de piedra en ruina, con parches donde cayó el revoque y se ve el ladrillo de adentro, y una corona nueva de tablas verticales |
+| R12 | Un tronco de cono revestido de tablillas traslapadas, con la entrada en una vuelta del muro, sobre una plataforma de madera |
+| R13 | Una torre de enfriamiento con lamas verticales sobre patas inclinadas |
+| R14 | Una imagen de proyecto: un bloque de piedra con una galería de madera arriba y una torre de celosía de madera sobre una base escalonada de piedra, con humo |
+| R15 | Una serie de maquetas: una pirámide invertida revestida de placas sobre un bastidor con patas en V, delante de una masa de lajas en estratos; en la última foto solo queda el bastidor |
+| Fotos del autor | La Huaca Pucllana, en Lima, de la cultura Lima: muros de adobitos hechos a mano, puestos de pie, con espacios entre ellos y camas de barro entre las hiladas, y horcones de madera clavados en el suelo |
+
+**Sobre los adobitos.** Es una técnica de la costa, no del altiplano. Para que entre al proyecto con la regla 1 hace falta una fuente publicada, con su página, que describa cómo se hacían y se ponían. Mientras tanto, 5i es solo una pieza formal. Las fotos son del autor y no se suben al repositorio sin que él lo pida.
+
+**Una idea que sale de cruzar R10 con la tabla del sol.** El espesor de un muro elige qué sol pasa por una rendija, como en el *t'uju* (prueba 5). En un anillo de tierra grueso, cada rendija recibe el sol en una sola época del año. En 5g, las rendijas están en los acimuts de la salida del sol el 21 de junio (65,5°), en los equinoccios (90,6°) y el 21 de diciembre (114,5°), y en el del sol de junio a las 10 (44,3°). Es un calendario que funciona con el cuerpo en cuclillas junto al fuego.
+
+## 8. Lo que decide el autor
+
+- Si E2 lleva la pirámide o el cono.
+- Qué piezas recompone para las pruebas 3, 4 y 5.
+- Quiénes son los autores de R1, R5 y R6 a R15, y si R4 es *El Niño Escondido en un Pez*.
+- Si las fotos de la Huaca Pucllana entran al repositorio, y qué fuente se usa para los adobitos.
 - Si se pide permiso a `studio_cifuentes_ethz` antes de mostrar R2 y R3 junto a estas maquetas.

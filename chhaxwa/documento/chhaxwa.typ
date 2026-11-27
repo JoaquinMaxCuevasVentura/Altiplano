@@ -114,7 +114,7 @@
   voz[Las páginas de la novela son de su séptima edición (Botelho Gosálvez, 1982 [1945]). Las medidas que vienen de una fuente llevan autor y página; las que salen de una cuenta dicen cómo se hizo; las demás son decisiones del proyecto, que se comprueban o se cambian al construir. Los renders muestran lo que se espera que salga. Cuando exista la maqueta, su foto se pondrá al lado.])
 
 // --- una prueba: dos páginas -------------------------------------------------------------------------------------
-#let prueba(n, titulo, texto, pasaje, mide, filas, grande, chicas) = {
+#let prueba(n, titulo, texto, pasaje, mide, filas, grande, chicas, eleccion: []) = {
   pagebreak(to: "even", weak: true)
   grid(columns: (17mm, 1fr, 1fr), column-gutter: 5mm,
     titulo-vertical(titulo, "Prueba " + n),
@@ -127,9 +127,12 @@
      #for m in mide [#grid(columns: (3mm, 1fr), [·], m)]])
   place(bottom + left, dy: 0mm, block(width: 100%, ficha(filas)))
   pagebreak()
-  grid(columns: (118mm, 1fr), column-gutter: 7mm,
-    render(grande.at(0), grande.at(1), grande.at(2)),
-    stack(spacing: 6mm, ..chicas.map(c => render(c.at(0), c.at(1), c.at(2), ancho: 56mm))))
+  rotulo[Tres formas exploradas]
+  v(2mm)
+  grid(columns: (1fr, 1fr, 1fr), column-gutter: 5mm,
+    ..(grande, ..chicas).map(c => render(c.at(0), c.at(1), c.at(2))))
+  v(1fr)
+  block(width: 100%, eleccion)
 }
 
 #prueba("1", "La cosecha",
@@ -148,7 +151,8 @@
   (([prueba], [1]), ([técnica], [despedregar y amontonar]), ([escala], [tamaño natural]), ([parcela], [2 × 2 m, proyecto]), ([fajas], [2,5 × 0,7 m, Šolc (2011 [1975]: 105)]), ([fuentes], [Bertonio (2011 [1612]: 77, 330)])),
   (1, "../renders/render_forma_1B.jpg", [*La montaña de piedras.* Toda la cosecha en un cono de piedra seca de 6 m de diámetro y 4 m de alto, hueco, con una boca baja y un óculo. Maqueta 1:20.]),
   ((2, "../renders/render_forma_1A.jpg", [*Cuatro montones y un techo.* La piedra de una parcela sostiene dos fajas de _p'ira_. 1:10.]),
-   (3, "../renders/render_forma_1C.jpg", [*El montón habitado.* Piedra suelta sobre una caja de queñua; se entra en cuclillas. 1:20.]))
+   (3, "../renders/render_forma_1C.jpg", [*El montón habitado.* Piedra suelta sobre una caja de queñua; se entra en cuclillas. 1:20.])),
+  eleccion: [#rotulo[Elegida] \ La forma E1, _La montaña habitada_, recompone 1 y 3: el cono de piedra, más chato, con la entrada forrada de queñua (p. 14).]
 )
 
 #prueba("2", "El relleno",
@@ -169,7 +173,8 @@
   (([prueba], [2]), ([técnica], [pirca de doble cara]), ([escala], [1:5]), ([muro], [2,0 × 1,2 × 0,6 m, proyecto]), ([relleno], [la mitad del corte]), ([fuentes], [Bertonio (2011 [1612]: 246)])),
   (4, "../renders/render_forma_2B.jpg", [*Pilares de mitad y mitad.* Capas alternas de piedra y de tierra apisonada cargan un techo pesado de ichu. Lo que en la pirca se esconde aquí es fachada. 1:20.]),
   ((5, "../renders/render_forma_2A.jpg", [*El tramo de prueba.* Las tres variantes, una junto a otra. 1:5.]),
-   (6, "../renders/render_forma_2C.jpg", [*El corral cortado.* Un tercio menos; el corte muestra el relleno. 1:20.]))
+   (6, "../renders/render_forma_2C.jpg", [*El corral cortado.* Un tercio menos; el corte muestra el relleno. 1:20.])),
+  eleccion: [#rotulo[Elegida] \ La forma E2, _El corral techado_, toma el cerramiento de 6 y el techo de ichu de 10 o de 13 (p. 15).]
 )
 
 #prueba("3", "El dintel",
@@ -188,7 +193,8 @@
   (([prueba], [3]), ([técnica], [hiladas voladas]), ([escala], [tamaño natural]), ([abertura], [60 cm, proyecto]), ([bloque], [40 × 25 × 12 cm, proyecto]), ([fuentes], [Squier (1877: 313)])),
   (7, "../renders/render_forma_3B.jpg", [*La celda volada.* Planta cuadrada de champa, muro inclinado por fuera e hiladas voladas por dentro hasta un óculo, como un putuco. 1:20.]),
   ((8, "../renders/render_forma_3A.jpg", [*El paso.* La abertura de 96 cm que sale de volar 10 cm. 1:10.]),
-   (9, "../renders/render_forma_3C.jpg", [*El umbral hundido.* Se entra bajando por una zanja. 1:20.]))
+   (9, "../renders/render_forma_3C.jpg", [*El umbral hundido.* Se entra bajando por una zanja. 1:20.])),
+  eleccion: [#rotulo[Por elegir] \ Las piezas para recomponer esta prueba están en la p. 17.]
 )
 
 #prueba("4", [La _p'ira_],
@@ -207,7 +213,8 @@
   (([prueba], [4]), ([técnica], [_p'ira_ y armadura atada]), ([escala], [tamaño natural]), ([faja], [2,5 × 0,7 m]), ([techo entero], [unos 7 × 5 m, cálculo]), ([fuentes], [Šolc (2011 [1975]: 102-109)])),
   (10, "../renders/render_forma_4C.jpg", [*El pajar levantado.* Un techo de ichu en capas que sobresalen, sobre doce palos de 1,2 m y un piso excavado: el techo es todo el edificio. 1:20.]),
   ((11, "../renders/render_forma_4A.jpg", [*La faja sobre los pares* y tres muestras de huella. 1:5.]),
-   (12, "../renders/render_forma_4B.jpg", [*El techo a medio subir.* Diez fajas arriba y diez en el suelo. 1:20.]))
+   (12, "../renders/render_forma_4B.jpg", [*El techo a medio subir.* Diez fajas arriba y diez en el suelo. 1:20.])),
+  eleccion: [#rotulo[Por elegir] \ Las piezas para recomponer esta prueba están en la p. 18.]
 )
 
 #prueba("5", "El fogón",
@@ -221,8 +228,69 @@
   (([prueba], [5]), ([técnica], [la casa de Enquelga]), ([escala], [1:10]), ([planta], [5,75 × 3,30 m, cálculo]), ([_t'uju_], [15 × 15 cm, proyecto]), ([fuentes], [Šolc; Yampara Blanco; Suárez Jordán])),
   (13, "../renders/render_forma_5C.jpg", [*El cono del fogón.* Un fogón hundido bajo un cono de ichu sobre ocho palos. El _t'uju_ es un tubo de barro apuntado al sol del 21 de junio a las 10; el humo sale por arriba. 1:20.]),
   ((14, "../renders/render_forma_5A.jpg", [*La chujlla de Enquelga.* La maqueta de la prueba. 1:10.]),
-   (15, "../renders/render_forma_5B.jpg", [*La casa partida.* Un bloque de tierra ahuecado a la medida de las cuclillas. 1:20.]))
+   (15, "../renders/render_forma_5B.jpg", [*La casa partida.* Un bloque de tierra ahuecado a la medida de las cuclillas. 1:20.])),
+  eleccion: [#rotulo[Por elegir] \ Las piezas para recomponer esta prueba están en la p. 19.]
 )
+
+// --- las formas elegidas ----------------------------------------------------------------------------------------------
+#pagebreak(to: "even", weak: true)
+#grid(columns: (17mm, 1fr), column-gutter: 5mm,
+  titulo-vertical("La montaña habitada", "E1 · Prueba 1"),
+  [#render(16, "../renders/render_forma_E1.jpg", [*La montaña habitada.* El cono de piedra de 1B, más chato, con la entrada de 1C: 7,2 m de diámetro, 2,6 m de alto, un óculo arriba y una boca baja al sur forrada de queñua, por la que se entra en cuclillas. Maqueta 1:20.], ancho: 112mm)
+   #v(4mm)
+   #grid(columns: (1fr, 1fr), column-gutter: 7mm,
+     [La elección del autor, el 27 de noviembre: toda la piedra de la cosecha en un solo cono, hueco y bajo, en el que se entra agachado por una caja de madera que atraviesa el muro.],
+     voz[«Quizá un día la montaña de piedras sobrepase la altura del cerro; entonces será buena la tierra rescatada» (p. 9).])])
+#pagebreak()
+#grid(columns: (1fr, 1fr), column-gutter: 6mm,
+  render(17, "../renders/render_forma_E2P.jpg", [*El corral techado, con pirámide.* El corral de 2C, de 6 m, y encima, flotando 90 cm sobre la pirca, el techo de ichu de 4C sobre ocho palos de queñua. 1:20.]),
+  render(18, "../renders/render_forma_E2C.jpg", [*El corral techado, con cono.* El mismo corral con el techo de 5C. El autor elige cuál. 1:20.]))
+#v(1fr)
+#grid(columns: (1fr, 1fr), column-gutter: 7mm,
+  [*E2 · Prueba 2.* El cerramiento es la pirca de doble cara del relleno, en anillo, cortada por la entrada. El techo no la toca: entre la piedra y la paja queda una franja de cielo de 90 cm.],
+  voz[«Las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156).])
+
+// --- la serie del tiempo ----------------------------------------------------------------------------------------------
+#pagebreak()
+#let pieza(codigo, ruta, pie) = block(width: 100%, breakable: false, {
+  image(ruta, width: 100%)
+  v(0.8mm)
+  grid(columns: (6mm, 1fr), column-gutter: 1mm, text(weight: "bold", size: 7.4pt, codigo), text(size: 6.7pt, pie))
+})
+#grid(columns: (17mm, 1fr), column-gutter: 5mm,
+  titulo-vertical("La serie del tiempo", "E2 en cuatro estados"),
+  [#grid(columns: (1fr, 1fr, 1fr, 1fr), column-gutter: 4mm, row-gutter: 4mm,
+     pieza("t1", "../renders/piezas/pieza_t1.png", [Recién hecho.]),
+     pieza("t2", "../renders/piezas/pieza_t2.png", [Los techos «desfondados» (p. 79).]),
+     pieza("t3", "../renders/piezas/pieza_t3.png", [Quedan los palos.]),
+     pieza("t4", "../renders/piezas/pieza_t4.png", [La pirca a medio caer, con su piedra en montones.]))
+   #v(3mm)
+   #grid(columns: (1fr, 1fr), column-gutter: 7mm,
+     [Un techo de paja dura de diez a doce años (Šolc, 2011 [1975]: 109). La serie muestra la obra como algo que se hace y se deshace: «ruinar es también un proceso o una acción» (Dillon, cit. en Radić, 2017: 226).],
+     voz[Diagramas en masas, con una figura de 1,65 m. No son renders realistas.])])
+
+// --- piezas para recomponer -----------------------------------------------------------------------------------------
+#let hoja-piezas(titulo, sub, lista, cols) = {
+  pagebreak()
+  grid(columns: (17mm, 1fr), column-gutter: 5mm,
+    titulo-vertical(titulo, sub),
+    grid(columns: (1fr,) * cols, column-gutter: 4mm, row-gutter: 3mm,
+      ..lista.map(p => pieza(p.at(0), "../renders/piezas/pieza_" + p.at(0) + ".png", p.at(1)))))
+}
+#hoja-piezas("Piezas para el dintel", "Prueba 3", (
+  ("3a", [Paso volado en un muro.]), ("3b", [Corredor volado, de rodillas.]), ("3c", [Paso hundido, por una zanja.]),
+  ("3d", [Celda volada cuadrada, con óculo.]), ("3e", [Celda volada redonda, con óculo.]), ("3f", [Paso a través de un montón.]),
+  ("3g", [Anillo de tierra con pasos volados.]), ("3h", [Torre de hiladas voladas sobre dos pircas.])), 3)
+#hoja-piezas([Piezas para la _p'ira_], "Prueba 4", (
+  ("4a", [Dos aguas de fajas sobre pares.]), ("4b", [Mesa de fajas sobre palos bajos.]), ("4c", [Pirámide de ichu sobre palos.]),
+  ("4d", [Cono de ichu sobre palos.]), ("4e", [Un agua sobre pirca y palos.]), ("4f", [Tienda de fajas hasta el suelo.]),
+  ("4g", [Planos inclinados con ichu, sobre zancos.]), ("4h", [Masa de ichu sobre zancos, con una caja.]), ("4i", [Torre de fajas en espiral.]),
+  ("4j", [Pirámide invertida sobre patas en V.])), 4)
+#hoja-piezas("Piezas para el fogón", "Prueba 5", (
+  ("5a", [Fogón al centro.]), ("5b", [Fogón hundido, con zanja.]), ("5c", [Plataformas en U.]),
+  ("5d", [_T'uju_ al noreste, al sol de junio a las 10.]), ("5e", [Óculo de humo.]), ("5f", [Casa en cuclillas.]),
+  ("5g", [Anillo del sol: rendijas a la salida del sol en junio, los equinoccios y diciembre.]), ("5h", [Torre de humo sobre una base escalonada.]),
+  ("5i", [Adobitos de pie con espacios entre ellos.])), 4)
 
 // --- la exploración formal ----------------------------------------------------------------------------------------
 #pagebreak(to: "even", weak: true)
@@ -239,14 +307,14 @@
    *La proporción y las capas.* Mitad piedra y mitad tierra, o un cuarto y tres cuartos, que en el corte se ven como capas.
 
    *El óculo y el pozo.* Una abertura arriba y un suelo que baja. El _t'uju_ es «salida del humo como una chimenea» (Yampara Blanco, 2019: 13), y bajar a un pozo obliga a agacharse.],
-  voz[Las referencias: dos maquetas de #raw("studio_cifuentes_ethz") (2026), un bloque de tierra con bóveda sobre pilas de piedra seca y una arcada sobre pilares de capas; una pirámide truncada de terciado sobre una plataforma de listones; un cono sobre palos encima de un pozo, y una piedra de granito partida y forrada de madera, que parece ser de Smiljan Radić y Marcela Correa: en _Obra gruesa_ cuentan que cortaron «a mitad el granito de 19 toneladas» para _El Niño Escondido en un Pez_ (Radić, 2017: 230-231). Las imágenes no se reproducen: son obra de terceros.])
+  voz[Las referencias: dos maquetas de #raw("studio_cifuentes_ethz") (2026), un bloque de tierra con bóveda sobre pilas de piedra seca y una arcada sobre pilares de capas; una pirámide truncada de terciado sobre una plataforma de listones; un cono sobre palos encima de un pozo, y una piedra de granito partida y forrada de madera, que parece ser de Smiljan Radić y Marcela Correa: en _Obra gruesa_ cuentan que cortaron «a mitad el granito de 19 toneladas» para _El Niño Escondido en un Pez_ (Radić, 2017: 230-231). Después llegaron diez más: dos planos inclinados con paja, una masa de paja sobre zancos con una caja, una torre de maderos sobre dos pircas, un anillo de tierra con rendijas, una torre en ruina con corona de tablas, un tronco de cono de tablillas, una torre de lamas, una torre de celosía sobre una base escalonada y una pirámide sobre patas en V, y las fotos del autor de los adobitos de la Huaca Pucllana. Las imágenes no se reproducen: son obra de terceros o fotos del autor que no se publican sin su permiso.])
 
 // --- el prototipo en el paisaje ---------------------------------------------------------------------------------------
 #pagebreak()
 #block(width: 100%, {
   image("../renders/render_prototipo_pirca_paisaje.jpg", width: 100%)
   v(1.3mm)
-  grid(columns: (6.5mm, 1fr), column-gutter: 1mm, text(weight: "bold", size: 7.6pt, "16"),
+  grid(columns: (6.5mm, 1fr), column-gutter: 1mm, text(weight: "bold", size: 7.6pt, "19"),
     [#text(size: 6.9pt)[*Una pirca en el altiplano.* La primera prueba del flujo de trabajo: 460 piedras procedurales, 2.260 matas de ichu y el cielo físico de Blender a 3.850 m, con el sol del 21 de junio a las 10 (altura 35,1°, acimut 44,3°).] \ #text(size: 6.9pt, fill: gris)[Render de Blender. No es una foto.]])
 })
 #v(8mm)

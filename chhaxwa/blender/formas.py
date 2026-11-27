@@ -473,6 +473,93 @@ def forma_5C(ctx):
     return k, "El cono del fogón"
 
 
+
+# ----------------------------------------------------------------------------------------------------------------
+# Las formas elegidas por el autor (27 de noviembre): recomposiciones de las anteriores
+# ----------------------------------------------------------------------------------------------------------------
+
+def forma_E1(ctx):
+    """La montaña habitada: el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C."""
+    k = 1 / 20
+    ped = ctx.pedrera()
+    R0, R1, H = 3.6, 0.32, 2.6
+    boca = math.radians(270)                       # la boca mira al sur
+    capas = int(H / 0.2)
+    for i in range(capas):
+        z = i * H / capas
+        rr = R0 + (R1 - R0) * z / H
+        m = int(2 * math.pi * rr / 0.33)
+        fase = ctx.r.uniform(0, 6.28)
+        for j in range(m):
+            a = fase + 2 * math.pi * j / m
+            da = abs(((a - boca) + math.pi) % (2 * math.pi) - math.pi)
+            if z < 1.05 and da * rr < 0.62:
+                continue
+            ped.poner(sobre(ctx, rr * math.cos(a) * k, rr * math.sin(a) * k, (z + 0.09) * k), 0.35 * k,
+                      rot=(ctx.r.uniform(-0.12, 0.12), -math.radians(16), a), aplanar=0.55)
+    C.tronco(sobre(ctx, 0, 0), (R0 - 0.4) * k, (R1 - 0.08) * k, H * 0.98 * k, C.mat_liso("sombra", (0.04, 0.035, 0.03)),
+             lados=32, abierto_arriba=True)
+    # la entrada de 1C: una caja de queñua que atraviesa el muro y asoma
+    y0 = -(R0 - 0.2)
+    for x in (-0.48, 0.48):
+        C.caja(sobre(ctx, x * k, y0 * k, 0.5 * k), (0.07 * k, 1.5 * k, 1.0 * k), ctx.m.palo, "forro")
+    C.caja(sobre(ctx, 0, y0 * k, 1.03 * k), (1.03 * k, 1.5 * k, 0.07 * k), ctx.m.palo, "dintel")
+    C.caja(sobre(ctx, 0, (y0 + 0.9) * k, 0.5 * k), (0.9 * k, 0.05 * k, 1.0 * k), C.mat_liso("oscuro", (0.02, 0.018, 0.015)), "fondo")
+    C.figura_madera(sobre(ctx, 1.3 * k, (y0 - 1.6) * k), ctx.m.figura, giro=0.9, pose="cuclillas")
+    return k, "La montaña habitada"
+
+
+def corral_techado(ctx, techo):
+    """El corral de 2C y, encima, flotando sobre palos de queñua, el techo de ichu de 4C (pirámide) o de 5C (cono)."""
+    k = 1 / 20
+    ped, fina = ctx.pedrera(), ctx.pedrera("fina")
+    R, base, alto, cara = 3.0, 0.7, 1.4, 0.2
+    a_corte = (math.radians(225), math.radians(315))
+    z = 0.0
+    while z < alto - 0.05:
+        hz = ctx.r.uniform(0.18, 0.26)
+        for radio in (R - cara / 2, R - base + cara / 2):
+            n = int(2 * math.pi * radio / 0.36)
+            for i in range(n):
+                a = 2 * math.pi * i / n + (0.5 / n if int(z * 10) % 2 else 0)
+                if a_corte[0] < a < a_corte[1]:
+                    continue
+                ped.poner(sobre(ctx, radio * math.cos(a) * k, radio * math.sin(a) * k, (z + hz / 2) * k), 0.36 * k,
+                          rot=(0, 0, a + math.pi / 2), aplanar=hz / 0.3)
+        for i in range(120):
+            a = ctx.r.uniform(0, 2 * math.pi)
+            if a_corte[0] < a < a_corte[1]:
+                continue
+            rr = ctx.r.uniform(R - base + cara, R - cara)
+            fina.poner(sobre(ctx, rr * math.cos(a) * k, rr * math.sin(a) * k, (z + ctx.r.uniform(0, hz)) * k), 0.07 * k)
+        z += hz
+    for a in a_corte:
+        c = (R - base / 2)
+        C.caja(sobre(ctx, c * math.cos(a) * k, c * math.sin(a) * k, alto / 2 * k), (base * k, 0.06 * k, alto * k),
+               ctx.m.tierra, "corte", rot=(0, 0, a + math.pi / 2))
+    z_alero = 2.3                                  # el techo flota 90 cm sobre la pirca
+    for i in range(8):
+        a = 2 * math.pi * i / 8 + math.pi / 8
+        x, y = 2.0 * math.cos(a), 2.0 * math.sin(a)
+        C.palo(sobre(ctx, x * k, y * k), sobre(ctx, x * k, y * k, z_alero * k), 0.06 * k, ctx.m.palo)
+    if techo == "piramide":
+        t = C.tronco(sobre(ctx, 0, 0, z_alero * k), 3.3 * k, 0.35 * k, 3.2 * k, ctx.m.adobe, lados=4, abierto_arriba=True)
+    else:
+        t = C.tronco(sobre(ctx, 0, 0, z_alero * k), 3.4 * k, 0.3 * k, 3.4 * k, ctx.m.adobe, lados=40, abierto_arriba=True)
+    C.paja_sobre(t, ctx.m.paja, densidad=900000, largo=(0.022, 0.034), ancho=0.0007, semilla=17, capa=0.2 * k)
+    C.figura_madera(sobre(ctx, 0.2 * k, -3.6 * k), ctx.m.figura, giro=0.1)
+    return k
+
+
+def forma_E2P(ctx):
+    """El corral techado, con el techo de pirámide de 4C."""
+    return corral_techado(ctx, "piramide"), "El corral techado (pirámide)", dict(elevacion=11, acimut=-28)
+
+
+def forma_E2C(ctx):
+    """El corral techado, con el techo de cono de 5C."""
+    return corral_techado(ctx, "cono"), "El corral techado (cono)", dict(elevacion=11, acimut=-28)
+
 FORMAS = {f.__name__.split("_")[1]: f for f in (forma_1A, forma_1B, forma_1C, forma_2A, forma_2B, forma_2C, forma_3A,
                                                   forma_3B, forma_3C, forma_4A, forma_4B, forma_4C, forma_5A, forma_5B,
-                                                  forma_5C)}
+                                                  forma_5C, forma_E1, forma_E2P, forma_E2C)}

@@ -72,6 +72,22 @@ Se eligió Typst antes que SILE porque se instala como paquete de Python (`pip i
 - Si se pide permiso a `studio_cifuentes_ethz`.
 - Si los dos metros de la novela son los muros, como se leyó aquí, o la altura total de la *chujlla* (prueba 5).
 
-## 10. Uso de IA
+## 10. Más tarde, el mismo día: la elección del autor y las piezas
+
+El autor miró las quince formas y eligió dos, recomponiéndolas:
+
+- **E1. La montaña habitada** (prueba 1): el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C.
+- **E2. El corral techado** (prueba 2): el cerramiento de 2C con el techo de ichu de 5C o, como sugirió, el de 4C. Se modelaron las dos versiones y el autor elige.
+
+Para las pruebas 3, 4 y 5 pidió más opciones en diagrama, para recomponerlas él. Se hicieron 27 piezas en diagrama (modelos de masas blancos, con contornos y una figura de 1,65 m), en `chhaxwa/renders/piezas/`, con `chhaxwa/blender/piezas.py`: ocho para el dintel, diez para la *p'ira* y nueve para el fogón. A ellas se suma la serie del tiempo, que muestra E2 en cuatro estados, del techo nuevo a la pirca caída. Mandó en tres tandas quince referencias más y sus fotos de los adobitos de la Huaca Pucllana. Las piezas que salen de ellas y la descripción de cada referencia están en `chhaxwa/exploracion_formal.md` (§6 y §7).
+
+Dos cautelas:
+
+- **Los adobitos de la Huaca Pucllana** son una técnica de la costa, de la cultura Lima, y no del altiplano. Para que entren con la regla 1 hace falta una fuente publicada, con su página. Las fotos son del autor y no se suben al repositorio sin que él lo pida.
+- **Las quince formas de la exploración** quedan como registro, renderizadas a media resolución. Solo E1 y E2 están a resolución completa.
+
+El documento en Typst suma las formas elegidas, la serie del tiempo y tres páginas de piezas, y pasa a 22 páginas.
+
+## 11. Uso de IA
 
 Claude (Anthropic) redactó los textos de `chhaxwa/` y este registro, leyó las fuentes, hizo la investigación, calculó las medidas y escribió el código de Blender y del documento. Los renders son elaboración propia con asistencia de IA. Ninguna imagen viene de un generador de imágenes. El artículo no cambia y su declaración de IA sigue siendo cierta.
