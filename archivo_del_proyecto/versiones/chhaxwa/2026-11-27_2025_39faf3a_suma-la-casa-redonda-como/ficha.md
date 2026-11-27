@@ -7,17 +7,18 @@
 | Línea | [Chhaxwa. Cinco pruebas de construcción](../README.md) |
 | Origen | commit `39faf3a` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 20:25 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`chhaxwa/`](../../../../chhaxwa/) |
 | La versión anterior | [2026-11-27_2006_c5a0489_suma-las-cinco-exploraciones-de](../2026-11-27_2006_c5a0489_suma-las-cinco-exploraciones-de/ficha.md) |
+| La versión siguiente | [2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y](../2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **8 que siguen vigentes en su lugar,** sin cambios desde este commit: [`chhaxwa/LEEME.md`](../../../../chhaxwa/LEEME.md), [`chhaxwa/blender/diagramas.py`](../../../../chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](../../../../chhaxwa/blender/formas.py), [`chhaxwa/blender/renderizar.py`](../../../../chhaxwa/blender/renderizar.py), [`chhaxwa/exploraciones.md`](../../../../chhaxwa/exploraciones.md), [`chhaxwa/fuentes.md`](../../../../chhaxwa/fuentes.md), [`chhaxwa/renders/diagramas/diagrama_x6.png`](../../../../chhaxwa/renders/diagramas/diagrama_x6.png), [`chhaxwa/renders/render_forma_E6.jpg`](../../../../chhaxwa/renders/render_forma_E6.jpg).
+- **8 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`chhaxwa/LEEME.md`](chhaxwa/LEEME.md), [`chhaxwa/blender/diagramas.py`](chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](chhaxwa/blender/formas.py), [`chhaxwa/blender/renderizar.py`](chhaxwa/blender/renderizar.py), [`chhaxwa/exploraciones.md`](chhaxwa/exploraciones.md), [`chhaxwa/fuentes.md`](chhaxwa/fuentes.md), [`chhaxwa/renders/diagramas/diagrama_x6.png`](chhaxwa/renders/diagramas/diagrama_x6.png), [`chhaxwa/renders/render_forma_E6.jpg`](chhaxwa/renders/render_forma_E6.jpg).
 
 ## La versión completa
 
-En este commit, la línea tenía 82 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 82 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `39faf3a`. Para tenerla entera: `git worktree add ../altiplano_39faf3a 39faf3a`.
+En este commit, la línea tenía 82 archivos: 8 están en esta carpeta, 6 en carpetas de otras versiones y 68 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `39faf3a`. Para tenerla entera: `git worktree add ../altiplano_39faf3a 39faf3a`.
 
 ## Qué cambió respecto de la anterior
 
