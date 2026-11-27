@@ -60,4 +60,5 @@ Lo vigente está en su lugar: [`analisis/`](../../../analisis/). Cada carpeta gu
 | 2026-11-27 14:25 | `3cf90c6` | [Replantea el proyecto paralelo como cinco pruebas de construcción](2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo/ficha.md) | versión anterior | 0 |
 | 2026-11-27 15:50 | `346e912` | [Rehace el proyecto paralelo como Chhaxwa, con su investigación y sus formas](2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como/ficha.md) | versión anterior | 1 |
 | 2026-11-27 16:08 | `2ea6eaa` | [Suma las dos formas elegidas por el autor y las piezas para recomponer](2026-11-27_1608_2ea6eaa_suma-las-dos-formas-elegidas-por/ficha.md) | versión anterior | 1 |
-| 2026-11-27 20:06 | `c5a0489` | [Suma las cinco exploraciones de Chhaxwa y rehace el documento alrededor de ellas](2026-11-27_2006_c5a0489_suma-las-cinco-exploraciones-de/ficha.md) | versión vigente | 0 |
+| 2026-11-27 20:06 | `c5a0489` | [Suma las cinco exploraciones de Chhaxwa y rehace el documento alrededor de ellas](2026-11-27_2006_c5a0489_suma-las-cinco-exploraciones-de/ficha.md) | versión anterior | 1 |
+| 2026-11-27 20:25 | `39faf3a` | [Suma la casa redonda como candidata y analiza a qué exploración reemplazaría](2026-11-27_2025_39faf3a_suma-la-casa-redonda-como/ficha.md) | versión vigente | 0 |

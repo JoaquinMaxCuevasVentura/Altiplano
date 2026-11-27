@@ -19,7 +19,7 @@
 
 ## La versión completa
 
-En este commit, la línea tenía 69 archivos: 1 están en esta carpeta, 7 en carpetas de otras versiones y 61 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `10935ad`. Para tenerla entera: `git worktree add ../altiplano_10935ad 10935ad`.
+En este commit, la línea tenía 69 archivos: 1 están en esta carpeta, 8 en carpetas de otras versiones y 60 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `10935ad`. Para tenerla entera: `git worktree add ../altiplano_10935ad 10935ad`.
 
 ## Qué cambió respecto de la anterior
 
