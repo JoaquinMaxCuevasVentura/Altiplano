@@ -96,3 +96,11 @@ En orden:
 - Qué hacer con el *pull request*.
 
 Nada de esto toca el artículo, que sigue como quedó el 15 de noviembre (`analisis/40`).
+
+## Nota del 27 de noviembre de 2026, más tarde
+
+El autor compartió el extracto de *Obra gruesa* que le había pasado a GPT y las imágenes que lo llevaron a empezar el proyecto. Eso corrige tres puntos de esta auditoría (el detalle está en `analisis/42`):
+
+- **Las cinco maquetas.** Los apartados 6 y 7 tomaron como maquetas del autor las «cinco maquetas de Joaquin Cuevas» que nombran los guiones de GPT. Las imágenes que compartió el autor son capturas de la cuenta `studio_cifuentes_ethz` («HS26 – Atlas Works – 50% Stone and 50% Earth»), y muestran justamente cinco maquetas. Todo indica que GPT tomó por obra del autor las de ese taller. No hay que fotografiar esas maquetas como si fueran suyas: si el proyecto las muestra, van como referencia y con su crédito.
+- **El ensayo de Chandler.** Su título es «Smiljan Radić: Traducir el diseño a la materialidad–el “trabajo de riesgo”» y empieza en la p. 213 de *Obra gruesa*. Las pp. 214-217 que daba GPT caen dentro del ensayo.
+- ***Corral*, p. 204,** queda confirmado en el propio libro.
