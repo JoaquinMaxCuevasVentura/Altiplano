@@ -52,6 +52,7 @@ El artículo nació para el dossier «Narrativas, lenguajes y representaciones: 
 
 - `claude/eager-bohr-mx9420`: los registros de arquitectura del altiplano, 95 láminas reunidas el 10 y el 11 de noviembre. De allí salieron las imágenes 1 y 3 del artículo.
 - `codex/analisis-churata` y `codex/auditoria-version-final`: los dos informes de Codex, que ya están en `analisis/32` y `analisis/34`.
+- `proyecto/la-tierra-que-queda`: *La tierra que queda*, tres estudios de arquitectura que GPT hizo en paralelo a partir del artículo, con lo que pudo recuperar de ellos. Tiene abierto un *pull request* en borrador. La auditoría está en `analisis/41`.
 
 Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otro proyecto, la tipografía *Contenida*.
 
@@ -100,6 +101,7 @@ Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de o
 | `analisis/38_auditoria_del_proyecto.md` | Auditoría del 14 de noviembre: las decisiones tomadas hasta entonces, lo que se corrigió en el artículo, en los documentos finales y en los generadores, las dos imágenes que entraron de los registros de arquitectura y lo que queda como propuesta para el autor |
 | `analisis/39_archivo_del_proyecto.md` | El archivo del proyecto, del 15 de noviembre: de dónde se reconstruyó cada cosa, cómo se ordenó, qué quedó fuera y cómo se rehace y se comprueba |
 | `analisis/40_version_casi_final.md` | La versión casi final del 15 de noviembre: los dos estudios sobre la casa aymara que entran en la sección 3, lo que se leyó y no entró, y la pasada de pulido contra los patrones de redacción de la IA |
+| `analisis/41_auditoria_de_la_tierra_que_queda.md` | Auditoría del 27 de noviembre de *La tierra que queda*, el proyecto paralelo de GPT: lo que vale, lo que falla frente a la novela y a las reglas del proyecto, y cómo llevarlo adelante |
 | `reports/Convocatorias abiertas para el artículo.md` | Revistas y convocatorias abiertas al 10 de octubre de 2026 para enviar el artículo, con los veredictos de extensión recalculados el 11 de octubre para la versión final: diez candidatas ordenadas (primera, *Atenea*), ficha de cada una, plazos, extensión, cobros, filiación, política de IA y plan de la semana. Los sitios oficiales estaban bloqueados: todo dato sale de extractos del buscador y hay que confirmarlo en la página de cada revista (notas en `research_notes/`) |
 | `analisis/esquemas/fig1…fig6` | Los esquemas de encaje anteriores de los seis pasteles, con la numeración de la serie. Se conservan, pero desde el 1 de octubre las Figuras 1 a 6 salen de las notaciones de `diagramas/` (`23`) |
 | `analisis/esquemas/guias/` | Seis guías de composición sin texto, a 1536 × 1024 o 1024 × 1536, para usar con los prompts de `17`, la máscara opcional de la Figura 5 y dos guías de los diagramas (Figuras 7 y 8; la 8, vertical) para los prompts de `20` y `21`, y sus entradas con rótulos, máscaras y mapas de zonas para los de `22`. Se regeneran con `generar_guias.py` (las de los diagramas, después de `generar_diagramas.js`) |

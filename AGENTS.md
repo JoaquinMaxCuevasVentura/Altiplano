@@ -23,13 +23,13 @@ Este archivo es para cualquier asistente que trabaje en el repositorio, como Cod
 | `articulo/articulo_cosecha_de_piedras_cambios.docx` | El Word con los cambios marcados respecto del commit 6f9bed8, el anterior a la versión final del 2 de noviembre | No a mano |
 | `articulo/figuras/` | Las ocho figuras, las siete imágenes de dominio público y su `LEEME.md` | Sí, siguiendo el `LEEME.md` |
 | `entregables/` | Los archivos finales: el artículo en Word y PDF y seis documentos (`.md` y `.docx`) | Los `.md`, sí; los `.docx` y el `.pdf` se regeneran |
-| `analisis/01_…` a `analisis/40_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
+| `analisis/01_…` a `analisis/41_…` | El registro de cada etapa, con su fecha | **No se reescribe.** Solo se añaden notas o secciones fechadas |
 | `taxonomia/` | La taxonomía visual: 51 imágenes de dominio público, su catálogo y cuatro tableros | `catalogo.json` y `LEEME.md`, sí; los tableros y `catalogo.md` se regeneran con `generar_tableros.py` |
 | `reports/` y `research_notes/` | El informe de convocatorias y sus notas: registro | Igual que `analisis/` |
 | `archivo_del_proyecto/` | El archivo del desarrollo: versiones anteriores, inventario, línea de tiempo y pendientes | No a mano: lo arman y lo verifican los guiones de `archivo_del_proyecto/herramientas/` |
 | `README.md` | El índice del repositorio | Sí, cuando cambie algo de lo que describe |
 
-La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la rama por defecto. La rama `claude/eager-bohr-mx9420` guarda los registros de arquitectura del altiplano (`registros_de_arquitectura/`), de donde salieron dos imágenes del artículo; no está unida, y su `analisis/34_registros_de_arquitectura.md` choca en número con el `34` de esta rama, así que habrá que renumerarlo si se une. Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otros proyectos: no las toques.
+La rama del artículo es `claude/altiplano-botelho-article-jm2nlr`, que es la rama por defecto. La rama `claude/eager-bohr-mx9420` guarda los registros de arquitectura del altiplano (`registros_de_arquitectura/`), de donde salieron dos imágenes del artículo; no está unida, y su `analisis/34_registros_de_arquitectura.md` choca en número con el `34` de esta rama, así que habrá que renumerarlo si se une. La rama `proyecto/la-tierra-que-queda` guarda *La tierra que queda*, tres estudios de arquitectura que GPT hizo en paralelo a partir del artículo; no está unida, tiene un *pull request* en borrador y su auditoría está en `analisis/41`. Las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otros proyectos: no las toques.
 
 ## Reglas de contenido
 
