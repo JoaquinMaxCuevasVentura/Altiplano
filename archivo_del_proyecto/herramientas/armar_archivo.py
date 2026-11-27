@@ -112,6 +112,8 @@ GENERADORES = [   # (patrón de la ruta, generador)
     (r"^registros_de_arquitectura/(hoja_.+|catalogo\.md)$", "registros_de_arquitectura/generar_hojas.py, desde catalogo.json"),
     (r"^chhaxwa/renders/render_forma_", "chhaxwa/blender/renderizar.py (Blender 5.0.1)"),
     (r"^chhaxwa/renders/render_prototipo_", "chhaxwa/blender/prototipo_pirca_paisaje.py (Blender 5.0.1)"),
+    (r"^chhaxwa/renders/piezas/", "chhaxwa/blender/piezas.py (Blender 5.0.1) y aligerar_piezas.py"),
+    (r"^chhaxwa/renders/diagramas/", "chhaxwa/blender/diagramas.py (Blender 5.0.1) y aligerar_piezas.py"),
     (r"^chhaxwa/documento/chhaxwa\.pdf$", "chhaxwa/documento/compilar.py (Typst), desde chhaxwa.typ"),
 ]
 
@@ -266,6 +268,12 @@ NO_ARCHIVADO = [
     ("El primer intento de láminas en SVG", "Seis láminas A3 con axonometrías de proceso trazadas en SVG con un guion propio",
      "prueba", "chhaxwa", "material descartado", "carpeta de trabajo de la sesión (laminas_svg/)",
      "Se dejó cuando el autor pidió modelar en Blender: los dibujos tenían errores de orden de las caras (analisis/43). Las axonometrías de proceso saldrán de los modelos de Blender."),
+    ("La A de piedra y tierra", "Una exploración de Chhaxwa: dos muros de piedra amontonada con tierra apisonada entre ellos, sobre una base de pirca",
+     "prueba", "chhaxwa", "material descartado", "carpeta de trabajo de la sesión (rapidas/)",
+     "Se modeló y el autor la descartó; la reemplaza la torre de champa (analisis/43, §12). Solo hubo renders rápidos."),
+    ("Las referencias de las exploraciones E3 y E5", "Una torre de tablas sobre dos apoyos de piedra (R8) y un bloque en talud con una ranura y una bóveda (R16), y una imagen de una cúpula de tierra que mandó el autor",
+     "recurso: referencia visual", "chhaxwa", "", "adjuntos de esta conversación (27 de noviembre)",
+     "No se archivan: son obra de terceros o de origen sin confirmar. chhaxwa/exploracion_formal.md y exploraciones.md las describen."),
     ("Blender como módulo de Python", "bpy 5.0.1, instalado en un entorno virtual de la sesión",
      "herramienta: generador o guion", "chhaxwa", "", "carpeta de trabajo de la sesión (venv_bpy/)",
      "No se archiva: se instala con pip install bpy==5.0.1 (chhaxwa/LEEME.md)."),
@@ -485,7 +493,10 @@ def descripcion(ruta, datos):
             (r"^proyectos/la-tierra-que-queda/guiones_recuperados/", "Guion recuperado de La tierra que queda"),
             (r"^proyectos/la-tierra-que-queda/comprobaciones/", "Comprobación de la geometría de la chujlla de La tierra que queda"),
             (r"^registros_de_arquitectura/hoja_", "Hoja de contacto de los registros de arquitectura"),
+            (r"^chhaxwa/renders/render_forma_E(\d)\w*\.jpg$", "Render de la exploración E{0} de Chhaxwa (no es una foto)"),
             (r"^chhaxwa/renders/render_forma_(\w+)\.jpg$", "Render de la maqueta de forma {0} de Chhaxwa (no es una foto)"),
+            (r"^chhaxwa/renders/diagramas/diagrama_x(\d)\.png$", "Corte en diagrama de la exploración E{0} de Chhaxwa"),
+            (r"^chhaxwa/renders/diagramas/diagrama_serie\.png$", "Las cinco exploraciones de Chhaxwa a la misma escala, en diagrama"),
             (r"^chhaxwa/renders/render_prototipo_", "Render de prueba de Chhaxwa: una pirca en el altiplano (no es una foto)"),
         ]
         for patron, texto in reglas:

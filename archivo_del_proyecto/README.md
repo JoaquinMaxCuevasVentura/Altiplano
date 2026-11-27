@@ -6,14 +6,14 @@ No es una versión nueva del proyecto ni una selección: guarda también los bor
 
 ## Qué abarca
 
-- **La rama del artículo,** `claude/altiplano-botelho-article-jm2nlr`: 58 commits, del 25.09.2026 al 27.11.2026 (de `903f43e` a `10935ad`).
-- **De git:** 457 versiones anteriores de archivos (442 copiadas tal cual y 15 que repiten un contenido ya guardado) y los 280 archivos vigentes, registrados en su lugar.
+- **La rama del artículo,** `claude/altiplano-botelho-article-jm2nlr`: 59 commits, del 25.09.2026 al 27.11.2026 (de `903f43e` a `c5a0489`).
+- **De git:** 468 versiones anteriores de archivos (453 copiadas tal cual y 15 que repiten un contenido ya guardado) y los 291 archivos vigentes, registrados en su lugar.
 - **De la conversación:** 123 piezas de la carpeta de trabajo (111 copiadas): borradores, dos Word de cambios que se enviaron al autor, guiones de comprobación y vistas de página.
 - **Copias funcionales:** 319 imágenes copiadas junto a las páginas que las piden, para que se vean como entonces.
 - **Otras ramas:** 211 registros. Las dos ramas de Codex entregaron su archivo a la rama del artículo. La de los registros de arquitectura (`claude/eager-bohr-mx9420`) y la de *La tierra que queda* (`proyecto/la-tierra-que-queda`), que hizo GPT, son otros trabajos que salen de esta rama; se registran y no se copian.
 - **En línea:** 11 canales del atlas de Are.na, descritos y no copiados.
-- **Lo que falta:** 20 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
-- **Peso de lo copiado:** 198 MB de git, 82 MB de copias funcionales y 32 MB de la conversación. Lo que viene de git no agranda el repositorio, porque git guarda una sola vez cada contenido.
+- **Lo que falta:** 22 registros de lo que no se archiva o no está, con el motivo. Están en [pendientes.md](pendientes.md).
+- **Peso de lo copiado:** 202 MB de git, 82 MB de copias funcionales y 32 MB de la conversación. Lo que viene de git no agranda el repositorio, porque git guarda una sola vez cada contenido.
 - **Fuera del archivo:** las ramas `claude/fervent-lovelace-exgqzl` y `claude/zen-cannon-kqblsc` son de otro proyecto (la tipografía *Contenida*) y no se tocan.
 
 ## Cómo está ordenado
@@ -44,12 +44,12 @@ archivo_del_proyecto/
 | [El artículo](versiones/articulo/README.md) | 35 de git, 5 de la conversación | [`articulo/`](../articulo/) |
 | [Las figuras y las imágenes del artículo](versiones/figuras/README.md) | 26 de git, 1 de la conversación | [`articulo/figuras/`](../articulo/figuras/) |
 | [Los esquemas, las notaciones y las guías](versiones/esquemas/README.md) | 10 de git | [`analisis/esquemas/`](../analisis/esquemas/) |
-| [El registro de análisis](versiones/analisis/README.md) | 54 de git | [`analisis/`](../analisis/) |
+| [El registro de análisis](versiones/analisis/README.md) | 55 de git | [`analisis/`](../analisis/) |
 | [Los entregables](versiones/entregables/README.md) | 9 de git | [`entregables/`](../entregables/) |
 | [La taxonomía visual](versiones/taxonomia/README.md) | 5 de git | [`taxonomia/`](../taxonomia/) |
 | [El informe de convocatorias](versiones/convocatorias/README.md) | 6 de git | [`reports/`](../reports/) |
-| [Chhaxwa. Cinco pruebas de construcción](versiones/chhaxwa/README.md) | 3 de git | [`chhaxwa/`](../chhaxwa/) |
-| [El índice y las reglas del repositorio](versiones/repositorio/README.md) | 51 de git | [`README.md y AGENTS.md`](../) |
+| [Chhaxwa. Cinco pruebas de construcción](versiones/chhaxwa/README.md) | 4 de git | [`chhaxwa/`](../chhaxwa/) |
+| [El índice y las reglas del repositorio](versiones/repositorio/README.md) | 52 de git | [`README.md y AGENTS.md`](../) |
 | [Las comprobaciones de la conversación](versiones/comprobaciones/README.md) | 8 de la conversación | no entraron en git |
 | [La tierra que queda (rama de GPT, sin unir)](versiones/tierra/README.md) | 1 de la rama relacionada | no está en esta rama |
 | [Los registros de arquitectura (rama relacionada, sin unir)](versiones/registros/README.md) | 3 de la rama relacionada | no está en esta rama |
@@ -108,7 +108,7 @@ Las fichas citan el mensaje del commit y el documento de `analisis/` que respald
 
 ## La versión vigente
 
-Es el estado de la rama en el commit `10935ad` (27.11.2026): el artículo en [`articulo/articulo_cosecha_de_piedras.md`](../articulo/articulo_cosecha_de_piedras.md), sus Word y los archivos de [`entregables/`](../entregables/). Qué es cada cosa: el [`README.md`](../README.md) de la raíz. Lo que falta para enviar el artículo: [`entregables/02_lista_de_envio.md`](../entregables/02_lista_de_envio.md).
+Es el estado de la rama en el commit `c5a0489` (27.11.2026): el artículo en [`articulo/articulo_cosecha_de_piedras.md`](../articulo/articulo_cosecha_de_piedras.md), sus Word y los archivos de [`entregables/`](../entregables/). Qué es cada cosa: el [`README.md`](../README.md) de la raíz. Lo que falta para enviar el artículo: [`entregables/02_lista_de_envio.md`](../entregables/02_lista_de_envio.md).
 
 ## Cómo recuperar una versión
 

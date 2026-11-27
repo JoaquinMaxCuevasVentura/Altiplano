@@ -56,4 +56,5 @@ Lo vigente está en su lugar: [`la raíz del repositorio`](../../../). Cada carp
 | 2026-11-15 03:23 | `91bc40e` | [Deja el artículo en versión casi final, con dos estudios sobre la casa aymara](2026-11-15_0323_91bc40e_deja-el-articulo-en-version-casi/ficha.md) | versión anterior | 2 |
 | 2026-11-27 03:40 | `c5c9288` | [Audita «La tierra que queda», el proyecto paralelo de GPT](2026-11-27_0340_c5c9288_audita-la-tierra-que-queda-el/ficha.md) | versión anterior | 2 |
 | 2026-11-27 14:25 | `3cf90c6` | [Replantea el proyecto paralelo como cinco pruebas de construcción](2026-11-27_1425_3cf90c6_replantea-el-proyecto-paralelo/ficha.md) | versión anterior | 2 |
-| 2026-11-27 15:50 | `346e912` | [Rehace el proyecto paralelo como Chhaxwa, con su investigación y sus formas](2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como/ficha.md) | versión vigente | 0 |
+| 2026-11-27 15:50 | `346e912` | [Rehace el proyecto paralelo como Chhaxwa, con su investigación y sus formas](2026-11-27_1550_346e912_rehace-el-proyecto-paralelo-como/ficha.md) | versión anterior | 2 |
+| 2026-11-27 20:06 | `c5a0489` | [Suma las cinco exploraciones de Chhaxwa y rehace el documento alrededor de ellas](2026-11-27_2006_c5a0489_suma-las-cinco-exploraciones-de/ficha.md) | versión vigente | 0 |
