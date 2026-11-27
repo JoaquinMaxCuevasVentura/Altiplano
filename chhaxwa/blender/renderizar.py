@@ -80,7 +80,7 @@ def main():
     salida = AQUI.parent / "renders"
     if "--salida" in args:
         salida = Path(args[args.index("--salida") + 1])
-    exploracion = [c for c in F.FORMAS if not c.startswith("E")]
+    exploracion = [c for c in F.FORMAS if c[0].isdigit()]
     elegidas = [c for c in F.FORMAS if c.startswith("E")]
     claves = ([a for a in args if a in F.FORMAS] or (exploracion if "exploracion" in args else [])
               + (elegidas if "elegidas" in args else []) or (list(F.FORMAS) if "todas" in args else []))

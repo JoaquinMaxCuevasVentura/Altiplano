@@ -140,14 +140,15 @@ Con esta tanda, el autor mandó cinco referencias más y tres fotos suyas:
 - Si las fotos de la Huaca Pucllana entran al repositorio.
 - Si se pide permiso a `studio_cifuentes_ethz` antes de mostrar R2 y R3 junto a estas maquetas.
 
-## 9. Las cinco exploraciones (más tarde, el 27 de noviembre)
+## 9. Las seis exploraciones (más tarde, el 27 de noviembre)
 
-El autor cerró la exploración formal con cinco obras, que están en `exploraciones.md`:
+El autor cerró la exploración formal con seis obras, que están en `exploraciones.md`:
 
 - **E1** y **E2**, las dos que ya había elegido. E2 lleva el techo de cono.
-- **E3**, *La torre de champa*: su interpretación de R8, una torre de tablas apiladas sobre dos apoyos de piedra, hecha con los materiales del proyecto.
+- **E3**, *La casa redonda*: de una imagen del autor, corregida, con el paso volado, las fajas de *p'ira* y la *chhaxwa* que antes llevaba la torre de champa.
 - **E4**, *La chullpa*: de la pieza 3h, con su nota: «cuatro bases de piedra, una base de madera y encima una cama de piedra para mampostería de adobe, una forma de pirámide tipo chullpas». Después pidió que la base fuera también de piedra y que la pirámide fuera de adobitos de pie.
 - **E5**, *La casa de la bóveda*: de una referencia nueva, R16, con muros de piedra y una bóveda de adobe por aproximación de hiladas. Primero se modeló con cúpula, y el autor aclaró que en la referencia es una bóveda.
+- **E6**, *La pirwa*: la torre de champa, su interpretación de R8, una torre de tablas apiladas sobre dos apoyos de piedra. Fue E3 hasta que la reemplazó la casa redonda, y volvió como troje alto.
 
 Antes de la torre se modeló y se descartó *La A de piedra y tierra*, a partir de R6.
 

@@ -156,3 +156,31 @@ Al modelarla apareció una sexta: una cúpula por aproximación de hiladas se ci
 Reemplazar a E1 o a E5 también es posible, con lo que pierde cada caso (`exploraciones.md`). El documento no se cambió: se rehace cuando el autor elija.
 
 **Uso de IA.** Claude (Anthropic) modeló la candidata, buscó y cotejó la fuente de la casa redonda y redactó el análisis. La imagen del autor no se subió al repositorio.
+
+## 14. Más tarde, el mismo día: la casa redonda como E3 y la *pirwa* como E6
+
+El autor decidió que la casa redonda reemplazara a la torre de champa (E3), y no a E2 como se le proponía. Se le advirtió que la torre traía tres cosas que ninguna otra obra tenía, y pidió pasárselas a la casa:
+
+- **el umbral:** se entra por un paso de piedra con jambas de 60 cm y tres hiladas que vuelan 10 cm hasta cerrarse a 96 cm, la regla de la prueba 3, y el pasaje del «dintel de Jatun-Kolla» (p. 155) pasa a esta casa;
+- **la *p'ira*:** la tierra se cubre con seis cursos de fajas de 0,7 m traslapadas como tejuelas, que además resuelven el agua de la lluvia;
+- **la *chhaxwa*:** los palos del sombrero de ichu se atan a tres piedras hincadas en el collar del óculo, y unas lajas hincadas sirven de escalones.
+
+Después preguntó si convenía mejorar la torre para que ocupara otro lugar y, si aportaba, incluirla como sexta exploración. Se juzgó que sí, si tenía un uso. Yampara Blanco describe las *pirwas* de la vivienda aymara como «silos aéreos de granos, quinua y papas deshidratadas», con una boca arriba para cargar y otra abajo para sacar (2019: 14), y la novela termina con un «pronóstico de abundancia, de trojes altos y almiares llenos» (p. 157). La torre volvió como E6, *La pirwa*:
+
+- se bajó a 3,6 y 4,6 m;
+- las lajas pasantes se ordenaron en una escalera hasta una boca de carga;
+- en la clave de la V se puso una trampa para sacar lo guardado. Que esa boca esté abajo y no a un costado es decisión del proyecto.
+
+Las citas de Yampara Blanco (pp. 9, 13 y 14) y de la novela (pp. 16, 155 y 157) se cotejaron en su texto.
+
+**La serie queda de seis.** Va de una cosecha a otra: el montón de piedras (E1), la pirca (E2), la casa redonda (E3), la tumba (E4), la casa rectangular (E5) y el troje (E6). E3 y E5 forman la pareja de casas de Yampara Blanco, y E6 es una de sus *pirwas*. E3 es la única obra que usa las cinco pruebas.
+
+**Lo que cambió en los archivos:**
+
+- `formas.py`: E3 es la casa redonda y E6 la *pirwa*, y la candidata E6 desaparece;
+- `diagramas.py`: tiene los cortes de las seis y la serie de seis a la misma escala;
+- `exploraciones.md` se rehízo para las seis;
+- el documento pasa a veinticuatro páginas, con la tabla de seis filas y un par de páginas para E6;
+- los renders y los cortes de E3 y E6 se reemplazaron, y los de la torre y de la candidata quedan en la historia de la rama.
+
+**Uso de IA.** Claude (Anthropic) modeló los cambios, buscó y cotejó las fuentes de la *pirwa* y redactó los textos. Las decisiones son del autor.

@@ -1,4 +1,4 @@
-"""Los diagramas de las cinco exploraciones de Chhaxwa: un corte de cada una y las cinco a la misma escala.
+"""Los diagramas de las seis exploraciones de Chhaxwa: un corte de cada una y las seis a la misma escala.
 
 Cada corte parte la exploración por la mitad para mostrar cómo se construye: qué es piedra, qué es tierra, qué es
 adobe, qué es paja y qué es madera. Son modelos de masas con contornos (Freestyle), en metros reales, con una figura de
@@ -35,6 +35,7 @@ def colores():
     D["champa"] = C.mat_liso("d_champa", (0.36, 0.30, 0.24), 0.9)
     D["pira"] = C.mat_liso("d_pira", (0.56, 0.49, 0.40), 0.9)
     D["vacio"] = C.mat_liso("d_vacio", (0.16, 0.15, 0.14), 0.9)
+    D["grano"] = C.mat_liso("d_grano", (0.86, 0.78, 0.55), 0.9)
 
 
 def figura(pos, giro=0.0, pose="pie"):
@@ -148,56 +149,125 @@ def x2(corte=True):
 
 
 # ----------------------------------------------------------------------------------------------------------------
-# E3. La torre de champa: media torre, cortada a lo largo; el corte atraviesa la V
+# E3. La casa redonda: media casa, cortada por el paso de entrada del este
 # ----------------------------------------------------------------------------------------------------------------
 
+def revolucion(perfil, a0, a1, mat, n=96, nombre="revolucion"):
+    """Un sólido de revolución: el polígono cerrado perfil [(radio, z), ...] girado entre los ángulos a0 y a1."""
+    entero = abs((a1 - a0) - 2 * math.pi) < 1e-6
+    seg = max(2, int(n * (a1 - a0) / (2 * math.pi)))
+    cols = seg if entero else seg + 1
+    bm = bmesh.new()
+    anillos = [[bm.verts.new((max(r, 0.002) * math.cos(a0 + (a1 - a0) * j / seg), max(r, 0.002) * math.sin(a0 + (a1 - a0) * j / seg),
+                              z)) for (r, z) in perfil] for j in range(cols)]
+    npf = len(perfil)
+    for j in range(cols if entero else cols - 1):
+        A, B = anillos[j], anillos[(j + 1) % cols]
+        for i in range(npf):
+            i2 = (i + 1) % npf
+            bm.faces.new((A[i], A[i2], B[i2], B[i]))
+    if not entero:
+        bm.faces.new(anillos[0])
+        bm.faces.new(list(reversed(anillos[-1])))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces[:])
+    return C.objeto(nombre, C.malla_de_bm(bm, nombre, mat, suave=False))
+
+
 def x3(corte=True):
-    X, Y, Hp, g, Hl, Hh, BH, BA = 1.5, 0.8, 0.9, 0.5, 4.2, 5.4, 0.12, 0.25
+    import formas as F
+    Ri, e, Hb, hh, tal = 2.0, 0.6, 1.2, 0.12, math.tan(math.radians(5))
+    R = Ri + e
+    paso_y, Xe = 0.72, R + 0.6
+    radios = F.cupula_perfil(Ri, hh, v0=0.10)
+    full = 2 * math.pi
     m = 0 if corte else 1
+    for (ro0, ro1, ri, mat) in ((R, R - tal * Hb, R - 0.2, D["piedra"]), (R - 0.2, R - 0.2, Ri + 0.2, D["menuda"]),
+                                (Ri + 0.2, Ri + 0.2, Ri, D["piedra"])):     # la pirca: dos caras y el relleno
+        d = math.asin(min(1.0, (paso_y + 0.02) / ri))
+        a0, a1 = (d, math.pi) if corte else (d, full - d)
+        sector(ro0, ro1, ri, ri, 0, Hb, a0, a1, mat)
+    for j in range(10):                                                # el paso: jambas y tres hiladas voladas
+        z = j * 0.12
+        y_in = 0.3 if j < 5 else 0.3 - 0.1 * (j - 4)
+        if y_in <= 0.001:
+            caja(Ri - 0.05, Xe, -paso_y * m, paso_y, z, z + 0.12, D["piedra"], "paso")
+        else:
+            caja(Ri - 0.05, Xe, y_in, paso_y, z, z + 0.12, D["piedra"], "paso")
+            if not corte:
+                caja(Ri - 0.05, Xe, -paso_y, -y_in, z, z + 0.12, D["piedra"], "paso")
+    caja(R - 0.1, Xe + 0.05, -(paso_y + 0.04) * m, paso_y + 0.04, Hb, Hb + 0.08, D["laja"], "laja")
+    a0, a1 = (0, math.pi) if corte else (0, full)
+    for i, r in enumerate(radios):                                     # la cúpula de champa, volada
+        sector(r + 0.4, r + 0.4, r, r, Hb + i * hh, hh - 0.005, a0, a1, D["champa"])
+    z_c = Hb + len(radios) * hh
+    Hd, r_ocu = z_c - Hb + 0.1, radios[-1] + 0.15
+    A = R - tal * Hb + 0.02 - r_ocu
 
-    def tope(x):
-        return Hl + (x + X) / (2 * X) * (Hh - Hl)
-    caja(-X - 0.1, -g, -0.9 * m, 0.9, 0, Hp, D["piedra"], "pirca")
-    pila = sector(1.0, 0.55, 0.0, 0.0, 0, Hp, 0, math.pi if corte else 2 * math.pi, D["piedra"], nombre="monton")
-    pila.location.x = (g + X) / 2
-    pila.scale.y = 1.55
-    for (x0, x1_) in ((-X - 0.1, -g), (g, X + 0.1)):
-        caja(x0, x1_, -0.9 * m, 0.9, Hp - 0.02, Hp + 0.05, D["laja"], "lajas")
-    z0 = Hp + 0.05
-    i = 0
-    while True:                                                        # las patas y la V de hiladas voladas
-        w = g - 0.06 * (i + 1)
-        z = z0 + i * BH
-        if w <= 0.03:
-            break
-        for (xa, xb) in ((-X, -w), (w, X)):
-            caja(xa, xb, -Y * m, Y, z, z + BH, D["champa"], "hilada")
-        i += 1
-    zc = z0 + i * BH
-    caja(-X, X, -Y * m, Y, zc, zc + BH, D["champa"], "cierre")
-    zc += BH
-    perfil = [(-X, zc), (X, zc), (X, tope(X)), (-X, tope(-X))]
-    extruir(perfil, "y", Y - BA, Y, D["champa"], "muro_n")
-    if not corte:
-        extruir(perfil, "y", -Y, -Y + BA, D["champa"], "muro_s")
-    for (xa, xb) in ((-X, -X + BA), (X - BA, X)):
-        extruir([(xa, zc), (xb, zc), (xb, tope(xb)), (xa, tope(xa))], "y", -(Y - BA) * m, Y - BA, D["champa"], "testero")
-    for j in range(6):                                                 # palos de queñua y las piedras hincadas
-        x = -X + 0.25 + j * 0.5
-        zt = tope(x) + 0.06
-        C.palo((x, -(Y + 0.28) * m, zt), (x, Y + 0.28, zt), 0.06, D["madera"])
-        for yy in ((Y,) if corte else (-Y, Y)):
-            s = 1 if yy > 0 else -1
-            caja(x - 0.12, x + 0.12, yy - s * 0.1 if s > 0 else yy - 0.22, yy + 0.22 if s > 0 else yy + 0.1,
-                 zt - 0.5, zt - 0.36, D["laja"], "chhaxwa")
-    th = math.atan((Hh - Hl) / (2 * X))
+    def elipse(t):
+        return (r_ocu + A * math.cos(t), Hb - 0.02 + Hd * math.sin(t))
 
-    xa, xb = -X - 0.25, X + 0.25
-    za, zb = tope(-X) + 0.12 - 0.25 * math.tan(th), tope(X) + 0.12 + 0.25 * math.tan(th)
-    extruir([(xa, za), (xb, zb), (xb, zb + 0.06), (xa, za + 0.06)], "y", -(Y + 0.28) * m, Y + 0.28, D["pira"], "fajas")
-    for (xl, zl) in ((-0.9, 2.7), (0.4, 3.3), (1.0, 2.4), (-0.3, 3.9), (0.8, 4.3)):      # lajas pasantes
-        caja(xl - 0.2, xl + 0.2, Y - 0.15, Y + 0.25, zl, zl + 0.06, D["laja"], "laja")
-    figura((-0.1, 0.25, 0), giro=math.pi / 2)
+    def normal(t):
+        v = (Hd * math.cos(t), A * math.sin(t))
+        n_ = math.hypot(*v)
+        return (v[0] / n_, v[1] / n_)
+    borde = []                                                         # el relleno de tierra sobre las colas
+    for i in range(len(radios) - 1, -1, -1):
+        borde += [(radios[i] + 0.4, Hb + (i + 1) * hh), (radios[i] + 0.4, Hb + i * hh)]
+    perfil = [elipse(math.pi / 2 * q / 30) for q in range(31)] + [(radios[-1], Hb - 0.02 + Hd), (radios[-1], z_c)] + borde
+    revolucion(perfil, a0, a1, D["tierra"], nombre="relleno")
+    ts = [math.pi / 2 * q / 300 for q in range(301)]                   # las fajas de p'ira, traslapadas
+    arco = [0.0]
+    for t0, t1 in zip(ts, ts[1:]):
+        p0, p1 = elipse(t0), elipse(t1)
+        arco.append(arco[-1] + math.hypot(p1[0] - p0[0], p1[1] - p0[1]))
+
+    def en(sv):
+        for q in range(1, len(arco)):
+            if arco[q] >= sv:
+                return ts[q - 1] + (sv - arco[q - 1]) / (arco[q] - arco[q - 1]) * (ts[q] - ts[q - 1])
+        return ts[-1]
+    s0 = 0.0
+    while s0 < arco[-1] - 0.05:
+        s1 = min(s0 + 0.7, arco[-1])
+        ta, tb = en(s0), en(s1)
+        (ra, za), (rb, zb), (na, nb) = elipse(ta), elipse(tb), (normal(ta), normal(tb))
+        lo = (ra + na[0] * 0.06, za + na[1] * 0.06)
+        hi = (rb + nb[0] * 0.01, zb + nb[1] * 0.01)
+        revolucion([lo, hi, (hi[0] - nb[0] * 0.045, hi[1] - nb[1] * 0.045), (lo[0] - na[0] * 0.045, lo[1] - na[1] * 0.045)],
+                   a0, a1, D["pira"], nombre="faja")
+        s0 += 0.55
+    z_t = Hb - 0.02 + Hd
+    for j in range(3):                                                 # el sombrero, sus palos y las chhaxwa
+        a = 2 * math.pi * j / 3 + 0.4
+        if corte and math.sin(a) < 0:
+            continue
+        C.palo(((r_ocu + 0.05) * math.cos(a), (r_ocu + 0.05) * math.sin(a), z_t + 0.05),
+               (0.36 * math.cos(a), 0.36 * math.sin(a), z_t + 0.36), 0.035, D["madera"])
+        C.caja(((r_ocu + 0.28) * math.cos(a), (r_ocu + 0.28) * math.sin(a), z_t - 0.02), (0.5, 0.2, 0.1), D["laja"], "chhaxwa",
+               rot=(0, 0, a))
+    sector(0.62, 0.04, 0.5, 0.02, z_t + 0.3, 0.4, a0, a1, D["paja"])
+    if not corte:                                                      # los escalones, al sureste
+        a_e = math.radians(-60)
+        for q in range(6):
+            zq = Hb + 0.3 + 0.36 * q
+            if zq > z_t - 0.2:
+                break
+            r_e = elipse(math.asin(min(1.0, (zq - Hb + 0.02) / Hd)))[0]
+            C.caja(((r_e + 0.1) * math.cos(a_e), (r_e + 0.1) * math.sin(a_e), zq + 0.03), (0.5, 0.3, 0.07), D["laja"],
+                   "escalon", rot=(0, 0, a_e))
+    for dx in (-0.16, 0.16):                                           # el fogón
+        caja(-0.3, 0.3, dx - 0.07 if not corte or dx > 0 else 0, dx + 0.07, 0, 0.16, D["piedra"], "fogon")
+    if FIGURAS:
+        C.palo((0, 0.1, 0.2), (0, 0.1, z_t + 0.5), 0.07, D["humo"], lados=10)
+        s = C.vector_sol()                                              # el t'uju y el sol del 21 de junio a las 10
+        p_in = Vector((Ri * math.cos(math.radians(45)), Ri * math.sin(math.radians(45)), 0.65))
+        t = 0.0
+        while t < 3.0 and (p_in + s * t).xy.length < R - tal * (p_in + s * t).z:
+            t += 0.02
+        C.palo(p_in - s * 0.05, p_in + s * (t + 0.05), 0.09, D["vacio"], lados=12)
+        C.palo(p_in - s * (p_in.z / s.z), p_in + s * (t + 1.4), 0.03, D["sol"], lados=8)
+    figura((-0.9, 0.6, 0), giro=0.4, pose="cuclillas")
+    figura((Xe + 0.5, 0.35, 0), giro=math.pi, pose="rodillas")
 
 
 # ----------------------------------------------------------------------------------------------------------------
@@ -315,12 +385,73 @@ def x5(corte=True):
 
 
 # ----------------------------------------------------------------------------------------------------------------
-# Las cinco a la misma escala, de izquierda a derecha
+# E6. La pirwa: media torre de champa, cortada a lo largo; el corte atraviesa la V y la trampa
+# ----------------------------------------------------------------------------------------------------------------
+
+def x6(corte=True):
+    X, Y, Hp, g, Hl, Hh, BH, BA = 1.5, 0.8, 0.9, 0.5, 3.6, 4.6, 0.12, 0.25
+    m = 0 if corte else 1
+
+    def tope(x):
+        return Hl + (x + X) / (2 * X) * (Hh - Hl)
+    caja(-X - 0.1, -g, -0.9 * m, 0.9, 0, Hp, D["piedra"], "pirca")
+    pila = sector(1.0, 0.55, 0.0, 0.0, 0, Hp, 0, math.pi if corte else 2 * math.pi, D["piedra"], nombre="monton")
+    pila.location.x = (g + X) / 2
+    pila.scale.y = 1.55
+    for (x0, x1_) in ((-X - 0.1, -g), (g, X + 0.1)):
+        caja(x0, x1_, -0.9 * m, 0.9, Hp - 0.02, Hp + 0.05, D["laja"], "lajas")
+    z0 = Hp + 0.05
+    i = 0
+    while True:                                                        # las patas y la V de hiladas voladas
+        w = g - 0.06 * (i + 1)
+        z = z0 + i * BH
+        if w <= 0.03:
+            break
+        for (xa, xb) in ((-X, -w), (w, X)):
+            caja(xa, xb, -Y * m, Y, z, z + BH, D["champa"], "hilada")
+        i += 1
+    zc = z0 + i * BH
+    for (xa, xb, ya, yb) in ((-X, -0.18, -Y * m, Y), (0.18, X, -Y * m, Y), (-0.18, 0.18, 0.16, Y)) + \
+            (((-0.18, 0.18, -Y, -0.16),) if not corte else ()):
+        caja(xa, xb, ya, yb, zc, zc + BH, D["champa"], "cierre")    # la clave de la V, con la boca de abajo
+    caja(-0.2, 0.2, -0.18 * m, 0.18, zc - 0.035, zc - 0.005, D["madera"], "trampa")
+    zc += BH
+    caja(-X + BA, X - BA, -(Y - BA) * m, Y - BA, zc, zc + 1.1, D["grano"], "grano")   # lo guardado: chuño, quinua
+    perfil = [(-X, zc), (X, zc), (X, tope(X)), (-X, tope(-X))]
+    extruir(perfil, "y", Y - BA, Y, D["champa"], "muro_n")
+    if not corte:
+        muro_s = extruir(perfil, "y", -Y, -Y + BA, D["champa"], "muro_s")
+        P.restar(muro_s, caja(0.72, 1.08, -Y - 0.1, -Y + BA + 0.1, Hh - 1.1, Hh - 0.75, D["champa"], "boca_de_carga"))
+        for q in range(6):                                             # la escalera de lajas hasta la boca de carga
+            xl, zl = -X + 0.3 + (0.55 + X - 0.3) * q / 5, Hp + 0.45 + 0.36 * q
+            caja(xl - 0.22, xl + 0.22, -Y - 0.26, -Y + 0.1, zl, zl + 0.06, D["laja"], "escalon")
+    for (xa, xb) in ((-X, -X + BA), (X - BA, X)):
+        extruir([(xa, zc), (xb, zc), (xb, tope(xb)), (xa, tope(xa))], "y", -(Y - BA) * m, Y - BA, D["champa"], "testero")
+    for j in range(6):                                                 # palos de queñua y las piedras hincadas
+        x = -X + 0.25 + j * 0.5
+        zt = tope(x) + 0.06
+        C.palo((x, -(Y + 0.28) * m, zt), (x, Y + 0.28, zt), 0.06, D["madera"])
+        for yy in ((Y,) if corte else (-Y, Y)):
+            s = 1 if yy > 0 else -1
+            caja(x - 0.12, x + 0.12, yy - s * 0.1 if s > 0 else yy - 0.22, yy + 0.22 if s > 0 else yy + 0.1,
+                 zt - 0.5, zt - 0.36, D["laja"], "chhaxwa")
+    th = math.atan((Hh - Hl) / (2 * X))
+
+    xa, xb = -X - 0.25, X + 0.25
+    za, zb = tope(-X) + 0.12 - 0.25 * math.tan(th), tope(X) + 0.12 + 0.25 * math.tan(th)
+    extruir([(xa, za), (xb, zb), (xb, zb + 0.06), (xa, za + 0.06)], "y", -(Y + 0.28) * m, Y + 0.28, D["pira"], "fajas")
+    for (xl, zl) in ((-0.9, 2.4), (0.4, 2.9), (1.0, 2.2), (-0.3, 3.3), (0.8, 3.7)):      # lajas pasantes
+        caja(xl - 0.2, xl + 0.2, Y - 0.15, Y + 0.25, zl, zl + 0.06, D["laja"], "laja")
+    figura((-0.1, 0.25, 0), giro=math.pi / 2)
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# Las seis a la misma escala, de izquierda a derecha
 # ----------------------------------------------------------------------------------------------------------------
 
 def serie():
     global FIGURAS
-    lugares = ((x1, 0.0), (x2, 8.6), (x3, 15.4), (x4, 21.0), (x5, 28.4))
+    lugares = ((x1, 0.0), (x2, 8.6), (x3, 15.4), (x4, 21.9), (x5, 29.2), (x6, 36.6))
     for (f, ox) in lugares:
         antes = set(bpy.data.objects)
         FIGURAS = False
@@ -329,70 +460,14 @@ def serie():
         for ob in bpy.data.objects:
             if ob not in antes:
                 ob.location.x += ox
-        y_fig = {x1: -4.4, x2: -3.6, x3: -1.6, x4: -2.3, x5: -3.4}[f]
-        P.figura((ox + (0.9 if f is not x3 else -2.2), y_fig, 0), giro=0.1)
+        y_fig = {x1: -4.4, x2: -3.6, x3: -3.4, x4: -2.3, x5: -3.4, x6: -1.6}[f]
+        P.figura((ox + (0.9 if f is not x6 else -2.2), y_fig, 0), giro=0.1)
 
 
-DIAGRAMAS = {"x1": x1, "x2": x2, "x3": x3, "x4": x4, "x5": x5, "serie": serie}
+DIAGRAMAS = {"x1": x1, "x2": x2, "x3": x3, "x4": x4, "x5": x5, "x6": x6, "serie": serie}
 VISTAS = {"serie": dict(acimut=0, elevacion=0, ancho=2400, alto=560, aire=1.03, suelo=-0.005)}
 
 
-# ----------------------------------------------------------------------------------------------------------------
-# La candidata: la casa redonda, cortada por la puerta del este
-# ----------------------------------------------------------------------------------------------------------------
-
-def x6(corte=True):
-    import formas as F
-    Ri, e, Hb, hh, tal = 2.0, 0.6, 1.2, 0.12, math.tan(math.radians(5))
-    R = Ri + e
-    radios = F.cupula_perfil(Ri, hh, v0=0.10)
-    full = 2 * math.pi
-    for (z0, z1, medio) in ((0, 1.0, 0.3), (1.0, 1.2, 0.55)):          # la pirca: dos caras y el relleno, con la puerta
-        for (ro0, ro1, ri, mat) in ((R - tal * z0, R - tal * z1, R - 0.2, D["piedra"]), (R - 0.2, R - 0.2, Ri + 0.2, D["menuda"]),
-                                    (Ri + 0.2, Ri + 0.2, Ri, D["piedra"])):
-            d = math.asin(min(1.0, medio / ri))
-            a0, a1 = (d, math.pi) if corte else (d, full - d)
-            sector(ro0, ro1, ri, ri, z0, z1 - z0, a0, a1, mat)
-    caja(Ri, R, 0 if corte else -0.55, 0.55, 1.0, 1.18, D["laja"], "dintel")
-    a0, a1 = (0, math.pi) if corte else (0, full)
-    for i, r in enumerate(radios):                                     # la cúpula de champa, volada
-        sector(r + 0.4, r + 0.4, r, r, Hb + i * hh, hh - 0.005, a0, a1, D["champa"])
-    z_top = Hb + len(radios) * hh
-    Hd, r_ocu, dd = z_top - Hb + 0.1, radios[-1] + 0.15, 0.16
-    A = R - tal * Hb + 0.02 - r_ocu
-    for kb in range(5):                                                # el relleno de tierra en cinco anillos
-        t0, t1 = math.pi / 2 * kb / 5, math.pi / 2 * (kb + 1) / 5
-        pasos = 6
-        for q in range(pasos):
-            ta, tb = t0 + (t1 - t0) * q / pasos, t0 + (t1 - t0) * (q + 1) / pasos
-            za, zb = Hb + Hd * math.sin(ta), Hb + Hd * math.sin(tb)
-            ra, rb = r_ocu + (A - dd * kb) * math.cos(ta), r_ocu + (A - dd * kb) * math.cos(tb)
-            h_ = zb - za
-            ri_a = max(radios[min(len(radios) - 1, int((za - Hb) / hh))] + 0.4, r_ocu - 0.15)
-            sector(ra, rb, ri_a, ri_a, za, h_, a0, a1, D["tierra"])
-    for j in range(3):                                                 # el sombrero de ichu
-        a = 2 * math.pi * j / 3 + 0.4
-        if corte and math.sin(a) < 0:
-            continue
-        C.palo((0.42 * math.cos(a), 0.42 * math.sin(a), z_top), (0.36 * math.cos(a), 0.36 * math.sin(a), z_top + 0.36), 0.035,
-               D["madera"])
-    sector(0.62, 0.04, 0.5, 0.02, z_top + 0.3, 0.4, a0, a1, D["paja"])
-    for dx in (-0.16, 0.16):                                           # el fogón
-        caja(-0.3, 0.3, dx - 0.07 if not corte or dx > 0 else 0, dx + 0.07, 0, 0.16, D["piedra"], "fogon")
-    if FIGURAS:
-        C.palo((0, 0.1, 0.2), (0, 0.1, z_top + 0.5), 0.07, D["humo"], lados=10)
-        s = C.vector_sol()                                              # el t'uju y el sol del 21 de junio a las 10
-        p_in = Vector((Ri * math.cos(math.radians(45)), Ri * math.sin(math.radians(45)), 0.65))
-        t = 0.0
-        while t < 3.0 and (p_in + s * t).xy.length < R - tal * (p_in + s * t).z:
-            t += 0.02
-        C.palo(p_in - s * 0.05, p_in + s * (t + 0.05), 0.09, D["vacio"], lados=12)
-        C.palo(p_in - s * (p_in.z / s.z), p_in + s * (t + 1.4), 0.03, D["sol"], lados=8)
-    figura((-0.9, 0.6, 0), giro=0.4, pose="cuclillas")
-    figura((R + 0.8, 0.4, 0), giro=2.8)
-
-
-DIAGRAMAS["x6"] = x6
 
 
 def renderizar(clave, salida, muestras=16):

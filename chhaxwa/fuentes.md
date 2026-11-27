@@ -12,9 +12,9 @@ Todas las citas de esta carpeta se cotejaron en su página el 27 de noviembre de
 | Squier, Ephraim George (1877). *Peru: Incidents of Travel and Exploration in the Land of the Incas*. Nueva York: Harper & Brothers. Dominio público | La capilla baja de Uchusuma, los puentes de champa con hiladas voladas y las casas de champa del Ramis; las chullpas de Palca, de Acora y de Sillustani: su cámara volada, su plataforma de piedra, su boca al este y su cornisa de ichu | 243-244, 255, 313, 352-354 y 391-392 | 3 y las exploraciones E3, E4 y E5 |
 | Suárez Jordán, Marina (1990). «Permanencia y cambio: el caso de la vivienda aymara en centros poblados del altiplano boliviano». *Ciudad y Territorio*, 85: 127-135 | La puerta de la casa grande hacia el este | 130 | 5 |
 | Vitulas-Quille, Yasmani y Reynoso-Machaca, Karina (2025). «Putuco as a Pre-Hispanic Construction Technology and Ch'ampa as Traditional Masonry Blocks». En *Modern Masonry Construction – The Fusion of Tradition, Technology, and Sustainability*. IntechOpen. https://doi.org/10.5772/intechopen.1009877 | La planta del putuco, el secado de la champa, la jornada del putuco en *ayni*, sus ritos y la puerta hacia los puntos intermedios | 5, 9-11 | 3 y 5 |
-| Yampara Blanco, Pacha Yapucha (2019). «La arquitectura de los pueblos milenarios del altiplano». *Revista Nodo*, 14(27): 8-23 | El *t'uju*, la puerta al este y el uso de la casa redonda en la época de heladas; la pareja de la casa redonda y la cuadrada | 9 y 13 | 5 y la casa redonda |
+| Yampara Blanco, Pacha Yapucha (2019). «La arquitectura de los pueblos milenarios del altiplano». *Revista Nodo*, 14(27): 8-23 | El *t'uju*, la puerta al este y el uso de la casa redonda en la época de heladas; la pareja de la casa redonda y la cuadrada; las *pirwas*, silos aéreos | 9, 13 y 14 | 5, E3 y E6 |
 
-**La novela.** Botelho Gosálvez, Raúl (1982 [1945]). *Altiplano*. 7.ª ed. La Paz: Juventud. Se citan las pp. 8, 9, 10, 30, 31, 32, 41, 72, 79, 154, 155 y 156.
+**La novela.** Botelho Gosálvez, Raúl (1982 [1945]). *Altiplano*. 7.ª ed. La Paz: Juventud. Se citan las pp. 8, 9, 10, 16, 30, 31, 32, 41, 72, 79, 154, 155, 156 y 157.
 
 ## Las referencias del método
 

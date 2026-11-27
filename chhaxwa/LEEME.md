@@ -8,7 +8,7 @@ El proyecto es de Joaquin Max Cuevas Ventura. Va aparte de su artículo «Cosech
 
 ## Estado (27 de noviembre de 2026)
 
-**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las cinco exploraciones que eligió el autor están modeladas en Blender, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
+**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las seis exploraciones que eligió el autor están modeladas en Blender, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
 
 Las medidas de cada prueba llevan su origen. Las que vienen de una fuente tienen autor y página; las que salen de una cuenta dicen cómo se hizo, y las demás son decisiones del proyecto, que se comprueban o se cambian al construir.
 
@@ -45,20 +45,20 @@ Además de medir una técnica, cada prueba explora formas. `exploracion_formal.m
 `investigacion_blender.md` reúne la investigación previa al modelado (proyectos de código abierto, materiales procedurales, la luz del altiplano y la simulación), lo que se probó y lo que se propone. El código está en `blender/`:
 
 - `comun.py`, con los materiales procedurales, los generadores de piedra, tierra, paja y madera, el estudio de fotografía y el sol de La Paz;
-- `formas.py`, con las quince maquetas y las cinco exploraciones;
+- `formas.py`, con las quince maquetas y las seis exploraciones;
 - `piezas.py`, con las piezas en diagrama para recomponer; `diagramas.py`, con el corte de cada exploración y las cinco a la misma escala, y `aligerar_piezas.py`, que aligera los PNG de los dos;
 - `renderizar.py`, que las renderiza;
 - `prototipo_pirca_paisaje.py`, la primera prueba del flujo, con una pirca en el altiplano.
 
 Se necesita Blender como módulo de Python, instalado con `pip install bpy==5.0.1` en Python 3.11. Desde la raíz del repositorio, `venv_bpy/bin/python chhaxwa/blender/renderizar.py todas` rehace las quince imágenes.
 
-**Las cinco exploraciones.** De las quince formas, de 27 piezas en diagrama y de dieciséis referencias, el autor eligió cinco obras que juntan las técnicas de las pruebas: E1, *La montaña habitada*; E2, *El corral techado*; E3, *La torre de champa*; E4, *La chullpa*, y E5, *La casa de la bóveda*. Están en `exploraciones.md`, con sus medidas, sus fuentes y una tabla que cruza cada obra con las cinco pruebas. Allí está también una candidata, la casa redonda (E6), con el análisis de a cuál podría reemplazar; el autor decide. Cómo se llegó a ellas está en `exploracion_formal.md` (§6 a §9).
+**Las seis exploraciones.** De las quince formas, de 27 piezas en diagrama, de dieciséis referencias y de una imagen del autor salieron seis obras que juntan las técnicas de las pruebas: E1, *La montaña habitada*; E2, *El corral techado*; E3, *La casa redonda*; E4, *La chullpa*; E5, *La casa de la bóveda*, y E6, *La pirwa*, un troje alto. Están en `exploraciones.md`, con sus medidas, sus fuentes y una tabla que cruza cada obra con las cinco pruebas. Cómo se llegó a ellas está en `exploracion_formal.md` (§6 a §9).
 
 **Los renders son predicciones, no fotos.** Cada archivo se llama `render_…`, y su pie tiene que decirlo. Cuando se construya una maqueta, su foto se pone junto al render, tomada desde el mismo punto de vista. La regla 3 todavía dice que el modelo en el computador solo mide y planifica. `investigacion_blender.md` (§1) propone reescribirla, y lo decide el autor.
 
 ## El documento
 
-`documento/chhaxwa.pdf` reúne el proyecto en veintidós páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las cinco obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
+`documento/chhaxwa.pdf` reúne el proyecto en veinticuatro páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las seis obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
 
 Se compone en Typst (`documento/chhaxwa.typ`), con la letra Inter, que es libre. Para rehacerlo: `pip install typst` y, desde la raíz, `python3 chhaxwa/documento/compilar.py`.
 
@@ -79,4 +79,4 @@ Las fuentes de las técnicas, con las páginas que usa cada prueba, están en `f
 
 ## Uso de inteligencia artificial
 
-El autor eligió el título, las referencias, el propósito del proyecto y las cinco exploraciones. Claude (Anthropic), un asistente de IA generativa, redactó con sus indicaciones los textos de esta carpeta, leyó y cotejó las fuentes, hizo la investigación sobre Blender, calculó las medidas y la tabla del sol y escribió el código que modela y renderiza las maquetas y el que compone el documento. Los renders son, por eso, elaboración propia con asistencia de IA. Los calcula Blender a partir de geometría, materiales y luz escritos en código, y no hay en el proyecto ninguna imagen hecha con un generador de imágenes. Las maquetas, sus fotos y las decisiones que quedan abiertas son del autor.
+El autor eligió el título, las referencias, el propósito del proyecto y las seis exploraciones. Claude (Anthropic), un asistente de IA generativa, redactó con sus indicaciones los textos de esta carpeta, leyó y cotejó las fuentes, hizo la investigación sobre Blender, calculó las medidas y la tabla del sol y escribió el código que modela y renderiza las maquetas y el que compone el documento. Los renders son, por eso, elaboración propia con asistencia de IA. Los calcula Blender a partir de geometría, materiales y luz escritos en código, y no hay en el proyecto ninguna imagen hecha con un generador de imágenes. Las maquetas, sus fotos y las decisiones que quedan abiertas son del autor.
