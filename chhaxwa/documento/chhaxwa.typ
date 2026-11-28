@@ -53,7 +53,7 @@
   v(1mm)
   grid(columns: (6.5mm, 1fr), column-gutter: 1mm,
     text(weight: "bold", size: 7.6pt, str(n)),
-    [#text(size: 6.9pt)[#pie] \ #text(size: 6.9pt, fill: gris)[Diagrama en masas, cortado por la mitad, con una figura de 1,65 m.]])
+    [#text(size: 6.9pt)[#pie] \ #text(size: 6.9pt, fill: gris)[Diagrama en masas, cortado por la mitad.]])
 })
 #let lista-pruebas(lista) = {
   set par(spacing: 0.6em)
@@ -141,7 +141,7 @@
   })
   v(1mm)
   grid(columns: (6.5mm, 1fr), column-gutter: 1mm, text(weight: "bold", size: 7.6pt, "1"),
-    [#text(size: 6.9pt)[*Las seis a la misma escala*, de frente, con una figura de 1,65 m junto a cada una. No es un plano de conjunto: si van en un mismo sitio lo decide el autor.] \ #text(size: 6.9pt, fill: gris)[Diagrama en masas.]])
+    [#text(size: 6.9pt)[*Las seis a la misma escala*, de frente. No es un plano de conjunto: si van en un mismo sitio lo decide el autor.] \ #text(size: 6.9pt, fill: gris)[Diagrama en masas.]])
 })
 
 // --- una exploración: dos páginas ------------------------------------------------------------------------------------
@@ -188,7 +188,7 @@
 #exploracion("E2", "El corral techado",
   [*La pirca y el techo, rehechos.* Un corral redondo de pirca de doble cara, de 6 m, abierto al sur, con la mitad del corte llena de piedra menuda. Encima, un cono de ichu con _p'ira_ debajo, como en Enquelga (Šolc, 2011 [1975]: 105-107). Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
-   El techo se apoya en palos de queñua de 1,7 m parados sobre la pirca y en dos más largos que flanquean la entrada. Sobre ellos va un anillo atado, del anillo a la punta suben dieciséis pares, y sobre los pares van las fajas de _p'ira_ y el ichu en capas.
+   El techo se apoya en palos de queñua de 1,4 m parados sobre la pirca y en dos más largos que flanquean la entrada. Sobre ellos va un anillo atado, del anillo a la punta suben dieciséis pares, y sobre los pares van las fajas de _p'ira_ y el ichu en capas.
 
    #pasos((
      [Asentar las dos caras de la pirca y llenar el centro al mismo tiempo.],
@@ -200,7 +200,7 @@
    El autor eligió el cono y pidió la _p'ira_; la versión con techo de pirámide queda como registro.],
   [«Las pircas derruidas; desfondados los techos de las casas» (p. 79). Al volver, «las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156).],
   (("●", "2. El relleno", [la pirca de doble cara]), ("●", [4\. La _p'ira_], [las fajas bajo el ichu]), ("○", "1. La cosecha", [la piedra de la pirca])),
-  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [1,7 m, sobre la pirca, proyecto]), ([techo], [6,8 × 3,4 m; fajas de 0,7 m, Šolc (2011 [1975]: 105)])),
+  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [1,4 m, sobre la pirca, proyecto]), ([techo], [6,8 × 3,4 m; fajas de 0,7 m, Šolc (2011 [1975]: 105)])),
   4, "../renders/diagramas/diagrama_x2.png", [*Corte por la entrada.* La pirca y su relleno; los palos sobre la pirca, el anillo, los pares, la _p'ira_ y el ichu.],
   5, "../renders/render_forma_E2C.jpg", [*El corral techado.* Maqueta 1:20.]
 )
@@ -234,7 +234,7 @@
 )
 
 #exploracion("E5", "La casa de la bóveda",
-  [*La casa de Enquelga bajo una bóveda volada, en dos metros.* El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94), dentro de un bloque de pirca de doble cara en talud que no pasa de los dos metros de la novela. Los muros son verticales por dentro solo hasta 35 cm, la altura de los camastros; de ahí arranca una bóveda de adobe por aproximación de hiladas, empinada como el arco apuntado de la chullpa de Acora (Squier, 1877: 353), hasta que las dos mitades quedan a 30 cm y se cierran con lajas, a 1,9 m. Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones se rellenan con tierra para cargar las colas de las hiladas, y la pirca sigue arriba como un parapeto, con la bóveda adentro, como en la referencia R16.
+  [*La casa de Enquelga bajo una bóveda volada, en dos metros.* El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94), dentro de un bloque de pirca de doble cara en talud que no pasa de los dos metros de la novela. Los muros son verticales por dentro solo hasta 35 cm, la altura de los camastros; de ahí arranca una bóveda de adobe por aproximación de hiladas, empinada como el arco apuntado de la chullpa de Acora (Squier, 1877: 353), hasta que las dos mitades quedan a 43 cm y se cierran con lajas, a 1,86 m. Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones se rellenan con tierra para cargar las colas de las hiladas, y la pirca sigue arriba como un parapeto, con la bóveda adentro, como en la referencia R16.
 
    Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo, hacia donde mira la puerta de la casa grande (Suárez Jordán, 1990: 130). El _t'uju_ atraviesa la esquina noreste, apuntado al sol del 21 de junio a las 10 (prueba 5).
 
@@ -260,6 +260,40 @@
   12, "../renders/diagramas/diagrama_x6.png", [*Corte a lo largo.* La V volada con la trampa en su clave, lo guardado y el techo sobre palos atados a las piedras hincadas.],
   13, "../renders/render_forma_E6.jpg", [*La _pirwa_.* Maqueta 1:20.]
 )
+
+// --- las láminas de detalle: una por página, en serie aparte (L1-L6) ------------------------------------------------
+#let lamina(n, ruta, pie, texto) = {
+  pagebreak()
+  block(width: 100%, breakable: false, {
+    image(ruta, width: 100%)
+    v(1.3mm)
+    grid(columns: (6.5mm, 1fr), column-gutter: 1mm,
+      text(weight: "bold", size: 7.6pt, "L" + str(n)),
+      [#text(size: 6.9pt)[#pie] \ #text(size: 6.9pt, fill: gris)[Lámina A3 en DXF, editable en QCAD (#raw("detalles/detalle_E" + str(n) + ".dxf")). Dibujo hecho con código.]])
+  })
+  v(4mm)
+  texto
+}
+
+#lamina(1, "../detalles/detalle_E1.png", [*E1. La montaña habitada.* Corte por la boca, 1:25.],
+  grid(columns: (1fr, 1fr), column-gutter: 7mm,
+    [*Los detalles.* Cada exploración tiene una lámina de detalle, un A3 a una sola escala, dibujado en metros reales en DXF, que se abre y se edita en QCAD o en cualquier programa de CAD. Las seis están en `detalles/`, con un PDF para imprimirlas. Los grosores son los del dibujo de arquitectura: lo que el plano corta lleva un contorno grueso y sus juntas finas, lo que se ve más allá va en gris y los sombreados, uno por material, van en un gris muy fino. Las láminas resuelven cosas que los modelos dejaban abiertas, y las marcan como decisiones del proyecto.],
+    [La cámara es vertical hasta un metro y después vuela 13,5 cm por cada hilada de 20 cm, hasta el óculo de 64 cm. El paso de la boca atraviesa el cono bajo un dintel de lajas y sigue por la caja de queñua, que sale 55 cm más allá del pie del cono. Toda la piedra es la de la cosecha.]))
+
+#lamina(2, "../detalles/detalle_E2.png", [*E2. El corral techado.* La pirca y el alero, 1:20.],
+  columns(2, gutter: 7mm)[La pirca tiene dos caras de 20 cm y, entre ellas, el relleno de piedra menuda que ocupa la mitad del corte. Un palo de queñua de 1,4 m, parado en el eje de la pirca, carga el anillo atado, y el anillo recibe los pares. Sobre los pares van las fajas de _p'ira_ y encima el ichu, con una pendiente de 48°. Entre la piedra y la paja queda una franja de cielo de 90 cm.])
+
+#lamina(3, "../detalles/detalle_E3.png", [*E3. La casa redonda.* Corte por el paso de entrada, de oeste a este, 1:20.],
+  columns(2, gutter: 7mm)[Al oeste se ve la pirca de doble cara, con su talud de 5°, y al este el paso, cortado por su eje. El paso mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3, pero las dos mitades de esa hilada se tocan por abajo y al centro quedan 84 cm libres, de modo que se entra de rodillas. La cúpula de champa vuela dieciséis hiladas hasta el óculo, a 3,20 m. El relleno de tierra carga las colas, y las fajas de _p'ira_ se traslapan 15 cm, como tejuelas.])
+
+#lamina(4, "../detalles/detalle_E4.png", [*E4. La chullpa.* La base, la cámara y la boca, 1:20; el aparejo y la cornisa.],
+  columns(2, gutter: 7mm)[El corte va de este a oeste por la boca. Abajo, al fondo, están las pilas, cuyas dos últimas hiladas vuelan hacia el paso; encima, la cama de lajas y la hilada de piedra. La cámara de adobitos tiene tres hiladas verticales y cuatro voladas, y la boca de 48 × 42 cm la atraviesa bajo una laja. Aparte van el aparejo de librero en alzado, con 1,5 cm entre adobitos (Agüero Benites et al., 2015: 6), y la cornisa de ichu prensado que describe Squier (1877: 243).])
+
+#lamina(5, "../detalles/detalle_E5.png", [*E5. La casa de la bóveda.* Corte de través por el fogón, 1:20.],
+  columns(2, gutter: 7mm)[El bloque no pasa de dos metros. La bóveda de adobe arranca a 35 cm, a la altura del camastro, y cada hilada de 11 cm vuela de 11 a 13 cm hasta dejar una rendija de 43 cm. Las lajas la cierran a 1,86 m, salvo la que falta sobre el fogón, por donde sale el humo. El relleno de tierra llega a 1,70 m, y la pirca sigue hasta los dos metros como un parapeto.])
+
+#lamina(6, "../detalles/detalle_E6.png", [*E6. La _pirwa_.* La V volada con la trampa y, aparte, la _chhaxwa_, 1:20.],
+  columns(2, gutter: 7mm)[El corte va a lo largo. Los dos apoyos son una pirca y un montón, y sobre ellos la V de champa vuela 6 cm por hilada hasta cerrarse a 1,79 m. Encima va un piso de palos de queñua de muro a muro, con la trampa bajo un hueco. Aparte, un corte de través por un palo del techo muestra la _chhaxwa_: la piedra hincada bajo el extremo del palo, la soga que los ata y las fajas de _p'ira_ encima.])
 
 // --- las cinco pruebas: una página cada una ----------------------------------------------------------------------
 #let prueba(n, titulo, texto, pasaje, mide, filas, formas) = {
@@ -374,7 +408,7 @@
      [Para recomponer las pruebas 3, 4 y 5, el autor pidió piezas en diagrama: 3a a 3h para el dintel, 4a a 4j para la _p'ira_ y 5a a 5i para el fogón. De la torre de hiladas voladas sobre dos pircas (3h) salieron la chullpa (E4), con una nota del autor, y la _pirwa_ (E6). Los adobitos de pie de 5i pasaron a la chullpa.
 
       La serie t1 a t4 muestra E2 en el tiempo: recién hecho, con el techo «desfondado» (p. 79), con solo los palos y con la pirca a medio caer. Un techo de paja dura de diez a doce años (Šolc, 2011 [1975]: 109).],
-     voz[Diagramas en masas, con una figura de 1,65 m. Las medidas son del proyecto y se ajustaron al recomponer.])])
+     voz[Diagramas en masas. Las medidas son del proyecto y se ajustaron al recomponer.])])
 
 // --- la exploración formal ----------------------------------------------------------------------------------------
 #pagebreak()

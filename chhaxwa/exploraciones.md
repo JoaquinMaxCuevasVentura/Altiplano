@@ -69,14 +69,14 @@ La prueba 1 dice cuánta piedra da una parcela de 2 × 2 m, y con eso se sabrá 
 
 ## E2. El corral techado
 
-Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, un cono de ichu con *p'ira* debajo. El techo se apoya en palos de queñua parados sobre la pirca, de 1,7 m, y en dos más largos que flanquean la entrada; sobre ellos va un anillo atado y, del anillo a la punta, dieciséis pares. Sobre los pares van las fajas de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-107), y encima el ichu en capas. Entre la piedra y la paja queda una franja de cielo de 90 cm.
+Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, un cono de ichu con *p'ira* debajo. El techo se apoya en palos de queñua parados sobre la pirca, de 1,4 m, y en dos más largos que flanquean la entrada; sobre ellos va un anillo atado y, apoyados en el anillo, dieciséis pares suben hasta la punta. Sobre los pares van las fajas de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-107), y encima el ichu en capas. Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
 | Medida | Valor | Origen |
 |---|---|---|
 | Corral | 6 m de diámetro; pirca de 0,7 m de espesor y 1,4 m de alto | Proyecto |
 | Relleno | La mitad del corte | La regla de la prueba 2 |
 | Entrada | Un cuarto de la vuelta, al sur | Proyecto |
-| Palos | Siete sobre la pirca, de 1,7 m, y dos en la entrada | Proyecto |
+| Palos | Siete sobre la pirca, de 1,4 m, y dos en la entrada | Proyecto |
 | Techo | Cono de 6,8 m de diámetro y 3,4 m de alto: pares, fajas de *p'ira* e ichu | Proyecto (el techo de 5C); las fajas, Šolc (2011 [1975]: 105) |
 
 El autor eligió el cono y pidió la *p'ira* bajo el ichu. Antes, los ocho palos estaban dentro del corral y no llegaban al techo, que quedaba en el aire; para poner pares y *p'ira* hacía falta un apoyo, y los palos pasaron a la pirca. La versión con techo de pirámide (`renders/render_forma_E2P.jpg`) queda como registro.
@@ -102,7 +102,7 @@ Después, cuando el autor decidió que reemplazara a la torre de champa, tomó l
 |---|---|---|
 | Cuarto | 4,0 m de diámetro | Proyecto |
 | Pirca | 0,6 m de espesor y 1,2 m de alto, con un talud de 5° | Proyecto |
-| Paso de entrada | 0,6 m de ancho y 0,96 m de alto, 1,2 m de largo, al este | La regla de la prueba 3; la puerta al este, Yampara Blanco (2019: 13) |
+| Paso de entrada | 0,6 m de ancho y 0,96 m de alto hasta la hilada que lo cierra, con 84 cm libres al centro; 1,2 m de largo, al este | La regla de la prueba 3; la puerta al este, Yampara Blanco (2019: 13) |
 | Cúpula | Dieciséis hiladas de champa de 12 cm, que vuelan de 10 a 13 cm | Proyecto; el bloque, el de la prueba 3 |
 | Cubierta | Seis cursos de fajas de *p'ira* de 0,7 m, traslapados 15 cm | Šolc (2011 [1975]: 105), el ancho; lo demás, proyecto |
 | Óculo | 60 cm, con un sombrero de ichu de 1,2 m de diámetro | Proyecto |
@@ -142,7 +142,7 @@ Squier también vio que las casas de champa del Ramis tenían «a kind of cornic
 
 ## E5. La casa de la bóveda
 
-La casa de Enquelga dentro de un bloque de pirca en talud de dos metros, los que da la novela. El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94). Los muros son de pirca de doble cara, como en la prueba 2, y solo hasta 35 cm de alto son verticales por dentro, la altura de los camastros de «apenas la altura de un adobe» (pp. 30-31). Desde ahí arranca una bóveda de adobe por aproximación de hiladas, empinada, en la que cada hilada vuela de 11 a 13 cm hasta que las dos mitades quedan a 30 cm y se cierran con lajas, a 1,9 m. Es el arco apuntado que Squier vio en la cámara de la chullpa de Acora (1877: 353). Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones de la bóveda se rellenan con tierra hasta 1,7 m, para cargar las colas de las hiladas. La pirca sigue hasta 2 m como un parapeto, y la bóveda queda adentro, como en la referencia R16. Adentro se está de pie solo al centro; junto a los muros, en cuclillas o acostado.
+La casa de Enquelga dentro de un bloque de pirca en talud de dos metros, los que da la novela. El cuarto tiene la planta de la mediana de Šolc, 5,75 × 3,30 m (2011 [1975]: 93-94). Los muros son de pirca de doble cara, como en la prueba 2, y solo hasta 35 cm de alto son verticales por dentro, la altura de los camastros de «apenas la altura de un adobe» (pp. 30-31). Desde ahí arranca una bóveda de adobe por aproximación de hiladas, empinada, en la que cada hilada vuela de 11 a 13 cm hasta que las dos mitades quedan a 43 cm y se cierran con lajas, a 1,86 m. Es el arco apuntado que Squier vio en la cámara de la chullpa de Acora (1877: 353). Falta una laja sobre el fogón, y por ahí sale el humo. Los riñones de la bóveda se rellenan con tierra hasta 1,7 m, para cargar las colas de las hiladas. La pirca sigue hasta 2 m como un parapeto, y la bóveda queda adentro, como en la referencia R16. Adentro se está de pie solo al centro; junto a los muros, en cuclillas o acostado.
 
 Se entra por una ranura de 50 cm en el muro del este, el ancho de un cuerpo. La puerta mide 1,10 m de alto, y sobre ella la ranura se cierra con un tímpano de adobe. La puerta al este sigue a la casa grande que describe Suárez Jordán (1990: 130). El *t'uju*, un tubo de 15 cm, atraviesa la esquina noreste apuntado al sol del 21 de junio a las 10, cuando está a 35° de altura y 44° de acimut (prueba 5).
 
@@ -183,14 +183,40 @@ La champa sirve para esto. En el Ramis, Squier vio que con ella se hacían «the
 
 La champa se deja secar unos veinte días antes de usarla (Vitulas-Quille y Reynoso-Machaca, 2025: 9). Se bajó un metro para que sea menos arriesgada, pero si un depósito de champa de más de cuatro metros se sostiene lleno es lo primero que hay que probar.
 
+## Las láminas de detalle
+
+Cada exploración tiene una lámina de detalle en DXF, en `detalles/`, que se abre y se edita en QCAD Community Edition o en cualquier programa de CAD. Son seis A3 apaisados, cada uno a una sola escala: E1 a 1:25 y las demás a 1:20. Están dibujadas en metros reales. Las hace `detalles/dibujar_detalles.py`, que además deja una vista en grises de cada una y un PDF con las seis (`detalles/laminas_de_detalle.pdf`).
+
+| Lámina | Qué muestra |
+|---|---|
+| 1. E1 | Corte por la boca: la cámara volada, el dintel de lajas y la caja de queñua |
+| 2. E2 | Corte por la pirca y el alero: las dos caras y el relleno, el palo, el anillo, el par, la *p'ira* y el ichu |
+| 3. E3 | Corte de oeste a este por el paso: la pirca, la cúpula de champa, el relleno, las fajas traslapadas y el sombrero |
+| 4. E4 | Corte por la boca: las pilas, la cama de lajas, la cámara de adobitos y su dintel; aparte, el aparejo de librero en alzado y la cornisa de ichu |
+| 5. E5 | Corte de través por el fogón: el bloque en talud, la bóveda volada, el relleno y la clave abierta |
+| 6. E6 | Corte a lo largo: los dos apoyos, la V volada, el piso, la trampa y lo guardado; aparte, la *chhaxwa* en un corte de través |
+
+Los grosores siguen el dibujo de arquitectura. Lo que el plano corta lleva un contorno de 0,50 mm, y sus juntas, de 0,18 mm. El suelo va a 0,70 mm, lo que se ve más allá del corte va en gris a 0,18 mm y los sombreados, en gris a 0,09 mm. Cada material tiene su capa de sombreado, con patrones de AutoCAD que QCAD también trae: piedra (GRAVEL), piedra menuda (AR-SAND), tierra (MUDST), adobe (ANSI31), champa (ANSI37), lajas (ANSI33), ichu (DASH) y grano (DOTS). La *p'ira* y la madera, que en el corte son delgadas, van con un relleno gris. Las láminas no llevan figuras humanas.
+
+Las láminas resuelven cosas que los modelos dejaban abiertas. Son decisiones del proyecto, y el autor puede cambiarlas:
+
+- **E1.** Entre la cámara y la caja de queñua, el paso lleva un dintel de lajas.
+- **E2.** El anillo va sobre los palos y recibe los pares, que quedan justo bajo la *p'ira*. Así los palos miden 1,4 m; este texto decía 1,7. El modelo y el diagrama se ajustaron.
+- **E3.** El paso mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3, pero al centro quedan 84 cm libres, porque las dos mitades de esa hilada se tocan por abajo.
+- **E4.** La cámara se forra de adobitos, y el dintel de la boca es una laja que va de la cámara a la cara.
+- **E5.** El camastro es un banco de adobe de 0,70 × 0,35 m contra el muro sur. La última hilada de la bóveda deja una rendija de 43 cm; este texto decía 30.
+- **E6.** Sobre la V va un piso de palos de queñua de muro a muro, a 1,79 m, con la trampa bajo un hueco del piso. La piedra de la *chhaxwa* entra unos 18 cm en el muro.
+
 ## Lo que se descartó y lo que cambió
 
 - ***La A de piedra y tierra***, modelada a partir de la referencia R6: dos muros de piedra amontonada que se tocaban arriba, con tierra apisonada entre los dos, sobre una base de pirca atravesada por un paso volado. El autor la descartó. Solo hubo renders rápidos.
 - ***La torre de champa*** fue E3 hasta que el autor la reemplazó por la casa redonda. Mejorada como depósito, volvió como E6.
 - **La casa redonda** entró primero como candidata (E6), con un análisis de a cuál de las cinco podía reemplazar; se proponía E2. El autor eligió reemplazar la torre, y se le pasó lo que la torre traía: el umbral, la *p'ira* y la *chhaxwa* (`analisis/43`, §13 y §14).
+- **Las figuras humanas.** Los renders, los diagramas y las piezas llevaban una figura de 1,65 m para dar la escala. El 28 de noviembre el autor pidió quitarlas, porque se veían mal, y se rehicieron todas las imágenes sin ellas. Las apaga `FIGURAS = False` en `blender/comun.py`.
 
 ## Lo que decide el autor
 
 - Si los pasajes que salen del artículo son los que quiere para cada obra.
+- Si acepta lo que resuelven las láminas de detalle, en la lista de arriba.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

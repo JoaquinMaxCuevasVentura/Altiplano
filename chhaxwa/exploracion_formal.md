@@ -2,7 +2,7 @@
 
 27 de noviembre de 2026. El autor pidió que cada una de las cinco pruebas, además de medir una técnica, explore formas, y adjuntó cinco referencias. Este documento lee esas referencias como operaciones formales y propone tres formas por prueba, quince en total. Cada forma sale de la técnica de su prueba, como manda la regla 4, y toma de las referencias una manera de componer.
 
-Las quince están modeladas en Blender como maquetas de estudio, sobre una mesa, con una figura de madera que da la escala. Las imágenes están en `renders/` y se hacen con `blender/renderizar.py`. **Son renders, no fotos de maquetas.** Muestran lo que se espera que salga si la maqueta se construye con material real.
+Las quince están modeladas en Blender como maquetas de estudio, sobre una mesa. Llevaban una figura de madera que daba la escala; el autor pidió quitarla el 28 de noviembre, porque se veía mal. Las imágenes están en `renders/` y se hacen con `blender/renderizar.py`. **Son renders, no fotos de maquetas.** Muestran lo que se espera que salga si la maqueta se construye con material real.
 
 ## 1. Las referencias
 
@@ -73,7 +73,7 @@ Las demás formas quedan como registro de la exploración. Sus renders, a media 
 
 ## 7. Piezas para recomponer las pruebas 3, 4 y 5
 
-Para las tres pruebas que faltan, el autor pidió más opciones en diagrama, para recomponerlas como hizo con las dos primeras. Cada opción es una pieza: un modelo de masas blanco, con contornos y una figura de 1,65 m, en `renders/piezas/`. Se hacen con `blender/piezas.py`. Las medidas de las piezas son del proyecto y se ajustan al recomponer.
+Para las tres pruebas que faltan, el autor pidió más opciones en diagrama, para recomponerlas como hizo con las dos primeras. Cada opción es una pieza: un modelo de masas blanco, con contornos, en `renders/piezas/`. Se hacen con `blender/piezas.py`. Las medidas de las piezas son del proyecto y se ajustan al recomponer.
 
 Junto con el pedido, el autor mandó cinco referencias más:
 

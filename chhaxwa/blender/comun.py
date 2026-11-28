@@ -15,6 +15,7 @@ import random
 from mathutils import Vector, noise
 
 E = 1 / 20                     # escala de las maquetas de forma
+FIGURAS = False                # el 28 de noviembre el autor pidió quitar las figuras humanas de todos los modelos
 
 # ----------------------------------------------------------------------------------------------------------------
 # El sol en La Paz (las mismas fórmulas de la NOAA que la tabla de la prueba 5)
@@ -539,7 +540,10 @@ def paja_sobre(objeto_base, mat, densidad=9000, largo=(0.02, 0.035), ancho=0.000
 
 
 def figura_madera(pos, mat, alto=1.65 * E, giro=0.0, pose="pie"):
-    """La figura de madera que da la escala, como la de las maquetas de studio_cifuentes_ethz."""
+    """La figura de madera que daba la escala, como la de las maquetas de studio_cifuentes_ethz. Está apagada:
+    con FIGURAS = False no pone nada, porque el autor pidió quitarlas (se veían mal)."""
+    if not FIGURAS:
+        return []
     x, y, z = pos
     k = alto / 1.65
     partes = []

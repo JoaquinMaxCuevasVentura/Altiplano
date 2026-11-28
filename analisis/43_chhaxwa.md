@@ -213,3 +213,48 @@ Los pasajes se cotejaron en el texto de la novela. Las lecturas son del artícul
 **E5 a dos metros.** El bloque baja de 2,6 a 2 m, los de la novela (p. 30). Para que la bóveda quepa, arranca a 35 cm, la altura de los camastros, y cada hilada vuela de 11 a 13 cm desde el principio, de modo que la clave queda a 1,9 m. La sección se vuelve apuntada, como la cámara de la chullpa de Acora (Squier, 1877: 353). Un vuelo de 13 cm es un tercio del largo del adobe, y hay que probar que se sostiene.
 
 **Uso de IA.** Claude (Anthropic) leyó el artículo, propuso los pasajes, cotejó las citas y cambió los modelos, los cortes, los textos y el documento.
+
+## 16. 28 de noviembre: las láminas de detalle, sin figuras y con grosores
+
+El autor propuso QCAD (Community Edition, GPLv3) para los dibujos de detalle, porque trabaja sobre DXF. QCAD no se puede instalar en este entorno, así que las láminas se dibujan con código, con la biblioteca ezdxf, y se guardan en DXF, que QCAD abre y edita. El guion es `chhaxwa/detalles/dibujar_detalles.py`. Cada lámina es un A3 apaisado a una sola escala, dibujado en metros reales; E1 va a 1:25 y las demás a 1:20.
+
+| Lámina | Qué muestra |
+|---|---|
+| 1. E1 | Corte por la boca: la cámara volada, el dintel de lajas y la caja de queñua |
+| 2. E2 | Corte por la pirca y el alero: las caras, el relleno, el palo, el anillo, el par, la *p'ira* y el ichu |
+| 3. E3 | Corte de oeste a este por el paso: la pirca, la cúpula de champa, el relleno, las fajas traslapadas y el sombrero |
+| 4. E4 | Corte por la boca: las pilas, la cama de lajas, la cámara de adobitos y su dintel; el aparejo de librero y la cornisa |
+| 5. E5 | Corte de través por el fogón: el bloque, la bóveda volada, el relleno y la clave abierta |
+| 6. E6 | Corte a lo largo: los apoyos, la V, el piso, la trampa y lo guardado; la *chhaxwa* en un corte de través |
+
+**Dos pedidos a mitad del trabajo.** El autor pidió quitar las figuras humanas, que se veían mal, de las láminas y de los modelos, y cuidar los grosores de línea, porque las primeras vistas tenían un solo grosor.
+
+- **Las figuras.** `blender/comun.py` tiene ahora `FIGURAS = False`, que apaga la figura de madera en todos los modelos. Se rehicieron sin figuras los quince renders de forma, los siete de las exploraciones, las 31 piezas y los siete diagramas. Se corrigieron los pies y los textos que nombraban la figura de 1,65 m. Las láminas no llevan figuras.
+- **Los grosores.** Las capas siguen la jerarquía del dibujo de arquitectura. Lo cortado lleva un contorno de 0,50 mm, y sus juntas, de 0,18 mm. El suelo va a 0,70 mm, lo que se ve más allá del corte va en gris a 0,18 mm y lo oculto, en trazos. Los sombreados van en gris a 0,09 mm, uno por material, y las cotas y las guías, en gris oscuro a 0,13 mm. El contorno grueso sale de unir las piezas cortadas con shapely, de modo que las juntas interiores quedan finas. Los patrones son de la lista de AutoCAD, que QCAD también trae. Las primeras vistas salían con un solo grosor por otra causa. El motor de matplotlib de ezdxf toma los milímetros como si fueran puntos, y hubo que multiplicarlos por 2,835. El DXF no cambia por eso.
+
+**Lo que las láminas resolvieron.** Dibujar a escala obligó a decidir cosas que los modelos dejaban abiertas. Quedan marcadas como decisiones del proyecto en las láminas y en `chhaxwa/exploraciones.md`:
+
+- E1 lleva un dintel de lajas sobre el paso, entre la cámara y la caja de queñua.
+- En E2, el anillo va sobre los palos y recibe los pares, justo bajo la *p'ira*.
+- En E4, la cámara se forra de adobitos, y el dintel de la boca va de la cámara a la cara.
+- En E5, el camastro es un banco de adobe de 0,70 × 0,35 m contra el muro sur.
+- E6 lleva un piso de palos de queñua de muro a muro sobre la V, con la trampa bajo un hueco.
+
+**Tres correcciones.** Las láminas mostraron tres medidas mal escritas.
+
+- Los palos de E2 miden 1,4 m, y no 1,7 como dice el §15. Se ajustaron el modelo y el diagrama para que el anillo cargue los pares.
+- La última hilada de la bóveda de E5 deja una rendija de 43 cm, y no de 30. Las lajas la cierran a 1,86 m.
+- El paso de E3 mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3. Al centro, en cambio, quedan 84 cm libres, porque las dos mitades de esa hilada se tocan por abajo.
+
+Se corrigieron `exploraciones.md` y el documento.
+
+**El documento.** Las seis láminas entran en el documento en una serie aparte, L1 a L6, para no mover la numeración de las figuras. Tiene ahora treinta páginas. Las láminas también están juntas en `chhaxwa/detalles/laminas_de_detalle.pdf`, en A3, para imprimirlas.
+
+**Las exploraciones paramétricas.** El autor preguntó por herramientas para explorar las seis obras de forma paramétrica y generativa mientras se dibujan los detalles. La propuesta, que el autor tiene que aprobar antes de hacerla:
+
+- **Aquí:** Python con bpy, que ya modela las maquetas y puede armar Geometry Nodes desde código, y build123d, que se instala con pip y exporta a STEP y DXF. ezdxf sigue para las láminas.
+- **En el escritorio del autor:** Sverchok y Tissue en Blender, y FreeCAD, que se usan con su interfaz gráfica.
+- **Las variantes:** cada exploración se vuelve una función cuyos parámetros son las reglas de construcción, como el vuelo por hilada, el arranque, la piedra de una cosecha o el largo de las fajas. Cada variante se dibuja con una marca que dice si cumple esas reglas.
+- **El piloto:** E5, porque tiene un límite de la novela, los dos metros, y una regla que probar, el vuelo de 13 cm.
+
+**Uso de IA.** Claude (Anthropic) escribió el guion de las láminas y su dibujo, el interruptor de las figuras, las correcciones y este registro, y rehízo las imágenes y el documento.

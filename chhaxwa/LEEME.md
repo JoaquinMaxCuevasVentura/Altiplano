@@ -6,9 +6,9 @@ Es una serie de pruebas de construcción con piedra, tierra y paja del altiplano
 
 El proyecto es de Joaquin Max Cuevas Ventura. Va aparte de su artículo «Cosecha de piedras: el *ayllu*, el Estado y la mina», que lee la misma novela desde el dibujo, y no lo cambia. Es especulativo, porque Jatun-Kolla, el *ayllu* de la novela, no existe; las técnicas y los materiales, en cambio, son reales.
 
-## Estado (27 de noviembre de 2026)
+## Estado (28 de noviembre de 2026)
 
-**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las seis exploraciones que eligió el autor están modeladas en Blender, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
+**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las seis exploraciones que eligió el autor están modeladas en Blender, y cada exploración tiene una lámina de detalle, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
 
 Las medidas de cada prueba llevan su origen. Las que vienen de una fuente tienen autor y página; las que salen de una cuenta dicen cómo se hizo, y las demás son decisiones del proyecto, que se comprueban o se cambian al construir.
 
@@ -54,11 +54,13 @@ Se necesita Blender como módulo de Python, instalado con `pip install bpy==5.0.
 
 **Las seis exploraciones.** De las quince formas, de 27 piezas en diagrama, de dieciséis referencias y de una imagen del autor salieron seis obras que juntan las técnicas de las pruebas: E1, *La montaña habitada*; E2, *El corral techado*; E3, *La casa redonda*; E4, *La chullpa*; E5, *La casa de la bóveda*, y E6, *La pirwa*, un troje alto. Están en `exploraciones.md`, con sus medidas, sus fuentes y una tabla que cruza cada obra con las cinco pruebas. Cómo se llegó a ellas está en `exploracion_formal.md` (§6 a §9).
 
+**Las láminas de detalle.** Cada exploración tiene un A3 en DXF, en `detalles/`, que se abre y se edita en QCAD Community Edition o en cualquier programa de CAD, con una capa por función y por material y los grosores del dibujo de arquitectura. Las hace `detalles/dibujar_detalles.py` (`pip install ezdxf shapely matplotlib`), que deja además una vista en grises de cada una y `laminas_de_detalle.pdf`, con las seis para imprimir. Lo que resuelven y las decisiones que agregan están en `exploraciones.md`.
+
 **Los renders son predicciones, no fotos.** Cada archivo se llama `render_…`, y su pie tiene que decirlo. Cuando se construya una maqueta, su foto se pone junto al render, tomada desde el mismo punto de vista. La regla 3 todavía dice que el modelo en el computador solo mide y planifica. `investigacion_blender.md` (§1) propone reescribirla, y lo decide el autor.
 
 ## El documento
 
-`documento/chhaxwa.pdf` reúne el proyecto en veinticuatro páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las seis obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
+`documento/chhaxwa.pdf` reúne el proyecto en treinta páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las seis obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, las seis láminas de detalle, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
 
 Se compone en Typst (`documento/chhaxwa.typ`), con la letra Inter, que es libre. Para rehacerlo: `pip install typst` y, desde la raíz, `python3 chhaxwa/documento/compilar.py`.
 
@@ -79,4 +81,4 @@ Las fuentes de las técnicas, con las páginas que usa cada prueba, están en `f
 
 ## Uso de inteligencia artificial
 
-El autor eligió el título, las referencias, el propósito del proyecto y las seis exploraciones. Claude (Anthropic), un asistente de IA generativa, redactó con sus indicaciones los textos de esta carpeta, leyó y cotejó las fuentes, hizo la investigación sobre Blender, calculó las medidas y la tabla del sol y escribió el código que modela y renderiza las maquetas y el que compone el documento. Los renders son, por eso, elaboración propia con asistencia de IA. Los calcula Blender a partir de geometría, materiales y luz escritos en código, y no hay en el proyecto ninguna imagen hecha con un generador de imágenes. Las maquetas, sus fotos y las decisiones que quedan abiertas son del autor.
+El autor eligió el título, las referencias, el propósito del proyecto y las seis exploraciones. Claude (Anthropic), un asistente de IA generativa, redactó con sus indicaciones los textos de esta carpeta, leyó y cotejó las fuentes, hizo la investigación sobre Blender, calculó las medidas y la tabla del sol y escribió el código que modela y renderiza las maquetas, el que dibuja las láminas de detalle y el que compone el documento. Los renders son, por eso, elaboración propia con asistencia de IA. Los calcula Blender a partir de geometría, materiales y luz escritos en código, y no hay en el proyecto ninguna imagen hecha con un generador de imágenes. Las maquetas, sus fotos y las decisiones que quedan abiertas son del autor.

@@ -553,12 +553,12 @@ def corral_techado(ctx, techo):
             return z_alero + (Rb - r) / (Rb - Ra) * Hc
         rp = R - base / 2
         angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
-        z_anillo = z_cono(rp) - 0.24
+        z_anillo = z_cono(rp) - 0.2726              # el anillo, bajo los pares (la lámina de detalle 2)
         for g in angulos:
             a = math.radians(g)
             z_pie = 0.0 if 225 < g < 315 else alto  # en la entrada, los dos palos bajan hasta el suelo
             C.palo(sobre(ctx, rp * math.cos(a) * k, rp * math.sin(a) * k, z_pie * k),
-                   sobre(ctx, rp * math.cos(a) * k, rp * math.sin(a) * k, (z_anillo + 0.05) * k), 0.06 * k, ctx.m.palo)
+                   sobre(ctx, rp * math.cos(a) * k, rp * math.sin(a) * k, (z_anillo - 0.05) * k), 0.06 * k, ctx.m.palo)
         for g0, g1 in zip(angulos, angulos[1:] + [360]):
             a0, a1 = math.radians(g0), math.radians(g1)
             C.palo(sobre(ctx, rp * math.cos(a0) * k, rp * math.sin(a0) * k, z_anillo * k),
@@ -566,8 +566,8 @@ def corral_techado(ctx, techo):
         for i in range(16):
             a = 2 * math.pi * i / 16 + 0.1
             r0, r1 = Rb - 0.08, Ra + 0.1
-            C.palo(sobre(ctx, r0 * math.cos(a) * k, r0 * math.sin(a) * k, (z_cono(r0) - 0.12) * k),
-                   sobre(ctx, r1 * math.cos(a) * k, r1 * math.sin(a) * k, (z_cono(r1) - 0.12) * k), 0.045 * k, ctx.m.palo,
+            C.palo(sobre(ctx, r0 * math.cos(a) * k, r0 * math.sin(a) * k, (z_cono(r0) - 0.156) * k),
+                   sobre(ctx, r1 * math.cos(a) * k, r1 * math.sin(a) * k, (z_cono(r1) - 0.156) * k), 0.045 * k, ctx.m.palo,
                    nombre="par")
         t = C.tronco(sobre(ctx, 0, 0, z_alero * k), Rb * k, Ra * k, Hc * k, ctx.m.barro, lados=40, abierto_arriba=True,
                      nombre="pira")

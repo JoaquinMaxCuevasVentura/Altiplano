@@ -134,22 +134,22 @@ def x2(corte=True):
     def z_cono(r):
         return z_al + (Rb - r) / (Rb - Ra) * Hc
     rp = R - 0.35
-    z_an = z_cono(rp) - 0.24
+    z_an = z_cono(rp) - 0.2726
     angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
     for g in angulos:                                                   # palos sobre la pirca y el anillo atado
         a = math.radians(g)
         if corte and math.cos(a) < -1e-6:
             continue
         z_pie = 0.0 if 225 < g < 315 else alto
-        C.palo((rp * math.cos(a), rp * math.sin(a), z_pie), (rp * math.cos(a), rp * math.sin(a), z_an + 0.05), 0.06, D["madera"])
+        C.palo((rp * math.cos(a), rp * math.sin(a), z_pie), (rp * math.cos(a), rp * math.sin(a), z_an - 0.05), 0.06, D["madera"])
     a0, a1 = (-math.pi / 2, math.pi / 2) if corte else (0, 2 * math.pi)
-    sector(rp + 0.06, rp + 0.06, rp - 0.06, rp - 0.06, z_an - 0.06, 0.12, a0, a1, D["madera"])
+    sector(rp + 0.05, rp + 0.05, rp - 0.05, rp - 0.05, z_an - 0.05, 0.1, a0, a1, D["madera"])
     for i in range(16):                                                 # los pares, bajo la p'ira
         a = 2 * math.pi * i / 16 + 0.1
         if corte and math.cos(a) < -1e-6:
             continue
-        C.palo(((Rb - 0.08) * math.cos(a), (Rb - 0.08) * math.sin(a), z_cono(Rb - 0.08) - 0.12),
-               ((Ra + 0.1) * math.cos(a), (Ra + 0.1) * math.sin(a), z_cono(Ra + 0.1) - 0.12), 0.045, D["madera"])
+        C.palo(((Rb - 0.08) * math.cos(a), (Rb - 0.08) * math.sin(a), z_cono(Rb - 0.08) - 0.156),
+               ((Ra + 0.1) * math.cos(a), (Ra + 0.1) * math.sin(a), z_cono(Ra + 0.1) - 0.156), 0.045, D["madera"])
     sector(Rb, Ra, Rb - 0.08, Ra - 0.06, z_al, Hc, a0, a1, D["pira"])            # la p'ira
     sector(Rb + 0.3, Ra + 0.2, Rb, Ra, z_al - 0.05, Hc + 0.05, a0, a1, D["paja"])   # el ichu, encima
     figura((0.8, -0.6, 0), giro=2.2)
