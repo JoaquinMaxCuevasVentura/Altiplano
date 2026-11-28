@@ -235,6 +235,26 @@ Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con 
 
 **Los nodos.** `parametrico/boveda_e5_nodos.py` arma la misma bóveda en Geometry Nodes, con un interruptor entre hiladas voladas y bóveda verdadera de dovelas trabadas, y guarda `e5_parametrica.blend`. En Blender se mueven los controles y la bóveda cambia. El guion comprueba que los nodos dan las mismas hiladas y la misma clave que el cálculo de Python.
 
+## El piloto en las otras cinco
+
+Con E5 resuelta, el piloto pasó a las otras cinco el 28 de noviembre. Cada una tiene un guion en `parametrico/` con sus propias reglas, y la prueba 3 entra igual que en E5, con tres escenarios: que la pieza vuele 0,30 de su largo, un tercio o 0,375. Las reglas, los archivos y cómo se rehacen están en `parametrico/LEEME.md`.
+
+| Exploración | Variantes | Cumplen | La actual | Lo que propone el piloto |
+|---|---|---|---|---|
+| E1. La montaña | 324 | 120 la forma; 42 con un tercio | Sus últimas hiladas no tienen piedra detrás, y vuela 13,5 cm, más de un tercio de la piedra | Un collar de 40 cm en el óculo y un vuelo de 12 cm. Con la cámara de 2,8 m, el pie crece a 8,4 m y la piedra, de 28,9 a 51,8 m³ |
+| E2. El corral | 189 | 19 | Con dieciséis pares, quedan a 1,34 m en el alero | 32 pares y un cono de 3,1 m, a 45°: 138 m de queñua en lugar de 88 |
+| E3. La casa redonda | 360 | 270 la forma; 180 con un tercio | Cumple si la champa vuela un tercio | Si vuela solo 0,30, hiladas que vuelen de 8 a 12 cm: la cúpula sube a 3,44 m y gana área de pie |
+| E4. La chullpa | 140 | 90 la forma; 50 con un tercio | El forro de adobitos de 14 cm vuela 10 cm y no se sostiene en ningún escenario | Volar 4 cm, con una cámara de 2,52 m de alto, o forrarla con adobes de 40 cm |
+| E6. La *pirwa* | 100 | 18 | Es la que más guarda: 5,75 m³ | Nada: queda como está |
+
+Lo que encontró en cada una:
+
+- **E1.** La montaña dibujada termina en punta justo en el borde del óculo, de modo que las últimas piedras que vuelan no tienen nada encima de su cola. El guion le pone un collar de piedra de 40 cm, y entonces el talud pasa de 40°. Con una cámara de 2 m de diámetro que vuele 12 cm, en cambio, el cono cumple con la piedra de ahora, 28,9 m³, y un pie de 6,8 m.
+- **E2.** En el techo que vio Šolc los pares quedan a unos 70 cm, el ancho de una faja de *p'ira*, que se apoya de un par al otro (prueba 4). En el cono de E2, los dieciséis pares se abren hasta 1,34 m en el alero. Hacen falta 32, o correas, palos atados en anillo sobre los pares para que las fajas se apoyen en ellos; las correas no están en el piloto. Las fuentes del proyecto no dicen si la queñua da pares de 3,3 m.
+- **E3.** El relleno cubre las colas en todas las variantes. La cúpula actual vuela hasta 12,7 cm. Si la champa vuela menos, la cúpula se cierra más despacio, sube y deja más lugar para estar de pie, a cambio de unos 80 bloques más.
+- **E4.** La cámara vuela 10 cm con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. Con adobitos, la hilada vuela como mucho de 4,2 a 5,25 cm, según el escenario. Volando 4 cm, la cámara necesita nueve hiladas y queda alta y angosta. Con un forro de adobes de 40 cm, los de E5, la cámara de ahora cumple.
+- **E6.** Si la V vuela 7 cm o más, la clave baja de 1,70 m; si vuela menos, le quita alto a lo guardado. La actual vuela 6 cm, el 15 % del bloque, y no depende de la prueba 3. Falta probar si la champa aguanta más de 4,6 m de alto con el depósito lleno.
+
 ## Lo que se descartó y lo que cambió
 
 - ***La A de piedra y tierra***, modelada a partir de la referencia R6: dos muros de piedra amontonada que se tocaban arriba, con tierra apisonada entre los dos, sobre una base de pirca atravesada por un paso volado. El autor la descartó. Solo hubo renders rápidos.
@@ -248,5 +268,9 @@ Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con 
 - Si los pasajes que salen del artículo son los que quiere para cada obra.
 - Si acepta lo que resuelven las láminas de detalle, en la lista de arriba.
 - Si E5 pasa a otra variante de hiladas voladas cuando la prueba 3 mida cuánto vuela el adobe.
+- En E1, si la montaña crece para cubrir las colas o si la cámara se achica a 2 m.
+- En E2, si el techo lleva 32 pares o correas sobre los dieciséis de ahora.
+- En E3, cuál de las tres maneras de volar, cuando la prueba 3 dé su resultado.
+- En E4, si la cámara se forra de adobes de 40 cm o se vuelve alta y angosta.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

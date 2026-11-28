@@ -8,7 +8,7 @@ El proyecto es de Joaquin Max Cuevas Ventura. Va aparte de su artículo «Cosech
 
 ## Estado (28 de noviembre de 2026)
 
-**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las seis exploraciones que eligió el autor están modeladas en Blender, cada exploración tiene una lámina de detalle y E5 tiene un piloto de exploración paramétrica, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
+**Planteado y modelado, sin construir.** Las cinco pruebas están descritas, sus quince formas y las seis exploraciones que eligió el autor están modeladas en Blender, cada exploración tiene una lámina de detalle y un piloto de exploración paramétrica, pero todavía no se ha hecho ninguna maqueta. Los renders muestran lo que se espera. No son registros de lo que pasó ni fotos de maquetas, y no deben presentarse así.
 
 Las medidas de cada prueba llevan su origen. Las que vienen de una fuente tienen autor y página; las que salen de una cuenta dicen cómo se hizo, y las demás son decisiones del proyecto, que se comprueban o se cambian al construir.
 
@@ -56,13 +56,13 @@ Se necesita Blender como módulo de Python, instalado con `pip install bpy==5.0.
 
 **Las láminas de detalle.** Cada exploración tiene un A3 en DXF, en `detalles/`, que se abre y se edita en QCAD Community Edition o en cualquier programa de CAD, con una capa por función y por material y los grosores del dibujo de arquitectura. Las hace `detalles/dibujar_detalles.py` (`pip install ezdxf shapely matplotlib`), que deja además una vista en grises de cada una y `laminas_de_detalle.pdf`, con las seis para imprimir. Lo que resuelven y las decisiones que agregan están en `exploraciones.md`.
 
-**La exploración paramétrica.** En `parametrico/` está el piloto en E5: la bóveda como función de sus reglas de construcción. Compara cientos de variantes de hiladas voladas y de bóveda verdadera de dovelas, y arma la misma bóveda en Geometry Nodes, con controles que se mueven en Blender. Su `LEEME.md` explica las reglas, y el resultado está en `exploraciones.md`.
+**La exploración paramétrica.** En `parametrico/` está el piloto, que empezó en E5: la bóveda como función de sus reglas de construcción. Compara cientos de variantes de hiladas voladas y de bóveda verdadera de dovelas, y arma la misma bóveda en Geometry Nodes, con controles que se mueven en Blender. Después pasó a las otras cinco, cada una con sus reglas, su campo de variantes y una lámina con una matriz de cortes. Su `LEEME.md` explica las reglas, y el resultado está en `exploraciones.md`.
 
 **Los renders son predicciones, no fotos.** Cada archivo se llama `render_…`, y su pie tiene que decirlo. Cuando se construya una maqueta, su foto se pone junto al render, tomada desde el mismo punto de vista. La regla 3 todavía dice que el modelo en el computador solo mide y planifica. `investigacion_blender.md` (§1) propone reescribirla, y lo decide el autor.
 
 ## El documento
 
-`documento/chhaxwa.pdf` reúne el proyecto en treinta y cuatro páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las seis obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, las seis láminas de detalle, el piloto paramétrico en E5, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
+`documento/chhaxwa.pdf` reúne el proyecto en cuarenta y cuatro páginas de 23 × 24 cm: la tabla de las exploraciones y las pruebas con las seis obras a la misma escala, un par de páginas por exploración, con su texto, su corte y su render, las seis láminas de detalle, el piloto paramétrico en E5 y un par de páginas por cada una de las otras cinco, una página por prueba con sus tres formas, el proceso, las referencias, el prototipo y las fuentes. El diseño toma rasgos del de *Obra gruesa*, a pedido del autor: una grotesca pequeña, los números de página muy grandes, los títulos de las pruebas en vertical, las fichas negras con texto blanco, una página gris de entrada y una segunda voz en gris, que en el libro de Radić es el inglés y aquí es la novela. Cada exploración ocupa dos páginas enfrentadas, el texto y el corte a la izquierda y el render a la derecha.
 
 Se compone en Typst (`documento/chhaxwa.typ`), con la letra Inter, que es libre. Para rehacerlo: `pip install typst` y, desde la raíz, `python3 chhaxwa/documento/compilar.py`.
 

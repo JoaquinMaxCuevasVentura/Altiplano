@@ -306,3 +306,36 @@ El autor eligió para E5 la bóveda de hiladas voladas y descartó la bóveda ve
 El precio es el espacio. Dentro se está de pie solo en una franja de unos 43 cm al centro, y el resto se usa sentado, en cuclillas o acostado. Si la prueba 3 muestra que el adobe vuela 15 cm, conviene la variante que arranca a 60 cm. Las bóvedas de dovelas quedan en el piloto como una alternativa estudiada, y `exploraciones.md` y el documento lo dicen así.
 
 El autor pidió además seguir el piloto paramétrico con las otras cinco exploraciones.
+
+## 19. Más tarde, el mismo día: el piloto en las otras cinco
+
+El piloto pasó a E1, E2, E3, E4 y E6. Cada una tiene un guion en `chhaxwa/parametrico/` (`montana_e1.py`, `corral_e2.py`, `cupula_e3.py`, `chullpa_e4.py` y `pirwa_e6.py`), y `piloto.py` reúne lo común: la tabla de variantes, el campo y la lámina en DXF con una matriz de cortes. `todas.py` corre los cinco. La prueba 3 entra como en E5, pero como fracción del largo de la pieza: 0,30, un tercio o 0,375. Las reglas sin fuente se marcan como del proyecto.
+
+| Exploración | Qué cambia | Reglas | Variantes | Cumplen |
+|---|---|---|---|---|
+| E1 | Radio al pie, radio de la cámara, vuelo | Talud de 40° como mucho (supuesto de la prueba 1); colas cubiertas | 324 | 120 la forma; 42 con un tercio |
+| E2 | Diámetro, alto del cono, pares | Pendiente de 45° o más (prueba 4); pares a 70 cm o menos en el alero, el ancho de la faja (prueba 4) | 189 | 19 |
+| E3 | Radio del cuarto, alto de la pirca, vuelos de la cúpula | La pirca cubre el paso de 96 cm y su laja (prueba 3); colas cubiertas | 360 | 270 la forma; 180 con un tercio |
+| E4 | Vuelo de la cámara, retiro de la pirámide, pieza del forro | Colas en el relleno; una hilada sobre la laja de cierre; retiro de 7 cm como mucho (proyecto) | 140 | 90 la forma; 50 con un tercio |
+| E6 | Vuelo de la V, alto | Clave a 1,70 m o más (proyecto); lado alto de 4,6 m como mucho, el que aceptó el autor | 100 | 18 |
+
+**Lo que encontró.**
+
+- **E1.** El cono dibujado termina en punta justo en el borde del óculo, y las últimas hiladas de la cámara no tienen piedra encima de su cola. Con un collar de 40 cm, el talud sube a 42,1°. La cámara vuela 13,5 cm, más que un tercio de los 40 cm de la piedra, y solo cumple si la piedra vuela 0,375. Con un tercio, la que da más piso por metro cúbico de piedra vuela 12 cm, tiene un pie de 4,2 m de radio y pide 51,8 m³ de piedra, 118 parcelas de la prueba 1 en lugar de 66. Con una cámara de 2 m que vuele 12 cm, el cono cumple con la piedra de ahora, 28,9 m³.
+- **E2.** Con dieciséis pares, el alero de 3,4 m de radio los deja a 1,34 m, casi el doble del ancho de una faja. El corral de 6 m necesita 32 pares; la más barata tiene un cono de 3,1 m, a 45°, con 138 m de queñua en lugar de 88 y 64 fajas. Las correas, otra salida, no están en el piloto. Ninguna fuente del proyecto dice si la queñua da pares de 3,3 m.
+- **E3.** El relleno cubre las colas en todas. La actual vuela hasta 12,7 cm y cumple con un tercio. Si la champa vuela solo 0,30 de su largo, conviene volar de 8 a 12 cm: 18 hiladas, 3,44 m de alto, 8,7 m² de pie en lugar de 7,9 y unos 80 bloques más.
+- **E4.** La cámara vuela 10 cm con adobitos de pie de 14 cm de fondo, y no cumple en ningún escenario. Con adobitos tiene que volar 4 cm, con nueve hiladas voladas y 2,52 m de alto. Con un forro de adobes de 40 cm, los de E5, la cámara de ahora cumple en los tres.
+- **E6.** La actual, que vuela 6 cm, es la que más guarda, 5,75 m³. Con 7 cm o más, la clave baja de 1,70 m.
+
+**Los dibujos.** Cada exploración tiene un campo (P6, P8, P10, P12 y P14) y una lámina A3 con su matriz de cortes (P7, P9, P11, P13 y P15), a 1:100, salvo E2, a 1:200. En los campos, una V marca las variantes que cumplen la forma pero piden que la pieza vuele más de un tercio. El documento suma un par de páginas por exploración y llega a cuarenta y cuatro.
+
+**Lo que decide el autor.**
+
+- En E1, si la montaña crece para cubrir las colas o si la cámara se achica a 2 m.
+- En E2, si el techo lleva 32 pares o correas.
+- En E3, cuál de las tres maneras de volar, cuando la prueba 3 dé su resultado.
+- En E4, si la cámara se forra de adobes de 40 cm o se vuelve alta y angosta.
+
+Los modelos de Blender y las láminas de detalle no cambian hasta que el autor decida.
+
+**Uso de IA.** Claude (Anthropic) escribió los guiones y las láminas, hizo las cuentas y redactó estos textos.

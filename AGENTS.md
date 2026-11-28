@@ -65,6 +65,7 @@ venv_bpy/bin/python chhaxwa/blender/diagramas.py           # los cortes de las s
 python3 chhaxwa/detalles/dibujar_detalles.py            # las láminas de detalle de Chhaxwa en DXF, sus vistas y su PDF (pip install ezdxf shapely matplotlib)
 python3 chhaxwa/parametrico/boveda_e5.py                # el piloto paramétrico de E5: variantes, gráfico y láminas P2-P4
 venv_bpy/bin/python chhaxwa/parametrico/boveda_e5_nodos.py   # la bóveda de E5 en Geometry Nodes, su .blend y su render
+python3 chhaxwa/parametrico/todas.py                    # el piloto de E1, E2, E3, E4 y E6: variantes, campos y láminas P6-P15
 python3 chhaxwa/documento/compilar.py                   # el documento de Chhaxwa (pip install typst; letra Inter)
 python3 archivo_del_proyecto/herramientas/armar_archivo.py      # el archivo del proyecto; lee la rama, así que va después del commit
 python3 archivo_del_proyecto/herramientas/verificar_archivo.py  # comprueba el archivo y escribe su verificacion.md

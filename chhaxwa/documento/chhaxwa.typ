@@ -336,6 +336,77 @@
     [*La bóveda verdadera.* El autor preguntó si E5 podía tener una bóveda convencional y mandó la foto de un arco de adobe de dovelas, cada adobe con su junta hacia el centro. Una bóveda así empuja hacia los lados, y se sostiene si su línea de presiones, el camino de los empujes, cabe dentro del anillo. El guion probó 258 bóvedas de medio punto, catenarias y rebajadas, con anillos de 10, 20 o 40 cm, y cumplen 145. Con dovelas de canto, de 20 cm, como las de la foto, las elegidas dejan de 0,93 a 1,20 m de ancho de pie, contra 0,43 en E5, y gastan entre 558 y 718 adobes, contra 728.],
     [*Lo que cambia.* E5 dejaría de cerrarse volando hiladas, que es la técnica de la prueba 3 y lo que la ata a la chullpa de Acora. La de medio punto y la rebajada piden cimbra mientras se levantan, y en el altiplano falta la madera. La catenaria podría levantarse sin cimbra, a la manera de las bóvedas nubias, una técnica que todavía no está cotejada en las fuentes del proyecto. La cuenta es plana, con pesos supuestos, y no mide la resistencia del adobe. Una bóveda verdadera pediría su propia prueba, la del arco. Por eso el autor eligió seguir volando hiladas, como en las otras obras.]))
 
+// --- el piloto en las otras cinco: un par de páginas cada una (P6-P15) ------------------------------------------
+#let piloto(titulo, texto, nc, campo, pie-campo, nota-campo, nl, lamina, pie-lamina, dxf, texto-lamina) = {
+  pagebreak(to: "even", weak: true)
+  grid(columns: (17mm, 1fr), column-gutter: 5mm,
+    titulo-vertical("Exploración paramétrica", titulo),
+    [#columns(2, gutter: 7mm, texto)
+     #v(4mm)
+     #block(width: 88%, figura-p(nc, campo, pie-campo, nota-campo))])
+  lamina-p(nl, lamina, pie-lamina, dxf, columns(2, gutter: 7mm, texto-lamina))
+}
+
+#piloto("E1. La montaña",
+  [*Las reglas.* Cambian el radio al pie del cono, el radio de la cámara y lo que vuela cada hilada de la cámara, y salen 324 variantes. El talud no puede pasar de 40°, el que supone la prueba 1 para la piedra suelta, y detrás de cada piedra que vuela tienen que quedar sus 40 cm de cola, para que algo la cargue.
+
+   *Lo que encontró.* La montaña dibujada termina en punta justo en el borde del óculo, y sus últimas hiladas no tienen piedra detrás. Con un collar de 40 cm alrededor del óculo, el talud sube a 42°. Además, la cámara vuela 13,5 cm por hilada, un poco más que un tercio del largo de la piedra, así que solo se sostendría si la prueba 3 muestra que la piedra vuela 0,375 de su largo. Si vuela un tercio, la variante que da más piso por metro cúbico de piedra guarda la cámara de 2,8 m, vuela 12 cm y se abre al pie hasta 8,4 m. Pide 51,8 m³ de piedra, unas 118 parcelas despedregadas en lugar de 66.
+
+   *Lo que decide el autor.* Si la montaña crece o la cámara se achica. Con una cámara de 2 m de diámetro que vuele 12 cm, el cono cumple con la piedra de ahora, 28,9 m³, y un pie de 6,8 m.],
+  6, "../parametrico/e1_campo.png", [*El campo de E1.* El radio al pie contra el radio de la cámara, con dos maneras de volar. El gris dice cuánta piedra lleva el cono. En blanco quedan las que pasan de 40° (T) o dejan colas sin cargar (C); con V, las que piden que la piedra vuele más de un tercio.], [Datos en #raw("parametrico/e1_variantes.csv"); el guion es #raw("parametrico/montana_e1.py").],
+  7, "../parametrico/e1_matriz.png", [*Dieciséis variantes de la montaña, a 1:100.* Todas con el collar y la cámara volando 13,5 cm, como la actual. La línea corta marca el ancho donde se está de pie.], "e1_matriz.dxf",
+  [Con el pie de 3,2 m ninguna variante cumple el talud, y con el de 4,4 m cumplen todas. Al crecer la cámara crece también la montaña, porque hacen falta más hiladas para llegar al óculo, y el talud se empina. Una cámara de 3,2 m pide un pie de 4,4 m de radio.
+
+   Las parcelas se cuentan con los 0,44 m³ de piedra que supone el dibujo de la prueba 1. Cuando la prueba diga cuánta piedra da de verdad una parcela, la cuenta cambia en la misma proporción.])
+
+#piloto("E2. El corral",
+  [*Las reglas.* Cambian el diámetro del corral, el alto del cono y cuántos pares lo arman, y salen 189 variantes. El techo tiene que tener 45° de pendiente o más, como el de la prueba 4. En el alero, los pares no pueden quedar a más de 70 cm, el ancho de una faja de _p'ira_, porque cada faja se apoya de un par al otro. En el techo que vio Šolc los pares quedan a unos 70 cm, según la cuenta de la prueba 4.
+
+   *Lo que encontró.* Con los dieciséis pares de ahora, el alero de 6,8 m de diámetro los deja a 1,34 m, casi el doble del ancho de una faja, y ninguna variante con dieciséis pares cumple. El corral de 6 m necesita 32. La que gasta menos queñua tiene un cono de 3,1 m, con 45° justos, y lleva 138 m de palos entre pares, postes y anillo, contra 88 ahora. Pide 64 fajas, algo más de tres techos de Enquelga, que llevan 20 cada uno. Con 32 pares, un corral de más de 6 m vuelve a dejar los pares demasiado separados.
+
+   *Lo que decide el autor.* Si duplica los pares o pone correas, palos atados en anillo sobre los pares para que las fajas se apoyen en ellos. Las correas no están en el piloto. Las fuentes del proyecto tampoco dicen si la queñua da pares de 3,3 m.],
+  8, "../parametrico/e2_campo.png", [*El campo de E2.* El diámetro del corral contra el alto del cono, con los dieciséis pares de ahora y con 32. El gris dice cuánta queñua llevan los pares, los postes y el anillo. En blanco quedan las que no llegan a 45° (P) o separan los pares más de 70 cm (S).], [Datos en #raw("parametrico/e2_variantes.csv"); el guion es #raw("parametrico/corral_e2.py").],
+  9, "../parametrico/e2_matriz.png", [*Dieciséis variantes del corral, a 1:200.* Todas con 32 pares. El techo arranca 90 cm sobre la pirca, como en la lámina 2.], "e2_matriz.dxf",
+  [El alto del cono decide la pendiente, y el diámetro del corral decide cuánto se separan los pares. Con el corral de 6 m, el cono tiene que medir al menos 3,1 m para llegar a 45°. En los corrales de 7 y 8 m, aunque sean 32, los pares quedan a 77 y 86 cm.
+
+   La piedra de la pirca no cambia con el techo: son 12,2 m³, unas 28 parcelas de la prueba 1.])
+
+#piloto("E3. La casa redonda",
+  [*Las reglas.* Cambian el radio del cuarto, el alto de la pirca y cómo vuela la cúpula, y salen 360 variantes. La pirca tiene que ser al menos tan alta como el paso de 96 cm y la laja que lo cubre. El relleno de tierra tiene que cubrir la cola de cada hilada, y la hilada que más vuela no puede pasar de lo que aguante la champa.
+
+   *Lo que encontró.* El relleno cubre las colas en todas las variantes. La E3 actual vuela hasta 12,7 cm, un poco más que los 12 cm del escenario más prudente, y cumple si la champa vuela un tercio de su largo. Si la prueba 3 muestra que vuela solo 12 cm, alcanza con que las hiladas vuelen de 8 a 12 cm. La cúpula pasa de 16 a 18 hiladas, sube de 3,20 a 3,44 m y gasta unos 80 bloques más. Como se cierra más despacio, el área donde se está de pie crece de 7,9 a 8,7 m². Para que la cúpula baje, volando de 12 a 15 cm, la champa tendría que volar 0,375 de su largo.
+
+   *Lo que decide el autor.* Cuál de las tres maneras de volar, cuando la prueba 3 dé su resultado. Con la pirca de 1,2 m, las tres caben.],
+  10, "../parametrico/e3_campo.png", [*El campo de E3.* El radio del cuarto contra el alto de la pirca, con la manera de volar actual y la más prudente. El gris dice cuánta área queda de pie. En blanco, las pircas más bajas que el paso y su laja (K).], [Datos en #raw("parametrico/e3_variantes.csv"); el guion es #raw("parametrico/cupula_e3.py"), y la cúpula sale de la misma cuenta que la lámina 3.],
+  11, "../parametrico/e3_matriz.png", [*Doce variantes de la casa redonda, a 1:100.* Cuatro cuartos por tres maneras de volar, con la pirca de 1,2 m. La línea corta marca el ancho donde se está de pie.], "e3_matriz.dxf",
+  [Cuanto menos vuela cada hilada, más hiladas hacen falta y más alta queda la cúpula, pero más espacio queda para estar de pie. El relleno crece con el cuarto: el de 5,6 m de diámetro lleva 29 m³ de tierra, más del doble que el de 4 m.
+
+   Los bloques se cuentan de 40 × 25 × 12 cm, puestos a tizón, con el largo hacia adentro, y sin descontar el paso ni el _t'uju_.])
+
+#piloto("E4. La chullpa",
+  [*Las reglas.* Cambian lo que vuela cada hilada de la cámara, lo que se retira cada hilada de la pirámide y la pieza que forra la cámara, y salen 140 variantes. La pieza vuela lo que aguante con la cola cargada, y su cola tiene que caber en el relleno. Sobre la laja que cierra la cámara tiene que quedar una hilada. Ningún adobito de la cara puede apoyarse en menos de la mitad de su fondo, así que cada hilada se retira 7 cm como mucho, una decisión del proyecto.
+
+   *Lo que encontró.* La cámara dibujada vuela 10 cm por hilada con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. No se sostiene en ningún escenario, porque un adobito así vuela de 4,2 a 5,25 cm. Para cumplir, la cámara tiene que volar 4 cm por hilada. Entonces necesita nueve hiladas voladas en lugar de cuatro, sube de 1,47 a 2,52 m y queda alta y angosta, con 1,39 m³. Si el forro se hace con adobes de 40 cm, los de E5, la cámara de ahora cumple en los tres escenarios. El retiro de 6,2 cm cumple.
+
+   *Lo que decide el autor.* Si la cámara se forra de adobes grandes o se vuelve alta y angosta. Una tercera salida, cerrarla con lajas largas, no está en el piloto.],
+  12, "../parametrico/e4_campo.png", [*El campo de E4.* El vuelo de la cámara contra el retiro de la pirámide, con el forro de adobitos de pie y con adobes de 40 cm. El gris dice el volumen de la cámara. En blanco quedan las que no cierran a tiempo (T), dejan la cola fuera del relleno (C) o se retiran más de 7 cm (R); con V, las que piden que la pieza vuele más de un tercio.], [Datos en #raw("parametrico/e4_variantes.csv"); el guion es #raw("parametrico/chullpa_e4.py").],
+  13, "../parametrico/e4_matriz.png", [*Quince variantes de la chullpa, a 1:100.* Todas con el forro de adobitos de pie, sin la cornisa ni la boca.], "e4_matriz.dxf",
+  [Solo la fila de arriba, que vuela 4 cm, cumple, salvo donde la pirámide se retira 8 cm. Las cámaras que vuelan 7 y 10 cm se ven más holgadas, pero sus adobitos vuelan la mitad de su fondo o más.
+
+   El retiro no cambia la cámara, pero sí la cima: con 4,4 cm de retiro queda de 1,77 m de lado, y con 8 cm, de 0,76 m.])
+
+#piloto("E6. La pirwa",
+  [*Las reglas.* Cambian lo que vuela cada hilada de la V y el alto del depósito, y salen 100 variantes. Bajo la trampa hay que estar de pie, así que la clave queda a 1,70 m o más, el alto que se usa en E5. El lado alto no pasa de 4,6 m, el que el autor aceptó al bajar la _pirwa_ un metro, hasta que se pruebe uno mayor.
+
+   *Lo que encontró.* Cumplen 18. Si la V vuela 7 cm o más, se cierra antes y la clave baja de 1,70 m. Si vuela menos, la clave sube y le quita alto a lo guardado. La E6 actual, que vuela 6 cm, es la que más guarda: 5,75 m³ sobre el piso, con 535 bloques de champa. Su vuelo es el 15 % del largo del bloque, muy por debajo del tercio, así que la V no depende de la prueba 3.
+
+   *Lo que decide el autor.* Nada por ahora: la E6 actual queda como está. Falta probar si un depósito de champa de más de 4,6 m aguanta lleno, y esa prueba todavía no está en el proyecto.],
+  14, "../parametrico/e6_campo.png", [*El campo de E6.* El vuelo de la V contra el alto del lado alto. El gris dice cuánto se guarda. En blanco quedan las que bajan la clave de 1,70 m (P) o pasan de 4,6 m (E).], [Datos en #raw("parametrico/e6_variantes.csv"); el guion es #raw("parametrico/pirwa_e6.py").],
+  15, "../parametrico/e6_matriz.png", [*Doce variantes de la _pirwa_, a 1:100.* Cortadas por el eje largo, donde el muro mide el promedio de sus dos lados. La V se ve en el muro largo, al fondo.], "e6_matriz.dxf",
+  [Las columnas de 8 y 10 cm cierran la V más rápido y guardan más, pero dejan la clave a 1,55 y 1,43 m. La de 4 cm la sube a 2,27 m y guarda 1,3 m³ menos. La fila de abajo pasa del alto que aceptó el autor.
+
+   Lo guardado se mide sobre el piso de palos, hasta 10 cm bajo el techo, en la planta interior de 2,5 × 1,1 m.])
+
 // --- las cinco pruebas: una página cada una ----------------------------------------------------------------------
 #let prueba(n, titulo, texto, pasaje, mide, filas, formas) = {
   pagebreak()
