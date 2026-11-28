@@ -293,3 +293,16 @@ Cumplen 145. Con dovelas de canto, de 20 cm, como las de la foto, las elegidas d
 - Si el piloto sigue con las otras cinco exploraciones.
 
 **Uso de IA.** Claude (Anthropic) propuso el piloto, escribió los guiones, los nodos y las láminas, hizo las cuentas y redactó estos textos.
+
+## 18. Más tarde, el mismo día: E5 sigue volando hiladas
+
+El autor eligió para E5 la bóveda de hiladas voladas y descartó la bóveda verdadera de dovelas. Coincide con lo que se le propuso:
+
+- volar hiladas es la técnica con que se cierran las seis obras, y una bóveda de dovelas haría de E5 la excepción;
+- la forma de E5 depende de lo que mida la prueba 3, y una bóveda de dovelas pediría otra prueba, la del arco;
+- volar hiladas no pide cimbra, y en el altiplano falta la madera (Squier, 1877: 313);
+- la bóveda volada es de la misma familia que la cámara de la chullpa de Acora (ibid.: 353).
+
+El precio es el espacio. Dentro se está de pie solo en una franja de unos 43 cm al centro, y el resto se usa sentado, en cuclillas o acostado. Si la prueba 3 muestra que el adobe vuela 15 cm, conviene la variante que arranca a 60 cm. Las bóvedas de dovelas quedan en el piloto como una alternativa estudiada, y `exploraciones.md` y el documento lo dicen así.
+
+El autor pidió además seguir el piloto paramétrico con las otras cinco exploraciones.

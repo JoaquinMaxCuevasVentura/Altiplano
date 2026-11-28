@@ -231,7 +231,7 @@ El autor pidió explorar las seis obras de forma paramétrica mientras se dibuja
 
 Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con pesos supuestos (adobe 18, tierra 16 y piedra 20 kN/m³), y no mide la resistencia del adobe. Que la catenaria pueda levantarse sin cimbra, a la manera de las bóvedas nubias, todavía no está cotejado en las fuentes del proyecto.
 
-**Lo que cambiaría.** Con una bóveda verdadera, E5 dejaría de cerrarse volando hiladas, que es la técnica de la prueba 3 y lo que la ata a la chullpa de Acora. La de medio punto y la rebajada pedirían cimbra, y en el altiplano falta la madera (Squier, 1877: 313). Haría falta además una prueba nueva, la del arco. El modelo, el render, el corte y la lámina de detalle de E5 siguen con hiladas voladas hasta que el autor decida.
+**Lo que cambiaría.** Con una bóveda verdadera, E5 dejaría de cerrarse volando hiladas, que es la técnica de la prueba 3 y lo que la ata a la chullpa de Acora. La de medio punto y la rebajada pedirían cimbra, y en el altiplano falta la madera (Squier, 1877: 313). Haría falta además una prueba nueva, la del arco. Por eso el autor eligió seguir volando hiladas, como en las otras cinco obras, y las bóvedas de dovelas quedan en el piloto como una alternativa estudiada. Si la prueba 3 muestra que el adobe vuela 15 cm, conviene la variante que arranca a 60 cm, que sigue volando hiladas.
 
 **Los nodos.** `parametrico/boveda_e5_nodos.py` arma la misma bóveda en Geometry Nodes, con un interruptor entre hiladas voladas y bóveda verdadera de dovelas trabadas, y guarda `e5_parametrica.blend`. En Blender se mueven los controles y la bóveda cambia. El guion comprueba que los nodos dan las mismas hiladas y la misma clave que el cálculo de Python.
 
@@ -240,13 +240,13 @@ Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con 
 - ***La A de piedra y tierra***, modelada a partir de la referencia R6: dos muros de piedra amontonada que se tocaban arriba, con tierra apisonada entre los dos, sobre una base de pirca atravesada por un paso volado. El autor la descartó. Solo hubo renders rápidos.
 - ***La torre de champa*** fue E3 hasta que el autor la reemplazó por la casa redonda. Mejorada como depósito, volvió como E6.
 - **La casa redonda** entró primero como candidata (E6), con un análisis de a cuál de las cinco podía reemplazar; se proponía E2. El autor eligió reemplazar la torre, y se le pasó lo que la torre traía: el umbral, la *p'ira* y la *chhaxwa* (`analisis/43`, §13 y §14).
+- **La bóveda verdadera de E5**, de dovelas de adobe, de medio punto, catenaria o rebajada, que se estudió en el piloto paramétrico. El autor eligió seguir volando hiladas, porque es la técnica de todo el proyecto y no pide cimbra.
 - **Las figuras humanas.** Los renders, los diagramas y las piezas llevaban una figura de 1,65 m para dar la escala. El 28 de noviembre el autor pidió quitarlas, porque se veían mal, y se rehicieron todas las imágenes sin ellas. Las apaga `FIGURAS = False` en `blender/comun.py`.
 
 ## Lo que decide el autor
 
 - Si los pasajes que salen del artículo son los que quiere para cada obra.
 - Si acepta lo que resuelven las láminas de detalle, en la lista de arriba.
-- Si E5 sigue con la bóveda de hiladas voladas o pasa a una bóveda verdadera de dovelas (de medio punto, catenaria o rebajada), con lo que eso pide: una prueba del arco y, salvo en la catenaria, cimbra.
-- Si el piloto paramétrico sigue con las otras cinco exploraciones.
+- Si E5 pasa a otra variante de hiladas voladas cuando la prueba 3 mida cuánto vuela el adobe.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

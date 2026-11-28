@@ -12,7 +12,7 @@ El autor pidió explorar las seis exploraciones de forma paramétrica y generati
 
 Lo que vuela el adobe sin caerse lo mide la prueba 3. Mientras no se sepa, se prueban tres escenarios: 12 cm, un tercio del largo del adobe (13,3 cm) y 15 cm.
 
-**Bóveda verdadera** (`boveda_e5_verdadera.py`). La pidió el autor, con la foto de un arco de adobe de dovelas, cada adobe con la junta hacia el centro (la foto no está en el repositorio). Hay tres tipos: de medio punto, catenaria y rebajada. El anillo mide 10, 20 o 40 cm según cómo se ponga el adobe de 40 × 20 × 10 cm, y en total son 258 variantes. Una bóveda verdadera empuja hacia los lados, así que la regla de vuelo se cambia por una de equilibrio:
+**Bóveda verdadera** (`boveda_e5_verdadera.py`). El autor la pidió para compararla, con la foto de un arco de adobe de dovelas, cada adobe con la junta hacia el centro (la foto no está en el repositorio). Después la descartó, y E5 sigue volando hiladas, como las otras obras. Hay tres tipos: de medio punto, catenaria y rebajada. El anillo mide 10, 20 o 40 cm según cómo se ponga el adobe de 40 × 20 × 10 cm, y en total son 258 variantes. Una bóveda verdadera empuja hacia los lados, así que la regla de vuelo se cambia por una de equilibrio:
 
 - **E.** Tiene que caber una línea de presiones, el camino de los empujes, dentro del espesor del anillo.
 - **S.** La resultante de media casa tiene que caer dentro de la base del muro.
