@@ -114,6 +114,7 @@ GENERADORES = [   # (patrón de la ruta, generador)
     (r"^chhaxwa/renders/render_prototipo_", "chhaxwa/blender/prototipo_pirca_paisaje.py (Blender 5.0.1)"),
     (r"^chhaxwa/renders/piezas/", "chhaxwa/blender/piezas.py (Blender 5.0.1) y aligerar_piezas.py"),
     (r"^chhaxwa/renders/diagramas/", "chhaxwa/blender/diagramas.py (Blender 5.0.1) y aligerar_piezas.py"),
+    (r"^chhaxwa/detalles/(detalle_E\d\.(dxf|png)|laminas_de_detalle\.pdf)$", "chhaxwa/detalles/dibujar_detalles.py (ezdxf, shapely y matplotlib)"),
     (r"^chhaxwa/documento/chhaxwa\.pdf$", "chhaxwa/documento/compilar.py (Typst), desde chhaxwa.typ"),
 ]
 
@@ -496,7 +497,10 @@ def descripcion(ruta, datos):
             (r"^chhaxwa/renders/render_forma_E(\d)\w*\.jpg$", "Render de la exploración E{0} de Chhaxwa (no es una foto)"),
             (r"^chhaxwa/renders/render_forma_(\w+)\.jpg$", "Render de la maqueta de forma {0} de Chhaxwa (no es una foto)"),
             (r"^chhaxwa/renders/diagramas/diagrama_x(\d)\.png$", "Corte en diagrama de la exploración E{0} de Chhaxwa"),
-            (r"^chhaxwa/renders/diagramas/diagrama_serie\.png$", "Las cinco exploraciones de Chhaxwa a la misma escala, en diagrama"),
+            (r"^chhaxwa/renders/diagramas/diagrama_serie\.png$", "Las seis exploraciones de Chhaxwa a la misma escala, en diagrama"),
+            (r"^chhaxwa/detalles/detalle_E(\d)\.dxf$", "Lámina de detalle de la exploración E{0} de Chhaxwa, en DXF"),
+            (r"^chhaxwa/detalles/detalle_E(\d)\.png$", "Vista en grises de la lámina de detalle de la exploración E{0} de Chhaxwa"),
+            (r"^chhaxwa/detalles/laminas_de_detalle\.pdf$", "Las seis láminas de detalle de Chhaxwa, en A3"),
             (r"^chhaxwa/renders/render_prototipo_", "Render de prueba de Chhaxwa: una pirca en el altiplano (no es una foto)"),
         ]
         for patron, texto in reglas:

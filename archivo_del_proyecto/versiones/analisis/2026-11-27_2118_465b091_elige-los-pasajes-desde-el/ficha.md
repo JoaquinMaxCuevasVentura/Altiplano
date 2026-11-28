@@ -7,17 +7,18 @@
 | Línea | [El registro de análisis](../README.md) |
 | Origen | commit `465b091` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 21:18 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`analisis/`](../../../../analisis/) |
 | La versión anterior | [2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y](../2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y/ficha.md) |
+| La versión siguiente | [2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de](../2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **1 que sigue vigente en su lugar,** sin cambios desde este commit: [`analisis/43_chhaxwa.md`](../../../../analisis/43_chhaxwa.md).
+- **1 archivo de esta versión que ya no es el vigente,** con su ruta original: [`analisis/43_chhaxwa.md`](analisis/43_chhaxwa.md).
 
 ## La versión completa
 
-En este commit, la línea tenía 44 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 44 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `465b091`. Para tenerla entera: `git worktree add ../altiplano_465b091 465b091`.
+En este commit, la línea tenía 44 archivos: 1 están en esta carpeta, 0 en carpetas de otras versiones y 43 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `465b091`. Para tenerla entera: `git worktree add ../altiplano_465b091 465b091`.
 
 ## Qué cambió respecto de la anterior
 

@@ -7,17 +7,19 @@
 | Línea | [Chhaxwa. Cinco pruebas de construcción](../README.md) |
 | Origen | commit `465b091` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-27 21:18 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`chhaxwa/`](../../../../chhaxwa/) |
 | La versión anterior | [2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y](../2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y/ficha.md) |
+| La versión siguiente | [2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de](../2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **11 que siguen vigentes en su lugar,** sin cambios desde este commit: [`chhaxwa/blender/diagramas.py`](../../../../chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](../../../../chhaxwa/blender/formas.py), [`chhaxwa/documento/chhaxwa.pdf`](../../../../chhaxwa/documento/chhaxwa.pdf), [`chhaxwa/documento/chhaxwa.typ`](../../../../chhaxwa/documento/chhaxwa.typ), [`chhaxwa/exploraciones.md`](../../../../chhaxwa/exploraciones.md), [`chhaxwa/fuentes.md`](../../../../chhaxwa/fuentes.md), [`chhaxwa/renders/diagramas/diagrama_serie.png`](../../../../chhaxwa/renders/diagramas/diagrama_serie.png), [`chhaxwa/renders/diagramas/diagrama_x2.png`](../../../../chhaxwa/renders/diagramas/diagrama_x2.png), [`chhaxwa/renders/diagramas/diagrama_x5.png`](../../../../chhaxwa/renders/diagramas/diagrama_x5.png), [`chhaxwa/renders/render_forma_E2C.jpg`](../../../../chhaxwa/renders/render_forma_E2C.jpg), [`chhaxwa/renders/render_forma_E5.jpg`](../../../../chhaxwa/renders/render_forma_E5.jpg).
+- **10 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`chhaxwa/blender/diagramas.py`](chhaxwa/blender/diagramas.py), [`chhaxwa/blender/formas.py`](chhaxwa/blender/formas.py), [`chhaxwa/documento/chhaxwa.pdf`](chhaxwa/documento/chhaxwa.pdf), [`chhaxwa/documento/chhaxwa.typ`](chhaxwa/documento/chhaxwa.typ), [`chhaxwa/exploraciones.md`](chhaxwa/exploraciones.md), [`chhaxwa/renders/diagramas/diagrama_serie.png`](chhaxwa/renders/diagramas/diagrama_serie.png), [`chhaxwa/renders/diagramas/diagrama_x2.png`](chhaxwa/renders/diagramas/diagrama_x2.png), [`chhaxwa/renders/diagramas/diagrama_x5.png`](chhaxwa/renders/diagramas/diagrama_x5.png), [`chhaxwa/renders/render_forma_E2C.jpg`](chhaxwa/renders/render_forma_E2C.jpg), [`chhaxwa/renders/render_forma_E5.jpg`](chhaxwa/renders/render_forma_E5.jpg).
+- **1 que sigue vigente en su lugar,** sin cambios desde este commit: [`chhaxwa/fuentes.md`](../../../../chhaxwa/fuentes.md).
 
 ## La versión completa
 
-En este commit, la línea tenía 82 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 82 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `465b091`. Para tenerla entera: `git worktree add ../altiplano_465b091 465b091`.
+En este commit, la línea tenía 82 archivos: 10 están en esta carpeta, 58 en carpetas de otras versiones y 14 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `465b091`. Para tenerla entera: `git worktree add ../altiplano_465b091 465b091`.
 
 ## Qué cambió respecto de la anterior
 
