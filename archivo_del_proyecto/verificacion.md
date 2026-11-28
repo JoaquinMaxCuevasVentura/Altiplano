@@ -1,22 +1,22 @@
 # Verificación del archivo
 
-Hecha el 28.11.2026 con `herramientas/verificar_archivo.py`, sobre el commit `badd9c7` de la rama del artículo. Se rehace con la misma orden, desde la raíz del repositorio.
+Hecha el 28.11.2026 con `herramientas/verificar_archivo.py`, sobre el commit `d3f840d` de la rama del artículo. Se rehace con la misma orden, desde la raíz del repositorio.
 
 **Resultado: todas las comprobaciones pasan.**
 
 | Qué se comprobó | Cuántos | Resultado |
 |---|---|---|
-| Los identificadores del inventario no se repiten | 1568 | bien |
-| Cada estado es uno de los siete previstos, o está vacío | 1568 | bien |
-| Cada archivo copiado existe y su SHA-256, su tamaño y su identificador de git son los del inventario | 990 | bien |
-| Cada registro sacado de git coincide con el contenido de su ruta en su commit | 1105 | bien |
-| Cada archivo vigente de la rama (commit badd9c7) tiene su registro y está en su lugar sin cambios | 307 | bien |
-| Cada contenido que tuvo cada ruta en la historia de la rama está en el inventario | 882 | bien |
+| Los identificadores del inventario no se repiten | 1591 | bien |
+| Cada estado es uno de los siete previstos, o está vacío | 1591 | bien |
+| Cada archivo copiado existe y su SHA-256, su tamaño y su identificador de git son los del inventario | 998 | bien |
+| Cada registro sacado de git coincide con el contenido de su ruta en su commit | 1113 | bien |
+| Cada archivo vigente de la rama (commit d3f840d) tiene su registro y está en su lugar sin cambios | 322 | bien |
+| Cada contenido que tuvo cada ruta en la historia de la rama está en el inventario | 905 | bien |
 | Cada duplicado que no se copia apunta a un archivo con el mismo contenido | 29 | bien |
-| Cada archivo de versiones/ está en el inventario, o es una ficha o un índice | 1234 | bien |
-| Cada carpeta de versión tiene su ficha | 231 | bien |
-| Cada versión que nombra el inventario tiene su carpeta | 80 | bien |
-| Los enlaces de la guía, los índices y las fichas llevan a un archivo que existe | 3191 | bien |
+| Cada archivo de versiones/ está en el inventario, o es una ficha o un índice | 1245 | bien |
+| Cada carpeta de versión tiene su ficha | 234 | bien |
+| Cada versión que nombra el inventario tiene su carpeta | 82 | bien |
+| Los enlaces de la guía, los índices y las fichas llevan a un archivo que existe | 3235 | bien |
 | Las imágenes que piden las páginas archivadas están a su lado (6 rutas ya no existían en su commit: pendientes.md) | 325 | bien |
 | Fuera de archivo_del_proyecto/, la carpeta de trabajo no tiene cambios respecto de la rama | 1 | bien |
 | Ningún texto del archivo trae el enlace de la carpeta privada del autor ni un correo suyo que no esté ya en el artículo | 1 | bien |
@@ -25,8 +25,8 @@ Hecha el 28.11.2026 con `herramientas/verificar_archivo.py`, sobre el commit `ba
 
 | Prefijo | Registros | Copiados | Peso copiado |
 |---|---|---|---|
-| `V-` | 307 | 0 | 0,0 MB |
-| `H-` | 575 | 560 | 227,7 MB |
+| `V-` | 322 | 0 | 0,0 MB |
+| `H-` | 583 | 568 | 237,1 MB |
 | `D-` | 319 | 319 | 82,4 MB |
 | `C-` | 123 | 111 | 32,2 MB |
 | `R-` | 211 | 0 | 0,0 MB |

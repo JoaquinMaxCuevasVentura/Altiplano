@@ -115,6 +115,9 @@ GENERADORES = [   # (patrón de la ruta, generador)
     (r"^chhaxwa/renders/piezas/", "chhaxwa/blender/piezas.py (Blender 5.0.1) y aligerar_piezas.py"),
     (r"^chhaxwa/renders/diagramas/", "chhaxwa/blender/diagramas.py (Blender 5.0.1) y aligerar_piezas.py"),
     (r"^chhaxwa/detalles/(detalle_E\d\.(dxf|png)|laminas_de_detalle\.pdf)$", "chhaxwa/detalles/dibujar_detalles.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e5_(variantes|campo|matriz|elegidas)", "chhaxwa/parametrico/boveda_e5.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e5_(variantes_verdaderas|verdaderas)", "chhaxwa/parametrico/boveda_e5_verdadera.py, llamado por boveda_e5.py"),
+    (r"^chhaxwa/parametrico/e5_(parametrica\.blend|nodos\.jpg)$", "chhaxwa/parametrico/boveda_e5_nodos.py (Blender 5.0.1)"),
     (r"^chhaxwa/documento/chhaxwa\.pdf$", "chhaxwa/documento/compilar.py (Typst), desde chhaxwa.typ"),
 ]
 
@@ -501,6 +504,14 @@ def descripcion(ruta, datos):
             (r"^chhaxwa/detalles/detalle_E(\d)\.dxf$", "Lámina de detalle de la exploración E{0} de Chhaxwa, en DXF"),
             (r"^chhaxwa/detalles/detalle_E(\d)\.png$", "Vista en grises de la lámina de detalle de la exploración E{0} de Chhaxwa"),
             (r"^chhaxwa/detalles/laminas_de_detalle\.pdf$", "Las seis láminas de detalle de Chhaxwa, en A3"),
+            (r"^chhaxwa/parametrico/e5_variantes\.csv$", "Las 825 variantes de hiladas voladas de la bóveda de E5, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e5_variantes_verdaderas\.csv$", "Las 258 variantes de bóveda verdadera de E5, con su línea de presiones"),
+            (r"^chhaxwa/parametrico/e5_campo\.png$", "El campo de las variantes de la bóveda de E5 (piloto paramétrico, P1)"),
+            (r"^chhaxwa/parametrico/e5_matriz\.(dxf|png)$", "Veinticuatro variantes de la bóveda de E5 a 1:100 (piloto paramétrico, P2)"),
+            (r"^chhaxwa/parametrico/e5_elegidas\.(dxf|png)$", "Las tres bóvedas elegidas de E5 según vuele el adobe (piloto paramétrico, P3)"),
+            (r"^chhaxwa/parametrico/e5_verdaderas\.(dxf|png)$", "E5 con hiladas voladas o bóveda verdadera de dovelas (piloto paramétrico, P4)"),
+            (r"^chhaxwa/parametrico/e5_parametrica\.blend$", "La bóveda de E5 en Geometry Nodes, con sus controles (Blender)"),
+            (r"^chhaxwa/parametrico/e5_nodos\.jpg$", "Render de cuatro bóvedas de E5 hechas con Geometry Nodes (no es una foto)"),
             (r"^chhaxwa/renders/render_prototipo_", "Render de prueba de Chhaxwa: una pirca en el altiplano (no es una foto)"),
         ]
         for patron, texto in reglas:
