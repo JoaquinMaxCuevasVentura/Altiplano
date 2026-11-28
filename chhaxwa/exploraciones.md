@@ -207,6 +207,34 @@ Las láminas resuelven cosas que los modelos dejaban abiertas. Son decisiones de
 - **E5.** El camastro es un banco de adobe de 0,70 × 0,35 m contra el muro sur. La última hilada de la bóveda deja una rendija de 43 cm; este texto decía 30.
 - **E6.** Sobre la V va un piso de palos de queñua de muro a muro, a 1,79 m, con la trampa bajo un hueco del piso. La piedra de la *chhaxwa* entra unos 18 cm en el muro.
 
+## La exploración paramétrica: el piloto en E5
+
+El autor pidió explorar las seis obras de forma paramétrica mientras se dibujan los detalles, y empezar por E5. La bóveda se volvió una función de sus reglas de construcción, en `parametrico/` (su `LEEME.md` explica las reglas y los archivos).
+
+**Hiladas voladas.** Un guion barre 825 variantes del arranque, del vuelo de la primera hilada y del de la última. En cada una revisa que la clave no pase de 2 m, que el relleno cargue las colas y que la rendija la pueda cerrar una laja. Lo que vuela el adobe con la cola cargada lo mide la prueba 3, y mientras tanto se prueban tres escenarios:
+
+| Si el adobe vuela | Variantes que cumplen | La mejor | De pie | Sentado | Adobes | Relleno |
+|---|---|---|---|---|---|---|
+| 12 cm | 18 | Arranca a 35 cm y vuela 12 cm en todas las hiladas | 0,42 m | 2,10 m | 728 | 11,4 m³ |
+| Un tercio, 13,3 cm | 42 | E5, la actual | 0,43 m | 2,16 m | 728 | 11,1 m³ |
+| 15 cm | 120 | Arranca a 60 cm y vuela de 14 a 15 cm | 0,40 m | 2,45 m | 616 | 9,3 m³ |
+
+«De pie» es el ancho donde quedan 1,70 m libres, y «sentado», donde queda 1 m. Por debajo de unos 11 cm de vuelo ninguna variante cabe en dos metros. E5 resultó la mejor de su escenario, en el borde de la regla de las colas. Con hiladas voladas y dos metros, en ninguna variante se está de pie en más de 44 cm.
+
+**La bóveda verdadera.** El autor preguntó si E5 podía tener una bóveda convencional y mandó la foto de un arco de adobe de dovelas. Una bóveda verdadera empuja hacia los lados. Se sostiene si su línea de presiones cabe en el espesor del anillo y si la resultante cae dentro de la base del muro. El guion probó 258 bóvedas de medio punto, catenarias y rebajadas, con anillos de 10, 20 o 40 cm según cómo se ponga el adobe, y cumplen 145. Las tres elegidas son de dovelas de canto, de 20 cm, como las de la foto:
+
+| Tipo | Arranque | Flecha | De pie | Sentado | Adobes | La línea de presiones | Cimbra |
+|---|---|---|---|---|---|---|---|
+| De medio punto | 0,15 m | 1,65 m | 1,10 m | 2,81 m | 718 | Cabe, sin holgura | Sí |
+| Catenaria | 0,40 m | 1,40 m | 0,93 m | 2,53 m | 623 | Cabe, sin holgura | No: a la nubia |
+| Rebajada | 0,80 m | 1,00 m | 1,20 m | 3,05 m | 558 | Cabe en el tercio central | Sí |
+
+Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con pesos supuestos (adobe 18, tierra 16 y piedra 20 kN/m³), y no mide la resistencia del adobe. Que la catenaria pueda levantarse sin cimbra, a la manera de las bóvedas nubias, todavía no está cotejado en las fuentes del proyecto.
+
+**Lo que cambiaría.** Con una bóveda verdadera, E5 dejaría de cerrarse volando hiladas, que es la técnica de la prueba 3 y lo que la ata a la chullpa de Acora. La de medio punto y la rebajada pedirían cimbra, y en el altiplano falta la madera (Squier, 1877: 313). Haría falta además una prueba nueva, la del arco. El modelo, el render, el corte y la lámina de detalle de E5 siguen con hiladas voladas hasta que el autor decida.
+
+**Los nodos.** `parametrico/boveda_e5_nodos.py` arma la misma bóveda en Geometry Nodes, con un interruptor entre hiladas voladas y bóveda verdadera de dovelas trabadas, y guarda `e5_parametrica.blend`. En Blender se mueven los controles y la bóveda cambia. El guion comprueba que los nodos dan las mismas hiladas y la misma clave que el cálculo de Python.
+
 ## Lo que se descartó y lo que cambió
 
 - ***La A de piedra y tierra***, modelada a partir de la referencia R6: dos muros de piedra amontonada que se tocaban arriba, con tierra apisonada entre los dos, sobre una base de pirca atravesada por un paso volado. El autor la descartó. Solo hubo renders rápidos.
@@ -218,5 +246,7 @@ Las láminas resuelven cosas que los modelos dejaban abiertas. Son decisiones de
 
 - Si los pasajes que salen del artículo son los que quiere para cada obra.
 - Si acepta lo que resuelven las láminas de detalle, en la lista de arriba.
+- Si E5 sigue con la bóveda de hiladas voladas o pasa a una bóveda verdadera de dovelas (de medio punto, catenaria o rebajada), con lo que eso pide: una prueba del arco y, salvo en la catenaria, cimbra.
+- Si el piloto paramétrico sigue con las otras cinco exploraciones.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

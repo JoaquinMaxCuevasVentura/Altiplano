@@ -258,3 +258,38 @@ Se corrigieron `exploraciones.md` y el documento.
 - **El piloto:** E5, porque tiene un límite de la novela, los dos metros, y una regla que probar, el vuelo de 13 cm.
 
 **Uso de IA.** Claude (Anthropic) escribió el guion de las láminas y su dibujo, el interruptor de las figuras, las correcciones y este registro, y rehízo las imágenes y el documento.
+
+## 17. Más tarde, el mismo día: el piloto paramétrico en E5 y la bóveda verdadera
+
+El autor aprobó el piloto de exploración paramétrica en E5. Está en `chhaxwa/parametrico/`, con su `LEEME.md`.
+
+**Hiladas voladas.** `boveda_e5.py` vuelve la bóveda una función de sus reglas. Cambian el arranque, el vuelo de la primera hilada y el de la última, en 825 variantes, y lo demás queda como en `exploraciones.md`. Cada variante tiene que cumplir tres reglas:
+
+- **A.** La clave, con sus lajas, no pasa de 2 m (p. 30).
+- **C.** El relleno carga las colas y deja 30 cm de parapeto.
+- **K.** La rendija la cierra una laja.
+
+Como lo que vuela el adobe lo mide la prueba 3, se probaron tres escenarios. Si vuela 12 cm, cumplen 18 variantes; si vuela un tercio de su largo, 42, y si vuela 15 cm, 120. Por debajo de unos 11 cm ninguna cabe en dos metros. En cada escenario se eligió la de más ancho para estar sentado:
+
+- con un tercio, es la E5 que ya estaba, en el borde de la regla C;
+- con 15 cm, la bóveda arranca a 60 cm y gasta 112 adobes y 1,8 m³ de relleno menos.
+
+En ninguna variante con hiladas voladas se está de pie en más de 44 cm de ancho.
+
+**La bóveda verdadera.** A mitad del trabajo el autor preguntó si E5 podía tener una bóveda convencional, y después mandó la foto de un arco de adobe de dovelas, cada adobe con la junta hacia el centro. La foto no se sube al repositorio. `boveda_e5_verdadera.py` prueba 258 bóvedas de medio punto, catenarias y rebajadas, con anillos de 10, 20 o 40 cm según cómo se ponga el adobe. Como una bóveda verdadera empuja, la regla del vuelo se cambia por dos de equilibrio:
+
+- **E.** Tiene que caber una línea de presiones dentro del anillo, buscada entre todos los empujes y alturas de la clave.
+- **S.** La resultante de media casa tiene que caer dentro de la base del muro.
+
+Cumplen 145. Con dovelas de canto, de 20 cm, como las de la foto, las elegidas dejan de 0,93 a 1,20 m de ancho para estar de pie, contra 0,43 m de E5, y gastan de 558 a 718 adobes, contra 728. La cuenta es plana, con pesos supuestos sin medir, y no mide la resistencia del adobe ni el deslizamiento de las juntas. Que la catenaria pueda levantarse sin cimbra, como las bóvedas nubias, no está cotejado en las fuentes del proyecto; el medio punto y la rebajada piden cimbra.
+
+**Los nodos.** `boveda_e5_nodos.py` arma la bóveda en Geometry Nodes, con los parámetros como controles y un interruptor entre hiladas voladas y bóveda verdadera de dovelas trabadas. Guarda `e5_parametrica.blend` y un render de cuatro variantes. Al compararlos apareció una diferencia de redondeo. Para E5 la cuenta de hiladas da justo 12,5: Python redondeaba al par (12) y Blender hacia arriba (13). Ahora los dos toman el entero de abajo en el empate, que es lo que ya daba E5. El guion comprueba que los nodos dan las mismas hiladas y la misma clave que el cálculo.
+
+**El documento.** Suma cinco figuras en una serie aparte, P1 a P5: el campo, la matriz, las elegidas, la comparación con la bóveda verdadera y el render de los nodos. Tiene ahora treinta y cuatro páginas.
+
+**Lo que decide el autor.**
+
+- Si E5 sigue con hiladas voladas o pasa a una bóveda verdadera. Eso cambiaría la técnica que la ata a la prueba 3 y a la chullpa de Acora, y pediría una prueba del arco y, salvo en la catenaria, cimbra. Mientras tanto, el modelo y la lámina de E5 no cambian.
+- Si el piloto sigue con las otras cinco exploraciones.
+
+**Uso de IA.** Claude (Anthropic) propuso el piloto, escribió los guiones, los nodos y las láminas, hizo las cuentas y redactó estos textos.

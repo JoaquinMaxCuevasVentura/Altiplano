@@ -295,6 +295,47 @@
 #lamina(6, "../detalles/detalle_E6.png", [*E6. La _pirwa_.* La V volada con la trampa y, aparte, la _chhaxwa_, 1:20.],
   columns(2, gutter: 7mm)[El corte va a lo largo. Los dos apoyos son una pirca y un montón, y sobre ellos la V de champa vuela 6 cm por hilada hasta cerrarse a 1,79 m. Encima va un piso de palos de queñua de muro a muro, con la trampa bajo un hueco. Aparte, un corte de través por un palo del techo muestra la _chhaxwa_: la piedra hincada bajo el extremo del palo, la soga que los ata y las fajas de _p'ira_ encima.])
 
+// --- la exploración paramétrica: el piloto en E5 (serie P) --------------------------------------------------------
+#let figura-p(n, ruta, pie, nota) = block(width: 100%, breakable: false, {
+  image(ruta, width: 100%)
+  v(1.3mm)
+  grid(columns: (6.5mm, 1fr), column-gutter: 1mm,
+    text(weight: "bold", size: 7.6pt, "P" + str(n)),
+    [#text(size: 6.9pt)[#pie] \ #text(size: 6.9pt, fill: gris)[#nota]])
+})
+
+#let lamina-p(n, ruta, pie, dxf, texto) = {
+  pagebreak()
+  figura-p(n, ruta, pie, [Lámina A3 en DXF, editable en QCAD (#raw("parametrico/" + dxf)). Dibujo hecho con código.])
+  v(4mm)
+  texto
+}
+
+#pagebreak()
+#grid(columns: (17mm, 1fr), column-gutter: 5mm,
+  titulo-vertical("Exploración paramétrica", "Piloto en E5"),
+  [#grid(columns: (1fr, 1fr), column-gutter: 7mm,
+     [*Un piloto en E5.* El autor pidió explorar las seis obras de forma paramétrica mientras se dibujan los detalles, y empezar por E5. La bóveda se volvió una función de sus reglas de construcción. Cambian el arranque, el vuelo de la primera hilada y el de la última, y lo demás queda como está. Un guion barre 825 variantes y revisa en cada una si cabe en la casa de la novela: la clave bajo los dos metros, el relleno cargando las colas y una rendija que una laja pueda cerrar.
+
+      *Lo que decide la prueba 3.* Todavía no se sabe cuánto vuela un adobe con la cola cargada, y eso lo mide la prueba 3, así que se probaron tres escenarios. Si vuela 12 cm, cumplen 18 variantes; si vuela un tercio de su largo, 42, y si vuela 15 cm, 120. Por debajo de unos 11 cm ninguna cabe en dos metros. Con un tercio, la mejor es la E5 que ya estaba dibujada, en el borde de la regla de las colas. Con 15 cm, la bóveda puede arrancar a 60 cm, gasta 112 adobes y unos 2 m³ de relleno menos y deja más ancho para sentarse junto a los muros.],
+     [#figura-p(5, "../parametrico/e5_nodos.jpg", [*Cuatro bóvedas, un solo grupo de nodos.* Las dos primeras son de hiladas voladas (la E5 actual y la mejor si el adobe vuela 15 cm); las otras dos, de medio punto y rebajada, de dovelas de adobe trabadas. En Blender se mueven los controles del grupo y la bóveda cambia.], [Render de Blender. No es una foto. #raw("parametrico/e5_parametrica.blend").])
+
+      #v(3mm)
+      #voz[El guion es #raw("parametrico/boveda_e5.py"), en Python; los nodos los arma #raw("boveda_e5_nodos.py"), y se comprobó que dan las mismas hiladas y la misma clave que el cálculo.]])
+   #v(5mm)
+   #figura-p(1, "../parametrico/e5_campo.png", [*El campo de las 825 variantes.* Cada celda es una variante: el arranque contra el vuelo de la primera hilada, en cinco paneles según cuánto más vuela la última. El gris dice cuánto tiene que volar el adobe para que la variante se sostenga. En blanco van las que no caben en la casa.], [Los marcos señalan las tres elegidas. Datos en #raw("parametrico/e5_variantes.csv").])])
+
+#lamina-p(2, "../parametrico/e5_matriz.png", [*Veinticuatro variantes, a 1:100.* Cuatro arranques por seis maneras de volar. La línea de trazos marca los dos metros de la novela, y la línea corta, el ancho donde se está de pie.], "e5_matriz.dxf",
+  columns(2, gutter: 7mm)[Cuanto menos vuela cada hilada, más hiladas hacen falta y más alta queda la clave. Con 8 o 10 cm la bóveda no cabe en dos metros con ningún arranque. Con 14 a 16 cm cabe incluso arrancando alto, pero pide un vuelo que el adobe quizá no aguante. Entre las dos, la franja que cumple es angosta, y ahí está E5.])
+
+#lamina-p(3, "../parametrico/e5_elegidas.png", [*Las elegidas, según vuele el adobe, a 1:50.* En cada escenario, la que cumple con más ancho para estar sentado.], "e5_elegidas.dxf",
+  columns(2, gutter: 7mm)[Si el adobe vuela 12 cm, la mejor vuela 12 cm en todas las hiladas y es casi igual a E5. Si vuela un tercio, la mejor es E5. Si vuela 15 cm, cambia la casa: la bóveda arranca a 60 cm, los muros quedan verticales hasta la altura de un banco y el ancho para sentarse pasa de 2,16 a 2,45 m. En ninguna se está de pie en más de 43 cm: con hiladas voladas y dos metros, se está de pie solo al centro.])
+
+#lamina-p(4, "../parametrico/e5_verdaderas.png", [*Hiladas voladas o bóveda verdadera, a 1:50.* La E5 actual y la mejor bóveda verdadera de cada tipo, de dovelas de canto, con su línea de presiones.], "e5_verdaderas.dxf",
+  grid(columns: (1fr, 1fr), column-gutter: 7mm,
+    [*La bóveda verdadera.* El autor preguntó si E5 podía tener una bóveda convencional y mandó la foto de un arco de adobe de dovelas, cada adobe con su junta hacia el centro. Una bóveda así empuja hacia los lados, y se sostiene si su línea de presiones, el camino de los empujes, cabe dentro del anillo. El guion probó 258 bóvedas de medio punto, catenarias y rebajadas, con anillos de 10, 20 o 40 cm, y cumplen 145. Con dovelas de canto, de 20 cm, como las de la foto, las elegidas dejan de 0,93 a 1,20 m de ancho de pie, contra 0,43 en E5, y gastan entre 558 y 718 adobes, contra 728.],
+    [*Lo que cambia.* E5 dejaría de cerrarse volando hiladas, que es la técnica de la prueba 3 y lo que la ata a la chullpa de Acora. La de medio punto y la rebajada piden cimbra mientras se levantan, y en el altiplano falta la madera. La catenaria podría levantarse sin cimbra, a la manera de las bóvedas nubias, una técnica que todavía no está cotejada en las fuentes del proyecto. La cuenta es plana, con pesos supuestos, y no mide la resistencia del adobe. Una bóveda verdadera pediría su propia prueba, la del arco. Lo decide el autor.]))
+
 // --- las cinco pruebas: una página cada una ----------------------------------------------------------------------
 #let prueba(n, titulo, texto, pasaje, mide, filas, formas) = {
   pagebreak()

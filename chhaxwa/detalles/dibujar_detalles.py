@@ -89,7 +89,7 @@ def espejo(pts):
 class Lamina:
     """Un A3 a la escala 1:escala; origen = punto del papel (en mm, desde la esquina) donde cae el (0, 0) del modelo."""
 
-    def __init__(self, escala, origen):
+    def __init__(self, escala, origen, materiales=None):
         self.e = escala
         self.mm = escala / 1000
         self.x0, self.y0 = -origen[0] * self.mm, -origen[1] * self.mm
@@ -102,7 +102,8 @@ class Lamina:
             ly = self.doc.layers.add(capa, color=aci, linetype=lt, lineweight=lw)
             if g is not None:
                 ly.rgb = (g, g, g)
-        for mat, (_, _, g) in MATERIALES.items():
+        self.materiales = {**MATERIALES, **(materiales or {})}
+        for mat, (_, _, g) in self.materiales.items():
             ly = self.doc.layers.add("SOMBREADO_" + mat, color=8, lineweight=9)
             ly.rgb = (g, g, g)
         mm = self.mm
@@ -118,10 +119,10 @@ class Lamina:
 
     # --- lo cortado y lo visto ---------------------------------------------------------------------------------------
     def sombrear(self, pts, mat, angulo=0.0):
-        patron, f, _ = MATERIALES[mat]
+        patron, f, _ = self.materiales[mat]
         hch = self.msp.add_hatch(dxfattribs={"layer": "SOMBREADO_" + mat, "lineweight": 9})
         if patron == "SOLID":
-            hch.set_solid_fill(color=8, rgb=(MATERIALES[mat][2],) * 3)
+            hch.set_solid_fill(color=8, rgb=(self.materiales[mat][2],) * 3)
         else:
             hch.set_pattern_fill(patron, scale=self.mm * f, angle=angulo)
         hch.paths.add_polyline_path(pts, is_closed=True)
@@ -210,7 +211,7 @@ class Lamina:
     def titulo(self, x, y, s, alinear=TA.LEFT):
         self.texto(x, y, s, 3.0, alinear)
 
-    def marco(self, numero, titulo, subtitulo, notas):
+    def marco(self, numero, titulo, subtitulo, notas, serie="de 6"):
         """El marco del A3, el cajetín y las notas."""
         W, H = 420, 297
         self.linea([self.h(0, 0), self.h(W, 0), self.h(W, H), self.h(0, H)], "MARCO_FINO", True)
@@ -225,11 +226,11 @@ class Lamina:
         self.texto(cx + 4, cy + 8.5, f"Escala 1:{self.e} en A3. Medidas en metros.", 2.4)
         self.texto(cx + 4, cy + 3.5, "Joaquin Max Cuevas Ventura, noviembre de 2026. Dibujado con código (ezdxf), con asistencia de IA.", 1.8)
         self.texto(cx + 136, cy + 17, numero, 10.0, TA.MIDDLE_CENTER)
-        self.texto(cx + 136, cy + 6, "de 6", 2.4, TA.MIDDLE_CENTER)
+        self.texto(cx + 136, cy + 6, serie, 2.4, TA.MIDDLE_CENTER)
         for i, n in enumerate(notas):
             self.texto(16, 16 + (len(notas) - 1 - i) * 4.6, n, 2.3)
 
-    def guardar(self, nombre):
+    def guardar(self, nombre, carpeta=AQUI):
         """El contorno grueso de lo cortado: la unión de las piezas, con las juntas cerradas."""
         c = 0.006
         union = unary_union(self.cortes).buffer(c, join_style=2).buffer(-c, join_style=2)
@@ -244,7 +245,7 @@ class Lamina:
         import io
         flujo = io.StringIO()
         self.doc.write(flujo)
-        ruta = AQUI / f"{nombre}.dxf"
+        ruta = carpeta / f"{nombre}.dxf"
         if ruta.exists() and ruta.read_text(encoding="utf-8") == flujo.getvalue():
             return False                                # sin cambios: no se reescribe
         ruta.write_text(flujo.getvalue(), encoding="utf-8")
@@ -732,11 +733,11 @@ def detalle_E6():
 DETALLES = {"E1": detalle_E1, "E2": detalle_E2, "E3": detalle_E3, "E4": detalle_E4, "E5": detalle_E5, "E6": detalle_E6}
 
 
-def dibujar(nombre, ax):
+def dibujar(nombre, ax, carpeta=AQUI):
     from ezdxf.addons.drawing import Frontend, RenderContext
     from ezdxf.addons.drawing.config import BackgroundPolicy, ColorPolicy, Configuration, LineweightPolicy
     from ezdxf.addons.drawing.matplotlib import MatplotlibBackend
-    doc = ezdxf.readfile(AQUI / f"{nombre}.dxf")
+    doc = ezdxf.readfile(carpeta / f"{nombre}.dxf")
     # el motor de matplotlib toma los grosores en mm como si fueran puntos: 1 mm = 1 / 0,3527 pt
     config = Configuration(background_policy=BackgroundPolicy.WHITE, color_policy=ColorPolicy.COLOR,
                            lineweight_policy=LineweightPolicy.ABSOLUTE, lineweight_scaling=1 / 0.3527,
