@@ -1,0 +1,13 @@
+LA TIERRA QUE QUEDA
+Del lindero al fogón
+
+Dossier.typ es el máster editable. Las carpetas graficos, renders e img2img contienen todos los recursos que usa.
+Para exportarlo desde la carpeta descomprimida con Typst 0.14 o posterior:
+
+    typst compile Dossier.typ La_tierra_que_queda_Dossier.pdf
+
+Typst: https://github.com/typst/typst
+
+renders contiene las imágenes directas de Blender Cycles, con reducción de ruido.
+img2img contiene las versiones de presentación, tratadas con GPT Image.
+Cotas y sistemas constructivos corresponden al anteproyecto descrito en el PDF.
