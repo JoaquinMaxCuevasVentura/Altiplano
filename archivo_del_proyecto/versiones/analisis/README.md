@@ -65,4 +65,6 @@ Lo vigente está en su lugar: [`analisis/`](../../../analisis/). Cada carpeta gu
 | 2026-11-27 20:56 | `b7027f7` | [Pone la casa redonda como E3 y suma la pirwa como sexta exploración](2026-11-27_2056_b7027f7_pone-la-casa-redonda-como-e3-y/ficha.md) | versión anterior | 1 |
 | 2026-11-27 21:18 | `465b091` | [Elige los pasajes desde el artículo, pone p'ira en E2 y baja E5 a dos metros](2026-11-27_2118_465b091_elige-los-pasajes-desde-el/ficha.md) | versión anterior | 1 |
 | 2026-11-28 01:20 | `261e6d3` | [Dibuja las seis láminas de detalle de Chhaxwa en DXF y quita las figuras humanas](2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de/ficha.md) | versión anterior | 1 |
-| 2026-11-28 02:38 | `d3f840d` | [Arma el piloto paramétrico de E5 y compara las hiladas voladas con la bóveda verdadera](2026-11-28_0238_d3f840d_arma-el-piloto-parametrico-de-e5/ficha.md) | versión vigente | 0 |
+| 2026-11-28 02:38 | `d3f840d` | [Arma el piloto paramétrico de E5 y compara las hiladas voladas con la bóveda verdadera](2026-11-28_0238_d3f840d_arma-el-piloto-parametrico-de-e5/ficha.md) | versión anterior | 1 |
+| 2026-11-28 03:00 | `216bcd0` | [Anota que E5 sigue volando hiladas y descarta la bóveda de dovelas](2026-11-28_0300_216bcd0_anota-que-e5-sigue-volando/ficha.md) | versión anterior | 1 |
+| 2026-11-28 14:15 | `a0af7fe` | [Lleva el piloto paramétrico a E1, E2, E3, E4 y E6](2026-11-28_1415_a0af7fe_lleva-el-piloto-parametrico-a-e1/ficha.md) | versión vigente | 0 |

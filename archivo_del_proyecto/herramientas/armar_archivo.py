@@ -118,6 +118,11 @@ GENERADORES = [   # (patrón de la ruta, generador)
     (r"^chhaxwa/parametrico/e5_(variantes|campo|matriz|elegidas)", "chhaxwa/parametrico/boveda_e5.py (ezdxf, shapely y matplotlib)"),
     (r"^chhaxwa/parametrico/e5_(variantes_verdaderas|verdaderas)", "chhaxwa/parametrico/boveda_e5_verdadera.py, llamado por boveda_e5.py"),
     (r"^chhaxwa/parametrico/e5_(parametrica\.blend|nodos\.jpg)$", "chhaxwa/parametrico/boveda_e5_nodos.py (Blender 5.0.1)"),
+    (r"^chhaxwa/parametrico/e1_", "chhaxwa/parametrico/montana_e1.py o todas.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e2_", "chhaxwa/parametrico/corral_e2.py o todas.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e3_", "chhaxwa/parametrico/cupula_e3.py o todas.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e4_", "chhaxwa/parametrico/chullpa_e4.py o todas.py (ezdxf, shapely y matplotlib)"),
+    (r"^chhaxwa/parametrico/e6_", "chhaxwa/parametrico/pirwa_e6.py o todas.py (ezdxf, shapely y matplotlib)"),
     (r"^chhaxwa/documento/chhaxwa\.pdf$", "chhaxwa/documento/compilar.py (Typst), desde chhaxwa.typ"),
 ]
 
@@ -512,6 +517,21 @@ def descripcion(ruta, datos):
             (r"^chhaxwa/parametrico/e5_verdaderas\.(dxf|png)$", "E5 con hiladas voladas o bóveda verdadera de dovelas (piloto paramétrico, P4)"),
             (r"^chhaxwa/parametrico/e5_parametrica\.blend$", "La bóveda de E5 en Geometry Nodes, con sus controles (Blender)"),
             (r"^chhaxwa/parametrico/e5_nodos\.jpg$", "Render de cuatro bóvedas de E5 hechas con Geometry Nodes (no es una foto)"),
+            (r"^chhaxwa/parametrico/e1_variantes\.csv$", "Las 324 variantes de la montaña de E1, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e1_campo\.png$", "El campo de las variantes de la montaña de E1 (piloto paramétrico, P6)"),
+            (r"^chhaxwa/parametrico/e1_matriz\.(dxf|png)$", "Dieciséis variantes de la montaña de E1 a 1:100 (piloto paramétrico, P7)"),
+            (r"^chhaxwa/parametrico/e2_variantes\.csv$", "Las 189 variantes del corral de E2, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e2_campo\.png$", "El campo de las variantes del corral de E2 (piloto paramétrico, P8)"),
+            (r"^chhaxwa/parametrico/e2_matriz\.(dxf|png)$", "Dieciséis variantes del corral de E2 a 1:200 (piloto paramétrico, P9)"),
+            (r"^chhaxwa/parametrico/e3_variantes\.csv$", "Las 360 variantes de la casa redonda de E3, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e3_campo\.png$", "El campo de las variantes de la casa redonda de E3 (piloto paramétrico, P10)"),
+            (r"^chhaxwa/parametrico/e3_matriz\.(dxf|png)$", "Doce variantes de la casa redonda de E3 a 1:100 (piloto paramétrico, P11)"),
+            (r"^chhaxwa/parametrico/e4_variantes\.csv$", "Las 140 variantes de la chullpa de E4, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e4_campo\.png$", "El campo de las variantes de la chullpa de E4 (piloto paramétrico, P12)"),
+            (r"^chhaxwa/parametrico/e4_matriz\.(dxf|png)$", "Quince variantes de la chullpa de E4 a 1:100 (piloto paramétrico, P13)"),
+            (r"^chhaxwa/parametrico/e6_variantes\.csv$", "Las 100 variantes de la pirwa de E6, con sus medidas y reglas"),
+            (r"^chhaxwa/parametrico/e6_campo\.png$", "El campo de las variantes de la pirwa de E6 (piloto paramétrico, P14)"),
+            (r"^chhaxwa/parametrico/e6_matriz\.(dxf|png)$", "Doce variantes de la pirwa de E6 a 1:100 (piloto paramétrico, P15)"),
             (r"^chhaxwa/renders/render_prototipo_", "Render de prueba de Chhaxwa: una pirca en el altiplano (no es una foto)"),
         ]
         for patron, texto in reglas:

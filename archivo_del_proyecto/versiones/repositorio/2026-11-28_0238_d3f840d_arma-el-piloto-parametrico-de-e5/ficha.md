@@ -7,17 +7,18 @@
 | Línea | [El índice y las reglas del repositorio](../README.md) |
 | Origen | commit `d3f840d` de la rama `claude/altiplano-botelho-article-jm2nlr` |
 | Fecha | 2026-11-28 02:38 UTC: la del commit, no la de creación de lo que contiene |
-| Estado de la versión | versión vigente |
+| Estado de la versión | versión anterior |
 | Lo vigente | [`README.md y AGENTS.md`](../../../../) |
 | La versión anterior | [2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de](../2026-11-28_0120_261e6d3_dibuja-las-seis-laminas-de/ficha.md) |
+| La versión siguiente | [2026-11-28_1415_a0af7fe_lleva-el-piloto-parametrico-a-e1](../2026-11-28_1415_a0af7fe_lleva-el-piloto-parametrico-a-e1/ficha.md) |
 
 ## Qué contiene esta carpeta
 
-- **2 que siguen vigentes en su lugar,** sin cambios desde este commit: [`AGENTS.md`](../../../../AGENTS.md), [`README.md`](../../../../README.md).
+- **2 archivos de esta versión que ya no son los vigentes,** con su ruta original: [`AGENTS.md`](AGENTS.md), [`README.md`](README.md).
 
 ## La versión completa
 
-En este commit, la línea tenía 2 archivos: 0 están en esta carpeta, 0 en carpetas de otras versiones y 2 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d3f840d`. Para tenerla entera: `git worktree add ../altiplano_d3f840d d3f840d`.
+En este commit, la línea tenía 2 archivos: 2 están en esta carpeta, 0 en carpetas de otras versiones y 0 siguen vigentes en su lugar. Para ver cuáles, filtra `inventario.csv` por la columna `en_versiones` con `d3f840d`. Para tenerla entera: `git worktree add ../altiplano_d3f840d d3f840d`.
 
 ## Qué cambió respecto de la anterior
 
