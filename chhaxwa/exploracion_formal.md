@@ -66,7 +66,7 @@ Las maquetas se harían con material real, como las de R2 y R3. Para la piedra, 
 
 El mismo 27 de noviembre, el autor miró las quince formas y eligió dos, recomponiéndolas:
 
-- **E1. La montaña habitada,** para la prueba 1. Es el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C. En la maqueta tiene 7,2 m de diámetro y 2,6 m de alto, en lugar de 6 y 4, con un óculo arriba y una boca baja al sur, por la que se entra en cuclillas.
+- **E1. La montaña habitada,** para la prueba 1. Es el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C. En la maqueta tiene 7,2 m de diámetro y 2,6 m de alto, en lugar de 6 y 4, con un óculo arriba y una boca baja al sur, por la que se entra en cuclillas. Desde el piloto paramétrico del 28 de noviembre mide 8,4 m y 2,8 m, con un collar de piedra alrededor del óculo (`exploraciones.md`).
 - **E2. El corral techado,** para la prueba 2. Es el cerramiento de 2C, un corral redondo de pirca de doble cara al que le falta un cuarto, por donde se entra, con un techo de ichu que flota 90 cm por encima de la pirca, sobre ocho palos de queñua. El autor propuso el techo cónico de 5C, «pero tal vez en vez de cono» el de la forma de al lado, la pirámide de 4C. Por eso hay dos versiones, E2P con pirámide y E2C con cono, y el autor elige.
 
 Las demás formas quedan como registro de la exploración. Sus renders, a media resolución, están en `renders/`.

@@ -9,7 +9,9 @@ Las reglas:
     C  el cono cubre la cola de cada hilada volada: detrás de cada piedra que vuela quedan sus 40 cm;
     V  la hilada vuela lo que aguanta la piedra con la cola cargada, en los escenarios de la prueba 3.
 Mide la piedra, la altura y el piso de la cámara, y cuenta cuántas parcelas de 2 × 2 m habría que despedregar con
-los 0,44 m³ que supone el dibujo de la prueba 1. Se corre desde la raíz: python3 chhaxwa/parametrico/montana_e1.py
+los 0,44 m³ que supone el dibujo de la prueba 1. El 28 de noviembre E1 pasó a la elegida: el collar, un vuelo de 12 cm y
+el pie de 4,2 m; la de antes era de 3,6 m, sin collar y volando 13,5 cm. Se corre desde la raíz:
+python3 chhaxwa/parametrico/montana_e1.py
 """
 
 import math
@@ -26,7 +28,8 @@ PARCELA = 0.44                                             # m³ de piedra por p
 RADIOS = [round(3.0 + 0.2 * k, 1) for k in range(9)]       # radio al pie, de 3,0 a 4,6 m
 CAMARAS = [round(1.0 + 0.1 * k, 1) for k in range(9)]      # radio de la cámara, de 1,0 a 1,8 m
 VUELOS = [0.10, 0.12, 0.135, 0.15]
-ACTUAL = (3.6, 1.4, 0.135)
+ACTUAL = (4.2, 1.4, 0.12)                                   # desde el 28 de noviembre
+ANTES = (3.6, 1.4, 0.135)                                   # la de antes, sin collar
 
 
 def variante(R0, rc, v, collar=True):
@@ -76,7 +79,7 @@ def seccion(L, v, o):
     for s in (-1, 1):
         pts = [(rc, 0), (R0, 0), (v["cima"], H)] + [p for p in borde if not (abs(p[0] - v["cima"]) < 1e-9 and abs(p[1] - H) < 1e-9)] + [(rc, HV)]
         L.cortado([(ox + s * x, oz + z) for x, z in pts], "P_LLENO", juntas=False)
-    L.linea([(ox - R0 - 0.3, oz), (ox + R0 + 0.3, oz)], "TERRENO")
+    L.linea([(ox - R0 - 0.1, oz), (ox + R0 + 0.1, oz)], "TERRENO")
     if v["ancho_de_pie"] > 0:
         a = v["ancho_de_pie"] / 2
         L.linea([(ox - a, oz + 1.70), (ox + a, oz + 1.70)], "JUNTAS")
@@ -98,25 +101,27 @@ def main():
         ("cumple_con_0_30", lambda x: x["escenarios"][0], None), ("cumple_con_un_tercio", lambda x: x["escenarios"][1], None),
         ("cumple_con_0_375", lambda x: x["escenarios"][2], None)], vs)
     actual, mejor = buscar(vs, *ACTUAL), elegir(vs)
-    sin_collar = variante(*ACTUAL, collar=False)
+    antes, sin_collar = buscar(vs, *ANTES), variante(*ANTES, collar=False)
     print(f"E1: {len(vs)} variantes; cumplen T y C {sum(not x['falla'] for x in vs)}; con un tercio {sum(x['escenarios'][1] for x in vs)}")
-    for t, x in (("actual, sin collar", sin_collar), ("actual, con collar", actual), ("elegida", mejor)):
+    for t, x in (("la de antes, sin collar", sin_collar), ("la de antes, con collar", antes), ("actual", actual), ("elegida", mejor)):
         print(f"  {t}: radio {x['radio']}, cámara {x['camara']}, vuelo {x['vuelo']}, alto {x['alto']:.2f}, talud {x['talud']:.1f}, "
               f"piedra {x['piedra']:.1f} m3 ({x['parcelas']:.0f} parcelas), piso {x['piso']:.2f}, de pie {x['ancho_de_pie']:.2f}, falla '{x['falla']}'")
-    paneles = [(f"cada hilada vuela {P.cm(v)} cm" + (", la actual" if v == ACTUAL[2] else ""), [x for x in vs if x["vuelo"] == v])
-               for v in (mejor["vuelo"], ACTUAL[2])] if mejor["vuelo"] != ACTUAL[2] else \
-              [(f"cada hilada vuela {P.cm(ACTUAL[2])} cm, la actual", [x for x in vs if x["vuelo"] == ACTUAL[2]])]
+    paneles = [(f"cada hilada vuela {P.cm(v)} cm" + (", la actual" if v == ACTUAL[2] else ", la de antes"),
+                [x for x in vs if x["vuelo"] == v]) for v in (ACTUAL[2], ANTES[2])]
+    marcas = ([("la actual", actual)] if mejor is actual else [("la actual", actual), ("la elegida", mejor)]) + \
+        [("la de antes, con collar", antes)]
     P.campo("e1_campo", paneles, CAMARAS, RADIOS, "camara", "radio", lambda x: x["piedra"], "piedra del cono (m³)",
-            "radio de la cámara (m)", "radio al pie del cono (m)", [("la actual", actual), ("la elegida", mejor)],
+            "radio de la cámara (m)", "radio al pie del cono (m)", marcas,
             fmt_x=lambda x: P.coma(x, 1), fmt_y=lambda y: P.coma(y, 1))
-    filas = [[buscar(vs, R0, rc, ACTUAL[2]) for R0 in (3.2, 3.6, 4.0, 4.4)] for rc in (1.0, 1.2, 1.4, 1.6)]
+    cols = (3.4, 3.8, 4.2, 4.6)
+    filas = [[buscar(vs, R0, rc, ACTUAL[2]) for R0 in cols] for rc in (1.0, 1.2, 1.4, 1.6)]
     cambio = P.lamina_matriz(
         "e1_matriz", "P7", 100, "E1. La montaña, en variantes", "Exploración paramétrica: la matriz", [
-            "Cada corte es una variante de montana_e1.py, con collar de 40 cm en el óculo y la cámara volando 13,5 cm, como la actual. T: el talud",
+            "Cada corte es una variante de montana_e1.py, con collar de 40 cm en el óculo y la cámara volando 12 cm, como la actual. T: el talud",
             "no pasa de 40°, el que supone la prueba 1; C, detrás de cada piedra que vuela quedan sus 40 cm de cola. Las parcelas son de",
             "2 × 2 m, con los 0,44 m³ de piedra que supone el dibujo de la prueba 1. La línea corta marca el ancho donde se está de pie."],
-        filas, None, (95, 54), seccion, textos, [f"cámara de\n{P.coma(2 * rc, 1)} m" for rc in (1.0, 1.2, 1.4, 1.6)],
-        [f"radio al pie de {P.coma(R0, 1)} m" for R0 in (3.2, 3.6, 4.0, 4.4)],
+        filas, None, (93, 54), seccion, textos, [f"cámara de\n{P.coma(2 * rc, 1)} m" for rc in (1.0, 1.2, 1.4, 1.6)],
+        [f"radio al pie de {P.coma(R0, 1)} m" for R0 in cols],
         "Dieciséis variantes de la montaña habitada, en corte", lambda x: x is actual, 34)
     P.lamina_y_vista("e1_matriz", cambio)
     return vs, actual, mejor

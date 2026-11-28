@@ -55,31 +55,34 @@ Las seis son maquetas de estudio a 1:20, modeladas en Blender (`blender/formas.p
 
 ## E1. La montaña habitada
 
-Toda la piedra de la cosecha en un cono bajo y hueco. Por dentro, una cámara redonda de muros verticales que, desde un metro de alto, vuelan hilada sobre hilada hasta dejar un óculo arriba. Se entra en cuclillas por una caja de queñua que atraviesa el muro por el sur.
+Toda la piedra de la cosecha en un cono bajo y hueco. Por dentro, una cámara redonda de muros verticales que, desde un metro de alto, vuelan hilada sobre hilada hasta dejar un óculo arriba. Un collar de piedra de 40 cm rodea el óculo y carga la cola de la última hilada. Se entra en cuclillas por una caja de queñua que atraviesa el pie del cono por el sur.
 
 | Medida | Valor | Origen |
 |---|---|---|
-| Diámetro al pie y alto | 7,2 m y 2,6 m | Proyecto (la elección del autor: el cono de 1B, más chato) |
-| Cámara | 2,8 m de diámetro; vertical hasta 1 m, después vuela 13,5 cm por hilada de 20 cm | Proyecto |
-| Óculo | 64 cm | Proyecto |
+| Diámetro al pie y alto | 8,4 m y 2,8 m | Proyecto (el cono de 1B, más chato, que eligió el autor) y piloto paramétrico |
+| Cámara | 2,8 m de diámetro; vertical hasta 1 m, después vuela 12 cm por hilada de 20 cm | Proyecto y piloto paramétrico |
+| Óculo | 64 cm, con un collar de piedra de 40 cm | Proyecto y piloto paramétrico |
 | Boca | 0,9 × 1,0 m, forrada de queñua | Proyecto (la entrada de 1C) |
-| Piedra | Unos 28 m³ | Cálculo: el cono menos la cámara, sin contar los huecos |
+| Piedra | Unos 52 m³ | Cálculo: el cono menos la cámara, sin contar los huecos |
 
-La prueba 1 dice cuánta piedra da una parcela de 2 × 2 m, y con eso se sabrá cuántas parcelas hay que despedregar para levantar la montaña.
+La prueba 1 dice cuánta piedra da una parcela de 2 × 2 m, y con eso se sabrá cuántas parcelas hay que despedregar para levantar la montaña. Con lo que supone su dibujo, 0,44 m³ por parcela, serían unas 118.
+
+Hasta el piloto paramétrico, el cono medía 7,2 m al pie y 2,6 m de alto, terminaba en punta en el borde del óculo y la cámara volaba 13,5 cm por hilada. Así las últimas piedras no tenían nada encima de su cola, y 13,5 cm es más que un tercio de una piedra de 40 cm. El autor pidió tomar la mejor decisión, y se eligió la variante que da más piso por metro cúbico de piedra y vale en los tres escenarios de la prueba 3 (más abajo).
 
 ## E2. El corral techado
 
-Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, un cono de ichu con *p'ira* debajo. El techo se apoya en palos de queñua parados sobre la pirca, de 1,4 m, y en dos más largos que flanquean la entrada; sobre ellos va un anillo atado y, apoyados en el anillo, dieciséis pares suben hasta la punta. Sobre los pares van las fajas de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-107), y encima el ichu en capas. Entre la piedra y la paja queda una franja de cielo de 90 cm.
+Un corral redondo de pirca de doble cara, con relleno de piedra menuda, abierto al sur. Encima, un cono de ichu con *p'ira* debajo. El techo se apoya en palos de queñua parados sobre la pirca, de 1,33 m, y en dos más largos que flanquean la entrada; sobre ellos va un anillo atado y, apoyados en el anillo, dieciséis pares suben hasta la punta. Sobre los pares, ocho anillos de correas, palos cortos atados de par a par, reciben las fajas de *p'ira*, como en Enquelga (Šolc, 2011 [1975]: 105-107), y encima va el ichu en capas. Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
 | Medida | Valor | Origen |
 |---|---|---|
 | Corral | 6 m de diámetro; pirca de 0,7 m de espesor y 1,4 m de alto | Proyecto |
 | Relleno | La mitad del corte | La regla de la prueba 2 |
 | Entrada | Un cuarto de la vuelta, al sur | Proyecto |
-| Palos | Siete sobre la pirca, de 1,4 m, y dos en la entrada | Proyecto |
+| Palos | Siete sobre la pirca, de 1,33 m, y dos en la entrada | Proyecto |
+| Correas | Ocho anillos sobre los pares, cada 64 cm a lo largo del faldón; ninguna pieza pasa de 1,34 m | Proyecto y piloto paramétrico; la luz de 70 cm, de la prueba 4 |
 | Techo | Cono de 6,8 m de diámetro y 3,4 m de alto: pares, fajas de *p'ira* e ichu | Proyecto (el techo de 5C); las fajas, Šolc (2011 [1975]: 105) |
 
-El autor eligió el cono y pidió la *p'ira* bajo el ichu. Antes, los ocho palos estaban dentro del corral y no llegaban al techo, que quedaba en el aire; para poner pares y *p'ira* hacía falta un apoyo, y los palos pasaron a la pirca. La versión con techo de pirámide (`renders/render_forma_E2P.jpg`) queda como registro.
+El autor eligió el cono y pidió la *p'ira* bajo el ichu. Después del piloto paramétrico eligió las correas, porque con los dieciséis pares solos las fajas cruzaban 1,34 m en el alero, casi el doble de lo que cruzan en el techo de Šolc. Antes, los ocho palos estaban dentro del corral y no llegaban al techo, que quedaba en el aire; para poner pares y *p'ira* hacía falta un apoyo, y los palos pasaron a la pirca. La versión con techo de pirámide (`renders/render_forma_E2P.jpg`) queda como registro.
 
 ## E3. La casa redonda
 
@@ -95,7 +98,7 @@ Sale de una imagen que mandó el autor: una base de piedra, una cúpula de tierr
 Después, cuando el autor decidió que reemplazara a la torre de champa, tomó lo que la torre traía al proyecto:
 
 - **El umbral.** Se entra por un paso de piedra de 1,2 m de largo, con jambas de 60 cm y tres hiladas que vuelan 10 cm hasta cerrarse a 96 cm, que es la regla de la prueba 3. Hay que entrar de rodillas, como los comunarios que vuelven y se arrodillan «en el dintel de Jatun-Kolla» (p. 155).
-- **La *p'ira*.** La tierra se cubre con fajas de *p'ira* de 0,7 m de ancho, como las de Enquelga (Šolc, 2011 [1975]: 105), puestas en seis cursos alrededor de la cúpula. Cada curso se traslapa 15 cm sobre el de abajo, como tejuelas, y así escurre el agua. La prueba 4 suma una pregunta: si una faja fresca se puede doblar a la curva de una cúpula.
+- **La *p'ira*.** La tierra se cubre con fajas de *p'ira* de 0,7 m de ancho, como las de Enquelga (Šolc, 2011 [1975]: 105), puestas en siete cursos alrededor de la cúpula. Cada curso se traslapa 15 cm sobre el de abajo, como tejuelas, y así escurre el agua. La prueba 4 suma una pregunta: si una faja fresca se puede doblar a la curva de una cúpula.
 - **La *chhaxwa*.** Los palos del sombrero se atan a tres piedras hincadas en el collar del óculo. Unas lajas hincadas en el relleno, del lado sureste, sirven de escalones para subir a poner y quitar el sombrero; son una decisión del proyecto, sin fuente.
 
 | Medida | Valor | Origen |
@@ -103,10 +106,10 @@ Después, cuando el autor decidió que reemplazara a la torre de champa, tomó l
 | Cuarto | 4,0 m de diámetro | Proyecto |
 | Pirca | 0,6 m de espesor y 1,2 m de alto, con un talud de 5° | Proyecto |
 | Paso de entrada | 0,6 m de ancho y 0,96 m de alto hasta la hilada que lo cierra, con 84 cm libres al centro; 1,2 m de largo, al este | La regla de la prueba 3; la puerta al este, Yampara Blanco (2019: 13) |
-| Cúpula | Dieciséis hiladas de champa de 12 cm, que vuelan de 10 a 13 cm | Proyecto; el bloque, el de la prueba 3 |
-| Cubierta | Seis cursos de fajas de *p'ira* de 0,7 m, traslapados 15 cm | Šolc (2011 [1975]: 105), el ancho; lo demás, proyecto |
+| Cúpula | Dieciocho hiladas de champa de 12 cm, que vuelan de 8 a 12 cm | Proyecto y piloto paramétrico; el bloque, el de la prueba 3 |
+| Cubierta | Siete cursos de fajas de *p'ira* de 0,7 m, traslapados 15 cm | Šolc (2011 [1975]: 105), el ancho; lo demás, proyecto |
 | Óculo | 60 cm, con un sombrero de ichu de 1,2 m de diámetro | Proyecto |
-| Alto | 3,2 m hasta el óculo | Cálculo |
+| Alto | 3,44 m hasta el óculo | Cálculo |
 | *T'uju* | 15 cm, al noreste | Yampara Blanco (2019: 13); tabla del sol de la prueba 5 |
 
 Es la única de las seis que usa las cinco pruebas. Con E5 forma la pareja de la casa redonda y la cuadrada, que juntas, dice Yampara Blanco, «representan simbólica y culturalmente la feminidad y la masculinidad» (2019: 9).
@@ -136,7 +139,7 @@ Squier también vio que las casas de champa del Ramis tenían «a kind of cornic
 | Separación entre adobitos | 1,5 cm | Agüero Benites et al. (2015: 6) |
 | Cornisa de ichu | 15 cm de alto; vuela 10 cm | Squier (1877: 243): seis y cuatro pulgadas |
 | Boca | 48 × 42 cm, al este, con una laja de dintel | Squier (1877: 244): dieciocho pulgadas |
-| Cámara | 1,0 × 1,0 m; vertical tres hiladas y volada cuatro | Proyecto |
+| Cámara | 1,0 × 1,0 m; vertical tres hiladas y volada nueve, de 4 cm cada una; una laja la cierra a 4 m | Proyecto y piloto paramétrico |
 
 **Una tumba.** «Chulpa is the Aymara word for tomb», escribe Squier (1877: 354). La novela no nombra las chullpas, pero tiene dos muertes sin sepultura del *ayllu*. Condori queda bajo «la tumba agreste y anónima» de la mina (Botelho Gosálvez, 1982 [1945]: 154), y los que murieron en el éxodo, «abandonados en el cobijo de las tumbas de otras tierras, se pudrieron sin culto y sin recuerdo» (ibid.: 156). La chullpa sería la tumba que les faltó. Es una lectura que decide el autor.
 
@@ -185,7 +188,7 @@ La champa se deja secar unos veinte días antes de usarla (Vitulas-Quille y Reyn
 
 ## Las láminas de detalle
 
-Cada exploración tiene una lámina de detalle en DXF, en `detalles/`, que se abre y se edita en QCAD Community Edition o en cualquier programa de CAD. Son seis A3 apaisados, cada uno a una sola escala: E1 a 1:25 y las demás a 1:20. Están dibujadas en metros reales. Las hace `detalles/dibujar_detalles.py`, que además deja una vista en grises de cada una y un PDF con las seis (`detalles/laminas_de_detalle.pdf`).
+Cada exploración tiene una lámina de detalle en DXF, en `detalles/`, que se abre y se edita en QCAD Community Edition o en cualquier programa de CAD. Son seis A3 apaisados, cada uno a una sola escala: E1 y E4 a 1:25 y las demás a 1:20. Están dibujadas en metros reales. Las hace `detalles/dibujar_detalles.py`, que además deja una vista en grises de cada una y un PDF con las seis (`detalles/laminas_de_detalle.pdf`).
 
 | Lámina | Qué muestra |
 |---|---|
@@ -201,7 +204,7 @@ Los grosores siguen el dibujo de arquitectura. Lo que el plano corta lleva un co
 Las láminas resuelven cosas que los modelos dejaban abiertas. Son decisiones del proyecto, y el autor puede cambiarlas:
 
 - **E1.** Entre la cámara y la caja de queñua, el paso lleva un dintel de lajas.
-- **E2.** El anillo va sobre los palos y recibe los pares, que quedan justo bajo la *p'ira*. Así los palos miden 1,4 m; este texto decía 1,7. El modelo y el diagrama se ajustaron.
+- **E2.** El anillo va sobre los palos y recibe los pares, que quedan justo bajo la *p'ira*. Así los palos miden 1,4 m; este texto decía 1,7. El modelo y el diagrama se ajustaron. Con las correas que se sumaron después del piloto, los pares bajan 5 cm y los palos miden 1,33 m.
 - **E3.** El paso mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3, pero al centro quedan 84 cm libres, porque las dos mitades de esa hilada se tocan por abajo.
 - **E4.** La cámara se forra de adobitos, y el dintel de la boca es una laja que va de la cámara a la cara.
 - **E5.** El camastro es un banco de adobe de 0,70 × 0,35 m contra el muro sur. La última hilada de la bóveda deja una rendija de 43 cm; este texto decía 30.
@@ -239,21 +242,34 @@ Las tres llegan a 2 m y dejan más ancho de pie que E5. La cuenta es plana, con 
 
 Con E5 resuelta, el piloto pasó a las otras cinco el 28 de noviembre. Cada una tiene un guion en `parametrico/` con sus propias reglas, y la prueba 3 entra igual que en E5, con tres escenarios: que la pieza vuele 0,30 de su largo, un tercio o 0,375. Las reglas, los archivos y cómo se rehacen están en `parametrico/LEEME.md`.
 
-| Exploración | Variantes | Cumplen | La actual | Lo que propone el piloto |
+| Exploración | Variantes | Cumplen | Antes del piloto | Lo que propuso el piloto |
 |---|---|---|---|---|
-| E1. La montaña | 324 | 120 la forma; 42 con un tercio | Sus últimas hiladas no tienen piedra detrás, y vuela 13,5 cm, más de un tercio de la piedra | Un collar de 40 cm en el óculo y un vuelo de 12 cm. Con la cámara de 2,8 m, el pie crece a 8,4 m y la piedra, de 28,9 a 51,8 m³ |
-| E2. El corral | 189 | 19 | Con dieciséis pares, quedan a 1,34 m en el alero | 32 pares y un cono de 3,1 m, a 45°: 138 m de queñua en lugar de 88 |
-| E3. La casa redonda | 360 | 270 la forma; 180 con un tercio | Cumple si la champa vuela un tercio | Si vuela solo 0,30, hiladas que vuelen de 8 a 12 cm: la cúpula sube a 3,44 m y gana área de pie |
-| E4. La chullpa | 140 | 90 la forma; 50 con un tercio | El forro de adobitos de 14 cm vuela 10 cm y no se sostiene en ningún escenario | Volar 4 cm, con una cámara de 2,52 m de alto, o forrarla con adobes de 40 cm |
+| E1. La montaña | 324 | 120 la forma; 42 con un tercio | Sus últimas hiladas no tenían piedra detrás, y volaba 13,5 cm, más de un tercio de la piedra | Un collar de 40 cm en el óculo y un vuelo de 12 cm. Con la cámara de 2,8 m, el pie crece a 8,4 m y la piedra, de 28,9 a 51,8 m³ |
+| E2. El corral | 189 | 52 | Con dieciséis pares, las fajas cruzaban 1,34 m en el alero | 32 pares, o correas en anillo sobre los dieciséis |
+| E3. La casa redonda | 360 | 270 la forma; 180 con un tercio | Cumplía solo si la champa vuela un tercio | Si vuela solo 0,30, hiladas que vuelen de 8 a 12 cm: la cúpula sube a 3,44 m y gana área de pie |
+| E4. La chullpa | 140 | 90 la forma; 50 con un tercio | El forro de adobitos de 14 cm volaba 10 cm y no se sostenía en ningún escenario | Volar 4 cm, con una cámara de 2,52 m de alto, o forrarla con adobes de 40 cm |
 | E6. La *pirwa* | 100 | 18 | Es la que más guarda: 5,75 m³ | Nada: queda como está |
 
 Lo que encontró en cada una:
 
-- **E1.** La montaña dibujada termina en punta justo en el borde del óculo, de modo que las últimas piedras que vuelan no tienen nada encima de su cola. El guion le pone un collar de piedra de 40 cm, y entonces el talud pasa de 40°. Con una cámara de 2 m de diámetro que vuele 12 cm, en cambio, el cono cumple con la piedra de ahora, 28,9 m³, y un pie de 6,8 m.
-- **E2.** En el techo que vio Šolc los pares quedan a unos 70 cm, el ancho de una faja de *p'ira*, que se apoya de un par al otro (prueba 4). En el cono de E2, los dieciséis pares se abren hasta 1,34 m en el alero. Hacen falta 32, o correas, palos atados en anillo sobre los pares para que las fajas se apoyen en ellos; las correas no están en el piloto. Las fuentes del proyecto no dicen si la queñua da pares de 3,3 m.
-- **E3.** El relleno cubre las colas en todas las variantes. La cúpula actual vuela hasta 12,7 cm. Si la champa vuela menos, la cúpula se cierra más despacio, sube y deja más lugar para estar de pie, a cambio de unos 80 bloques más.
-- **E4.** La cámara vuela 10 cm con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. Con adobitos, la hilada vuela como mucho de 4,2 a 5,25 cm, según el escenario. Volando 4 cm, la cámara necesita nueve hiladas y queda alta y angosta. Con un forro de adobes de 40 cm, los de E5, la cámara de ahora cumple.
+- **E1.** La montaña dibujada terminaba en punta justo en el borde del óculo, de modo que las últimas piedras que vuelan no tenían nada encima de su cola. El guion le pone un collar de piedra de 40 cm, y entonces el talud pasaba de 40°. Con una cámara de 2 m de diámetro que vuele 12 cm, en cambio, el cono cumplía con la piedra de antes, 28,9 m³, y un pie de 6,8 m.
+- **E2.** En el techo que vio Šolc los pares quedan a unos 70 cm, el ancho de una faja de *p'ira*, que se apoya de un par al otro (prueba 4). En el cono de E2, los dieciséis pares se abren hasta 1,34 m en el alero. Hacían falta 32 pares o correas, palos atados en anillo sobre los pares para que las fajas se apoyen en ellos. Las fuentes del proyecto no dicen qué largo dan los palos de queñua.
+- **E3.** El relleno cubre las colas en todas las variantes. La cúpula volaba hasta 12,7 cm. Si la champa vuela menos, la cúpula se cierra más despacio, sube y deja más lugar para estar de pie, a cambio de unos 80 bloques más.
+- **E4.** La cámara volaba 10 cm con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. Con adobitos, la hilada vuela como mucho de 4,2 a 5,25 cm, según el escenario. Volando 4 cm, la cámara necesita nueve hiladas y queda alta y angosta. Con un forro de adobes de 40 cm, los de E5, la cámara de antes cumplía.
 - **E6.** Si la V vuela 7 cm o más, la clave baja de 1,70 m; si vuela menos, le quita alto a lo guardado. La actual vuela 6 cm, el 15 % del bloque, y no depende de la prueba 3. Falta probar si la champa aguanta más de 4,6 m de alto con el depósito lleno.
+
+### Lo que se decidió
+
+El mismo 28 de noviembre el autor eligió las correas para E2 y pidió tomar la mejor decisión en E1, E3 y E4. Los modelos, los diagramas, las láminas de detalle y los renders se rehicieron con estas medidas, y en el piloto las variantes de antes quedan marcadas como «la de antes».
+
+| Exploración | Lo que se decidió | Por qué | Lo que cambia |
+|---|---|---|---|
+| E1 | La montaña crece: pie de 4,2 m de radio, collar de 40 cm y vuelo de 12 cm | Conserva la cámara de 2,8 m, vale en los tres escenarios de la prueba 3 y da más piso por metro cúbico de piedra; la montaña recibe la piedra que sale de despedregar | 8,4 m de diámetro y 2,8 m de alto; unos 52 m³ de piedra, 118 parcelas en lugar de 66; el paso de la boca se alarga |
+| E2 | Correas sobre los dieciséis pares, la decisión del autor | Las fajas cruzan 64 cm entre correas, menos que los 70 cm del techo de Šolc, y ninguna correa pasa de 1,34 m, así que sirven palos cortos | Ocho anillos y 93 m de correas, 180 m de queñua en total; los pares bajan 5 cm y los palos miden 1,33 m |
+| E3 | La cúpula vuela de 8 a 12 cm | Vale en los tres escenarios de la prueba 3 y deja más lugar para estar de pie | Dieciocho hiladas, 3,44 m de alto, siete cursos de fajas, unos 80 bloques más y 8,7 m² de pie |
+| E4 | La cámara vuela 4 cm, con los mismos adobitos | Toda la pirámide queda de una sola pieza, el adobito de pie que pidió el autor, y cumple en los tres escenarios | Nueve hiladas voladas, 2,52 m de alto y una laja que la cierra a 4 m; la lámina 4 pasa a 1:25 |
+
+Con nueve hiladas voladas, la cámara de E4 queda alta y angosta, más cerca del arco apuntado de la chullpa de Acora (Squier, 1877: 353). Las correas de E2 piden más madera en total que los 32 pares, 180 m contra 144, pero en piezas cortas.
 
 ## Lo que se descartó y lo que cambió
 
@@ -261,6 +277,7 @@ Lo que encontró en cada una:
 - ***La torre de champa*** fue E3 hasta que el autor la reemplazó por la casa redonda. Mejorada como depósito, volvió como E6.
 - **La casa redonda** entró primero como candidata (E6), con un análisis de a cuál de las cinco podía reemplazar; se proponía E2. El autor eligió reemplazar la torre, y se le pasó lo que la torre traía: el umbral, la *p'ira* y la *chhaxwa* (`analisis/43`, §13 y §14).
 - **La bóveda verdadera de E5**, de dovelas de adobe, de medio punto, catenaria o rebajada, que se estudió en el piloto paramétrico. El autor eligió seguir volando hiladas, porque es la técnica de todo el proyecto y no pide cimbra.
+- **Las medidas de antes del piloto en E1, E3 y E4** y **los 32 pares de E2.** La montaña de 7,2 m sin collar que volaba 13,5 cm, la cúpula que volaba de 10 a 13 cm y la cámara de E4 que volaba 10 cm quedan en el piloto como «la de antes». Los 32 pares de E2 fueron la otra salida, y el autor eligió las correas.
 - **Las figuras humanas.** Los renders, los diagramas y las piezas llevaban una figura de 1,65 m para dar la escala. El 28 de noviembre el autor pidió quitarlas, porque se veían mal, y se rehicieron todas las imágenes sin ellas. Las apaga `FIGURAS = False` en `blender/comun.py`.
 
 ## Lo que decide el autor
@@ -268,9 +285,6 @@ Lo que encontró en cada una:
 - Si los pasajes que salen del artículo son los que quiere para cada obra.
 - Si acepta lo que resuelven las láminas de detalle, en la lista de arriba.
 - Si E5 pasa a otra variante de hiladas voladas cuando la prueba 3 mida cuánto vuela el adobe.
-- En E1, si la montaña crece para cubrir las colas o si la cámara se achica a 2 m.
-- En E2, si el techo lleva 32 pares o correas sobre los dieciséis de ahora.
-- En E3, cuál de las tres maneras de volar, cuando la prueba 3 dé su resultado.
-- En E4, si la cámara se forra de adobes de 40 cm o se vuelve alta y angosta.
+- Si acepta lo que se decidió en E1, E3 y E4 con el piloto, en la tabla de arriba. Cada guion guarda las variantes de antes.
 - Si las seis van en un mismo sitio. Por ahora se muestran juntas solo a la misma escala.
 - El autor de R8 y de R16, antes de mostrarlas junto a estas maquetas.

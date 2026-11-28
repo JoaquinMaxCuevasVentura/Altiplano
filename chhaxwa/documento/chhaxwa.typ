@@ -166,7 +166,7 @@
 }
 
 #exploracion("E1", "La montaña habitada",
-  [*Toda la cosecha en un cono.* La piedra que sale de despedregar no se lleva a otra parte. Se amontona en un cono bajo y hueco, de 7,2 m de diámetro y 2,6 m de alto. Por dentro hay una cámara redonda de muros verticales que, desde un metro de alto, vuelan hilada sobre hilada hasta dejar un óculo. Se entra en cuclillas por una caja de queñua que atraviesa el muro por el sur.
+  [*Toda la cosecha en un cono.* La piedra que sale de despedregar no se lleva a otra parte. Se amontona en un cono bajo y hueco, de 8,4 m de diámetro y 2,8 m de alto. Por dentro hay una cámara redonda de muros verticales que, desde un metro de alto, vuelan 12 cm por hilada hasta dejar un óculo, y un collar de piedra de 40 cm alrededor del óculo carga la cola de la última hilada. Se entra en cuclillas por una caja de queñua que atraviesa el muro por el sur.
 
    Es la forma que eligió el autor recomponiendo dos de la exploración formal: el cono de piedra de 1B, más chato, con la entrada de 1C.
 
@@ -177,31 +177,32 @@
      [Dejar el óculo arriba y forrar la boca con queñua.],
    ))
 
-   La prueba 1 dirá cuánta piedra da una parcela de 2 × 2 m, y con eso cuántas parcelas hay que despedregar para levantar la montaña.],
+   La prueba 1 dirá cuánta piedra da una parcela de 2 × 2 m, y con eso cuántas parcelas hay que despedregar para levantar la montaña. Con lo que supone su dibujo, unas 118. Las medidas salen del piloto paramétrico, más adelante.],
   [«Pero no importa: quizá un día la montaña de piedras sobrepase la altura del cerro; entonces será buena la tierra rescatada» (p. 9).],
   (("●", "1. La cosecha", [toda la piedra, y nada más]), ("●", "3. El dintel", [la cámara volada]), ("○", "5. El fogón", [se entra en cuclillas])),
-  (([exploración], [E1]), ([escala], [1:20]), ([diámetro y alto], [7,2 × 2,6 m, proyecto]), ([cámara], [2,8 m, volada desde 1 m, proyecto]), ([boca], [0,9 × 1,0 m, al sur, proyecto]), ([piedra], [unos 28 m³, cálculo])),
-  2, "../renders/diagramas/diagrama_x1.png", [*Corte por la boca.* La cámara vuela 13,5 cm por cada hilada de 20 cm.],
+  (([exploración], [E1]), ([escala], [1:20]), ([diámetro y alto], [8,4 × 2,8 m, piloto]), ([cámara], [2,8 m; vuela 12 cm desde 1 m, piloto]), ([boca], [0,9 × 1,0 m, al sur, proyecto]), ([piedra], [unos 52 m³, cálculo])),
+  2, "../renders/diagramas/diagrama_x1.png", [*Corte por la boca.* La cámara vuela 12 cm por cada hilada de 20 cm; arriba, el collar del óculo.],
   3, "../renders/render_forma_E1.jpg", [*La montaña habitada.* Maqueta 1:20.]
 )
 
 #exploracion("E2", "El corral techado",
   [*La pirca y el techo, rehechos.* Un corral redondo de pirca de doble cara, de 6 m, abierto al sur, con la mitad del corte llena de piedra menuda. Encima, un cono de ichu con _p'ira_ debajo, como en Enquelga (Šolc, 2011 [1975]: 105-107). Entre la piedra y la paja queda una franja de cielo de 90 cm.
 
-   El techo se apoya en palos de queñua de 1,4 m parados sobre la pirca y en dos más largos que flanquean la entrada. Sobre ellos va un anillo atado, del anillo a la punta suben dieciséis pares, y sobre los pares van las fajas de _p'ira_ y el ichu en capas.
+   El techo se apoya en palos de queñua de 1,33 m parados sobre la pirca y en dos más largos que flanquean la entrada. Sobre ellos va un anillo atado y del anillo a la punta suben dieciséis pares. Sobre los pares, ocho anillos de correas, palos cortos atados de par a par, reciben las fajas de _p'ira_, y encima va el ichu en capas.
 
    #pasos((
      [Asentar las dos caras de la pirca y llenar el centro al mismo tiempo.],
      [Parar los palos sobre la pirca y atar el anillo.],
-     [Atar los pares, subir las fajas de _p'ira_ y techar con ichu en capas.],
+     [Atar los pares y, sobre ellos, los anillos de correas.],
+     [Subir las fajas de _p'ira_ y techar con ichu en capas.],
      [Dejar arriba la salida del humo.],
    ))
 
-   El autor eligió el cono y pidió la _p'ira_; la versión con techo de pirámide queda como registro.],
+   El autor eligió el cono, pidió la _p'ira_ y, después del piloto paramétrico, las correas; la versión con techo de pirámide queda como registro.],
   [«Las pircas derruidas; desfondados los techos de las casas» (p. 79). Al volver, «las chujllas fueron reparadas del estrago, las pircas de piedra que separan las parcelas fueron compuestas» (p. 156).],
   (("●", "2. El relleno", [la pirca de doble cara]), ("●", [4\. La _p'ira_], [las fajas bajo el ichu]), ("○", "1. La cosecha", [la piedra de la pirca])),
-  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [1,4 m, sobre la pirca, proyecto]), ([techo], [6,8 × 3,4 m; fajas de 0,7 m, Šolc (2011 [1975]: 105)])),
-  4, "../renders/diagramas/diagrama_x2.png", [*Corte por la entrada.* La pirca y su relleno; los palos sobre la pirca, el anillo, los pares, la _p'ira_ y el ichu.],
+  (([exploración], [E2]), ([escala], [1:20]), ([corral], [6 m, 1,4 m de alto, proyecto]), ([pirca], [0,7 m; relleno: la mitad, prueba 2]), ([palos], [1,33 m, sobre la pirca, proyecto]), ([techo], [6,8 × 3,4 m; fajas de 0,7 m, Šolc (2011 [1975]: 105)]), ([correas], [ocho anillos, cada 64 cm, piloto])),
+  4, "../renders/diagramas/diagrama_x2.png", [*Corte por la entrada.* La pirca y su relleno; los palos sobre la pirca, el anillo, los pares, las correas, la _p'ira_ y el ichu.],
   5, "../renders/render_forma_E2C.jpg", [*El corral techado.* Maqueta 1:20.]
 )
 
@@ -213,8 +214,8 @@
    Sale de una imagen del autor, corregida: la piedra de río pasó a ser la de la cosecha, y el ichu que tapaba el humo, un sombrero. Con E5 forma la pareja de la casa redonda y la cuadrada, que juntas «representan simbólica y culturalmente la feminidad y la masculinidad» (ibid.: 9).],
   [«Desde el portal de su chujlla el Paulo Huanca, rodeado de su mujer e hijos, miró irse a los desterrados» (p. 34). Al volver, «en el dintel de Jatun-Kolla se detenían para ponerse de rodillas y besar el suelo que habían abandonado en el terror de la mala época» (p. 155).],
   (("●", "2, 3, 4 y 5", [la pirca, el paso y la cúpula volados, las fajas y la _chhaxwa_, el fogón y el _t'uju_]), ("○", "1. La cosecha", [la piedra de la pirca])),
-  (([exploración], [E3]), ([escala], [1:20]), ([cuarto], [4,0 m; pirca de 0,6 × 1,2 m, proyecto]), ([paso], [0,6 × 0,96 m, la regla de la prueba 3]), ([cubierta], [fajas de 0,7 m, Šolc (2011 [1975]: 105)]), ([alto], [3,2 m hasta el óculo, cálculo])),
-  6, "../renders/diagramas/diagrama_x3.png", [*Corte por el paso de entrada.* Las hiladas voladas del paso y de la cámara, la tierra que las carga y las fajas de _p'ira_.],
+  (([exploración], [E3]), ([escala], [1:20]), ([cuarto], [4,0 m; pirca de 0,6 × 1,2 m, proyecto]), ([paso], [0,6 × 0,96 m, la regla de la prueba 3]), ([cubierta], [fajas de 0,7 m, Šolc (2011 [1975]: 105)]), ([alto], [3,44 m hasta el óculo, cálculo])),
+  6, "../renders/diagramas/diagrama_x3.png", [*Corte por el paso de entrada.* Las hiladas voladas del paso y de la cámara, que vuelan de 8 a 12 cm, la tierra que las carga y las fajas de _p'ira_.],
   7, "../renders/render_forma_E3.jpg", [*La casa redonda.* Maqueta 1:20.]
 )
 
@@ -229,7 +230,7 @@
   [Juan Condori, a su compañera muerta, «amontonó piedras sobre el cadáver» (p. 35). A él, en la mina, lo cubre «un informe montón de rocas, lodo y maderos astillados» (p. 154).],
   (("●", "1. La cosecha", [las pilas de piedra]), ("●", "3. El dintel", [las pilas y la cámara voladas]), ("○", [4\. La _p'ira_], [la cornisa de ichu])),
   (([exploración], [E4]), ([escala], [1:20]), ([base], [3,3 m; cuatro pilas, proyecto]), ([alto], [4,9 m, Squier (1877: 243)]), ([adobito], [19 × 14 × 6 cm, proyecto; 1,5 cm entre uno y otro]), ([boca y cornisa], [48 × 42 cm al este; 15 cm, Squier])),
-  8, "../renders/diagramas/diagrama_x4.png", [*Corte por la boca.* La cámara vuela cuatro hiladas; abajo, el paso entre las pilas.],
+  8, "../renders/diagramas/diagrama_x4.png", [*Corte por la boca.* La cámara vuela 4 cm en cada una de sus nueve hiladas voladas, y una laja la cierra a 4 m; abajo, el paso entre las pilas.],
   9, "../renders/render_forma_E4.jpg", [*La chullpa.* Maqueta 1:20.]
 )
 
@@ -278,16 +279,16 @@
 #lamina(1, "../detalles/detalle_E1.png", [*E1. La montaña habitada.* Corte por la boca, 1:25.],
   grid(columns: (1fr, 1fr), column-gutter: 7mm,
     [*Los detalles.* Cada exploración tiene una lámina de detalle, un A3 a una sola escala, dibujado en metros reales en DXF, que se abre y se edita en QCAD o en cualquier programa de CAD. Las seis están en `detalles/`, con un PDF para imprimirlas. Los grosores son los del dibujo de arquitectura: lo que el plano corta lleva un contorno grueso y sus juntas finas, lo que se ve más allá va en gris y los sombreados, uno por material, van en un gris muy fino. Las láminas resuelven cosas que los modelos dejaban abiertas, y las marcan como decisiones del proyecto.],
-    [La cámara es vertical hasta un metro y después vuela 13,5 cm por cada hilada de 20 cm, hasta el óculo de 64 cm. El paso de la boca atraviesa el cono bajo un dintel de lajas y sigue por la caja de queñua, que sale 55 cm más allá del pie del cono. Toda la piedra es la de la cosecha.]))
+    [La cámara es vertical hasta un metro y después vuela 12 cm por cada hilada de 20 cm, hasta el óculo de 64 cm. Alrededor del óculo, un collar de piedra de 40 cm carga la cola de la última hilada. El paso de la boca atraviesa el pie del cono bajo un dintel de lajas y sigue por la caja de queñua, que sale 55 cm más allá. Toda la piedra es la de la cosecha, unos 52 m³. Al norte, el corte se interrumpe con una línea de rotura.]))
 
 #lamina(2, "../detalles/detalle_E2.png", [*E2. El corral techado.* La pirca y el alero, 1:20.],
-  columns(2, gutter: 7mm)[La pirca tiene dos caras de 20 cm y, entre ellas, el relleno de piedra menuda que ocupa la mitad del corte. Un palo de queñua de 1,4 m, parado en el eje de la pirca, carga el anillo atado, y el anillo recibe los pares. Sobre los pares van las fajas de _p'ira_ y encima el ichu, con una pendiente de 48°. Entre la piedra y la paja queda una franja de cielo de 90 cm.])
+  columns(2, gutter: 7mm)[La pirca tiene dos caras de 20 cm y, entre ellas, el relleno de piedra menuda que ocupa la mitad del corte. Un palo de queñua de 1,33 m, parado en el eje de la pirca, carga el anillo atado, y el anillo recibe los pares. Sobre los pares van las correas, cortadas cada 64 cm, y sobre ellas las fajas de _p'ira_ y el ichu, con una pendiente de 48°. Entre la piedra y la paja queda una franja de cielo de 90 cm.])
 
 #lamina(3, "../detalles/detalle_E3.png", [*E3. La casa redonda.* Corte por el paso de entrada, de oeste a este, 1:20.],
-  columns(2, gutter: 7mm)[Al oeste se ve la pirca de doble cara, con su talud de 5°, y al este el paso, cortado por su eje. El paso mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3, pero las dos mitades de esa hilada se tocan por abajo y al centro quedan 84 cm libres, de modo que se entra de rodillas. La cúpula de champa vuela dieciséis hiladas hasta el óculo, a 3,20 m. El relleno de tierra carga las colas, y las fajas de _p'ira_ se traslapan 15 cm, como tejuelas.])
+  columns(2, gutter: 7mm)[Al oeste se ve la pirca de doble cara, con su talud de 5°, y al este el paso, cortado por su eje. El paso mide 96 cm hasta lo alto de la hilada que lo cierra, como pide la regla de la prueba 3, pero las dos mitades de esa hilada se tocan por abajo y al centro quedan 84 cm libres, de modo que se entra de rodillas. La cúpula de champa vuela dieciocho hiladas, de 8 a 12 cm cada una, hasta el óculo, a 3,44 m. El relleno de tierra carga las colas, y las fajas de _p'ira_ se traslapan 15 cm, como tejuelas.])
 
-#lamina(4, "../detalles/detalle_E4.png", [*E4. La chullpa.* La base, la cámara y la boca, 1:20; el aparejo y la cornisa.],
-  columns(2, gutter: 7mm)[El corte va de este a oeste por la boca. Abajo, al fondo, están las pilas, cuyas dos últimas hiladas vuelan hacia el paso; encima, la cama de lajas y la hilada de piedra. La cámara de adobitos tiene tres hiladas verticales y cuatro voladas, y la boca de 48 × 42 cm la atraviesa bajo una laja. Aparte van el aparejo de librero en alzado, con 1,5 cm entre adobitos (Agüero Benites et al., 2015: 6), y la cornisa de ichu prensado que describe Squier (1877: 243).])
+#lamina(4, "../detalles/detalle_E4.png", [*E4. La chullpa.* La base, la cámara y la boca, 1:25; el aparejo y la cornisa.],
+  columns(2, gutter: 7mm)[El corte va de este a oeste por la boca. Abajo, al fondo, están las pilas, cuyas dos últimas hiladas vuelan hacia el paso; encima, la cama de lajas y la hilada de piedra. La cámara de adobitos tiene tres hiladas verticales y nueve que vuelan 4 cm cada una, hasta que una laja cierra el hueco de 28 cm, a 4 m del suelo. La boca de 48 × 42 cm la atraviesa bajo otra laja. Aparte van el aparejo de librero en alzado, con 1,5 cm entre adobitos (Agüero Benites et al., 2015: 6), y la cornisa de ichu prensado que describe Squier (1877: 243).])
 
 #lamina(5, "../detalles/detalle_E5.png", [*E5. La casa de la bóveda.* Corte de través por el fogón, 1:20.],
   columns(2, gutter: 7mm)[El bloque no pasa de dos metros. La bóveda de adobe arranca a 35 cm, a la altura del camastro, y cada hilada de 11 cm vuela de 11 a 13 cm hasta dejar una rendija de 43 cm. Las lajas la cierran a 1,86 m, salvo la que falta sobre el fogón, por donde sale el humo. El relleno de tierra llega a 1,70 m, y la pirca sigue hasta los dos metros como un parapeto.])
@@ -343,41 +344,41 @@
     titulo-vertical("Exploración paramétrica", titulo),
     [#columns(2, gutter: 7mm, texto)
      #v(4mm)
-     #block(width: 88%, figura-p(nc, campo, pie-campo, nota-campo))])
+     #block(width: 80%, figura-p(nc, campo, pie-campo, nota-campo))])
   lamina-p(nl, lamina, pie-lamina, dxf, columns(2, gutter: 7mm, texto-lamina))
 }
 
 #piloto("E1. La montaña",
   [*Las reglas.* Cambian el radio al pie del cono, el radio de la cámara y lo que vuela cada hilada de la cámara, y salen 324 variantes. El talud no puede pasar de 40°, el que supone la prueba 1 para la piedra suelta, y detrás de cada piedra que vuela tienen que quedar sus 40 cm de cola, para que algo la cargue.
 
-   *Lo que encontró.* La montaña dibujada termina en punta justo en el borde del óculo, y sus últimas hiladas no tienen piedra detrás. Con un collar de 40 cm alrededor del óculo, el talud sube a 42°. Además, la cámara vuela 13,5 cm por hilada, un poco más que un tercio del largo de la piedra, así que solo se sostendría si la prueba 3 muestra que la piedra vuela 0,375 de su largo. Si vuela un tercio, la variante que da más piso por metro cúbico de piedra guarda la cámara de 2,8 m, vuela 12 cm y se abre al pie hasta 8,4 m. Pide 51,8 m³ de piedra, unas 118 parcelas despedregadas en lugar de 66.
+   *Lo que encontró.* La montaña que estaba dibujada, de 7,2 m al pie, terminaba en punta justo en el borde del óculo, y sus últimas hiladas no tenían piedra detrás. Con un collar de 40 cm alrededor del óculo, el talud subía a 42°, y la cámara volaba 13,5 cm por hilada, más que un tercio del largo de la piedra. La variante que da más piso por metro cúbico de piedra guarda la cámara de 2,8 m, vuela 12 cm y se abre al pie hasta 8,4 m, con 51,8 m³ de piedra, unas 118 parcelas en lugar de 66.
 
-   *Lo que decide el autor.* Si la montaña crece o la cámara se achica. Con una cámara de 2 m de diámetro que vuele 12 cm, el cono cumple con la piedra de ahora, 28,9 m³, y un pie de 6,8 m.],
-  6, "../parametrico/e1_campo.png", [*El campo de E1.* El radio al pie contra el radio de la cámara, con dos maneras de volar. El gris dice cuánta piedra lleva el cono. En blanco quedan las que pasan de 40° (T) o dejan colas sin cargar (C); con V, las que piden que la piedra vuele más de un tercio.], [Datos en #raw("parametrico/e1_variantes.csv"); el guion es #raw("parametrico/montana_e1.py").],
-  7, "../parametrico/e1_matriz.png", [*Dieciséis variantes de la montaña, a 1:100.* Todas con el collar y la cámara volando 13,5 cm, como la actual. La línea corta marca el ancho donde se está de pie.], "e1_matriz.dxf",
-  [Con el pie de 3,2 m ninguna variante cumple el talud, y con el de 4,4 m cumplen todas. Al crecer la cámara crece también la montaña, porque hacen falta más hiladas para llegar al óculo, y el talud se empina. Una cámara de 3,2 m pide un pie de 4,4 m de radio.
+   *Lo que se decidió.* El autor pidió tomar la mejor decisión, y E1 pasó a esa variante. Con una cámara de 2 m bastaba la piedra de antes, pero se prefirió que creciera la montaña, que conserva la cámara de 2,8 m y vale en los tres escenarios de la prueba 3. La montaña recibe la piedra que sale de despedregar, así que gastar más es limpiar más parcelas.],
+  6, "../parametrico/e1_campo.png", [*El campo de E1.* El radio al pie contra el radio de la cámara, con la manera de volar actual y la de antes. El gris dice cuánta piedra lleva el cono. En blanco quedan las que pasan de 40° (T) o dejan colas sin cargar (C); con V, las que piden que la piedra vuele más de un tercio. La actual es también la que elige el piloto.], [Datos en #raw("parametrico/e1_variantes.csv"); el guion es #raw("parametrico/montana_e1.py").],
+  7, "../parametrico/e1_matriz.png", [*Dieciséis variantes de la montaña, a 1:100.* Todas con el collar y la cámara volando 12 cm, como la actual. La línea corta marca el ancho donde se está de pie.], "e1_matriz.dxf",
+  [Con una cámara de 2 m cumplen las cuatro. Al crecer la cámara crece también la montaña, porque hacen falta más hiladas para llegar al óculo, y el talud se empina: la cámara de 2,8 m pide un pie de 4,2 m de radio, y la de 3,2 m, uno de 4,6 m.
 
    Las parcelas se cuentan con los 0,44 m³ de piedra que supone el dibujo de la prueba 1. Cuando la prueba diga cuánta piedra da de verdad una parcela, la cuenta cambia en la misma proporción.])
 
 #piloto("E2. El corral",
-  [*Las reglas.* Cambian el diámetro del corral, el alto del cono y cuántos pares lo arman, y salen 189 variantes. El techo tiene que tener 45° de pendiente o más, como el de la prueba 4. En el alero, los pares no pueden quedar a más de 70 cm, el ancho de una faja de _p'ira_, porque cada faja se apoya de un par al otro. En el techo que vio Šolc los pares quedan a unos 70 cm, según la cuenta de la prueba 4.
+  [*Las reglas.* Cambian el diámetro del corral, el alto del cono y cómo se apoyan las fajas de _p'ira_, y salen 189 variantes. El techo tiene que tener 45° de pendiente o más, como el de la prueba 4. Entre dos apoyos, la faja no puede cruzar más de 70 cm: en el techo que vio Šolc los pares quedan a unos 70 cm, el ancho de una faja, según la cuenta de la prueba 4. Sin correas, los apoyos son los pares; con correas, los anillos.
 
-   *Lo que encontró.* Con los dieciséis pares de ahora, el alero de 6,8 m de diámetro los deja a 1,34 m, casi el doble del ancho de una faja, y ninguna variante con dieciséis pares cumple. El corral de 6 m necesita 32. La que gasta menos queñua tiene un cono de 3,1 m, con 45° justos, y lleva 138 m de palos entre pares, postes y anillo, contra 88 ahora. Pide 64 fajas, algo más de tres techos de Enquelga, que llevan 20 cada uno. Con 32 pares, un corral de más de 6 m vuelve a dejar los pares demasiado separados.
+   *Lo que encontró.* Con los dieciséis pares de antes, sin correas, el alero de 6,8 m de diámetro los dejaba a 1,34 m, casi el doble del ancho de una faja, y ninguna variante cumplía. Había dos salidas: 32 pares o correas.
 
-   *Lo que decide el autor.* Si duplica los pares o pone correas, palos atados en anillo sobre los pares para que las fajas se apoyen en ellos. Las correas no están en el piloto. Las fuentes del proyecto tampoco dicen si la queñua da pares de 3,3 m.],
-  8, "../parametrico/e2_campo.png", [*El campo de E2.* El diámetro del corral contra el alto del cono, con los dieciséis pares de ahora y con 32. El gris dice cuánta queñua llevan los pares, los postes y el anillo. En blanco quedan las que no llegan a 45° (P) o separan los pares más de 70 cm (S).], [Datos en #raw("parametrico/e2_variantes.csv"); el guion es #raw("parametrico/corral_e2.py").],
-  9, "../parametrico/e2_matriz.png", [*Dieciséis variantes del corral, a 1:200.* Todas con 32 pares. El techo arranca 90 cm sobre la pirca, como en la lámina 2.], "e2_matriz.dxf",
-  [El alto del cono decide la pendiente, y el diámetro del corral decide cuánto se separan los pares. Con el corral de 6 m, el cono tiene que medir al menos 3,1 m para llegar a 45°. En los corrales de 7 y 8 m, aunque sean 32, los pares quedan a 77 y 86 cm.
+   *Lo que se decidió.* El autor eligió las correas: ocho anillos de palos cortos atados de par a par, cada 64 cm a lo largo del faldón. Los pares bajan 5 cm y los palos pasan a medir 1,33 m. Las correas suman 93 m, y la queñua del techo llega a 180 m, contra 144 con 32 pares, pero ninguna correa pasa de 1,34 m, la distancia entre dos pares en el alero. El techo pide 33 fajas, un techo de Enquelga y medio. Las fuentes del proyecto no dicen qué largo dan los palos de queñua.],
+  8, "../parametrico/e2_campo.png", [*El campo de E2.* El diámetro del corral contra el alto del cono, con los dieciséis pares, con correas y sin ellas. El gris dice cuánta queñua llevan los pares, los postes, el anillo y las correas. En blanco quedan las que no llegan a 45° (P) o hacen que la faja cruce más de 70 cm (S).], [Datos en #raw("parametrico/e2_variantes.csv"); el guion es #raw("parametrico/corral_e2.py").],
+  9, "../parametrico/e2_matriz.png", [*Dieciséis variantes del corral, a 1:200.* Todas con dieciséis pares y correas. El techo arranca 90 cm sobre la pirca, como en la lámina 2.], "e2_matriz.dxf",
+  [Con correas, el diámetro del corral ya no separa demasiado los apoyos de las fajas, y solo queda la pendiente. Para llegar a 45°, el cono tiene que medir al menos 3,1 m en el corral de 6 m, 3,7 en el de 7 y 4,3 en el de 8.
 
    La piedra de la pirca no cambia con el techo: son 12,2 m³, unas 28 parcelas de la prueba 1.])
 
 #piloto("E3. La casa redonda",
   [*Las reglas.* Cambian el radio del cuarto, el alto de la pirca y cómo vuela la cúpula, y salen 360 variantes. La pirca tiene que ser al menos tan alta como el paso de 96 cm y la laja que lo cubre. El relleno de tierra tiene que cubrir la cola de cada hilada, y la hilada que más vuela no puede pasar de lo que aguante la champa.
 
-   *Lo que encontró.* El relleno cubre las colas en todas las variantes. La E3 actual vuela hasta 12,7 cm, un poco más que los 12 cm del escenario más prudente, y cumple si la champa vuela un tercio de su largo. Si la prueba 3 muestra que vuela solo 12 cm, alcanza con que las hiladas vuelen de 8 a 12 cm. La cúpula pasa de 16 a 18 hiladas, sube de 3,20 a 3,44 m y gasta unos 80 bloques más. Como se cierra más despacio, el área donde se está de pie crece de 7,9 a 8,7 m². Para que la cúpula baje, volando de 12 a 15 cm, la champa tendría que volar 0,375 de su largo.
+   *Lo que encontró.* El relleno cubre las colas en todas las variantes. La cúpula que estaba dibujada volaba hasta 12,7 cm, un poco más que los 12 cm del escenario más prudente, y cumplía solo si la champa vuela un tercio de su largo. Para que la cúpula baje, volando de 12 a 15 cm, la champa tendría que volar 0,375 de su largo.
 
-   *Lo que decide el autor.* Cuál de las tres maneras de volar, cuando la prueba 3 dé su resultado. Con la pirca de 1,2 m, las tres caben.],
-  10, "../parametrico/e3_campo.png", [*El campo de E3.* El radio del cuarto contra el alto de la pirca, con la manera de volar actual y la más prudente. El gris dice cuánta área queda de pie. En blanco, las pircas más bajas que el paso y su laja (K).], [Datos en #raw("parametrico/e3_variantes.csv"); el guion es #raw("parametrico/cupula_e3.py"), y la cúpula sale de la misma cuenta que la lámina 3.],
+   *Lo que se decidió.* El autor pidió tomar la mejor decisión, y la cúpula pasó a volar de 8 a 12 cm. Así cumple en los tres escenarios y no depende de lo que mida la prueba 3. Pasa de 16 a 18 hiladas, sube de 3,20 a 3,44 m, lleva siete cursos de fajas en lugar de seis y gasta unos 80 bloques más. Como se cierra más despacio, el área donde se está de pie crece de 7,9 a 8,7 m².],
+  10, "../parametrico/e3_campo.png", [*El campo de E3.* El radio del cuarto contra el alto de la pirca, con la manera de volar actual, de 8 a 12 cm, y la de antes. El gris dice cuánta área queda de pie. En blanco, las pircas más bajas que el paso y su laja (K).], [Datos en #raw("parametrico/e3_variantes.csv"); el guion es #raw("parametrico/cupula_e3.py"), y la cúpula sale de la misma cuenta que la lámina 3.],
   11, "../parametrico/e3_matriz.png", [*Doce variantes de la casa redonda, a 1:100.* Cuatro cuartos por tres maneras de volar, con la pirca de 1,2 m. La línea corta marca el ancho donde se está de pie.], "e3_matriz.dxf",
   [Cuanto menos vuela cada hilada, más hiladas hacen falta y más alta queda la cúpula, pero más espacio queda para estar de pie. El relleno crece con el cuarto: el de 5,6 m de diámetro lleva 29 m³ de tierra, más del doble que el de 4 m.
 
@@ -386,12 +387,12 @@
 #piloto("E4. La chullpa",
   [*Las reglas.* Cambian lo que vuela cada hilada de la cámara, lo que se retira cada hilada de la pirámide y la pieza que forra la cámara, y salen 140 variantes. La pieza vuela lo que aguante con la cola cargada, y su cola tiene que caber en el relleno. Sobre la laja que cierra la cámara tiene que quedar una hilada. Ningún adobito de la cara puede apoyarse en menos de la mitad de su fondo, así que cada hilada se retira 7 cm como mucho, una decisión del proyecto.
 
-   *Lo que encontró.* La cámara dibujada vuela 10 cm por hilada con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. No se sostiene en ningún escenario, porque un adobito así vuela de 4,2 a 5,25 cm. Para cumplir, la cámara tiene que volar 4 cm por hilada. Entonces necesita nueve hiladas voladas en lugar de cuatro, sube de 1,47 a 2,52 m y queda alta y angosta, con 1,39 m³. Si el forro se hace con adobes de 40 cm, los de E5, la cámara de ahora cumple en los tres escenarios. El retiro de 6,2 cm cumple.
+   *Lo que encontró.* La cámara que estaba dibujada volaba 10 cm por hilada con adobitos de 14 cm de fondo, con casi tres cuartos de cada pieza en el aire. No se sostenía en ningún escenario, porque un adobito así vuela de 4,2 a 5,25 cm. Había dos salidas: volar 4 cm o forrarla con adobes de 40 cm, los de E5. El retiro de 6,2 cm cumple.
 
-   *Lo que decide el autor.* Si la cámara se forra de adobes grandes o se vuelve alta y angosta. Una tercera salida, cerrarla con lajas largas, no está en el piloto.],
+   *Lo que se decidió.* El autor pidió tomar la mejor decisión, y la cámara pasó a volar 4 cm con los mismos adobitos. Así toda la pirámide queda de una sola pieza, el adobito de pie que pidió el autor, y la cámara cumple en los tres escenarios. Necesita nueve hiladas voladas en lugar de cuatro, sube de 1,47 a 2,52 m y queda alta y angosta, con 1,39 m³, más cerca del arco apuntado de la chullpa de Acora (Squier, 1877: 353). Una laja cierra el hueco de 28 cm a 4 m del suelo, debajo de la cornisa.],
   12, "../parametrico/e4_campo.png", [*El campo de E4.* El vuelo de la cámara contra el retiro de la pirámide, con el forro de adobitos de pie y con adobes de 40 cm. El gris dice el volumen de la cámara. En blanco quedan las que no cierran a tiempo (T), dejan la cola fuera del relleno (C) o se retiran más de 7 cm (R); con V, las que piden que la pieza vuele más de un tercio.], [Datos en #raw("parametrico/e4_variantes.csv"); el guion es #raw("parametrico/chullpa_e4.py").],
   13, "../parametrico/e4_matriz.png", [*Quince variantes de la chullpa, a 1:100.* Todas con el forro de adobitos de pie, sin la cornisa ni la boca.], "e4_matriz.dxf",
-  [Solo la fila de arriba, que vuela 4 cm, cumple, salvo donde la pirámide se retira 8 cm. Las cámaras que vuelan 7 y 10 cm se ven más holgadas, pero sus adobitos vuelan la mitad de su fondo o más.
+  [Solo la fila de arriba, que vuela 4 cm, cumple, salvo donde la pirámide se retira 8 cm. Ahí está la actual. Las cámaras que vuelan 7 y 10 cm se ven más holgadas, pero sus adobitos vuelan la mitad de su fondo o más.
 
    El retiro no cambia la cámara, pero sí la cima: con 4,4 cm de retiro queda de 1,77 m de lado, y con 8 cm, de 0,76 m.])
 

@@ -26,10 +26,12 @@ Cada exploración tiene su guion, con sus parámetros, sus reglas y su corte, y 
 | Exploración | Guion | Qué cambia | Las reglas |
 |---|---|---|---|
 | E1. La montaña | `montana_e1.py` | El radio al pie del cono, el de la cámara y el vuelo de cada hilada: 324 variantes | **T**, el talud no pasa de 40°, el que supone la prueba 1; **C**, detrás de cada piedra que vuela quedan sus 40 cm de cola. Lleva un collar de 40 cm alrededor del óculo |
-| E2. El corral | `corral_e2.py` | El diámetro del corral, el alto del cono y cuántos pares lo arman: 189 | **P**, la pendiente es de 45° o más, la de la prueba 4; **S**, los pares quedan a 70 cm o menos en el alero, el ancho de la faja de *p'ira* (prueba 4) |
+| E2. El corral | `corral_e2.py` | El diámetro del corral, el alto del cono y cómo se apoyan las fajas: dieciséis pares con correas o sin ellas, o 32 pares; 189 | **P**, la pendiente es de 45° o más, la de la prueba 4; **S**, la faja cruza 70 cm o menos entre apoyos, como en el techo de Šolc (prueba 4) |
 | E3. La casa redonda | `cupula_e3.py` | El radio del cuarto, el alto de la pirca y cómo vuela la cúpula: 360 | **K**, la pirca es al menos tan alta como el paso de 96 cm de la prueba 3 y su laja; **C**, el relleno cubre la cola de cada hilada |
 | E4. La chullpa | `chullpa_e4.py` | El vuelo de la cámara, el retiro de la pirámide y la pieza del forro: 140 | **C**, la cola del forro cabe en el relleno; **T**, sobre la laja de cierre queda una hilada; **R**, la hilada no se retira más de 7 cm, la mitad del fondo del adobito (proyecto) |
 | E6. La *pirwa* | `pirwa_e6.py` | El vuelo de la V y el alto del depósito: 100 | **P**, la clave queda a 1,70 m o más, para estar de pie bajo la trampa (proyecto); **E**, el lado alto no pasa de 4,6 m, el que aceptó el autor |
+
+El 28 de noviembre se aplicaron los resultados: E1 pasó a la variante elegida, E2 lleva correas, la cúpula de E3 vuela de 8 a 12 cm y la cámara de E4, 4 cm. En cada guion, `ACTUAL` es la variante de ahora y `ANTES`, la de antes del piloto.
 
 En los campos, el gris mide lo que cada exploración gasta o da: la piedra del cono, la queñua del techo, el área de pie, el volumen de la cámara o lo que se guarda. En blanco quedan las variantes que fallan una regla, con su letra, y con una V las que cumplen la forma pero piden que la pieza vuele más de un tercio de su largo.
 

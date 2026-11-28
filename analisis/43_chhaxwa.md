@@ -339,3 +339,31 @@ El piloto pasó a E1, E2, E3, E4 y E6. Cada una tiene un guion en `chhaxwa/param
 Los modelos de Blender y las láminas de detalle no cambian hasta que el autor decida.
 
 **Uso de IA.** Claude (Anthropic) escribió los guiones y las láminas, hizo las cuentas y redactó estos textos.
+
+## 20. Más tarde, el mismo día: lo que se decidió con el piloto
+
+El autor eligió las correas para E2 y pidió que en E1, E3 y E4 se tomara la mejor decisión para cada exploración. Se tomaron con los criterios que el piloto ya usaba: que la variante valga en los tres escenarios de la prueba 3, que conserve lo que el autor había elegido antes y que gaste poco material para lo que da.
+
+| Exploración | Antes | Ahora | Por qué |
+|---|---|---|---|
+| E1 | Pie de 3,6 m de radio, 2,6 m de alto, cámara que vuela 13,5 cm, sin collar; unos 28 m³ | Pie de 4,2 m, 2,8 m de alto, vuelo de 12 cm y collar de 40 cm alrededor del óculo; unos 52 m³, 118 parcelas | Conserva la cámara de 2,8 m, vale en los tres escenarios y da más piso por metro cúbico de piedra que la cámara de 2 m. Se descartó achicar la cámara, que cumplía con la piedra de antes |
+| E2 | Dieciséis pares; las fajas cruzaban 1,34 m en el alero | Ocho anillos de correas sobre los pares, cada 64 cm a lo largo del faldón; los pares bajan 5 cm y los palos miden 1,33 m | La decisión del autor. Las correas suman 93 m, y la queñua del techo, 180 m, contra 144 con 32 pares, pero ninguna correa pasa de 1,34 m |
+| E3 | La cúpula vuela de 10 a 13 cm: 16 hiladas y 3,20 m | Vuela de 8 a 12 cm: 18 hiladas, 3,44 m y siete cursos de fajas | Vale en los tres escenarios y deja 8,7 m² de pie en lugar de 7,9, a cambio de unos 80 bloques más |
+| E4 | La cámara vuela 10 cm con adobitos de 14 cm: no cumple en ningún escenario | Vuela 4 cm con los mismos adobitos: nueve hiladas voladas, 2,52 m de alto y una laja que la cierra a 4 m | La pirámide queda de una sola pieza, el adobito de pie que pidió el autor, y cumple en los tres escenarios. Se descartó el forro de adobes de 40 cm |
+
+**Lo que se rehízo.**
+
+- **Modelos y diagramas.** `blender/formas.py` y `blender/diagramas.py` llevan las medidas nuevas. Se rehicieron los renders de E1, E2 y E3 y los diagramas de E1 a E4 y de la serie, que corre 60 cm a las otras cinco porque E1 creció. La chullpa por fuera no cambia.
+- **Láminas de detalle.**
+  - En la 1, el cono no cabe entero a 1:25 y se corta al norte con una línea de rotura. El paso de la boca se alarga: el dintel de lajas va de la cámara a la caja de queñua, que sigue saliendo 55 cm más allá del pie.
+  - La 2 suma las correas.
+  - En la 3, la cúpula y su nivel se calculan, y se quitó la cota total, que cruzaba el cuadro de rotulación.
+  - La 4 pasa a 1:25, para que entre la cámara, que llega a 4 m.
+- **El piloto.** En cada guion, `ACTUAL` pasa a ser la variante de ahora, y `ANTES` guarda la de antes, que el campo marca como «la de antes». En E2 se agregan las correas como sistema, y las fajas se cuentan por superficie: 33 para el techo de E2, en lugar de las 32 o 64 que salían contando por pares. Por eso en E2 cumplen 52 variantes y no 19 como en el §19, y la matriz P9 dibuja el techo con correas.
+- **Textos y documento.** `exploraciones.md` suma «Lo que se decidió». Se pusieron al día sus tablas, las páginas de E1 a E4, las láminas L1 a L4 y las páginas del piloto en el documento.
+
+La cámara de E4, alta y angosta, queda más cerca del arco apuntado de la chullpa de Acora (Squier, 1877: 353), que el proyecto ya citaba para E5. Se compara solo la forma.
+
+**Lo que decide el autor.** Si acepta las tres decisiones que se tomaron por él. Cada guion guarda las variantes de antes, así que volver atrás es cambiar una constante.
+
+**Uso de IA.** Claude (Anthropic) tomó las tres decisiones que el autor le pidió, cambió los modelos, los diagramas, las láminas y los guiones y redactó estos textos.

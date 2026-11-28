@@ -27,7 +27,8 @@ PASO_ADOBITO = 0.075                                        # 6 cm de adobito y 
 VUELOS = [round(0.03 + 0.01 * k, 2) for k in range(10)]    # de 3 a 12 cm
 RETIROS = [round(0.044 + 0.006 * k, 3) for k in range(7)]  # de 4,4 a 8 cm
 PIEZAS = [(0.14, "adobitos de pie, de 14 cm de fondo"), (0.40, "adobes de 40 cm, los de E5")]
-ACTUAL = (0.10, 0.062, 0.14)
+ACTUAL = (0.04, 0.062, 0.14)                               # desde el 28 de noviembre
+ANTES = (0.10, 0.062, 0.14)
 
 
 def variante(vc, ret, pieza):
@@ -105,16 +106,17 @@ def main():
         ("lado_arriba_m", "arriba", 2), ("adobitos_de_la_cara", "cara", 0), ("piezas_del_forro", "forro", 0),
         ("falla", "falla", None), ("cumple_con_0_30", lambda x: x["escenarios"][0], None),
         ("cumple_con_un_tercio", lambda x: x["escenarios"][1], None), ("cumple_con_0_375", lambda x: x["escenarios"][2], None)], vs)
-    actual, mejor, con_adobe = buscar(vs, *ACTUAL), elegir(vs), buscar(vs, ACTUAL[0], ACTUAL[1], 0.40)
+    actual, mejor, antes, con_adobe = buscar(vs, *ACTUAL), elegir(vs), buscar(vs, *ANTES), buscar(vs, ANTES[0], ANTES[1], 0.40)
     print(f"E4: {len(vs)} variantes; cumplen C, T y R {sum(not x['falla'] for x in vs)}; con un tercio {sum(x['escenarios'][1] for x in vs)}")
-    for t, x in (("actual", actual), ("elegida", mejor), ("la actual con adobes de 40", con_adobe)):
+    for t, x in (("la de antes", antes), ("actual", actual), ("elegida", mejor), ("la de antes con adobes de 40", con_adobe)):
         print(f"  {t}: vuelo {x['vuelo']}, retiro {x['retiro']}, pieza {x['pieza']}, hiladas {x['hiladas']}, cámara {x['alto_camara']:.2f} m "
               f"y {x['volumen']:.2f} m3, arriba {x['arriba']:.2f}, cara {x['cara']:.0f}, forro {x['forro']:.0f}, falla '{x['falla']}', "
               f"escenarios {x['escenarios']}")
     paneles = [(f"forro de {nombre}", [x for x in vs if x["pieza"] == pz]) for pz, nombre in PIEZAS]
     P.campo("e4_campo", paneles, VUELOS, RETIROS, "vuelo", "retiro", lambda x: x["volumen"], "volumen de la cámara (m³)",
             "vuelo de cada hilada de la cámara (cm)", "retiro de la pirámide (cm)",
-            [("la actual", actual), ("la elegida", mejor), ("la actual, con adobes", con_adobe)],
+            ([("la actual", actual)] if mejor is actual else [("la actual", actual), ("la elegida", mejor)]) +
+            [("la de antes", antes), ("la de antes, con adobes", con_adobe)],
             fmt_x=lambda x: P.cm(x), fmt_y=lambda y: P.cm(y))
     cols = (0.044, 0.056, 0.062, 0.068, 0.080)
     filas = [[buscar(vs, vc, ret, 0.14) for ret in cols] for vc in (0.04, 0.07, 0.10)]

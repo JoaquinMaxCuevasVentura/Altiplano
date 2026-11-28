@@ -27,7 +27,8 @@ PARCELA = 0.44
 RADIOS = [round(1.4 + 0.1 * k, 1) for k in range(15)]      # radio del cuarto, de 1,4 a 2,8 m
 PIRCAS = [round(0.9 + 0.1 * k, 1) for k in range(8)]       # alto de la pirca, de 0,9 a 1,6 m
 VUELOS = [(0.08, 0.12), (0.10, 0.13), (0.12, 0.15)]        # lo que vuelan la primera y la última hilada
-ACTUAL = (2.0, 1.2, (0.10, 0.13))
+ACTUAL = (2.0, 1.2, (0.08, 0.12))                          # desde el 28 de noviembre
+ANTES = (2.0, 1.2, (0.10, 0.13))
 
 
 def variante(Ri, Hb, vuelos):
@@ -117,22 +118,23 @@ def main():
         ("tierra_m3", "tierra", 2), ("piedra_m3", "piedra", 2), ("parcelas", "parcelas", 1), ("falla", "falla", None),
         ("cumple_con_0_30", lambda x: x["escenarios"][0], None), ("cumple_con_un_tercio", lambda x: x["escenarios"][1], None),
         ("cumple_con_0_375", lambda x: x["escenarios"][2], None)], vs)
-    actual, mejor = buscar(vs, *ACTUAL), elegir(vs)
+    actual, mejor, antes = buscar(vs, *ACTUAL), elegir(vs), buscar(vs, *ANTES)
     print(f"E3: {len(vs)} variantes; cumplen K y C {sum(not x['falla'] for x in vs)}; "
           f"con 0,30 {sum(x['escenarios'][0] for x in vs)}; con un tercio {sum(x['escenarios'][1] for x in vs)}; "
           f"con 0,375 {sum(x['escenarios'][2] for x in vs)}")
-    for t, x in (("actual", actual), ("elegida", mejor)):
+    for t, x in (("la de antes", antes), ("actual", actual), ("elegida", mejor)):
         print(f"  {t}: radio {x['radio']}, pirca {x['pirca']}, vuelos {x['vuelos']}, hiladas {x['hiladas']}, alto {x['alto']:.2f}, "
               f"vuelo máx {x['vuelo_max']:.3f}, de pie {x['de_pie']:.2f} de {x['piso']:.2f} m2, bloques {x['bloques']:.0f}, "
               f"tierra {x['tierra']:.1f}, piedra {x['piedra']:.1f} ({x['parcelas']:.0f} parcelas), falla '{x['falla']}', "
               f"escenarios {x['escenarios']}")
     nombre = {(0.08, 0.12): "de 8 a 12 cm", (0.10, 0.13): "de 10 a 13 cm", (0.12, 0.15): "de 12 a 15 cm"}
-    vistas = [ACTUAL[2]] + ([mejor["vuelos"]] if mejor["vuelos"] != ACTUAL[2] else [(0.08, 0.12)])
-    paneles = [(f"las hiladas vuelan {nombre[vu]}" + (", la actual" if vu == ACTUAL[2] else ""),
-                [x for x in vs if x["vuelos"] == vu]) for vu in vistas]
+    paneles = [(f"las hiladas vuelan {nombre[vu]}" + (", la actual" if vu == ACTUAL[2] else ", la de antes"),
+                [x for x in vs if x["vuelos"] == vu]) for vu in (ACTUAL[2], ANTES[2])]
+    marcas = ([("la actual", actual)] if mejor is actual else [("la actual", actual), ("la elegida", mejor)]) + \
+        [("la de antes", antes)]
     P.campo("e3_campo", paneles, RADIOS, PIRCAS, "radio", "pirca", lambda x: x["de_pie"],
             "área de pie (m²)", "radio del cuarto (m)", "alto de la pirca (m)",
-            [("la actual", actual), ("la elegida", mejor)], fmt_x=lambda x: P.coma(x, 1), fmt_y=lambda y: P.coma(y, 1))
+            marcas, fmt_x=lambda x: P.coma(x, 1), fmt_y=lambda y: P.coma(y, 1))
     cols = (1.6, 2.0, 2.4, 2.8)
     filas = [[buscar(vs, Ri, ACTUAL[1], vu) for Ri in cols] for vu in VUELOS]
     cambio = P.lamina_matriz(

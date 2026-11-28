@@ -479,15 +479,18 @@ def forma_5C(ctx):
 # ----------------------------------------------------------------------------------------------------------------
 
 def forma_E1(ctx):
-    """La montaña habitada: el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C."""
+    """La montaña habitada: el cono de piedra de 1B, más chato, con la entrada forrada de queñua de 1C. Desde el piloto
+    paramétrico (28 de noviembre), la cámara vuela 12 cm por hilada y un collar de piedra de 40 cm rodea el óculo, para
+    que las últimas hiladas tengan piedra encima de su cola; para no pasar de un talud de 40°, el pie crece a 4,2 m."""
     k = 1 / 20
     ped = ctx.pedrera()
-    R0, R1, H = 3.6, 0.32, 2.6
+    R0, R1, H, COLLAR = 4.2, 0.32, 2.8, 0.40
+    Rt = R1 + COLLAR                               # el cono termina en el borde del collar
     boca = math.radians(270)                       # la boca mira al sur
-    capas = int(H / 0.2)
+    capas = int(round(H / 0.2))
     for i in range(capas):
         z = i * H / capas
-        rr = R0 + (R1 - R0) * z / H
+        rr = R0 + (Rt - R0) * z / H
         m = int(2 * math.pi * rr / 0.33)
         fase = ctx.r.uniform(0, 6.28)
         for j in range(m):
@@ -497,6 +500,12 @@ def forma_E1(ctx):
                 continue
             ped.poner(sobre(ctx, rr * math.cos(a) * k, rr * math.sin(a) * k, (z + 0.09) * k), 0.35 * k,
                       rot=(ctx.r.uniform(-0.12, 0.12), -math.radians(16), a), aplanar=0.55)
+    for rr in (Rt - 0.1, R1 + 0.12):               # el collar: dos anillos de piedra plana alrededor del óculo
+        m = int(2 * math.pi * rr / 0.3)
+        for j in range(m):
+            a = 2 * math.pi * (j + 0.5 * (rr < 0.5)) / m
+            ped.poner(sobre(ctx, rr * math.cos(a) * k, rr * math.sin(a) * k, (H - 0.06) * k), 0.3 * k,
+                      rot=(0, 0, a + math.pi / 2), aplanar=0.45)
     C.tronco(sobre(ctx, 0, 0), (R0 - 0.4) * k, (R1 - 0.08) * k, H * 0.98 * k, C.mat_liso("sombra", (0.04, 0.035, 0.03)),
              lados=32, abierto_arriba=True)
     # la entrada de 1C: una caja de queñua que atraviesa el muro y asoma
@@ -553,7 +562,8 @@ def corral_techado(ctx, techo):
             return z_alero + (Rb - r) / (Rb - Ra) * Hc
         rp = R - base / 2
         angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
-        z_anillo = z_cono(rp) - 0.2726              # el anillo, bajo los pares (la lámina de detalle 2)
+        nz = 1 / math.hypot(Hc / (Rb - Ra), 1)      # coseno de la pendiente
+        z_anillo = z_cono(rp) - 0.20 / nz - 0.05    # el anillo, bajo los pares (la lámina de detalle 2)
         for g in angulos:
             a = math.radians(g)
             z_pie = 0.0 if 225 < g < 315 else alto  # en la entrada, los dos palos bajan hasta el suelo
@@ -566,9 +576,21 @@ def corral_techado(ctx, techo):
         for i in range(16):
             a = 2 * math.pi * i / 16 + 0.1
             r0, r1 = Rb - 0.08, Ra + 0.1
-            C.palo(sobre(ctx, r0 * math.cos(a) * k, r0 * math.sin(a) * k, (z_cono(r0) - 0.156) * k),
-                   sobre(ctx, r1 * math.cos(a) * k, r1 * math.sin(a) * k, (z_cono(r1) - 0.156) * k), 0.045 * k, ctx.m.palo,
+            C.palo(sobre(ctx, r0 * math.cos(a) * k, r0 * math.sin(a) * k, (z_cono(r0) - 0.155 / nz) * k),
+                   sobre(ctx, r1 * math.cos(a) * k, r1 * math.sin(a) * k, (z_cono(r1) - 0.155 / nz) * k), 0.045 * k, ctx.m.palo,
                    nombre="par")
+        # las correas: palos cortos atados de par a par, en anillos, donde se apoyan las fajas de p'ira (piloto, 28 de
+        # noviembre). Van a 70 cm o menos a lo largo del faldón, la luz que cruza la faja en el techo de Šolc (prueba 4)
+        faldon = math.hypot(Rb - Ra, Hc)
+        nc = math.ceil((faldon - 0.10) / 0.70 - 1e-9)
+        for q in range(nc + 1):
+            rc = Rb - (0.05 + q * (faldon - 0.10) / nc) * (Rb - Ra) / faldon
+            zc = z_cono(rc) - 0.085 / nz
+            for i in range(16):
+                a0_, a1_ = 2 * math.pi * i / 16 + 0.1, 2 * math.pi * (i + 1) / 16 + 0.1
+                C.palo(sobre(ctx, rc * math.cos(a0_) * k, rc * math.sin(a0_) * k, zc * k),
+                       sobre(ctx, rc * math.cos(a1_) * k, rc * math.sin(a1_) * k, zc * k), 0.025 * k, ctx.m.palo,
+                       nombre="correa")
         t = C.tronco(sobre(ctx, 0, 0, z_alero * k), Rb * k, Ra * k, Hc * k, ctx.m.barro, lados=40, abierto_arriba=True,
                      nombre="pira")
         md = t.modifiers.new("espesor", 'SOLIDIFY'); md.thickness = 0.06 * k; md.offset = -1
@@ -972,7 +994,7 @@ def forma_E3(ctx):
            0.08 * k), ctx.m.piedra, "laja", bisel=0.008 * k)
     # la cúpula de champa, volada hilada sobre hilada
     hh = 0.12
-    radios = cupula_perfil(Ri, hh, v0=0.10)
+    radios = cupula_perfil(Ri, hh, v0=0.08, v1=0.12)   # de 8 a 12 cm: cumple aunque la champa vuele 0,30 (piloto)
     for i, r in enumerate(radios):
         rc = r + 0.2
         m = max(6, int(2 * math.pi * rc / 0.27))

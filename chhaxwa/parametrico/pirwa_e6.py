@@ -106,7 +106,7 @@ def main():
     for t, x in (("actual", actual), ("elegida", mejor)):
         print(f"  {t}: vuelo {x['vuelo']}, alto {x['alto']}, hiladas {x['hiladas']}, clave {x['clave']:.2f}, "
               f"guarda {x['guardado']:.2f} m3, bloques {x['bloques']:.0f}, falla '{x['falla']}', escenarios {x['escenarios']}")
-    marcas = [("la actual y la elegida", actual)] if mejor is actual else [("la actual", actual), ("la elegida", mejor)]
+    marcas = [("la actual", actual)] if mejor is actual else [("la actual", actual), ("la elegida", mejor)]
     P.campo("e6_campo", [("", vs)], VUELOS, ALTOS, "vuelo", "alto", lambda x: x["guardado"], "lo que se guarda (m³)",
             "vuelo de cada hilada de la V (cm)", "alto del lado alto (m)", marcas,
             fmt_x=lambda x: P.cm(x), fmt_y=lambda y: P.coma(y, 1))

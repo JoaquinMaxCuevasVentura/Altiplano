@@ -101,18 +101,20 @@ def caja(x0, x1, y0, y1, z0, z1, mat, nombre="caja"):
 # ----------------------------------------------------------------------------------------------------------------
 
 def x1(corte=True):
-    R0, R1, H, hz = 3.6, 0.32, 2.6, 0.2
+    R0, R1, H, hz, COLLAR = 4.2, 0.32, 2.8, 0.2, 0.40                 # el piloto: pie de 4,2 m y collar de 40 cm
+    Rt = R1 + COLLAR
     a0, a1 = (-math.pi / 2, math.pi / 2) if corte else (-math.pi / 2, 1.5 * math.pi)
-    for i in range(13):
+    for i in range(14):
         z = i * hz
-        ro0, ro1 = R0 - (R0 - R1) * z / H, R0 - (R0 - R1) * (z + hz) / H
-        ri = 1.4 if z < 0.99 else max(R1, 1.4 - 0.135 * (i - 4))      # la cámara: vertical hasta 1 m y después volada
+        ro0, ro1 = R0 - (R0 - Rt) * z / H, R0 - (R0 - Rt) * (z + hz) / H
+        ri = 1.4 if z < 0.99 else max(R1, 1.4 - 0.12 * (i - 4))       # la cámara: vertical hasta 1 m y después volada
         s = sector(ro0, ro1, ri, ri, z, hz, a0, a1, D["piedra"])
         if z < 0.99:                                                   # la boca, al sur, de 0,9 × 1,0 m
-            P.restar(s, caja(-0.45, 0.45, -4.5, -1.0, -0.1, 1.0, D["piedra"]))
+            P.restar(s, caja(-0.45, 0.45, -5.0, -1.0, -0.1, 1.0, D["piedra"]))
     for x in ((0.48,) if corte else (-0.48, 0.48)):                     # la caja de queñua de la entrada
-        caja(x - 0.035, x + 0.035, -4.15, -2.65, 0, 1.0, D["madera"])
-    caja(0 if corte else -0.52, 0.52, -4.15, -2.65, 1.0, 1.07, D["madera"])
+        caja(x - 0.035, x + 0.035, -4.75, -3.25, 0, 1.0, D["madera"])
+    caja(0 if corte else -0.52, 0.52, -4.75, -3.25, 1.0, 1.07, D["madera"])
+    caja(0 if corte else -0.52, 0.52, -3.25, -1.265, 1.0, 1.08, D["laja"], "dintel")
     figura((0.3, -4.6, 0), giro=math.pi / 2, pose="cuclillas")
     figura((0.6, 0.3, 0), giro=2.6)
 
@@ -120,6 +122,16 @@ def x1(corte=True):
 # ----------------------------------------------------------------------------------------------------------------
 # E2. El corral techado: medio corral de pirca de doble cara y medio cono de ichu sobre palos
 # ----------------------------------------------------------------------------------------------------------------
+
+def correas_e2(Rb, Ra, Hc, luz=0.70):
+    """Los radios de las correas de E2: anillos sobre los pares, a 70 cm o menos a lo largo del faldón, la luz que cruza
+    la faja de p'ira en el techo de Šolc (prueba 4). La primera, a 5 cm del alero; la última, junto a la punta."""
+    cos = (Rb - Ra) / math.hypot(Rb - Ra, Hc)
+    faldon = math.hypot(Rb - Ra, Hc)
+    n = math.ceil((faldon - 0.10) / luz - 1e-9)
+    d = (faldon - 0.10) / n
+    return [Rb - (0.05 + k * d) * cos for k in range(n + 1)]
+
 
 def x2(corte=True):
     R, alto = 3.0, 1.4
@@ -134,7 +146,8 @@ def x2(corte=True):
     def z_cono(r):
         return z_al + (Rb - r) / (Rb - Ra) * Hc
     rp = R - 0.35
-    z_an = z_cono(rp) - 0.2726
+    nz = 1 / math.hypot(Hc / (Rb - Ra), 1)                             # coseno de la pendiente
+    z_an = z_cono(rp) - 0.20 / nz - 0.05                               # el anillo, bajo los pares, que bajan 5 cm por las correas
     angulos = [0, 45, 90, 135, 180, 220, 250, 290, 320]
     for g in angulos:                                                   # palos sobre la pirca y el anillo atado
         a = math.radians(g)
@@ -148,8 +161,10 @@ def x2(corte=True):
         a = 2 * math.pi * i / 16 + 0.1
         if corte and math.cos(a) < -1e-6:
             continue
-        C.palo(((Rb - 0.08) * math.cos(a), (Rb - 0.08) * math.sin(a), z_cono(Rb - 0.08) - 0.156),
-               ((Ra + 0.1) * math.cos(a), (Ra + 0.1) * math.sin(a), z_cono(Ra + 0.1) - 0.156), 0.045, D["madera"])
+        C.palo(((Rb - 0.08) * math.cos(a), (Rb - 0.08) * math.sin(a), z_cono(Rb - 0.08) - 0.155 / nz),
+               ((Ra + 0.1) * math.cos(a), (Ra + 0.1) * math.sin(a), z_cono(Ra + 0.1) - 0.155 / nz), 0.045, D["madera"])
+    for r in correas_e2(Rb, Ra, Hc):                                    # las correas, en anillo sobre los pares
+        sector(r + 0.025, r + 0.025, r - 0.025, r - 0.025, z_cono(r) - 0.085 / nz - 0.025, 0.05, a0, a1, D["madera"])
     sector(Rb, Ra, Rb - 0.08, Ra - 0.06, z_al, Hc, a0, a1, D["pira"])            # la p'ira
     sector(Rb + 0.3, Ra + 0.2, Rb, Ra, z_al - 0.05, Hc + 0.05, a0, a1, D["paja"])   # el ichu, encima
     figura((0.8, -0.6, 0), giro=2.2)
@@ -185,7 +200,7 @@ def x3(corte=True):
     Ri, e, Hb, hh, tal = 2.0, 0.6, 1.2, 0.12, math.tan(math.radians(5))
     R = Ri + e
     paso_y, Xe = 0.72, R + 0.6
-    radios = F.cupula_perfil(Ri, hh, v0=0.10)
+    radios = F.cupula_perfil(Ri, hh, v0=0.08, v1=0.12)
     full = 2 * math.pi
     m = 0 if corte else 1
     for (ro0, ro1, ri, mat) in ((R, R - tal * Hb, R - 0.2, D["piedra"]), (R - 0.2, R - 0.2, Ri + 0.2, D["menuda"]),
@@ -298,9 +313,17 @@ def x4(corte=True):
     for i in range(15):                                                 # la pirámide de adobitos, con la cámara volada
         s = 3.0 - 2 * i * 0.062
         h = 0.21
-        cam = 0.5 if i < 3 else 0.5 - 0.1 * (i - 2)
+        cam = 0.5 if i < 3 else 0.5 - 0.04 * (i - 2)                    # vuela 4 cm por hilada (piloto, 28 de noviembre)
+        cerrada = i >= 3 and 0.5 - 0.04 * (i - 3) <= 0.15 + 1e-9         # una laja cierra el hueco de 28 cm
         mat = D["adobe"]
-        if cam > 0.05 and corte:
+        cierre = cerrada and 0.5 - 0.04 * (i - 4) > 0.15 + 1e-9         # la primera hilada cerrada lleva la laja
+        if cierre and corte:
+            caja(-s / 2, -0.2, 0, s / 2, z, z + h, mat, "hilada")
+            caja(0.2, s / 2, 0, s / 2, z, z + h, mat, "hilada")
+            caja(-0.2, 0.2, 0.2, s / 2, z, z + h, mat, "hilada")
+            caja(-0.2, 0.2, 0, 0.2, z, z + 0.08, D["laja"], "cierre")
+            caja(-0.2, 0.2, 0, 0.2, z + 0.08, z + h, mat, "hilada")
+        elif not cerrada and corte:
             caja(-s / 2, -cam, 0, s / 2, z, z + h, mat, "hilada")
             caja(-cam, cam, cam, s / 2, z, z + h, mat, "hilada")
             y0 = 0.24 if i < 2 else (0.36 if i == 2 else 0.0)
@@ -458,7 +481,7 @@ def x6(corte=True):
 
 def serie():
     global FIGURAS
-    lugares = ((x1, 0.0), (x2, 8.6), (x3, 15.4), (x4, 21.9), (x5, 29.2), (x6, 36.6))
+    lugares = ((x1, 0.0), (x2, 9.2), (x3, 16.0), (x4, 22.5), (x5, 29.8), (x6, 37.2))
     for (f, ox) in lugares:
         antes = set(bpy.data.objects)
         FIGURAS = False

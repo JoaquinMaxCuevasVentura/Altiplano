@@ -257,42 +257,50 @@ class Lamina:
 # ------------------------------------------------------------------------------------------------------------------
 
 def detalle_E1():
-    L = Lamina(25, (222, 92))
-    R0, R1, H, hz = 3.6, 0.32, 2.6, 0.2
+    from shapely.geometry import Polygon, box
+    L = Lamina(25, (250, 92))
+    R0, R1, H, hz, v, collar = 4.2, 0.32, 2.8, 0.2, 0.12, 0.40      # desde el piloto paramétrico (28 de noviembre)
+    Rt, norte = R1 + collar, 2.5                                    # al norte, el corte sigue más allá de la rotura
 
     def ri(i):
-        return 1.4 if i < 5 else 1.4 - 0.135 * (i - 4)
+        return 1.4 if i < 5 else max(R1, 1.4 - v * (i - 4))
 
     def u(z):
-        return R0 - (R0 - R1) * z / H
-    for i in range(13):                                   # el cono, hilada por hilada
+        return R0 - (R0 - Rt) * z / H
+    for i in range(14):                                   # el cono, hilada por hilada; arriba, el collar del óculo
         z0, z1 = i * hz, (i + 1) * hz
         for s in (1, -1):
             zb = z0 if s == 1 else max(z0, 1.08)          # al sur, el paso de la boca hasta 1,08 m
             if zb >= z1:
                 continue
             pts = [(ri(i), zb), (u(zb), zb), (u(z1), z1)] + ([(ri(i), z1)] if u(z1) - ri(i) > 1e-6 else [])
+            if s == 1:
+                pts = list(Polygon(pts).intersection(box(-1, -1, norte, 9)).exterior.coords)[:-1]
             L.cortado([(s * x, z) for (x, z) in pts], "PIEDRA")
-    L.cortado(rect(-2.65, 1.0, -1.265, 1.08), "LAJA")
-    L.cortado(rect(-4.15, 1.0, -2.65, 1.07), "MADERA")
-    L.linea(rect(-4.15, 0.0, -2.65, 1.0), "VISTA", True)              # la pared del fondo de la caja
-    L.linea([(-3.546, 0.0), (-2.254, 1.0)], "VISTA")                   # el borde del corte en el cono, al fondo
-    for i in range(1, 13):                                             # las hiladas del fondo de la cámara
+    L.cortado(rect(-3.25, 1.0, -1.265, 1.08), "LAJA")
+    L.cortado(rect(-4.75, 1.0, -3.25, 1.07), "MADERA")
+    L.linea(rect(-4.75, 0.0, -3.25, 1.0), "VISTA", True)              # la pared del fondo de la caja
+    L.linea([(-math.sqrt(u(0) ** 2 - 0.48 ** 2), 0.0), (-math.sqrt(u(1.0) ** 2 - 0.48 ** 2), 1.0)], "VISTA")   # el cono, al fondo
+    for i in range(1, 14):                                             # las hiladas del fondo de la cámara
         L.linea([(-ri(i), i * hz), (ri(i), i * hz)], "VISTA")
-    L.terreno(-5.0, 4.6)
-    L.rumbos("Sur", "Norte", -5.0, 4.6)
-    L.cota((-3.6, 0), (3.6, 0), (0, -0.8))
+    L.rotura((norte, -0.15), (norte, (R0 - norte) * H / (R0 - Rt) + 0.15))
+    L.terreno(-5.5, norte + 0.9)
+    L.rumbos("Sur", "Norte", -5.5, norte + 0.9)
+    L.cota((-4.2, 0), (0, 0), (0, -0.8))
+    L.cota((-4.75, 0), (-3.25, 0), (0, -0.45))
+    L.cota((-3.25, 0), (-1.4, 0), (0, -0.45))
     L.cota((-1.4, 0), (1.4, 0), (0, -0.45))
-    L.cota((-0.32, 2.6), (0.32, 2.6), (0, 2.9))
-    L.cota((3.6, 0), (0.32, 2.6), (4.0, 0), 90)
+    L.cota((-0.72, 2.8), (-0.32, 2.8), (0, 3.1))
+    L.cota((-0.32, 2.8), (0.32, 2.8), (0, 3.1))
+    L.cota((-4.2, 0), (-0.72, 2.8), (-5.2, 0), 90)
     L.cota((1.4, 0), (1.4, 1.0), (1.15, 0), 90)
-    L.cota((-4.15, 1.07), (-2.65, 1.07), (0, 1.35))
-    L.cota((-3.9, 0), (-3.9, 1.0), (-3.9, 0), 90)
-    L.rotulo((0.85, 1.9), 296, 262, "Cámara de 2,80 m: vertical hasta 1 m;\ndespués, hiladas de 20 cm que vuelan\n13,5 cm cada una hasta el óculo.")
-    L.rotulo((2.4, 0.5), 296, 238, "Cono de la piedra de la cosecha, unos 28 m³.\nNo se trae otra piedra (prueba 1).")
-    L.rotulo((-0.25, 2.58), 150, 262, "Óculo de 64 cm, abierto.", "izq")
-    L.rotulo((-1.9, 1.04), 150, 240, "Dintel de lajas sobre el paso (proyecto).", "izq")
-    L.rotulo((-3.4, 1.035), 150, 218, "Caja de queñua que atraviesa el muro y asoma:\nla boca, de 0,90 × 1,00 m. Se entra en cuclillas.", "izq")
+    L.cota((-4.5, 0), (-4.5, 1.0), (-4.5, 0), 90)
+    L.rotulo((0.85, 1.9), 300, 262, "Cámara de 2,80 m: vertical hasta 1 m; después,\nnueve hiladas de 20 cm que vuelan 12 cm cada\nuna hasta el óculo (piloto paramétrico).")
+    L.rotulo((2.2, 0.5), 300, 238, "Cono de la piedra de la cosecha, unos 52 m³, con\nun talud de 39°. No se trae otra piedra (prueba 1).")
+    L.rotulo((0.52, 2.72), 300, 216, "Collar de piedra de 40 cm alrededor del óculo:\ncarga la cola de la última hilada (piloto).")
+    L.rotulo((-0.25, 2.78), 150, 262, "Óculo de 64 cm, abierto.", "izq")
+    L.rotulo((-2.2, 1.04), 150, 240, "Dintel de lajas sobre el paso (proyecto).", "izq")
+    L.rotulo((-4.0, 1.035), 150, 218, "Caja de queñua que atraviesa el pie del cono y asoma:\nla boca, de 0,90 × 1,00 m. Se entra en cuclillas.", "izq")
     L.marco("1", "E1. La montaña habitada", "Corte por la boca, que mira al sur", [
         "Pasaje: «quizá un día la montaña de piedras sobrepase la altura del cerro» (Botelho Gosálvez, 1982 [1945]: 9).",
         "Las medidas son decisiones del proyecto. La prueba 1 dirá cuánta piedra da una parcela y cuántas hacen falta."])
@@ -323,13 +331,20 @@ def detalle_E2():
             L.cortado(rect(a, i * 0.2, b, (i + 1) * 0.2), "PIEDRA")
     L.cortado(rect(R - base + cara, 0, R - cara, alto - 0.04), "PIEDRA_MENUDA")
     rp = R - base / 2
-    z_par = zc(rp) - 0.15 / nz                                         # bajo del par sobre el palo
+    z_par = zc(rp) - 0.20 / nz                                         # bajo del par sobre el palo; encima, la correa
     r_an = 0.05
     L.cortado(rect(rp - 0.06, alto, rp + 0.06, z_par - 2 * r_an), "MADERA")
     L.cortado([(rp + r_an * math.cos(k * math.pi / 8), z_par - r_an + r_an * math.sin(k * math.pi / 8)) for k in range(16)],
               "MADERA")
     r1 = 2.0
-    L.cortado(banda(r1, Rb - 0.03, -0.15, -0.06), "MADERA")           # el par
+    L.cortado(banda(r1, Rb - 0.03, -0.20, -0.11), "MADERA")           # el par
+    faldon = math.hypot(Rb - Ra, Hc)                                   # las correas: anillos sobre los pares, a 70 cm
+    nc = math.ceil((faldon - 0.10) / 0.70 - 1e-9)                      # o menos a lo largo del faldón (piloto)
+    correas = [Rb - (0.05 + q * (faldon - 0.10) / nc) * (Rb - Ra) / faldon for q in range(nc + 1)]
+    for rc in [r for r in correas if r > r1 + 0.05]:
+        cx, cz = p(rc, -0.085)
+        L.cortado([(cx + 0.025 * math.cos(q * math.pi / 8), cz + 0.025 * math.sin(q * math.pi / 8)) for q in range(16)],
+                  "MADERA")
     L.cortado(banda(r1, Rb, -0.06, 0.0), "PIRA")                       # la p'ira
     ang = math.degrees(math.atan(pend))
     L.cortado(banda(r1, Rb + 0.08, 0.0, 0.25), "PAJA", angulo=-ang)    # el ichu
@@ -345,13 +360,16 @@ def detalle_E2():
     L.cota((Rb, 0), (Rb, za), (R + 1.05, 0), 90)
     L.cota((rp, alto), (rp, z_par - 2 * r_an), (rp - 0.45, 0), 90)
     L.rotulo(p(3.0, 0.15), 262, 262, "Ichu en capas, de unos 25 cm.")
-    L.rotulo(p(2.85, -0.03), 262, 244, "Fajas de p'ira de 0,70 m sobre los pares, como en Enquelga\n(Šolc, 2011 [1975]: 105-107). Pendiente de 48°.")
+    L.rotulo(p(2.75, -0.03), 262, 244, "Fajas de p'ira de 0,70 m sobre las correas, como en Enquelga\n(Šolc, 2011 [1975]: 105-107). Pendiente de 48°.")
+    paso = (faldon - 0.10) / nc
+    L.rotulo(p(correas[1], -0.085), 262, 222, f"Correas de queñua atadas en anillo sobre los pares, cada\n{round(paso * 100)} cm a lo largo del faldón: en ellas se apoyan las fajas.")
     L.rotulo((3.2, 1.85), 262, 196, "Franja de cielo de 0,90 m entre la piedra y la paja.")
     L.rotulo((2.9, 0.9), 262, 150, "Pirca de doble cara: caras de 20 cm\ncon la piedra de la cosecha.")
     L.rotulo((2.65, 0.5), 262, 124, "Relleno de piedra menuda: la mitad del corte (prueba 2).")
     L.rotulo(p(2.35, -0.1), 135, 262, "Par de queñua, del anillo a la punta.", "izq")
     L.rotulo((rp + 0.03, z_par - r_an), 135, 240, "Anillo de palos atados: recibe los pares.", "izq")
-    L.rotulo((rp, 2.1), 135, 205, "Palo de queñua de 1,4 m, parado sobre la pirca.", "izq")
+    palo = z_par - 2 * r_an - alto
+    L.rotulo((rp, 2.1), 135, 205, f"Palo de queñua de {palo:.2f} m, parado sobre la pirca.".replace(".", ",", 1), "izq")
     L.marco("2", "E2. El corral techado", "La pirca y el alero, con la p'ira bajo el ichu", [
         "Corte radial por la pirca, lejos de la entrada. Pasajes: «Las pircas derruidas; desfondados los techos de las casas» (p. 79)",
         "y las pircas «compuestas» (p. 156). Las medidas sin fuente son decisiones del proyecto."])
@@ -377,7 +395,7 @@ def detalle_E3():
     Ri, e, Hb, hh, tal = 2.0, 0.6, 1.2, 0.12, math.tan(math.radians(5))
     R = Ri + e
     paso_y, Xe = 0.72, R + 0.6
-    radios = cupula_perfil(Ri, hh, v0=0.10)
+    radios = cupula_perfil(Ri, hh, v0=0.08, v1=0.12)         # de 8 a 12 cm (piloto, 28 de noviembre)
     z_c = Hb + len(radios) * hh
     Hd, r_ocu = z_c - Hb + 0.1, radios[-1] + 0.15
     A = R - tal * Hb + 0.02 - r_ocu
@@ -456,9 +474,8 @@ def detalle_E3():
     L.cota((-Ri, 0), (Ri, 0), (0, -0.42))
     L.cota((Ri, 0), (R, 0), (0, -0.42))
     L.cota((R, 0), (Xe, 0), (0, -0.42))
-    L.cota((-R, 0), (Xe, 0), (0, -0.7))
     L.cota((-R, 0), (-(R - tal * Hb), Hb), (-2.9, 0), 90)
-    L.nivel(-radios[-1], z_t, "+3,20")
+    L.nivel(-radios[-1], z_t, "+" + f"{z_t:.2f}".replace(".", ","))
     L.cota((Xe, 0), (Xe, 0.84), (3.45, 0), 90)
     L.cota((Xe, 0.84), (Xe, Hb + 0.08), (3.45, 0), 90)
     L.cota((-radios[-1], z_c - 0.3), (radios[-1], z_c - 0.3), (0, z_c - 0.3))
@@ -466,9 +483,9 @@ def detalle_E3():
     pa = elipse(en(1.6))
     L.rotulo((-pa[0] - 0.02, pa[1] + 0.06), 108, 252, "Fajas de p'ira de 0,70 m traslapadas 15 cm,\ncomo tejuelas (Šolc, 2011 [1975]: 105, el ancho).", "izq")
     L.rotulo((-1.9, 1.75), 108, 233, "Relleno de tierra: carga las colas\nde las hiladas.", "izq")
-    L.rotulo((1.25, 2.4), 262, 272, "Cúpula de champa: dieciséis hiladas de 12 cm\nque vuelan de 10 a 13 cm.")
-    L.rotulo((2.9, 1.24), 262, 250, "Laja sobre el paso.")
-    L.rotulo((2.9, 0.5), 262, 232, "Paso al este: jambas de 60 cm y tres hiladas que\nvuelan 10 cm hasta cerrarse a 96 cm (prueba 3).\nAl centro quedan 84 cm libres: se entra de rodillas.")
+    L.rotulo((1.25, 2.4), 290, 272, f"Cúpula de champa: {len(radios)} hiladas de 12 cm\nque vuelan de 8 a 12 cm (piloto paramétrico).")
+    L.rotulo((2.9, 1.24), 350, 200, "Laja sobre el paso.")
+    L.rotulo((2.9, 0.5), 290, 234, "Paso al este: jambas de 60 cm y tres hiladas que\nvuelan 10 cm hasta cerrarse a 96 cm (prueba 3).\nAl centro quedan 84 cm libres: se entra de rodillas.")
     L.rotulo((-2.3, 0.7), 100, 128, "Pirca de doble cara con relleno de piedra\nmenuda (prueba 2) y un talud de 5° por fuera.")
     L.rotulo((Ri * 0.707 - 0.05, 0.62), 238, 118, "T'uju de 15 cm, al noreste (Yampara Blanco, 2019: 13).", "izq")
     L.rotulo((0.0, 0.1), 238, 104, "Fogón al centro.", "izq")
@@ -479,11 +496,11 @@ def detalle_E3():
 
 
 # ------------------------------------------------------------------------------------------------------------------
-# E4. La chullpa: la base, la cámara y la boca; el aparejo de librero y la cornisa, 1:20
+# E4. La chullpa: la base, la cámara y la boca; el aparejo de librero y la cornisa, 1:25
 # ------------------------------------------------------------------------------------------------------------------
 
 def detalle_E4():
-    L = Lamina(20, (118, 82))
+    L = Lamina(25, (118, 74))                           # a 1:25 desde el piloto: la cámara llega a 4 m
     c, Pp = 1.05, 1.2
     for sx in (-1, 1):                                  # las pilas, al fondo del paso de este a oeste
         for i in range(6):
@@ -495,26 +512,45 @@ def detalle_E4():
     L.cortado(rect(1.25, 1.3, 1.55, 1.48), "PIEDRA")
     L.cortado(rect(-1.25, 1.3, 1.25, 1.48), "PIEDRA_MENUDA")
     z, ha, mj, pr, ret = 1.48, 0.19, 0.02, 0.14, 0.062
-    for i in range(8):                                  # la pirámide de adobitos, con la cámara y la boca al este
+    vc, cierre = 0.04, 0.15                             # la cámara vuela 4 cm; una laja cierra el hueco de 28 cm
+
+    def camara(i):
+        return 0.5 if i < 3 else 0.5 - vc * (i - 2)
+    ultima = next(i for i in range(3, 20) if camara(i) <= cierre + 1e-9)
+    for i in range(ultima + 2):                         # la pirámide de adobitos, con la cámara y la boca al este
         s = 3.0 - 2 * i * ret
-        cam = 0.5 if i < 3 else max(0.0, 0.5 - 0.1 * (i - 2))
+        zz = z + mj
+        if i > ultima:                                  # la hilada que cierra: la laja sobre el forro y tierra encima
+            c_ = camara(ultima)
+            L.cortado(rect(-c_ - 0.06, z, c_ + 0.06, z + 0.08), "LAJA")
+            L.cortado(rect(-c_ - 0.06, z + 0.08, c_ + 0.06, zz + ha), "TIERRA")
+            for sg in (-1, 1):
+                out = sg * s / 2
+                a_, b_ = sorted((sg * (c_ + 0.06), out))
+                L.cortado(rect(a_, z, b_, zz), "TIERRA")
+                L.cortado(tramo(out - sg * pr, out, zz, zz + ha), "ADOBE")
+                a_, b_ = sorted((sg * (c_ + 0.06), out - sg * pr))
+                L.cortado(rect(a_, zz, b_, zz + ha), "TIERRA")
+            z += mj + ha
+            continue
+        cam = camara(i)
         for sg in (-1, 1):
             if sg == 1 and i < 2:                        # la boca atraviesa la cara del este
                 continue
             out = sg * s / 2
             lo, hi = sorted((sg * cam, out))
             L.cortado(rect(lo, z, hi, z + mj), "TIERRA")
-            zz = z + mj
             if sg == 1 and i == 2:                       # el dintel de laja, de la cámara a la cara
                 L.cortado(rect(cam, zz, s / 2, zz + ha), "LAJA")
                 continue
             L.cortado(tramo(out - sg * pr, out, zz, zz + ha), "ADOBE")
-            dentro = sg * (cam + pr)                     # el forro de la cámara; al cerrarse, se tocan al centro
+            dentro = sg * (cam + pr)                     # el forro de la cámara
             L.cortado(tramo(sg * cam, dentro, zz, zz + ha), "ADOBE")
             a_, b_ = sorted((dentro, out - sg * pr))
             if b_ - a_ > 0.01:
                 L.cortado(rect(a_, zz, b_, zz + ha), "TIERRA")
         z += mj + ha
+    z_cam = 1.48 + (ultima + 1) * (mj + ha)
     L.rotura((-1.5, z + 0.03), (1.5, z + 0.03))
     L.terreno(-2.1, 2.1)
     L.rumbos("Oeste", "Este", -2.1, 2.1)
@@ -524,17 +560,18 @@ def detalle_E4():
     L.cota((0.45, 0), (1.65, 0), (0, -0.38))
     L.cota((-0.25, 1.0), (0.25, 1.0), (0, 1.08))
     L.cota((-1.65, 0), (-1.65, 1.2), (-2.0, 0), 90)
-    L.cota((-1.65, 1.2), (-1.65, 1.3), (-2.0, 0), 90)
-    L.cota((-1.55, 1.3), (-1.55, 1.48), (-2.0, 0), 90)
-    L.cota((-1.5, 1.48), (-1.5, 1.69), (-2.0, 0), 90)
+    L.cota((-1.65, 1.2), (-1.65, 1.48), (-2.0, 0), 90)
     L.cota((-0.5, 1.6), (0.5, 1.6), (0, 1.6))
+    L.cota((0.0, 1.48), (0.0, z_cam), (0.0, 0), 90)
+    L.cota((-camara(ultima), z_cam - 0.3), (camara(ultima), z_cam - 0.3), (0, z_cam - 0.3))
     L.cota((1.55, 1.48), (1.55, 1.9), (1.85, 0), 90)
-    L.rotulo((0.27, 2.62), 205, 262, "Cámara de 1,0 × 1,0 m: tres hiladas verticales\ny cuatro voladas (proyecto).")
+    L.nivel(-1.3, z_cam, "+" + f"{z_cam:.2f}".replace(".", ","))
+    L.rotulo((0.25, 3.3), 205, 262, f"Cámara de 1,0 × 1,0 m: tres hiladas verticales y\n{ultima - 2} que vuelan 4 cm cada una, hasta que una laja\ncierra el hueco de 28 cm (piloto paramétrico).")
     L.rotulo((1.15, 1.72), 205, 241, "Boca de 48 × 42 cm al este, al nivel de la cama\n(Squier, 1877: 244).")
     L.rotulo((0.9, 2.02), 205, 222, "Dintel de laja, de la cámara a la cara.")
-    L.rotulo((1.36, 2.3), 205, 205, "Adobitos de pie, de 19 × 14 × 6 cm, en aparejo de\nlibrero; cada hilada se retira 6,2 cm.")
-    L.rotulo((1.4, 1.39), 205, 186, "Hilada de piedra que separa el adobe del suelo.")
-    L.rotulo((1.6, 1.25), 205, 172, "Cama de lajas que cruza los pasos.")
+    L.rotulo((1.05, 2.75), 205, 205, "Adobitos de pie, de 19 × 14 × 6 cm, en aparejo de\nlibrero; cada hilada se retira 6,2 cm.")
+    L.rotulo((1.4, 1.39), 205, 186, "Hilada de piedra de 18 cm que separa el adobe del suelo.")
+    L.rotulo((1.6, 1.25), 205, 172, "Cama de lajas de 10 cm que cruza los pasos.")
     L.rotulo((0.4, 0.9), 205, 148, "Pilas de pirca de 1,2 m, al fondo; las dos últimas\nhiladas vuelan 10 cm cada una hacia el paso.")
     L.rotulo((0.2, 0.4), 205, 124, "Paso de 0,90 m al pie y 0,50 m arriba:\nse pasa agachado.")
     # el aparejo de librero, en alzado
